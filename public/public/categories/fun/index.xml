@@ -3,7 +3,7 @@
   <channel>
       <title>Fun on Hugo Blog Template for GitHub Pages </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://localhost:1313/categories/fun/index.xml</link>
+    <link>http://spencerlyon2.github.io/categories/fun/index.xml</link>
     
     
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Just another sample post</title>
-      <link>http://localhost:1313/posts/newest</link>
+      <link>http://spencerlyon2.github.io/posts/newest</link>
       <pubDate>Sat, 29 Mar 2014 00:00:00 UTC</pubDate>
       
-      <guid>http://localhost:1313/posts/newest</guid>
+      <guid>http://spencerlyon2.github.io/posts/newest</guid>
       <description>&lt;p&gt;This is the content of the post!&lt;/p&gt;
 </description>
     </item>
