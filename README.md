@@ -1,4 +1,0 @@
-michaeljaylissner.com
-=====================
-
-The Blog
