@@ -1,29 +1,18 @@
-{
-    "categories": [
-        "security", 
-        "Linux", 
-        "firefox", 
-        "bash", 
-        "autocomplete"
-    ], 
-    "date": "2009-12-15T17:41:27", 
-    "tags": [
-        "security", 
-        "Linux", 
-        "firefox", 
-        "bash", 
-        "autocomplete"
-    ], 
-    "title": "Script to Rid Thyself of Autocomplete = Off in Firefox"
-}
+Title: Script to Rid Thyself of Autocomplete = Off in Firefox
+Date: 2009-12-15T17:41:27
+Tags: security, Linux, firefox, bash, autocomplete
+Category: Tech
 
 I took some time today and wrote up a script that can be run to eliminate autocomplete=off in Firefox. It basically does the same thing as is described <a href="http://michaeljaylissner.com/blog/rid-thyself-of-autocomplete-in-firefox">here</a>, but it automates it. 
 
 The script can be run with one of five arguments:
-<ul><li>You can choose to use find (--find) or locate (--locate) to find the files that need to be changed on your system;</li>
-<li>You can dictate the location of the file if you want to modify a specific one or know exactly where it's located (--dictate);</li>
-<li>You can choose to use the Ubuntu default location (--default); or</li>
-<li>You can print the help information (--help)</li></ul>
+
+
+ - You can choose to use find (--find) or locate (--locate) to find the files that need to be changed on your system;
+ - You can dictate the location of the file if you want to modify a specific one or know exactly where it's located (--dictate);
+ - You can choose to use the Ubuntu default location (--default); or
+ - You can print the help information (--help)
+
 
 Once the program is run, it will make a back up, and modify it the original versions of the file. Once that's complete, all you have to do is restart Firefox.
 

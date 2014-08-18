@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "Linux", 
-        "music"
-    ], 
-    "date": "2008-02-02T20:02:59", 
-    "tags": [
-        "Linux", 
-        "music"
-    ], 
-    "title": "Personal Music Collections"
-}
+Title: Personal Music Collections
+Date: 2008-02-02T20:02:59
+Tags: Linux, music
+Category: Music
 
 I was curious which artists of mine had the most songs, so I ran:<code lang="bash">
 du Music/ | sort -nr | head -11</code>
@@ -28,4 +20,3 @@ Now we know that my top ten artists are:<code lang="bash">
 258544  Music/Nine Inch Nails
 248608  Music/Beatles, The
 </code>
-<!--break-->

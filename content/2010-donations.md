@@ -1,19 +1,7 @@
-{
-    "categories": [
-        "charity", 
-        "donations", 
-        "software", 
-        "good causes"
-    ], 
-    "date": "2010-01-12T16:28:02", 
-    "tags": [
-        "charity", 
-        "donations", 
-        "software", 
-        "good causes"
-    ], 
-    "title": "2010 Donations"
-}
+Title: 2010 Donations
+Date: 2010-01-12T16:28:02
+Tags: charity, donations, software, good causes
+Category: Personal
 
 Every year, a handful of organizations reach out to me to give them my money. I'm never sure how much I've given them, when the last time was, etc, so I'm always convinced some of them are tricking me into donating more than I would otherwise.
 

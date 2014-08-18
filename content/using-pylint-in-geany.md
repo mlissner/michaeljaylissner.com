@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "Python", 
-        "pylint", 
-        "geany"
-    ], 
-    "date": "2010-08-11T12:07:23", 
-    "tags": [
-        "Python", 
-        "pylint", 
-        "geany"
-    ], 
-    "title": "Using Pylint in Geany"
-}
+Title: Using Pylint in Geany
+Date: 2010-08-11T12:07:23
+Tags: Python, pylint, geany
+Category: Tech
 
 <a href="http://www.logilab.org/857">Pylint</a> is a tool that tells you when your Python code is broken or when it has coding problems. As a newish Python coder, using it has taught me a lot about conventions, and has helped to make my code significantly cleaner. Enabling it in my IDE, <a href="http://www.geany.org/">Geany</a>, makes it so that using it is just another part of my development workflow. 
 

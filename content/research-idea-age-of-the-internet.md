@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "Internet", 
-        "Project idea"
-    ], 
-    "date": "2009-01-05T15:41:47", 
-    "tags": [
-        "Internet", 
-        "Project idea"
-    ], 
-    "title": "Research Idea - The Age of the Internet"
-}
+Title: Research Idea - The Age of the Internet
+Date: 2009-01-05T15:41:47
+Tags: Internet, Project idea
+Category: Policy and Politics
 
 I blogged <a href="http://michaeljaylissner.com/blog/firefox-last-modified-tip">a while back</a> about a Firefox command that would tell you the last modified date of the page you were looking at, and it got me thinking....what is the age of the Internet on the whole?
 

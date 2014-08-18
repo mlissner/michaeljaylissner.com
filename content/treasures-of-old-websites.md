@@ -1,21 +1,11 @@
-{
-    "categories": [
-        "pct", 
-        "hiking", 
-        "me"
-    ], 
-    "date": "2008-02-26T18:58:04", 
-    "tags": [
-        "pct", 
-        "hiking", 
-        "me"
-    ], 
-    "title": "Treasures of Old Websites"
-}
+Title: Treasures of Old Websites
+Date: 2008-02-26T18:58:04
+Tags: pct, hiking, me
+Category: Tech
 
 I've been working the past couple of days on getting my other site, charityhikers.org moved over to my home server and recreated on Drupal. It's turning out to be a huge pain in the neck. The main problem is that there seem to be too many viable ways to accomplish what I want, and no consensus as to what the best one is. The result of this is that there are a number of half-hearted attempts at explaining how to have multiple sites running off of one Drupal installation, but none of them are really that detailed, or really apply all that well...it's frustrating.
 
-However! In doing this, I discovered a treasure I thought I had lost. I discovered my old PCT journal entries, which I have posted below, by date. It's a bit long, so I won't be offended if nobody reads them, but it's interesting to see what I was thinking before the big trip back in '05. Unfortunately, I don't have any of the actual posts from the trail, so it's a bit of a cliff hanger. Alas.<!--break-->
+However! In doing this, I discovered a treasure I thought I had lost. I discovered my old PCT journal entries, which I have posted below, by date. It's a bit long, so I won't be offended if nobody reads them, but it's interesting to see what I was thinking before the big trip back in '05. Unfortunately, I don't have any of the actual posts from the trail, so it's a bit of a cliff hanger. Alas.
 
 
 <b>First Entry - Madman Planning<br>21 March 2005</b>

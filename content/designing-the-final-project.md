@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "wire frame", 
-        "Final Project", 
-        "Design"
-    ], 
-    "date": "2010-03-13T18:28:28", 
-    "tags": [
-        "wire frame", 
-        "Final Project", 
-        "Design"
-    ], 
-    "title": "Designing the Final Project"
-}
+Title: Designing the Final Project
+Date: 2010-03-13T18:28:28
+Tags: wire frame, Final Project, Design
+Category: Tech
+
 
 Over the past week, I've been working to create scrapers for each of the 13 federal appeals courts. Last night I finally finished the last of them, so today I'm moving on to the design of the site. Design is always much better when people work in a team, so I'm putting these designs here so others can look at them and give me feedback. Please, please do!
 
@@ -30,8 +21,11 @@ Of course, users can also edit their profile by clicking on the settings link on
 <img src="http://michaeljaylissner.com/files/images/DSC02184%20(Modified).800x600.preview.JPG">
 
 And that's it for now. I'd LOVE any feedback anybody has on these. Typing this up, I've already come across a couple problems:
-<ul>
-<li>Users currently get to their alerts by clicking settings - that ain't intuitive.</li>
-<li>The about page is pretty hard to find. It may need more emphasis.</li>
-</ul>
+
+
+
+ - Users currently get to their alerts by clicking settings - that ain't intuitive.
+ - The about page is pretty hard to find. It may need more emphasis.
+
+
 I'm sure there are more problems I'm not seeing. That's why I need your help. What am I missing? What should I change? What's stupid? What's outmoded?

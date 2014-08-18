@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "Linux", 
-        "security", 
-        "lojack"
-    ], 
-    "date": "2007-09-25T22:42:45", 
-    "tags": [
-        "Linux", 
-        "security", 
-        "lojack"
-    ], 
-    "title": "LoJack for Linux Part II"
-}
+Title: LoJack for Linux Part II
+Date: 2007-09-25T22:42:45
+Tags: Linux, security, lojack
+Category: Tech
 
 EDIT: See update in the comments
 
@@ -21,4 +11,4 @@ The other piece of this puzzle is somewhat more puzzling: How to access the comp
 
 The other caveat to consider is that if you need a password to log in, the ddclient won't get started in the first place because the thief won't be able to log in. So, what's the better solution: A password login, or ddclient? 
 
-Hmmm....any solutions to the ssh problem are more than welcome.<!--break-->
+Hmmm....any solutions to the ssh problem are more than welcome.

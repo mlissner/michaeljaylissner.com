@@ -1,13 +1,7 @@
-{
-    "categories": [
-        "money"
-    ], 
-    "date": "2007-10-16T23:53:44", 
-    "tags": [
-        "money"
-    ], 
-    "title": "The $10,000 scam."
-}
+Title: The $10,000 scam.
+Date: 2007-10-16T23:53:44
+Tags: money
+Category: Personal
 
 Here's the concept: You get a 0.0% APR credit card, and you see how high of a limit they'll give you. You wait for the balance transfer checks to arrive in a week or two, and you write yourself a check for the amount of the credit limit. You invest that money for as long as the card remains at 0.0% APR. When that period is up, you pay off the card, and the game ends.
 
@@ -20,4 +14,4 @@ Now, here's where things get a bit tricky...I'm not satisfied with 5%, so I deci
 Any ideas out there as to what happened? I still have six months before I have to pay Visa back, but nevertheless, this is annoying.
 
 <small>&sup1;If you don't read footnotes, this game is not for you.
-&sup2;Two things to bear in mind here. One is to get a card with no balance transfer fees. The other is that your credit score will take a temporary hit during this ordeal (but I have it on good authority that it will recover quickly).</small><!--break-->
+&sup2;Two things to bear in mind here. One is to get a card with no balance transfer fees. The other is that your credit score will take a temporary hit during this ordeal (but I have it on good authority that it will recover quickly).</small>

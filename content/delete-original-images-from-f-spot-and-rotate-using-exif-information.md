@@ -1,19 +1,8 @@
-{
-    "categories": [
-        "script", 
-        "f-spot", 
-        "awk", 
-        "grep"
-    ], 
-    "date": "2008-09-15T23:33:48", 
-    "tags": [
-        "script", 
-        "f-spot", 
-        "awk", 
-        "grep"
-    ], 
-    "title": "Delete Original Images from F-Spot and Rotate Using Exif Information"
-}
+Title: Delete Original Images from F-Spot and Rotate Using Exif Information
+Date: 2008-09-15T23:33:48
+Tags: script, f-spot, awk, grep
+Category: Tech
+
 
 Over the past couple weeks, my girlfriend and I spent a lot of time working on the photos from our Peru trip. Since we used F-Spot to do our photo editing, when we were done we had a couple of problems when it came to transferring the photos back to her computer which is running Vista. 
 
@@ -46,4 +35,4 @@ cat modifiedImages2.txt | awk -F'(' '{print $1,$3;}' | sed 's/  //g' &gt; modifi
 You should now have a file called modifiedImages3.txt that contains the name of all of the original photos. To delete the pictures in this list from the collection - permanently - run:<code lang="bash">
 rm `cat modifiedImages3.txt`</code>
 
-You should now be able to transfer this entire directory of photos to another computer without rotation issues or duplicated photos.<!--break-->
+You should now be able to transfer this entire directory of photos to another computer without rotation issues or duplicated photos.

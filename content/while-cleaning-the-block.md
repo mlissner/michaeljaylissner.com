@@ -1,13 +1,7 @@
-{
-    "categories": [
-        "berkeley"
-    ], 
-    "date": "2008-07-19T15:27:04", 
-    "tags": [
-        "berkeley"
-    ], 
-    "title": "While Cleaning the Block"
-}
+Title: While Cleaning the Block
+Date: 2008-07-19T15:27:04
+Tags: berkeley
+Category: Environment
 
 I spent a couple hours cleaning my block today. Among the very special trash I picked up, I found not one, not two, but two and a half used hypodermic needles. Also of interest, one of my neighbors seems to have placed a box of 100 fresh, sterile needles outside their house.
 

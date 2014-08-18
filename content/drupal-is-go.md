@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "blog", 
-        "me", 
-        "drupal"
-    ], 
-    "date": "2007-09-12T21:46:59", 
-    "tags": [
-        "blog", 
-        "me", 
-        "drupal"
-    ], 
-    "title": "This is it. Drupal systems are go."
-}
+Title: This is it. Drupal systems are go.
+Date: 2007-09-12T21:46:59
+Tags: blog, me, drupal
+Category: Tech
+
 
 Well, I can't say I have had a serious blog before, so with this very sentence, I am forging new ground for myself, and through the strange magic of the Internet, for everybody else in the world (except China, who I will now block from this blog by writing the following word: &quot;democracy&quot;).
  
@@ -21,4 +12,4 @@ It's an interesting thing setting up a blog in your house. For some reason, it's
 
 The next step once the networking is figured out is to figure out the software and hardware sides of things. This is not an easy task either. In the end, I have set up two computers to run this here blog. One to run Drupal, Apache, etc., and the other to do the mail serving. For the CMS, I have chosen Drupal because it seems to be all the rage, and because it has a stupid song that got caught in my head for far too long (see youtube for details). Drupal is of course running on GNU+Linux, Apache, PHP, and MySQL. As for the mail server, it would be running Zimbra, but at the moment it is crashed. I can't make it stop overheating, and it's rather annoying. 
 
-Anyway, once that's up and going, everything should be a go, and I will be a proud Internet host. Only one question truly remains: Is my IP on an anti-spam blacklist? We shall soon find out. <!--break-->
+Anyway, once that's up and going, everything should be a go, and I will be a proud Internet host. Only one question truly remains: Is my IP on an anti-spam blacklist? We shall soon find out. 

@@ -1,19 +1,7 @@
-{
-    "categories": [
-        "sqlite3", 
-        "f-spot", 
-        "database", 
-        "bash"
-    ], 
-    "date": "2009-10-14T00:30:12", 
-    "tags": [
-        "sqlite3", 
-        "f-spot", 
-        "database", 
-        "bash"
-    ], 
-    "title": "Script to Clean Up F-Spot Database"
-}
+Title: Script to Clean Up F-Spot Database
+Date: 2009-10-14T00:30:12
+Tags: sqlite3, f-spot, database, bash
+Category: Tech
 
 One of the more popular photo management applications for Linux is f-spot, but unfortunately it has a rather glaring bug. It uses a sqlite3 database internally to track which pictures you've imported into it, what tags they have, etc. However, if you delete, move or rename any of the files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It's annoying, and there's no particularly easy way to deal with it...until now.
 

@@ -1,21 +1,7 @@
-{
-    "categories": [
-        "metallurgy", 
-        "craft", 
-        "bikes", 
-        "bike repair", 
-        "me"
-    ], 
-    "date": "2009-12-29T12:05:12", 
-    "tags": [
-        "metallurgy", 
-        "craft", 
-        "bikes", 
-        "bike repair", 
-        "me"
-    ], 
-    "title": "Cheap Metal Bike Stand"
-}
+Title: Cheap Metal Bike Stand
+Date: 2009-12-29T12:05:12
+Tags: metallurgy, craft, bikes, bike repair, me
+Category: Make
 
 It's my winter break right now, so I'm taking advantage of it by doing some of the things that have been on my list for far too long. One of those things was to build a repair stand for the work I do on the bikes in my life. For about $50, you can build this stand, which works remarkably well. 
 

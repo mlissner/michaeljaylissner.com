@@ -1,13 +1,8 @@
-{
-    "categories": [
-        "decree"
-    ], 
-    "date": "2007-11-16T17:20:50", 
-    "tags": [
-        "decree"
-    ], 
-    "title": "By Decree of This Blog"
-}
+Title: By Decree of This Blog
+Date: 2007-11-16T17:20:50
+Tags: decree
+Category: Personal
+
 
 **Start Communication**
 

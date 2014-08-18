@@ -1,21 +1,13 @@
-{
-    "categories": [
-        "pictures", 
-        "japan"
-    ], 
-    "date": "2009-06-28T13:14:27", 
-    "tags": [
-        "pictures", 
-        "japan"
-    ], 
-    "title": "Japan Pictures Posted, and a Sampling"
-}
+Title: Japan Pictures Posted, and a Sampling
+Date: 2009-06-28T13:14:27
+Tags: pictures, japan
+Category: Pictures
 
 My girlfriend and I got back from Japan a few weeks ago, and we've finally gotten the pictures posted. If you're interested, let me know and I'll send you a link to the whole collection.
 
 For now though, here are some samples of some of the good ideas, bad ideas, and funny signs we saw.
 
-Starting with the funny signs...<!--break-->
+Starting with the funny signs...
 <img src="http://michaeljaylissner.com/files/images/Actually,%20keep%20out.jpg">
 "No camping, lighting fires, or...actually, while we're at it, just stay out all together."
 

@@ -1,19 +1,7 @@
-{
-    "categories": [
-        "backpacking", 
-        "snow mountain", 
-        "maps", 
-        "cartography"
-    ], 
-    "date": "2013-08-27T10:48:25", 
-    "tags": [
-        "backpacking", 
-        "snow mountain", 
-        "maps", 
-        "cartography"
-    ], 
-    "title": "Snow Mountain Distance Map"
-}
+Title: Snow Mountain Distance Map
+Date: 2013-08-27T10:48:25
+Tags: backpacking, snow mountain, maps, cartography
+Category: Backpacking
 
 I put on my cartographer's hat today and made a distance map for Snow Mountain. The regular map for this area doesn't have any distance markers on it, so these are based on talking with the ranger in the park. He seemed knowledgeable, so these numbers are probably the best we'll get for a while. 
 

@@ -1,19 +1,7 @@
-{
-    "categories": [
-        "theft", 
-        "system design", 
-        "Project idea", 
-        "bicycle"
-    ], 
-    "date": "2010-06-15T11:44:13", 
-    "tags": [
-        "theft", 
-        "system design", 
-        "Project idea", 
-        "bicycle"
-    ], 
-    "title": "Project Idea: \"Breaking the Cycle: Isolating Easy Solutions to the Bike Theft Problem\""
-}
+Title: Project Idea: "Breaking the Cycle: Isolating Easy Solutions to the Bike Theft Problem"
+Date: 2010-06-15T11:44:13
+Tags: theft, system design, Project idea, bicycle
+Category: Bikes
 
 I've decided that I should start blogging my project ideas so that they may be aired more widely in public. I have amassed quite a number of these, and have been sitting on them for some time, but more and more, it's looking like I won't have time to get to all of my ideas. Starting today, I'll be writing out ideas that I have had. If you have project ideas of your own that you think might be interesting to share here, let me know, and we'll get yours posted too. If you're interested in pursuing one of these ideas, go for it!
 
@@ -41,11 +29,11 @@ In parting, I will conclude by pointing you to the best resource I've found on t
 <strong>References</strong>
 A lot of the information for this post was gleaned from the following excellent resources:
 <ol>
-<li><a href="http://www.popcenter.org/problems/bicycle_theft" target="_blank">Problem-Oriented Guides for Police, Problem-Specific Guides Series, Guide No. 52: Bicycle Theft (Sponsored by the Department of Justice)</a></li>
-<li><a href="http://www.nationalbikeregistry.com/" target="_blank">The National Bike Registry (A for-profit organization)</a></li>
-<li><a href="http://nbda.com/articles/industry-overview-2009-pg34.htm" target="_blank">National Bicycle Dealers Association</a></li>
-<li><a href="http://www.fbi.gov/ucr/cius2008/index.html" target="_blank">Federal Bureau of Investigation Uniform Crime Reporting Program</a></li>
-<li><a href="http://www.icpsr.umich.edu/NACJD/NCVS/" target="_blank">National Crime Victimization Survey</a></li>
+ - <a href="http://www.popcenter.org/problems/bicycle_theft" target="_blank">Problem-Oriented Guides for Police, Problem-Specific Guides Series, Guide No. 52: Bicycle Theft (Sponsored by the Department of Justice)</a>
+ - <a href="http://www.nationalbikeregistry.com/" target="_blank">The National Bike Registry (A for-profit organization)</a>
+ - <a href="http://nbda.com/articles/industry-overview-2009-pg34.htm" target="_blank">National Bicycle Dealers Association</a>
+ - <a href="http://www.fbi.gov/ucr/cius2008/index.html" target="_blank">Federal Bureau of Investigation Uniform Crime Reporting Program</a>
+ - <a href="http://www.icpsr.umich.edu/NACJD/NCVS/" target="_blank">National Crime Victimization Survey</a>
 
 
 </ol>

@@ -1,13 +1,9 @@
-{
-    "categories": [
-        "music"
-    ], 
-    "date": "2007-12-30T12:28:27", 
-    "tags": [
-        "music"
-    ], 
-    "title": "Black Sabbath - Children of the Grave"
-}
+Title: Black Sabbath - Children of the Grave
+Subtitle: Lyrics of power
+Date: 2007-12-30T12:28:27
+Tags: music
+Category: Music
+
 
 Revolution in their minds 
 The children start to march
@@ -24,4 +20,4 @@ Can they win the fight for peace or will they disappear? Yeah!
 So you children of the world listen to what I say 
 If you want a better place to live in spread the word today
 Show the world that love is still alive you must be brave 
-Or you children of today are children of the grave yeah!<!--break-->
+Or you children of today are children of the grave yeah!

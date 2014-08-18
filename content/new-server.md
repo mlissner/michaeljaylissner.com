@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "slicehost", 
-        "drupal"
-    ], 
-    "date": "2010-01-26T20:22:42", 
-    "tags": [
-        "slicehost", 
-        "drupal"
-    ], 
-    "title": "New Server!"
-}
+Title: New Server!
+Date: 2010-01-26T20:22:42
+Tags: slicehost, drupal
+Category: Tech
 
 When I <a href="/blog/drupal-is-go">started</a> this blog more than two years ago, it was an experiment in blogging and an experiment in running my own server. At this point, it's safe to say that the results of the experiment are in. While running my own server out of my attic has been an enlightening experience, teaching me about everything from DNS to PHP, ultimately, I have come to the conclusion that if I want a reliable, powerful and secure sever, running it myself is not the way to do it.
 

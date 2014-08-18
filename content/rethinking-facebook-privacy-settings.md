@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "facebook", 
-        "privacy", 
-        "configuration"
-    ], 
-    "date": "2009-08-17T12:09:06", 
-    "tags": [
-        "facebook", 
-        "privacy", 
-        "configuration"
-    ], 
-    "title": "Rethinking Facebook Privacy Settings"
-}
+Title: Rethinking Facebook Privacy Settings
+Date: 2009-08-17T12:09:06
+Tags: facebook, privacy, configuration
+Category: Privacy and Security
 
 Ars Technica has <a href="http://arstechnica.com/web/news/2009/08/meshing-social-networking-and-privacy-on-facebook.ars" target="_blank">an article</a> today outlining some excellent techniques for safeguarding your privacy while using Facebook. One of the best methods explained in the article is to cordon off your friends into different groups of people, and to then set different permissions for those groups. Thus, the common technique is to put your ex-partners into one group, your friends into another, family into another, and thus down the line.
 

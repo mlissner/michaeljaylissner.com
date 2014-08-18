@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "music", 
-        "concept"
-    ], 
-    "date": "2008-01-02T21:32:08", 
-    "tags": [
-        "music", 
-        "concept"
-    ], 
-    "title": "Program Idea - Public Jukebox for Internet Cafes"
-}
+Title: Program Idea - Public Jukebox for Internet Cafes
+Date: 2008-01-02T21:32:08
+Tags: music, concept
+Category: Tech
 
 The problem with Internet caf&eacute;s as I see it is that they can never make everybody happy when it comes to music. They can quite easily please one crowd, but they can never please everybody. Back in the good old days, they tried to solve this in restaurants and bars by having a jukebox with a bunch of music stored physically inside it. Now we have jukeboxes that can download music, but that's where the technology seems to have stopped.
 
@@ -21,4 +13,4 @@ Of course, the counter argument could be made that on a grander scale, what if t
 
 The final idea behind this would be that the caf&eacute; could keep a database of the music their customers wanted to play, and that they could then know which single songs to actually buy, and to actually own the copyrights for.
 
-It could almost work.<!--break-->
+It could almost work.

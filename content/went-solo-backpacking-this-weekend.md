@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "hiking", 
-        "me"
-    ], 
-    "date": "2008-02-24T22:07:32", 
-    "tags": [
-        "hiking", 
-        "me"
-    ], 
-    "title": "Went Solo Backpacking this Weekend"
-}
+Title: Went Solo Backpacking this Weekend
+Date: 2008-02-24T22:07:32
+Tags: hiking, me
+Category: Backpacking
 
 I went solo backpacking this weekend for the first time in a LONG time. I think the last time I really did a trip like this one was actually before I did the <a href="http://www.pcta.org" target="_blank">PCT</a>, which was back in '04. 
 
@@ -21,4 +13,4 @@ Let me tell you folks, it was an adventure. I was so exposed that I felt like I 
 
 Anyway, despite the adventure, the trip was good. It gave me some time to reflect on all the changes coming on in my life, and to get out and feel alive. 
 
-Did I find the answer to my question of Cal vs. UW? No...not in nature I didn't.<!--break-->
+Did I find the answer to my question of Cal vs. UW? No...not in nature I didn't.

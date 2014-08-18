@@ -1,15 +1,8 @@
-{
-    "categories": [
-        "pct", 
-        "me"
-    ], 
-    "date": "2007-10-03T23:17:34", 
-    "tags": [
-        "pct", 
-        "me"
-    ], 
-    "title": "My Destiny To Have A Beard"
-}
+Title: My Destiny To Have A Beard
+Date: 2007-10-03T23:17:34
+Tags: pct, me
+Category: Personal
+
 
 <p>
 I've been doing some thinking, and I think that my destiny* wants me to have a beard. Let's take a quick walk through my past, shall we? <br />
@@ -42,4 +35,3 @@ What will come after Linux? Will it be Lumberjack or hippie...time will tell.
 <p>
 *Destiny is a load of bunk, and we all know it deep down.
 </p>
-<!--break-->

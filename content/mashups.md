@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "music", 
-        "infotech"
-    ], 
-    "date": "2007-10-28T13:10:16", 
-    "tags": [
-        "music", 
-        "infotech"
-    ], 
-    "title": "Mashups"
-}
+Title: Mashups
+Date: 2007-10-28T13:10:16
+Tags: music, infotech
+Category: Tech
 
 For a while, I've been reading that mashups between various website technologies would soon be really easy to work with and play with and such. I didn't believe it until I noticed my website today.
 

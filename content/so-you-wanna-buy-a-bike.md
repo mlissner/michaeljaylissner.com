@@ -1,17 +1,10 @@
-{
-    "categories": [
-        "biking", 
-        "commerce", 
-        "hipsters"
-    ], 
-    "date": "2013-02-05T20:19:16", 
-    "tags": [
-        "biking", 
-        "commerce", 
-        "hipsters"
-    ], 
-    "title": "So you wanna buy a bike"
-}
+Title: So you wanna buy a bike
+Date: 2013-02-05T20:19:16
+Tags: biking, commerce, hipsters
+
+[TOC]
+
+# Buying a bike is pretty easy
 
 Another of my friends is asking me questions about buying a bike. I love that they do this, but since it's become a trend, I figure I should throw my thoughts together here as a reference. 
 
@@ -35,15 +28,15 @@ Size is important. If it doesn't fit, it's useless. Go to a bike shop and get si
 
 Rule five explains itself. When you know more about bikes, branch out if you care. You probably won't, so save yourself the effort of looking at exotic stuff. It's exotic for a reason.
 
-##Bonus questions for the avid reader
+#Bonus questions for the avid reader
 
-*What brand should I buy?*
+##What brand should I buy?
 Doesn't much matter, surprisingly. There are better and worse brands, but if you're buying a used road bike, and follow rule number 3, your goals will be accomplished.
 
-*What material should my bike be?*
+##What material should my bike be?
 Probably steel. Aluminum is good too, but probably out of your price range. Steel's a very reputable material though. If you can find Reynold's steel, all the better.
 
-*How do I know the bike I'm buying isn't stolen?*
+##How do I know the bike I'm buying isn't stolen?
 Good question! This one's hard. You can [look for the serial number][3] or try to only deal with people that seem legit. There is a national bike registry (which you should use!), but otherwise there's not a whole lot you can do...yet.
 
 Comments? Thoughts? Email me. You're probably my friend already if you're reading this...

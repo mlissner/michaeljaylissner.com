@@ -1,19 +1,7 @@
-{
-    "categories": [
-        "windows", 
-        "ubuntu", 
-        "microsoft", 
-        "Linux"
-    ], 
-    "date": "2008-04-29T21:33:41", 
-    "tags": [
-        "windows", 
-        "ubuntu", 
-        "microsoft", 
-        "Linux"
-    ], 
-    "title": "Remap Caps Lock as Backspace in Windows and Linux"
-}
+Title: Remap Caps Lock as Backspace in Windows and Linux
+Date: 2008-04-29T21:33:41
+Tags: windows, ubuntu, microsoft, Linux
+Category: Tech
 
 A while back my wrist started hurting from reaching for the cursed backspace key. I was making too many mistakes. My solution was to remap the caps lock key on all the computers I use to act as an additional backspace key. How did I do it? Well, I'm glad you asked. I'll tell you.
 
@@ -50,4 +38,4 @@ And add xset r 66 to the bottom.
 That should do it.
 
 Source: http://ubuntuforums.org/showthread.php?t=369402
-<!--break-->
+

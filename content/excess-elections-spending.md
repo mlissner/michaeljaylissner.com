@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "elections", 
-        "spam"
-    ], 
-    "date": "2008-10-29T14:16:35", 
-    "tags": [
-        "elections", 
-        "spam"
-    ], 
-    "title": "Excess Elections Spending"
-}
+Title: Excess Elections Spending
+Date: 2008-10-29T14:16:35
+Tags: elections, spam
+Category: Policy and Politics
 
 We're just about to the line here with the election, and I, for one, am really looking forward to a phone that stops ringing, to my mail carrier's back feeling better, and to my inbox devoid of political emails. 
 
@@ -17,4 +9,4 @@ Really, things have gotten out of control. In an <a href="http://ap.google.com/a
 
 Unfortunately, both parties contact me at all levels of government from city to county to state to federal. And they both do it for each candidate, and every measure. Often they do it more than once. 
 
-Are there any numbers totalling the cost of elections nationwide? I'd be interested in seeing such a thing. What else could we buy with that amount of money? <!--break-->
+Are there any numbers totalling the cost of elections nationwide? I'd be interested in seeing such a thing. What else could we buy with that amount of money? 

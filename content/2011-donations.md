@@ -1,21 +1,7 @@
-{
-    "categories": [
-        "voting reform", 
-        "donations", 
-        "charity", 
-        "campaign finance", 
-        "alma mater"
-    ], 
-    "date": "2011-01-22T16:07:21", 
-    "tags": [
-        "voting reform", 
-        "donations", 
-        "charity", 
-        "campaign finance", 
-        "alma mater"
-    ], 
-    "title": "2011 Donations"
-}
+Title: 2011 Donations
+Date: 2011-01-22T16:07:21
+Tags: voting reform, donations, charity, campaign finance, alma mater
+Category: Personal
 
 <p>I'm entering year number two of my plan to annually donate a small sum of money to a handful of organizations at the beginning of every year. This year I picked the organizations that had a major effect on me personally, are fixing environmental problems, or are working towards fixing the American political system. </p>
 

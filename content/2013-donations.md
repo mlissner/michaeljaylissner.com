@@ -1,25 +1,8 @@
-{
-    "categories": [
-        "voting reform", 
-        "technology", 
-        "me", 
-        "donations", 
-        "charity", 
-        "campaign finance", 
-        "alma mater"
-    ], 
-    "date": "2013-01-04T18:12:03", 
-    "tags": [
-        "voting reform", 
-        "technology", 
-        "me", 
-        "donations", 
-        "charity", 
-        "campaign finance", 
-        "alma mater"
-    ], 
-    "title": "2013 Donations"
-}
+Title: 2013 Donations
+Date: 2013-01-04T18:12:03
+Tags: voting reform, technology, me, donations, charity, campaign finance, alma mater
+Category: Personal
+
 
 Long-time friends will probably realize that with the coming of the new year comes a revisit to my annual donations. 
 

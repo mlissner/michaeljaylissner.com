@@ -1,21 +1,8 @@
-{
-    "categories": [
-        "pdftotext", 
-        "pdftohtml", 
-        "pdf", 
-        "Final Project", 
-        "courtlistener.com"
-    ], 
-    "date": "2010-02-06T15:03:18", 
-    "tags": [
-        "pdftotext", 
-        "pdftohtml", 
-        "pdf", 
-        "Final Project", 
-        "courtlistener.com"
-    ], 
-    "title": "Converting PDF Files to HTML"
-}
+Title: Converting PDF Files to HTML
+Date: 2010-02-06T15:03:18
+Tags: pdftotext, pdftohtml, pdf, Final Project, courtlistener.com
+Category: Tech
+
 
 For my final project, we are considering posting court cases on our site, and so I did some work today analyzing how best to convert the PDF files the courts give us to HTML that people can actually use. I looked briefly at google docs, since it has an amazing tool that converts PDF files to something resembling text, but short of spending a few days hacking the site, I couldn't figure out any easy way to leverage their technology in any sort of automated way. 
 

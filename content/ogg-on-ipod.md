@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "music", 
-        "copyright", 
-        "ipod"
-    ], 
-    "date": "2007-09-16T19:59:23", 
-    "tags": [
-        "music", 
-        "copyright", 
-        "ipod"
-    ], 
-    "title": "I want ogg on my iPod"
-}
+Title: I want ogg on my iPod
+Date: 2007-09-16T19:59:23
+Tags: music, copyright, ipod
+Category: Music
 
 <p>
 I know this post is going to alienate just about everybody that would ever consider reading my blog, but here's the deal: I want all iPods to support the ogg file format. 
@@ -28,4 +18,3 @@ Now, the theoretical argument above holds water, but I have personal reasons for
 <p>
 I should also mention while I am on this rant that I have flac files as well. Why doesn't the iPod support those! iPods are great, but these are serious shortcomings.
 </p>
-<!--break-->

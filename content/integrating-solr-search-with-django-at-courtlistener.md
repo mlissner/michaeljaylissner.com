@@ -1,21 +1,7 @@
-{
-    "categories": [
-        "Sunburnt", 
-        "Solr", 
-        "Haystack", 
-        "django", 
-        "courtlistener.com"
-    ], 
-    "date": "2011-12-02T09:37:39", 
-    "tags": [
-        "Sunburnt", 
-        "Solr", 
-        "Haystack", 
-        "django", 
-        "courtlistener.com"
-    ], 
-    "title": "Integrating Solr Search with Django at CourtListener"
-}
+Title: Integrating Solr Search with Django at CourtListener
+Date: 2011-12-02T09:37:39
+Tags: Sunburnt, Solr, Haystack, django, courtlistener.com
+Category: Tech
 
 Over the past few weeks, I've been hard at work on the new version of <a href="http://courtlistener.com">CourtListener</a>. Unfortunately, progress has been slower than I'd like due to the limitations of the Solr frameworks I've been using. There are a number of competing frameworks available, each with its own strengths and pitfalls.
 
@@ -23,34 +9,43 @@ So far, I've tried two of the popular ones, <a href="http://haystacksearch.org/"
 
 <h3>CourtListener's needs</h3>
 <p>At CourtListener, we have some big goals for the new search version. At its core, it's essentially a search-powered site, so we have some big needs:</p>
-<ul>
-<li><a href="http://www.uxmatters.com/mt/archives/2009/09/best-practices-for-designing-faceted-search-filters.php">Parallel Faceted Search</a></li>
-<li>Highlighting</li>
-<li>Complex boolean searches supported by Solr's eDisMax syntax</li>
-<li>Snippets below search results and in emails</li>
-<li>Standard search stuff: field-level boosting, result and facet counts, field-level searching, result pagination, performance, etc.</li>
-</ul>
+
+
+
+ - <a href="http://www.uxmatters.com/mt/archives/2009/09/best-practices-for-designing-faceted-search-filters.php">Parallel Faceted Search</a>
+ - Highlighting
+ - Complex boolean searches supported by Solr's eDisMax syntax
+ - Snippets below search results and in emails
+ - Standard search stuff: field-level boosting, result and facet counts, field-level searching, result pagination, performance, etc.
+
+
 
 We're currently using <a href="http://sphinxsearch.com">Sphinx Search</a> with <a href="http://github.com/dcramer/django-sphinx">django-sphinx</a>, which does a fine job, but it has some problems:
-<ul>
-<li>django-sphinx hasn't been maintained in years, and requires patching</li>
-<li>django-sphinx doesn't support snippets</li>
-<li>Sphinx doesn't (yet) support real time indexing (though it's in beta, I believe)</li>
-<li>Sphinx doesn't have the community and features that Solr does</li>
-<li>Unfamiliar syntax for users</li>
-</ul>
+
+
+
+ - django-sphinx hasn't been maintained in years, and requires patching
+ - django-sphinx doesn't support snippets
+ - Sphinx doesn't (yet) support real time indexing (though it's in beta, I believe)
+ - Sphinx doesn't have the community and features that Solr does
+ - Unfamiliar syntax for users
+
+
 
 In general, these problems aren't too difficult, but in combination, they make for a poor user experience. The last point is a real deal breaker, since most users are accustomed to making queries like [ site:google.com ], which works for Solr and Google, but not for Sphinx. In Sphinx, your query is [ @site(google.com) ]. While we could do post processing of the user's query to convert it to Google/Solr-style syntax, it's unreliable and prone to failing in corner cases. Parsing queries is hard. More on this in a moment. 
 
 <h3>Let's try Haystack</h3>
 In switching from Sphinx, I first tried Haystack as a solution, since it has excellent documentation and seems to be the most popular solution. I spent about two weeks learning about it and getting it in place, but ultimately, I gave up on it because I found that I was subclassing it everywhere. Haystack is a good solution, to be sure, but I found that I was:
-<ul>
-<li>Subclassing the FacetView so it could support parallel facet counts</li>
-<li>Subclassing the FacetForm for another feature I needed</li>
-<li>Subclassing the Solr backend so it could support Solr's highlighting syntax</li>
-<li>Further subclassing the Solr backend so it can support additional Solr parameters that aren't built in</li>
-<li>...etc...</li>
-</ul>
+
+
+
+ - Subclassing the FacetView so it could support parallel facet counts
+ - Subclassing the FacetForm for another feature I needed
+ - Subclassing the Solr backend so it could support Solr's highlighting syntax
+ - Further subclassing the Solr backend so it can support additional Solr parameters that aren't built in
+ - ...etc...
+
+
 I worked on that third point for the better part of a day before deciding that Haystack wasn't for me. Rather than spending my time working on the search needs of CourtListener, I was spending most of it hacking on Haystack, and trying to understand the way it fits together. It's not unreasonably complex, but there is a LOT of documentation, and a lot of complexity that I don't need (such as the ability to switch search backends). Instead of a big solution that allows me to subclass whatever I need (which is good), I needed a lighter-weight solution that was more nimble, and which allowed me to interact with Solr in a more direct way.
 
 <h3>Enter Sunburnt</h3>

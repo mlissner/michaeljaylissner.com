@@ -1,15 +1,8 @@
-{
-    "categories": [
-        "politics", 
-        "elections"
-    ], 
-    "date": "2008-07-19T20:22:52", 
-    "tags": [
-        "politics", 
-        "elections"
-    ], 
-    "title": "I Just Heard About This"
-}
+Title: I Just Heard About This
+Date: 2008-07-19T20:22:52
+Tags: politics, elections
+Category: Rant
+
 
 I just learned about this, but it's pretty shocking so I thought I would post it. Apparently a few years ago, Bush said that he uses "The Google". 
 
@@ -26,4 +19,4 @@ He also says, "I am a [computer] illiterate that has to rely on my wife for all 
 
 This is really, really sad. Is there <strong>ANY</strong> job for which you would deliberately hire somebody that professes internet and computer illiteracy?
 
-Shocking.<!--break-->
+Shocking.

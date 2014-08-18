@@ -27,7 +27,62 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 20
+DEFAULT_PAGINATION = 30
+DEFAULT_ORPHANS = 2
+
+USE_FOLDER_AS_CATEGORY = False
+DISPLAY_CATEGORIES_ON_MENU = True
+SLUGIFY_SOURCE = 'basename'
+DELETE_OUTPUT_DIRECTORY = True
+TYPOGRIFY = True
+
+# URL settings
+ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
+
+TAG_FEED_ATOM = 'feeds/tag/%s'
+
+# Plugins
+PLUGIN_PATHS = ['../pelican-plugins']
+PLUGINS = [
+    'sitemap',
+    'tipue_search',
+    'extract_toc',
+]
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.7,
+        'indexes': 0.4,
+        'pages': 0.6
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
+
+
+# Elegant theme settings
+RECENT_ARTICLES_COUNT = 20
+COMMENTS_INTRO = "I love getting feedback and comments. Make my day by making " \
+                 "a comment."
+SITE_LICENSE = 'Unless mentioned otherwise, all material on this site is ' \
+               '<a href="about#license">licensed</a> under a Creative ' \
+               'Commons copyright or the GNU Affero GPL. ' \
+               '<a href="about#privacy">Privacy Policy</a>.'
+MD_EXTENSIONS = (['codehilite(css_class=highlight)', 'extra', 'headerid',
+                  'toc'])
+DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives', 'search',
+                     '404'))
+STATIC_PATHS = ['theme/images', 'images']
+TAG_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
+AUTHOR = "Michael Lissner"
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True

@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "blog", 
-        "infotech", 
-        "drupal"
-    ], 
-    "date": "2008-01-13T16:56:44", 
-    "tags": [
-        "blog", 
-        "infotech", 
-        "drupal"
-    ], 
-    "title": "Taxonomy Features Are Go"
-}
+Title: Taxonomy Features Are Go
+Date: 2008-01-13T16:56:44
+Tags: blog, infotech, drupal
+Category: Tech
 
 I have been rather busy since starting this blog many months ago, so I never got to finish rounding out its features. One that I have been wanting to figure out and to apply was Drupal's taxonomy feature, which allows you to categorize your content as you write it.
 

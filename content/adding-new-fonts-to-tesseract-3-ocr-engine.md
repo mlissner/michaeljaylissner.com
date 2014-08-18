@@ -1,19 +1,8 @@
-{
-    "categories": [
-        "tesseract", 
-        "ocr", 
-        "howto", 
-        "font"
-    ], 
-    "date": "2012-02-11T10:53:30", 
-    "tags": [
-        "tesseract", 
-        "ocr", 
-        "howto", 
-        "font"
-    ], 
-    "title": "Adding New Fonts to Tesseract 3 OCR Engine"
-}
+Title: Adding New Fonts to Tesseract 3 OCR Engine
+Date: 2012-02-11T10:53:30
+Tags: tesseract, ocr, howto, font
+Category: Tech
+
 
 *Update:* I've turned off commenting on this article because it was just a bunch of people asking for help and never getting any. If you need help with these instructions, go to Stack Overflow and ask there. If you have corrections to the article, please send them directly to me using the Contact form.
 
@@ -21,10 +10,11 @@
 
 The process has a few major steps:
 
-* [Create training documents][4]
-* [Teach Tesseract about the documents][5]
+ * [Create training documents][4]
+ * [Teach Tesseract about the documents][5]
 
-<h3 id='create-training-docs'>Create training documents</h3>
+### Create training documents
+
 To create training documents, open up MS Word or LibreOffice, paste in the contents of the attached file named 'standard-training-text.txt'. This file contains the training text that is used by Tesseract for the included fonts.
 
 Set your line spacing to at least 1.5, and space out the letters by about 1pt. using character spacing. I've attached a sample doc too, if that helps. Set the text to the font you want to use, and save it as font-name.doc.
@@ -35,76 +25,79 @@ Save the document as a PDF (call it [lang].font-name.exp0.pdf, with lang being a
 
 You'll now have a good training image called lang.font-name.exp0.tif. If you're adding multiple fonts, or bold, italic or underline, repeat this process multiple times, creating one doc &rarr; pdf &rarr;  tiff per font variation.
 
-<h3 id="train-tesseract">Train Tesseract</h3>
+### Train Tesseract
+
 The next step is to run tesseract over the image(s) we just created, and to see how well it can do with the new font. After it's taken its best shot, we then give it corrections. It'll provide us with a box file, which is just a file containing x,y coordinates of each letter it found along with what letter it thinks it is. So let's see what it can do:
 
-`tesseract lang.font-name.exp0.tiff lang.font-name.exp0 batch.nochop makebox`
+    tesseract lang.font-name.exp0.tiff lang.font-name.exp0 batch.nochop makebox
 
 You'll now have a file called font-name.exp0.box, and you'll need to open it in a box-file editor. There are a bunch of these [on the Tesseract wiki][6]. The one that works for me (on Ubuntu) is [moshpytt][7], though it doesn't support multi-page tiffs. If you need to use a multi-page tiff, see [the issue on the topic][11] for tips. Once you've opened it, go through **every** letter, and make sure it was detected correctly. If a letter was skipped, add it as a row to the box file. Similarly, if two letters were detected as one, break them up into two lines.
 
 When that's done, you feed the box file back into tesseract:
 
-`tesseract eng.font-name.exp0.tif eng.font-name.box nobatch box.train.stderr`
+    tesseract eng.font-name.exp0.tif eng.font-name.box nobatch box.train .stderr
 
 Next, you need to detect the Character set used in all your box files:
 
-`unicharset_extractor *.box`
+    unicharset_extractor *.box
 
 When that's complete, you need to create a `font_properties` file. It should list every font you're training, one per line, and identify whether it has the following characteristics: &lt;fontname> &lt;italic&gt; &lt;bold&gt; &lt;fixed&gt; &lt;serif&gt; &lt;fraktur&gt;
 
 So, for example, if you use the standard training data, you might end up with a file like this:
-
-<code>eng.arial.box 0 0 0 0 0<br>
-eng.arialbd.box 0 1 0 0 0<br>
-eng.arialbi.box 1 1 0 0 0<br>
-eng.ariali.box 1 0 0 0 0<br>
-eng.b018012l.box 0 0 0 1 0<br>
-eng.b018015l.box 0 1 0 1 0<br>
-eng.b018032l.box 1 0 0 1 0<br>
-eng.b018035l.box 1 1 0 1 0<br>
-eng.c059013l.box 0 0 0 1 0<br>
-eng.c059016l.box 0 1 0 1 0<br>
-eng.c059033l.box 1 0 0 1 0<br>
-eng.c059036l.box 1 1 0 1 0<br>
-eng.cour.box 0 0 1 1 0<br>
-eng.courbd.box 0 1 1 1 0<br>
-eng.courbi.box 1 1 1 1 0<br>
-eng.couri.box 1 0 1 1 0<br>
-eng.georgia.box 0 0 0 1 0<br>
-eng.georgiab.box 0 1 0 1 0<br>
-eng.georgiai.box 1 0 0 1 0<br>
-eng.georgiaz.box 1 1 0 1 0<br>
-<strong>eng.lincoln.box 0 0 0 0 1</strong><br>
-<strong>eng.old-english.box 0 0 0 0 1</strong><br>
-eng.times.box 0 0 0 1 0<br>
-eng.timesbd.box 0 1 0 1 0<br>
-eng.timesbi.box 1 1 0 1 0<br>
-eng.timesi.box 1 0 0 1 0<br>
-eng.trebuc.box 0 0 0 1 0<br>
-eng.trebucbd.box 0 1 0 1 0<br>
-eng.trebucbi.box 1 1 0 1 0<br>
-eng.trebucit.box 1 0 0 1 0<br>
-eng.verdana.box 0 0 0 0 0<br>
-eng.verdanab.box 0 1 0 0 0<br>
-eng.verdanai.box 1 0 0 0 0<br>
-eng.verdanaz.box 1 1 0 0 0<br></code>
+    
+    :::bash
+    eng.arial.box 0 0 0 0 0
+    eng.arialbd.box 0 1 0 0 0
+    eng.arialbi.box 1 1 0 0 0
+    eng.ariali.box 1 0 0 0 0
+    eng.b018012l.box 0 0 0 1 0
+    eng.b018015l.box 0 1 0 1 0
+    eng.b018032l.box 1 0 0 1 0
+    eng.b018035l.box 1 1 0 1 0
+    eng.c059013l.box 0 0 0 1 0
+    eng.c059016l.box 0 1 0 1 0
+    eng.c059033l.box 1 0 0 1 0
+    eng.c059036l.box 1 1 0 1 0
+    eng.cour.box 0 0 1 1 0
+    eng.courbd.box 0 1 1 1 0
+    eng.courbi.box 1 1 1 1 0
+    eng.couri.box 1 0 1 1 0
+    eng.georgia.box 0 0 0 1 0
+    eng.georgiab.box 0 1 0 1 0
+    eng.georgiai.box 1 0 0 1 0
+    eng.georgiaz.box 1 1 0 1 0
+    <strong>eng.lincoln.box 0 0 0 0 1</strong>
+    <strong>eng.old-english.box 0 0 0 0 1</strong>
+    eng.times.box 0 0 0 1 0
+    eng.timesbd.box 0 1 0 1 0
+    eng.timesbi.box 1 1 0 1 0
+    eng.timesi.box 1 0 0 1 0
+    eng.trebuc.box 0 0 0 1 0
+    eng.trebucbd.box 0 1 0 1 0
+    eng.trebucbi.box 1 1 0 1 0
+    eng.trebucit.box 1 0 0 1 0
+    eng.verdana.box 0 0 0 0 0
+    eng.verdanab.box 0 1 0 0 0
+    eng.verdanai.box 1 0 0 0 0
+    eng.verdanaz.box 1 1 0 0 0
 
 Note that this is the standard font_properties file that should be supplied with Tesseract and I've added the two bold rows for the blackletter fonts I'm training. You can also see which fonts are included out of the box.
 
 We're getting near the end. Next, create the clustering data:
 
-<code>mftraining -F font_properties -U unicharset -O lang.unicharset *.tr </br>
-cntraining *.tr</code>
+    :::bash
+    mftraining -F font_properties -U unicharset -O lang.unicharset *.tr 
+    cntraining *.tr
 
 If you want, you can [create a wordlist][8] or a [unicharambigs file][9]. If you don't plan on doing that, the last step is to combine the various files we've created. 
 
 To do that, rename each of the language files (normproto, Microfeat, inttemp, pffmtable) to have your lang prefix, and run (mind the dot at the end):
 
-`combine_tessdata lang.`
+    combine_tessdata lang.
 
 This will create all the data files you need, and you just need to move them to the correct place on your OS. On Ubuntu, I was able to move them to;
 
-`sudo mv eng.traineddata /usr/local/share/tessdata/`
+    sudo mv eng.traineddata /usr/local/share/tessdata/
 
 And that, good friend, is it. Worst process for a human, ever.
 

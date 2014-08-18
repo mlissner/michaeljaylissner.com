@@ -1,19 +1,7 @@
-{
-    "categories": [
-        "microsoft", 
-        "security", 
-        "vista", 
-        "pidgin"
-    ], 
-    "date": "2008-09-26T20:34:31", 
-    "tags": [
-        "microsoft", 
-        "security", 
-        "vista", 
-        "pidgin"
-    ], 
-    "title": "The Argument for Encryption, and Why Vista Is Irresponsible"
-}
+Title: The Argument for Encryption, and Why Vista Is Irresponsible
+Date: 2008-09-26T20:34:31
+Tags: microsoft, security, vista, pidgin
+Category: Policy and Politics
 
 We all agree that security is necessary for our data, but we all fall down when it comes to implementation. An example that I keep returning to is the need for encryption. I posted a few days ago about how Yahoo! doesn't encrypt their email, allowing a sophisticated hacker to intercept any message to or from your account. 
 
@@ -23,4 +11,4 @@ Most people believe that if they have confidential information in their computer
 
 The easiest solution to this problem is to encrypt your entire hard disk at all times. That way, even if your hard disk is removed from your computer, all the data is jumbled anyway. Ubuntu released this feature back in April, and Microsoft released this feature with the release of Vista. Unfortunately though, to receive encryption on your Vista installation, you have to buy Vista Ultimate, which costs $120 more than the Home version (<a href="http://www.microsoft.com/windows/windows-vista/compare-editions/default.aspx" target="_blank">at a cool $320!</a>).
 
-As we trust more and more data on our computers, is this irresponsible product engineering? Absolutely. It costs Microsoft no more money to put encryption on all versions. Unfortunately though, they make more money by charging for it. <!--break-->
+As we trust more and more data on our computers, is this irresponsible product engineering? Absolutely. It costs Microsoft no more money to put encryption on all versions. Unfortunately though, they make more money by charging for it. 

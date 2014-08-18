@@ -1,19 +1,7 @@
-{
-    "categories": [
-        "pct", 
-        "java", 
-        "programming", 
-        "project"
-    ], 
-    "date": "2007-12-12T21:29:57", 
-    "tags": [
-        "pct", 
-        "java", 
-        "programming", 
-        "project"
-    ], 
-    "title": "PCT Data Project - DONE"
-}
+Title: PCT Data Project - DONE
+Date: 2007-12-12T21:29:57
+Tags: pct, java, programming, project
+Category: Backpacking
 
 I'm happy to announce that the PCT data project is complete! 
 

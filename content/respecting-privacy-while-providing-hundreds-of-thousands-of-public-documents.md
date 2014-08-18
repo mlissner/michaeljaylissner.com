@@ -1,31 +1,7 @@
-{
-    "categories": [
-        "robots.txt", 
-        "privacy", 
-        "practical obscurity", 
-        "policy", 
-        "courtlistener.com", 
-        "courtlistener.com", 
-        "policy", 
-        "practical obscurity", 
-        "privacy", 
-        "robots.txt"
-    ], 
-    "date": "2012-01-16T22:13:22", 
-    "tags": [
-        "robots.txt", 
-        "privacy", 
-        "practical obscurity", 
-        "policy", 
-        "courtlistener.com", 
-        "courtlistener.com", 
-        "policy", 
-        "practical obscurity", 
-        "privacy", 
-        "robots.txt"
-    ], 
-    "title": "Respecting privacy while providing hundreds of thousands of public documents"
-}
+Title: Respecting privacy while providing hundreds of thousands of public documents
+Date: 2012-01-16T22:13:22
+Tags: robots.txt, privacy, practical obscurity, policy, courtlistener.com, courtlistener.com, policy, practical obscurity, privacy, robots.txt
+Category: Privacy and Security
 
 At CourtListener, we have always taken privacy very seriously. We [have over 600,000][7] cases currently, most of which are available on Google and other search engines. But in the interest of privacy, we make two broad exceptions to what's available on search engines: 
 
@@ -75,7 +51,7 @@ Between these measures, private documents on CourtListener should be removed fro
 **Update, 2012-04-29:** You may also want to look at our [discussion of the impact of putting people's names into your URLs, and the way that affects your sitemap files][12].
 
 <!-- actual footnotes -->
-<ol><li>We use <a href="http://www.google.com/webmasters/tools">Google's Webmaster Tools</a> and <a href="http://www.bing.com/toolbox/webmaster">Bing's Webmaster Tools</a>. Before it was merged into Bing's tools, we also previously used <a href="http://siteexplorer.search.yahoo.com/">Yahoo's Site Explorer</a>.</li></ol>
+<ol> - We use <a href="http://www.google.com/webmasters/tools">Google's Webmaster Tools</a> and <a href="http://www.bing.com/toolbox/webmaster">Bing's Webmaster Tools</a>. Before it was merged into Bing's tools, we also previously used <a href="http://siteexplorer.search.yahoo.com/">Yahoo's Site Explorer</a>.</ol>
 
 [1]: http://courtlistener.com/removal/ 
 [2]: http://en.wikipedia.org/wiki/Megan%27s_Law 

@@ -1,13 +1,7 @@
-{
-    "categories": [
-        "money"
-    ], 
-    "date": "2008-07-02T22:21:42", 
-    "tags": [
-        "money"
-    ], 
-    "title": "No wonder I'm losing money right now..."
-}
+Title: No wonder I'm losing money right now...
+Date: 2008-07-02T22:21:42
+Tags: money
+Category: Money
 
 USA Today had <a href="http://www.usatoday.com/money/markets/2008-06-30-wall-street-first-half_N.htm" target="_blank">an article</a> a few days ago about the recession that we seem to officially be in. It's pretty shocking. 
 

@@ -1,19 +1,8 @@
-{
-    "categories": [
-        "pct", 
-        "java", 
-        "programming", 
-        "project"
-    ], 
-    "date": "2007-11-01T20:40:55", 
-    "tags": [
-        "pct", 
-        "java", 
-        "programming", 
-        "project"
-    ], 
-    "title": "The Great Temperature Data Project"
-}
+Title: The Great Temperature Data Project
+Date: 2007-11-01T20:40:55
+Tags: pct, java, programming, project
+Category: Backpacking
+
 
 Back in '05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
 carried a little device called an <a href="http://www.iButton.com" target="_blank">iButton</a>. 

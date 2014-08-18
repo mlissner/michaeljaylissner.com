@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "eagle scout", 
-        "discrimination", 
-        "boy scouts"
-    ], 
-    "date": "2008-12-05T17:01:32", 
-    "tags": [
-        "eagle scout", 
-        "discrimination", 
-        "boy scouts"
-    ], 
-    "title": "To Be Silent is To Lie"
-}
+Title: To Be Silent is To Lie
+Date: 2008-12-05T17:01:32
+Tags: eagle scout, discrimination, boy scouts
+Category: Policy and Politics
 
 <img src="http://michaeljaylissner.com/files/images/DSC00976%20(Modified)%20(copy)%20(Modified).JPG" style="float: right; padding: 10px">C. William Steele
 Director
@@ -44,4 +34,4 @@ Sincerely,
 
 Michael Lissner
 Eagle Scout, '98
-<!--break-->
+

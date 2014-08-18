@@ -1,19 +1,7 @@
-{
-    "categories": [
-        "x-robots-tag", 
-        "search", 
-        "robots", 
-        "privacy"
-    ], 
-    "date": "2012-01-24T23:20:20", 
-    "tags": [
-        "x-robots-tag", 
-        "search", 
-        "robots", 
-        "privacy"
-    ], 
-    "title": "Support for x-robots-tag and robots HTML meta tag"
-}
+Title: Support for x-robots-tag and robots HTML meta tag
+Date: 2012-01-24T23:20:20
+Tags: x-robots-tag, search, robots, privacy
+Category: Tech
 
 As part of our research for [our post][1] on how we block search engines, we looked into which search engines support which privacy standards. This information doesn't seem to exist anywhere else on the Internet, so below are our findings, starting with the big guys, and moving towards more obscure or foreign search engines.
 

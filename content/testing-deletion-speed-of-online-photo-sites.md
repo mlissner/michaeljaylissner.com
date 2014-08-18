@@ -1,41 +1,7 @@
-{
-    "categories": [
-        "Walmart", 
-        "Twitpic", 
-        "Shutterfly", 
-        "service", 
-        "right to delete", 
-        "privacy", 
-        "Picassa", 
-        "Photobucket", 
-        "photo", 
-        "Orkut", 
-        "MySpace", 
-        "google", 
-        "Flickr", 
-        "facebook", 
-        "delete"
-    ], 
-    "date": "2009-11-14T16:28:44", 
-    "tags": [
-        "Walmart", 
-        "Twitpic", 
-        "Shutterfly", 
-        "service", 
-        "right to delete", 
-        "privacy", 
-        "Picassa", 
-        "Photobucket", 
-        "photo", 
-        "Orkut", 
-        "MySpace", 
-        "google", 
-        "Flickr", 
-        "facebook", 
-        "delete"
-    ], 
-    "title": "Testing Deletion Speed of Online Photo Sites"
-}
+Title: Testing Deletion Speed of Online Photo Sites
+Date: 2009-11-14T16:28:44
+Tags: Walmart, Twitpic, Shutterfly, service, right to delete, privacy, Picassa, Photobucket, photo, Orkut, MySpace, google, Flickr, facebook, delete
+Category: Tech
 
 <p>
 <strong>Update, 2010-03-08:</strong>Added an image at drop.io<br>

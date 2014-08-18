@@ -1,19 +1,7 @@
-{
-    "categories": [
-        "berkeley", 
-        "fire", 
-        "crime", 
-        "arson"
-    ], 
-    "date": "2008-11-14T13:29:56", 
-    "tags": [
-        "berkeley", 
-        "fire", 
-        "crime", 
-        "arson"
-    ], 
-    "title": "More Details On Fire Last Night"
-}
+Title: More Details On Fire Last Night
+Date: 2008-11-14T13:29:56
+Tags: berkeley, fire, crime, arson
+Category: Personal
 
 <strong>What Happened?</strong>
 Last night around midnight, we heard a crash...might have been more like a bang. I thought it sounded like a bucket of junk falling off a shelf. When we looked outside to see what the sound was, we saw a car on fire across the street. I immediately called 911 and reported it. I had a fire extinguisher, but they kindly urged me not to use it. Not sure if I would have if they hadn't. At that point, the fire was pretty small by comparison to the video, so I'm not totally insane. 
@@ -31,4 +19,4 @@ Some of these things I know about only because I'm involved in the neighborhood,
 
 I like living in Berkeley, and I like my living situation - good roommates, affordable rent, a nice house - but it's times like today when I have to reflect on why I am living across the street from a drug dealer, and if it's really safe and practical for me and for others. My usual policy is to mind my own business, and they'll leave me alone, which is quite true, but still, exploding cars are hard to ignore.
 
-For years I have been telling friends that it's safe to come here, that their car will be OK, and not to worry, that I have been fine for years. I'm still fine, but I think it might be a harder sale these days. I just hope things get better, not worse.<!--break-->
+For years I have been telling friends that it's safe to come here, that their car will be OK, and not to worry, that I have been fine for years. I'm still fine, but I think it might be a harder sale these days. I just hope things get better, not worse.

@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "Linux", 
-        "me"
-    ], 
-    "date": "2008-07-17T20:03:38", 
-    "tags": [
-        "Linux", 
-        "me"
-    ], 
-    "title": "My Linux Story"
-}
+Title: My Linux Story
+Date: 2008-07-17T20:03:38
+Tags: Linux, me
+Category: Personal
 
 I thought I would post a quick entry today about how I came to be a Linux user and enthusiast. I guess it's a combination of a couple things.
 
@@ -21,4 +13,4 @@ I also love the fact that I can download, install and run an excellent email ser
 
 As for the day to day stuff, I really don't notice much difference. At work, I use XP, which involves using Firefox, Word, Excel and Outlook (the latter three of which my work paid good money for). At home it's Firefox, Open Office and Evolution, all of which are very similar to the Microsoft package, only with better compatibility with other programs.
 
-The other thing I really like about my Linux system is the ability to set things up like in the previous tutorial. I did an Internet search for "Linux wake on USB", and knew exactly how to adjust the system in a matter of moments. That kind of customization is a power you just don't have in Windows.<!--break-->
+The other thing I really like about my Linux system is the ability to set things up like in the previous tutorial. I did an Internet search for "Linux wake on USB", and knew exactly how to adjust the system in a matter of moments. That kind of customization is a power you just don't have in Windows.

@@ -1,13 +1,7 @@
-{
-    "categories": [
-        "me"
-    ], 
-    "date": "2008-04-15T22:17:28", 
-    "tags": [
-        "me"
-    ], 
-    "title": "The Mission: Results"
-}
+Title: The Mission: Results
+Date: 2008-04-15T22:17:28
+Tags: me
+Category: Personal
 
 Well, it's been a month, and the results are in. For the past month, I've been <a href="/blog/the-mission">trying to realize some pretty ambitious goals,</a> and let me tell you, it has not been easy.
 
@@ -25,4 +19,4 @@ That was a lot of detail, I know. More than you probably wanted, but I wanted to
 
 When it is all said and done though, I can say that this has been a positive experience. I am planning on continuing most of the goals (floss, oil, car and reading), but I think the jump rope can leave my life at this point. 
 
-There are two answers to the question of whether the mission was a success. I did not achieve any of the goals without some kind of qualifier, so in that regard, no the mission has failed. However, on the other hand, it has created lasting change in me, so in that regard, the mission is a great success.<!--break-->
+There are two answers to the question of whether the mission was a success. I did not achieve any of the goals without some kind of qualifier, so in that regard, no the mission has failed. However, on the other hand, it has created lasting change in me, so in that regard, the mission is a great success.

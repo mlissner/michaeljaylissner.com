@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "infotech", 
-        "copyright"
-    ], 
-    "date": "2007-09-12T21:48:22", 
-    "tags": [
-        "infotech", 
-        "copyright"
-    ], 
-    "title": "Richard Stallman, Eccentric or Rather Well-Spoken? "
-}
+Title: Richard Stallman, Eccentric or Rather Well-Spoken? 
+Date: 2007-09-12T21:48:22
+Tags: infotech, copyright
+
 
 <p>
 I had the chance to see <a href="http://en.wikipedia.org/wiki/Richard_Stallman" target="_blank" title="Wikipedia Link">Richard Stallman </a>speak the other day at the <a href="http://ischool.berkeley.edu" target="_blank" title="ischool.berkeley.edu">UC Berkeley School of Information</a>, and it was quite an experience. In case you don't know the name, Richard Stallman is the man behind GNU, and GNU is the software/philosophy that makes GNU/Linux what it is. Stallman's belief is that all software, and indeed just about everything that you create should be freely available to anybody that wants it. This is in stark opposition to the Microsoftian or even the Apple perspective of software, and indeed Stallman has written a book about this called <em>Free Software, Free Society</em>. As you might expect, from a man with such beliefs, the book itself is free, and <a href="http://www.gnu.org/philosophy/fsfs/rms-essays.pdf" target="_blank">you can find it here</a>.  
@@ -35,4 +27,4 @@ Now, aren't you glad you made it big, and that copyrights are there to protect y
 <p>
 As you might expect, Stallman explains this a bit more thoroughly in his presentation, but that's the basic gist of it. As is the case with just about everything related to Richard Stallman, this essay is available for free. In fact, if you're interested in a bit of reading, <a href="http://www.gnu.org/philosophy/copyright-and-globalization.html" target="_blank">it's here</a>.
 </p>
-<!--break-->
+

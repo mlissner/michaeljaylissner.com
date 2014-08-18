@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "security", 
-        "ReCAPTCHA", 
-        "Design"
-    ], 
-    "date": "2009-12-12T12:07:58", 
-    "tags": [
-        "security", 
-        "ReCAPTCHA", 
-        "Design"
-    ], 
-    "title": "More Security Papers: Breaking ReCAPTCHA and Proactive Methods for Secure Design"
-}
+Title: More Security Papers: Breaking ReCAPTCHA and Proactive Methods for Secure Design
+Date: 2009-12-12T12:07:58
+Tags: security, captcha, ReCAPTCHA, Design
+Category: Privacy and Security
 
 Two more security papers today. 
 

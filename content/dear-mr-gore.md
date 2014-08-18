@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "copyright", 
-        "climate change", 
-        "global warming"
-    ], 
-    "date": "2008-12-29T22:55:21", 
-    "tags": [
-        "copyright", 
-        "climate change", 
-        "global warming"
-    ], 
-    "title": "Dear Mr. Gore"
-}
+Title: Dear Mr. Gore
+Date: 2008-12-29T22:55:21
+Tags: copyright, climate change, global warming
+Category: Policy and Politics
+
 
 Honorable Al Gore
 2100 West End Avenue, Suite 260
@@ -32,4 +23,4 @@ There are many options for creating a more open copyright system, and I hope you
 Sincerely,
 
 
-Michael Lissner<!--break-->
+Michael Lissner

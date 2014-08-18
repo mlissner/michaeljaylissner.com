@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "drupal", 
-        "site", 
-        "css"
-    ], 
-    "date": "2009-04-26T11:31:19", 
-    "tags": [
-        "drupal", 
-        "site", 
-        "css"
-    ], 
-    "title": "Papa's Got a Brand New Look"
-}
+Title: Papa's Got a Brand New Look
+Date: 2009-04-26T11:31:19
+Tags: drupal, site, css
+Category: Tech
 
 OK, here's the scoop. I've given the site a major revamp and a new look. 
 
@@ -27,4 +17,4 @@ There were a number of reasons I wanted to make a change, and I think the new de
 
 Something I wasn't really planning on doing was the color change. I liked the muted greens, but I think the topics I discuss have largely moved away from environmental ones, so perhaps the blue makes more sense and will better evoke what I'm going for. 
 
-Thoughts? Bugs? Comments?<!--break-->
+Thoughts? Bugs? Comments?

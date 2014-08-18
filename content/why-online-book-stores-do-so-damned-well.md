@@ -1,19 +1,19 @@
-{
-    "categories": [
-        "berkeley", 
-        "books"
-    ], 
-    "date": "2008-09-13T09:31:19", 
-    "tags": [
-        "berkeley", 
-        "books"
-    ], 
-    "title": "Why Online Booksellers do so Damned Well"
-}
+Title: Why Online Booksellers do so Damned Well
+Date: 2008-09-13T09:31:19
+Tags: berkeley, books
+Category: Economics and Business
 
 Lately in Berkeley, a number of our independent bookstores have closed their doors for business. In every case, the rumor I've heard from the employees lays the blame squarely on online competition. I'm not entirely sure I buy the argument as the sole cause, but there probably is some truth to it. 
 
-This year, as I shopped for books and readers, I decided to keep my receipts and to total up the costs. In the end, my process for getting books was:<ul><li>Buy them at the campus store</li><li>Look them up online</li><li>Curse</li><li>Buy them online</li><li>Receive them on my doorstep</li><li>Return the originals to the campus store</li></ul>
+This year, as I shopped for books and readers, I decided to keep my receipts and to total up the costs. In the end, my process for getting books was:
+
+ - Buy them at the campus store
+ - Look them up online
+ - Curse
+ - Buy them online
+ - Receive them on my doorstep
+ - Return the originals to the campus store
+
 I feel a bad about this process, but on the other hand, before now I didn't realize just <i>how</i> expensive the books are on campus. Take a look:
 <table>
 <tr>
@@ -73,4 +73,4 @@ I feel a bad about this process, but on the other hand, before now I didn't real
 </tr>
 </table>
 
-Pretty amazing. It would have cost me $115 more to get books on campus. And we wonder why online book stores do so well. <!--break-->
+Pretty amazing. It would have cost me $115 more to get books on campus. And we wonder why online book stores do so well. 

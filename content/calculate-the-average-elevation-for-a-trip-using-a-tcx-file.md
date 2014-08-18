@@ -1,23 +1,8 @@
-{
-    "categories": [
-        "ridewithgps", 
-        "hiking", 
-        "hacking", 
-        "GPS", 
-        "elevation", 
-        "biking"
-    ], 
-    "date": "2012-09-16T10:33:31", 
-    "tags": [
-        "ridewithgps", 
-        "hiking", 
-        "hacking", 
-        "GPS", 
-        "elevation", 
-        "biking"
-    ], 
-    "title": "Calculating the average elevation of a trip using a TCX file"
-}
+Title: Calculating the average elevation of a trip using a TCX file
+Date: 2012-09-16T10:33:31
+Tags: ridewithgps, hiking, hacking, GPS, elevation, biking
+Category: Tech
+
 
 If you use a site like [ridewithgps][1], something you may want to know is how to calculate the average elevation for a trip. Unfortunately, most sites don't seem to provide this, so we have to do a little hacking. 
 

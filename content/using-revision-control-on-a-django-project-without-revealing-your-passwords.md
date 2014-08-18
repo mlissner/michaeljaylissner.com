@@ -1,23 +1,7 @@
-{
-    "categories": [
-        "settings.py", 
-        "revision control", 
-        "Python", 
-        "mercurial", 
-        "django", 
-        "Final Project"
-    ], 
-    "date": "2010-02-24T17:15:54", 
-    "tags": [
-        "settings.py", 
-        "revision control", 
-        "Python", 
-        "mercurial", 
-        "django", 
-        "Final Project"
-    ], 
-    "title": "Using Revision Control on a Django Project Without Revealing Your Passwords"
-}
+Title: Using Revision Control on a Django Project Without Revealing Your Passwords
+Date: 2010-02-24T17:15:54
+Tags: settings.py, revision control, Python, mercurial, django, Final Project
+Category: Tech
 
 Just a quick post today, since this took me way too long to figure out. If you have a django project that you want to share without sharing the private bits of settings.py, there is an easy way to do this. 
 

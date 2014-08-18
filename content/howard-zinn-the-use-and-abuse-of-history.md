@@ -1,19 +1,8 @@
-{
-    "categories": [
-        "politics", 
-        "history", 
-        "elections", 
-        "zinn"
-    ], 
-    "date": "2008-01-19T00:29:03", 
-    "tags": [
-        "politics", 
-        "history", 
-        "elections", 
-        "zinn"
-    ], 
-    "title": "Howard Zinn on \"The Use and Abuse of History\""
-}
+Title: Howard Zinn on "The Use and Abuse of History"
+Date: 2008-01-19T00:29:03
+Tags: politics, history, elections, zinn
+Category: Personal
+
 
 I've been reading some excellent stuff by Howard Zinn of late. I've tried three times now to read his most excellent <i>People's History of the United States</i>, but I have always failed for one reason or another. I guess it's just too dense for everyday, casual reading. This time however, I stumbled upon a much more readable book by him, <i>Passionate Declarations</i>. It's tying in rather well with some thoughts I've been having about our electorate system, so I thought I would post a quick quote from it to share the wealth:<blockquote>What sorts of values and ideals are encouraged in the young people of the coming generation by the enormous emphasis on the Founding Fathers and the presidents? It seems to me that the result is the creation of dependency on powerful political figures to solve our problems. 
 
@@ -24,4 +13,4 @@ Consider how much attention is given in historical writing to military affairs&m
 ...
 
 As a result of omitting, or downplaying, the importance of social movements of the people in our history...a fundamental principle of democracy is undermined: the principle that it is the citizenry, rather than the government, that is the ultimate source of power and the locomotive that pulls the train of government in the direction of equality and justice. Such histories create a passive and subordinate citizenry. 
-</blockquote>I don't think I could put it much better than that, but in related news, I completed the first round of election pollster training today. Come February 5, I shall be a clerk of the polls (for better or worse).<!--break-->
+</blockquote>I don't think I could put it much better than that, but in related news, I completed the first round of election pollster training today. Come February 5, I shall be a clerk of the polls (for better or worse).

@@ -1,19 +1,8 @@
-{
-    "categories": [
-        "windows", 
-        "postgres", 
-        "node", 
-        "etherpad"
-    ], 
-    "date": "2012-12-27T11:20:36", 
-    "tags": [
-        "windows", 
-        "postgres", 
-        "node", 
-        "etherpad"
-    ], 
-    "title": "Setting up etherpad with postgres on Windows"
-}
+Title: Setting up etherpad with postgres on Windows
+Date: 2012-12-27T11:20:36
+Tags: windows, postgres, node, etherpad
+Category: Tech
+
 
 There don't seem to be any successful installation instructions for postgres on Windows. It's not that hard, but there are a couple things you need to do. 
 
@@ -39,7 +28,8 @@ I haven't gone through these instructions to make sure they work, but this is ro
  - Use [NSSM][2] to daemonize it, per the instructions [here][1].
 
 Note that NSSM doesn't yet have stdout and stderr redirection built in. Thus, to start the daemon with these working, you have to create a little script like this: 
-
+    
+    :::bat
     @ECHO OFF
     @REM This runs etherpad with stdout and stderr getting redirected to special logs
     call D:\etherpad\etherpad-lite\start.bat >> D:\etherpad\etherpad-lite\logs\stdout.log 2>> D:\etherpad\etherpad-lite\logs\stderr.log

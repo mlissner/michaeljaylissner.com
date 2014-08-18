@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "paper", 
-        "thanatosensitivity", 
-        "memorialization"
-    ], 
-    "date": "2009-05-13T11:25:10", 
-    "tags": [
-        "paper", 
-        "thanatosensitivity", 
-        "memorialization"
-    ], 
-    "title": "Final Paper on Online Memorialization by Default"
-}
+Title: Final Paper on Online Memorialization by Default
+Date: 2009-05-13T11:25:10
+Tags: paper, thanatosensitivity, memorialization
+Category: Policy and Politics
+
 
 Yesterday I had an epic writing session, and finished my final paper for my class on the social and organizational issues of information.
 

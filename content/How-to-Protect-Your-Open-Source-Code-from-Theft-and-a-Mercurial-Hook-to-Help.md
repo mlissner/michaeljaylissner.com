@@ -1,25 +1,8 @@
-{
-    "categories": [
-        "mercurial", 
-        "hook", 
-        "Final Project", 
-        "DMCA", 
-        "copyright", 
-        "Affero GPLv3", 
-        "courtlistener.com"
-    ], 
-    "date": "2010-01-15T10:27:18", 
-    "tags": [
-        "mercurial", 
-        "hook", 
-        "Final Project", 
-        "DMCA", 
-        "copyright", 
-        "Affero GPLv3", 
-        "courtlistener.com"
-    ], 
-    "title": "How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help"
-}
+Title: How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help
+Date: 2010-01-15T10:27:18
+Tags: mercurial, hook, Final Project, DMCA, copyright, Affero GPLv3, courtlistener.com
+Category: Tech
+
 
 <strong>Updated, 2010-01-24:</strong> Some edits regarding the Affero license (thanks to Brian at <a href="http://cyberlawcases.com/" target="_blank">http://cyberlawcases.com</a> for the corrections).
 

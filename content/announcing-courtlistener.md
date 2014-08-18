@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "Final Project", 
-        "courtlistener.com", 
-        "announcements"
-    ], 
-    "date": "2010-05-01T20:08:16", 
-    "tags": [
-        "Final Project", 
-        "courtlistener.com", 
-        "announcements"
-    ], 
-    "title": "Announcing CourtListener.com"
-}
+Title: Announcing CourtListener.com
+Date: 2010-05-01T20:08:16
+Tags: Final Project, courtlistener.com, announcements
+Category: Tech
+
 
 I'm elated to announce today that I am officially taking the ropes of my final project and letting it loose into the wild. It's been seven months since development on it officially started and finally, the beta version is done. 
 

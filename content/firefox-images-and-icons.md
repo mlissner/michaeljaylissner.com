@@ -1,21 +1,8 @@
-{
-    "categories": [
-        "firefox", 
-        "images", 
-        "icons", 
-        "zip", 
-        "download"
-    ], 
-    "date": "2011-02-20T00:27:20", 
-    "tags": [
-        "firefox", 
-        "images", 
-        "icons", 
-        "zip", 
-        "download"
-    ], 
-    "title": "Firefox images and icons"
-}
+Title: Firefox images and icons
+Date: 2011-02-20T00:27:20
+Tags: firefox, images, icons, zip, download
+Category: Tech
+
 
 A few weeks ago, I was in need of a free star icon, and for the life of me, I couldn't find one that was quite right. I scoured over the Internet, all the while noticing the perfect little star in my browser.
 

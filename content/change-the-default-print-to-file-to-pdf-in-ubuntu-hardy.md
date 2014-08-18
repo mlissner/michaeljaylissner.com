@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "ubuntu", 
-        "print", 
-        "pdf"
-    ], 
-    "date": "2008-10-19T23:13:25", 
-    "tags": [
-        "ubuntu", 
-        "print", 
-        "pdf"
-    ], 
-    "title": "Change the Default Print to File To PDF in Ubuntu Hardy Heron"
-}
+Title: Change the Default Print to File To PDF in Ubuntu Hardy Heron
+Date: 2008-10-19T23:13:25
+Tags: ubuntu, print, pdf
+Category: Tech
+
 
 In Ubuntu Hardy Heron there is a new printer driver that will print a webpage as a PDF file. It's pretty useful, but unfortunately it's set to print the page as post script format by default. While I appreciate post script, it's not that compatible for other people, so I usually want to make PDF documents instead.
 

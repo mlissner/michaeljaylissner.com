@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "firefox", 
-        "add-on", 
-        "longurl"
-    ], 
-    "date": "2009-09-09T13:15:46", 
-    "tags": [
-        "firefox", 
-        "add-on", 
-        "longurl"
-    ], 
-    "title": "Firefox Extension Fixes"
-}
+Title: Firefox Extension Fixes
+Date: 2009-09-09T13:15:46
+Tags: firefox, add-on, longurl
+Category: Tech
+
 
 Just a quick post today. For some time I've been using the Firefox <a href="https://addons.mozilla.org/en-US/firefox/addon/8636">Long URL Mobile Expander</a>. It's a great add-on that expands the URLs from about <a href="http://longurl.org/services">two hundred URL shortening services</a> such as tinyurl.com and bit.ly. One problem it has though is that when you open certain files locally on your computer, it throws an error:<code lang="bash">
 error: current_domain is null</code>

@@ -1,13 +1,8 @@
-{
-    "categories": [
-        "eco-tip"
-    ], 
-    "date": "2007-10-24T22:30:12", 
-    "tags": [
-        "eco-tip"
-    ], 
-    "title": "The Plan: One Environmental Tip Every Other Week"
-}
+Title: The Plan: One Environmental Tip Every Other Week
+Date: 2007-10-24T22:30:12
+Tags: eco-tip
+Category: Environment
+
 
 Many people have been saying to me, "Dude, what's with the green blog...why's it so...ummm...green?" Well, there's a reason for this my friends. The reason is that I had to choose a color, and I went with green to go with my profound love of our friend Gaea. 
 
@@ -22,4 +17,3 @@ From what I understand, it's really just that simple. If you want to make the bi
 My plan this winter is to cover the windows with Cyran wrap, and see if I can get it to tighten up by hitting it with a blow dryer. 
 
 &sup1; <small>Source: <a href="http://www.eia.doe.gov/emeu/aer/pdf/pages/sec1_8.pdf">http://www.eia.doe.gov/emeu/aer/pdf/pages/sec1_8.pdf</a></small>
-<!--break-->

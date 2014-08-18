@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "mysql", 
-        "hard drive", 
-        "drupal"
-    ], 
-    "date": "2010-04-26T11:26:38", 
-    "tags": [
-        "mysql", 
-        "hard drive", 
-        "drupal"
-    ], 
-    "title": "How to Recover a Broken Drupal Install Resulting from a Full Hard Drive"
-}
+Title: How to Recover a Broken Drupal Install Resulting from a Full Hard Drive
+Date: 2010-04-26T11:26:38
+Tags: mysql, hard drive, drupal
+Category: Tech
 
 This is amazingly, the second time I've filled my server's hard drive, and the results are becoming predictable. One moment, things are working fine, the next, cron alerts you with something like this:
 <code>Table [tablename] is marked as crashed and last (automatic?) repair failed query</code>

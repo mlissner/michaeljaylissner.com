@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "politics", 
-        "elections"
-    ], 
-    "date": "2008-01-20T13:04:07", 
-    "tags": [
-        "politics", 
-        "elections"
-    ], 
-    "title": "Top Five Problems with Major American Elections"
-}
+Title: Top Five Problems with Major American Elections
+Date: 2008-01-20T13:04:07
+Tags: politics, elections
+Category: Policy and Politics
 
 I've been thinking about elections a lot lately (even before that last post), and I've come up with five things that are simply broken about democracy. Call me a commie or a socialist or something if you must, but I challenge you to identify why these are not critical flaws with our system. 
 
@@ -26,4 +18,4 @@ It's a fact. There is so much hype around elections that pretty much everybody, 
 Shall we face it yet that having our vote broken up by state electorate points doesn't make much sense? Why should our votes be broken up by artificial lines in the sand? It doesn't pass the logic test if you ask me. For example, there was a recent measure in California to redistrict the state, thus allowing a more accurate split of its points. That makes sense, but why not just do away with the whole outdated system altogether? It's time, isn't it?
 
 <strong>Number 5 - Voter Ignorance/Impossibly Complicated Issues</strong>
-I'll be the first to admit that I don't know what most of the candidates stand for on an issue by issue basis (see number three above). I think I have some idea, but that's only after studying up, and I still feel kind of ignorant on much of it. Think about this squirrelly question: is a tax break good for the economy? How much of the population knows enough economics to understand this issue? Maybe one percent, and probably more like one percent of one percent. Yet, all of the population votes on the issue, and most of it votes depending on who has the greater advertising money, and thus the more convincing ads. That doesn't make a whole lot of sense, and I'm not sure what to do about it. It's not a winning concept, and it can be expanded to other issues, such as stem cells, wire tapping, money for schools, etc.<!--break-->
+I'll be the first to admit that I don't know what most of the candidates stand for on an issue by issue basis (see number three above). I think I have some idea, but that's only after studying up, and I still feel kind of ignorant on much of it. Think about this squirrelly question: is a tax break good for the economy? How much of the population knows enough economics to understand this issue? Maybe one percent, and probably more like one percent of one percent. Yet, all of the population votes on the issue, and most of it votes depending on who has the greater advertising money, and thus the more convincing ads. That doesn't make a whole lot of sense, and I'm not sure what to do about it. It's not a winning concept, and it can be expanded to other issues, such as stem cells, wire tapping, money for schools, etc.

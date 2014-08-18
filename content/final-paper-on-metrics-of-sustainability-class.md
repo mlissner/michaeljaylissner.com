@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "sustainability", 
-        "energy", 
-        "paper"
-    ], 
-    "date": "2009-01-13T11:35:43", 
-    "tags": [
-        "sustainability", 
-        "energy", 
-        "paper"
-    ], 
-    "title": "Final Papers on Metrics of Sustainability Class"
-}
+Title: Final Papers on Metrics of Sustainability Class
+Date: 2009-01-13T11:35:43
+Tags: sustainability, energy, paper
+Category: Environment
+
 
 Last semester I took a class at the UC Berkeley School of Business (Haas) entitled <i>Metrics of Sustainability</i>. It was an interesting class all in all, though frustrating at times because of the emphasis on making sustainability something that businesses will <i><strong>want</strong></i> to do. Our professor was a jocular fellow, though his history at large companies became evident in his notes on our final paper.
 

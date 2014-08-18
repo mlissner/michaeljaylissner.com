@@ -1,13 +1,7 @@
-{
-    "categories": [
-        "google"
-    ], 
-    "date": "2007-11-30T16:43:36", 
-    "tags": [
-        "google"
-    ], 
-    "title": "The Prettiest Ratio and Google"
-}
+Title: The Prettiest Ratio and Google
+Date: 2007-11-30T16:43:36
+Tags: google
+Category: Design
 
 <img src="http://michaeljaylissner.com/files/images/ParthenonGoldenRatio.png" align="right" hspace="10">In case you haven't heard about this before, the <a href="http://en.wikipedia.org/wiki/Golden_ratio#Relationship_to_Fibonacci_sequence" target="_blank">Golden Ratio</a> is the concept of how to define the most aesthetically pleasing ratio between two lengths, and can be found pretty much everywhere dating back all the way to the Egyptian Pyramids of Giza. Examples abound in the world around us. Books, tables, laptops, screen sizes. Essentially anything that looks like a well-proportioned rectangle probably fits pretty closely into the Golden Ratio.
 
@@ -18,4 +12,4 @@ If that's too confusing, perhaps this will help:
 
 Still confused? How about this: The Golden Ratio is 1.61803399.
 
-I went online a few days ago to figure out how to dimension an applet that I was making, and discovered yet another cool Google tool. Googling for "400 * golden ratio" yields the search result of 647. Very cool. <!-- ckey="10060E10" --><!--break-->
+I went online a few days ago to figure out how to dimension an applet that I was making, and discovered yet another cool Google tool. Googling for "400 * golden ratio" yields the search result of 647. Very cool. <!-- ckey="10060E10" -->

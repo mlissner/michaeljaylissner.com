@@ -1,19 +1,8 @@
-{
-    "categories": [
-        "shopping", 
-        "new zealand", 
-        "batteries", 
-        "backpacking"
-    ], 
-    "date": "2013-07-19T14:13:25", 
-    "tags": [
-        "shopping", 
-        "new zealand", 
-        "batteries", 
-        "backpacking"
-    ], 
-    "title": "Best Energy Pack for Ultra-light, long-distance Backpacking"
-}
+Title: Best Energy Pack for Ultra-light, long-distance Backpacking
+Date: 2013-07-19T14:13:25
+Tags: shopping, new zealand, batteries, backpacking
+Category: Backpacking
+
 
 Obviously, the best ultalight battery pack is **no** battery pack, but on our trip we're going to be bringing a phone, a camera, an MP3 player and two headlamps. The phone doubles as our GPS and the headlamps might be USB rechargeable. Having spare energy to get us through longer sections is important.
 

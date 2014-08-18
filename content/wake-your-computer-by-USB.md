@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "ubuntu", 
-        "Linux"
-    ], 
-    "date": "2008-07-14T20:27:57", 
-    "tags": [
-        "ubuntu", 
-        "Linux"
-    ], 
-    "title": "Wake Your Computer by USB"
-}
+Title: Wake Your Computer by USB
+Date: 2008-07-14T20:27:57
+Tags: ubuntu, Linux
+Category: Tech
 
 I recently began using my laptop at my desk with a USB keyboard and mouse, and I thought I would explain how to set up Ubuntu so that USB peripherals will wake up your computer from sleep mode. This is convenient if you have your laptop set up such that the lid is closed and inaccessible.
 
@@ -41,4 +33,4 @@ This will set up your computer to wake up from USB...for now. To make it work af
 echo "USB0" > /proc/acpi/wakeup</code>Save this file to /etc/init.d, and make it executable by running:<code lang="bash">chmod +x wake.sh</code>Finally, once this file is in /etc/init.d, and is executable, as root run:<code lang="bash">update-rc.d wake.sh defaults</code>That will make init know about the file, and run it at startup. Happy awakenings!
 
 <strong>Source:</strong> <a href="http://ubuntuforums.org/showthread.php?t=711747" target="_blank">http://ubuntuforums.org/showthread.php?t=711747</a>
-<!--break-->
+

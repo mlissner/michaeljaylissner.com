@@ -1,21 +1,7 @@
-{
-    "categories": [
-        "maps", 
-        "education", 
-        "AIDS/HIV", 
-        "healthcare", 
-        "visualizations"
-    ], 
-    "date": "2008-10-21T11:21:27", 
-    "tags": [
-        "maps", 
-        "education", 
-        "AIDS/HIV", 
-        "healthcare", 
-        "visualizations"
-    ], 
-    "title": "Maps We Really Need to Use More"
-}
+Title: Maps We Really Need to Use More
+Date: 2008-10-21T11:21:27
+Tags: maps, education, AIDS/HIV, healthcare, visualizations
+Category: Information Visualization and Statistics
 
 I stumbled across some incredible maps yesterday while looking at some maps of the status of the American election. 
 
@@ -30,4 +16,4 @@ Or we can analyze where the highest rates of HIV/AIDS can be found:
 Or total spending on health care (no surprises here):
 <img src="http://www.michaeljaylissner.com/files/images/healthcare800x400.preview.png">
 
-Pretty interesting stuff. <a href="http://www-personal.umich.edu/~mejn/cartograms/" target="_blank">This link</a> includes more of these, and also software for making them yourself.<!--break-->
+Pretty interesting stuff. <a href="http://www-personal.umich.edu/~mejn/cartograms/" target="_blank">This link</a> includes more of these, and also software for making them yourself.

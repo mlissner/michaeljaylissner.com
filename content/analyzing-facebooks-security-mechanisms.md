@@ -1,33 +1,22 @@
-{
-    "categories": [
-        "security", 
-        "facebook", 
-        "paper", 
-        "privacy"
-    ], 
-    "date": "2009-11-15T17:43:55", 
-    "tags": [
-        "security", 
-        "facebook", 
-        "paper", 
-        "privacy"
-    ], 
-    "title": "Analyzing Facebook's Security Mechanisms"
-}
+Title: Analyzing Facebook's Security Mechanisms
+Date: 2009-11-15T17:43:55
+Tags: security, facebook, paper, privacy
+Category: Privacy and Security
 
-For my <a href="http://is219.blogspot.com/" target="_blank">Privacy, Security and Cryptography</a> class, we studied a set of 13 principles for secure systems:<ol><li>Security is Economics</li>
-<li>Least Privilege</li>
-<li>Use Fail-Safe Defaults</li>
-<li>Separation of Responsibility</li>
-<li>Defense in Depth</li>
-<li>Psychological Acceptability</li>
-<li>Usability</li>
-<li>Ensure Complete Mediation</li>
-<li>Least Common Mechanism</li>
-<li>Detect if You Cannot Prevent</li>
-<li>Orthogonal Security</li>
-<li>Don�t Rely on Security Through Obscurity</li>
-<li>Design Security in, From the Start</li></ol>
+
+For my <a href="http://is219.blogspot.com/" target="_blank">Privacy, Security and Cryptography</a> class, we studied a set of 13 principles for secure systems:<ol> - Security is Economics
+ - Least Privilege
+ - Use Fail-Safe Defaults
+ - Separation of Responsibility
+ - Defense in Depth
+ - Psychological Acceptability
+ - Usability
+ - Ensure Complete Mediation
+ - Least Common Mechanism
+ - Detect if You Cannot Prevent
+ - Orthogonal Security
+ - Don�t Rely on Security Through Obscurity
+ - Design Security in, From the Start</ol>
 
 For our midterm, we were asked to analyze how Facebook exemplifies or does not follow these principles. It was an interesting assignment, which finally forced me to think more thoroughly about Facebook's security policies, and I'm happy to attach my findings here. 
 

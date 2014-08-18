@@ -1,15 +1,8 @@
-{
-    "categories": [
-        "vacations", 
-        "pictures"
-    ], 
-    "date": "2009-01-10T17:49:55", 
-    "tags": [
-        "vacations", 
-        "pictures"
-    ], 
-    "title": "Holiday Wrap-Up"
-}
+Title: Holiday Wrap-Up
+Date: 2009-01-10T17:49:55
+Tags: vacations, pictures
+Category: Pictures
+
 
 <img src="http://michaeljaylissner.com/files/images/DSC01041_small.thumbnail.JPG" style="float: left; padding: 5px">Just a quick note today to share that my girlfriend and I have finished preparing and posting all of our pictures from the winter holiday. We took a journey to Santa Barbara, L.A., San Diego, Phoenix, Sedona and the Grand Canyon.
 

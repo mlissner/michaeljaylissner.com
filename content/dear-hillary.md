@@ -1,15 +1,8 @@
-{
-    "categories": [
-        "politics", 
-        "elections"
-    ], 
-    "date": "2008-05-20T21:06:22", 
-    "tags": [
-        "politics", 
-        "elections"
-    ], 
-    "title": "Dear Hillary"
-}
+Title: Dear Hillary
+Date: 2008-05-20T21:06:22
+Tags: politics, elections
+Category: Policy and Politics
+
 
 Dear Hillary, 
 

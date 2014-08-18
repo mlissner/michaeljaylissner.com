@@ -1,21 +1,7 @@
-{
-    "categories": [
-        "user contribution", 
-        "reputational system", 
-        "Project idea", 
-        "open source", 
-        "aggregation"
-    ], 
-    "date": "2010-06-28T14:20:41", 
-    "tags": [
-        "user contribution", 
-        "reputational system", 
-        "Project idea", 
-        "open source", 
-        "aggregation"
-    ], 
-    "title": "Project Idea: \"User contribution aggregator\""
-}
+Title: Project Idea: "User contribution aggregator"
+Date: 2010-06-28T14:20:41
+Tags: user contribution, reputational system, Project idea, open source, aggregation
+Category: Tech
 
 As a frequent contributor to various open source projects, I find that I often want to know just how much I have contributed over the years, and to which projects. With enough time, I could figure out every bug that I've filed, every comment I've posted, every patch that I've submitted (there aren't many), and every <em>contribution</em> I've made. But it would take me a LOT of effort, and after not too long, I'd be knee deep in records and notes of where I had been.
 

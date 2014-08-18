@@ -1,23 +1,7 @@
-{
-    "categories": [
-        "proposal", 
-        "presentations", 
-        "me", 
-        "lvi2012", 
-        "juriscraper", 
-        "courtlistener.com"
-    ], 
-    "date": "2012-03-15T20:09:29", 
-    "tags": [
-        "proposal", 
-        "presentations", 
-        "me", 
-        "lvi2012", 
-        "juriscraper", 
-        "courtlistener.com"
-    ], 
-    "title": "My Presentation Proposal for LVI 2012"
-}
+Title: My Presentation Proposal for LVI 2012
+Date: 2012-03-15T20:09:29
+Tags: proposal, presentations, me, lvi2012, juriscraper, courtlistener.com
+Category: Tech
 
 The [Law Via the Internet][2] conference is celebrating its 20th anniversary at Cornell University on October 7-9th. I will be attending, and with any luck, I'll be presenting on the topic proposed below.
 

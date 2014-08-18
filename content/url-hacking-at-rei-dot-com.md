@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "responsible disclosure", 
-        "rei", 
-        "hacking"
-    ], 
-    "date": "2012-07-31T19:19:00", 
-    "tags": [
-        "responsible disclosure", 
-        "rei", 
-        "hacking"
-    ], 
-    "title": "URL Hacking at REI.com"
-}
+Title: URL Hacking at REI.com
+Date: 2012-07-31T19:19:00
+Tags: responsible disclosure, rei, hacking
+Category: Privacy and Security
 
 I'm about two hours away from heading on vacation to Montreal, but I wanted to post a quick update about a vulnerability I found on REI.com last night.
 

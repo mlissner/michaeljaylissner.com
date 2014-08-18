@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "firefox", 
-        "frustration", 
-        "autocomplete"
-    ], 
-    "date": "2009-10-28T09:39:19", 
-    "tags": [
-        "firefox", 
-        "frustration", 
-        "autocomplete"
-    ], 
-    "title": "Rid Thyself of Autocomplete=Off in Firefox"
-}
+Title: Rid Thyself of Autocomplete=Off in Firefox
+Date: 2009-10-28T09:39:19
+Tags: firefox, frustration, autocomplete
+Category: Tech
 
 <strong>Update, 12-15-09:</strong> See <a href="http://michaeljaylissner.com/blog/script-to-rid-thyself-of-autocomplete-in-firefox">this script</a> for an automated way to apply this change.
 

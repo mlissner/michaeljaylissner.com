@@ -1,9 +1,7 @@
-{
-    "date": "2007-10-23T18:40:38", 
-    "title": "\"Never Seen a Fire This Bad\"",
-    "tags": ["fire",
-             "san diego"]
-}
+Title: "Never Seen a Fire This Bad"
+Date: 2007-10-23T18:40:38
+Tags: fire, san diego
+
 
 Well, last I read, it looked like about 500,000 people have been evacuated down in San Diego because of the fires. This is a bad one folks. All the fire fighters are saying that they've never seen a fire this bad, and last I heard, containment was around 5%. That's probably an over estimation.
 

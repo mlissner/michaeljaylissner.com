@@ -1,15 +1,8 @@
-{
-    "categories": [
-        "bad statistics", 
-        "visualizations"
-    ], 
-    "date": "2008-10-08T16:08:09", 
-    "tags": [
-        "bad statistics", 
-        "visualizations"
-    ], 
-    "title": "Radar Analysis Charts: Fun, Trendy, BAD!"
-}
+Title: Radar Analysis Charts: Fun, Trendy, BAD!
+Date: 2008-10-08T16:08:09
+Tags: bad statistics, visualizations
+Category: Information Visualization and Statistics
+
 
 There is this trend that seems to be popping up everywhere of using radar charts such as this one:
 
@@ -19,4 +12,4 @@ For the record people, these are bad. They imply that there is some circular rel
 
 Please? 
 
-<i>EDIT: I should add - don't use line graphs for things that don't progress from A to B to C either. For those things, use bar graphs, or column graphs.</i><!--break-->
+<i>EDIT: I should add - don't use line graphs for things that don't progress from A to B to C either. For those things, use bar graphs, or column graphs.</i>

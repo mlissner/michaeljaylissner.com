@@ -1,15 +1,8 @@
-{
-    "categories": [
-        "Linux", 
-        "CLI"
-    ], 
-    "date": "2008-08-28T20:47:05", 
-    "tags": [
-        "Linux", 
-        "CLI"
-    ], 
-    "title": "Linux Tip - Route Standard Output Into to the Clipboard"
-}
+Title: Linux Tip - Route Standard Output Into to the Clipboard
+Date: 2008-08-28T20:47:05
+Tags: Linux, CLI
+Category: Tech
+
 
 A friendly online stranger just taught me how to do something that has been plaguing me for some time. Ever since I learned how to use pipes in the unix commandline, I have wanted to know how to pipe the output of a command into the system clipboard.
 
@@ -27,4 +20,4 @@ echo hello | xclip -i -selection clipboard</code>
 
  will put the word hello into the clipboard. Ctrl + V will then paste that value into whatever application desired.
 
-Thanks to aaron at <a href="http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676" target="_blank">http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676</a> for help with this question.<!--break-->
+Thanks to aaron at <a href="http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676" target="_blank">http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676</a> for help with this question.

@@ -1,23 +1,8 @@
-{
-    "categories": [
-        "typography", 
-        "tesseract", 
-        "Python", 
-        "ocr", 
-        "font", 
-        "courtlistener.com"
-    ], 
-    "date": "2012-01-27T22:15:58", 
-    "tags": [
-        "typography", 
-        "tesseract", 
-        "Python", 
-        "ocr", 
-        "font", 
-        "courtlistener.com"
-    ], 
-    "title": "The Winning Font in Court Opinions"
-}
+Title: The Winning Font in Court Opinions
+Date: 2012-01-27T22:15:58
+Tags: typography, tesseract, Python, ocr, font, courtlistener.com
+Category: Tech
+
 
 At CourtListener, we're developing a new system to convert scanned court documents to text. As part of our development we've analyzed more than 1,000 court opinions to determine what fonts courts are using. 
 

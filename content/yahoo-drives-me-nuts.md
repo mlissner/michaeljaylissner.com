@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "yahoo", 
-        "bad security"
-    ], 
-    "date": "2008-10-21T10:26:17", 
-    "tags": [
-        "yahoo", 
-        "bad security"
-    ], 
-    "title": "Yahoo! Drives Me Nuts"
-}
+Title: Yahoo! Drives Me Nuts
+Date: 2008-10-21T10:26:17
+Tags: yahoo, bad security
+Category: Tech
 
 I joined a yahoo group the other day, and I noticed that when Yahoo! shows my member information, it says I am three years younger than I am. "No problem" I thought to myself, "I'll just edit my information, surely I put in the wrong birthday."
 

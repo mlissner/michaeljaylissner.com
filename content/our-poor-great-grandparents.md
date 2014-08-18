@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "music", 
-        "perspective"
-    ], 
-    "date": "2008-11-11T00:50:41", 
-    "tags": [
-        "music", 
-        "perspective"
-    ], 
-    "title": "Our Poor Great Grandparents"
-}
+Title: Our Poor Great Grandparents
+Date: 2008-11-11T00:50:41
+Tags: music, perspective
+Category: Music
 
 It's important to have perspective these days. Times are changing, you know, and it can be hard to keep track of how things used to be. In that vein, I found an interesting quote from 1978:<blockquote>Children who begin school today have probably listened to more music than their great grandparents heard in their entire lives.</blockquote>It's pretty hard to imagine music as such a treat, since I listen to it pretty much every day. 
 

@@ -1,19 +1,7 @@
-{
-    "categories": [
-        "zinn", 
-        "RIP", 
-        "politics", 
-        "me"
-    ], 
-    "date": "2010-01-27T20:11:37", 
-    "tags": [
-        "zinn", 
-        "RIP", 
-        "politics", 
-        "me"
-    ], 
-    "title": "With Howard Zinn's Death, We All Suffer a Little"
-}
+Title: With Howard Zinn's Death, We All Suffer a Little
+Date: 2010-01-27T20:11:37
+Tags: zinn, RIP, politics, me
+Category: Heroes
 
 Howard Zinn was one of the greats. He may not have freed the slaves or created the nation, but it is safe to say that his every action and his every belief furthered the dream and the ideals of the American state. After eight years of Bush policies dragging down the nation, and a year of Obama sounding increasing like an echo of Bush, it is truly tragic that we are losing this thinker. 
 

@@ -1,19 +1,8 @@
-{
-    "categories": [
-        "sitemaps.xml", 
-        "privacy", 
-        "policy", 
-        "courtlistener.com"
-    ], 
-    "date": "2012-04-27T17:05:21", 
-    "tags": [
-        "sitemaps.xml", 
-        "privacy", 
-        "policy", 
-        "courtlistener.com"
-    ], 
-    "title": "Further privacy protections at CourtListener"
-}
+Title: Further privacy protections at CourtListener
+Date: 2012-04-27T17:05:21
+Tags: sitemaps.xml, privacy, policy, courtlistener.com
+Category: Policy and Politics
+
 
 I've [written previously][1] about the lengths we go to at CourtListener to protect people's privacy, and today we completed one more privacy enhancement. 
 

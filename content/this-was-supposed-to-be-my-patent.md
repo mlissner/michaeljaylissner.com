@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "patent", 
-        "microwave oven"
-    ], 
-    "date": "2009-05-13T11:12:12", 
-    "tags": [
-        "patent", 
-        "microwave oven"
-    ], 
-    "title": "This was Supposed to be My Patent Or, LG, Please Build This Already"
-}
+Title: This was Supposed to be My Patent Or, LG, Please Build This Already
+Date: 2009-05-13T11:12:12
+Tags: patent, microwave oven
+Category: Personal
 
 The other day, I was cooking some food in my microwave, and I thought to myself, can't my microwave figure out when my food is hot itself? I mean really. We can see how hot things are using infrared cameras. We can put infrared cameras in microwaves. Why must we always type in a length of time that we want things to cook for, when really, all we want is to press a button labeled "Make my food hot."
 

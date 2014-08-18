@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "concord", 
-        "police", 
-        "frustration"
-    ], 
-    "date": "2008-11-23T17:10:59", 
-    "tags": [
-        "concord", 
-        "police", 
-        "frustration"
-    ], 
-    "title": "Civic Frustration"
-}
+Title: Civic Frustration
+Date: 2008-11-23T17:10:59
+Tags: concord, police, frustration
+Category: Personal
+
 
 I was walking to work a few months ago, enjoying the crisp summer morning air, and I came to a stop light that instructed me to wait to cross. It being a one-way street, I looked left, saw no cars for a block and a half, and casually walked across the road, against the traffic light's firm instruction. I continued walking for another third of a block, and then heard a siren blare behind me <i>on the sidewalk</i>.
 
@@ -21,4 +12,4 @@ For the 20 minutes that I stalled the guy, I did my best to make him realize tha
 
 All of these things waste time, and don't have particularly good purposes. We live for only so long, and how much of our time is stuck waiting because of laws that take morality, judgment, and reason out of the picture? Clearly, there is room for improvement, but somehow cops feel comfortable (righteous?) about giving these kinds of tickets.
 
-Ninety-three dollars later, and I've cleared my name of this heinous crime on humanity. Surely something is wrong though, when cops have nothing better to do than to give this kind of ticket. Can't we find better ways to use our resources? <!--break-->
+Ninety-three dollars later, and I've cleared my name of this heinous crime on humanity. Surely something is wrong though, when cops have nothing better to do than to give this kind of ticket. Can't we find better ways to use our resources? 

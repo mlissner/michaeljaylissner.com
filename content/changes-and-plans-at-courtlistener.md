@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "courtlistener.com", 
-        "Web Architecture", 
-        "database"
-    ], 
-    "date": "2010-11-04T23:30:21", 
-    "tags": [
-        "courtlistener.com", 
-        "Web Architecture", 
-        "database"
-    ], 
-    "title": "Changes and Plans at CourtListener.com"
-}
+Title: Changes and Plans at CourtListener.com
+Date: 2010-11-04T23:30:21
+Tags: courtlistener.com, Web Architecture, database
+Category: Tech
+
 
 A few weeks ago, we made a fairly major change at CourtListener.com to include ID numbers in all of our case URLs. This change meant that links that were previously like this:<blockquote>http://courtlistener.com/scotus/Wong-v.-Smith/</blockquote>Are now like this:<blockquote>http://courtlistener.com/scotus/<strong>V5o</strong>/wong-v-smith/</blockquote>Most of the old links should continue to work, but using the new links should be much faster and more reliable. The major difference between the two is the ID number, which is encoded as a set of numbers (in this case <em>V5o</em>). This ID corresponds directly with the ID number in our database, aiding us greatly in serving up cases quickly and accurately.
 

@@ -1,19 +1,7 @@
-{
-    "categories": [
-        "rsnapshot", 
-        "archive", 
-        "backup", 
-        "project"
-    ], 
-    "date": "2008-12-09T22:06:48", 
-    "tags": [
-        "rsnapshot", 
-        "archive", 
-        "backup", 
-        "project"
-    ], 
-    "title": "Rsnapshot Backup Solution OR Why Backing Up Is Hard To Do"
-}
+Title: Rsnapshot Backup Solution OR Why Backing Up Is Hard To Do
+Date: 2008-12-09T22:06:48
+Tags: rsnapshot, archive, backup, project
+Category: Tech
 
 I've been working on getting this post figured out for about five months. In this post, I am going to try to explain exactly how my backup works, and why. It's ridiculously complicated at times, but the detail is necessary on paper in some form or other.
 
@@ -21,7 +9,14 @@ For my backup system, I rely heavily on <a href="http://rsnapshot.org" target="_
 
 This power is the ability to perform incremental backups, which is to say that if I have 5GB of data that I backup 10 days in a row, it will only take up about 5GB of data, total. However, if I have 5GB of data today, an additional 5GB tomorrow, and another 5GB the day after, which I backup each day for ten days, it will only require a total of 5GB of space the first day, 10GB the second day, 15GB the third day, and no more space after that for the remaining 7 days.
 
-This is important if you want to backup your data on a regular basis. Since I run a server, I have several things that I must backup. I back these up on a daily, weekly, and monthly basis. The list includes:<ul><li>My laptop is backed up wirelessly to the server's hard drive</li><li>The email server gets copied to an external USB drive (this includes all the Zimbra configuration files as well as thousands of emails)</li><li>The web server gets backed up to the USB drive (this includes the Drupal installation and the MySQL database)</li><li>Lots of configuration files for the servers go to the USB drive (i.e. the /etc/ directory)</li><li>And finally, the backup configuration itself goes to the USB drive</li></ul>
+This is important if you want to backup your data on a regular basis. Since I run a server, I have several things that I must backup. I back these up on a daily, weekly, and monthly basis. The list includes:
+
+ - My laptop is backed up wirelessly to the server's hard drive
+ - The email server gets copied to an external USB drive (this includes all the Zimbra configuration files as well as thousands of emails)
+ - The web server gets backed up to the USB drive (this includes the Drupal installation and the MySQL database)
+ - Lots of configuration files for the servers go to the USB drive (i.e. the /etc/ directory)
+ - And finally, the backup configuration itself goes to the USB drive
+
 
 Each of these backups presents some challenging difficulties. For the web server, it is challenging because it is backing up MySQL, Zimbra and Drupal. In order to do this, I have to coordinate the MySQL database dump so that when the Drupal backup is triggered, it will copy the MySQL information over to the USB drive along with the normal Drupal information. For Zimbra, the email server has to be stopped, backed up, and then started again, which means control of the email server has to be carefully scripted.
 
@@ -31,15 +26,20 @@ Once all of that is figured out logically, you have to authenticate the laptop t
 
 One final challenge that had to be overcome was connecting the USB drive to the server in such a way that it would always be mounted in the same location. In addition, I learned that FAT32 doesn't support file system links, and so I had to format the USB drive as ext3.
 
-As of today, it's about five months since I began this project, and I believe I can say that the backup happens flawlessly on a daily, weekly and monthly basis. There are a few things I'd like to change however:<ul><li><del>I'd like to get an email notification when a backup fails</del> &mdash; Done - See comment below.</li><li><del>I'd like to begin backing up /etc/ on my laptop</del> &mdash; Done</li><li><del>At one point, I was backing up a list of all the installed software on my system - it'd be nice to have that again</del> &mdash; Done - I wrote a python script to do so</li><li><del>The backup is unencrypted, so anybody can take the USB drive and have a heck of a lot of emails. Gotta fix that.</del> &mdash; See the note below in the comments for details.</li></ul>
+As of today, it's about five months since I began this project, and I believe I can say that the backup happens flawlessly on a daily, weekly and monthly basis. There are a few things I'd like to change however:
+
+ - <del>I'd like to get an email notification when a backup fails</del> &mdash; Done - See comment below.
+ - <del>I'd like to begin backing up /etc/ on my laptop</del> &mdash; Done
+ - <del>At one point, I was backing up a list of all the installed software on my system - it'd be nice to have that again</del> &mdash; Done - I wrote a python script to do so
+ - <del>The backup is unencrypted, so anybody can take the USB drive and have a heck of a lot of emails. Gotta fix that.</del> &mdash; See the note below in the comments for details.
+
 
 <strong>Files of Interest</strong>
-<ol><li><a href="http://michaeljaylissner.com/archive/files/rsnapshotOpal2.conf">rsnapshot configuration</a> for my laptop</li>
-<li><a href="http://michaeljaylissner.com/archive/files/rsnapshotDrupal.conf">rsnapshot configuration</a> for the Drupal server</li>
-<li><a href="http://michaeljaylissner.com/archive/files/rsnapshotEtcHome.conf">rsnapshot configuration</a> for the backup configuration files and the /etc directory</li>
-<li><a href="http://michaeljaylissner.com/archive/files/rsnapshotZimbra.conf">rsnapshot configuration</a> for the Zimbra server</li>
-<li>scripts to <a href="http://michaeljaylissner.com/archive/files/ZimbraStop">stop</a>/<a href="http://michaeljaylissner.com/archive/files/ZimbraStart">start</a> Zimbra</li>
-<li>My <a href="http://michaeljaylissner.com/archive/files/cronlist.txt">cron file</a></li></ol>
+<ol> - <a href="http://michaeljaylissner.com/archive/files/rsnapshotOpal2.conf">rsnapshot configuration</a> for my laptop
+ - <a href="http://michaeljaylissner.com/archive/files/rsnapshotDrupal.conf">rsnapshot configuration</a> for the Drupal server
+ - <a href="http://michaeljaylissner.com/archive/files/rsnapshotEtcHome.conf">rsnapshot configuration</a> for the backup configuration files and the /etc directory
+ - <a href="http://michaeljaylissner.com/archive/files/rsnapshotZimbra.conf">rsnapshot configuration</a> for the Zimbra server
+ - scripts to <a href="http://michaeljaylissner.com/archive/files/ZimbraStop">stop</a>/<a href="http://michaeljaylissner.com/archive/files/ZimbraStart">start</a> Zimbra
+ - My <a href="http://michaeljaylissner.com/archive/files/cronlist.txt">cron file</a></ol>
 
 All in all, this just goes to show that backing up is a very difficult thing to do properly and automatically. It's one thing if you have a desktop that backs up to a USB drive. It's another if you have a server and a laptop. Had I known how long this would take going into it, I'm not sure I would have figured it all out. How the average computer user is supposed to figure this out is beyond me.
-<!--break-->

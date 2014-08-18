@@ -1,13 +1,8 @@
-{
-    "categories": [
-        "pedantic"
-    ], 
-    "date": "2007-11-26T17:02:25", 
-    "tags": [
-        "pedantic"
-    ], 
-    "title": "An Important Distinction"
-}
+Title: An Important Distinction
+Date: 2007-11-26T17:02:25
+Tags: pedantic
+Category: Rant
+
 
 For the record people:
 <b>Quite:</b> I haven't <b>quite</b> finished my soup. This is <b>quite</b> a nice restaurant.

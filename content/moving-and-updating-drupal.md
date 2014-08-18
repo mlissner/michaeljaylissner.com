@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "drupal", 
-        "apache2"
-    ], 
-    "date": "2008-07-24T22:45:32", 
-    "tags": [
-        "drupal", 
-        "apache2"
-    ], 
-    "title": "Moving and Updating Drupal"
-}
+Title: Moving and Updating Drupal
+Date: 2008-07-24T22:45:32
+Tags: drupal, apache2
+Category: Tech
 
 You may recall from one of my earlier posts that I was running two servers in my attic when I originally set things up at the end of last summer. Originally, I had one server for Zimbra, and the other for Drupal. I did this because I was scared that if I didn't, people would be unable to access the website without getting the email, and vice versa. I had no familiarity with apache, and a limited understanding of ports. 
 
@@ -23,4 +15,4 @@ Another challenge I encountered was that I had to update my dbconfig.php files t
 
 The biggest problem I encountered was that the clean URL's broke, and were a pain to get fixed. I have fixed those now, so the only remaining thing is to get gallery functioning again. The thing to remember here is that clean urls function by directory, and that the higher up the directory tree you go, the higher the priority of the .htacces files.
 
-As for Gallery2, I have to say it is a big pain, so I may just revert to trusting Google with my images. We'll see if I have another moment of inspiration.<!--break-->
+As for Gallery2, I have to say it is a big pain, so I may just revert to trusting Google with my images. We'll see if I have another moment of inspiration.

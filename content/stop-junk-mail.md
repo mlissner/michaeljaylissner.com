@@ -1,13 +1,7 @@
-{
-    "categories": [
-        "eco-tip"
-    ], 
-    "date": "2008-05-04T20:41:05", 
-    "tags": [
-        "eco-tip"
-    ], 
-    "title": "Eco-tip 5 - Stop Junk Mail"
-}
+Title: Eco-tip 5 - Stop Junk Mail
+Date: 2008-05-04T20:41:05
+Tags: eco-tip
+Category: Environment
 
 How to stop junk mail in three steps, as gleaned from <a href="http://www.recycleworks.org" target="_blank">recycleworks.org</a>:
 
@@ -26,4 +20,4 @@ Opt out of shopping flyers:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advo/Valassis: 888-241-6760, or online at <a href="http://www.advo.com/consumersupport.html" target="_blank">www.advo.com/consumersupport.html</a>.
 
 <strong>3. Get catalogs gone</strong>
-You can opt out of some catalogs by going to <a href="http://catalogchoice.org" target="_blank"> catalogchoice.org</a>.<!--break-->
+You can opt out of some catalogs by going to <a href="http://catalogchoice.org" target="_blank"> catalogchoice.org</a>.

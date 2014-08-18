@@ -1,21 +1,8 @@
-{
-    "categories": [
-        "information visualization", 
-        "contra costa county", 
-        "research", 
-        "Tableau", 
-        "data exploration"
-    ], 
-    "date": "2010-02-26T17:45:19", 
-    "tags": [
-        "information visualization", 
-        "contra costa county", 
-        "research", 
-        "Tableau", 
-        "data exploration"
-    ], 
-    "title": "Exploratory Analysis of Service Recipients of the Contra Costa County Community Services Bureau"
-}
+Title: Exploratory Analysis of Service Recipients of the Contra Costa County Community Services Bureau
+Date: 2010-02-26T17:45:19
+Tags: information visualization, contra costa county, research, Tableau, data exploration
+Category: Information Visualization and Statistics
+
 
 <h3>Introduction and Background</h3>
 <p>As part of my <a href="http://courses.ischool.berkeley.edu/i247/s10/schedule.html" target="_blank">information visualization</a> class at the <a href="http://ischool.berkeley.edu" target="_blank">UC Berkeley School of Information</a>, I have completed an exploratory analysis of the characteristics of the children and families that have received services from the Community Services Bureau (CSB) of the Contra Costa County Employment and Human Services Department (<a href="http://ehsd.org" target="_blank">EHSD</a>). As indicated below, at any given time the Bureau provides subsidized childcare services to approximately 2,700 children aged zero to five that live in and around Contra Costa County. When granting services, priority is given to the neediest families and children, and thus the data should not be considered a representative sample of the county at large. With that in mind however, extrapolations could likely be made by comparing the number of children in a geographic area against the number of children analyzed herein.<p>
@@ -23,16 +10,16 @@
 
 <p>The data that is used was exported from the Bureau's <q>COPA</q> database, pseudo-anonymized by the Bureau,<a name="ref1"></a><a href="/blog/exploratory-analysis-of-service-recipients-of-community-services-bureau#fn1"><sup>1</sup></a> and then provided to me for this research. The COPA database is an online tool into which county workers have input vast quantities of personal information about the children and families who apply for and receive services. It has been in use since approximately 2003, and at present contains records for approximately 22,500 children. Of these children, approximately 6,600 have been given a series of developmental assessments by county employees. These assessments consist of 41 measures, which attempt to plot each child's development as he/she progresses in the program. For the explorations I have completed here, I have averaged the scores for these measures, thus approximating the child's developmental standing shortly after enrolling in the program.</p>
 
-<p>As a former employee of this Bureau, I am familiar with this data, however in the past I have not completed exploratory research as broadly as I have here.</p><!--break-->
+<p>As a former employee of this Bureau, I am familiar with this data, however in the past I have not completed exploratory research as broadly as I have here.</p>
 
 
 
 <h3>Hypotheses</h3>
 <p>This is a very rich data source containing dozens of measures about both the children and the families, and I have had a difficult time determining how best to approach forming my hypotheses. After looking at many of the measures that were available in the dataset, I have formed the following three hypotheses:</p>
 <ol>
-    <li>An increase in parental involvement and/or stability will result in improved developmental scores;</li>
-    <li>Children with better language skills will have higher developmental scores; and</li>
-    <li>Gender and race/ethnicity will have marginal effects on developmental scores, but the presence, absence or suspicion of a disability will.</li>
+     - An increase in parental involvement and/or stability will result in improved developmental scores;
+     - Children with better language skills will have higher developmental scores; and
+     - Gender and race/ethnicity will have marginal effects on developmental scores, but the presence, absence or suspicion of a disability will.
 </ol>
 
 

@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "ipod", 
-        "rant", 
-        "DRM"
-    ], 
-    "date": "2009-05-24T23:34:44", 
-    "tags": [
-        "ipod", 
-        "rant", 
-        "DRM"
-    ], 
-    "title": "Every Now and Again, I Rant About Ipods. This is One of Those Times"
-}
+Title: Every Now and Again, I Rant About Ipods. This is One of Those Times
+Date: 2009-05-24T23:34:44
+Tags: ipod, rant, DRM
+Category: Rant
 
 Like the title says, every now and again, I have to rant about how annoying iPods (and by extension, Apple) are. This is one of those times.
 

@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "images", 
-        "icons", 
-        "Android"
-    ], 
-    "date": "2012-01-12T18:38:34", 
-    "tags": [
-        "images", 
-        "icons", 
-        "Android"
-    ], 
-    "title": "Android Icons from Ice Cream Sandwich"
-}
+Title: Android Icons from Ice Cream Sandwich
+Date: 2012-01-12T18:38:34
+Tags: images, icons, Android
+Category: Tech
+
 
 For those that are looking for the stock Android icons that come with the platform, I just pulled them together, and put them in a zip for you.
 

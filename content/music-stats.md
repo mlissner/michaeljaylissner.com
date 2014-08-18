@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "music", 
-        "statistics", 
-        "visualizations"
-    ], 
-    "date": "2008-10-08T14:35:46", 
-    "tags": [
-        "music", 
-        "statistics", 
-        "visualizations"
-    ], 
-    "title": "Music Stats"
-}
+Title: Music Stats
+Date: 2008-10-08T14:35:46
+Tags: music, statistics, visualizations
+Category: Music
 
 I have this problem when I am listening to music that I almost never choose artists whose name starts with anything after the letter D. When I am browsing for music, I just never get that far in the list. For some time, I've wondered if this is my fault, or if I just have more music in the front of my collection.
 
@@ -28,4 +18,4 @@ While I expected A-E to come out ahead, who would have thought that B would have
 
 So, what conclusions does this lead to? One: That I need to look at my music beyond the letter D. Two: That B is a very popular letter.
 
-For those wondering about their own music collection, if you browse to your music folder and run the following, it will tell you how many artists starting with that letter you have. For the example below, it tells me I have 30 artists with the letter 'A'.<blockquote><code>ls Music | grep -i ^a | wc -l</code></blockquote><!--break-->
+For those wondering about their own music collection, if you browse to your music folder and run the following, it will tell you how many artists starting with that letter you have. For the example below, it tells me I have 30 artists with the letter 'A'.<blockquote><code>ls Music | grep -i ^a | wc -l</code></blockquote>

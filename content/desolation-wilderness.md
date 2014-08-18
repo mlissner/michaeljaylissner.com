@@ -1,19 +1,9 @@
-{
-    "categories": [
-        "backpacking", 
-        "desolation wilderness", 
-        "Z", 
-        "camping"
-    ], 
-    "date": "2013-06-17T11:41:40", 
-    "tags": [
-        "backpacking", 
-        "desolation wilderness", 
-        "Z", 
-        "camping"
-    ], 
-    "title": "Desolation Wilderness"
-}
+Title: Desolation Wilderness
+Date: 2013-06-17T11:41:40
+Tags: backpacking, desolation wilderness, Z, camping
+Category: Backpacking
+
+[TOC]
 
 Z and I went to Desolation Wilderness this weekend in preparation for our thru hike of the Te Araroa trail in November. It was a great trip, and photos [are here][1]. If you need permission to see them, let me know.
 

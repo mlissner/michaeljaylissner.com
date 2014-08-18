@@ -1,19 +1,8 @@
-{
-    "categories": [
-        "torture", 
-        "prison camp", 
-        "Obama", 
-        "Cuba"
-    ], 
-    "date": "2009-01-12T23:17:53", 
-    "tags": [
-        "torture", 
-        "prison camp", 
-        "Obama", 
-        "Cuba"
-    ], 
-    "title": "Guantanamo to Close, But They're Just Moving the Prisoners"
-}
+Title: Guantanamo to Close, But They're Just Moving the Prisoners
+Date: 2009-01-12T23:17:53
+Tags: torture, prison camp, Obama, Cuba
+Category: Policy and Politics
+
 
 I was happy to read the news today that <a href="http://www.iht.com/articles/2009/01/13/america/13gitmo.php?page=1" target="_blank">Obama plans to close Guant�namo Bay prison camp</a>. This is good news for America, and should be good news for the prisoners there. 
 

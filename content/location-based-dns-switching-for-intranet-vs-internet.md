@@ -1,21 +1,7 @@
-{
-    "categories": [
-        "script", 
-        "project", 
-        "/etc/hosts", 
-        "networking", 
-        "DNS"
-    ], 
-    "date": "2009-02-19T20:45:10", 
-    "tags": [
-        "script", 
-        "project", 
-        "/etc/hosts", 
-        "networking", 
-        "DNS"
-    ], 
-    "title": "Location Based DNS Switching For Internet vs. Intranet"
-}
+Title: Location Based DNS Switching For Internet vs. Intranet
+Date: 2009-02-19T20:45:10
+Tags: script, project, /etc/hosts, networking, DNS
+Category: Tech
 
 I realized over the weekend that since I run my own mail server out of my home, I can configure my computer to download my mail over the intranet whenever I am on my home network. By doing this, I can drastically reduce my mail download times because it cuts the Internet out of the equation. Rather than using DNS + the Internet to get my mail, I can download it directly from internal IP address of the server. 
 
@@ -60,4 +46,4 @@ And /etc/hostsInternet is just a copy of /etc/hosts.
 
 So, to make this whole thing run, put the script in /etc/network/if-up.d, and set its owner to root with execute permission. Create a file called /etc/hostsIntranet, that contains your intranet configuration, as shown above. Make a copy of your normal /etc/hosts file called /etc/hostsInternet. 
 
-Once all that's done, you should be all set. Any questions, please feel free to comment!<!--break-->
+Once all that's done, you should be all set. Any questions, please feel free to comment!

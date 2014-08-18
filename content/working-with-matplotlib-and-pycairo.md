@@ -1,21 +1,7 @@
-{
-    "categories": [
-        "Python", 
-        "programming", 
-        "matplotlib", 
-        "pycairo", 
-        "project"
-    ], 
-    "date": "2009-01-19T16:25:32", 
-    "tags": [
-        "Python", 
-        "programming", 
-        "matplotlib", 
-        "pycairo", 
-        "project"
-    ], 
-    "title": "Working with matplotlib and pycairo"
-}
+Title: Working with matplotlib and pycairo
+Date: 2009-01-19T16:25:32
+Tags: Python, programming, matplotlib, pycairo, project
+Category: Tech
 
 I spent a good part of my winter break working on learning <a href="http://python.org" target="_blank">Python</a> and using it for projects. One project was the <a href="http://michaeljaylissner.com/blog/yelp-scraper" target="_blank">Yelp scraper</a> that I posted about previously, and another was a report for my old work. 
 

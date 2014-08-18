@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "security", 
-        "problems", 
-        "mashup idea"
-    ], 
-    "date": "2009-04-12T14:36:49", 
-    "tags": [
-        "security", 
-        "problems", 
-        "mashup idea"
-    ], 
-    "title": "A Real Problem You Should Fix. Now."
-}
+Title: A Real Problem You Should Fix. Now.
+Date: 2009-04-12T14:36:49
+Tags: security, problems, mashup idea
+Category: Privacy and Security
+
 
 I've mentioned secret questions on my site before, but I never quite realized how much of a problem they are until today, when I discovered <a href="http://uspublicrecords.com" target="_blank">uspublicrecords.com</a>.
 
@@ -23,4 +14,4 @@ It's pretty creepy how easy this is, and fixing this problem could take days as 
 
 Anyway, now might be a good time to go change your secret questions, cause if it has anything to do with middle names, that site will hand them right out.
 
-* With their OK, of course.<!--break-->
+* With their OK, of course.

@@ -1,15 +1,8 @@
-{
-    "categories": [
-        "Linux", 
-        "imageMagick"
-    ], 
-    "date": "2008-05-17T17:48:40", 
-    "tags": [
-        "Linux", 
-        "imageMagick"
-    ], 
-    "title": "Drag a Screenshot Using ImageMagick"
-}
+Title: Drag a Screenshot Using ImageMagick
+Date: 2008-05-17T17:48:40
+Tags: Linux, imageMagick
+Category: Tech
+
 
 I learned an interesting trick while working on the Fuji water article. We all know that if you want to take a screenshot in Linux, all you usually have to do is press the "printscreen" button. That, however, takes a screenshot of the entire screen, which you then have to trim down into a useful bit of picture. 
 

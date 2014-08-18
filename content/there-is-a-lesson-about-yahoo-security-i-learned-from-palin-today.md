@@ -1,17 +1,8 @@
-{
-    "categories": [
-        "palin", 
-        "security", 
-        "yahoo"
-    ], 
-    "date": "2008-09-17T15:08:09", 
-    "tags": [
-        "palin", 
-        "security", 
-        "yahoo"
-    ], 
-    "title": "There's a Lesson About Yahoo! Security I Learned from Palin Today"
-}
+Title: There's a Lesson About Yahoo! Security I Learned from Palin Today
+Date: 2008-09-17T15:08:09
+Tags: palin, security, yahoo
+Category: Privacy and Security
+
 
 The lesson is this: Yahoo! doesn't use encryption on their webmail. I'll repeat that: YAHOO! DOESN'T USE ENCRYPTION ON THEIR WEBMAIL! 
 

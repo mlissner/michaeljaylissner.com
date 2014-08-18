@@ -1,17 +1,7 @@
-{
-    "categories": [
-        "me", 
-        "atheism", 
-        "Cal"
-    ], 
-    "date": "2008-03-09T10:34:27", 
-    "tags": [
-        "me", 
-        "atheism", 
-        "Cal"
-    ], 
-    "title": "My Child Is NOT Catholic (Dawkins Insists)"
-}
+Title: My Child Is NOT Catholic (Dawkins Insists)
+Date: 2008-03-09T10:34:27
+Tags: me, atheism, Cal
+Category: Policy and Politics
 
 <img src="http://michaeljaylissner.com/files/images/dawkins.jpg" hspace="10" align="left">I had the pleasure of going to see <a href="http://en.wikipedia.org/wiki/Richard_Dawkins" target="_blank">Richard Dawkins</a> last night at Cal. Although our fourth-row seating probably influenced my judgement, I must say he is a truly excellent speaker. 
 
@@ -26,4 +16,4 @@ I can't say that I'm one to really get "irate" about such things, but he really 
 
 So Dawkins believes that if we raise consciousness in a similar way to feminism, and find a way to allow children to be nontheists until they are old enough to make such decisions on their own, we might just be able to beat this religion thing. We might be able to curb religious violence by allowing children to make their own choices. 
 
-It could work, and I for one am officially convinced that I will not let people speak of religious children. <!--break-->
+It could work, and I for one am officially convinced that I will not let people speak of religious children. 

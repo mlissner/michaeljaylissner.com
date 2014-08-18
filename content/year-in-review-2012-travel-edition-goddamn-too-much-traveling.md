@@ -1,15 +1,7 @@
-{
-    "categories": [
-        "travel", 
-        "me"
-    ], 
-    "date": "2012-12-31T22:42:05", 
-    "tags": [
-        "travel", 
-        "me"
-    ], 
-    "title": "Year in Review: Travel Edition"
-}
+Title: Year in Review: Travel Edition
+Date: 2012-12-31T22:42:05
+Tags: travel, me
+Category: Personal
 
 I did a lot of traveling this year; more than anybody should ever really do. Since I'm already forgetting all the places I went to, I figured I'd write it all down. 
 
