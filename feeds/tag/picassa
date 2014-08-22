@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/picassa" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-11-14T16:28:44+01:00</updated><entry><title>Testing Deletion Speed of Online Photo Sites</title><link href="http://michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" rel="alternate"></link><updated>2009-11-14T16:28:44+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-14:posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/</id><summary type="html">&lt;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/picassa" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-11-14T16:28:44+01:00</updated><entry><title>Testing Deletion Speed of Online Photo Sites</title><link href="http://michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" rel="alternate"></link><updated>2009-11-14T16:28:44+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-14:posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/</id><summary type="html">&lt;p&gt;
 &lt;strong&gt;Update, 2010-03-08:&lt;/strong&gt;Added an image at drop.io&lt;br&gt;
 &lt;strong&gt;Update, 2010-01-28:&lt;/strong&gt; Added an image at Orkut.com&lt;br&gt;
-&lt;strong&gt;Update 2, 2010-01-28:&lt;/strong&gt; At &lt;a href="http://www.ftc.gov/bcp/workshops/privacyroundtables/index.shtml" target="_blank"&gt;the &lt;span class="caps"&gt;FTC&lt;/span&gt; round table&lt;/a&gt; today, Facebook&amp;#8217;s director of public policy, Tim Sparapani, claimed that information deleted from Facebook cannot be retrieved even by Facebook staff, because it is almost instantly deleted. I informed him this was not true in the case of pictures, and he said he would look into it. Will update this post when/if I hear&amp;nbsp;more.&lt;/p&gt;
+&lt;strong&gt;Update 2, 2010-01-28:&lt;/strong&gt; At &lt;a href="http://www.ftc.gov/bcp/workshops/privacyroundtables/index.shtml" target="_blank"&gt;the FTC round table&lt;/a&gt; today, Facebook's director of public policy, Tim Sparapani, claimed that information deleted from Facebook cannot be retrieved even by Facebook staff, because it is almost instantly deleted. I informed him this was not true in the case of pictures, and he said he would look into it. Will update this post when/if I hear more.&lt;/p&gt;
 
-&lt;p&gt;Imagine an embarrassing photo of you is placed online by one of your friends. You ask them to take it down, and they do. Now, imagine that your enemy had gotten a link to that photo, and had posted it to their blog. You&amp;#8217;d hope that your friend taking the photo down would in fact delete the photo, but I&amp;#8217;m sorry to say that isn&amp;#8217;t always the&amp;nbsp;case.&lt;/p&gt;
+&lt;p&gt;Imagine an embarrassing photo of you is placed online by one of your friends. You ask them to take it down, and they do. Now, imagine that your enemy had gotten a link to that photo, and had posted it to their blog. You'd hope that your friend taking the photo down would in fact delete the photo, but I'm sorry to say that isn't always the case.&lt;/p&gt;
 
-&lt;p&gt;Inspired by &lt;a href="http://arstechnica.com/web/news/2009/07/are-those-photos-really-deleted-from-facebook-think-twice.ars" target="_blank"&gt;Jacqui Cheng&amp;#8217;s article&lt;/a&gt;, I decided to test some of the more popular online services for photo hosting to see what happens when you &amp;#8220;delete&amp;#8221; a photo from their site. On &lt;strong&gt;November 14&lt;sup&gt;th&lt;/sup&gt;, 2009&lt;/strong&gt;, I uploaded and then deleted the following image of a black box with white text to Facebook, Flickr, Picasa, MySpace, Photobucket, Shutterfly, Twitpic and&amp;nbsp;WalMart:&lt;/p&gt;
+&lt;p&gt;Inspired by &lt;a href="http://arstechnica.com/web/news/2009/07/are-those-photos-really-deleted-from-facebook-think-twice.ars" target="_blank"&gt;Jacqui Cheng's article&lt;/a&gt;, I decided to test some of the more popular online services for photo hosting to see what happens when you "delete" a photo from their site. On &lt;strong&gt;November 14&lt;sup&gt;th&lt;/sup&gt;, 2009&lt;/strong&gt;, I uploaded and then deleted the following image of a black box with white text to Facebook, Flickr, Picasa, MySpace, Photobucket, Shutterfly, Twitpic and WalMart:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="http://michaeljaylissner.com/files/images/PostedAndDeleted.jpg"&gt;
-&lt;p&gt;When you look below, if you can see the black box for a site, that means that it was not truly deleted and is still live. You can verify this by clicking on the image. This is checked each time this page is loaded, so the information is constantly verified. If the image has been deleted, you will see the date that it was&amp;nbsp;deleted.&lt;/p&gt;&lt;/p&gt;
-&lt;p&gt;There are a number of reasons why photo services might be lazy about properly removing images from their site, but until they have proper deletion mechanisms, we should all think twice about what we&amp;nbsp;upload.&lt;/p&gt;
+&lt;p&gt;When you look below, if you can see the black box for a site, that means that it was not truly deleted and is still live. You can verify this by clicking on the image. This is checked each time this page is loaded, so the information is constantly verified. If the image has been deleted, you will see the date that it was deleted.&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;There are a number of reasons why photo services might be lazy about properly removing images from their site, but until they have proper deletion mechanisms, we should all think twice about what we upload.&lt;/p&gt;
 
-&lt;p&gt;If there&amp;#8217;s a service that is not shown here that you&amp;#8217;d like to see, please &lt;a href="/contact"&gt;let me know&lt;/a&gt;. And now, without further ado, I present, the ongoing results of the&amp;nbsp;test:&lt;/p&gt;
+&lt;p&gt;If there's a service that is not shown here that you'd like to see, please &lt;a href="/contact"&gt;let me know&lt;/a&gt;. And now, without further ado, I present, the ongoing results of the test:&lt;/p&gt;
 
 &lt;h4&gt;Facebook:&lt;/h4&gt;
 
-&lt;p&gt;This file was properly deleted from their server as of at least May 27,&amp;nbsp;2010.&lt;/p&gt;
+&lt;p&gt;This file was properly deleted from their server as of at least May 27, 2010.&lt;/p&gt;
 
 &lt;h4&gt;Flickr:&lt;/h4&gt;
 
-&lt;p&gt;&lt;span class="caps"&gt;ED&lt;/span&gt;: Flickr began showing the following message approximately an hour after the image was&amp;nbsp;&amp;#8220;deleted.&amp;#8221;&lt;/p&gt;
+&lt;p&gt;ED: Flickr began showing the following message approximately an hour after the image was "deleted."&lt;/p&gt;
 
 &lt;?php
     $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
@@ -343,7 +343,7 @@
 
 
 &lt;p&gt;?&amp;gt;&lt;/p&gt;
-&lt;h4&gt;Google Orkut (added 2010-01-28 - disregard the date in the image&amp;nbsp;itself)&lt;/h4&gt;
+&lt;h4&gt;Google Orkut (added 2010-01-28 - disregard the date in the image itself)&lt;/h4&gt;
 
 &lt;?php
     $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
@@ -388,7 +388,7 @@
 
 
 &lt;p&gt;?&amp;gt;&lt;/p&gt;
-&lt;h4&gt;Drop.io (added 08 March&amp;nbsp;2010)&lt;/h4&gt;
+&lt;h4&gt;Drop.io (added 08 March 2010)&lt;/h4&gt;
 
 &lt;?php
     $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';

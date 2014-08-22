@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/msword" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2008-04-18T10:13:22+02:00</updated><entry><title>Bypass Form Protection in MS Word</title><link href="http://michaeljaylissner.com/posts/2008/04/18/bypass-form-protections-in-microsoft-word/" rel="alternate"></link><updated>2008-04-18T10:13:22+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-18:posts/2008/04/18/bypass-form-protections-in-microsoft-word/</id><summary type="html">&lt;p&gt;I recently had the occasion to need to get around the form protection in an 
-&lt;span class="caps"&gt;MS&lt;/span&gt; Word file. Turns out it&amp;#8217;s a pretty easy exploit, but the directions I 
-found elsewhere on the internet didn&amp;#8217;t quite do the&amp;nbsp;job. &lt;/p&gt;
-&lt;p&gt;Here&amp;#8217;s the&amp;nbsp;trick:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/msword" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2008-04-18T10:13:22+02:00</updated><entry><title>Bypass Form Protection in MS Word</title><link href="http://michaeljaylissner.com/posts/2008/04/18/bypass-form-protections-in-microsoft-word/" rel="alternate"></link><updated>2008-04-18T10:13:22+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-18:posts/2008/04/18/bypass-form-protections-in-microsoft-word/</id><summary type="html">&lt;p&gt;I recently had the occasion to need to get around the form protection in an 
+MS Word file. Turns out it's a pretty easy exploit, but the directions I 
+found elsewhere on the internet didn't quite do the job. &lt;/p&gt;
+&lt;p&gt;Here's the trick:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Open the protected document, and save it as an .html&amp;nbsp;file.&lt;/li&gt;
-&lt;li&gt;Close the .doc file, and open the .html file in a text editor such as notepad or &lt;span class="caps"&gt;GVIM&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;In the .html file, find a tag that says something like: &amp;#8220;&amp;lt;w:UnprotectPassword&amp;gt;&lt;span class="caps"&gt;ABCDEF01&lt;/span&gt;&amp;lt;/w:UnprotectPassword&amp;gt;&amp;#8221;&lt;/li&gt;
+&lt;li&gt;Open the protected document, and save it as an .html file.&lt;/li&gt;
+&lt;li&gt;Close the .doc file, and open the .html file in a text editor such as notepad or GVIM&lt;/li&gt;
+&lt;li&gt;In the .html file, find a tag that says something like: "&amp;lt;w:UnprotectPassword&amp;gt;ABCDEF01&amp;lt;/w:UnprotectPassword&amp;gt;"&lt;/li&gt;
 &lt;li&gt;Replace each of the characters in the tag with zeroes so it reads: &lt;code&gt;&amp;lt;
 w:UnprotectPassword&amp;gt;00000000&amp;lt;/w:UnprotectPassword&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Open the .html file in Word, and save it as a .doc. Go to Tools &amp;gt; Unprotect&amp;nbsp;Document&lt;/li&gt;
+&lt;li&gt;Open the .html file in Word, and save it as a .doc. Go to Tools &amp;gt; Unprotect Document&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;That should do it. I&amp;#8217;d love to hear any evidence to the&amp;nbsp;contrary. &lt;/p&gt;</summary><category term="microsoft"></category><category term="msword"></category><category term="hacking"></category></entry></feed>
+&lt;p&gt;That should do it. I'd love to hear any evidence to the contrary. &lt;/p&gt;</summary><category term="microsoft"></category><category term="msword"></category><category term="hacking"></category></entry></feed>

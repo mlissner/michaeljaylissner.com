@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/exodus" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2013-06-28T22:56:37+02:00</updated><entry><title>New Tool to Remove Dead Feeds from OPML Files</title><link href="http://michaeljaylissner.com/posts/2013/06/28/trim-your-dead-feeds/" rel="alternate"></link><updated>2013-06-28T22:56:37+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2013-06-28:posts/2013/06/28/trim-your-dead-feeds/</id><summary type="html">&lt;p&gt;Since Google Reader&amp;#8217;s closure is immenent, a lot of folks are looking for 
-solutions. One problem I&amp;#8217;ve run into many times throughout the years is that
-the feeds I have in Google Reader are largely dead, and there&amp;#8217;s no way to get
-rid of the ones that are no longer updated or simply&amp;nbsp;gone. &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://bitbucket.org/mlissner/trim-my-feeds/overview"&gt;So I built a&amp;nbsp;tool.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Check it out on BitBucket and give it a whirl. It&amp;#8217;ll go through an &lt;span class="caps"&gt;OPML&lt;/span&gt; file, 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/exodus" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2013-06-28T22:56:37+02:00</updated><entry><title>New Tool to Remove Dead Feeds from OPML Files</title><link href="http://michaeljaylissner.com/posts/2013/06/28/trim-your-dead-feeds/" rel="alternate"></link><updated>2013-06-28T22:56:37+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2013-06-28:posts/2013/06/28/trim-your-dead-feeds/</id><summary type="html">&lt;p&gt;Since Google Reader's closure is immenent, a lot of folks are looking for 
+solutions. One problem I've run into many times throughout the years is that
+the feeds I have in Google Reader are largely dead, and there's no way to get
+rid of the ones that are no longer updated or simply gone. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://bitbucket.org/mlissner/trim-my-feeds/overview"&gt;So I built a tool.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Check it out on BitBucket and give it a whirl. It'll go through an OPML file, 
 check all the feeds in it, and make a new file for you that has them cleaned
- out. In my case, it purged about 20% of the feeds I had &amp;#8212; a big&amp;nbsp;improvement. &lt;/p&gt;
-&lt;p&gt;It&amp;#8217;s a simple tool, but look, if your friend hasn&amp;#8217;t updated their blog in 
-two years&amp;#8230;they&amp;#8217;re probably not going to. If the feed is gone, you no longer 
+ out. In my case, it purged about 20% of the feeds I had -- a big improvement. &lt;/p&gt;
+&lt;p&gt;It's a simple tool, but look, if your friend hasn't updated their blog in 
+two years...they're probably not going to. If the feed is gone, you no longer 
 need it cluttering your life. If a feed has been redirected, you should fix 
-that in your reader! Little things,&amp;nbsp;right?&lt;/p&gt;</summary><category term="trim"></category><category term="opml"></category><category term="open source"></category><category term="google reader"></category><category term="exodus"></category></entry></feed>
+that in your reader! Little things, right?&lt;/p&gt;</summary><category term="trim"></category><category term="opml"></category><category term="open source"></category><category term="google reader"></category><category term="exodus"></category></entry></feed>

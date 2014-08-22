@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/grep" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2008-09-15T23:33:48+02:00</updated><entry><title>Delete Original Images from F-Spot and Rotate Using Exif Information</title><link href="http://michaeljaylissner.com/posts/2008/09/15/delete-original-images-from-f-spot-and-rotate-using-exif-information/" rel="alternate"></link><updated>2008-09-15T23:33:48+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-15:posts/2008/09/15/delete-original-images-from-f-spot-and-rotate-using-exif-information/</id><summary type="html">&lt;p&gt;Over the past couple weeks, my girlfriend and I spent a lot of time working on the photos from our Peru trip. Since we used F-Spot to do our photo editing, when we were done we had a couple of problems when it came to transferring the photos back to her computer which is running&amp;nbsp;Vista. &lt;/p&gt;
-&lt;p&gt;The first problem was that when we rotated images with F-Spot, it simply changed the exif information for the photo, and didn&amp;#8217;t change the pixels of the photo themselves. This was fine when viewed in F-Spot because it is aware of exif information, and displays the photos correctly. However, when we transferred the files to her computer, we discovered that Vista does not take exif information into account on the &lt;span class="caps"&gt;OS&lt;/span&gt; level, nor does Picassa. As a result, we needed to somehow rotate the images that had exif information indicating a non-normal&amp;nbsp;rotation.&lt;/p&gt;
-&lt;p&gt;The second problem we encountered is that in F-Spot when you edit a photo, it creates a second file with the edited photo, and leaves the original unchanged. So, if you edit file dsc00343.jpg, you get a second photo called dsc00343 (Modified).jpg. This is &lt;span class="caps"&gt;OK&lt;/span&gt; when in F-Spot, however, when we went to her computer, it was very hard for her to have &lt;span class="caps"&gt;ONLY&lt;/span&gt; the modified version of those photos, and to delete the originals (since the edited versions are better than the&amp;nbsp;originals).&lt;/p&gt;
-&lt;p&gt;To solve the first problem, I used a couple of tricks. The first thing I did was to make a copy of the photos in case all went&amp;nbsp;south.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/grep" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2008-09-15T23:33:48+02:00</updated><entry><title>Delete Original Images from F-Spot and Rotate Using Exif Information</title><link href="http://michaeljaylissner.com/posts/2008/09/15/delete-original-images-from-f-spot-and-rotate-using-exif-information/" rel="alternate"></link><updated>2008-09-15T23:33:48+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-15:posts/2008/09/15/delete-original-images-from-f-spot-and-rotate-using-exif-information/</id><summary type="html">&lt;p&gt;Over the past couple weeks, my girlfriend and I spent a lot of time working on the photos from our Peru trip. Since we used F-Spot to do our photo editing, when we were done we had a couple of problems when it came to transferring the photos back to her computer which is running Vista. &lt;/p&gt;
+&lt;p&gt;The first problem was that when we rotated images with F-Spot, it simply changed the exif information for the photo, and didn't change the pixels of the photo themselves. This was fine when viewed in F-Spot because it is aware of exif information, and displays the photos correctly. However, when we transferred the files to her computer, we discovered that Vista does not take exif information into account on the OS level, nor does Picassa. As a result, we needed to somehow rotate the images that had exif information indicating a non-normal rotation.&lt;/p&gt;
+&lt;p&gt;The second problem we encountered is that in F-Spot when you edit a photo, it creates a second file with the edited photo, and leaves the original unchanged. So, if you edit file dsc00343.jpg, you get a second photo called dsc00343 (Modified).jpg. This is OK when in F-Spot, however, when we went to her computer, it was very hard for her to have ONLY the modified version of those photos, and to delete the originals (since the edited versions are better than the originals).&lt;/p&gt;
+&lt;p&gt;To solve the first problem, I used a couple of tricks. The first thing I did was to make a copy of the photos in case all went south.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;mkdir backupPhotos
 cp *.jpg *.jpeg backupPhotos
 &lt;span class="nb"&gt;cd &lt;/span&gt;backupPhotos
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Once that is done, we can begin rotating images. For this, we will need the jhead&amp;nbsp;program.&lt;/p&gt;
+&lt;p&gt;Once that is done, we can begin rotating images. For this, we will need the jhead program.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo aptitude install jhead
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Once that&amp;#8217;s installed, we&amp;nbsp;rotate:&lt;/p&gt;
+&lt;p&gt;Once that's installed, we rotate:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;jhead -autorot  *.jpg *.jpeg
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This will rotate all of the files that have unusual information in the exif orientation&amp;nbsp;field. &lt;/p&gt;
-&lt;p&gt;Problem number one&amp;nbsp;solved.&lt;/p&gt;
-&lt;p&gt;For problem two, we will need to isolate all of the photos that have been modified, and delete the originals. To do this, we will capitalize on the fact that the renamed images use the original pictures name in their&amp;nbsp;name. &lt;/p&gt;
-&lt;p&gt;To begin with, we create a list of the photos that have been&amp;nbsp;modified:&lt;/p&gt;
+&lt;p&gt;This will rotate all of the files that have unusual information in the exif orientation field. &lt;/p&gt;
+&lt;p&gt;Problem number one solved.&lt;/p&gt;
+&lt;p&gt;For problem two, we will need to isolate all of the photos that have been modified, and delete the originals. To do this, we will capitalize on the fact that the renamed images use the original pictures name in their name. &lt;/p&gt;
+&lt;p&gt;To begin with, we create a list of the photos that have been modified:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;ls *.jpg *.jpeg | grep -i modified &amp;gt; modifiedImages.txt
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Using awk, we can separate out the original name of the photos. The following 
-commands will convert the &amp;#8216;)&amp;#8217; to &amp;#8216;(&amp;#8216; and will use the two &amp;#8216;(&amp;#8216; as a delimiters, 
+commands will convert the ')' to '(' and will use the two '(' as a delimiters, 
 returning the name of the file as the first field, and the .jpg or .jpeg as 
 the third field. After that, it will remove any spaces from the file name, and 
 will create a new file with a list of the modified pictures. It sounds 
-complicated, but the final result should&amp;nbsp;work:&lt;/p&gt;
+complicated, but the final result should work:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;tr &lt;span class="s1"&gt;&amp;#39;)&amp;#39;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;(&amp;#39;&lt;/span&gt; &amp;amp;lt; modifiedImages.txt &amp;gt; modifiedImages2.txt
 cat modifiedImages2.txt | awk -F&lt;span class="s1"&gt;&amp;#39;(&amp;#39;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;{print $1,$3;}&amp;#39;&lt;/span&gt; | sed &lt;span class="s1"&gt;&amp;#39;s/  //g&amp;#39;&lt;/span&gt; &amp;amp;gt; modifiedImages3.txt
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;You should now have a file called modifiedImages3.txt that contains the name of all of the original photos. To delete the pictures in this list from the collection - permanently -&amp;nbsp;run:&lt;/p&gt;
+&lt;p&gt;You should now have a file called modifiedImages3.txt that contains the name of all of the original photos. To delete the pictures in this list from the collection - permanently - run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;rm &lt;span class="sb"&gt;`&lt;/span&gt;cat modifiedImages3.txt&lt;span class="sb"&gt;`&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;You should now be able to transfer this entire directory of photos to another computer without rotation issues or duplicated&amp;nbsp;photos.&lt;/p&gt;</summary><category term="script"></category><category term="f-spot"></category><category term="awk"></category><category term="grep"></category></entry></feed>
+&lt;p&gt;You should now be able to transfer this entire directory of photos to another computer without rotation issues or duplicated photos.&lt;/p&gt;</summary><category term="script"></category><category term="f-spot"></category><category term="awk"></category><category term="grep"></category></entry></feed>

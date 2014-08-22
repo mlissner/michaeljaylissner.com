@@ -7,7 +7,7 @@
         <meta name="copyright" content="Michael Lissner" />
 
 <meta name="keywords" content="script, project, /etc/hosts, networking, DNS, Tech, " />
-        <title>Location Based <span class="caps">DNS</span> Switching For Internet vs.&nbsp;Intranet - Michael Jay Lissner
+        <title>Location Based DNS Switching For Internet vs. Intranet - Michael Jay Lissner
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="../../../../..">Home</a></li>
-                            <li ><a href="../../../../../pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="../../../../../pages/about.html">About this Site</a></li>
                             <li ><a href="../../../../../categories.html">Categories</a></li>
                             <li ><a href="../../../../../tags.html">Tags</a></li>
                             <li ><a href="../../../../../archives.html">Archives</a></li>
@@ -52,7 +52,7 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="../../../../../posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/"> Location Based <span class="caps">DNS</span> Switching For Internet vs.&nbsp;Intranet  </a></h1>
+    <h1><a href="../../../../../posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/"> Location Based DNS Switching For Internet vs. Intranet  </a></h1>
     </header>
 </div>
 
@@ -63,28 +63,28 @@
 home, I can configure my computer to download my mail over the intranet 
 whenever I am on my home network. By doing this, I can drastically reduce my
 mail download times because it cuts the Internet out of the equation. Rather
-than using <span class="caps">DNS</span> + the Internet to get my mail, I can download it directly 
-from internal <span class="caps">IP</span> address of the&nbsp;server. </p>
+than using DNS + the Internet to get my mail, I can download it directly 
+from internal IP address of the server. </p>
 <p>To understand how to set this up, you have to understand that whenever you 
-use a domain name (like michaeljaylissner.com), your computer does an <span class="caps">IP</span> 
-lookup. First, it looks in /etc/hosts to see if it knows the <span class="caps">IP</span> of the 
-domain locally. If it does, it will use the <span class="caps">IP</span> listed there. If it does 
-not, it will ask your Internet provider what <span class="caps">IP</span> to use, 
+use a domain name (like michaeljaylissner.com), your computer does an IP 
+lookup. First, it looks in /etc/hosts to see if it knows the IP of the 
+domain locally. If it does, it will use the IP listed there. If it does 
+not, it will ask your Internet provider what IP to use, 
 and will use that. Thus, what we want to do is set up the computer so that 
-when we are at home, /etc/hosts provides the internal <span class="caps">IP</span> of our server, 
-and so when we are not at home, it does&nbsp;not.</p>
+when we are at home, /etc/hosts provides the internal IP of our server, 
+and so when we are not at home, it does not.</p>
 <p>When I am at home, I am always on a wireless network called, 
 <code>pizzapuppysantaclaus</code>. Thus, by checking what wireless network I am 
 connected to, I can check if I am at home, and make whatever changes are 
 necessary. Conveniently, whenever you change network connections, 
 you run all of the scripts located in <code>/etc/network/if-up.d/</code>. Thus, 
 we will put a small script in there that checks what wireless network we are
- on, and then changes our /etc/hosts file if&nbsp;necessary.</p>
+ on, and then changes our /etc/hosts file if necessary.</p>
 <p>To set up this configuration, I made three files. The first is the script 
 mentioned above, which needs to be owned by root, 
 and placed in <code>/etc/network/if-up.d</code>. You can name it whatever you want, 
 and by changing <code>pizzapuppysantaclaus</code> to the name of your network, 
-you can fit it to your needs. Here&#8217;s the contents of the&nbsp;script:</p>
+you can fit it to your needs. Here's the contents of the script:</p>
 <div class="highlight"><pre><span class="c">#First, we check if we are connected to pizzapuppysantaclaus</span>
 
 <span class="c">#If grep has a hit, we&#39;re connected, and $? will equal 0, if not, $? will equal 1</span>
@@ -105,7 +105,7 @@ iwconfig 2&gt; /dev/null | grep pizzapuppysantaclaus &gt; /dev/null
 </pre></div>
 
 
-<p>This script simply performs a check of our wireless <span class="caps">ID</span>. If it&#8217;s 
+<p>This script simply performs a check of our wireless ID. If it's 
 <code>pizzapuppysantaclaus</code>, it switches <code>/etc/hostsIntranet</code> for <code>/etc/hosts</code>. If 
 not, it switches <code>/etc/hostsInternet</code> for <code>/etc/hosts</code>.</p>
 <p>The contents of <code>/etc/hostsIntranet</code> are:</p>
@@ -130,15 +130,15 @@ and set its owner to root with execute permission. Create a file called
 <code>/etc/hostsIntranet</code>, that contains your intranet configuration, 
 as shown above. Make a copy of your normal <code>/etc/hosts</code> file called 
 <code>/etc/hostsInternet</code>. </p>
-<p>Once all that&#8217;s done, you should be all set. Any questions, 
-please feel free to&nbsp;comment!</p>
+<p>Once all that's done, you should be all set. Any questions, 
+please feel free to comment!</p>
             <aside>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="../../../../../posts/2009/02/13/thoreau-would-have-found-this-amusing-or-not/" title="Previous: Thoreau Would Have Found This Amusing&#8230;or&nbsp;not">Thoreau Would Have Found This Amusing&#8230;or&nbsp;not</a></li>
+                <li class="previous_article">« <a href="../../../../../posts/2009/02/13/thoreau-would-have-found-this-amusing-or-not/" title="Previous: Thoreau Would Have Found This Amusing...or not">Thoreau Would Have Found This Amusing...or not</a></li>
  
-                <li class="next_article"><a href="../../../../../posts/2009/02/20/snow-camping-in-sequoia/" title="Next: Snow Camping in&nbsp;Sequoia">Snow Camping in&nbsp;Sequoia</a> »</li>
+                <li class="next_article"><a href="../../../../../posts/2009/02/20/snow-camping-in-sequoia/" title="Next: Snow Camping in Sequoia">Snow Camping in Sequoia</a> »</li>
             </ul>
             </nav>
             </aside>

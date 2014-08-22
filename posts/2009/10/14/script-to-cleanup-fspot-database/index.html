@@ -7,7 +7,7 @@
         <meta name="copyright" content="Michael Lissner" />
 
 <meta name="keywords" content="sqlite3, f-spot, database, bash, Tech, " />
-        <title>Script to Clean Up F-Spot&nbsp;Database - Michael Jay Lissner
+        <title>Script to Clean Up F-Spot Database - Michael Jay Lissner
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="../../../../..">Home</a></li>
-                            <li ><a href="../../../../../pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="../../../../../pages/about.html">About this Site</a></li>
                             <li ><a href="../../../../../categories.html">Categories</a></li>
                             <li ><a href="../../../../../tags.html">Tags</a></li>
                             <li ><a href="../../../../../archives.html">Archives</a></li>
@@ -52,16 +52,16 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="../../../../../posts/2009/10/14/script-to-cleanup-fspot-database/"> Script to Clean Up F-Spot&nbsp;Database  </a></h1>
+    <h1><a href="../../../../../posts/2009/10/14/script-to-cleanup-fspot-database/"> Script to Clean Up F-Spot Database  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <p>One of the more popular photo management applications for Linux is f-spot, but unfortunately it has a rather glaring bug. It uses a sqlite3 database internally to track which pictures you&#8217;ve imported into it, what tags they have, etc. However, if you delete, move or rename any of the files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It&#8217;s annoying, and there&#8217;s no particularly easy way to deal with it&#8230;until&nbsp;now.</p>
-<p>The script below (and attached) simply iterates through all of the photos that are in f-spot&#8217;s database, and checks to see if those photos exist on your hard drive. If you run it in demo-mode, it will show you which files look problematic, and if you run it in normal mode, it will delete those database entries so that your database is cleaned up (but not before backing up your database, just in&nbsp;case).</p>
-<p>In my very limited testing, it works very well, any additional feedback or bug reporting is more than&nbsp;welcome. </p>
+            <p>One of the more popular photo management applications for Linux is f-spot, but unfortunately it has a rather glaring bug. It uses a sqlite3 database internally to track which pictures you've imported into it, what tags they have, etc. However, if you delete, move or rename any of the files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It's annoying, and there's no particularly easy way to deal with it...until now.</p>
+<p>The script below (and attached) simply iterates through all of the photos that are in f-spot's database, and checks to see if those photos exist on your hard drive. If you run it in demo-mode, it will show you which files look problematic, and if you run it in normal mode, it will delete those database entries so that your database is cleaned up (but not before backing up your database, just in case).</p>
+<p>In my very limited testing, it works very well, any additional feedback or bug reporting is more than welcome. </p>
 <div class="highlight"><pre><span class="c">#!/bin/bash</span>
 
 <span class="c"># A script to find missing files in the f-spot database, and then delete them.</span>
@@ -205,9 +205,9 @@
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="../../../../../posts/2009/10/09/de-dup-thunderbird-address-book-contacts/" title="Previous: Fix Duplicate Thunderbird Address Book&nbsp;Contacts">Fix Duplicate Thunderbird Address Book&nbsp;Contacts</a></li>
+                <li class="previous_article">« <a href="../../../../../posts/2009/10/09/de-dup-thunderbird-address-book-contacts/" title="Previous: Fix Duplicate Thunderbird Address Book Contacts">Fix Duplicate Thunderbird Address Book Contacts</a></li>
  
-                <li class="next_article"><a href="../../../../../posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/" title="Next: Rid Thyself of Autocomplete=Off in&nbsp;Firefox">Rid Thyself of Autocomplete=Off in&nbsp;Firefox</a> »</li>
+                <li class="next_article"><a href="../../../../../posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/" title="Next: Rid Thyself of Autocomplete=Off in Firefox">Rid Thyself of Autocomplete=Off in Firefox</a> »</li>
             </ul>
             </nav>
             </aside>

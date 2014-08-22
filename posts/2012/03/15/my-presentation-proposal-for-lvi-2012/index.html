@@ -7,7 +7,7 @@
         <meta name="copyright" content="Michael Lissner" />
 
 <meta name="keywords" content="proposal, presentations, me, lvi2012, juriscraper, courtlistener.com, Tech, " />
-        <title>My Presentation Proposal for <span class="caps">LVI</span>&nbsp;2012 - Michael Jay Lissner
+        <title>My Presentation Proposal for LVI 2012 - Michael Jay Lissner
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="../../../../..">Home</a></li>
-                            <li ><a href="../../../../../pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="../../../../../pages/about.html">About this Site</a></li>
                             <li ><a href="../../../../../categories.html">Categories</a></li>
                             <li ><a href="../../../../../tags.html">Tags</a></li>
                             <li ><a href="../../../../../archives.html">Archives</a></li>
@@ -52,7 +52,7 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="../../../../../posts/2012/03/15/my-presentation-proposal-for-lvi-2012/"> My Presentation Proposal for <span class="caps">LVI</span>&nbsp;2012  </a></h1>
+    <h1><a href="../../../../../posts/2012/03/15/my-presentation-proposal-for-lvi-2012/"> My Presentation Proposal for LVI 2012  </a></h1>
     </header>
 </div>
 
@@ -61,65 +61,67 @@
 
             <p>The <a href="http://blog.law.cornell.edu/lvi2012/">Law Via the Internet</a> conference is  celebrating its 20th anniversary
  at Cornell University on October 7-9th. I will be attending, 
- and with any luck, I&#8217;ll be presenting on the topic proposed&nbsp;below.</p>
-<h3 id="wrangling-court-data-on-a-national-level">Wrangling Court Data on a National&nbsp;Level</h3>
+ and with any luck, I'll be presenting on the topic proposed below.</p>
+<h3 id="wrangling-court-data-on-a-national-level">Wrangling Court Data on a National Level</h3>
 <p>Access to case law has recently become easier than ever: By simply visiting 
-a court&#8217;s website it is now possible to find and read thousands of cases 
+a court's website it is now possible to find and read thousands of cases 
 withou  ever leaving your home. At the same time, there are nearly a hundred
  court websites, many of these websites suffer from poor funding or 
  prioritization, and gaining a higher-level view of the law can be 
- challenging. &#8220;<a href="https://bitbucket.org/mlissner/juriscraper/">Juriscraper</a>&#8221; is a new project designed to ease these 
+ challenging. "<a href="https://bitbucket.org/mlissner/juriscraper/">Juriscraper</a>" is a new project designed to ease these 
  problems for all those that wish to collect these court opinions daily. The
-  project is under active development, and we are looking for others to get&nbsp;involved.</p>
+  project is under active development, and we are looking for others to get 
+  involved.</p>
 <p>Juriscraper is a liberally-licensed open source library that can be picked 
 up and used by any organization to scrape the case data from court websites.
  In addition to a simply scraping the websites and extracting metadata from 
- them, Juriscraper has a number of other design&nbsp;goals:   </p>
+ them, Juriscraper has a number of other design goals:   </p>
 <ul>
-<li>Extensibility to support video, oral argument audio, and other media&nbsp;types</li>
-<li>Support for all metadata provided by court&nbsp;websites</li>
-<li>Extensibility to support varied geographies and&nbsp;jurisdictions</li>
-<li>Generalized object-oriented architecture with little or no code&nbsp;repetition</li>
-<li>Standardized coding techniques using the latest libraries and standards (Python, xpath, lxml, requests,&nbsp;chardet)</li>
-<li>Simple installation, configuration, and <span class="caps">API</span></li>
-<li>Friendly and transparent to court&nbsp;websites</li>
+<li>Extensibility to support video, oral argument audio, and other media types</li>
+<li>Support for all metadata provided by court websites</li>
+<li>Extensibility to support varied geographies and jurisdictions</li>
+<li>Generalized object-oriented architecture with little or no code repetition</li>
+<li>Standardized coding techniques using the latest libraries and standards (Python, xpath, lxml, requests, chardet)</li>
+<li>Simple installation, configuration, and API</li>
+<li>Friendly and transparent to court websites</li>
 </ul>
-<p>As well as a number of&nbsp;features:  </p>
+<p>As well as a number of features:  </p>
 <ul>
-<li>Harmonizatio  of metadata (<span class="caps">US</span>, <span class="caps">USA</span>, United States of America, 
+<li>Harmonizatio  of metadata (US, USA, United States of America, 
  etc ? United States; et al, et. al., etc. get eliminated; vs., v, 
- vs ? v.; all dates are Python objects;&nbsp;etc.)</li>
+ vs ? v.; all dates are Python objects; etc.)</li>
 <li>Smart title-casing of case names (several courts provide case names in 
- uppercase&nbsp;only)</li>
-<li>Sanity checking and sorting of metadata values returned by court&nbsp;websites</li>
+ uppercase only)</li>
+<li>Sanity checking and sorting of metadata values returned by court websites</li>
 </ul>
 <p>Once implemented, Juriscraper is part of a two-part system. The second part 
-is the caller, which uses the <span class="caps">API</span>, and which itself solves some interesting&nbsp;questions:  </p>
+is the caller, which uses the API, and which itself solves some interesting 
+questions:  </p>
 <ul>
-<li>How are duplicates detected and&nbsp;avoided? </li>
-<li>How can the impact on court websites be&nbsp;minimized?</li>
-<li>How can mime type detection be completed successfully so that textual contents can be&nbsp;extracted?</li>
-<li>What should we do if it is an image-based <span class="caps">PDF</span>?<ul>
-<li>How should <span class="caps">HTML</span> be&nbsp;tidied?</li>
-<li>How often should we check a court website for new&nbsp;content?  </li>
+<li>How are duplicates detected and avoided? </li>
+<li>How can the impact on court websites be minimized?</li>
+<li>How can mime type detection be completed successfully so that textual contents can be extracted?</li>
+<li>What should we do if it is an image-based PDF?<ul>
+<li>How should HTML be tidied?</li>
+<li>How often should we check a court website for new content?  </li>
 </ul>
 </li>
-<li>What should we do in case of&nbsp;failure?</li>
+<li>What should we do in case of failure?</li>
 </ul>
 <p>Juriscraper is currently deployed by CourtListener.com to scrape all of the 
 Federal Appeals courts, and we are slowly adding additional state courts 
-over the coming&nbsp;weeks. </p>
+over the coming weeks. </p>
 <p>We have been scraping these sites in various ways for several years, 
-and Juriscraper is the culmination of what we&#8217;ve learned. We hope that by 
-presenting our work at <span class="caps">LVI</span> 2012, we will be able to share what we have 
-learned and gain additional collaborators in our&nbsp;work.</p>
+and Juriscraper is the culmination of what we've learned. We hope that by 
+presenting our work at LVI 2012, we will be able to share what we have 
+learned and gain additional collaborators in our work.</p>
             <aside>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="../../../../../posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/" title="Previous: Adding New Fonts to Tesseract 3 <span class="caps">OCR</span>&nbsp;Engine">Adding New Fonts to Tesseract 3 <span class="caps">OCR</span>&nbsp;Engine</a></li>
+                <li class="previous_article">« <a href="../../../../../posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/" title="Previous: Adding New Fonts to Tesseract 3 OCR Engine">Adding New Fonts to Tesseract 3 OCR Engine</a></li>
  
-                <li class="next_article"><a href="../../../../../posts/2012/04/27/further-privacy-protections-at-courtlistener/" title="Next: Further privacy protections at&nbsp;CourtListener">Further privacy protections at&nbsp;CourtListener</a> »</li>
+                <li class="next_article"><a href="../../../../../posts/2012/04/27/further-privacy-protections-at-courtlistener/" title="Next: Further privacy protections at CourtListener">Further privacy protections at CourtListener</a> »</li>
             </ul>
             </nav>
             </aside>

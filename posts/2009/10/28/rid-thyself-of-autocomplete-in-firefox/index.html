@@ -7,7 +7,7 @@
         <meta name="copyright" content="Michael Lissner" />
 
 <meta name="keywords" content="firefox, frustration, autocomplete, Tech, " />
-        <title>Rid Thyself of Autocomplete=Off in&nbsp;Firefox - Michael Jay Lissner
+        <title>Rid Thyself of Autocomplete=Off in Firefox - Michael Jay Lissner
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="../../../../..">Home</a></li>
-                            <li ><a href="../../../../../pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="../../../../../pages/about.html">About this Site</a></li>
                             <li ><a href="../../../../../categories.html">Categories</a></li>
                             <li ><a href="../../../../../tags.html">Tags</a></li>
                             <li ><a href="../../../../../archives.html">Archives</a></li>
@@ -52,32 +52,32 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="../../../../../posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"> Rid Thyself of Autocomplete=Off in&nbsp;Firefox  </a></h1>
+    <h1><a href="../../../../../posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"> Rid Thyself of Autocomplete=Off in Firefox  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <p><strong>Update, 12-15-09:</strong> See <a href="http://michaeljaylissner.com/blog/script-to-rid-thyself-of-autocomplete-in-firefox">this script</a> for an automated way to apply this&nbsp;change.</p>
-<p>If you&#8217;re at all like me, you use a password manager to keep track of all your passwords, and it works great. Most of the time. Except sometimes, it doesn&#8217;t work, and you&#8217;re confused why. Well, more often than not, it&#8217;s because your password manager has been blocked by the web page you&#8217;re&nbsp;viewing.</p>
-<p>If you look closely at the code of the page, somewhere in it, you&#8217;ll probably find something that looks like&nbsp;this:</p>
+            <p><strong>Update, 12-15-09:</strong> See <a href="http://michaeljaylissner.com/blog/script-to-rid-thyself-of-autocomplete-in-firefox">this script</a> for an automated way to apply this change.</p>
+<p>If you're at all like me, you use a password manager to keep track of all your passwords, and it works great. Most of the time. Except sometimes, it doesn't work, and you're confused why. Well, more often than not, it's because your password manager has been blocked by the web page you're viewing.</p>
+<p>If you look closely at the code of the page, somewhere in it, you'll probably find something that looks like this:</p>
 <div class="highlight"><pre><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;button&quot;</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span>  <span class="na">name=</span><span class="s">&quot;login&quot;</span> <span class="na">value=</span><span class="s">&quot;login&quot;</span> <span class="na">autocomplete=</span><span class="s">&quot;off&quot;</span><span class="nt">&gt;</span>
 </pre></div>
 
 
-<p>That autocomplete parameter that you see at the end there? Yeah, that&#8217;s the one that&#8217;s blocking your password manager. So we must block it, so it doesn&#8217;t block&nbsp;us.</p>
-<p>There&#8217;s a couple approaches to this, but probably the best is to disable Firefox&#8217;s ability to interpret autocomplete. The way to do this on Linux is to browse&nbsp;to:</p>
+<p>That autocomplete parameter that you see at the end there? Yeah, that's the one that's blocking your password manager. So we must block it, so it doesn't block us.</p>
+<p>There's a couple approaches to this, but probably the best is to disable Firefox's ability to interpret autocomplete. The way to do this on Linux is to browse to:</p>
 <div class="highlight"><pre><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">xulrunner</span><span class="o">-</span><span class="mf">1.9.1.5</span><span class="o">/</span><span class="n">components</span><span class="o">/</span><span class="n">nsLoginManager</span><span class="p">.</span><span class="n">js</span>
 </pre></div>
 
 
-<p>And in Windows, I believe it&#8217;s&nbsp;at:</p>
+<p>And in Windows, I believe it's at:</p>
 <div class="highlight"><pre><span class="nl">C:</span><span class="err">\</span><span class="n">Program</span> <span class="n">Files</span><span class="err">\</span><span class="n">Mozilla</span> <span class="n">Firefox</span><span class="err">\</span><span class="n">nsLoginManager</span><span class="p">.</span><span class="n">js</span>
 </pre></div>
 
 
-<p>Once you&#8217;ve found that file, open it in an editor, and find the section that has isAutoCompleteDisabled, and make it look like this (so it will always return <span class="caps">FALSE</span>):</p>
+<p>Once you've found that file, open it in an editor, and find the section that has isAutoCompleteDisabled, and make it look like this (so it will always return FALSE):</p>
 <div class="highlight"><pre><span class="cm">/*</span>
 <span class="cm"> * _isAutoCompleteDisabled</span>
 <span class="cm"> *</span>
@@ -94,14 +94,14 @@
 </pre></div>
 
 
-<p>Once that&#8217;s done, save the file, restart Firefox and you&#8217;re all&nbsp;set.</p>
+<p>Once that's done, save the file, restart Firefox and you're all set.</p>
             <aside>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="../../../../../posts/2009/10/14/script-to-cleanup-fspot-database/" title="Previous: Script to Clean Up F-Spot&nbsp;Database">Script to Clean Up F-Spot&nbsp;Database</a></li>
+                <li class="previous_article">« <a href="../../../../../posts/2009/10/14/script-to-cleanup-fspot-database/" title="Previous: Script to Clean Up F-Spot Database">Script to Clean Up F-Spot Database</a></li>
  
-                <li class="next_article"><a href="../../../../../posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" title="Next: Testing Deletion Speed of Online Photo&nbsp;Sites">Testing Deletion Speed of Online Photo&nbsp;Sites</a> »</li>
+                <li class="next_article"><a href="../../../../../posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" title="Next: Testing Deletion Speed of Online Photo Sites">Testing Deletion Speed of Online Photo Sites</a> »</li>
             </ul>
             </nav>
             </aside>

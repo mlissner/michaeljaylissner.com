@@ -7,7 +7,7 @@
         <meta name="copyright" content="Michael Lissner" />
 
 <meta name="keywords" content="ubuntu, Linux, Tech, " />
-        <title>Wake Your Computer by <span class="caps">USB</span> - Michael Jay Lissner
+        <title>Wake Your Computer by USB - Michael Jay Lissner
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="../../../../..">Home</a></li>
-                            <li ><a href="../../../../../pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="../../../../../pages/about.html">About this Site</a></li>
                             <li ><a href="../../../../../categories.html">Categories</a></li>
                             <li ><a href="../../../../../tags.html">Tags</a></li>
                             <li ><a href="../../../../../archives.html">Archives</a></li>
@@ -52,19 +52,19 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="../../../../../posts/2008/07/14/wake-your-computer-by-usb/"> Wake Your Computer by <span class="caps">USB</span>  </a></h1>
+    <h1><a href="../../../../../posts/2008/07/14/wake-your-computer-by-usb/"> Wake Your Computer by USB  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <p>I recently began using my laptop at my desk with a <span class="caps">USB</span> keyboard and mouse, 
-and I thought I would explain how to set up Ubuntu so that <span class="caps">USB</span> peripherals 
+            <p>I recently began using my laptop at my desk with a USB keyboard and mouse, 
+and I thought I would explain how to set up Ubuntu so that USB peripherals 
 will wake up your computer from sleep mode. This is convenient if you have 
-your laptop set up such that the lid is closed and&nbsp;inaccessible.</p>
+your laptop set up such that the lid is closed and inaccessible.</p>
 <p>In Ubuntu, the way to set this up is to edit the file located at 
-<code>/proc/acpi/wakeup</code>. To see the current contents of this file do&nbsp;this:</p>
+<code>/proc/acpi/wakeup</code>. To see the current contents of this file do this:</p>
 <div class="highlight"><pre>% cat /proc/acpi/wakeup
 Device  S-state   Status   Sysfs node
 P0P2      S4     disabled  
@@ -86,46 +86,47 @@ SLPB      S4    *enabled
 </pre></div>
 
 
-<p>This shows you a number of devices, most of which I don&#8217;t claim to 
-understand. The ones to notice are the <span class="caps">USB</span> ones, which you will see are 
-disabled by&nbsp;default.</p>
-<p>Once these are toggled on, your computer will wake up from sleep when <span class="caps">USB</span> 
-peripherals are used. To toggle one of these on, as root,&nbsp;run:</p>
+<p>This shows you a number of devices, most of which I don't claim to 
+understand. The ones to notice are the USB ones, which you will see are 
+disabled by default.</p>
+<p>Once these are toggled on, your computer will wake up from sleep when USB 
+peripherals are used. To toggle one of these on, as root, run:</p>
 <div class="highlight"><pre><span class="nb">echo</span> <span class="s2">&quot;USB0&quot;</span> &gt; /proc/acpi/wakeup
 </pre></div>
 
 
-<p>This will toggle <span class="caps">USB0</span> from disabled to enabled. To check this, 
-run <code>cat /proc/acpi/wakeup</code> again. You should see that it&#8217;s enabled, 
-and you should be able to test this by suspending your&nbsp;computer.</p>
-<p>This will set up your computer to wake up from <span class="caps">USB</span>&#8230;for now. To make it 
+<p>This will toggle USB0 from disabled to enabled. To check this, 
+run <code>cat /proc/acpi/wakeup</code> again. You should see that it's enabled, 
+and you should be able to test this by suspending your computer.</p>
+<p>This will set up your computer to wake up from USB...for now. To make it 
 work after your computer has been restarted, you will need to write a short 
-init script named wake.sh with the following&nbsp;contents:</p>
+init script named wake.sh with the following contents:</p>
 <div class="highlight"><pre><span class="c">#!/bin/bash</span>
 <span class="nb">echo</span> <span class="s2">&quot;USB0&quot;</span> &gt; /proc/acpi/wakeup
 </pre></div>
 
 
-<p>Save this file to <code>/etc/init.d</code>, and make it executable by&nbsp;running:</p>
+<p>Save this file to <code>/etc/init.d</code>, and make it executable by running:</p>
 <div class="highlight"><pre>chmod +x wake.sh
 </pre></div>
 
 
 <p>Finally, once this file is in <code>/etc/init.d</code>, and is executable, 
-as root&nbsp;run:</p>
+as root run:</p>
 <div class="highlight"><pre>update-rc.d wake.sh defaults
 </pre></div>
 
 
-<p>That will make init know about the file, and run it at startup. Happy&nbsp;awakenings!</p>
+<p>That will make init know about the file, and run it at startup. Happy 
+awakenings!</p>
 <p><strong>Source:</strong> <a href="http://ubuntuforums.org/showthread.php?t=711747" target="_blank">http://ubuntuforums.org/showthread.php?t=711747</a></p>
             <aside>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="../../../../../posts/2008/07/13/the-facts-are-in-ars-technica-rocks/" title="Previous: The Facts are In - Ars Technica&nbsp;Rocks">The Facts are In - Ars Technica&nbsp;Rocks</a></li>
+                <li class="previous_article">« <a href="../../../../../posts/2008/07/13/the-facts-are-in-ars-technica-rocks/" title="Previous: The Facts are In - Ars Technica Rocks">The Facts are In - Ars Technica Rocks</a></li>
  
-                <li class="next_article"><a href="../../../../../posts/2008/07/17/my-linux-story/" title="Next: My Linux&nbsp;Story">My Linux&nbsp;Story</a> »</li>
+                <li class="next_article"><a href="../../../../../posts/2008/07/17/my-linux-story/" title="Next: My Linux Story">My Linux Story</a> »</li>
             </ul>
             </nav>
             </aside>

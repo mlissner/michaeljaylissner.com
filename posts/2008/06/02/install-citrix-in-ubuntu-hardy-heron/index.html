@@ -7,7 +7,7 @@
         <meta name="copyright" content="Michael Lissner" />
 
 <meta name="keywords" content="Linux, ubuntu, citrix, Tech, " />
-        <title>Install Citrix In Ubuntu Hardy&nbsp;Heron - Michael Jay Lissner
+        <title>Install Citrix In Ubuntu Hardy Heron - Michael Jay Lissner
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="../../../../..">Home</a></li>
-                            <li ><a href="../../../../../pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="../../../../../pages/about.html">About this Site</a></li>
                             <li ><a href="../../../../../categories.html">Categories</a></li>
                             <li ><a href="../../../../../tags.html">Tags</a></li>
                             <li ><a href="../../../../../archives.html">Archives</a></li>
@@ -52,7 +52,7 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="../../../../../posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/"> Install Citrix In Ubuntu Hardy&nbsp;Heron  </a></h1>
+    <h1><a href="../../../../../posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/"> Install Citrix In Ubuntu Hardy Heron  </a></h1>
     </header>
 </div>
 
@@ -63,39 +63,40 @@
 my computer. It was frustrating, and I put hours into debugging it, 
 and trying to get it to work. In the end, I took a circuitous route, 
 installing VirtualBox in Ubuntu, Windows in VirtualBox, Firefox in Windows,
-and finally Citrix in&nbsp;Firefox.</p>
+and finally Citrix in Firefox.</p>
 <p>Last week, I took another stab at getting this done, and for some reason it
 went very smoothly. To install Citrix in Ubuntu Hardy Heron, begin by 
-<a href="http://www.citrix.com/English/ss/downloads/details.asp?downloadId=3323&amp;productId=186&amp;c1=ost1349860#top">downloading</a> the Citrix client as a&nbsp;.tar.gz.</p>
-<p>Next, unpack the install file using the terminal by&nbsp;running: </p>
+<a href="http://www.citrix.com/English/ss/downloads/details.asp?downloadId=3323&amp;productId=186&amp;c1=ost1349860#top">downloading</a> the Citrix client as a .tar.gz.</p>
+<p>Next, unpack the install file using the terminal by running: </p>
 <div class="highlight"><pre>sudo tar xvfz en.linuxx86.tar.gz
 </pre></div>
 
 
-<p>Change into the Citrix directory, and&nbsp;run </p>
+<p>Change into the Citrix directory, and run </p>
 <div class="highlight"><pre>sudo ./setupwfc
 </pre></div>
 
 
 <p>This will begin the install script. As it proceeds, 
-simply allow the default settings, and you should be&nbsp;good.</p>
+simply allow the default settings, and you should be good.</p>
 <p>The final step is to install the root certificates. To do this, 
 attempt to start a Citrix program, and it may fail, 
 reporting an error message. In the message, it will tell you what 
 certificates it needs installed. Go to <a href="https://www.geotrust.com/resources/root_certificates/index.asp">this website</a>, and download the 
 certificates the error message informed you that you need by right clicking 
-their download links, and selecting &#8220;Save as&#8230;&#8221; Once those are downloaded,
-rename their extension so they are .crt files, and move them&nbsp;to </p>
-<p>:::bash&nbsp;/usr/lib/ICAClient/keystore/cacerts</p>
-<p>Restart Firefox, and you should be&nbsp;good.</p>
-<p>Thanks to <a href="http://skarh.wordpress.com/2008/05/20/how-to-citrix-on-ubuntu/">Skarh</a> for this how&nbsp;to.</p>
+their download links, and selecting "Save as..." Once those are downloaded,
+rename their extension so they are .crt files, and move them to </p>
+<p>:::bash
+ /usr/lib/ICAClient/keystore/cacerts</p>
+<p>Restart Firefox, and you should be good.</p>
+<p>Thanks to <a href="http://skarh.wordpress.com/2008/05/20/how-to-citrix-on-ubuntu/">Skarh</a> for this how to.</p>
             <aside>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="../../../../../posts/2008/05/22/create-a-list-of-formulas-from-excel-files/" title="Previous: Create a List of Formulas from Excel&nbsp;Files">Create a List of Formulas from Excel&nbsp;Files</a></li>
+                <li class="previous_article">« <a href="../../../../../posts/2008/05/22/create-a-list-of-formulas-from-excel-files/" title="Previous: Create a List of Formulas from Excel Files">Create a List of Formulas from Excel Files</a></li>
  
-                <li class="next_article"><a href="../../../../../posts/2008/06/03/fiji-tries-fails-to-be-smart/" title="Next: Fiji Water Tries, Fails to Be&nbsp;Smart">Fiji Water Tries, Fails to Be&nbsp;Smart</a> »</li>
+                <li class="next_article"><a href="../../../../../posts/2008/06/03/fiji-tries-fails-to-be-smart/" title="Next: Fiji Water Tries, Fails to Be Smart">Fiji Water Tries, Fails to Be Smart</a> »</li>
             </ul>
             </nav>
             </aside>

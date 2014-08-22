@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/ubuntu" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-07-22T14:42:37+02:00</updated><entry><title>Gnome-Do is Pretty Damned Impressive</title><link href="http://michaeljaylissner.com/posts/2009/07/22/gnome-do-is-pretty-damned-impressive/" rel="alternate"></link><updated>2009-07-22T14:42:37+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-22:posts/2009/07/22/gnome-do-is-pretty-damned-impressive/</id><summary type="html">&lt;p&gt;If you&amp;#8217;ve talked to me about Ubuntu in the past year or so, I probably mentioned to you that one of my favorite things about using it is a program called &lt;a href="http://do.davebsd.com/" target="_blank"&gt;gnome-do&lt;/a&gt;. It&amp;#8217;s a little hard to explain gnome-do without an example, so I&amp;#8217;ll explain how I just made the following tweet, sharing a picture from my garden: &lt;blockquote&gt;Artichoke has finally flowered. It&amp;#8217;s quite something: &lt;a href="http://tinyurl.com/mn7pjp" target="_blank"&gt;http://tinyurl.com/mn7pjp&lt;/a&gt;&lt;/blockquote&gt;To make this tweet, I needed to find the picture on my computer, upload it to the web, create a tinyurl of the picture&amp;#8217;s location, and then tweet the &lt;span class="caps"&gt;URL&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;Traditionally, the process would be the&amp;nbsp;following:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/ubuntu" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-07-22T14:42:37+02:00</updated><entry><title>Gnome-Do is Pretty Damned Impressive</title><link href="http://michaeljaylissner.com/posts/2009/07/22/gnome-do-is-pretty-damned-impressive/" rel="alternate"></link><updated>2009-07-22T14:42:37+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-22:posts/2009/07/22/gnome-do-is-pretty-damned-impressive/</id><summary type="html">&lt;p&gt;If you've talked to me about Ubuntu in the past year or so, I probably mentioned to you that one of my favorite things about using it is a program called &lt;a href="http://do.davebsd.com/" target="_blank"&gt;gnome-do&lt;/a&gt;. It's a little hard to explain gnome-do without an example, so I'll explain how I just made the following tweet, sharing a picture from my garden: &lt;blockquote&gt;Artichoke has finally flowered. It's quite something: &lt;a href="http://tinyurl.com/mn7pjp" target="_blank"&gt;http://tinyurl.com/mn7pjp&lt;/a&gt;&lt;/blockquote&gt;To make this tweet, I needed to find the picture on my computer, upload it to the web, create a tinyurl of the picture's location, and then tweet the URL.&lt;/p&gt;
+&lt;p&gt;Traditionally, the process would be the following:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Open a web&amp;nbsp;browser&lt;/li&gt;
-&lt;li&gt;Go to a photo sharing&amp;nbsp;site&lt;/li&gt;
-&lt;li&gt;Find the upload button, and press&amp;nbsp;it&lt;/li&gt;
-&lt;li&gt;Browse to the photo on your&amp;nbsp;computer&lt;/li&gt;
-&lt;li&gt;Upload the&amp;nbsp;photo&lt;/li&gt;
-&lt;li&gt;Right click the uploaded photo, and select &amp;#8220;Copy Link&amp;nbsp;Location&amp;#8221;&lt;/li&gt;
-&lt;li&gt;Go to TinyURL.com, and shorten the &lt;span class="caps"&gt;URL&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Copy the new &lt;span class="caps"&gt;URL&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Go to&amp;nbsp;twitter&lt;/li&gt;
+&lt;li&gt;Open a web browser&lt;/li&gt;
+&lt;li&gt;Go to a photo sharing site&lt;/li&gt;
+&lt;li&gt;Find the upload button, and press it&lt;/li&gt;
+&lt;li&gt;Browse to the photo on your computer&lt;/li&gt;
+&lt;li&gt;Upload the photo&lt;/li&gt;
+&lt;li&gt;Right click the uploaded photo, and select "Copy Link Location"&lt;/li&gt;
+&lt;li&gt;Go to TinyURL.com, and shorten the URL&lt;/li&gt;
+&lt;li&gt;Copy the new URL&lt;/li&gt;
+&lt;li&gt;Go to twitter&lt;/li&gt;
 &lt;li&gt;Log in if necessary, and write your tweet
-All in all a rather arduous process. Using gnome-do, the process is rather simpler. Gnome-do operates by allowing you to choose an object (such as a picture, a contact in your address book, an album, etc.), and then perform an action on it (such as upload the picture, write the contact an email, play the selected album,&amp;nbsp;etc.) &lt;/li&gt;
+All in all a rather arduous process. Using gnome-do, the process is rather simpler. Gnome-do operates by allowing you to choose an object (such as a picture, a contact in your address book, an album, etc.), and then perform an action on it (such as upload the picture, write the contact an email, play the selected album, etc.) &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In this case, what I had to do&amp;nbsp;was:&lt;/p&gt;
+&lt;p&gt;In this case, what I had to do was:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Summon gnome-do by pressing Super +&amp;nbsp;Space&lt;/li&gt;
-&lt;li&gt;Type the first few letters in the name of the&amp;nbsp;picture&lt;/li&gt;
-&lt;li&gt;Press tab. Type &amp;#8220;u&amp;#8221; for &amp;#8220;upload,&amp;#8221; and press enter. This uploads the picture, and tells me its &lt;span class="caps"&gt;URL&lt;/span&gt; at&amp;nbsp;imageshack.com.&lt;/li&gt;
-&lt;li&gt;Press tab, type &amp;#8220;t&amp;#8221; to &amp;#8220;make a tinyurl&amp;#8221; of the picture&amp;#8217;s location at&amp;nbsp;imageshack.&lt;/li&gt;
-&lt;li&gt;Type tab, then &amp;#8220;copy&amp;#8221; to copy the tinyurl to the&amp;nbsp;clipboard.&lt;/li&gt;
-&lt;li&gt;Summon gnome-do a second time, and type out my twitter message, paste in the tinyurl, and press tab, then &amp;#8220;post to&amp;nbsp;twitter&amp;#8221;.&lt;/li&gt;
+&lt;li&gt;Summon gnome-do by pressing Super + Space&lt;/li&gt;
+&lt;li&gt;Type the first few letters in the name of the picture&lt;/li&gt;
+&lt;li&gt;Press tab. Type "u" for "upload," and press enter. This uploads the picture, and tells me its URL at imageshack.com.&lt;/li&gt;
+&lt;li&gt;Press tab, type "t" to "make a tinyurl" of the picture's location at imageshack.&lt;/li&gt;
+&lt;li&gt;Type tab, then "copy" to copy the tinyurl to the clipboard.&lt;/li&gt;
+&lt;li&gt;Summon gnome-do a second time, and type out my twitter message, paste in the tinyurl, and press tab, then "post to twitter".&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;And that&amp;#8217;s it. It sounds more complicated than it is. In reality, to make the above tweet, I pressed the following:&lt;blockquote&gt;Super + Space, Arti, u, enter. This uploaded the photo to imageshack.com, and returned it&amp;#8217;s location.
+&lt;p&gt;And that's it. It sounds more complicated than it is. In reality, to make the above tweet, I pressed the following:&lt;blockquote&gt;Super + Space, Arti, u, enter. This uploaded the photo to imageshack.com, and returned it's location.
 Tab, t, enter. This created a tinyurl of the location.
 Tab, c, enter. This copied the tinyurl to the clipboard.
-Twitter message, &lt;span class="caps"&gt;CTRL&lt;/span&gt; + V, tab, t. This posted my twitter message.&lt;/blockquote&gt;&lt;/p&gt;
-&lt;p&gt;Clearly, there is a bit of a learning curve, and some configuration that you have to set up so it knows your usernames, but once it is set, it makes such complicated posts much easier to complete. And I should mention, this is only the beginning of what it can&amp;nbsp;do.&lt;/p&gt;</summary><category term="ubuntu"></category><category term="gnome-do"></category><category term="productivity"></category></entry><entry><title>Change the Default Print to File To PDF in Ubuntu Hardy Heron</title><link href="http://michaeljaylissner.com/posts/2008/10/19/change-the-default-print-to-file-to-pdf-in-ubuntu-hardy/" rel="alternate"></link><updated>2008-10-19T23:13:25+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-10-19:posts/2008/10/19/change-the-default-print-to-file-to-pdf-in-ubuntu-hardy/</id><summary type="html">&lt;p&gt;In Ubuntu Hardy Heron there is a new printer driver that will print a webpage as a &lt;span class="caps"&gt;PDF&lt;/span&gt; file. It&amp;#8217;s pretty useful, but unfortunately it&amp;#8217;s set to print the page as post script format by default. While I appreciate post script, it&amp;#8217;s not that compatible for other people, so I usually want to make &lt;span class="caps"&gt;PDF&lt;/span&gt; documents&amp;nbsp;instead.&lt;/p&gt;
-&lt;p&gt;To change that setting to &lt;span class="caps"&gt;PDF&lt;/span&gt;, navigate in Firefox to about:config, and search for the setting called &amp;#8220;print.print_to_filename&amp;#8221;. Double click on it, and change the value to a more useful name than mozilla.ps, and change the extension to .pdf. I changed the setting to &amp;#8220;Printed&amp;nbsp;Page.pdf&amp;#8221;&lt;/p&gt;
-&lt;p&gt;From there you should be all&amp;nbsp;set.&lt;/p&gt;
-&lt;p&gt;Now, if anybody can figure out how to make the title of the webpage populate for the name of the saved file, we&amp;#8217;ll be all&amp;nbsp;set.&lt;/p&gt;</summary><category term="ubuntu"></category><category term="print"></category><category term="pdf"></category></entry><entry><title>Wake Your Computer by USB</title><link href="http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/" rel="alternate"></link><updated>2008-07-14T20:27:57+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-07-14:posts/2008/07/14/wake-your-computer-by-usb/</id><summary type="html">&lt;p&gt;I recently began using my laptop at my desk with a &lt;span class="caps"&gt;USB&lt;/span&gt; keyboard and mouse, 
-and I thought I would explain how to set up Ubuntu so that &lt;span class="caps"&gt;USB&lt;/span&gt; peripherals 
+Twitter message, CTRL + V, tab, t. This posted my twitter message.&lt;/blockquote&gt;&lt;/p&gt;
+&lt;p&gt;Clearly, there is a bit of a learning curve, and some configuration that you have to set up so it knows your usernames, but once it is set, it makes such complicated posts much easier to complete. And I should mention, this is only the beginning of what it can do.&lt;/p&gt;</summary><category term="ubuntu"></category><category term="gnome-do"></category><category term="productivity"></category></entry><entry><title>Change the Default Print to File To PDF in Ubuntu Hardy Heron</title><link href="http://michaeljaylissner.com/posts/2008/10/19/change-the-default-print-to-file-to-pdf-in-ubuntu-hardy/" rel="alternate"></link><updated>2008-10-19T23:13:25+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-10-19:posts/2008/10/19/change-the-default-print-to-file-to-pdf-in-ubuntu-hardy/</id><summary type="html">&lt;p&gt;In Ubuntu Hardy Heron there is a new printer driver that will print a webpage as a PDF file. It's pretty useful, but unfortunately it's set to print the page as post script format by default. While I appreciate post script, it's not that compatible for other people, so I usually want to make PDF documents instead.&lt;/p&gt;
+&lt;p&gt;To change that setting to PDF, navigate in Firefox to about:config, and search for the setting called "print.print_to_filename". Double click on it, and change the value to a more useful name than mozilla.ps, and change the extension to .pdf. I changed the setting to "Printed Page.pdf"&lt;/p&gt;
+&lt;p&gt;From there you should be all set.&lt;/p&gt;
+&lt;p&gt;Now, if anybody can figure out how to make the title of the webpage populate for the name of the saved file, we'll be all set.&lt;/p&gt;</summary><category term="ubuntu"></category><category term="print"></category><category term="pdf"></category></entry><entry><title>Wake Your Computer by USB</title><link href="http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/" rel="alternate"></link><updated>2008-07-14T20:27:57+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-07-14:posts/2008/07/14/wake-your-computer-by-usb/</id><summary type="html">&lt;p&gt;I recently began using my laptop at my desk with a USB keyboard and mouse, 
+and I thought I would explain how to set up Ubuntu so that USB peripherals 
 will wake up your computer from sleep mode. This is convenient if you have 
-your laptop set up such that the lid is closed and&amp;nbsp;inaccessible.&lt;/p&gt;
+your laptop set up such that the lid is closed and inaccessible.&lt;/p&gt;
 &lt;p&gt;In Ubuntu, the way to set this up is to edit the file located at 
-&lt;code&gt;/proc/acpi/wakeup&lt;/code&gt;. To see the current contents of this file do&amp;nbsp;this:&lt;/p&gt;
+&lt;code&gt;/proc/acpi/wakeup&lt;/code&gt;. To see the current contents of this file do this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;% cat /proc/acpi/wakeup
 Device  S-state   Status   Sysfs node
 P0P2      S4     disabled  
@@ -57,77 +57,79 @@ SLPB      S4    *enabled
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This shows you a number of devices, most of which I don&amp;#8217;t claim to 
-understand. The ones to notice are the &lt;span class="caps"&gt;USB&lt;/span&gt; ones, which you will see are 
-disabled by&amp;nbsp;default.&lt;/p&gt;
-&lt;p&gt;Once these are toggled on, your computer will wake up from sleep when &lt;span class="caps"&gt;USB&lt;/span&gt; 
-peripherals are used. To toggle one of these on, as root,&amp;nbsp;run:&lt;/p&gt;
+&lt;p&gt;This shows you a number of devices, most of which I don't claim to 
+understand. The ones to notice are the USB ones, which you will see are 
+disabled by default.&lt;/p&gt;
+&lt;p&gt;Once these are toggled on, your computer will wake up from sleep when USB 
+peripherals are used. To toggle one of these on, as root, run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;USB0&amp;quot;&lt;/span&gt; &amp;gt; /proc/acpi/wakeup
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This will toggle &lt;span class="caps"&gt;USB0&lt;/span&gt; from disabled to enabled. To check this, 
-run &lt;code&gt;cat /proc/acpi/wakeup&lt;/code&gt; again. You should see that it&amp;#8217;s enabled, 
-and you should be able to test this by suspending your&amp;nbsp;computer.&lt;/p&gt;
-&lt;p&gt;This will set up your computer to wake up from &lt;span class="caps"&gt;USB&lt;/span&gt;&amp;#8230;for now. To make it 
+&lt;p&gt;This will toggle USB0 from disabled to enabled. To check this, 
+run &lt;code&gt;cat /proc/acpi/wakeup&lt;/code&gt; again. You should see that it's enabled, 
+and you should be able to test this by suspending your computer.&lt;/p&gt;
+&lt;p&gt;This will set up your computer to wake up from USB...for now. To make it 
 work after your computer has been restarted, you will need to write a short 
-init script named wake.sh with the following&amp;nbsp;contents:&lt;/p&gt;
+init script named wake.sh with the following contents:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;USB0&amp;quot;&lt;/span&gt; &amp;gt; /proc/acpi/wakeup
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Save this file to &lt;code&gt;/etc/init.d&lt;/code&gt;, and make it executable by&amp;nbsp;running:&lt;/p&gt;
+&lt;p&gt;Save this file to &lt;code&gt;/etc/init.d&lt;/code&gt;, and make it executable by running:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;chmod +x wake.sh
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Finally, once this file is in &lt;code&gt;/etc/init.d&lt;/code&gt;, and is executable, 
-as root&amp;nbsp;run:&lt;/p&gt;
+as root run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;update-rc.d wake.sh defaults
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;That will make init know about the file, and run it at startup. Happy&amp;nbsp;awakenings!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href="http://ubuntuforums.org/showthread.php?t=711747" target="_blank"&gt;http://ubuntuforums.org/showthread.php?t=711747&lt;/a&gt;&lt;/p&gt;</summary><category term="ubuntu"></category><category term="Linux"></category></entry><entry><title>Install Citrix In Ubuntu Hardy Heron</title><link href="http://michaeljaylissner.com/posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/" rel="alternate"></link><updated>2008-06-02T09:44:53+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-06-02:posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/</id><summary type="html">&lt;p&gt;For a while there, I was struggling to get the Citrix client installed on 
+&lt;p&gt;That will make init know about the file, and run it at startup. Happy 
+awakenings!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href="http://ubuntuforums.org/showthread.php?t=711747" target="_blank"&gt;http://ubuntuforums.org/showthread.php?t=711747&lt;/a&gt;&lt;/p&gt;</summary><category term="ubuntu"></category><category term="Linux"></category></entry><entry><title>Install Citrix In Ubuntu Hardy Heron</title><link href="http://michaeljaylissner.com/posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/" rel="alternate"></link><updated>2008-06-02T09:44:53+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-06-02:posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/</id><summary type="html">&lt;p&gt;For a while there, I was struggling to get the Citrix client installed on 
 my computer. It was frustrating, and I put hours into debugging it, 
 and trying to get it to work. In the end, I took a circuitous route, 
 installing VirtualBox in Ubuntu, Windows in VirtualBox, Firefox in Windows,
-and finally Citrix in&amp;nbsp;Firefox.&lt;/p&gt;
+and finally Citrix in Firefox.&lt;/p&gt;
 &lt;p&gt;Last week, I took another stab at getting this done, and for some reason it
 went very smoothly. To install Citrix in Ubuntu Hardy Heron, begin by 
-&lt;a href="http://www.citrix.com/English/ss/downloads/details.asp?downloadId=3323&amp;amp;productId=186&amp;amp;c1=ost1349860#top"&gt;downloading&lt;/a&gt; the Citrix client as a&amp;nbsp;.tar.gz.&lt;/p&gt;
-&lt;p&gt;Next, unpack the install file using the terminal by&amp;nbsp;running: &lt;/p&gt;
+&lt;a href="http://www.citrix.com/English/ss/downloads/details.asp?downloadId=3323&amp;amp;productId=186&amp;amp;c1=ost1349860#top"&gt;downloading&lt;/a&gt; the Citrix client as a .tar.gz.&lt;/p&gt;
+&lt;p&gt;Next, unpack the install file using the terminal by running: &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo tar xvfz en.linuxx86.tar.gz
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Change into the Citrix directory, and&amp;nbsp;run &lt;/p&gt;
+&lt;p&gt;Change into the Citrix directory, and run &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo ./setupwfc
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;This will begin the install script. As it proceeds, 
-simply allow the default settings, and you should be&amp;nbsp;good.&lt;/p&gt;
+simply allow the default settings, and you should be good.&lt;/p&gt;
 &lt;p&gt;The final step is to install the root certificates. To do this, 
 attempt to start a Citrix program, and it may fail, 
 reporting an error message. In the message, it will tell you what 
 certificates it needs installed. Go to &lt;a href="https://www.geotrust.com/resources/root_certificates/index.asp"&gt;this website&lt;/a&gt;, and download the 
 certificates the error message informed you that you need by right clicking 
-their download links, and selecting &amp;#8220;Save as&amp;#8230;&amp;#8221; Once those are downloaded,
-rename their extension so they are .crt files, and move them&amp;nbsp;to &lt;/p&gt;
-&lt;p&gt;:::bash&amp;nbsp;/usr/lib/ICAClient/keystore/cacerts&lt;/p&gt;
-&lt;p&gt;Restart Firefox, and you should be&amp;nbsp;good.&lt;/p&gt;
-&lt;p&gt;Thanks to &lt;a href="http://skarh.wordpress.com/2008/05/20/how-to-citrix-on-ubuntu/"&gt;Skarh&lt;/a&gt; for this how&amp;nbsp;to.&lt;/p&gt;</summary><category term="Linux"></category><category term="ubuntu"></category><category term="citrix"></category></entry><entry><title>Remap Caps Lock as Backspace in Windows and Linux</title><link href="http://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/" rel="alternate"></link><updated>2008-04-29T21:33:41+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-29:posts/2008/04/29/remap-caps-lock-as-backspace/</id><summary type="html">&lt;p&gt;A while back my wrist started hurting from reaching for the cursed backspace key. I was making too many mistakes. My solution was to remap the caps lock key on all the computers I use to act as an additional backspace key. How did I do it? Well, I&amp;#8217;m glad you asked. I&amp;#8217;ll tell&amp;nbsp;you.&lt;/p&gt;
+their download links, and selecting "Save as..." Once those are downloaded,
+rename their extension so they are .crt files, and move them to &lt;/p&gt;
+&lt;p&gt;:::bash
+ /usr/lib/ICAClient/keystore/cacerts&lt;/p&gt;
+&lt;p&gt;Restart Firefox, and you should be good.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href="http://skarh.wordpress.com/2008/05/20/how-to-citrix-on-ubuntu/"&gt;Skarh&lt;/a&gt; for this how to.&lt;/p&gt;</summary><category term="Linux"></category><category term="ubuntu"></category><category term="citrix"></category></entry><entry><title>Remap Caps Lock as Backspace in Windows and Linux</title><link href="http://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/" rel="alternate"></link><updated>2008-04-29T21:33:41+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-29:posts/2008/04/29/remap-caps-lock-as-backspace/</id><summary type="html">&lt;p&gt;A while back my wrist started hurting from reaching for the cursed backspace key. I was making too many mistakes. My solution was to remap the caps lock key on all the computers I use to act as an additional backspace key. How did I do it? Well, I'm glad you asked. I'll tell you.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;In Windows&lt;/strong&gt;
-&lt;span class="caps"&gt;EDIT&lt;/span&gt;: I noticed that the picture doesn&amp;#8217;t have all the detail you need. The easier way to do this, is to download the registry key attached to this post, and to right click it, selecting merge. After that, restart the computer, and you should be all&amp;nbsp;set.&lt;/p&gt;
-&lt;p&gt;To remap the caps lock to function as a backspace key in Windows, one must edit the registry keys. To do that, go to Start &amp;gt; Run&amp;#8230;, and type in regedit. In the editor that opens up, navigate to the key shown in the picture below, and create a new key named Scancode Map of the type REG_BINARY. Give it the value shown in the picture, restart, and you&amp;#8217;re set. If things get wacky, delete the key and try&amp;nbsp;again.&lt;/p&gt;
+EDIT: I noticed that the picture doesn't have all the detail you need. The easier way to do this, is to download the registry key attached to this post, and to right click it, selecting merge. After that, restart the computer, and you should be all set.&lt;/p&gt;
+&lt;p&gt;To remap the caps lock to function as a backspace key in Windows, one must edit the registry keys. To do that, go to Start &amp;gt; Run..., and type in regedit. In the editor that opens up, navigate to the key shown in the picture below, and create a new key named Scancode Map of the type REG_BINARY. Give it the value shown in the picture, restart, and you're set. If things get wacky, delete the key and try again.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/files/images/Windows%20Registry%20Remap%20Screenshot.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;In Linux&lt;/strong&gt;
 I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
 by opening a terminal, and running the xev program. Once that is running, 
 press the caps lock key, and it will tell you the numerical value of that key. 
-For example, my output from that command looks like&amp;nbsp;this:&lt;/p&gt;
+For example, my output from that command looks like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;mlissner@opal2% xev
 KeyPress event, serial 28, synthetic NO, window 0x4800001,
 root 0x59, subw 0x0, &lt;span class="nb"&gt;time &lt;/span&gt;2775892, &lt;span class="o"&gt;(&lt;/span&gt;373,636&lt;span class="o"&gt;)&lt;/span&gt;, root:&lt;span class="o"&gt;(&lt;/span&gt;376,685&lt;span class="o"&gt;)&lt;/span&gt;,
@@ -141,7 +143,7 @@ XFilterEvent returns: False
 
 &lt;p&gt;In there, you will see the keycode for the capslock key, in my case, number 
 66. Using that, create a file in your home directory called .Xmodmap, and put 
-the following in&amp;nbsp;it:&lt;/p&gt;
+the following in it:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;!&lt;/span&gt;
 &lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="n"&gt;Make&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;caps&lt;/span&gt; &lt;span class="n"&gt;lock&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;backspace&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt;
 &lt;span class="o"&gt;!&lt;/span&gt;
@@ -152,17 +154,17 @@ the following in&amp;nbsp;it:&lt;/p&gt;
 
 &lt;p&gt;Once that is done, the next time you log in, your caps lock will function as a 
 backspace. The only remaining problem is that it still does not have the 
-auto-repeat function that backspace should have. To fix that,&amp;nbsp;run:&lt;/p&gt;
+auto-repeat function that backspace should have. To fix that, run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;xset r 66
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;That will make things work properly, but you need to run that every time you 
-log in, or else it won&amp;#8217;t work properly. To fix that&amp;nbsp;run:&lt;/p&gt;
+log in, or else it won't work properly. To fix that run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo gedit /etc/X11/Xsession.d/50x11-common_determine-startup
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;And add xset r 66 to the&amp;nbsp;bottom.&lt;/p&gt;
-&lt;p&gt;That should do&amp;nbsp;it.&lt;/p&gt;
-&lt;p&gt;Source:&amp;nbsp;http://ubuntuforums.org/showthread.php?t=369402&lt;/p&gt;</summary><category term="windows"></category><category term="ubuntu"></category><category term="microsoft"></category><category term="Linux"></category></entry></feed>
+&lt;p&gt;And add xset r 66 to the bottom.&lt;/p&gt;
+&lt;p&gt;That should do it.&lt;/p&gt;
+&lt;p&gt;Source: http://ubuntuforums.org/showthread.php?t=369402&lt;/p&gt;</summary><category term="windows"></category><category term="ubuntu"></category><category term="microsoft"></category><category term="Linux"></category></entry></feed>

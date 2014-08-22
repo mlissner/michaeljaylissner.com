@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/windows" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2012-12-27T11:20:36+01:00</updated><entry><title>Setting up etherpad with postgres on Windows</title><link href="http://michaeljaylissner.com/posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/" rel="alternate"></link><updated>2012-12-27T11:20:36+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-12-27:posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/</id><summary type="html">&lt;p&gt;There don&amp;#8217;t seem to be any successful installation instructions for postgres on Windows. It&amp;#8217;s not that hard, but there are a couple things you need to&amp;nbsp;do. &lt;/p&gt;
-&lt;p&gt;I haven&amp;#8217;t gone through these instructions to make sure they work, but this is roughly what I&amp;#8217;ve done to get my Postgres/Windows/Node/Etherpad working&amp;nbsp;together:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/windows" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2012-12-27T11:20:36+01:00</updated><entry><title>Setting up etherpad with postgres on Windows</title><link href="http://michaeljaylissner.com/posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/" rel="alternate"></link><updated>2012-12-27T11:20:36+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-12-27:posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/</id><summary type="html">&lt;p&gt;There don't seem to be any successful installation instructions for postgres on Windows. It's not that hard, but there are a couple things you need to do. &lt;/p&gt;
+&lt;p&gt;I haven't gone through these instructions to make sure they work, but this is roughly what I've done to get my Postgres/Windows/Node/Etherpad working together:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Install&amp;nbsp;git&lt;/li&gt;
-&lt;li&gt;Install&amp;nbsp;node.js&lt;/li&gt;
+&lt;li&gt;Install git&lt;/li&gt;
+&lt;li&gt;Install node.js&lt;/li&gt;
 &lt;li&gt;Install python&lt;ul&gt;
-&lt;li&gt;add &lt;span class="caps"&gt;PYTHON&lt;/span&gt; as an&amp;nbsp;env&lt;/li&gt;
+&lt;li&gt;add PYTHON as an env&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Install postgres&lt;ul&gt;
-&lt;li&gt;add C:\Program Files\PostgreSQL\9.2\bin to your&amp;nbsp;path&lt;/li&gt;
+&lt;li&gt;add C:\Program Files\PostgreSQL\9.2\bin to your path&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Download etherpad-lite with&amp;nbsp;git&lt;/li&gt;
-&lt;li&gt;Run the etherpad-lite windows installer per the&amp;nbsp;instructions&lt;/li&gt;
+&lt;li&gt;Download etherpad-lite with git&lt;/li&gt;
+&lt;li&gt;Run the etherpad-lite windows installer per the instructions&lt;/li&gt;
 &lt;li&gt;start etherpad-lite&lt;ul&gt;
-&lt;li&gt;make sure it works with the dirty &lt;span class="caps"&gt;DB&lt;/span&gt; before getting&amp;nbsp;exotic&lt;/li&gt;
+&lt;li&gt;make sure it works with the dirty DB before getting exotic&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Set up postgres&lt;ul&gt;
-&lt;li&gt;npm install pg (will throw an error about msbuild version, but ignore that, the native &lt;span class="caps"&gt;JS&lt;/span&gt; drivers are&amp;nbsp;installed)&lt;/li&gt;
-&lt;li&gt;add a user using&amp;nbsp;pgadmin&lt;/li&gt;
-&lt;li&gt;add a &lt;span class="caps"&gt;DB&lt;/span&gt; using pgadmin and the user created a second&amp;nbsp;ago&lt;/li&gt;
-&lt;li&gt;reconfigure to use postgres in the settings.json&amp;nbsp;file&lt;/li&gt;
+&lt;li&gt;npm install pg (will throw an error about msbuild version, but ignore that, the native JS drivers are installed)&lt;/li&gt;
+&lt;li&gt;add a user using pgadmin&lt;/li&gt;
+&lt;li&gt;add a DB using pgadmin and the user created a second ago&lt;/li&gt;
+&lt;li&gt;reconfigure to use postgres in the settings.json file&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Run start.bat to make sure it&amp;nbsp;works&lt;/li&gt;
-&lt;li&gt;Turn down the log messages to only &lt;span class="caps"&gt;ERROR&lt;/span&gt; in the settings.json&amp;nbsp;file.&lt;/li&gt;
-&lt;li&gt;Use &lt;a href="http://nssm.cc/"&gt;&lt;span class="caps"&gt;NSSM&lt;/span&gt;&lt;/a&gt; to daemonize it, per the instructions &lt;a href="https://github.com/ether/etherpad-lite/wiki/How-to-deploy-Etherpad-Lite-as-a-service"&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Run start.bat to make sure it works&lt;/li&gt;
+&lt;li&gt;Turn down the log messages to only ERROR in the settings.json file.&lt;/li&gt;
+&lt;li&gt;Use &lt;a href="http://nssm.cc/"&gt;NSSM&lt;/a&gt; to daemonize it, per the instructions &lt;a href="https://github.com/ether/etherpad-lite/wiki/How-to-deploy-Etherpad-Lite-as-a-service"&gt;here&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Note that &lt;span class="caps"&gt;NSSM&lt;/span&gt; doesn&amp;#8217;t yet have stdout and stderr redirection built in. Thus, to start the daemon with these working, you have to create a little script like&amp;nbsp;this: &lt;/p&gt;
+&lt;p&gt;Note that NSSM doesn't yet have stdout and stderr redirection built in. Thus, to start the daemon with these working, you have to create a little script like this: &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;ECHO&lt;/span&gt; &lt;span class="k"&gt;OFF&lt;/span&gt;
 &lt;span class="p"&gt;@&lt;/span&gt;REM This runs etherpad with stdout and stderr getting redirected to special logs
 &lt;span class="k"&gt;call&lt;/span&gt; D:\etherpad\etherpad-lite\start.bat &amp;gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;D&lt;/span&gt;:\etherpad\etherpad-lite\logs\stdout.log &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;D&lt;/span&gt;:\etherpad\etherpad-lite\logs\stderr.log
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="windows"></category><category term="postgres"></category><category term="node"></category><category term="etherpad"></category></entry><entry><title>A Fresh Install of Vista on an HP Laptop</title><link href="http://michaeljaylissner.com/posts/2009/07/23/a-fresh-install-of-vista-on-an-hp-laptop/" rel="alternate"></link><updated>2009-07-23T21:59:02+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-23:posts/2009/07/23/a-fresh-install-of-vista-on-an-hp-laptop/</id><summary type="html">&lt;p&gt;I just used a recovery disk to install Vista on an &lt;span class="caps"&gt;HP&lt;/span&gt; laptop. I&amp;#8217;m shocked by what it came with. Just looking at the desktop shows the following software that was installed without me even being able to stop&amp;nbsp;it:&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="windows"></category><category term="postgres"></category><category term="node"></category><category term="etherpad"></category></entry><entry><title>A Fresh Install of Vista on an HP Laptop</title><link href="http://michaeljaylissner.com/posts/2009/07/23/a-fresh-install-of-vista-on-an-hp-laptop/" rel="alternate"></link><updated>2009-07-23T21:59:02+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-23:posts/2009/07/23/a-fresh-install-of-vista-on-an-hp-laptop/</id><summary type="html">&lt;p&gt;I just used a recovery disk to install Vista on an HP laptop. I'm shocked by what it came with. Just looking at the desktop shows the following software that was installed without me even being able to stop it:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;A shortcut to &lt;span class="caps"&gt;AOL&lt;/span&gt; Sign&amp;nbsp;Up&lt;/li&gt;
-&lt;li&gt;Easy Internet&amp;nbsp;Services&lt;/li&gt;
-&lt;li&gt;A shortcut to&amp;nbsp;eBay&lt;/li&gt;
-&lt;li&gt;A &amp;#8220;Get Vontage&amp;#8221;&amp;nbsp;shortcut&lt;/li&gt;
-&lt;li&gt;A High-Speed Services&amp;nbsp;shortcut&lt;/li&gt;
-&lt;li&gt;&lt;span class="caps"&gt;HP&lt;/span&gt; Help and&amp;nbsp;Support&lt;/li&gt;
-&lt;li&gt;&lt;span class="caps"&gt;HP&lt;/span&gt; Total Care&amp;nbsp;Advisor&lt;/li&gt;
-&lt;li&gt;&lt;span class="caps"&gt;MS&lt;/span&gt; Office 60 Day&amp;nbsp;Trial&lt;/li&gt;
-&lt;li&gt;A shortcut to &lt;span class="caps"&gt;MSN&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;My &lt;span class="caps"&gt;HP&lt;/span&gt;&amp;nbsp;Games&lt;/li&gt;
-&lt;li&gt;Norton&amp;nbsp;Antivirus&lt;/li&gt;
-&lt;li&gt;Photosmart Essential&amp;nbsp;2.0&lt;/li&gt;
+&lt;li&gt;A shortcut to AOL Sign Up&lt;/li&gt;
+&lt;li&gt;Easy Internet Services&lt;/li&gt;
+&lt;li&gt;A shortcut to eBay&lt;/li&gt;
+&lt;li&gt;A "Get Vontage" shortcut&lt;/li&gt;
+&lt;li&gt;A High-Speed Services shortcut&lt;/li&gt;
+&lt;li&gt;HP Help and Support&lt;/li&gt;
+&lt;li&gt;HP Total Care Advisor&lt;/li&gt;
+&lt;li&gt;MS Office 60 Day Trial&lt;/li&gt;
+&lt;li&gt;A shortcut to MSN&lt;/li&gt;
+&lt;li&gt;My HP Games&lt;/li&gt;
+&lt;li&gt;Norton Antivirus&lt;/li&gt;
+&lt;li&gt;Photosmart Essential 2.0&lt;/li&gt;
 &lt;li&gt;Quickplay&lt;/li&gt;
 &lt;li&gt;Rhapsody&lt;/li&gt;
-&lt;li&gt;Vongo Free&amp;nbsp;Trial&lt;/li&gt;
-&lt;li&gt;A giant Easy Sign-up dialog&amp;nbsp;box&lt;/li&gt;
-&lt;li&gt;A Yahoo! search&amp;nbsp;bar&lt;/li&gt;
+&lt;li&gt;Vongo Free Trial&lt;/li&gt;
+&lt;li&gt;A giant Easy Sign-up dialog box&lt;/li&gt;
+&lt;li&gt;A Yahoo! search bar&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Good god. And I paid for this?&amp;nbsp;Unbelievable.&lt;/p&gt;</summary><category term="windows"></category><category term="vista"></category><category term="junkware"></category><category term="HP"></category></entry><entry><title>Remap Caps Lock as Backspace in Windows and Linux</title><link href="http://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/" rel="alternate"></link><updated>2008-04-29T21:33:41+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-29:posts/2008/04/29/remap-caps-lock-as-backspace/</id><summary type="html">&lt;p&gt;A while back my wrist started hurting from reaching for the cursed backspace key. I was making too many mistakes. My solution was to remap the caps lock key on all the computers I use to act as an additional backspace key. How did I do it? Well, I&amp;#8217;m glad you asked. I&amp;#8217;ll tell&amp;nbsp;you.&lt;/p&gt;
+&lt;p&gt;Good god. And I paid for this? Unbelievable.&lt;/p&gt;</summary><category term="windows"></category><category term="vista"></category><category term="junkware"></category><category term="HP"></category></entry><entry><title>Remap Caps Lock as Backspace in Windows and Linux</title><link href="http://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/" rel="alternate"></link><updated>2008-04-29T21:33:41+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-29:posts/2008/04/29/remap-caps-lock-as-backspace/</id><summary type="html">&lt;p&gt;A while back my wrist started hurting from reaching for the cursed backspace key. I was making too many mistakes. My solution was to remap the caps lock key on all the computers I use to act as an additional backspace key. How did I do it? Well, I'm glad you asked. I'll tell you.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;In Windows&lt;/strong&gt;
-&lt;span class="caps"&gt;EDIT&lt;/span&gt;: I noticed that the picture doesn&amp;#8217;t have all the detail you need. The easier way to do this, is to download the registry key attached to this post, and to right click it, selecting merge. After that, restart the computer, and you should be all&amp;nbsp;set.&lt;/p&gt;
-&lt;p&gt;To remap the caps lock to function as a backspace key in Windows, one must edit the registry keys. To do that, go to Start &amp;gt; Run&amp;#8230;, and type in regedit. In the editor that opens up, navigate to the key shown in the picture below, and create a new key named Scancode Map of the type REG_BINARY. Give it the value shown in the picture, restart, and you&amp;#8217;re set. If things get wacky, delete the key and try&amp;nbsp;again.&lt;/p&gt;
+EDIT: I noticed that the picture doesn't have all the detail you need. The easier way to do this, is to download the registry key attached to this post, and to right click it, selecting merge. After that, restart the computer, and you should be all set.&lt;/p&gt;
+&lt;p&gt;To remap the caps lock to function as a backspace key in Windows, one must edit the registry keys. To do that, go to Start &amp;gt; Run..., and type in regedit. In the editor that opens up, navigate to the key shown in the picture below, and create a new key named Scancode Map of the type REG_BINARY. Give it the value shown in the picture, restart, and you're set. If things get wacky, delete the key and try again.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/files/images/Windows%20Registry%20Remap%20Screenshot.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;In Linux&lt;/strong&gt;
 I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
 by opening a terminal, and running the xev program. Once that is running, 
 press the caps lock key, and it will tell you the numerical value of that key. 
-For example, my output from that command looks like&amp;nbsp;this:&lt;/p&gt;
+For example, my output from that command looks like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;mlissner@opal2% xev
 KeyPress event, serial 28, synthetic NO, window 0x4800001,
 root 0x59, subw 0x0, &lt;span class="nb"&gt;time &lt;/span&gt;2775892, &lt;span class="o"&gt;(&lt;/span&gt;373,636&lt;span class="o"&gt;)&lt;/span&gt;, root:&lt;span class="o"&gt;(&lt;/span&gt;376,685&lt;span class="o"&gt;)&lt;/span&gt;,
@@ -76,7 +76,7 @@ XFilterEvent returns: False
 
 &lt;p&gt;In there, you will see the keycode for the capslock key, in my case, number 
 66. Using that, create a file in your home directory called .Xmodmap, and put 
-the following in&amp;nbsp;it:&lt;/p&gt;
+the following in it:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;!&lt;/span&gt;
 &lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="n"&gt;Make&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;caps&lt;/span&gt; &lt;span class="n"&gt;lock&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;backspace&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt;
 &lt;span class="o"&gt;!&lt;/span&gt;
@@ -87,17 +87,17 @@ the following in&amp;nbsp;it:&lt;/p&gt;
 
 &lt;p&gt;Once that is done, the next time you log in, your caps lock will function as a 
 backspace. The only remaining problem is that it still does not have the 
-auto-repeat function that backspace should have. To fix that,&amp;nbsp;run:&lt;/p&gt;
+auto-repeat function that backspace should have. To fix that, run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;xset r 66
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;That will make things work properly, but you need to run that every time you 
-log in, or else it won&amp;#8217;t work properly. To fix that&amp;nbsp;run:&lt;/p&gt;
+log in, or else it won't work properly. To fix that run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo gedit /etc/X11/Xsession.d/50x11-common_determine-startup
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;And add xset r 66 to the&amp;nbsp;bottom.&lt;/p&gt;
-&lt;p&gt;That should do&amp;nbsp;it.&lt;/p&gt;
-&lt;p&gt;Source:&amp;nbsp;http://ubuntuforums.org/showthread.php?t=369402&lt;/p&gt;</summary><category term="windows"></category><category term="ubuntu"></category><category term="microsoft"></category><category term="Linux"></category></entry></feed>
+&lt;p&gt;And add xset r 66 to the bottom.&lt;/p&gt;
+&lt;p&gt;That should do it.&lt;/p&gt;
+&lt;p&gt;Source: http://ubuntuforums.org/showthread.php?t=369402&lt;/p&gt;</summary><category term="windows"></category><category term="ubuntu"></category><category term="microsoft"></category><category term="Linux"></category></entry></feed>

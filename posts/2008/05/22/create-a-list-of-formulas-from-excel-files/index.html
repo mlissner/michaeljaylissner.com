@@ -7,7 +7,7 @@
         <meta name="copyright" content="Michael Lissner" />
 
 <meta name="keywords" content="microsoft, excel, Tech, " />
-        <title>Create a List of Formulas from Excel&nbsp;Files - Michael Jay Lissner
+        <title>Create a List of Formulas from Excel Files - Michael Jay Lissner
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="../../../../..">Home</a></li>
-                            <li ><a href="../../../../../pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="../../../../../pages/about.html">About this Site</a></li>
                             <li ><a href="../../../../../categories.html">Categories</a></li>
                             <li ><a href="../../../../../tags.html">Tags</a></li>
                             <li ><a href="../../../../../archives.html">Archives</a></li>
@@ -52,7 +52,7 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="../../../../../posts/2008/05/22/create-a-list-of-formulas-from-excel-files/"> Create a List of Formulas from Excel&nbsp;Files  </a></h1>
+    <h1><a href="../../../../../posts/2008/05/22/create-a-list-of-formulas-from-excel-files/"> Create a List of Formulas from Excel Files  </a></h1>
     </header>
 </div>
 
@@ -62,18 +62,19 @@
             <p>I have begun training a replacement at work, and I need to teach him all of 
 the excel formulas that we use in our department documents. I started making a 
 list of all the formulas, but my mind quickly went blank, and I decided I 
-needed a way to automate&nbsp;it. </p>
-<p>Here&#8217;s the technique I figured out. Open each of the files that you believe 
-has useful formulas in it, and go to File &gt; Save as&#8230; Save each document into 
+needed a way to automate it. </p>
+<p>Here's the technique I figured out. Open each of the files that you believe 
+has useful formulas in it, and go to File &gt; Save as... Save each document into 
 an empty directory as xml spreadsheets (.xml). If you open one of these 
-documents in a text editor, you are likely to see a line something like the&nbsp;following: </p>
+documents in a text editor, you are likely to see a line something like the 
+following: </p>
 <div class="highlight"><pre><span class="nt">&lt;Cell</span> <span class="na">ss:Formula=</span><span class="s">&quot;=SUM(C:C[1])&quot;</span><span class="nt">&gt;&lt;Data</span> <span class="na">ss:Type=</span><span class="s">&quot;Number&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/Data&gt;&lt;/Cell&gt;</span>
 </pre></div>
 
 
 <p>The key is that each row in your new xml documents that contains a formula 
 will have the formula keyword, so to isolate these, run the following on a 
-Unix computer in the directory where you saved all the xml&nbsp;documents.</p>
+Unix computer in the directory where you saved all the xml documents.</p>
 <div class="highlight"><pre>grep <span class="s1">&#39;Formula=&#39;</span> *.xml | sort | uniq &gt; uniqLinesWithFormulas.txt
 </pre></div>
 
@@ -83,14 +84,14 @@ each line from all of your <code>.xml</code> files that contains a formula. From
 you can skim them visually for useful formulas, or put the file into Excel 
 again and play with it there. This was as far as I needed to go in my 
 analysis. Once I had this done, it was pretty easy to see the 30 or so 
-formulas I regularly&nbsp;use.</p>
+formulas I regularly use.</p>
             <aside>
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="../../../../../posts/2008/05/20/dear-hillary/" title="Previous: Dear&nbsp;Hillary">Dear&nbsp;Hillary</a></li>
+                <li class="previous_article">« <a href="../../../../../posts/2008/05/20/dear-hillary/" title="Previous: Dear Hillary">Dear Hillary</a></li>
  
-                <li class="next_article"><a href="../../../../../posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/" title="Next: Install Citrix In Ubuntu Hardy&nbsp;Heron">Install Citrix In Ubuntu Hardy&nbsp;Heron</a> »</li>
+                <li class="next_article"><a href="../../../../../posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/" title="Next: Install Citrix In Ubuntu Hardy Heron">Install Citrix In Ubuntu Hardy Heron</a> »</li>
             </ul>
             </nav>
             </aside>
