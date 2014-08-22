@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Michael Lissner" />
+        <meta name="copyright" content="Michael Lissner" />
+
+<meta name="keywords" content="pdftotext, pdftohtml, pdf, Final Project, courtlistener.com, Tech, " />
+        <title>Converting <span class="caps">PDF</span> Files to <span class="caps">HTML</span> - Michael Jay Lissner
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="http://michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://michaeljaylissner.com/"><span class=site-name>Michael Jay Lissner</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://michaeljaylissner.com">Home</a></li>
+                            <li ><a href="http://michaeljaylissner.com/pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="http://michaeljaylissner.com/categories.html">Categories</a></li>
+                            <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
+                            <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="http://michaeljaylissner.com/posts/2010/02/06/converting-pdf-files-to-html/"> Converting <span class="caps">PDF</span> Files to <span class="caps">HTML</span>  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>For my final project, we are considering posting court cases on our site, and so I did some work today analyzing how best to convert the <span class="caps">PDF</span> files the courts give us to <span class="caps">HTML</span> that people can actually use. I looked briefly at google docs, since it has an amazing tool that converts <span class="caps">PDF</span> files to something resembling text, but short of spending a few days hacking the site, I couldn&#8217;t figure out any easy way to leverage their technology in any sort of automated&nbsp;way. </p>
+<p>The other two tools I have looked at today are <a href="http://www.foolabs.com/xpdf/" target="_blank">pdftotext</a> and <a href="http://pdftohtml.sourceforge.net/" target="_blank">pdftohtml</a>, which, not surprisingly, do what their names claim they do. Since we&#8217;re going to be pulling cases from the 13 federal circuit courts, I wanted to figure out which method works best for which court, and which method will provide us with the most generalizable solution across whatever <span class="caps">PDF</span> a court may crank&nbsp;out.</p>
+<p>The short version is that the best option seems to&nbsp;be:</p>
+<div class="highlight"><pre>pdftotext -htmlmeta -layout -enc <span class="s1">&#39;UTF-8&#39;</span> yourfile.pdf
+</pre></div>
+
+
+<p>This creates an html file with the text of the case laid out best as possible, some basic html meta data applied, and the <span class="caps">UTF</span>-8 encoding&nbsp;applied. </p>
+<p>Before coming to this conclusion though, I looked at two settings that pdftohtml has. With the -c argument, it can generate a &#8216;complex&#8217; <span class="caps">HTML</span> document that closely resembles that of the original. Without the -c argument, it will create a more simple document. Although the complex documents are rather impressive in appearance, they&#8217;re abysmal when it comes to the quality of the <span class="caps">HTML</span> code that is generated. For an example, look at the source code for this <a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-2ndCircuit-08-6301-cv_opn.html">this file</a>. If, on the other hand, the -c argument is not run, and the simple documents are generated, the appearance of the final product is worse than the simple text documents that are created by pdftotext. Check out <a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-2ndCircuit-08-6301-cv_opn.html">this one</a> for&nbsp;example.</p>
+<p>For thoroughness, here is a table containing the results from this test.
+<table>
+<tr>
+  <th>Court</th>
+  <th>pdftotext</th>
+  <th>pdftohtml complex</th>
+  <th>pdftotext simple</th>
+  <th>Original <span class="caps">PDF</span></th>
+</tr>
+<tr>
+  <td>1<sup>st</sup></td>
+  <td colspan="4" align="center">The first circuit publishes in <span class="caps">HTML</span> Format by default</td>
+</tr>
+<tr>
+  <td>2<sup>nd</sup></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-2ndCircuit-08-6301-cv_opn.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-2ndCircuit-08-6301-cv_opn.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-2ndCircuit-08-6301-cv_opn.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/2ndCircuit-08-6301-cv_opn.pdf"><em>link</em></a></td>
+</tr>
+<tr>
+  <td>3<sup>rd</sup></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-3rdCircuit-091225p.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-3rdCircuit-091225p.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-3rdCircuit-091225p.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/3rdCircuit-091225p.pdf"><em>link</em></a></td>
+</tr>
+<tr>
+  <td>4<sup>th</sup></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-4thCircuit-082373.P.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-4thCircuit-082373.P.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-4thCircuit-082373.P.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/4thCircuit-082373.P.pdf"><em>link</em></a></td>
+</tr>
+<tr>
+  <td>5<sup>th</sup></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-5thCircuit-07-30815-CR0.wpd.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-5thCircuit-07-30815-CR0.wpd.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-5thCircuit-07-30815-CR0.wpd.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/5thCircuit-07-30815-CR0.wpd.pdf"><em>link</em></a></td>
+</tr>
+<tr>
+  <td>6<sup>th</sup></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-6thCircuit-10a0023p-06.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-6thCircuit-10a0023p-06.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-6thCircuit-10a0023p-06.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/6thCircuit-10a0023p-06.pdf"><em>link</em></a></td>
+</tr>
+<tr>
+  <td>7<sup>th</sup></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-7thCircuit-UZ1FFY4T.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-7thCircuit-UZ1FFY4T.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-7thCircuit-UZ1FFY4T.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/7thCircuit-UZ1FFY4T.pdf"><em>link</em></a></td>
+</tr>
+<tr>
+  <td>8<sup>th</sup></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-8thCircuit-071306U.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-8thCircuit-071306U.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-8thCircuit-071306U.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/8thCircuit-071306U.pdf"><em>link</em></a></td>
+</tr>
+<tr>
+  <td>9<sup>th</sup></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-9thCircuit-07-55393.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-9thCircuit-07-55393.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-9thCircuit-07-55393.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/9thCircuit-07-55393.pdf"><em>link</em></a></td>
+</tr>
+<tr>
+  <td>10<sup>th</sup></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-10thCircuit-06-6247.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-10thCircuit-06-6247.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-10thCircuit-06-6247.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/10thCircuit-06-6247.pdf"><em>link</em></a></td>
+</tr>
+<tr>
+  <td>11<sup>th</sup></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-11thCircuit-200814991.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-11thCircuit-200814991.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-11thCircuit-200814991.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/11thCircuit-200814991.pdf"><em>link</em></a></td>
+</tr>
+<tr>
+  <td><span class="caps">DC</span> Circuit</td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-DC-Circuit-07-3125-1229519.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-DC-Circuit-07-3125-1229519.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-DC-Circuit-07-3125-1229519.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/DC-Circuit-07-3125-1229519.pdf"><em>link</em></a></td>
+</tr>
+<tr>
+  <td>Federal Circuit</td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-FederalCircuit-09-1361.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-FederalCircuit-09-1361.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-FederalCircuit-09-1361.html"><em>link</em></a></td>
+  <td><a href="/archive/shared/pdf-to-html-test/FederalCircuit-09-1361.pdf"><em>link</em></a></td>
+</tr>
+</table></p>
+<p><strong>A caveat regarding pdftotext:</strong> This library is developed by a company called <a href="http://www.glyphandcog.com/index.html" target="_blank">Glyph <span class="amp">&amp;</span> Cog</a>. Although the code is open source, I couldn&#8217;t for the life of me figure out how to file a bug against it. This doesn&#8217;t particularly bode well for using something as a dependency. On the flip side, Glyph <span class="amp">&amp;</span> Cog is happy to provide support for the&nbsp;product.</p>
+            <aside>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="http://michaeljaylissner.com/posts/2010/01/27/with-howard-zinns-death-we-all-suffer-a-little/" title="Previous: With Howard Zinn&#8217;s Death, We All Suffer a&nbsp;Little">With Howard Zinn&#8217;s Death, We All Suffer a&nbsp;Little</a></li>
+ 
+                <li class="next_article"><a href="http://michaeljaylissner.com/posts/2010/02/24/using-revision-control-on-a-django-project-without-revealing-your-passwords/" title="Next: Using Revision Control on a Django Project Without Revealing Your&nbsp;Passwords">Using Revision Control on a Django Project Without Revealing Your&nbsp;Passwords</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+<section>
+<hr/>
+<p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2" 
+                href="http://michaeljaylissner.com/posts/2010/02/06/converting-pdf-files-to-html//#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+        var disqus_identifier = 'http://michaeljaylissner.com/posts/2010/02/06/converting-pdf-files-to-html/';
+    var disqus_url = 'http://michaeljaylissner.com/posts/2010/02/06/converting-pdf-files-to-html/';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2010-02-06T15:03:18">Feb 6, 2010</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Tech-ref">Tech</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#courtlistener.com-ref">courtlistener.com
+                    <span>12</span>
+</a></li>
+                <li><a href="/tags.html#Final-Project-ref">Final Project
+                    <span>5</span>
+</a></li>
+                <li><a href="/tags.html#pdf-ref">pdf
+                    <span>2</span>
+</a></li>
+                <li><a href="/tags.html#pdftohtml-ref">pdftohtml
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#pdftotext-ref">pdftotext
+                    <span>1</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+    </div>
+    </article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Unless mentioned otherwise, all material on this site is <a href="about#license">licensed</a> under a Creative Commons copyright or the GNU Affero GPL. <a href="about#privacy">Privacy Policy</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    </body>
+</html>

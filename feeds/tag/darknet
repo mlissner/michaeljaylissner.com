@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/darknet" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2008-09-15T21:09:43+02:00</updated><entry><title>On DRM and the Darknet</title><link href="http://michaeljaylissner.com/posts/2008/09/15/on-drm-and-the-darknet/" rel="alternate"></link><updated>2008-09-15T21:09:43+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-15:posts/2008/09/15/on-drm-and-the-darknet/</id><summary type="html">&lt;p&gt;I just read &lt;a href="http://www.google.com/url?sa=t&amp;source=web&amp;ct=res&amp;cd=1&amp;url=http%3A%2F%2Fcrypto.stanford.edu%2FDRM2002%2Fdarknet5.doc&amp;ei=VTLPSLfdG5m0sQOo1ciIBw&amp;usg=AFQjCNHZkIYjxy6LnWvUSt6kGrZ3SYLMZQ&amp;sig2=hz865qMKNfakTgDi4sUVpA"&gt;an 
+interesting paper&lt;/a&gt; written by some Microsoft engineers on the subject of 
+the futures of darknets and illicit file sharing on the&amp;nbsp;Internet. &lt;/p&gt;
+&lt;p&gt;Pretty interesting&amp;nbsp;stuff:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8230;the darknet will be a competitor to legal commerce. From the point of 
+view of economic theory, this has profound implications for business strategy: 
+for example, increased security (e.g. stronger &lt;span class="caps"&gt;DRM&lt;/span&gt; systems) may act as a
+disincentive to legal commerce. Consider an &lt;span class="caps"&gt;MP3&lt;/span&gt; file sold on a web site: this 
+costs money, but the purchased object is as useful as a version acquired from 
+the darknet. However, a securely &lt;span class="caps"&gt;DRM&lt;/span&gt;-wrapped song is strictly less attractive: 
+although the industry is striving for flexible licensing rules, customers will 
+be restricted in their actions if the system is to provide meaningful&amp;nbsp;security.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It seems so obvious, yet&amp;#8230;this paper was written several years&amp;nbsp;ago. &lt;/p&gt;</summary><category term="microsoft"></category><category term="DRM"></category><category term="darknet"></category></entry></feed>

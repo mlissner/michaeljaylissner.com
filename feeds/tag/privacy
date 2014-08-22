@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/privacy" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2012-04-27T17:05:21+02:00</updated><entry><title>Further privacy protections at CourtListener</title><link href="http://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/" rel="alternate"></link><updated>2012-04-27T17:05:21+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-04-27:posts/2012/04/27/further-privacy-protections-at-courtlistener/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve &lt;a href="http://michaeljaylissner.com/blog/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents"&gt;written previously&lt;/a&gt; about the lengths we go to at CourtListener to protect people&amp;#8217;s privacy, and today we completed one more privacy&amp;nbsp;enhancement. &lt;/p&gt;
+&lt;p&gt;After my last post on this topic, we discovered that although we had already blocked cases from appearing in the search results of all major search engines, we had a privacy leak in the form of our computer-readable sitemaps. These sitemaps contain links to every page within a website, and since those links contain the names of the parties in a case, it&amp;#8217;s possible that a Google search for the party name could turn up results that should be&amp;nbsp;hidden.&lt;/p&gt;
+&lt;p&gt;This was problematic, and as of now we have changed the way we serve sitemaps so that they use the noindex X-Robots-Tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. This tells search crawlers that they are welcome to read our sitemaps, but that they should avoid serving them or indexing&amp;nbsp;them.&lt;/p&gt;</summary><category term="sitemaps.xml"></category><category term="privacy"></category><category term="policy"></category><category term="courtlistener.com"></category></entry><entry><title>Support for x-robots-tag and robots HTML meta tag</title><link href="http://michaeljaylissner.com/posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/" rel="alternate"></link><updated>2012-01-24T23:20:20+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-24:posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/</id><summary type="html">&lt;p&gt;As part of our research for &lt;a href="/blog/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents"&gt;our post&lt;/a&gt; on how we block search engines, we looked into which search engines support which privacy standards. This information doesn&amp;#8217;t seem to exist anywhere else on the Internet, so below are our findings, starting with the big guys, and moving towards more obscure or foreign search&amp;nbsp;engines.&lt;/p&gt;
+&lt;h4 id="google-bing"&gt;Google,&amp;nbsp;Bing&lt;/h4&gt;
+&lt;p&gt;Google (known as Googlebot) and Bing (known as Bingbot) support the x-robots-tag header and the robots &lt;span class="caps"&gt;HTML&lt;/span&gt; tag. Here&amp;#8217;s &lt;a href="http://support.google.com/webmasters/bin/answer.py?hl=en&amp;amp;answer=79812"&gt;Google&amp;#8217;s page&lt;/a&gt; on the topic. And &lt;a href="http://www.bing.com/community/site_blogs/b/webmaster/archive/2009/08/21/prevent-a-bot-from-getting-lost-in-space-sem-101.aspx"&gt;here&amp;#8217;s Bing&amp;#8217;s&lt;/a&gt;. The &lt;a href="http://www.bing.com/community/site_blogs/b/webmaster/archive/2009/11/04/msnbot-1-1-is-retired.aspx"&gt;msnbot is retired&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id="yahoo-aol"&gt;Yahoo, &lt;span class="caps"&gt;AOL&lt;/span&gt;&lt;/h4&gt;
+&lt;p&gt;Yahoo!&amp;#8217;s search engine is provided by Bing. &lt;span class="caps"&gt;AOL&lt;/span&gt;&amp;#8217;s is provided by Google. These are easy&amp;nbsp;ones.&lt;/p&gt;
+&lt;h4 id="ask-yandex-nutch"&gt;Ask, Yandex,&amp;nbsp;Nutch&lt;/h4&gt;
+&lt;p&gt;Ask (known as teoma), and Yandex (Russia&amp;#8217;s search engine, known as yandex), support the robots meta tag, but do not appear to support the x-robots-tag. Ask&amp;#8217;s page on the topic &lt;a href="http://www.ask.com/staticcontent/about/helpcenter/about_helpcenter_webmaster#5"&gt;is here&lt;/a&gt;, and Yandex&amp;#8217;s &lt;a href="http://help.yandex.com/webmaster/?id=1113833"&gt;is here&lt;/a&gt;. The popular open source crawler, &lt;a href="http://nutch.apache.org/"&gt;Nutch&lt;/a&gt;, also &lt;a href="http://nutch.sourceforge.net/docs/en/bot.html"&gt;supports the robots &lt;span class="caps"&gt;HTML&lt;/span&gt; tag&lt;/a&gt;, but &lt;a href="http://lucene.472066.n3.nabble.com/Support-for-x-robots-tag-td3678606.html"&gt;not the x-robots-tag header&lt;/a&gt;. &lt;em&gt;Update:&lt;/em&gt; Newer versions of Nutch now support&amp;nbsp;x-robots-tag!&lt;/p&gt;
+&lt;h4 id="the-internet-archive-alexa"&gt;The Internet Archive,&amp;nbsp;Alexa&lt;/h4&gt;
+&lt;p&gt;The Internet Archive uses Alexa&amp;#8217;s crawler, which is known as ia_archiver. This crawler does not seem to support either the &lt;span class="caps"&gt;HTML&lt;/span&gt; robots meta tag nor the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. Their page on the subject &lt;a href="http://www.alexa.com/help/webmasters"&gt;is here&lt;/a&gt;. I have requested more information from them, and will update this page if I hear&amp;nbsp;back.&lt;/p&gt;
+&lt;h4 id="duckduckgo-blekko-baidu"&gt;Duckduckgo, Blekko,&amp;nbsp;Baidu&lt;/h4&gt;
+&lt;p&gt;Duckduckgo and Blekko do not support either the robots meta tag nor the x-robots-tag header, per emails I&amp;#8217;ve had with each of them. I also requested information from Baidu, but their response totally ignored my question and was in Chinese. They do have some information &lt;a href="http://wenku.baidu.com/view/ec4457d4b14e852458fb5793.html"&gt;here&lt;/a&gt;, but it does not seem to provide any information on the noindex value for the robots tag. In any case, the only way to block these crawlers seems to be via a robots.txt&amp;nbsp;file.&lt;/p&gt;</summary><category term="x-robots-tag"></category><category term="search"></category><category term="robots"></category><category term="privacy"></category></entry><entry><title>Respecting privacy while providing hundreds of thousands of public documents</title><link href="http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/" rel="alternate"></link><updated>2012-01-16T22:13:22+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-16:posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/</id><summary type="html">&lt;p&gt;At CourtListener, we have always taken privacy very seriously. We &lt;a href="http://courtlistener.com/coverage/"&gt;have over 600,000&lt;/a&gt; cases currently, most of which are available on Google and other search engines. But in the interest of privacy, we make two broad exceptions to what&amp;#8217;s available on search&amp;nbsp;engines: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;As is stated in our &lt;a href="http://courtlistener.com/removal/"&gt;removal policy&lt;/a&gt;, if someone gets in touch with us in writing and requests that we block search engines from indexing a document, we generally attempt to do so within a few&amp;nbsp;hours. &lt;/li&gt;
+&lt;li&gt;If we discover a privacy problem within a case, we proactively block search engines from indexing&amp;nbsp;it. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each of these exceptions presents interesting problems. In the case of requests to prevent indexing by search engines, we&amp;#8217;re often faced with an ethical dilemma, since in many instances, the party making the request is merely displeased that their involvement in the case is easy to discover and/or they are simply embarrassed by their past. In this case, the question we have to ask ourselves is: Where is the balance between the person&amp;#8217;s right to privacy and the public&amp;#8217;s need to access court records, and to what extent do changes in &lt;a href="http://scholar.google.com/scholar?hl=en&amp;amp;q=practical+obscurity+privacy"&gt;practical obscurity&lt;/a&gt; compel action on our behalf? For example, if someone convicted of murder or child molestation is trying to make information about their past harder to discover, how should we weigh the public&amp;#8217;s interest in easily locating this information via a search engine? In the case of convicted child molesters, we can look to &lt;a href="http://en.wikipedia.org/wiki/Megan%27s_Law"&gt;Megan&amp;#8217;s law&lt;/a&gt; for a public policy stance on the issue, but even that forces us to ask to what extent we should chart our own path, and to what extent we should follow public policy&amp;nbsp;decisions. &lt;/p&gt;
+&lt;p&gt;On the opposite end of the spectrum, many of the cases that we block search engines from indexing are asylum cases where a person has lost an attempt to stay in the United States, and been sent back to a country where they feel unsafe. In such cases, it seems clear that it&amp;#8217;s important to keep the person&amp;#8217;s name out of search engine results, but still we must ask to what extent do we have an obligation to identify and block such cases from appearing proactively rather than post&amp;nbsp;hoc? &lt;/p&gt;
+&lt;p&gt;In both of these scenarios, we have taken a middle ground that we hope strikes a balance between the public&amp;#8217;s need for court documents and an individual&amp;#8217;s desire or need for privacy. Instead of either proactively blocking search engines from indexing cases or keeping cases in search results against a party&amp;#8217;s request, our current policy is to block search engines from indexing a web page as each request comes in. We currently have 190 cases that are blocked from search results, and the number increases&amp;nbsp;regularly. &lt;/p&gt;
+&lt;p&gt;Where we do take proactive measures to block cases from search results is where we have discovered unredacted or &lt;a href="https://freedom-to-tinker.com/blog/tblee/what-gets-redacted-pacer"&gt;improperly redacted&lt;/a&gt; social security numbers in a case. Taking a cue from the now-defunct Altlaw, whenever a case is added, we look for character strings that appear to be social security numbers, tax &lt;span class="caps"&gt;ID&lt;/span&gt; numbers or alien &lt;span class="caps"&gt;ID&lt;/span&gt; numbers. If we find any such strings, we replace them with x&amp;#8217;s, and we try to make sure the unredacted document does not appear in search results outside of&amp;nbsp;CourtListener. &lt;/p&gt;
+&lt;p&gt;The methods we have used to block cases from appearing in search results have evolved over time, and I&amp;#8217;d like to share what we&amp;#8217;ve learned so others can give us feedback and learn from our experiences. There are five technical measures we use to keep a case out of search&amp;nbsp;results: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;robots.txt&amp;nbsp;file &lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt; meta noindex&amp;nbsp;tags &lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt; X-Robots-Tag&amp;nbsp;headers &lt;/li&gt;
+&lt;li&gt;sitemaps.xml&amp;nbsp;files &lt;/li&gt;
+&lt;li&gt;The webmaster tools provided by the search engines&amp;nbsp;themselves&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each of these deserves a moment of explanation. &lt;a href="http://www.robotstxt.org/"&gt;robots.txt&lt;/a&gt; is a protocol that is respected by all major search engines internationally, and which allows site authors (such as myself) to identify web pages that shouldn&amp;#8217;t be crawled. Note that I said &lt;strong&gt;crawled&lt;/strong&gt; not &lt;strong&gt;indexed&lt;/strong&gt;. This is a very important distinction, as I&amp;#8217;ll explain&amp;nbsp;momentarily. &lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt; meta tags are a tag that you can place into the &lt;span class="caps"&gt;HTML&lt;/span&gt; of a page, and which instructs search engines not to &lt;strong&gt;index&lt;/strong&gt; a page. Since this is an &lt;span class="caps"&gt;HTML&lt;/span&gt; format, this method only works on &lt;span class="caps"&gt;HTML&lt;/span&gt;&amp;nbsp;pages. &lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt; X-Robots-Tag headers are similar to &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tags, but they allow site authors to request that an &lt;em&gt;item&lt;/em&gt; not be indexed. That item may be an &lt;span class="caps"&gt;HTML&lt;/span&gt; page, but equally, it may be a &lt;span class="caps"&gt;PDF&lt;/span&gt; or even an image that should not&amp;nbsp;searchable. &lt;/p&gt;
+&lt;p&gt;Further, we provide an &lt;a href="http://www.sitemaps.org/protocol.html"&gt;&lt;span class="caps"&gt;XML&lt;/span&gt; sitemap&lt;/a&gt; that search engines can understand, and which tells them about every page on the site that they should crawl and&amp;nbsp;index. &lt;/p&gt;
+&lt;p&gt;All of these elements fit together into a complicated melange that has 
+absorbed many development hours over the past two years, 
+as different search engines interpret these standards in different&amp;nbsp;ways. &lt;/p&gt;
+&lt;p&gt;For example, Google and Bing interpret the robots.txt files as blocks to 
+their crawlers. This means that web pages listed in robots.txt will not be 
+&lt;strong&gt;crawled&lt;/strong&gt; by Google or Bing, but that does not mean those pages will not 
+be &lt;strong&gt;indexed&lt;/strong&gt;. Indeed, if Google or Bing learn of the existence of a web 
+page (for example, because another page linked to it), 
+then they will include it in &lt;a href="http://www.youtube.com/watch?v=KBdEwpRQRD0"&gt;their&lt;/a&gt; &lt;a href="http://www.bing.com/community/site_blogs/b/webmaster/archive/2009/08/21/prevent-a-bot-from-getting-lost-in-space-sem-101.aspx"&gt;indexes&lt;/a&gt;. This is true even if 
+robots.txt explicitly blocks robots from crawling the page, 
+because to include it in their indexes, they don&amp;#8217;t &lt;strong&gt;have to&lt;/strong&gt; crawl it 
+&amp;mdash; they just need to know about it! Even your own link to a page is 
+sufficient for Google or Bing to know about the page. And what&amp;#8217;s worse, 
+if you have a good &lt;span class="caps"&gt;URL&lt;/span&gt; with descriptive words within it, 
+Google or Bing will know the terms in the URLs even when they haven&amp;#8217;t 
+crawled the page. So if your &lt;span class="caps"&gt;URL&lt;/span&gt; is example
+.com/private-page-about-michael-jackson, a query for [ Michael Jackson ] 
+could certainly bring it up, even if it were never&amp;nbsp;crawled. &lt;/p&gt;
+&lt;p&gt;The solution to this is to allow Google and Bing to crawl the pages, but to use noindex meta or &lt;span class="caps"&gt;HTTP&lt;/span&gt; tags. If these are in place, the pages will not appear in the index at all. This sounds paradoxical: to exclude pages from appearing in Google and Bing, you have to allow them to be crawled? &lt;a href="https://support.google.com/webmasters/bin/answer.py?hl=en&amp;amp;answer=93710"&gt;Yes, that&amp;#8217;s correct&lt;/a&gt;. Furthermore, it&amp;#8217;s theoretically possible that Google or Bing could learn about a page on your site from a link, and then not crawl it immediately or at all. In this case, they will know the &lt;span class="caps"&gt;URL&lt;/span&gt;, but won&amp;#8217;t know about and X-Robots-Tag headers or meta tags. Thus, they might include the document against your wishes. For this reason, it&amp;#8217;s important to &lt;strong&gt;include&lt;/strong&gt; private pages in your sitemap.xml file, inviting and encouraging Google and Bing to crawl the page specifically so the page can be excluded from their&amp;nbsp;indexes.&lt;/p&gt;
+&lt;p&gt;Yahoo! uses Bing to power their search engine, and &lt;span class="caps"&gt;AOL&lt;/span&gt; uses Google, so the above strategy applies to them as&amp;nbsp;well.&lt;/p&gt;
+&lt;p&gt;Other search engines take a different approach to robots.txt. Ask.com, The Internet Archive and the Russian search engine Yandex.ru all respect the robots meta tag, but not the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. Thus, for these search engines, the strategy above works for &lt;span class="caps"&gt;HTML&lt;/span&gt; files, but not for any other files. These crawlers therefore need to be blocked from accessing those other files. On the upside, unlike Google and Bing, it appears that these search engines will not show a document in their results if they have not crawled it. Thus, using robots.txt alone should be&amp;nbsp;sufficient.&lt;/p&gt;
+&lt;p&gt;A third class of search engines support neither the robots &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tag, nor the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. These are typically less popular or less mature crawlers, and so they must be blocked using robots.txt. There are two approaches to this. The first is to list blocked pages individually in the robots.txt file, and the second is to simply block these search engines from all access. While it&amp;#8217;s possible to list each private document in robots.txt, doing so creates a privacy loophole, since it lists all private documents in one place. At CourtListener, therefore, we take a conservative approach, and completely block all search engines that do not support the &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tag or the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt;&amp;nbsp;header.&lt;/p&gt;
+&lt;p&gt;The final action we take when we receive a request that a document on our site stop appearring in search results, is to use the webmaster tools provided by the major search engines&lt;sup&gt;1&lt;/sup&gt; to explicitly ask those search engines to exclude the document(s) from their&amp;nbsp;results.&lt;/p&gt;
+&lt;p&gt;Between these measures, private documents on CourtListener should be removed from all major and minor search engines. Where posssible this strategy takes a very granular approach, and where minor search engines do not support certain standards, we take a conservative approach, blocking them&amp;nbsp;entirely.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update, 2012-04-29:&lt;/strong&gt; You may also want to look at our &lt;a href="http://michaeljaylissner.com/blog/further-privacy-protections-at-courtlistener"&gt;discussion of the impact of putting people&amp;#8217;s names into your URLs, and the way that affects your sitemap files&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- actual footnotes --&gt;
+
+&lt;ol&gt;
+&lt;li&gt;We use &lt;a href="http://www.google.com/webmasters/tools"&gt;Google&amp;#8217;s Webmaster 
+Tools&lt;/a&gt; and &lt;a href="http://www.bing.com/toolbox/webmaster"&gt;Bing&amp;#8217;s 
+Webmaster Tools&lt;/a&gt;. Before it was merged into Bing&amp;#8217;s tools, 
+we also previously used &lt;a href="http://siteexplorer.search.yahoo
+.com/"&gt;Yahoo&amp;#8217;s Site Explorer&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="robots.txt"></category><category term="privacy"></category><category term="practical obscurity"></category><category term="policy"></category><category term="courtlistener.com"></category><category term="courtlistener.com"></category><category term="policy"></category><category term="practical obscurity"></category><category term="privacy"></category><category term="robots.txt"></category></entry><entry><title>Respecting privacy while providing hundreds of thousands of public documents</title><link href="http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/" rel="alternate"></link><updated>2012-01-16T22:13:22+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-16:posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/</id><summary type="html">&lt;p&gt;At CourtListener, we have always taken privacy very seriously. We &lt;a href="http://courtlistener.com/coverage/"&gt;have over 600,000&lt;/a&gt; cases currently, most of which are available on Google and other search engines. But in the interest of privacy, we make two broad exceptions to what&amp;#8217;s available on search&amp;nbsp;engines: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;As is stated in our &lt;a href="http://courtlistener.com/removal/"&gt;removal policy&lt;/a&gt;, if someone gets in touch with us in writing and requests that we block search engines from indexing a document, we generally attempt to do so within a few&amp;nbsp;hours. &lt;/li&gt;
+&lt;li&gt;If we discover a privacy problem within a case, we proactively block search engines from indexing&amp;nbsp;it. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each of these exceptions presents interesting problems. In the case of requests to prevent indexing by search engines, we&amp;#8217;re often faced with an ethical dilemma, since in many instances, the party making the request is merely displeased that their involvement in the case is easy to discover and/or they are simply embarrassed by their past. In this case, the question we have to ask ourselves is: Where is the balance between the person&amp;#8217;s right to privacy and the public&amp;#8217;s need to access court records, and to what extent do changes in &lt;a href="http://scholar.google.com/scholar?hl=en&amp;amp;q=practical+obscurity+privacy"&gt;practical obscurity&lt;/a&gt; compel action on our behalf? For example, if someone convicted of murder or child molestation is trying to make information about their past harder to discover, how should we weigh the public&amp;#8217;s interest in easily locating this information via a search engine? In the case of convicted child molesters, we can look to &lt;a href="http://en.wikipedia.org/wiki/Megan%27s_Law"&gt;Megan&amp;#8217;s law&lt;/a&gt; for a public policy stance on the issue, but even that forces us to ask to what extent we should chart our own path, and to what extent we should follow public policy&amp;nbsp;decisions. &lt;/p&gt;
+&lt;p&gt;On the opposite end of the spectrum, many of the cases that we block search engines from indexing are asylum cases where a person has lost an attempt to stay in the United States, and been sent back to a country where they feel unsafe. In such cases, it seems clear that it&amp;#8217;s important to keep the person&amp;#8217;s name out of search engine results, but still we must ask to what extent do we have an obligation to identify and block such cases from appearing proactively rather than post&amp;nbsp;hoc? &lt;/p&gt;
+&lt;p&gt;In both of these scenarios, we have taken a middle ground that we hope strikes a balance between the public&amp;#8217;s need for court documents and an individual&amp;#8217;s desire or need for privacy. Instead of either proactively blocking search engines from indexing cases or keeping cases in search results against a party&amp;#8217;s request, our current policy is to block search engines from indexing a web page as each request comes in. We currently have 190 cases that are blocked from search results, and the number increases&amp;nbsp;regularly. &lt;/p&gt;
+&lt;p&gt;Where we do take proactive measures to block cases from search results is where we have discovered unredacted or &lt;a href="https://freedom-to-tinker.com/blog/tblee/what-gets-redacted-pacer"&gt;improperly redacted&lt;/a&gt; social security numbers in a case. Taking a cue from the now-defunct Altlaw, whenever a case is added, we look for character strings that appear to be social security numbers, tax &lt;span class="caps"&gt;ID&lt;/span&gt; numbers or alien &lt;span class="caps"&gt;ID&lt;/span&gt; numbers. If we find any such strings, we replace them with x&amp;#8217;s, and we try to make sure the unredacted document does not appear in search results outside of&amp;nbsp;CourtListener. &lt;/p&gt;
+&lt;p&gt;The methods we have used to block cases from appearing in search results have evolved over time, and I&amp;#8217;d like to share what we&amp;#8217;ve learned so others can give us feedback and learn from our experiences. There are five technical measures we use to keep a case out of search&amp;nbsp;results: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;robots.txt&amp;nbsp;file &lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt; meta noindex&amp;nbsp;tags &lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt; X-Robots-Tag&amp;nbsp;headers &lt;/li&gt;
+&lt;li&gt;sitemaps.xml&amp;nbsp;files &lt;/li&gt;
+&lt;li&gt;The webmaster tools provided by the search engines&amp;nbsp;themselves&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each of these deserves a moment of explanation. &lt;a href="http://www.robotstxt.org/"&gt;robots.txt&lt;/a&gt; is a protocol that is respected by all major search engines internationally, and which allows site authors (such as myself) to identify web pages that shouldn&amp;#8217;t be crawled. Note that I said &lt;strong&gt;crawled&lt;/strong&gt; not &lt;strong&gt;indexed&lt;/strong&gt;. This is a very important distinction, as I&amp;#8217;ll explain&amp;nbsp;momentarily. &lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt; meta tags are a tag that you can place into the &lt;span class="caps"&gt;HTML&lt;/span&gt; of a page, and which instructs search engines not to &lt;strong&gt;index&lt;/strong&gt; a page. Since this is an &lt;span class="caps"&gt;HTML&lt;/span&gt; format, this method only works on &lt;span class="caps"&gt;HTML&lt;/span&gt;&amp;nbsp;pages. &lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt; X-Robots-Tag headers are similar to &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tags, but they allow site authors to request that an &lt;em&gt;item&lt;/em&gt; not be indexed. That item may be an &lt;span class="caps"&gt;HTML&lt;/span&gt; page, but equally, it may be a &lt;span class="caps"&gt;PDF&lt;/span&gt; or even an image that should not&amp;nbsp;searchable. &lt;/p&gt;
+&lt;p&gt;Further, we provide an &lt;a href="http://www.sitemaps.org/protocol.html"&gt;&lt;span class="caps"&gt;XML&lt;/span&gt; sitemap&lt;/a&gt; that search engines can understand, and which tells them about every page on the site that they should crawl and&amp;nbsp;index. &lt;/p&gt;
+&lt;p&gt;All of these elements fit together into a complicated melange that has 
+absorbed many development hours over the past two years, 
+as different search engines interpret these standards in different&amp;nbsp;ways. &lt;/p&gt;
+&lt;p&gt;For example, Google and Bing interpret the robots.txt files as blocks to 
+their crawlers. This means that web pages listed in robots.txt will not be 
+&lt;strong&gt;crawled&lt;/strong&gt; by Google or Bing, but that does not mean those pages will not 
+be &lt;strong&gt;indexed&lt;/strong&gt;. Indeed, if Google or Bing learn of the existence of a web 
+page (for example, because another page linked to it), 
+then they will include it in &lt;a href="http://www.youtube.com/watch?v=KBdEwpRQRD0"&gt;their&lt;/a&gt; &lt;a href="http://www.bing.com/community/site_blogs/b/webmaster/archive/2009/08/21/prevent-a-bot-from-getting-lost-in-space-sem-101.aspx"&gt;indexes&lt;/a&gt;. This is true even if 
+robots.txt explicitly blocks robots from crawling the page, 
+because to include it in their indexes, they don&amp;#8217;t &lt;strong&gt;have to&lt;/strong&gt; crawl it 
+&amp;mdash; they just need to know about it! Even your own link to a page is 
+sufficient for Google or Bing to know about the page. And what&amp;#8217;s worse, 
+if you have a good &lt;span class="caps"&gt;URL&lt;/span&gt; with descriptive words within it, 
+Google or Bing will know the terms in the URLs even when they haven&amp;#8217;t 
+crawled the page. So if your &lt;span class="caps"&gt;URL&lt;/span&gt; is example
+.com/private-page-about-michael-jackson, a query for [ Michael Jackson ] 
+could certainly bring it up, even if it were never&amp;nbsp;crawled. &lt;/p&gt;
+&lt;p&gt;The solution to this is to allow Google and Bing to crawl the pages, but to use noindex meta or &lt;span class="caps"&gt;HTTP&lt;/span&gt; tags. If these are in place, the pages will not appear in the index at all. This sounds paradoxical: to exclude pages from appearing in Google and Bing, you have to allow them to be crawled? &lt;a href="https://support.google.com/webmasters/bin/answer.py?hl=en&amp;amp;answer=93710"&gt;Yes, that&amp;#8217;s correct&lt;/a&gt;. Furthermore, it&amp;#8217;s theoretically possible that Google or Bing could learn about a page on your site from a link, and then not crawl it immediately or at all. In this case, they will know the &lt;span class="caps"&gt;URL&lt;/span&gt;, but won&amp;#8217;t know about and X-Robots-Tag headers or meta tags. Thus, they might include the document against your wishes. For this reason, it&amp;#8217;s important to &lt;strong&gt;include&lt;/strong&gt; private pages in your sitemap.xml file, inviting and encouraging Google and Bing to crawl the page specifically so the page can be excluded from their&amp;nbsp;indexes.&lt;/p&gt;
+&lt;p&gt;Yahoo! uses Bing to power their search engine, and &lt;span class="caps"&gt;AOL&lt;/span&gt; uses Google, so the above strategy applies to them as&amp;nbsp;well.&lt;/p&gt;
+&lt;p&gt;Other search engines take a different approach to robots.txt. Ask.com, The Internet Archive and the Russian search engine Yandex.ru all respect the robots meta tag, but not the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. Thus, for these search engines, the strategy above works for &lt;span class="caps"&gt;HTML&lt;/span&gt; files, but not for any other files. These crawlers therefore need to be blocked from accessing those other files. On the upside, unlike Google and Bing, it appears that these search engines will not show a document in their results if they have not crawled it. Thus, using robots.txt alone should be&amp;nbsp;sufficient.&lt;/p&gt;
+&lt;p&gt;A third class of search engines support neither the robots &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tag, nor the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. These are typically less popular or less mature crawlers, and so they must be blocked using robots.txt. There are two approaches to this. The first is to list blocked pages individually in the robots.txt file, and the second is to simply block these search engines from all access. While it&amp;#8217;s possible to list each private document in robots.txt, doing so creates a privacy loophole, since it lists all private documents in one place. At CourtListener, therefore, we take a conservative approach, and completely block all search engines that do not support the &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tag or the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt;&amp;nbsp;header.&lt;/p&gt;
+&lt;p&gt;The final action we take when we receive a request that a document on our site stop appearring in search results, is to use the webmaster tools provided by the major search engines&lt;sup&gt;1&lt;/sup&gt; to explicitly ask those search engines to exclude the document(s) from their&amp;nbsp;results.&lt;/p&gt;
+&lt;p&gt;Between these measures, private documents on CourtListener should be removed from all major and minor search engines. Where posssible this strategy takes a very granular approach, and where minor search engines do not support certain standards, we take a conservative approach, blocking them&amp;nbsp;entirely.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update, 2012-04-29:&lt;/strong&gt; You may also want to look at our &lt;a href="http://michaeljaylissner.com/blog/further-privacy-protections-at-courtlistener"&gt;discussion of the impact of putting people&amp;#8217;s names into your URLs, and the way that affects your sitemap files&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- actual footnotes --&gt;
+
+&lt;ol&gt;
+&lt;li&gt;We use &lt;a href="http://www.google.com/webmasters/tools"&gt;Google&amp;#8217;s Webmaster 
+Tools&lt;/a&gt; and &lt;a href="http://www.bing.com/toolbox/webmaster"&gt;Bing&amp;#8217;s 
+Webmaster Tools&lt;/a&gt;. Before it was merged into Bing&amp;#8217;s tools, 
+we also previously used &lt;a href="http://siteexplorer.search.yahoo
+.com/"&gt;Yahoo&amp;#8217;s Site Explorer&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="robots.txt"></category><category term="privacy"></category><category term="practical obscurity"></category><category term="policy"></category><category term="courtlistener.com"></category><category term="courtlistener.com"></category><category term="policy"></category><category term="practical obscurity"></category><category term="privacy"></category><category term="robots.txt"></category></entry><entry><title>Analyzing Facebook’s Security Mechanisms</title><link href="http://michaeljaylissner.com/posts/2009/11/15/analyzing-facebooks-security-mechanisms/" rel="alternate"></link><updated>2009-11-15T17:43:55+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-15:posts/2009/11/15/analyzing-facebooks-security-mechanisms/</id><summary type="html">&lt;p&gt;For my &lt;a href="http://is219.blogspot.com/" target="_blank"&gt;Privacy, 
+Security and Cryptography&lt;/a&gt; class, we studied a set of 13 principles for 
+secure&amp;nbsp;systems:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Security is&amp;nbsp;Economics&lt;/li&gt;
+&lt;li&gt;Least&amp;nbsp;Privilege&lt;/li&gt;
+&lt;li&gt;Use Fail-Safe&amp;nbsp;Defaults&lt;/li&gt;
+&lt;li&gt;Separation of&amp;nbsp;Responsibility&lt;/li&gt;
+&lt;li&gt;Defense in&amp;nbsp;Depth&lt;/li&gt;
+&lt;li&gt;Psychological&amp;nbsp;Acceptability&lt;/li&gt;
+&lt;li&gt;Usability&lt;/li&gt;
+&lt;li&gt;Ensure Complete&amp;nbsp;Mediation&lt;/li&gt;
+&lt;li&gt;Least Common&amp;nbsp;Mechanism&lt;/li&gt;
+&lt;li&gt;Detect if You Cannot&amp;nbsp;Prevent&lt;/li&gt;
+&lt;li&gt;Orthogonal&amp;nbsp;Security&lt;/li&gt;
+&lt;li&gt;Don&amp;#8217;t Rely on Security Through&amp;nbsp;Obscurity&lt;/li&gt;
+&lt;li&gt;Design Security in, From the&amp;nbsp;Start&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For our midterm, we were asked to analyze how Facebook exemplifies or does not 
+follow these principles. It was an interesting assignment, which finally 
+forced me to think more thoroughly about Facebook&amp;#8217;s security policies, and I&amp;#8217;m
+happy to attach my findings&amp;nbsp;here. &lt;/p&gt;
+&lt;p&gt;For some people these may be rather run of the mill notes. For others, you may 
+be surprised at poor security of the world&amp;#8217;s biggest photo and social 
+networking&amp;nbsp;site.&lt;/p&gt;
+&lt;p&gt;Enjoy.&lt;/p&gt;</summary><category term="security"></category><category term="facebook"></category><category term="paper"></category><category term="privacy"></category></entry><entry><title>Testing Deletion Speed of Online Photo Sites</title><link href="http://michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" rel="alternate"></link><updated>2009-11-14T16:28:44+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-14:posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/</id><summary type="html">&lt;p&gt;
+&lt;strong&gt;Update, 2010-03-08:&lt;/strong&gt;Added an image at drop.io&lt;br&gt;
+&lt;strong&gt;Update, 2010-01-28:&lt;/strong&gt; Added an image at Orkut.com&lt;br&gt;
+&lt;strong&gt;Update 2, 2010-01-28:&lt;/strong&gt; At &lt;a href="http://www.ftc.gov/bcp/workshops/privacyroundtables/index.shtml" target="_blank"&gt;the &lt;span class="caps"&gt;FTC&lt;/span&gt; round table&lt;/a&gt; today, Facebook&amp;#8217;s director of public policy, Tim Sparapani, claimed that information deleted from Facebook cannot be retrieved even by Facebook staff, because it is almost instantly deleted. I informed him this was not true in the case of pictures, and he said he would look into it. Will update this post when/if I hear&amp;nbsp;more.&lt;/p&gt;
+
+&lt;p&gt;Imagine an embarrassing photo of you is placed online by one of your friends. You ask them to take it down, and they do. Now, imagine that your enemy had gotten a link to that photo, and had posted it to their blog. You&amp;#8217;d hope that your friend taking the photo down would in fact delete the photo, but I&amp;#8217;m sorry to say that isn&amp;#8217;t always the&amp;nbsp;case.&lt;/p&gt;
+
+&lt;p&gt;Inspired by &lt;a href="http://arstechnica.com/web/news/2009/07/are-those-photos-really-deleted-from-facebook-think-twice.ars" target="_blank"&gt;Jacqui Cheng&amp;#8217;s article&lt;/a&gt;, I decided to test some of the more popular online services for photo hosting to see what happens when you &amp;#8220;delete&amp;#8221; a photo from their site. On &lt;strong&gt;November 14&lt;sup&gt;th&lt;/sup&gt;, 2009&lt;/strong&gt;, I uploaded and then deleted the following image of a black box with white text to Facebook, Flickr, Picasa, MySpace, Photobucket, Shutterfly, Twitpic and&amp;nbsp;WalMart:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://michaeljaylissner.com/files/images/PostedAndDeleted.jpg"&gt;
+&lt;p&gt;When you look below, if you can see the black box for a site, that means that it was not truly deleted and is still live. You can verify this by clicking on the image. This is checked each time this page is loaded, so the information is constantly verified. If the image has been deleted, you will see the date that it was&amp;nbsp;deleted.&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;There are a number of reasons why photo services might be lazy about properly removing images from their site, but until they have proper deletion mechanisms, we should all think twice about what we&amp;nbsp;upload.&lt;/p&gt;
+
+&lt;p&gt;If there&amp;#8217;s a service that is not shown here that you&amp;#8217;d like to see, please &lt;a href="/contact"&gt;let me know&lt;/a&gt;. And now, without further ado, I present, the ongoing results of the&amp;nbsp;test:&lt;/p&gt;
+
+&lt;h4&gt;Facebook:&lt;/h4&gt;
+
+&lt;p&gt;This file was properly deleted from their server as of at least May 27,&amp;nbsp;2010.&lt;/p&gt;
+
+&lt;h4&gt;Flickr:&lt;/h4&gt;
+
+&lt;p&gt;&lt;span class="caps"&gt;ED&lt;/span&gt;: Flickr began showing the following message approximately an hour after the image was&amp;nbsp;&amp;#8220;deleted.&amp;#8221;&lt;/p&gt;
+
+&lt;?php
+    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
+    if (@fclose(@fopen("http://farm3.static.flickr.com/2734/4103818411_886e19efaa_o.jpg", "r"))) {
+        //$file_handle = fopen($date_file, 'w');
+        //fwrite($file_handle, "Test");
+        //fclose($file_handle);
+?&gt;
+&lt;a href="http://farm3.static.flickr.com/2734/4103818411_886e19efaa_o.jpg"&gt;&lt;img src="http://farm3.static.flickr.com/2734/4103818411_886e19efaa_o.jpg"&gt;&lt;/a&gt;
+
+&lt;?php
+    } else {
+        //echo "Photo not found";
+        //Photo wasn't found, therefore we check the record to see if this is news
+        $file_handle = fopen($date_file, 'a+');
+
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
+        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;flickr&amp;quot; ) {
+            //Then we have an entry in our table, print that date.
+            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+
+            $record_found = &amp;quot;True&amp;quot;;
+            //echo &amp;quot;We have an entry in our table&amp;quot;;
+            break;
+        } else {
+            $record_found = &amp;quot;False&amp;quot;;
+        }
+        //echo &amp;quot;We are in the while loop.&amp;quot;;
+    }
+
+    //echo $record_found;
+
+    if ($record_found != &amp;quot;True&amp;quot;) {
+        //The file lacks an entry, we should make one, then print it.
+        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
+        $entry = &amp;quot;flickr&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
+        fwrite($file_handle, $entry);
+        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+    }
+    fclose($file_handle);
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;
+&lt;h4&gt;Picasa:&lt;/h4&gt;
+
+&lt;?php
+    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
+    if (@fclose(@fopen("http://lh6.ggpht.com/_UOjTrSYk4Hs/Sv9QNMo-IvI/AAAAAAAAOAI/OdpZgVWXyNU/PostedAndDeleted.jpg", "r"))) {
+        //$file_handle = fopen($date_file, 'w');
+        //fwrite($file_handle, "Test");
+        //fclose($file_handle);
+?&gt;
+&lt;a href="http://lh6.ggpht.com/_UOjTrSYk4Hs/Sv9QNMo-IvI/AAAAAAAAOAI/OdpZgVWXyNU/PostedAndDeleted.jpg"&gt;&lt;img src="http://lh6.ggpht.com/_UOjTrSYk4Hs/Sv9QNMo-IvI/AAAAAAAAOAI/OdpZgVWXyNU/PostedAndDeleted.jpg"&gt;&lt;/a&gt;
+
+&lt;?php
+    } else {
+        //echo "Photo not found";
+        //Photo wasn't found, therefore we check the record to see if this is news
+        $file_handle = fopen($date_file, 'a+');
+
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
+        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;picasa&amp;quot; ) {
+            //Then we have an entry in our table, print that date.
+            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+            $record_found = &amp;quot;True&amp;quot;;
+            //echo &amp;quot;We have an entry in our table&amp;quot;;
+            break;
+        } else {
+            $record_found = &amp;quot;False&amp;quot;;
+        }
+        //echo &amp;quot;We are in the while loop.&amp;quot;;
+    }
+
+    //echo $record_found;
+
+    if ($record_found != &amp;quot;True&amp;quot;) {
+        //The file lacks an entry, we should make one, then print it.
+        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
+        $entry = &amp;quot;picasa&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
+        fwrite($file_handle, $entry);
+        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+    }
+    fclose($file_handle);
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;
+&lt;h4&gt;MySpace:&lt;/h4&gt;
+
+&lt;?php
+    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
+    if (@fclose(@fopen("http://c3.ac-images.myspacecdn.com/images02/48/l_45a08ba940b2424a8f28f609e4c855ca.jpg", "r"))) {
+        //$file_handle = fopen($date_file, 'w');
+        //fwrite($file_handle, "Test");
+        //fclose($file_handle);
+?&gt;
+&lt;a href="http://c3.ac-images.myspacecdn.com/images02/48/l_45a08ba940b2424a8f28f609e4c855ca.jpg"&gt;&lt;img src="http://c3.ac-images.myspacecdn.com/images02/48/l_45a08ba940b2424a8f28f609e4c855ca.jpg"&gt;&lt;/a&gt;
+
+&lt;?php
+    } else {
+        //echo "Photo not found";
+        //Photo wasn't found, therefore we check the record to see if this is news
+        $file_handle = fopen($date_file, 'a+');
+
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
+        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;myspace&amp;quot; ) {
+            //Then we have an entry in our table, print that date.
+            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+            $record_found = &amp;quot;True&amp;quot;;
+            //echo &amp;quot;We have an entry in our table&amp;quot;;
+            break;
+        } else {
+            $record_found = &amp;quot;False&amp;quot;;
+        }
+        //echo &amp;quot;We are in the while loop.&amp;quot;;
+    }
+
+    //echo $record_found;
+
+    if ($record_found != &amp;quot;True&amp;quot;) {
+        //The file lacks an entry, we should make one, then print it.
+        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
+        $entry = &amp;quot;myspace&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
+        fwrite($file_handle, $entry);
+        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+    }
+    fclose($file_handle);
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;
+&lt;h4&gt;Photobucket:&lt;/h4&gt;
+
+&lt;?php
+    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
+    if (@fclose(@fopen("http://i900.photobucket.com/albums/ac202/mlissner/PostedAndDeleted.jpg?t=1258257985", "r"))) {
+        //$file_handle = fopen($date_file, 'w');
+        //fwrite($file_handle, "Test");
+        //fclose($file_handle);
+?&gt;
+&lt;a href="http://i900.photobucket.com/albums/ac202/mlissner/PostedAndDeleted.jpg?t=1258257985"&gt;&lt;img src="http://i900.photobucket.com/albums/ac202/mlissner/PostedAndDeleted.jpg?t=1258257985"&gt;&lt;/a&gt;
+
+&lt;?php
+    } else {
+        //echo "Photo not found";
+        //Photo wasn't found, therefore we check the record to see if this is news
+        $file_handle = fopen($date_file, 'a+');
+
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
+        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;photobucket&amp;quot; ) {
+            //Then we have an entry in our table, print that date.
+            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+            $record_found = &amp;quot;True&amp;quot;;
+            //echo &amp;quot;We have an entry in our table&amp;quot;;
+            break;
+        } else {
+            $record_found = &amp;quot;False&amp;quot;;
+        }
+        //echo &amp;quot;We are in the while loop.&amp;quot;;
+    }
+
+    //echo $record_found;
+
+    if ($record_found != &amp;quot;True&amp;quot;) {
+        //The file lacks an entry, we should make one, then print it.
+        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
+        $entry = &amp;quot;photobucket&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
+        fwrite($file_handle, $entry);
+        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+    }
+    fclose($file_handle);
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;
+&lt;h4&gt;Shutterfly:&lt;/h4&gt;
+
+&lt;?php
+    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
+    if (@fclose(@fopen("http://im1.shutterfly.com/media/47b9cf35b3127ccef8c9be9d18a800000040O00ActW7Ro4cuWQPbz4W/cC/f%3D0/ps%3D50/r%3D0/rx%3D720/ry%3D480/", "r"))) {
+        //$file_handle = fopen($date_file, 'w');
+        //fwrite($file_handle, "Test");
+        //fclose($file_handle);
+?&gt;
+&lt;a href="http://im1.shutterfly.com/media/47b9cf35b3127ccef8c9be9d18a800000040O00ActW7Ro4cuWQPbz4W/cC/f%3D0/ps%3D50/r%3D0/rx%3D720/ry%3D480/"&gt;&lt;img src="http://im1.shutterfly.com/media/47b9cf35b3127ccef8c9be9d18a800000040O00ActW7Ro4cuWQPbz4W/cC/f%3D0/ps%3D50/r%3D0/rx%3D720/ry%3D480/"&gt;&lt;/a&gt;
+
+&lt;?php
+    } else {
+        //echo "Photo not found";
+        //Photo wasn't found, therefore we check the record to see if this is news
+        $file_handle = fopen($date_file, 'a+');
+
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
+        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;shutterfly&amp;quot; ) {
+            //Then we have an entry in our table, print that date.
+            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+            $record_found = &amp;quot;True&amp;quot;;
+            //echo &amp;quot;We have an entry in our table&amp;quot;;
+            break;
+        } else {
+            $record_found = &amp;quot;False&amp;quot;;
+        }
+        //echo &amp;quot;We are in the while loop.&amp;quot;;
+    }
+
+    //echo $record_found;
+
+    if ($record_found != &amp;quot;True&amp;quot;) {
+        //The file lacks an entry, we should make one, then print it.
+        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
+        $entry = &amp;quot;shutterfly&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
+        fwrite($file_handle, $entry);
+        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+    }
+    fclose($file_handle);
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;
+&lt;h4&gt;Twitpic:&lt;/h4&gt;
+
+&lt;?php
+    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
+    if (@fclose(@fopen("http://s3.amazonaws.com/twitpic/photos/full/42974767.jpg?AWSAccessKeyId=0ZRYP5X5F6FSMBCCSE82&amp;Expires=1258259853&amp;Signature=kAS%2F430H9o5nXYqfSjVGx4mRO7U%3D", "r"))) {
+        //$file_handle = fopen($date_file, 'w');
+        //fwrite($file_handle, "Test");
+        //fclose($file_handle);
+?&gt;
+&lt;a href="http://s3.amazonaws.com/twitpic/photos/full/42974767.jpg?AWSAccessKeyId=0ZRYP5X5F6FSMBCCSE82&amp;Expires=1258259853&amp;Signature=kAS%2F430H9o5nXYqfSjVGx4mRO7U%3D"&gt;&lt;img src="http://s3.amazonaws.com/twitpic/photos/full/42974767.jpg?AWSAccessKeyId=0ZRYP5X5F6FSMBCCSE82&amp;Expires=1258259853&amp;Signature=kAS%2F430H9o5nXYqfSjVGx4mRO7U%3D"&gt;&lt;/a&gt;
+
+&lt;?php
+    } else {
+        //echo "Photo not found";
+        //Photo wasn't found, therefore we check the record to see if this is news
+        $file_handle = fopen($date_file, 'a+');
+
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
+        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;twitpic&amp;quot; ) {
+            //Then we have an entry in our table, print that date.
+            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+            $record_found = &amp;quot;True&amp;quot;;
+            //echo &amp;quot;We have an entry in our table&amp;quot;;
+            break;
+        } else {
+            $record_found = &amp;quot;False&amp;quot;;
+        }
+        //echo &amp;quot;We are in the while loop.&amp;quot;;
+    }
+
+    //echo $record_found;
+
+    if ($record_found != &amp;quot;True&amp;quot;) {
+        //The file lacks an entry, we should make one, then print it.
+        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
+        $entry = &amp;quot;twitpic&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
+        fwrite($file_handle, $entry);
+        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+    }
+    fclose($file_handle);
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;
+&lt;h4&gt;Walmart:&lt;/h4&gt;
+
+&lt;?php
+    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
+    if (@fclose(@fopen("http://images.photos1.walmart.com/232323232%7Ffp432%3B4%3Enu%3D3%3A%3A2%3E%3A8%3A%3E238%3EWSNRCG%3D326634885%3B329nu0mrj", "r"))) {
+        //$file_handle = fopen($date_file, 'w');
+        //fwrite($file_handle, "Test");
+        //fclose($file_handle);
+?&gt;
+&lt;a href="http://images.photos1.walmart.com/232323232%7Ffp432%3B4%3Enu%3D3%3A%3A2%3E%3A8%3A%3E238%3EWSNRCG%3D326634885%3B329nu0mrj"&gt;&lt;img src="http://images.photos1.walmart.com/232323232%7Ffp432%3B4%3Enu%3D3%3A%3A2%3E%3A8%3A%3E238%3EWSNRCG%3D326634885%3B329nu0mrj"&gt;&lt;/a&gt;
+
+&lt;?php
+    } else {
+        //echo "Photo not found";
+        //Photo wasn't found, therefore we check the record to see if this is news
+        $file_handle = fopen($date_file, 'a+');
+
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
+        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;walmart&amp;quot; ) {
+            //Then we have an entry in our table, print that date.
+            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+            $record_found = &amp;quot;True&amp;quot;;
+            //echo &amp;quot;We have an entry in our table&amp;quot;;
+            break;
+        } else {
+            $record_found = &amp;quot;False&amp;quot;;
+        }
+        //echo &amp;quot;We are in the while loop.&amp;quot;;
+    }
+
+    //echo $record_found;
+
+    if ($record_found != &amp;quot;True&amp;quot;) {
+        //The file lacks an entry, we should make one, then print it.
+        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
+        $entry = &amp;quot;walmart&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
+        fwrite($file_handle, $entry);
+        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+    }
+    fclose($file_handle);
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;
+&lt;h4&gt;Google Orkut (added 2010-01-28 - disregard the date in the image&amp;nbsp;itself)&lt;/h4&gt;
+
+&lt;?php
+    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
+    if (@fclose(@fopen("http://images.orkut.com/orkut/photos/NwAAAA40TqrVmtf2vIA1oouDdb9vUTcjWDAQqVo_mBa45mvjdqMPiHhSaHxekFNT596b5sVYh593XRK-5Nquk0_WOQMAm1T1UJmPN1ZDUab24PgUE8b4ZMm09Mjj.jpg", "r"))) {
+        //$file_handle = fopen($date_file, 'w');
+        //fwrite($file_handle, "Test");
+        //fclose($file_handle);
+?&gt;
+&lt;a href="http://images.orkut.com/orkut/photos/NwAAAA40TqrVmtf2vIA1oouDdb9vUTcjWDAQqVo_mBa45mvjdqMPiHhSaHxekFNT596b5sVYh593XRK-5Nquk0_WOQMAm1T1UJmPN1ZDUab24PgUE8b4ZMm09Mjj.jpg"&gt;&lt;img src="http://images.orkut.com/orkut/photos/NwAAAA40TqrVmtf2vIA1oouDdb9vUTcjWDAQqVo_mBa45mvjdqMPiHhSaHxekFNT596b5sVYh593XRK-5Nquk0_WOQMAm1T1UJmPN1ZDUab24PgUE8b4ZMm09Mjj.jpg"&gt;&lt;/a&gt;
+
+&lt;?php
+    } else {
+        //echo "Photo not found";
+        //Photo wasn't found, therefore we check the record to see if this is news
+        $file_handle = fopen($date_file, 'a+');
+
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
+        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;orkut&amp;quot; ) {
+            //Then we have an entry in our table, print that date.
+            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+            $record_found = &amp;quot;True&amp;quot;;
+            //echo &amp;quot;We have an entry in our table&amp;quot;;
+            break;
+        } else {
+            $record_found = &amp;quot;False&amp;quot;;
+        }
+        //echo &amp;quot;We are in the while loop.&amp;quot;;
+    }
+
+    //echo $record_found;
+
+    if ($record_found != &amp;quot;True&amp;quot;) {
+        //The file lacks an entry, we should make one, then print it.
+        $entry = &amp;quot;orkut&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
+        fwrite($file_handle, $entry);
+        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+    }
+    fclose($file_handle);
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;
+&lt;h4&gt;Drop.io (added 08 March&amp;nbsp;2010)&lt;/h4&gt;
+
+&lt;?php
+    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
+    if (@fclose(@fopen("http://stlth.s3.amazonaws.com/assets/production/f449e7e0-ed92-012b-5667-fd14949c244a/bf4e59f0-0d07-012d-28da-f1a36935425c/PostedAndDeleted_large.jpg?Signature=Ud3VvGCtqoJHKRlHRd14S17GC6E%3D&amp;Expires=1268071274&amp;AWSAccessKeyId=1DHMN2J6JW2RM0N4PC82", "r"))) {
+        //$file_handle = fopen($date_file, 'w');
+        //fwrite($file_handle, "Test");
+        //fclose($file_handle);
+?&gt;
+&lt;a href="http://stlth.s3.amazonaws.com/assets/production/f449e7e0-ed92-012b-5667-fd14949c244a/bf4e59f0-0d07-012d-28da-f1a36935425c/PostedAndDeleted_large.jpg?Signature=Ud3VvGCtqoJHKRlHRd14S17GC6E%3D&amp;Expires=1268071274&amp;AWSAccessKeyId=1DHMN2J6JW2RM0N4PC82"&gt;&lt;img src="http://stlth.s3.amazonaws.com/assets/production/f449e7e0-ed92-012b-5667-fd14949c244a/bf4e59f0-0d07-012d-28da-f1a36935425c/PostedAndDeleted_large.jpg?Signature=Ud3VvGCtqoJHKRlHRd14S17GC6E%3D&amp;Expires=1268071274&amp;AWSAccessKeyId=1DHMN2J6JW2RM0N4PC82"&gt;&lt;/a&gt;
+
+&lt;?php
+    } else {
+        //echo "Photo not found";
+        //Photo wasn't found, therefore we check the record to see if this is news
+        $file_handle = fopen($date_file, 'a+');
+
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
+        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;drop&amp;quot; ) {
+            //Then we have an entry in our table, print that date.
+            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+            $record_found = &amp;quot;True&amp;quot;;
+            //echo &amp;quot;We have an entry in our table&amp;quot;;
+            break;
+        } else {
+            $record_found = &amp;quot;False&amp;quot;;
+        }
+        //echo &amp;quot;We are in the while loop.&amp;quot;;
+    }
+
+    //echo $record_found;
+
+    if ($record_found != &amp;quot;True&amp;quot;) {
+        //The file lacks an entry, we should make one, then print it.
+        $entry = &amp;quot;drop&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
+        fwrite($file_handle, $entry);
+        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
+    }
+    fclose($file_handle);
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;?&amp;gt;&lt;/p&gt;</summary><category term="Walmart"></category><category term="Twitpic"></category><category term="Shutterfly"></category><category term="service"></category><category term="right to delete"></category><category term="privacy"></category><category term="Picassa"></category><category term="Photobucket"></category><category term="photo"></category><category term="Orkut"></category><category term="MySpace"></category><category term="google"></category><category term="Flickr"></category><category term="facebook"></category><category term="delete"></category></entry><entry><title>Rethinking Facebook Privacy Settings</title><link href="http://michaeljaylissner.com/posts/2009/08/17/rethinking-facebook-privacy-settings/" rel="alternate"></link><updated>2009-08-17T12:09:06+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-08-17:posts/2009/08/17/rethinking-facebook-privacy-settings/</id><summary type="html">&lt;p&gt;Ars Technica has &lt;a href="http://arstechnica.com/web/news/2009/08/meshing-social-networking-and-privacy-on-facebook.ars" target="_blank"&gt;an article&lt;/a&gt; today outlining some excellent techniques for safeguarding your privacy while using Facebook. One of the best methods explained in the article is to cordon off your friends into different groups of people, and to then set different permissions for those groups. Thus, the common technique is to put your ex-partners into one group, your friends into another, family into another, and thus down the&amp;nbsp;line.&lt;/p&gt;
+&lt;p&gt;But  in practice this technique is nigh on impossible. I have family members (such as cousins) that are close friends, and so-called friends that, really, I haven&amp;#8217;t talked to since high school. Beyond this, managing the groups is a problem too since over time, some of your friends become closer and others more&amp;nbsp;distant. &lt;/p&gt;
+&lt;p&gt;Thinking through this problem, I have come up with a better, and perhaps more obvious solution: Simply organize your Facebook friends into groups based on how much you want those people to know about you. In practice I found this to be fairly simple with only three groups: Loose Privacy, Standard Privacy, and Strict Privacy. Bosses, ex-partners and distant friends go into the Strict category, close friends and current partners go into the Loose category, and everybody else goes into the Medium&amp;nbsp;category. &lt;/p&gt;
+&lt;p&gt;Admittedly, this dumbs down the power that Facebook gives you to categorize your friends into groups, but in practice, it&amp;#8217;s much easier to maintain, since there are only three lists, and it&amp;#8217;s clear who belongs in&amp;nbsp;which.&lt;/p&gt;
+&lt;p&gt;A second group of  settings that people are likely unaware of are those that &amp;#8220;limit what types of information your friends can see about you through applications.&amp;#8221; These are important and creepy because by default, when your friends install an application, that application can see and aggregate an incredible quantity of information about you, even without your or your friend&amp;#8217;s permission or knowledge. As part of its &lt;a href="http://dotrights.org"&gt;dotrights campaign&lt;/a&gt;, the &lt;span class="caps"&gt;ACLU&lt;/span&gt; is currently working on an application that demonstrates this loophole, but for the moment, it&amp;#8217;s probably wise to adjust these&amp;nbsp;settings. &lt;/p&gt;
+&lt;p&gt;To adjust these settings so third-party applications can see as little information as possible (without your friends simply not using them), go to Settings &amp;gt; Privacy &amp;gt; Applications, and then click on the &amp;#8220;Other&amp;#8221; tab (&lt;a href="http://www.facebook.com/privacy/?view=platform&amp;tab=other" target="_blank"&gt;this link&lt;/a&gt; should also work, if you&amp;#8217;re logged in). Once on that page, uncheck all of the boxes in the first section, and save your&amp;nbsp;settings.&lt;/p&gt;</summary><category term="facebook"></category><category term="privacy"></category><category term="configuration"></category></entry><entry><title>Impossibility of Complete Privacy</title><link href="http://michaeljaylissner.com/posts/2009/07/14/impossibility-of-complete-privacy/" rel="alternate"></link><updated>2009-07-14T10:56:35+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-14:posts/2009/07/14/impossibility-of-complete-privacy/</id><summary type="html">&lt;p&gt;A short quote for you today from &lt;i&gt;&lt;a href="http://ssrn.com/abstract=721642" target="_blank"&gt;Property, Privacy and Personal Data&lt;/a&gt;&lt;/i&gt; by Paul M. Schwartz:&lt;blockquote&gt;Already in the offline world, and in no small irony, direct marketers generate and sell lists of people who have expressed an interest in protecting their privacy.&lt;/blockquote&gt;In other words, even if you don&amp;#8217;t participate, you&amp;#8217;ve participated.&amp;nbsp;Gotcha.&lt;/p&gt;</summary><category term="privacy"></category><category term="metadata"></category></entry></feed>

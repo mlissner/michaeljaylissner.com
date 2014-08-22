@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Michael Lissner" />
+        <meta name="copyright" content="Michael Lissner" />
+
+<meta name="keywords" content="CourtListener, data modeling, database, Tech, " />
+        <title>Reworking the CourtListener&nbsp;Datamodel - Michael Jay Lissner
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="http://michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://michaeljaylissner.com/"><span class=site-name>Michael Jay Lissner</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://michaeljaylissner.com">Home</a></li>
+                            <li ><a href="http://michaeljaylissner.com/pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="http://michaeljaylissner.com/categories.html">Categories</a></li>
+                            <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
+                            <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/"> Reworking the CourtListener&nbsp;Datamodel  <small> Work, iterate, work, iterate... </small>  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>Brian and I have  been hard at work the past week figuring out how to make <a href="https://www.courtlistener.com/">CourtListener</a> able to understand more that one document type. Our goal right now is to make it possible to&nbsp;add:</p>
+<ul>
+<li>oral arguments and other audio&nbsp;content,</li>
+<li>video content if it&#8217;s&nbsp;available,</li>
+<li>content from <a href="https://www.recapthelaw.org"><span class="caps">RECAP</span></a>,&nbsp;and</li>
+<li>thousands of ninth circuit briefs that Resource.org <a href="https://law.resource.org/pub/us/case/ca9/">has recently&nbsp;scanned</a></li>
+</ul>
+<p>The problem with our current database is that it&#8217;s not organized in a way that supports linkages between content. So, if we have the oral argument and the opinion from a single case, we have no way of pointing them at each other. Turns out this is a sticky&nbsp;problem. </p>
+<p>The solution we&#8217;ve come up with is an architecture like the following:
+<img src="http://michaeljaylissner.com/files/new-schema-design-compact_0.png"></p>
+<p>(we also have <a href="http://owncloud.freelawproject.org/public.php?service=files&amp;t=76ef76ec69488fb72b4d96dba4809339">a more detailed version</a> and <a href="http://owncloud.freelawproject.org/public.php?service=files&amp;t=62510f0282b06948e8c3d3b1e4946ec0">an editable version</a>)</p>
+<p>And eventually, this will also have a Case table above the docket that allows multiple dockets to be associated with a single case. For now though, that&#8217;s moot, as we don&#8217;t have anyway of figuring out which dockets go&nbsp;together. </p>
+<p>The first stage of this will be to add support for oral arguments, since they make a simple case to work with. Once that&#8217;s complete the next stage will be either to add the <span class="caps">RECAP</span> documents or those from&nbsp;Resource.org. </p>
+<h3 id="urls">URLs</h3>
+<p>Since this is such a big change, we&#8217;re also taking this opportunity to re-work our URLs. Currently, they look like&nbsp;this:</p>
+<div class="highlight"><pre><span class="o">/</span><span class="err">$</span><span class="n">court</span><span class="o">/</span><span class="err">$</span><span class="n">alpha</span><span class="o">-</span><span class="n">numeric</span><span class="o">-</span><span class="n">id</span><span class="o">/</span><span class="k">case</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">the</span><span class="o">-</span><span class="k">case</span><span class="o">/</span>
+</pre></div>
+
+
+<p>For&nbsp;example:</p>
+<div class="highlight"><pre><span class="nl">https:</span><span class="c1">//www.courtlistener.com/scotus/yjn/roe-v-wade/</span>
+</pre></div>
+
+
+<p>A few things bug me about that. First, it doesn&#8217;t tell you anything about what kind of thing you can expect to see if you click that link. Second, the alpha-numeric <span class="caps">ID</span> is kind of lame. It&#8217;s just a reference to the database primary key for the item, and we should just show that value (in this case, &#8220;yjn&#8221; means &#8220;108713&#8221;). To fix both of these issues, the new URLs will&nbsp;be:</p>
+<div class="highlight"><pre><span class="o">/</span><span class="n">opinion</span><span class="o">/</span><span class="err">$</span><span class="n">numeric</span><span class="o">-</span><span class="n">id</span><span class="o">/</span><span class="k">case</span><span class="o">-</span><span class="n">name</span><span class="o">/</span>
+</pre></div>
+
+
+<p>So:</p>
+<div class="highlight"><pre><span class="nl">https:</span><span class="c1">//www.courtlistener.com/opinion/108713/roe-v-wade/</span>
+</pre></div>
+
+
+<p>That should be easier to read and should tell you what type of item you&#8217;re about to look at. Don&#8217;t worry, the old URLs will keep working just&nbsp;fine. </p>
+<p>And the rest of the new URLs will&nbsp;be:</p>
+<div class="highlight"><pre><span class="o">/</span><span class="n">oral</span><span class="o">-</span><span class="n">argument</span><span class="o">/</span><span class="err">$</span><span class="n">numeric</span><span class="o">-</span><span class="n">id</span><span class="o">/</span><span class="k">case</span><span class="o">-</span><span class="n">name</span><span class="o">/</span>
+<span class="o">/</span><span class="n">docket</span><span class="o">/</span><span class="err">$</span><span class="n">numeric</span><span class="o">-</span><span class="n">id</span><span class="o">/</span><span class="k">case</span><span class="o">-</span><span class="n">name</span><span class="o">/</span>
+</pre></div>
+
+
+<p>and&nbsp;eventually:</p>
+<div class="highlight"><pre><span class="o">/</span><span class="n">recap</span><span class="o">/</span><span class="err">$</span><span class="n">numeric</span><span class="o">-</span><span class="n">id</span><span class="o">/</span><span class="k">case</span><span class="o">-</span><span class="n">name</span><span class="o">/</span>
+</pre></div>
+
+
+<h3 id="api"><span class="caps">API</span></h3>
+<p>We expect these changes to come with changes to the <span class="caps">API</span>, so we&#8217;ll likely be releasing <span class="caps">API</span> version 1.1 that will add suport for dockets and oral&nbsp;arguments. </p>
+<p>The current version 1.0 should keep working just fine, since we&#8217;re not changing any of the underlying data, but I expect that it will have some changes to the URLs and things like that. I&#8217;ll be posting more about this in <a href="http://lists.freelawproject.org/cgi-bin/mailman/listinfo/dev">the CourtListener dev list.</a> as the changes become more clear and as we sort out what a fair policy is for the deprecation of old&nbsp;APIs. </p>
+            <aside>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="http://michaeljaylissner.com/posts/2013/11/27/our-new-zealand-blog/" title="Previous: Our New Zealand&nbsp;Blog">Our New Zealand&nbsp;Blog</a></li>
+            </ul>
+            </nav>
+            </aside>
+<section>
+<hr/>
+<p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2" 
+                href="http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel//#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+        var disqus_identifier = 'http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/';
+    var disqus_url = 'http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2014-06-18T00:00:00">Jun 18, 2014</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Tech-ref">Tech</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#CourtListener-ref">CourtListener
+                    <span>2</span>
+</a></li>
+                <li><a href="/tags.html#data-modeling-ref">data modeling
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#database-ref">database
+                    <span>3</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+    </div>
+    </article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Unless mentioned otherwise, all material on this site is <a href="about#license">licensed</a> under a Creative Commons copyright or the GNU Affero GPL. <a href="about#privacy">Privacy Policy</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    </body>
+</html>

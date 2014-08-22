@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Michael Lissner" />
+        <meta name="copyright" content="Michael Lissner" />
+
+<meta name="keywords" content="ubuntu, Linux, Tech, " />
+        <title>Wake Your Computer by <span class="caps">USB</span> - Michael Jay Lissner
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="http://michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://michaeljaylissner.com/"><span class=site-name>Michael Jay Lissner</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://michaeljaylissner.com">Home</a></li>
+                            <li ><a href="http://michaeljaylissner.com/pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="http://michaeljaylissner.com/categories.html">Categories</a></li>
+                            <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
+                            <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/"> Wake Your Computer by <span class="caps">USB</span>  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>I recently began using my laptop at my desk with a <span class="caps">USB</span> keyboard and mouse, 
+and I thought I would explain how to set up Ubuntu so that <span class="caps">USB</span> peripherals 
+will wake up your computer from sleep mode. This is convenient if you have 
+your laptop set up such that the lid is closed and&nbsp;inaccessible.</p>
+<p>In Ubuntu, the way to set this up is to edit the file located at 
+<code>/proc/acpi/wakeup</code>. To see the current contents of this file do&nbsp;this:</p>
+<div class="highlight"><pre>% cat /proc/acpi/wakeup
+Device  S-state   Status   Sysfs node
+P0P2      S4     disabled  
+P0P1      S4     disabled  pci:0000:00:1e.0
+MC97      S4     disabled  
+HDAC      S4     disabled  pci:0000:00:1b.0
+P0P4      S4     disabled  pci:0000:00:1c.0
+P0P5      S4     disabled  pci:0000:00:1c.1
+P0P7      S4     disabled  
+P0P8      S4     disabled  
+P0P9      S4     disabled  
+USB0      S3     disabled  pci:0000:00:1d.0
+USB1      S3     disabled  pci:0000:00:1d.1
+USB2      S3     disabled  pci:0000:00:1d.2
+USB3      S3     disabled  pci:0000:00:1d.3
+EUSB      S3     disabled  pci:0000:00:1d.7
+P0P6      S4     disabled  pci:0000:00:1c.2
+SLPB      S4    *enabled
+</pre></div>
+
+
+<p>This shows you a number of devices, most of which I don&#8217;t claim to 
+understand. The ones to notice are the <span class="caps">USB</span> ones, which you will see are 
+disabled by&nbsp;default.</p>
+<p>Once these are toggled on, your computer will wake up from sleep when <span class="caps">USB</span> 
+peripherals are used. To toggle one of these on, as root,&nbsp;run:</p>
+<div class="highlight"><pre><span class="nb">echo</span> <span class="s2">&quot;USB0&quot;</span> &gt; /proc/acpi/wakeup
+</pre></div>
+
+
+<p>This will toggle <span class="caps">USB0</span> from disabled to enabled. To check this, 
+run <code>cat /proc/acpi/wakeup</code> again. You should see that it&#8217;s enabled, 
+and you should be able to test this by suspending your&nbsp;computer.</p>
+<p>This will set up your computer to wake up from <span class="caps">USB</span>&#8230;for now. To make it 
+work after your computer has been restarted, you will need to write a short 
+init script named wake.sh with the following&nbsp;contents:</p>
+<div class="highlight"><pre><span class="c">#!/bin/bash</span>
+<span class="nb">echo</span> <span class="s2">&quot;USB0&quot;</span> &gt; /proc/acpi/wakeup
+</pre></div>
+
+
+<p>Save this file to <code>/etc/init.d</code>, and make it executable by&nbsp;running:</p>
+<div class="highlight"><pre>chmod +x wake.sh
+</pre></div>
+
+
+<p>Finally, once this file is in <code>/etc/init.d</code>, and is executable, 
+as root&nbsp;run:</p>
+<div class="highlight"><pre>update-rc.d wake.sh defaults
+</pre></div>
+
+
+<p>That will make init know about the file, and run it at startup. Happy&nbsp;awakenings!</p>
+<p><strong>Source:</strong> <a href="http://ubuntuforums.org/showthread.php?t=711747" target="_blank">http://ubuntuforums.org/showthread.php?t=711747</a></p>
+            <aside>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="http://michaeljaylissner.com/posts/2008/07/13/the-facts-are-in-ars-technica-rocks/" title="Previous: The Facts are In - Ars Technica&nbsp;Rocks">The Facts are In - Ars Technica&nbsp;Rocks</a></li>
+ 
+                <li class="next_article"><a href="http://michaeljaylissner.com/posts/2008/07/17/my-linux-story/" title="Next: My Linux&nbsp;Story">My Linux&nbsp;Story</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+<section>
+<hr/>
+<p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2" 
+                href="http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb//#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+        var disqus_identifier = 'http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/';
+    var disqus_url = 'http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2008-07-14T20:27:57">Jul 14, 2008</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Tech-ref">Tech</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#Linux-ref">Linux
+                    <span>14</span>
+</a></li>
+                <li><a href="/tags.html#ubuntu-ref">ubuntu
+                    <span>5</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+    </div>
+    </article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Unless mentioned otherwise, all material on this site is <a href="about#license">licensed</a> under a Creative Commons copyright or the GNU Affero GPL. <a href="about#privacy">Privacy Policy</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    </body>
+</html>

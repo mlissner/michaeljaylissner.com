@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Michael Lissner" />
+        <meta name="copyright" content="Michael Lissner" />
+
+<meta name="keywords" content="security, Linux, firefox, bash, autocomplete, Tech, " />
+        <title>Script to Rid Thyself of Autocomplete = Off in&nbsp;Firefox - Michael Jay Lissner
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="http://michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://michaeljaylissner.com/"><span class=site-name>Michael Jay Lissner</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://michaeljaylissner.com">Home</a></li>
+                            <li ><a href="http://michaeljaylissner.com/pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="http://michaeljaylissner.com/categories.html">Categories</a></li>
+                            <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
+                            <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/"> Script to Rid Thyself of Autocomplete = Off in&nbsp;Firefox  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>I took some time today and wrote up a script that can be run to eliminate autocomplete=off in Firefox. It basically does the same thing as is described <a href="http://michaeljaylissner.com/blog/rid-thyself-of-autocomplete-in-firefox">here</a>, but it automates&nbsp;it. </p>
+<p>The script can be run with one of five&nbsp;arguments:</p>
+<ul>
+<li>You can choose to use find (&#8212;find) or locate (&#8212;locate) to find the files that need to be changed on your&nbsp;system;</li>
+<li>You can dictate the location of the file if you want to modify a specific one or know exactly where it&#8217;s located&nbsp;(&#8212;dictate);</li>
+<li>You can choose to use the Ubuntu default location (&#8212;default);&nbsp;or</li>
+<li>You can print the help information&nbsp;(&#8212;help)</li>
+</ul>
+<p>Once the program is run, it will make a back up, and modify it the original versions of the file. Once that&#8217;s complete, all you have to do is restart&nbsp;Firefox.</p>
+<p>It has been pointed out to me by some security folks that removing autocomplete&#8217;s functionality from the browser might not be the best thing, since it will allow you to save your passwords in the browser. There&#8217;s some truth to that: Anything that&#8217;s on your computer can be hacked. So, if you&#8217;re going to use this script, use it&nbsp;wisely.</p>
+<p>Here&#8217;s the code. I&#8217;ve attached it to this message as well. Any bugs or comments are greatly&nbsp;appreciated.</p>
+<div class="highlight"><pre><span class="c">#!/bin/bash</span>
+<span class="c"># a simple script to destroy autocomplete in linux installations.</span>
+
+
+<span class="c">##############</span>
+<span class="c"># We begin with our functions, it&#39;s not efficient, but it works</span>
+<span class="c">##############</span>
+
+<span class="c"># a function to print the help message.</span>
+<span class="k">function </span>printHelp <span class="o">{</span>
+cat <span class="s">&lt;&lt;EOF</span>
+<span class="s">NAME</span>
+<span class="s">    autocompleteDestroyer.sh</span>
+
+<span class="s">SYNOPSIS</span>
+<span class="s">    autocompleteDestroyer.sh [ --find | --default | --help | --locate | --dictate ]</span>
+
+<span class="s">OPTIONS</span>
+<span class="s">    This program will find the nsLoginManager.js file on your computer, and will fix it so that autocomplete is disabled in your installation of Firefox. Since this program will be altering your installation of Firefox, it will require your root password.</span>
+
+<span class="s">    --help     Print this help file</span>
+
+<span class="s">    --default  Attempt to use the default location of the files (/usr/lib/xulrunner*/components/nsLoginManager.js)</span>
+
+<span class="s">    --locate   Use the locate database, if installed, to find the files. This will only find the files that were added before the last time the locate database was updated (which is typically once a day). It is faster than the --find option, but might not find all versions.</span>
+
+<span class="s">    --find     Use the find command to locate the nsLoginManager.js files. This will search in /usr/lib by default. Edit the script if you would like to change this. This is the slowest, but most thorough option.</span>
+
+<span class="s">    --dictate  Allows input of a known location.</span>
+
+<span class="s">EXIT STATUS</span>
+<span class="s">    autocompleteDestroyer.sh exists with a status of 0 if it encounters no problems. An exit status of 1 means incorrect usage. An exit status of 2 indicates it was unable to find your files. An exit status of 3 indicates the user terminated the program. An exit status of 4 means it encountered problems editing your file.</span>
+
+<span class="s">BUGS</span>
+<span class="s">    If any bugs are encountered, please see michaeljaylissner.com/contact</span>
+
+<span class="s">AUTHOR AND COPYRIGHT</span>
+<span class="s">    This script was authored by Michael Lissner and is released under GNU GPLv3.</span>
+
+<span class="s">EOF</span>
+<span class="o">}</span>
+
+<span class="c"># takes an argument, and creates an array containing the files to be modified.</span>
+<span class="k">function </span>identifyEvilFiles <span class="o">{</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$1</span> <span class="o">==</span> <span class="s2">&quot;find&quot;</span> <span class="o">]</span>
+    <span class="k">then</span>
+<span class="k">        </span><span class="nv">files</span><span class="o">=</span><span class="k">$(</span>find /usr/lib -name nsLoginManager.js 2&gt; /dev/null<span class="k">)</span>
+        <span class="k">if</span> <span class="o">[[</span> ! <span class="nv">$files</span> <span class="o">]]</span>
+        <span class="k">then</span>
+            <span class="c"># Test if files has been set.</span>
+            <span class="nb">echo</span> <span class="s2">&quot;autocompleteDestroyer.sh: No files found. Try loosening the find parameter in the script, per the help file.&quot;</span>
+            <span class="nb">exit </span>2
+        <span class="k">fi</span>
+<span class="k">    elif</span> <span class="o">[</span> <span class="nv">$1</span> <span class="o">==</span> <span class="s2">&quot;default&quot;</span> <span class="o">]</span>
+    <span class="k">then</span>
+        <span class="c"># We assume the default location of nsLoginManager.js</span>
+        <span class="nv">files</span><span class="o">=</span><span class="k">$(</span>ls /usr/lib/xulrunner*/components/nsLoginManager.js 2&gt; /dev/null<span class="k">)</span>
+        <span class="k">if</span> <span class="o">[[</span> ! <span class="nv">$files</span> <span class="o">]]</span>
+        <span class="k">then</span>
+            <span class="c"># We didn&#39;t have any hits. Exit.</span>
+            <span class="nb">echo</span> <span class="s2">&quot;autocompleteDestroyer.sh: We didn&#39;t find anything at the default locations. Perhaps try the --locate or --find arguments.&quot;</span>
+            <span class="nb">exit </span>2
+        <span class="k">fi</span>
+<span class="k">    elif</span> <span class="o">[</span> <span class="nv">$1</span> <span class="o">==</span> <span class="s2">&quot;locate&quot;</span> <span class="o">]</span>
+    <span class="k">then</span>
+        <span class="c"># We run the locate command, see if we have any hits.</span>
+        <span class="nv">files</span><span class="o">=</span><span class="k">$(</span>locate -b <span class="s1">&#39;\nsLoginManager.js&#39;</span> 2&gt; /dev/null<span class="k">)</span>
+        <span class="k">if</span> <span class="o">[[</span> ! <span class="nv">$files</span> <span class="o">]]</span>
+        <span class="k">then</span>
+            <span class="c"># No hits. Exit.</span>
+            <span class="nb">echo</span> <span class="s2">&quot;autocompleteDestroyer.sh: We didn&#39;t find anything using the locate command. Perhaps try the --find argument.&quot;</span>
+            <span class="nb">exit </span>2
+        <span class="k">fi</span>
+<span class="k">    elif</span> <span class="o">[</span> <span class="nv">$1</span> <span class="o">==</span> <span class="s2">&quot;dictate&quot;</span> <span class="o">]</span>
+    <span class="k">then</span>
+        <span class="c"># &quot;Why don&#39;t you just tell me what movie you&#39;d like to see?&quot; --Kramer.</span>
+        <span class="nb">read</span> -p <span class="s2">&quot;Where is the file nsLoginManager.js located on your machine: &quot;</span> files
+        <span class="k">if</span> <span class="o">[</span> -f <span class="nv">$files</span> <span class="o">]</span>
+        <span class="k">then</span>
+            <span class="c"># Good. The file exists. We press on.</span>
+            <span class="nb">echo</span> <span class="s2">&quot;Thank you. That file exists, and we will modify it.&quot;</span>
+        <span class="k">else</span>
+<span class="k">            </span><span class="nb">echo</span> <span class="s2">&quot;autocomplete.sh: That file doesn&#39;t seem to exist. Please try again.&quot;</span>
+            <span class="nb">exit </span>2
+        <span class="k">fi</span>
+<span class="k">     fi</span>
+<span class="o">}</span>
+
+
+
+<span class="k">function </span>modifyFiles <span class="o">{</span>
+    <span class="nb">echo</span>  <span class="s2">&quot;The following files will be modified: </span>
+<span class="s2">$files &quot;</span>
+    <span class="nb">echo </span>
+<span class="nb">    read</span> -p <span class="s2">&quot;Shall we proceed (y/n): &quot;</span> proceed
+
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$proceed</span> <span class="o">==</span> <span class="s2">&quot;y&quot;</span> -o <span class="nv">$proceed</span> <span class="o">==</span> <span class="s2">&quot;Y&quot;</span> <span class="o">]</span>
+    <span class="k">then</span>
+        <span class="c"># Here we go!</span>
+        <span class="k">while </span><span class="nb">read</span> -r line
+        <span class="k">do</span>
+<span class="k">            </span><span class="nb">echo </span>Now processing <span class="nv">$line</span>
+            <span class="c">#find the function in the file, label it with FILLERWORD, then replace the first line, and delete the rest. A messy approach, but functional</span>
+            sed -i.bak <span class="s1">&#39;/[[:space:]]*_isAutocompleteDisabled[[:space:]]*:[[:space:]]*function.*{[[:space:]]*$/,/^[[:space:]]*},[[:space:]]*$/s/^/FILLERWORD/&#39;</span> <span class="nv">$line</span>
+            sed -r -i <span class="s1">&#39;s/FILLERWORD.*_isAutocomplete.*/    _isAutocompleteDisabled :  function (element) { return false; },/&#39;</span> <span class="nv">$line</span>
+            sed -i <span class="s1">&#39;/FILLERWORD/d&#39;</span> <span class="nv">$line</span>
+
+            <span class="c"># test if it worked</span>
+            grep -i -q <span class="s1">&#39;isautocompletedisabled.*return false&#39;</span> <span class="nv">$line</span>
+            <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> !<span class="o">=</span> 0 <span class="o">]</span>
+            <span class="k">then</span>
+                <span class="c"># something failed...probably. Tell the user</span>
+                <span class="nb">echo</span> <span class="s2">&quot;Unable to successfully edit the file. Exiting&quot;</span>
+                <span class="nb">exit </span>4
+            <span class="k">fi</span>
+<span class="k">        done</span> <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;$files&quot;</span>
+        <span class="nb">echo</span> <span class="s2">&quot;All the files have been processed properly. Please restart Firefox, and thanks for using this script.&quot;</span>
+        <span class="nb">exit </span>0
+    <span class="k">else</span>
+        <span class="c"># It appears they&#39;d like to abort. Let&#39;s exit.</span>
+        <span class="nb">echo</span> <span class="s2">&quot;OK. You know what to do if you change your mind.&quot;</span>
+        <span class="nb">exit </span>3
+    <span class="k">fi</span>
+
+<span class="o">}</span>
+
+
+<span class="c">#initiation sequence</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$# </span>-eq 0 -o <span class="nv">$# </span>-gt 1 <span class="o">]</span>
+<span class="k">then</span> 
+    <span class="c"># We need to give them help using the program. </span>
+    <span class="nb">echo</span> <span class="s2">&quot;autocompleteDestroyer.sh:  Invalid number of arguments.&quot;</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Usage: autocompleteDestroyer.sh [ --help | --default | --locate | --find | --dictate ] &quot;</span>
+    <span class="nb">exit </span>1
+<span class="k">elif</span> <span class="o">[[</span> <span class="nv">$EUID</span> -ne 0 <span class="o">]]</span>; 
+<span class="k">then</span>
+<span class="k">    </span><span class="nb">echo</span> <span class="s2">&quot;autoCompleteDestroyer.sh: This script must be run as root&quot;</span> 1&gt;&amp;2
+    <span class="nb">exit </span>1
+<span class="k">else</span>
+<span class="k">    case</span> <span class="nv">$1</span> in
+        --help<span class="o">)</span> printHelp;;
+        --find<span class="o">)</span> identifyEvilFiles find; modifyFiles;;
+        --default<span class="o">)</span> identifyEvilFiles default; modifyFiles;;
+        --locate<span class="o">)</span> identifyEvilFiles locate; modifyFiles;;
+        --dictate<span class="o">)</span>identifyEvilFiles dictate; modifyFiles;;
+        *<span class="o">)</span> <span class="nb">echo</span> <span class="s2">&quot;autocompleteDestroyer.sh: Invalid argument. Try the --help argument.&quot;</span>
+           <span class="nb">exit </span>1;
+    <span class="k">esac</span>
+<span class="k">fi</span>
+</pre></div>
+            <aside>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="http://michaeljaylissner.com/posts/2009/12/12/some-legal-gems/" title="Previous: Some Legal&nbsp;Gems">Some Legal&nbsp;Gems</a></li>
+ 
+                <li class="next_article"><a href="http://michaeljaylissner.com/posts/2009/12/29/cheap-metal-bike-stand/" title="Next: Cheap Metal Bike&nbsp;Stand">Cheap Metal Bike&nbsp;Stand</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+<section>
+<hr/>
+<p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2" 
+                href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox//#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+        var disqus_identifier = 'http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/';
+    var disqus_url = 'http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2009-12-15T17:41:27">Dec 15, 2009</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Tech-ref">Tech</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#autocomplete-ref">autocomplete
+                    <span>2</span>
+</a></li>
+                <li><a href="/tags.html#bash-ref">bash
+                    <span>3</span>
+</a></li>
+                <li><a href="/tags.html#firefox-ref">firefox
+                    <span>6</span>
+</a></li>
+                <li><a href="/tags.html#Linux-ref">Linux
+                    <span>14</span>
+</a></li>
+                <li><a href="/tags.html#security-ref">security
+                    <span>13</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+    </div>
+    </article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Unless mentioned otherwise, all material on this site is <a href="about#license">licensed</a> under a Creative Commons copyright or the GNU Affero GPL. <a href="about#privacy">Privacy Policy</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    </body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Michael Lissner" />
+        <meta name="copyright" content="Michael Lissner" />
+
+<meta name="keywords" content="rsnapshot, archive, backup, project, Tech, " />
+        <title>Rsnapshot Backup Solution <span class="caps">OR</span> Why Backing Up Is Hard To&nbsp;Do - Michael Jay Lissner
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="http://michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://michaeljaylissner.com/"><span class=site-name>Michael Jay Lissner</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://michaeljaylissner.com">Home</a></li>
+                            <li ><a href="http://michaeljaylissner.com/pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="http://michaeljaylissner.com/categories.html">Categories</a></li>
+                            <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
+                            <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="http://michaeljaylissner.com/posts/2008/12/09/rsnapshot-backup-solution-or-why-backing-up-is-hard-to-do/"> Rsnapshot Backup Solution <span class="caps">OR</span> Why Backing Up Is Hard To&nbsp;Do  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>I&#8217;ve been working on getting this post figured out for about five months. In this post, I am going to try to explain exactly how my backup works, and why. It&#8217;s ridiculously complicated at times, but the detail is necessary on paper in some form or&nbsp;other.</p>
+<p>For my backup system, I rely heavily on <a href="http://rsnapshot.org" target="_blank">rsnapshot</a>, which is a tool that uses rsync and some perl scripting to create snapshots of directories. Rsync is a pretty awesome tool. It functions like a simple copy/paste, except that it will check the destination directory of the paste and will only copy the necessary files. As such, it can be interrupted in the middle of a copy, and will be able to continue later where it left off. Perl is a scripting language that has been used with rsync to give it some extra&nbsp;power.</p>
+<p>This power is the ability to perform incremental backups, which is to say that if I have <span class="caps">5GB</span> of data that I backup 10 days in a row, it will only take up about <span class="caps">5GB</span> of data, total. However, if I have <span class="caps">5GB</span> of data today, an additional <span class="caps">5GB</span> tomorrow, and another <span class="caps">5GB</span> the day after, which I backup each day for ten days, it will only require a total of <span class="caps">5GB</span> of space the first day, <span class="caps">10GB</span> the second day, <span class="caps">15GB</span> the third day, and no more space after that for the remaining 7&nbsp;days.</p>
+<p>This is important if you want to backup your data on a regular basis. Since I run a server, I have several things that I must backup. I back these up on a daily, weekly, and monthly basis. The list&nbsp;includes:</p>
+<ul>
+<li>My laptop is backed up wirelessly to the server&#8217;s hard&nbsp;drive</li>
+<li>The email server gets copied to an external <span class="caps">USB</span> drive (this includes all the Zimbra configuration files as well as thousands of&nbsp;emails)</li>
+<li>The web server gets backed up to the <span class="caps">USB</span> drive (this includes the Drupal installation and the MySQL&nbsp;database)</li>
+<li>Lots of configuration files for the servers go to the <span class="caps">USB</span> drive (i.e. the /etc/&nbsp;directory)</li>
+<li>And finally, the backup configuration itself goes to the <span class="caps">USB</span>&nbsp;drive</li>
+</ul>
+<p>Each of these backups presents some challenging difficulties. For the web server, it is challenging because it is backing up MySQL, Zimbra and Drupal. In order to do this, I have to coordinate the MySQL database dump so that when the Drupal backup is triggered, it will copy the MySQL information over to the <span class="caps">USB</span> drive along with the normal Drupal information. For Zimbra, the email server has to be stopped, backed up, and then started again, which means control of the email server has to be carefully&nbsp;scripted.</p>
+<p>The laptop presents a challenge because it is the only thing that is backed up wirelessly, and in order to do so, the server must authenticate itself to the laptop before it is allowed to log in and make the copies. If that wasn&#8217;t complicated enough, in addition, the laptop needs to be set up with a static <span class="caps">IP</span> address so that the server can find it to perform the backup. Finally, the laptop needs to be <span class="caps">ON</span>, and connected to the network when the server attempts the&nbsp;backup. </p>
+<p>Once all of that is figured out logically, you have to authenticate the laptop to the server, create the scripts, backup configurations and cron files. I have attached some of these configuration files to this post, provided they don&#8217;t reveal too much of my network&nbsp;topology.</p>
+<p>One final challenge that had to be overcome was connecting the <span class="caps">USB</span> drive to the server in such a way that it would always be mounted in the same location. In addition, I learned that <span class="caps">FAT32</span> doesn&#8217;t support file system links, and so I had to format the <span class="caps">USB</span> drive as&nbsp;ext3.</p>
+<p>As of today, it&#8217;s about five months since I began this project, and I believe I can say that the backup happens flawlessly on a daily, weekly and monthly basis. There are a few things I&#8217;d like to change&nbsp;however:</p>
+<ul>
+<li><del>I&#8217;d like to get an email notification when a backup fails</del> &mdash; Done - See comment&nbsp;below.</li>
+<li><del>I&#8217;d like to begin backing up /etc/ on my laptop</del> &mdash;&nbsp;Done</li>
+<li><del>At one point, I was backing up a list of all the installed software on my system - it&#8217;d be nice to have that again</del> &mdash; Done - I wrote a python script to do&nbsp;so</li>
+<li><del>The backup is unencrypted, so anybody can take the <span class="caps">USB</span> drive and have a heck of a lot of emails. Gotta fix that.</del> &mdash; See the note below in the comments for&nbsp;details.</li>
+</ul>
+<p><strong>Files of&nbsp;Interest</strong></p>
+<ol>
+<li><a href="http://michaeljaylissner.com/archive/files/rsnapshotOpal2.conf">rsnapshot configuration</a> for my&nbsp;laptop</li>
+<li><a href="http://michaeljaylissner.com/archive/files/rsnapshotDrupal.conf">rsnapshot configuration</a> for the Drupal&nbsp;server</li>
+<li><a href="http://michaeljaylissner.com/archive/files/rsnapshotEtcHome.conf">rsnapshot configuration</a> for the backup configuration files and the /etc&nbsp;directory</li>
+<li><a href="http://michaeljaylissner.com/archive/files/rsnapshotZimbra.conf">rsnapshot configuration</a> for the Zimbra&nbsp;server</li>
+<li>scripts to <a href="http://michaeljaylissner.com/archive/files/ZimbraStop">stop</a>/<a href="http://michaeljaylissner.com/archive/files/ZimbraStart">start</a>&nbsp;Zimbra</li>
+<li>My <a href="http://michaeljaylissner.com/archive/files/cronlist.txt">cron&nbsp;file</a></li>
+</ol>
+<p>All in all, this just goes to show that backing up is a very difficult thing to do properly and automatically. It&#8217;s one thing if you have a desktop that backs up to a <span class="caps">USB</span> drive. It&#8217;s another if you have a server and a laptop. Had I known how long this would take going into it, I&#8217;m not sure I would have figured it all out. How the average computer user is supposed to figure this out is beyond&nbsp;me.</p>
+            <aside>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="http://michaeljaylissner.com/posts/2008/12/07/we-knew-it-existed-the-official-definition-of-the-internet/" title="Previous: We Knew It Existed - The Official Definition of The&nbsp;Internet">We Knew It Existed - The Official Definition of The&nbsp;Internet</a></li>
+ 
+                <li class="next_article"><a href="http://michaeljaylissner.com/posts/2008/12/13/this-is-a-terrible-interface/" title="Next: Dear God, This is a Terrible&nbsp;Interface">Dear God, This is a Terrible&nbsp;Interface</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+<section>
+<hr/>
+<p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2" 
+                href="http://michaeljaylissner.com/posts/2008/12/09/rsnapshot-backup-solution-or-why-backing-up-is-hard-to-do//#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+        var disqus_identifier = 'http://michaeljaylissner.com/posts/2008/12/09/rsnapshot-backup-solution-or-why-backing-up-is-hard-to-do/';
+    var disqus_url = 'http://michaeljaylissner.com/posts/2008/12/09/rsnapshot-backup-solution-or-why-backing-up-is-hard-to-do/';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2008-12-09T22:06:48">Dec 9, 2008</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Tech-ref">Tech</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#archive-ref">archive
+                    <span>2</span>
+</a></li>
+                <li><a href="/tags.html#backup-ref">backup
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#project-ref">project
+                    <span>7</span>
+</a></li>
+                <li><a href="/tags.html#rsnapshot-ref">rsnapshot
+                    <span>1</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+    </div>
+    </article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Unless mentioned otherwise, all material on this site is <a href="about#license">licensed</a> under a Creative Commons copyright or the GNU Affero GPL. <a href="about#privacy">Privacy Policy</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    </body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Michael Lissner" />
+        <meta name="copyright" content="Michael Lissner" />
+
+<meta name="keywords" content="information visualization, contra costa county, research, Tableau, data exploration, Information Visualization and Statistics, " />
+        <title>Exploratory Analysis of Service Recipients of the Contra Costa County Community Services&nbsp;Bureau - Michael Jay Lissner
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="http://michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://michaeljaylissner.com/"><span class=site-name>Michael Jay Lissner</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://michaeljaylissner.com">Home</a></li>
+                            <li ><a href="http://michaeljaylissner.com/pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="http://michaeljaylissner.com/categories.html">Categories</a></li>
+                            <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
+                            <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="http://michaeljaylissner.com/posts/2010/02/26/exploratory-analysis-of-service-recipients-of-community-services-bureau/"> Exploratory Analysis of Service Recipients of the Contra Costa County Community Services&nbsp;Bureau  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduction-and-background">Introduction and Background</a></li>
+<li><a href="#hypotheses">Hypotheses</a></li>
+<li><a href="#hypothesis-1-correlation-of-parental-involvementstability-and-developmental-scores">Hypothesis 1: Correlation of Parental Involvement/Stability and Developmental Scores</a></li>
+<li><a href="#hypothesis-2-increased-language-skills-result-in-faster-childhood">Hypothesis 2: Increased language skills result in faster childhood</a></li>
+<li><a href="#hypothesis-3-gender-and-raceethnicity-will-not-affect-the-development-of">Hypothesis 3: Gender and race/ethnicity will not affect the development of</a></li>
+<li><a href="#tool-analysis">Tool Analysis</a></li>
+<li><a href="#footnotes">Footnotes</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+
+            
+<h3 id="introduction-and-background">Introduction and Background</h3>
+<p><p>As part of my <a href="http://courses.ischool.berkeley.edu/i247/s10/schedule.html" target="_blank">information visualization</a> class at the <a href="http://ischool.berkeley.edu" target="_blank"><span class="caps">UC</span> Berkeley School of Information</a>, I have completed an exploratory analysis of the characteristics of the children and families that have received services from the Community Services Bureau (<span class="caps">CSB</span>) of the Contra Costa County Employment and Human Services Department (<a href="http://ehsd.org" target="_blank"><span class="caps">EHSD</span></a>). As indicated below, at any given time the Bureau provides subsidized childcare services to approximately 2,700 children aged zero to five that live in and around Contra Costa County. When granting services, priority is given to the neediest families and children, and thus the data should not be considered a representative sample of the county at large. With that in mind however, extrapolations could likely be made by comparing the number of children in a geographic area against the number of children analyzed herein.<p>
+<img src="/files/images/Residential%20Density%20of%20Families2.png"/></p>
+<p>The data that is used was exported from the Bureau’s <q><span class="caps">COPA</span></q> database, pseudo-anonymized by the Bureau,<a name="ref1"></a><a href="/blog/exploratory-analysis-of-service-recipients-of-community-services-bureau#fn1"><sup>1</sup></a> and then provided to me for this research. The <span class="caps">COPA</span> database is an online tool into which county workers have input vast quantities of personal information about the children and families who apply for and receive services. It has been in use since approximately 2003, and at present contains records for approximately 22,500 children. Of these children, approximately 6,600 have been given a series of developmental assessments by county employees. These assessments consist of 41 measures, which attempt to plot each child’s development as he/she progresses in the program. For the explorations I have completed here, I have averaged the scores for these measures, thus approximating the child’s developmental standing shortly after enrolling in the program.</p>
+<p>As a former employee of this Bureau, I am familiar with this data, however in the past I have not completed exploratory research as broadly as I have here.</p>
+<h3 id="hypotheses">Hypotheses</h3>
+<p><p>This is a very rich data source containing dozens of measures about both the children and the families, and I have had a difficult time determining how best to approach forming my hypotheses. After looking at many of the measures that were available in the dataset, I have formed the following three hypotheses:</p></p>
+<ol>
+<li>An increase in parental involvement and/or stability will result in improved developmental scores;</li>
+<li>Children with better language skills will have higher developmental scores; and</li>
+<li>Gender and race/ethnicity will have marginal effects on developmental scores, but the presence, absence or suspicion of a disability will.</li>
+</ol>
+<h3 id="hypothesis-1-correlation-of-parental-involvementstability-and-developmental-scores">Hypothesis 1: Correlation of Parental Involvement/Stability and Developmental Scores</h3>
+<p>In testing this hypothesis, I have used a number of measures as proxies to 
+the level of parental involvement that may be present in a child’s life. 
+The first of these measures is the presence or absence of a secondary 
+caregiver. Although I anticipated that the presence of a secondary 
+caregiver would result in higher scores, this has only been true to a 
+negligible degree.</p>
+<p>This could be a result of the eligibility process for childcare services, which prioritizes a low ratio of family size to dollars earned in a family. This priority might create an incentive to report that there is a secondary caregiver in the child’s life, even when there is not. A less pessimistic explanation could be that a child is able to develop equally well regardless of whether they have one or two caregivers.</p>
+<p><img src="/files/images/By%20Secondary%20Caregiver.png"/></p>
+<p>In a similar vein, I examined if there was a correlation between family size and the developmental scores of a child. As can be seen below, no correlation seems to exist in this dataset. An explanation for this could be that the added difficulty a caregiver might experience taking care of a larger family might be equally offset by the additional attention and stimulus a larger family provides to a child.</p>
+<p><img src="/files/images/Number%20in%20Household.png"/></p>
+<p>Another potential indicator of home stability could be age of the parent, since older parents are more likely to have stable lives. As indicated below, as the parental age increases, so too do the scores of their children.</p>
+<p><img src="/files/images/PC%20Age.preview.png"/></p>
+<p>Teen parenting is known to be very difficult, but of the 41 teen parents that were in the data set, their children do not score significantly worse on the developmental measures. An interesting fact that emerged during this analysis was that there were no teen-aged male primary caregivers in the data set of more than 6,000 primary caregivers. </p>
+<p><img src="/files/images/Teen%20Parent,%20PC%20Gender.png"/></p>
+<p>A final test that I ran on this data was to see if there was a correlation between the number of hours that a primary caregiver works and the developmental results for a child. Again, although I had expected the children of parents working as many as 12 hours/day to have lower developmental scores than those of parents working fewer hours, this was not borne out by the data. Instead, there is a downward trend as the primary caregiver worked more hours until they began working <em>more than</em> eight hours/day, at which point developmental scores begin to rise again.</p>
+<p><img src="/files/images/PC%20Hours%20Per%20Day%202.png"/></p>
+<p>Ultimately, and much to my surprise, it appears that my hypothesis — that an increase in parental involvement results in a more developmentally advanced child — is not borne out by the data. With the exception of the age of the primary caregiver, none of the proxies above seem to have strong correlations with improved developmental scores.</p>
+<h3 id="hypothesis-2-increased-language-skills-result-in-faster-childhood">Hypothesis 2: Increased language skills result in faster childhood</h3>
+<p>development</p>
+<p>This hypothesis was formed in the recognition that many children struggle in class both socially and pedagogically as a result of speaking one language at home and another at school. In testing this hypothesis, I looked at two measures: (1) the English skill of the child, as described by their primary caregiver, and (2) the geographic origin of the child’s primary language.</p>
+<p>In looking at the child’s English skill, as described by their primary caregiver, a very clear trend emerges, confirming this hypothesis: As English skills improve, children score higher on developmental assessments.</p>
+<p><img src="/files/images/English%20Skill.png"/></p>
+<p>When the primary languages are broadly binned by geographic origin, clear trends emerge in the average assessment results of the children. Although the sample sizes are small for some of the bins, it appears that children with African and European languages on average have lower developmental scores than those children that speak Spanish, English, Middle Eastern or Asian languages.</p>
+<p><img src="/files/images/Language%20Origin.png"/></p>
+<h3 id="hypothesis-3-gender-and-raceethnicity-will-not-affect-the-development-of">Hypothesis 3: Gender and race/ethnicity will not affect the development of</h3>
+<p>the children, but disability status will.</p>
+<p>Although in many cases, race/ethnicity and language are tightly coupled, my hypothesis is that race/ethnicity will not be a significant factor in the development of the children. In the chart below, I have compared race and ethnicity of children that have English and non-English as their primary language. This demonstrates that for children for whom English is their primary language, race does not play a role in their developmental advancement. For those children for whom English is their second language, significant differences can be seen between races, but this finding mirrors that above, with non-English speakers performing worse on the developmental measures.</p>
+<p><img src="/files/images/By%20Race%20and%20Language.png"/></p>
+<p>Consistent with my hypothesis, differences between child gender and developmental scores can also be considered negligible.</p>
+<p><img src="/files/images/By%20Gender.png"/></p>
+<p>I decided to examine the average development of the children against their disability status in order to determine the validity of the developmental assessments themselves. Since children that have diagnosed disabilities (indicated below as IFSPs or IEPs), should have lower developmental scores, this should serve as a useful proxy for the validity of the assessment.</p>
+<p>The data is consistent with this hypothesis, but because the assessments are generally administered by county workers that are aware of the disability status of the children, it remains unclear whether this contributes to the extreme results shown below.</p>
+<p><img src="/files/images/By%20Disability%20Status.png"/></p>
+<h3 id="tool-analysis">Tool Analysis</h3>
+<p>For this research, I have used a number of tools, few of which worked particularly well. I began this work by doing a survey of the information exploration tools that are natively available on the Linux <span class="caps">OS</span>. Unfortunately, this search ended quite quickly. I discovered a number of tools that can be used for visualization of data, particularly scientific visualization, but I was unable to find anything that had the data <em>exploration</em> features found in the Windows-based Tableau software.</p>
+<p>Because it is a $1,000 Windows-only product, I was hesitant to spend a lot of time learning the features of Tableau, but since it was my only data exploration option, I used it for the bulk of this assignment, and I have found it to be fairly intuitive and useful. I have struggled a number of times to do things that Tableau does not seem to support (such as custom gradients for color palettes), or to figure out why some right-click menus have entries that others lack. The use of right-click menus as a primary form of interaction has been a particularly difficult part of learning Tableau. I can right click anywhere on the chart I am designing, and more often than not, the menu that pops up will have features that I had not seen before, and sometimes, which I cannot find again. Similarly, after having spent a significant amount of time using Tableau, I am still not always certain what double-clicking certain things will do.</p>
+<p>A better system for this type of interaction is used by Gnumeric, which is a Linux-based spreadsheet application. In it, you can right-click a visualization, and it will allow you to edit <em>all</em> of its properties, which are divided according to axis, plot, data source, etc. With this form of interaction, it is very easy to find a setting a second time, and all of the settings are located in one central location, saving you from having to remember where to click in various charts.</p>
+<p>For this project, I had to perform data manipulation on many of the fields in the data that was provided to me. In addition to dates that Tableau could not recognize, I also had to use vlookup and averaging functions in my spreadsheet application to combine the child and family characteristics with the assessment results. I also had to complete data de-duplication, since many of the children had completed many assessments over their years receiving services. In these cases, I used filters to choose only the first assessment completed by the children, since that should be a better proxy of their development before receiving services from the Bureau.</p>
+<p>Completing this data preparation work was complicated by major problems of <span class="caps">RAM</span> scarcity. Because Tableau only works in Windows, I booted it up in a virtual machine, and provided it with a quarter of the <span class="caps">RAM</span> on my system. While this was sufficient for it to run, because I was initially working with a data set of approximately 22K records, I required quite a lot of <span class="caps">RAM</span> to do my own computations. Due to a rather unfortunate bug which crashes OpenOffice Spreadsheet when it runs out of <span class="caps">RAM</span>, I had to complete all of my data manipulation while the virtual machine was not running. This made task-switching particularly daunting. In an effort to avoid this problem, I used Gnumeric for some of the calculations, but, while it doesn’t crash when it runs out of <span class="caps">RAM</span>, it is poorly optimizated and required tens of minutes for some computations. Ultimately, in order to manipulate the data, I used a combination of OpenOffice Spreadsheet, Gnumeric, and command line tools (e.g. uniq, sort, awk).</p>
+<h3 id="footnotes">Footnotes</h3>
+<p><a name="fn1"></a><a href="/blog/exploratory-analysis-of-service-recipients-of-community-services-bureau#ref1">1.</a> Pseduo-anonymization is the process of using unique identification numbers to identify records within a database. It is distinct from true anonymization because it does not preclude re-identification of the records by way of piecing various parts of it together. True anonymization can be achieved by aggregation of such data, as I have done here.</p></p></p>
+            <aside>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="http://michaeljaylissner.com/posts/2010/02/24/using-revision-control-on-a-django-project-without-revealing-your-passwords/" title="Previous: Using Revision Control on a Django Project Without Revealing Your&nbsp;Passwords">Using Revision Control on a Django Project Without Revealing Your&nbsp;Passwords</a></li>
+ 
+                <li class="next_article"><a href="http://michaeljaylissner.com/posts/2010/03/13/designing-the-final-project/" title="Next: Designing the Final&nbsp;Project">Designing the Final&nbsp;Project</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+<section>
+<hr/>
+<p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2" 
+                href="http://michaeljaylissner.com/posts/2010/02/26/exploratory-analysis-of-service-recipients-of-community-services-bureau//#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+        var disqus_identifier = 'http://michaeljaylissner.com/posts/2010/02/26/exploratory-analysis-of-service-recipients-of-community-services-bureau/';
+    var disqus_url = 'http://michaeljaylissner.com/posts/2010/02/26/exploratory-analysis-of-service-recipients-of-community-services-bureau/';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2010-02-26T17:45:19">Feb 26, 2010</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Information-Visualization-and-Statistics-ref">Information Visualization and Statistics</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#contra-costa-county-ref">contra costa county
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#data-exploration-ref">data exploration
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#information-visualization-ref">information visualization
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#research-ref">research
+                    <span>2</span>
+</a></li>
+                <li><a href="/tags.html#Tableau-ref">Tableau
+                    <span>1</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+    </div>
+    </article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Unless mentioned otherwise, all material on this site is <a href="about#license">licensed</a> under a Creative Commons copyright or the GNU Affero GPL. <a href="about#privacy">Privacy Policy</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    </body>
+</html>

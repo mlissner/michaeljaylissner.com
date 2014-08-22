@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Michael Lissner" />
+        <meta name="copyright" content="Michael Lissner" />
+
+<meta name="keywords" content="Final Project, courtlistener.com, announcements, Tech, " />
+        <title>Announcing&nbsp;CourtListener.com - Michael Jay Lissner
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="http://michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://michaeljaylissner.com/"><span class=site-name>Michael Jay Lissner</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://michaeljaylissner.com">Home</a></li>
+                            <li ><a href="http://michaeljaylissner.com/pages/about.html">About this&nbsp;Site</a></li>
+                            <li ><a href="http://michaeljaylissner.com/categories.html">Categories</a></li>
+                            <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
+                            <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="http://michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/"> Announcing&nbsp;CourtListener.com  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>I&#8217;m elated to announce today that I am officially taking the ropes of my final project and letting it loose into the wild. It&#8217;s been seven months since development on it officially started and finally, the beta version is&nbsp;done. </p>
+<p>If you haven&#8217;t been following along, the <a href="http://courtlistener.com">project itself</a> is an open source legal research tool which allows anybody to keep up to date with federal precedents as they are set by the 13 Federal Circuit courts. Right now, it has <a href="http://courtlistener.com/coverage/">more than 130,000 documents in its corpus</a>, including almost all of the Supreme Court record dating back to 1754. Every day it downloads the latest documents within about a half hour of when each court publishes&nbsp;them.</p>
+<p>One thing we&#8217;ve focused on while building the site has making it as useful as possible for as many people as possible. Since not everybody likes getting updates in their inbox, we&#8217;ve also tied the search engine in with an Atom feed generator so that you can search for whatever you want, and then follow updates in your feed&nbsp;reader.</p>
+<p>Everything we&#8217;ve built uses a powerful boolean search engine on the backend. At present, there are <a href="http://courtlistener.com/search/advanced-techniques/">a ton of boolean connectors</a> that you can use on our site to search our corpus or create alerts and feeds. Unlike full text search that most people are familiar with, boolean search allows incredibly complex queries, such as every document mentioning Attorney General Holder that is published in the Third Circuit of Appeals (<a href="http://courtlistener.com/search/results/?q=%40court+ca3+%40doctext+holder&search=">@court ca3 @doctext holder</a>), or perhaps every document that mentions &#8220;Roe&#8221; and &#8220;Wade&#8221; within ten words of each other (<a href="http://courtlistener.com/search/results/?q=%40doctext+%22roe+wade%22~10&search=">@doctext &#8220;roe wade&#8221;~10</a>).</p>
+<p>But that&#8217;s not all. Because we also want you to be able to use this efficiently during your day-to-day searching, we&#8217;ve built an <a href="http://courtlistener.com/tools/">add-on that will work in most browsers</a>, which allows you to search CourtListener.com without first going to our&nbsp;homepage.</p>
+<p>You can also browse all of documents in our corpus, or you can go to the details page for an opinion, where you can read the text of its body without having to download a <span class="caps">PDF</span> and crank up Adobe&nbsp;Acrobat.</p>
+<p>As I mentioned earlier, this project has been designed as an open source project, so if you&#8217;re looking for something to contribute to, look no further. We have a very active <a href="http://bitbucket.org/mlissner/legal-current-awareness/issues?status=new&status=open">bug list</a> where you can dip your toes in, or if you prefer something meatier, we can cook something up specifically for&nbsp;you.</p>
+<p>I&#8217;ve greatly enjoyed working on this project so far, and I&#8217;d love to get more people using it, working on it, and recommending it to their friends. We&#8217;re already planning version 1.0, so drop me a line if you&#8217;re interested in helping out, otherwise, <a href="http://courtlistener.com">go check it out already</a>, and see all that it has to&nbsp;offer!</p>
+            <aside>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="http://michaeljaylissner.com/posts/2010/05/01/in-consideration-of-apple/" title="Previous: In consideration of&nbsp;Apple">In consideration of&nbsp;Apple</a></li>
+ 
+                <li class="next_article"><a href="http://michaeljaylissner.com/posts/2010/06/15/project-idea-breaking-the-cycle-isolating-easy-solutions-to-the-bike-theft-problem/" title="Next: Project Idea: &#8220;Breaking the Cycle: Isolating Easy Solutions to the Bike Theft&nbsp;Problem&#8221;">Project Idea: &#8220;Breaking the Cycle: Isolating Easy Solutions to the Bike Theft&nbsp;Problem&#8221;</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+<section>
+<hr/>
+<p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2" 
+                href="http://michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener//#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+        var disqus_identifier = 'http://michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/';
+    var disqus_url = 'http://michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2010-05-01T20:08:16">May 1, 2010</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Tech-ref">Tech</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#announcements-ref">announcements
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#courtlistener.com-ref">courtlistener.com
+                    <span>12</span>
+</a></li>
+                <li><a href="/tags.html#Final-Project-ref">Final Project
+                    <span>5</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+    </div>
+    </article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license">Unless mentioned otherwise, all material on this site is <a href="about#license">licensed</a> under a Creative Commons copyright or the GNU Affero GPL. <a href="about#privacy">Privacy Policy</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+<script type="text/javascript">
+    var disqus_shortname = 'michaeljaylissner';
+
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    </body>
+</html>
