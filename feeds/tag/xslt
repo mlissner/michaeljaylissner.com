@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/xslt" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2010-09-06T23:26:18+02:00</updated><entry><title>Swimlane Diagram Generator Written in XSLT</title><link href="http://michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/" rel="alternate"></link><updated>2010-09-06T23:26:18+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2010-09-06:posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/</id><summary type="html">&lt;p&gt;For the past couple years, I've been wanting to make a swimlane diagram 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://mlissner.github.io/michaeljaylissner.com/" rel="alternate"></link><link href="http://mlissner.github.io/michaeljaylissner.com/feeds/tag/xslt" rel="self"></link><id>http://mlissner.github.io/michaeljaylissner.com/</id><updated>2010-09-06T23:26:18+02:00</updated><entry><title>Swimlane Diagram Generator Written in XSLT</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/" rel="alternate"></link><updated>2010-09-06T23:26:18+02:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2010-09-06:michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/</id><summary type="html">&lt;p&gt;For the past couple years, I've been wanting to make a swimlane diagram 
 showing all of my roommates and which room they lived in. I considered 
 drawing it out by hand with a charting program, but the idea of updating it
 whenever somebody moved in or out seemed daunting, and I decided that the 
@@ -9,7 +9,7 @@ I learn and use XSLT, so I took the opportunity to write an XSLT script
 that converts the XML data to HTML, Javascript and SVG. &lt;/p&gt;
 &lt;p&gt;The final product looks something like this (anonymized with Presidential 
 info for good measure):&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://michaeljaylissner.com/archive/swimlanes/dummy.html"&gt;&lt;img alt="Diagram" src="/images/swimlane-screenshot.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://mlissner.github.io/michaeljaylissner.com/archive/swimlanes/dummy.html"&gt;&lt;img alt="Diagram" src="/images/swimlane-screenshot.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;(click through for complete demo)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For the technically inclined: The program is an XSLT script, 
 which converts the XML into HTML and Javascript. The Javascript is then 

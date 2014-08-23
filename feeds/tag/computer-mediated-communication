@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/computer-mediated-communication" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-01-07T00:00:00+01:00</updated><entry><title>Final Papers on Music Jukebox</title><link href="http://michaeljaylissner.com/posts/2009/01/07/jukebox-papers/" rel="alternate"></link><updated>2009-01-07T00:00:00+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-01-07:posts/2009/01/07/jukebox-papers/</id><summary type="html">&lt;p&gt;This semester for my &lt;a href="http://courses.ischool.berkeley.edu/i216/f08/"&gt;Computer-Mediated Communication&lt;/a&gt; class I had 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://mlissner.github.io/michaeljaylissner.com/" rel="alternate"></link><link href="http://mlissner.github.io/michaeljaylissner.com/feeds/tag/computer-mediated-communication" rel="self"></link><id>http://mlissner.github.io/michaeljaylissner.com/</id><updated>2009-01-07T00:00:00+01:00</updated><entry><title>Final Papers on Music Jukebox</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2009/01/07/jukebox-papers/" rel="alternate"></link><updated>2009-01-07T00:00:00+01:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2009-01-07:michaeljaylissner.com/posts/2009/01/07/jukebox-papers/</id><summary type="html">&lt;p&gt;This semester for my &lt;a href="http://courses.ischool.berkeley.edu/i216/f08/"&gt;Computer-Mediated Communication&lt;/a&gt; class I had 
 the opportunity to work with a couple of guys on a project aimed at solving
 a problem that we have in our society. While perhaps not the greatest 
 problem, the one we identified was how to choose music in a public location
@@ -8,12 +8,12 @@ how to encourage real-world interaction among and between those people. In
 other words, how to choose good music, and how to get people to talk to 
 each other rather than bury their nose in their computer.&lt;/p&gt;
 &lt;p&gt;To long-term readers of this blog, this may sound familiar, 
-as &lt;a href="http://michaeljaylissner.com/posts/2008/01/02/public-jukebox-for-internet-cafes/"&gt;I proposed the idea of a democratic music jukebox a while ago&lt;/a&gt;.&lt;/p&gt;
+as &lt;a href="http://mlissner.github.io/michaeljaylissner.com/posts/2008/01/02/public-jukebox-for-internet-cafes/"&gt;I proposed the idea of a democratic music jukebox a while ago&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;All in all, the project went quite well. It was a great team, 
 and we were able to write several papers explaining how such a system would
 work, and what kinds of problems it would solve. We weren't able to really
 make the system, however we were able to create a &lt;a href="http://people.ischool.berkeley.edu/~ryan/i216/jukebox-prototype/jukebox2.php"&gt;wireframe mockup&lt;/a&gt; 
 which should give you some idea of what we had in mind.&lt;/p&gt;
-&lt;p&gt;For those interested in the idea, I've attached our &lt;a href="http://michaeljaylissner.com/pdfs/cmc-final.pdf"&gt;final paper&lt;/a&gt; and 
-&lt;a href="http://michaeljaylissner.com/pdfs/cmc-poster.pdf"&gt;poster presentation&lt;/a&gt; to this blog entry. The poster itself is a bit cut up 
+&lt;p&gt;For those interested in the idea, I've attached our &lt;a href="http://mlissner.github.io/michaeljaylissner.com/pdfs/cmc-final.pdf"&gt;final paper&lt;/a&gt; and 
+&lt;a href="http://mlissner.github.io/michaeljaylissner.com/pdfs/cmc-poster.pdf"&gt;poster presentation&lt;/a&gt; to this blog entry. The poster itself is a bit cut up 
 so it could be pasted together on poster board. Apologies for that.&lt;/p&gt;</summary><category term="Computer-mediated Communication"></category><category term="ischool"></category><category term="music"></category><category term="paper"></category></entry></feed>
