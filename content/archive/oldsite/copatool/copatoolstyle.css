@@ -1,0 +1,109 @@
+/******************/
+/*   CSS: Style   */
+/******************/
+#back{
+	position:absolute;
+	top: 3px;
+	left: 3px;
+	margin: 0px;
+	z-index: 2;
+	}
+
+#forward{
+	position:absolute;
+	top:3px;
+	right:3px;
+	margin:0px;
+	z-index:2;
+	}
+
+#content{
+	margin: 10px;
+	}
+
+#hdr{
+	height:4em;;
+	border:solid #000000;
+	border-width:0px 0px 1px 0px;
+	margin:5px 0 0 0;
+	}
+
+
+
+#lh-col{
+	position: absolute;
+	top: 7em;
+	left: 10px;
+	width: 20em;
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	line-height: 130%;
+	}
+
+
+
+#rh-col{
+	margin: 0px 0px 0px 23em;
+	background: #ffffff;
+	padding: 6px;
+	position: relative;
+	}
+
+
+html,body{
+     font-family: arial, sans-serif;
+     line-height: 1.166;
+     margin: 0;
+     padding: 0;
+     border: none;
+	 font-size: 12px;
+    }
+
+
+a:link, a:visited, a:hover{
+     color: black;
+     text-decoration: none;
+	 font-size: 12px;
+    }
+
+a:hover {
+	text-decoration: underline;
+        }
+/* overrides decoration from previous rule for hovered links */
+
+
+h1{
+ font-family: Verdana,Arial,sans-serif;
+ font-size: 140%;
+}
+
+
+h2{
+ font-size: 220%;
+}
+
+h3{
+ font-size: 100%;
+}
+
+h4{
+ font-size: 80%;
+}
+
+h5{
+ font-size: 60%;
+}
+
+table{
+ font-size: 12px;
+}
+
+ul{
+ list-style-type: square;
+ line-height: 1.5;
+}
+
+img{
+ border: none;
+ }

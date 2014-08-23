@@ -1,0 +1,1407 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="Author" content="Michael Lissner">
+      <meta name="Description" content="A swimlane diagram of all the residents that have lived at the Fairview Foundation.">
+      <title>
+         Swimlane diagram of Fairview Foundation, from 2004-06-01 to
+         2012-08-17
+      </title><script type="text/javascript" src="raphael-min.js"></script><script type="text/javascript">
+
+                    window.onload = function() {
+
+
+        var numRooms = 5;
+        var roomNames = new Array()
+        roomNames[0] = "Master Bedroom";
+        roomNames[1] = "Middle Bedroom";
+        roomNames[2] = "Small Bedroom";
+        roomNames[3] = "Rear Bedroom";
+        roomNames[4] = "Attic";
+
+        // Layout vars
+        var headerHeight = 30; // the header height
+        var margin = 20; // the margin between rooms
+
+        // Paper vars
+        var paperMargin = 60;
+        var paperWidth = 960;
+        var paperHeight = 2999 + headerHeight + margin*2;
+
+        // Box vars
+        var width = 168;
+        var radius = 5;
+        var colors = new Array()
+
+
+        // Font vars
+        var headerFontSize = 18;
+
+                        // **************
+                        // * Make stuff *
+                        // **************
+                        // Creates the canvas
+                        var paper = Raphael("canvas", paperWidth + paperMargin, paperHeight);
+
+                        // Fills the paper object with a nice rectangle with rounded corners.
+                        paper.rect(0, 0, paperMargin+10, paperHeight, 0)
+                            .attr({fill:"#333", stroke: "none"}); //this is a gray margin on the left
+                        paper.rect(paperMargin, 0, paperWidth, paperHeight, 10)
+                            .attr({fill: "#fff", stroke: "none"}); //this is the main drawing area
+
+
+                        // Page headers
+                        var init = margin + width/2
+                        var bump = margin + width
+                        var i = 0;
+                        for (i=0; i < numRooms; i++){
+                            paper.text(paperMargin + init+bump*i, headerHeight/2 + headerFontSize/2, roomNames[i])
+                                .attr({'font-size': headerFontSize});
+                        }
+
+
+
+
+        paper.rect(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   0,
+                   headerHeight + margin + 2801,
+                   (width/1) - ((margin/4) * 0),
+                   181 - 3,
+                   radius).attr({
+                                'fill': '#71A8A3',
+                                title: 'From 2012-02-01 to 2012-07-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2801 +
+                   181/2,
+                   "John Babbott").attr({title: 'From 2012-02-01 to 2012-07-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 2525,
+                   (width/1) - ((margin/4) * 0),
+                   30 - 3,
+                   radius).attr({
+                                'fill': '#DC74FF',
+                                title: 'From 2011-05-01 to 2011-05-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2525 +
+                   30/2,
+                   "Justin Bonerface").attr({title: 'From 2011-05-01 to 2011-05-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 0,
+                   (width/1) - ((margin/4) * 0),
+                   91 - 3,
+                   radius).attr({
+                                'fill': '#FFC2A5',
+                                title: 'From 2004-06-01 to 2004-08-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   0 +
+                   91/2,
+                   "Dan Boothe").attr({title: 'From 2004-06-01 to 2004-08-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 2826,
+                   (width/1) - ((margin/4) * 0),
+                   170 - 3,
+                   radius).attr({
+                                'fill': '#A88C71',
+                                title: 'From 2012-02-26 to 2012-08-14'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2826 +
+                   170/2,
+                   "Nicolet Corliss").attr({title: 'From 2012-02-26 to 2012-08-14'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 1085,
+                   (width/1) - ((margin/4) * 0),
+                   101 - 3,
+                   radius).attr({
+                                'fill': '#AD1A23',
+                                title: 'From 2007-05-22 to 2007-08-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1085 +
+                   101/2,
+                   "Carli Cutchin").attr({title: 'From 2007-05-22 to 2007-08-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 1831,
+                   (width/1) - ((margin/4) * 0),
+                   9 - 3,
+                   radius).attr({
+                                'fill': '#AD1A23',
+                                title: 'From 2009-06-06 to 2009-06-15'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1831 +
+                   9/2,
+                   "Carli Cutchin").attr({title: 'From 2009-06-06 to 2009-06-15'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 1840,
+                   (width/1) - ((margin/4) * 0),
+                   380 - 3,
+                   radius).attr({
+                                'fill': '#AD1A23',
+                                title: 'From 2009-06-15 to 2010-06-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1840 +
+                   380/2,
+                   "Carli Cutchin").attr({title: 'From 2009-06-15 to 2010-06-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 2256,
+                   (width/1) - ((margin/4) * 0),
+                   306 - 3,
+                   radius).attr({
+                                'fill': '#AD1A23',
+                                title: 'From 2010-08-05 to 2011-06-07'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2256 +
+                   306/2,
+                   "Carli Cutchin").attr({title: 'From 2010-08-05 to 2011-06-07'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 2628,
+                   (width/1) - ((margin/4) * 0),
+                   172 - 3,
+                   radius).attr({
+                                'fill': '#AD1A23',
+                                title: 'From 2011-08-12 to 2012-01-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2628 +
+                   172/2,
+                   "Carli Cutchin").attr({title: 'From 2011-08-12 to 2012-01-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 1826,
+                   (width/1) - ((margin/4) * 0),
+                   13 - 3,
+                   radius).attr({
+                                'fill': '#FF9A9A',
+                                title: 'From 2009-06-01 to 2009-06-14'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1826 +
+                   13/2,
+                   "Hellen Dan").attr({title: 'From 2009-06-01 to 2009-06-14'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 1841,
+                   (width/1) - ((margin/4) * 0),
+                   14 - 3,
+                   radius).attr({
+                                'fill': '#FF9A9A',
+                                title: 'From 2009-06-16 to 2009-06-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1841 +
+                   14/2,
+                   "Hellen Dan").attr({title: 'From 2009-06-16 to 2009-06-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 1340,
+                   (width/1) - ((margin/4) * 0),
+                   120 - 3,
+                   radius).attr({
+                                'fill': '#FFC99A',
+                                title: 'From 2008-02-01 to 2008-05-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1340 +
+                   120/2,
+                   "Tim Felkner").attr({title: 'From 2008-02-01 to 2008-05-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 1461,
+                   (width/1) - ((margin/4) * 0),
+                   364 - 3,
+                   radius).attr({
+                                'fill': '#FFC99A',
+                                title: 'From 2008-06-01 to 2009-05-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1461 +
+                   364/2,
+                   "Tim Felkner").attr({title: 'From 2008-06-01 to 2009-05-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 5 +
+                   width * (5 - 1) +
+                   0,
+                   headerHeight + margin + 1920,
+                   (width/1) - ((margin/4) * 0),
+                   89 - 3,
+                   radius).attr({
+                                'fill': '#FFC99A',
+                                title: 'From 2009-09-03 to 2009-12-01'
+                                });
+        paper.text(paperMargin +
+                   margin * 5 +
+                   width * (5 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1920 +
+                   89/2,
+                   "Tim Felkner").attr({title: 'From 2009-09-03 to 2009-12-01'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   0,
+                   headerHeight + margin + 0,
+                   (width/2) - ((margin/4) * 1),
+                   698 - 3,
+                   radius).attr({
+                                'fill': '#CA8351',
+                                title: 'From 2004-06-01 to 2006-04-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   ((width/2) - ((margin/4) * 1))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   0 +
+                   698/2,
+                   "Rachael\nFriedlander").attr({title: 'From 2004-06-01 to 2006-04-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   (width/2) + (margin/4),
+                   headerHeight + margin + 2861,
+                   (width/2) - ((margin/4) * 1),
+                   121 - 3,
+                   radius).attr({
+                                'fill': '#64ADAF',
+                                title: 'From 2012-04-01 to 2012-07-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/2) - ((margin/4) * 1))/2  +
+                   (width/2) + (margin/4),
+                   headerHeight +
+                   margin +
+                   2861 +
+                   121/2,
+                   "Julie Gilgoff").attr({title: 'From 2012-04-01 to 2012-07-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 2563,
+                   (width/2) - ((margin/4) * 1),
+                   64 - 3,
+                   radius).attr({
+                                'fill': '#CE5603',
+                                title: 'From 2011-06-08 to 2011-08-11'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/2) - ((margin/4) * 1))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2563 +
+                   64/2,
+                   "Jojo Gray").attr({title: 'From 2011-06-08 to 2011-08-11'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   (width/2) + (margin/4),
+                   headerHeight + margin + 0,
+                   (width/2) - ((margin/4) * 1),
+                   91 - 3,
+                   radius).attr({
+                                'fill': '#FFFF6F',
+                                title: 'From 2004-06-01 to 2004-08-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   ((width/2) - ((margin/4) * 1))/2  +
+                   (width/2) + (margin/4),
+                   headerHeight +
+                   margin +
+                   0 +
+                   91/2,
+                   "Saph Hall").attr({title: 'From 2004-06-01 to 2004-08-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 92,
+                   (width/1) - ((margin/4) * 0),
+                   29 - 3,
+                   radius).attr({
+                                'fill': '#FFFF6F',
+                                title: 'From 2004-09-01 to 2004-09-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   92 +
+                   29/2,
+                   "Saph Hall").attr({title: 'From 2004-09-01 to 2004-09-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   0,
+                   headerHeight + margin + 2586,
+                   (width/1) - ((margin/4) * 0),
+                   43 - 3,
+                   radius).attr({
+                                'fill': '#7A6100',
+                                title: 'From 2011-07-01 to 2011-08-13'
+                                });
+        paper.text(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2586 +
+                   43/2,
+                   "Scott Handleman (kinda)").attr({title: 'From 2011-07-01 to 2011-08-13'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 2983,
+                   (width/1) - ((margin/4) * 0),
+                   13 - 3,
+                   radius).attr({
+                                'fill': '#BEB900',
+                                title: 'From 2012-08-01 to 2012-08-14'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2983 +
+                   13/2,
+                   "Adrian Jung").attr({title: 'From 2012-08-01 to 2012-08-14'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   ((width/3) * 1) + ((margin/4) * 1),
+                   headerHeight + margin + 1461,
+                   (width/3) - ((margin/4) * 2),
+                   1535 - 3,
+                   radius).attr({
+                                'fill': '#FF8B3A',
+                                title: 'From 2008-06-01 to 2012-08-14'
+                                });
+        paper.text(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   ((width/3) - ((margin/4) * 2))/2  +
+                   ((width/3) * 1) + ((margin/4) * 1),
+                   headerHeight +
+                   margin +
+                   1461 +
+                   1535/2,
+                   "Harry Kao").attr({title: 'From 2008-06-01 to 2012-08-14'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   ((width/3) * 2) + ((margin/4) * 2),
+                   headerHeight + margin + 2960,
+                   (width/3) - ((margin/4) * 2),
+                   36 - 3,
+                   radius).attr({
+                                'fill': '#FF6F77',
+                                title: 'From 2012-07-09 to 2012-08-14'
+                                });
+        paper.text(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   ((width/3) - ((margin/4) * 2))/2  +
+                   ((width/3) * 2) + ((margin/4) * 2),
+                   headerHeight +
+                   margin +
+                   2960 +
+                   36/2,
+                   "Jeremy\nKao").attr({title: 'From 2012-07-09 to 2012-08-14'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   0,
+                   headerHeight + margin + 0,
+                   (width/1) - ((margin/4) * 0),
+                   1063 - 3,
+                   radius).attr({
+                                'fill': '#FF6FDF',
+                                title: 'From 2004-06-01 to 2007-04-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   0 +
+                   1063/2,
+                   "Eliza\nKhuner").attr({title: 'From 2004-06-01 to 2007-04-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   0,
+                   headerHeight + margin + 1095,
+                   (width/3) - ((margin/4) * 2),
+                   1901 - 3,
+                   radius).attr({
+                                'fill': '#FF6FDF',
+                                title: 'From 2007-06-01 to 2012-08-14'
+                                });
+        paper.text(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   ((width/3) - ((margin/4) * 2))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1095 +
+                   1901/2,
+                   "Eliza\nKhuner").attr({title: 'From 2007-06-01 to 2012-08-14'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 122,
+                   (width/1) - ((margin/4) * 0),
+                   211 - 3,
+                   radius).attr({
+                                'fill': '#2AFFBB',
+                                title: 'From 2004-10-01 to 2005-04-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   122 +
+                   211/2,
+                   "Justin Laubach").attr({title: 'From 2004-10-01 to 2005-04-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 334,
+                   (width/1) - ((margin/4) * 0),
+                   303 - 3,
+                   radius).attr({
+                                'fill': '#2AFFBB',
+                                title: 'From 2005-05-01 to 2006-02-28'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   334 +
+                   303/2,
+                   "Justin Laubach").attr({title: 'From 2005-05-01 to 2006-02-28'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   0,
+                   headerHeight + margin + 2344,
+                   (width/1) - ((margin/4) * 0),
+                   241 - 3,
+                   radius).attr({
+                                'fill': '#2AB1FF',
+                                title: 'From 2010-11-01 to 2011-06-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2344 +
+                   241/2,
+                   "Robert Lawson").attr({title: 'From 2010-11-01 to 2011-06-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 5 +
+                   width * (5 - 1) +
+                   0,
+                   headerHeight + margin + 395,
+                   (width/1) - ((margin/4) * 0),
+                   136 - 3,
+                   radius).attr({
+                                'fill': '#004E7B',
+                                title: 'From 2005-07-01 to 2005-11-14'
+                                });
+        paper.text(paperMargin +
+                   margin * 5 +
+                   width * (5 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   395 +
+                   136/2,
+                   "Collin Leach").attr({title: 'From 2005-07-01 to 2005-11-14'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   0,
+                   headerHeight + margin + 1064,
+                   (width/1) - ((margin/4) * 0),
+                   29 - 3,
+                   radius).attr({
+                                'fill': '#A0DCFF',
+                                title: 'From 2007-05-01 to 2007-05-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 1 +
+                   width * (1 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1064 +
+                   29/2,
+                   "Colin Little").attr({title: 'From 2007-05-01 to 2007-05-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 0,
+                   (width/1) - ((margin/4) * 0),
+                   333 - 3,
+                   radius).attr({
+                                'fill': '#3D7474',
+                                title: 'From 2004-06-01 to 2005-04-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   0 +
+                   333/2,
+                   "Michael Lissner").attr({title: 'From 2004-06-01 to 2005-04-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 467,
+                   (width/1) - ((margin/4) * 0),
+                   702 - 3,
+                   radius).attr({
+                                'fill': '#3D7474',
+                                title: 'From 2005-09-11 to 2007-08-14'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   467 +
+                   702/2,
+                   "Michael Lissner").attr({title: 'From 2005-09-11 to 2007-08-14'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   (width/2) + (margin/4),
+                   headerHeight + margin + 1170,
+                   (width/2) - ((margin/4) * 1),
+                   1173 - 3,
+                   radius).attr({
+                                'fill': '#3D7474',
+                                title: 'From 2007-08-15 to 2010-10-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   ((width/2) - ((margin/4) * 1))/2  +
+                   (width/2) + (margin/4),
+                   headerHeight +
+                   margin +
+                   1170 +
+                   1173/2,
+                   "Michael Lissner").attr({title: 'From 2007-08-15 to 2010-10-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 5 +
+                   width * (5 - 1) +
+                   0,
+                   headerHeight + margin + 2644,
+                   (width/2) - ((margin/4) * 1),
+                   125 - 3,
+                   radius).attr({
+                                'fill': '#3D7474',
+                                title: 'From 2011-08-28 to 2011-12-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 5 +
+                   width * (5 - 1) +
+                   ((width/2) - ((margin/4) * 1))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2644 +
+                   125/2,
+                   "Michael Lissner").attr({title: 'From 2011-08-28 to 2011-12-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   0,
+                   headerHeight + margin + 2770,
+                   (width/1) - ((margin/4) * 0),
+                   30 - 3,
+                   radius).attr({
+                                'fill': '#3D7474',
+                                title: 'From 2012-01-01 to 2012-01-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2770 +
+                   30/2,
+                   "Michael Lissner").attr({title: 'From 2012-01-01 to 2012-01-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 638,
+                   (width/1) - ((margin/4) * 0),
+                   60 - 3,
+                   radius).attr({
+                                'fill': '#7C7CD2',
+                                title: 'From 2006-03-01 to 2006-04-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   638 +
+                   60/2,
+                   "Natalie Lloyd").attr({title: 'From 2006-03-01 to 2006-04-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   0,
+                   headerHeight + margin + 699,
+                   (width/2) - ((margin/4) * 1),
+                   1238 - 3,
+                   radius).attr({
+                                'fill': '#7C7CD2',
+                                title: 'From 2006-05-01 to 2009-09-20'
+                                });
+        paper.text(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   ((width/2) - ((margin/4) * 1))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   699 +
+                   1238/2,
+                   "Natalie Lloyd").attr({title: 'From 2006-05-01 to 2009-09-20'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   (width/2) + (margin/4),
+                   headerHeight + margin + 548,
+                   (width/2) - ((margin/4) * 1),
+                   150 - 3,
+                   radius).attr({
+                                'fill': '#FF81F8',
+                                title: 'From 2005-12-01 to 2006-04-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   ((width/2) - ((margin/4) * 1))/2  +
+                   (width/2) + (margin/4),
+                   headerHeight +
+                   margin +
+                   548 +
+                   150/2,
+                   "Jose Lopes").attr({title: 'From 2005-12-01 to 2006-04-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 1461,
+                   (width/1) - ((margin/4) * 0),
+                   152 - 3,
+                   radius).attr({
+                                'fill': '#F100E3',
+                                title: 'From 2008-06-01 to 2008-10-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1461 +
+                   152/2,
+                   "Thomas Lohmiller").attr({title: 'From 2008-06-01 to 2008-10-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   0,
+                   headerHeight + margin + 2630,
+                   (width/1) - ((margin/4) * 0),
+                   93 - 3,
+                   radius).attr({
+                                'fill': '#FFE300',
+                                title: 'From 2011-08-14 to 2011-11-15'
+                                });
+        paper.text(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2630 +
+                   93/2,
+                   "Rebecka Marcucci").attr({title: 'From 2011-08-14 to 2011-11-15'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   0,
+                   headerHeight + margin + 2983,
+                   (width/1) - ((margin/4) * 0),
+                   13 - 3,
+                   radius).attr({
+                                'fill': '#44FF55',
+                                title: 'From 2012-08-01 to 2012-08-14'
+                                });
+        paper.text(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2983 +
+                   13/2,
+                   "Michelle Mason").attr({title: 'From 2012-08-01 to 2012-08-14'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 699,
+                   (width/1) - ((margin/4) * 0),
+                   385 - 3,
+                   radius).attr({
+                                'fill': '#920047',
+                                title: 'From 2006-05-01 to 2007-05-21'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   699 +
+                   385/2,
+                   "Ted McCombs").attr({title: 'From 2006-05-01 to 2007-05-21'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 1187,
+                   (width/1) - ((margin/4) * 0),
+                   273 - 3,
+                   radius).attr({
+                                'fill': '#920047',
+                                title: 'From 2007-09-01 to 2008-05-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1187 +
+                   273/2,
+                   "Ted McCombs").attr({title: 'From 2007-09-01 to 2008-05-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 1614,
+                   (width/1) - ((margin/4) * 0),
+                   211 - 3,
+                   radius).attr({
+                                'fill': '#C4C4C4',
+                                title: 'From 2008-11-01 to 2009-05-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1614 +
+                   211/2,
+                   "Ryan Moon").attr({title: 'From 2008-11-01 to 2009-05-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 1856,
+                   (width/1) - ((margin/4) * 0),
+                   668 - 3,
+                   radius).attr({
+                                'fill': '#C4C4C4',
+                                title: 'From 2009-07-01 to 2011-04-30'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1856 +
+                   668/2,
+                   "Ryan Moon").attr({title: 'From 2009-07-01 to 2011-04-30'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 2556,
+                   (width/1) - ((margin/4) * 0),
+                   244 - 3,
+                   radius).attr({
+                                'fill': '#C4C4C4',
+                                title: 'From 2011-06-01 to 2012-01-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2556 +
+                   244/2,
+                   "Ryan Moon").attr({title: 'From 2011-06-01 to 2012-01-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 1170,
+                   (width/1) - ((margin/4) * 0),
+                   152 - 3,
+                   radius).attr({
+                                'fill': '#922500',
+                                title: 'From 2007-08-15 to 2008-01-14'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   1170 +
+                   152/2,
+                   "Hersh Reddy").attr({title: 'From 2007-08-15 to 2008-01-14'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   0,
+                   headerHeight + margin + 2801,
+                   (width/2) - ((margin/4) * 1),
+                   181 - 3,
+                   radius).attr({
+                                'fill': '#71A871',
+                                title: 'From 2012-02-01 to 2012-07-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 4 +
+                   width * (4 - 1) +
+                   ((width/2) - ((margin/4) * 1))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2801 +
+                   181/2,
+                   "Miles Reed").attr({title: 'From 2012-02-01 to 2012-07-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   (width/2) + (margin/4),
+                   headerHeight + margin + 2606,
+                   (width/2) - ((margin/4) * 1),
+                   21 - 3,
+                   radius).attr({
+                                'fill': '#FF0300',
+                                title: 'From 2011-07-21 to 2011-08-11'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/2) - ((margin/4) * 1))/2  +
+                   (width/2) + (margin/4),
+                   headerHeight +
+                   margin +
+                   2606 +
+                   21/2,
+                   "Sammy Sass").attr({title: 'From 2011-07-21 to 2011-08-11'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 2221,
+                   (width/1) - ((margin/4) * 0),
+                   34 - 3,
+                   radius).attr({
+                                'fill': '#00D4FF',
+                                title: 'From 2010-07-01 to 2010-08-04'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2221 +
+                   34/2,
+                   "Ellen Sharp").attr({title: 'From 2010-07-01 to 2010-08-04'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 5 +
+                   width * (5 - 1) +
+                   (width/2) + (margin/4),
+                   headerHeight + margin + 2662,
+                   (width/2) - ((margin/4) * 1),
+                   71 - 3,
+                   radius).attr({
+                                'fill': '#FF5500',
+                                title: 'From 2011-09-15 to 2011-11-25'
+                                });
+        paper.text(paperMargin +
+                   margin * 5 +
+                   width * (5 - 1) +
+                   ((width/2) - ((margin/4) * 1))/2  +
+                   (width/2) + (margin/4),
+                   headerHeight +
+                   margin +
+                   2662 +
+                   71/2,
+                   "Liz Stein").attr({title: 'From 2011-09-15 to 2011-11-25'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   0,
+                   headerHeight + margin + 334,
+                   (width/1) - ((margin/4) * 0),
+                   122 - 3,
+                   radius).attr({
+                                'fill': '#00EDFF',
+                                title: 'From 2005-05-01 to 2005-08-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 3 +
+                   width * (3 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   334 +
+                   122/2,
+                   "Stupid Mike").attr({title: 'From 2005-05-01 to 2005-08-31'});
+
+
+
+        paper.rect(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   0,
+                   headerHeight + margin + 2724,
+                   (width/1) - ((margin/4) * 0),
+                   45 - 3,
+                   radius).attr({
+                                'fill': '#00FF54',
+                                title: 'From 2011-11-16 to 2011-12-31'
+                                });
+        paper.text(paperMargin +
+                   margin * 2 +
+                   width * (2 - 1) +
+                   ((width/1) - ((margin/4) * 0))/2  +
+                   0,
+                   headerHeight +
+                   margin +
+                   2724 +
+                   45/2,
+                   "Ellie Williams").attr({title: 'From 2011-11-16 to 2011-12-31'});
+
+
+
+                        // Timelines are done in JS exclusively b/c they're very complicado.
+                        function daysInMonth(month, year) {
+                            return new Date(year, month, 0).getDate();
+                        }
+
+                        function pad(number) {
+                             return (number < 10 ? '0' : '') + number
+                        }
+
+                        /* This for loop is nuts. Essentially, it has two incrementers.
+                        The first is i, which represents the vertical location of the
+                        timeline items. The second is dateIncrementer, which is the date
+                        that gets printed.
+
+                        This loop begins at the top of the screen, then increments by the number
+                        of days in the current month printed. It ends when the end of the chart
+                        has gotten to today's date.
+
+                        Note that 2592000000 is the number of milliseconds in a week. It's here
+                        to keep the last date from printing at the bottom of the screen, where
+                        it's not useful.
+
+                        Remember too that daysInMonth uses normal month numbers (e.g. January = 1),
+                        whereas JS-native date functions use 0-indexed month numbers (e.g. January
+                        = 0).*/
+                        var today = new Date();
+                        var dateIncrementer = new Date(2004, 05, 01); //equals the move-in date
+                        for (var i = headerHeight + margin; dateIncrementer <= today - 2592000000; i = i + daysInMonth(dateIncrementer.getMonth(), dateIncrementer.getFullYear())){
+                            //write the date to the paper object if it's an odd month
+                            if (dateIncrementer.getMonth() % 2 != 0) {
+                                paper.text(paperMargin-2, i, (pad(dateIncrementer.getMonth()+1) + "/" + dateIncrementer.getFullYear()))
+                                    .attr({'text-anchor': 'end', 'fill': 'white'});
+                            }
+
+                            // increment the date by the number of days in the current month
+                            dateIncrementer.setDate(dateIncrementer.getDate() + daysInMonth(dateIncrementer.getMonth() + 1, dateIncrementer.getFullYear()));
+                        }
+
+                    };
+                </script><style type="text/css">
+                    body {
+                        background: #333;
+                        color: #fff;
+                        text-align: center;
+                        font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+                    }
+                    #canvas {
+                        height: 3069px;
+                        width: 1020px;
+                        margin: 0 auto;
+                        text-align: left;
+                    }
+                    #copy {
+                        font: 300 .7em "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+                        position: absolute;
+                        right: 1em;
+                        text-align: right;
+                    }
+                    #copy a {
+                        color: #fff;
+                    }
+                </style></head>
+   <body>
+      <h1>A Fairview Foundation History</h1>
+      <div id="canvas"></div>
+      <p id="copy">A long-overdue exploration of <a href="http://www.w3.org/TR/xslt">XSLT</a> and the <a href="http://raphaeljs.com/">Raphaël</a> JavaScript Vector Library
+      </p>
+   </body>
+</html>

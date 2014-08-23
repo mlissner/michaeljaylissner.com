@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1488.189"
+   height="2104.7244"
+   id="svg5128"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 30">
+  <defs
+     id="defs5130">
+    <marker
+       inkscape:stockid="Arrow1Mstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mstart"
+       style="overflow:visible">
+      <path
+         id="path5718"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path5712"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart-2"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5712-2"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart-0"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5712-9"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart-4"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5712-3"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart-5"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5712-1"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart-8"
+       style="overflow:visible">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5712-4"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="1338.0438"
+     inkscape:cy="1172.4301"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5133">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,1052.3621)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect7424"
+       width="1448.0925"
+       height="1250.7899"
+       x="22.941843"
+       y="-212.96654"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#2b2b2b;stroke-width:3.03592587;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect7404"
+       width="1353.9718"
+       height="1151.239"
+       x="70.002182"
+       y="-163.19107"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.53416181px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 1206.7574,778.97681 820.37767,766.32158 815.77247,623.30687 665.11573,512.24662 605.39755,384.33392 362.53426,325.65896 330.76807,254.4825 l 4.73935,-120.18563 89.2801,-75.746067 21.89683,153.367337 138.04021,69.69837 21.07451,102.7551 85.59267,-12.43578 152.17568,48.09229 73.81075,93.39186 -49.49826,98.55575"
+       id="path5144"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccc"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.53416181px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 814.86741,622.40179 55.8563,-12.67536"
+       id="path5146"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.53416181;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:2.53416181,2.53416181;stroke-dashoffset:0"
+       d="m 604.12516,382.52426 209.91096,161.27306 0,79.3566"
+       id="path5148"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.53416181;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:2.53416181,2.53416181;stroke-dashoffset:0"
+       d="m 720.60015,472.12043 84.47638,-62.7173"
+       id="path5150"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.53416181;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:2.53416179, 2.53416179;stroke-dashoffset:0"
+       d="m 424.93287,57.418234 3.83986,-159.993124"
+       id="path5152"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.53416181px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1112.2633,754.98824 -1.2799,44.7981"
+       id="path5662"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <text
+       xml:space="preserve"
+       style="font-size:30.40993881px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="1227.4585"
+       y="751.1485"
+       id="text5664"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan5666"
+         x="1227.4585"
+         y="751.1485"
+         style="font-size:22.80745506px">Bathouse </tspan><tspan
+         sodipodi:role="line"
+         x="1227.4585"
+         y="779.65784"
+         id="tspan5668"
+         style="font-size:22.80745506px">Parking</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.40993881px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="1154.7478"
+       y="769.56012"
+       id="text5670"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan5672"
+         x="1154.7478"
+         y="769.56012"
+         style="font-size:22.80745506px">1</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.534;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:2.534,2.534;stroke-dashoffset:0"
+       d="m 988.10867,772.90749 3.83982,47.35796 116.47501,31.99863"
+       id="path5676"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="1040.0563"
+       y="765.62933"
+       id="text5678"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan5680"
+         x="1040.0563"
+         y="765.62933">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="851.9043"
+       y="756.5412"
+       id="text5682"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan5684"
+         x="851.9043"
+         y="756.5412">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.40993881px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="662.77197"
+       y="546.88751"
+       id="text5686"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan5688"
+         x="662.77197"
+         y="546.88751">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.40993881px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="305.78494"
+       y="246.67928"
+       id="text5690"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan5692"
+         x="305.78494"
+         y="246.67928">6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.40993881px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="457.60144"
+       y="205.69893"
+       id="text5694"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan5696"
+         x="457.60144"
+         y="205.69893">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.40993881px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="791.84888"
+       y="391.22656"
+       id="text5698"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan5700"
+         x="791.84888"
+         y="391.22656">6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="-42.875694"
+       y="417.43845"
+       id="text5702"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.01901937,-0.99981912,0.99981912,0.01901937,0,0)"
+       inkscape:transform-center-x="-80.636541"
+       inkscape:transform-center-y="68.215886"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan5704"
+         x="-42.875694"
+         y="417.43845">Crooked Tree</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.76024854;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart)"
+       d="m 1066.1853,775.46737 c 0,0 11.5195,-127.99449 46.078,-130.55439 34.5585,-2.55989 37.1184,-3.83984 37.1184,-3.83984"
+       id="path5706"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="1154.5017"
+       y="648.75275"
+       id="text6152"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan6154"
+         x="1154.5017"
+         y="648.75275">Bathouse Trail</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="1117.3831"
+       y="861.22369"
+       id="text6156"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan6158"
+         x="1117.3831"
+         y="861.22369">Deafy Glade Parking</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="571.32355"
+       y="802.47491"
+       id="text6160"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan6162"
+         x="571.32355"
+         y="802.47491">Deafy Glade /</tspan><tspan
+         sodipodi:role="line"
+         x="571.32355"
+         y="830.98425"
+         id="tspan6164">Summit Springs Trail</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.50683236;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart)"
+       d="M 816.75603,727.14948 C 811.15627,726.7755 650.36317,704.51819 655.48296,778.34726"
+       id="path6170"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.50683236;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart)"
+       d="m 651.05196,488.45325 -114.03729,54.30346 0,0"
+       id="path6542"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="457.36954"
+       y="560.85785"
+       id="text6728"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         id="tspan6730"
+         x="457.36954"
+         y="560.85785">Milk Ranch </tspan><tspan
+         sodipodi:role="line"
+         x="457.36954"
+         y="589.36719"
+         id="tspan6732">Loop Trail</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="128.57747"
+       y="407.69064"
+       id="text6728-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         x="128.57747"
+         y="407.69064"
+         id="tspan6732-0">Crooked Tree</tspan><tspan
+         sodipodi:role="line"
+         x="128.57747"
+         y="436.19998"
+         id="tspan6760">Trail</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.50683236;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart)"
+       d="m 345.14242,329.16308 -114.03729,54.30346 0,0"
+       id="path6542-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="630.07428"
+       y="175.55249"
+       id="text6728-3-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         x="630.07428"
+         y="175.55249"
+         id="tspan6732-0-5">North Ridge</tspan><tspan
+         sodipodi:role="line"
+         x="630.07428"
+         y="204.06181"
+         id="tspan6760-2">Trail</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.50683236;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart)"
+       d="m 510.76798,238.65728 114.03728,-54.30347 0,0"
+       id="path6542-7-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#000000;fill-opacity:1;stroke:#2b2b2b;stroke-width:0.2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="path6849"
+       sodipodi:cx="376.78571"
+       sodipodi:cy="318.79074"
+       sodipodi:rx="1.4285715"
+       sodipodi:ry="1.4285715"
+       d="m 378.21428,318.79074 a 1.4285715,1.4285715 0 1 1 -2.85715,0 1.4285715,1.4285715 0 1 1 2.85715,0 z"
+       transform="matrix(2.5341618,0,0,2.5341618,-259.43617,-456.07781)"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.30609706;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart)"
+       d="m 698.47789,343.81668 40.00172,-63.69941 0,0"
+       id="path6542-7-2-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="738.79889"
+       y="251.43825"
+       id="text6728-3-4-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         x="738.79889"
+         y="251.43825"
+         id="tspan6732-0-5-7">Snow Mountain </tspan><tspan
+         sodipodi:role="line"
+         x="738.79889"
+         y="279.94757"
+         id="tspan6760-2-4">East, 7056'</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.2670809;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:1.2670809, 1.2670809;stroke-dashoffset:0"
+       d="m 692.68461,369.89068 2.71517,-16.29104"
+       id="path6903"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.50683236;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart)"
+       d="m 735.22231,380.75138 52.49336,-51.5883"
+       id="path6542-7-2-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="789.48212"
+       y="320.22266"
+       id="text6728-3-4-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         x="789.48212"
+         y="320.22266"
+         id="tspan6732-0-5-71">East Peak</tspan><tspan
+         sodipodi:role="line"
+         x="789.48212"
+         y="348.73196"
+         id="tspan6760-2-6">Trail</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.50683236;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart)"
+       d="M 889.08214,470.80461 941.5755,419.21633"
+       id="path6542-7-2-8-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+    <text
+       xml:space="preserve"
+       style="font-size:22.80745506px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Sans"
+       x="947.26923"
+       y="398.96262"
+       id="text6728-3-4-2-3"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72"><tspan
+         sodipodi:role="line"
+         x="947.26923"
+         y="398.96262"
+         id="tspan6732-0-5-71-8">Overlook</tspan><tspan
+         sodipodi:role="line"
+         x="947.26923"
+         y="427.47192"
+         id="tspan6760-2-6-8">Trail</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.50683236;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lstart-8)"
+       d="m 984.11322,810.70794 c 0,0 -274.23253,101.31289 -294.14379,28.85361"
+       id="path7001"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/mlissner/Documents/Travel/Snow Mountain/distance-map.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72" />
+  </g>
+</svg>

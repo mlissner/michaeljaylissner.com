@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>MichaelJayLissner.com  >  Home</title>
+		<meta name="author" content="Michael Lissner" >
+		<meta name="description" content="content" >
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/style.css">
+		<SCRIPT TYPE="text/javascript">
+		<!--
+		// copyright 1999 Idocs, Inc. http://www.idocs.com/tags/
+		// Distribute this script freely, but please keep this
+		// notice with the code.
+
+		var rollOverArr=new Array();
+		function setrollover(OverImgSrc,pageImageName)
+		{
+		if (! document.images)return;
+		if (pageImageName == null)
+		    pageImageName = document.images[document.images.length-1].name;
+		rollOverArr[pageImageName]=new Object;
+		rollOverArr[pageImageName].overImg = new Image;
+		rollOverArr[pageImageName].overImg.src=OverImgSrc;
+		}
+
+		function rollover(pageImageName)
+		{
+		if (! document.images)return;
+		if (! rollOverArr[pageImageName])return;
+		if (! rollOverArr[pageImageName].outImg)
+		    {
+		    rollOverArr[pageImageName].outImg = new Image;
+		    rollOverArr[pageImageName].outImg.src = document.images[pageImageName].src;
+		    }
+		document.images[pageImageName].src=rollOverArr[pageImageName].overImg.src;
+		}
+
+		function rollout(pageImageName)
+		{
+		if (! document.images)return;
+		if (! rollOverArr[pageImageName])return;
+		document.images[pageImageName].src=rollOverArr[pageImageName].outImg.src;
+		}
+		//-->
+		</SCRIPT>
+		<SCRIPT TYPE="text/javascript">
+		<!--
+		setrollover('/assets/images/buttonover-0-0.jpg',   'home');
+		setrollover('/assets/images/buttonover-1-0.jpg',   'biography');
+		setrollover('/assets/images/buttonover-2-0.jpg',   'cv');
+		setrollover('/assets/images/buttonover-3-0.jpg',   'aboutsite');
+		setrollover('/assets/images/buttonover-4-0.jpg',   'wood');
+		setrollover('/assets/images/buttonover-5-0.jpg',   'sewing');
+		setrollover('/assets/images/buttonover-6-0.jpg',   'charity');
+		setrollover('/assets/images/buttonover-7-0.jpg',   'contact');
+		//-->
+		</script>
+	</head>
+	<body>
+		<table id="fullheight" bgcolor="#211f3a">
+			<tr><td width="20%"></td>
+				<td width="800" bgcolor="#ffffff">
+			        <table id="fullheight" width="800" cellpadding="0" cellspacing="0" border="0">
+
+				  <!Begin Banner Row>
+				  <tr>
+				  <td valign="top" align="left" height="145"><div id="banner">
+				  	<table cellpadding="0" cellspacing="0" border="0">
+					  	<tr>
+					  		<td colspan="2"><img src="/assets/images/spacer.gif" height="20"></td>
+					  	</tr>
+					  		<td><img src="/assets/images/spacer.gif" width="20" height="1"></td>
+					  		<td><h1><a class="header" href="http://www.michaeljaylissner.com">MichaelJayLissner.com</a></h1></td>
+				  	</table>
+				  </td>
+				  </tr>
+				  <!End Header Row>
+
+				  <!Begin Row of Buttons>
+				  <tr>
+				  	<td valign="top" align="left" height="40">
+				  		<table cellpadding="0" cellspacing="0" border="0">
+				  			<tr>
+				  				<td>
+				  					<a href="index.htm" onMouseOver = "rollover('home')" onMouseOut = "rollout('home')">
+				  						<img src="/assets/images/button-0-0.jpg" name="home" width="76" height="40" border="none">
+				  					</a>
+				  				</td>
+				  				<td>
+				  					<a href="biography.htm" onMouseOver = "rollover('biography')" onMouseOut = "rollout('biography')">
+				  						<img src="/assets/images/button-1-0.jpg" width="115" height="40"  name="biography" border="none">
+				  					</a>
+				  				</td>
+				  				<td>
+				  					<a href="cv.htm" onMouseOver = "rollover('cv')" onMouseOut = "rollout('cv')">
+				  						<img src="/assets/images/button-2-0.jpg" width="152" height="40" name="cv" border="none">
+				  					</a>
+				  				</td>
+				  				<td>
+				  					<a href="about_site.htm" onMouseOver = "rollover('aboutsite')" onMouseOut = "rollout('aboutsite')">
+				  						<img src="/assets/images/button-3-0.jpg" width="109" height="40"  name="aboutsite" border="none">
+				  					</a>
+				  				</td>
+				  				<td>
+				  					<a href="wood.htm" onMouseOver = "rollover('wood')" onMouseOut = "rollout('wood')">
+				  						<img src="/assets/images/button-4-0.jpg" width="80" height="40" name="wood" border="none">
+				  					</a>
+				  				</td>
+				  				<td>
+				  					<a href="sewing.htm" onMouseOver = "rollover('sewing')" onMouseOut = "rollout('sewing')">
+				  						<img src="/assets/images/button-5-0.jpg" width="90" height="40" name="sewing" border="none">
+				  					</a>
+				  				</td>
+				  				<td>
+				  					<a href="charity.htm" onMouseOver = "rollover('charity')" onMouseOut = "rollout('charity')">
+				  						<img src="/assets/images/button-6-0.jpg" width="87" height="40" name="charity" border="none">
+				  					</a>
+				  				</td>
+				  				<td>
+				  					<a href="contact.htm" onMouseOver = "rollover('contact')" onMouseOut = "rollout('contact')">
+				  						<img src="/assets/images/button-7-0.jpg" width="91" height="40" name="contact" border="none">
+				  					</a>
+				  				</td>
+				  			</tr>
+				  		</table>
+				  	</td>
+				  </tr>
+				  <!End Button Row>
+
+				  <!Begin Content Row>
+				  <tr>
+				  	<td align="left" valign="top" height="100%">
+					  	<table id="content" cellpadding="0" cellspacing="0" border="0">
+					  		<tr>
+							  	<td>
+							  		<h3>Welcome to MichaelJayLissner.com</h3>
+							  		<p>Some facts Mike might not tell you about himself immediately:</p>
+							  		<ul>
+							  			<li>Mike researched and performed all his own maintenance on his 1990 Mustang.</li>
+							  			<li>He taught himself HTML, CSS and Linux.</li>
+							  			<li>Though 6'6" tall, he played soccer for 11 years - He's not good at it.</li>
+							  			<li>As a freshman, he took a neuroscience class because it sounded, "interesting."</li>
+							  			<li>He's a certified Wilderness First Responder and an Eagle Scout.</li>
+							  			<li>Operation and configuration of appliances small and large is a secret skill of his.*</li>
+							  			<li>He ran for collegiate president while abroad in Spain...he lost (by a small margin). </li>
+							  			<li>His father actually lives in Mexico.</li>
+							  		</ul>
+							  		<p>*Well, it <i>was</i> a secret.</p>
+							  		<p>The old MichaelJayLissner.com is still accessible by clicking <a href="/archive">here</a>.
+							  	</td>
+							  </tr>
+						</table>
+					</td>
+				  </tr>
+				  <!End Content Row>
+
+				  <!Begin Footer Row>
+				  <tr align="left" valign="top">
+				  	<td>
+				  		<hr>
+				  		<table id="quote" align="left" cellpadding="0" cellspacing="0" border="0">
+				  			</tr>
+				  				<td>
+				  					<script language="javascript" src="http://www.quotedb.com/quote/quote.php?action=random_quote&=&a[44]=44&a[4]=4&a[52]=52&a[76]=76&a[525]=525&a[107]=107&a[229]=229&a[87]=87&a[45]=45&a[23]=23&a[73]=73&a[421]=421&a[631]=631&a[48]=48&a[231]=231&a[336]=336&"></script>
+				  				</td>
+				  			</tr>
+				  		</table>
+				  	</td>
+				  </tr>
+				  <!End Footer Row>
+
+				</table><!End Center Column Table>
+				</td>
+				<td width="20%">
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+# m	h	dom	mon	dow	command
+0	22	*	*	*	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotOpal2.conf daily
+0	11	*	*	0	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotOpal2.conf weekly
+0	23	1	*	*	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotOpal2.conf monthly
+0	2	*	*	*	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotDrupal.conf daily
+15	2	*	*	0	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotDrupal.conf weekly
+30	2	1	*	*	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotDrupal.conf monthly
+0	3	*	*	*	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotZimbra.conf daily
+15	3	*	*	0	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotZimbra.conf weekly
+30	3	1	*	*	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotZimbra.conf monthly
+0	4	*	*	*	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotEtcHome.conf daily
+15	4	*	*	0	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotEtcHome.conf weekly
+30	4	1	*	*	/usr/bin/rsnapshot -c /home/mlissner/Backups/conf/rsnapshotEtcHome.conf monthly
+15,30,45	*	*	*	*	/usr/bin/wget -O - -q http://michaeljaylissner.com/cron.php
+50	10	*	*	*	rm /var/www/drupal/databaseBackup/database.sql.gz
+0	11	*	*	*	mysqldump -u root -p'yourpassword' --all-database | gzip > /var/www/drupal/databaseBackup/database.sql.gz
+

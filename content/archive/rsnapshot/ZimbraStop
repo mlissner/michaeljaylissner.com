@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# This script should simply stop the zimbra server.
+# 
+# That's it
+
+#Login as root to the zimbra server
+#ssh -T 192.168.1.132 <<NOMORE
+
+#Stop the zimbra server
+sudo -u zimbra /opt/zimbra/bin/zmcontrol stop
+
+#Log out of the zimbra server
+#NOMORE
+
+exit 0
