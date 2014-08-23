@@ -1,0 +1,61 @@
+/******************/
+/*   CSS: Style   */
+/******************/
+
+
+html,body{
+     font-family: arial, sans-serif;
+     line-height: 1.166;
+     margin: 0;
+     padding: 0;
+     border: none;
+	 font-size: 12px;
+    }
+
+
+a:link, a:visited, a:hover{
+     color: #006699;
+     text-decoration: none;
+	 font-size: 12px;
+    }
+
+a:hover {
+	text-decoration: underline;
+        }
+/* overrides decoration from previous rule for hovered links */
+
+
+h1{
+ font-family: Verdana,Arial,sans-serif;
+ font-size: 140%;
+}
+
+
+h2{
+ font-size: 220%;
+}
+
+h3{
+ font-size: 100%;
+}
+
+h4{
+ font-size: 80%;
+}
+
+h5{
+ font-size: 60%;
+}
+
+table{
+ font-size: 12px;
+}
+
+ul{
+ list-style-type: square;
+ line-height: 1.5;
+}
+
+img{
+ border: none;
+ }

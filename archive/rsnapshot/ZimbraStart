@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# This script should simply start the zimbra server.
+
+#Login as root to the zimbra server
+#ssh -T root@192.168.1.132  <<NOMORE
+
+#Start the zimbra server
+#su - zimbra -c 'zmcontrol start'
+
+su - zimbra -c 'zmcontrol start'
+
+#Alternate method of starting the server:
+#sudo -u zimbra /opt/zimbra/bin/zmcontrol start
+
+
+#Log out of the zimbra server
+#NOMORE
+
+exit 0

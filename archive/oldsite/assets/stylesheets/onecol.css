@@ -1,0 +1,128 @@
+/******************/
+/*   CSS: Style   */
+/******************/
+
+.thumb{
+	padding: 5px;
+	margin-left: 5px;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: arial, sans-serif;
+	line-height: 1.166;				
+	height: 100%;
+	background-color: #211f3a;
+}
+
+a.header:link, a.header:visited, a.sidebar:hover {
+	font-family: veranda, arial, sans-serif;
+	color: #002377;
+	text-decoration: none;
+	font-size: 120%;
+}
+
+
+a:link, a:visited, a:hover {
+	color: #006699;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+/* overrides decoration from previous rule for hovered links */
+
+
+h1{
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 140%;
+}			
+			
+h2 {
+	font-size: 130%;
+}
+
+h3 {
+	font-size: 120%;
+}
+
+h4 {
+	font-size: 80%;
+}
+
+h5 {
+	font-size: 60%;
+}
+
+p{
+	font-size: 80%;	
+	margin-top: 15px;
+}
+
+p.little {
+	font-size: 90%;
+	margin-top: 0px;	
+	margin-bottom: 7px;
+	color: gray;
+}
+
+ul {
+	padding-left: 25px;	
+	list-style-type: square;
+	line-height: 1.5;
+	font-size: 80%;
+}
+
+ul.tight {
+	line-height: 1;
+	list-style-type: square;
+	padding-left: 25px;
+}	
+
+img {
+	border: none;
+}
+
+#container {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	background: white;
+}
+
+#banner {
+	background: transparent url(http://www.michaeljaylissner.com/archive/oldsite/assets/images/banner6.2.jpg) no-repeat;
+	height: 100px;
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+}			
+
+#buttons{
+	background-color: white;
+	height: 30px;
+	padding: 0;
+}
+
+#content{
+	background: white;
+	padding: 32px;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+}
+
+#footer {				
+	font-size: 70%;	
+	width: 778px;
+	padding: 10px;
+	background: white;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+}

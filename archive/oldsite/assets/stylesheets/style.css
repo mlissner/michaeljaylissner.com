@@ -1,0 +1,103 @@
+/******************/
+/*   CSS: Style   */
+/******************/
+
+
+html,body{
+     font-family: arial, sans-serif;
+     line-height: 1.166;
+     margin: 0;
+     padding: 0;
+     border: none;
+     height: 100%;
+     vertical-align: top;
+    }
+
+a.header:link, a.header:visited, a.sidebar:hover
+	{
+	font-family: veranda, arial, sans-serif;
+	color: #002377;
+	text-decoration: none;
+	font-size: 120%;
+	}
+
+
+a:link, a:visited, a:hover{
+     color: #006699;
+     text-decoration: none;
+    }
+
+a:hover {
+	text-decoration: underline;
+        }
+/* overrides decoration from previous rule for hovered links */
+
+p{
+	margin-top: 2px;
+	margin-botom: 2px;
+}
+
+h1{
+ font-family: Verdana,Arial,sans-serif;
+ font-size: 140%;
+}
+
+
+h2{
+ font-size: 120%;
+}
+
+h3{
+ font-size: 100%;
+}
+
+h4{
+ font-size: 80%;
+}
+
+h5{
+ font-size: 60%;
+}
+
+ul{
+ list-style-type: square;
+ line-height: 1.5;
+}
+
+img{
+ border: none;
+ }
+
+#quote{
+ font-size: 70%;
+ margin: 3px;
+ padding: 0;
+ border: none;
+ vertical-align: bottom;
+ }
+
+#content{
+ vertical-align: top;
+ margin: 8px;
+ padding: 0;
+ border: none;
+ border-spacing: 7px;
+ min-height: 100%
+ }
+
+#fullheight{
+ height: 100%;
+ margin: 0 auto;
+ padding: 0;
+ border: none;
+ }
+
+#banner{
+ /*background: transparent url(../images/snowbanner150x800.jpg) no-repeat;*/
+ background: transparent url(../images/banner6.jpg) no-repeat;
+ width: 800px;
+ height: 145px;
+ margin: 0 auto;
+ padding: 0;
+ border: none;
+ }

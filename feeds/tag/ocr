@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/ocr" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2012-02-11T10:53:30+01:00</updated><entry><title>Adding New Fonts to Tesseract 3 OCR Engine</title><link href="http://michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/" rel="alternate"></link><updated>2012-02-11T10:53:30+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-02-11:posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/</id><summary type="html">&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; I've turned off commenting on this article because it was just a bunch of people asking for help and never getting any. If you need help with these instructions, go to Stack Overflow and ask there. If you have corrections to the article, please send them directly to me using the Contact form.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://code.google.com/p/tesseract-ocr/"&gt;Tesseract&lt;/a&gt; is a great and powerful OCR engine, but their &lt;a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3"&gt;instructions for adding a new font&lt;/a&gt; are incredibly long and complicated. At CourtListener we have to handle several unusual &lt;a href="http://en.wikipedia.org/wiki/Blackletter"&gt;blackletter fonts&lt;/a&gt;, so we had to go through this process a few times. Below I've explained the process so others may more easily add fonts to their system.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/ocr" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2012-02-11T10:53:30+01:00</updated><entry><title>Adding New Fonts to Tesseract 3 OCR Engine</title><link href="http://michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/" rel="alternate"></link><updated>2012-02-11T10:53:30+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-02-11:posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/</id><summary type="html">
+&lt;h2 id="status"&gt;Status&lt;/h2&gt;
+&lt;p&gt;I'm attempting to keep this up to date as Tesseract changes. If you have 
+questions or corrections, please send them directly using the &lt;a href="{filename}/contact.md"&gt;contact 
+page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I've turned off commenting on this article because it was just a 
+bunch of people asking for help and never getting any. If you need help 
+with these instructions, go to Stack Overflow and ask there.&lt;/p&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://code.google.com/p/tesseract-ocr/"&gt;Tesseract&lt;/a&gt; is a great and powerful OCR engine, but their &lt;a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3"&gt;instructions 
+for adding a new font&lt;/a&gt; are incredibly long and complicated. At 
+CourtListener we have to handle several unusual &lt;a href="http://en.wikipedia.org/wiki/Blackletter"&gt;blackletter fonts&lt;/a&gt;, 
+so we had to go through this process a few times. Below I've explained the 
+process so others may more easily add fonts to their system.&lt;/p&gt;
 &lt;p&gt;The process has a few major steps:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="#create-training-docs"&gt;Create training documents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#train-tesseract"&gt;Teach Tesseract about the documents&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="create-training-documents"&gt;Create training documents&lt;/h3&gt;
+&lt;h2 id="create-training-documents"&gt;Create training documents&lt;/h2&gt;
 &lt;p&gt;To create training documents, open up MS Word or LibreOffice, paste in the contents of the attached file named 'standard-training-text.txt'. This file contains the training text that is used by Tesseract for the included fonts.&lt;/p&gt;
 &lt;p&gt;Set your line spacing to at least 1.5, and space out the letters by about 1pt. using character spacing. I've attached a sample doc too, if that helps. Set the text to the font you want to use, and save it as font-name.doc.&lt;/p&gt;
 &lt;p&gt;Save the document as a PDF (call it [lang].font-name.exp0.pdf, with lang being an &lt;a href="http://www.sil.org/iso639-3/iso-639-3_Name_Index_20120203.tab"&gt;ISO-639 three letter abbreviation&lt;/a&gt; for your language), and then use the following command to convert it to a 300dpi tiff (requires imagemagick):&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;convert -density 300 -depth 4 lang.font-name.exp0.pdf lang.font-name.exp0.tif&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;You'll now have a good training image called lang.font-name.exp0.tif. If you're adding multiple fonts, or bold, italic or underline, repeat this process multiple times, creating one doc &amp;rarr; pdf &amp;rarr;  tiff per font variation.&lt;/p&gt;
-&lt;h3 id="train-tesseract"&gt;Train Tesseract&lt;/h3&gt;
+&lt;p&gt;You'll now have a good training image called lang.font-name.exp0.tif. If you're adding multiple fonts, or bold, italic or underline, repeat this process multiple times, creating one doc → pdf →  tiff per font variation.&lt;/p&gt;
+&lt;h2 id="train-tesseract"&gt;Train Tesseract&lt;/h2&gt;
 &lt;p&gt;The next step is to run tesseract over the image(s) we just created, and to see how well it can do with the new font. After it's taken its best shot, we then give it corrections. It'll provide us with a box file, which is just a file containing x,y coordinates of each letter it found along with what letter it thinks it is. So let's see what it can do:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;tesseract&lt;/span&gt; &lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exp0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tiff&lt;/span&gt; &lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exp0&lt;/span&gt; &lt;span class="n"&gt;batch&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nochop&lt;/span&gt; &lt;span class="n"&gt;makebox&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;You'll now have a file called font-name.exp0.box, and you'll need to open it in a box-file editor. There are a bunch of these &lt;a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#Box_File_Editors"&gt;on the Tesseract wiki&lt;/a&gt;. The one that works for me (on Ubuntu) is &lt;a href="http://code.google.com/p/moshpytt/"&gt;moshpytt&lt;/a&gt;, though it doesn't support multi-page tiffs. If you need to use a multi-page tiff, see &lt;a href="http://code.google.com/p/moshpytt/issues/detail?id=2"&gt;the issue on the topic&lt;/a&gt; for tips. Once you've opened it, go through &lt;strong&gt;every&lt;/strong&gt; letter, and make sure it was detected correctly. If a letter was skipped, add it as a row to the box file. Similarly, if two letters were detected as one, break them up into two lines.&lt;/p&gt;
 &lt;p&gt;When that's done, you feed the box file back into tesseract:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;tesseract&lt;/span&gt; &lt;span class="n"&gt;eng&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exp0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tif&lt;/span&gt; &lt;span class="n"&gt;eng&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;box&lt;/span&gt; &lt;span class="n"&gt;nobatch&lt;/span&gt; &lt;span class="n"&gt;box&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;train&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stderr&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Next, you need to detect the Character set used in all your box files:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;unicharset_extractor&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;box&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;When that's complete, you need to create a &lt;code&gt;font_properties&lt;/code&gt; file. It should list every font you're training, one per line, and identify whether it has the following characteristics: &amp;lt;fontname&amp;gt; &amp;lt;italic&amp;gt; &amp;lt;bold&amp;gt; &amp;lt;fixed&amp;gt; &amp;lt;serif&amp;gt; &amp;lt;fraktur&amp;gt;&lt;/p&gt;
 &lt;p&gt;So, for example, if you use the standard training data, you might end up with a file like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;eng.arial.box 0 0 0 0 0
@@ -51,8 +57,8 @@ eng.georgia.box 0 0 0 1 0
 eng.georgiab.box 0 1 0 1 0
 eng.georgiai.box 1 0 0 1 0
 eng.georgiaz.box 1 1 0 1 0
-&amp;lt;strong&amp;gt;eng.lincoln.box 0 0 0 0 1&amp;lt;/strong&amp;gt;
-&amp;lt;strong&amp;gt;eng.old-english.box 0 0 0 0 1&amp;lt;/strong&amp;gt;
+eng.lincoln.box 0 0 0 0 1
+eng.old-english.box 0 0 0 0 1
 eng.times.box 0 0 0 1 0
 eng.timesbd.box 0 1 0 1 0
 eng.timesbi.box 1 1 0 1 0
@@ -66,28 +72,31 @@ eng.verdanab.box 0 1 0 0 0
 eng.verdanai.box 1 0 0 0 0
 eng.verdanaz.box 1 1 0 0 0
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Note that this is the standard font_properties file that should be supplied with Tesseract and I've added the two bold rows for the blackletter fonts I'm training. You can also see which fonts are included out of the box.&lt;/p&gt;
 &lt;p&gt;We're getting near the end. Next, create the clustering data:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;mftraining -F font_properties -U unicharset -O lang.unicharset *.tr 
 cntraining *.tr
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;If you want, you can &lt;a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#Dictionary_Data_(Optional)"&gt;create a wordlist&lt;/a&gt; or a &lt;a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#The_last_file_(unicharambigs)"&gt;unicharambigs file&lt;/a&gt;. If you don't plan on doing that, the last step is to combine the various files we've created. &lt;/p&gt;
 &lt;p&gt;To do that, rename each of the language files (normproto, Microfeat, inttemp, pffmtable) to have your lang prefix, and run (mind the dot at the end):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;combine_tessdata&lt;/span&gt; &lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;This will create all the data files you need, and you just need to move them to the correct place on your OS. On Ubuntu, I was able to move them to;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mv&lt;/span&gt; &lt;span class="n"&gt;eng&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;traineddata&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tessdata&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;And that, good friend, is it. Worst process for a human, ever.&lt;/p&gt;</summary><category term="tesseract"></category><category term="ocr"></category><category term="howto"></category><category term="font"></category></entry><entry><title>The Winning Font in Court Opinions</title><link href="http://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/" rel="alternate"></link><updated>2012-01-27T22:15:58+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-27:posts/2012/01/27/and-the-winning-font-in-court-documents-is/</id><summary type="html">&lt;p&gt;At CourtListener, we're developing a new system to convert scanned court documents to text. As part of our development we've analyzed more than 1,000 court opinions to determine what fonts courts are using. &lt;/p&gt;
-&lt;p&gt;Now that we have this information,our next step is to create training data for &lt;a href="http://code.google.com/p/tesseract-ocr/"&gt;our OCR system&lt;/a&gt; so that it specializes in these fonts, but for now we've attached a spreadsheet with our findings, and a script that can be used by others to extract font metadata from PDFs.&lt;/p&gt;
+&lt;p&gt;And that, good friend, is it. Worst process for a human, ever.&lt;/p&gt;
+&lt;h2 id="enclosures"&gt;Enclosures&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://michaeljaylissner.com/archive/ocr/standard-training-text.txt"&gt;Training data file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://michaeljaylissner.com/archive/ocr/old-english.doc"&gt;Old English example file&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="tesseract"></category><category term="ocr"></category><category term="howto"></category><category term="font"></category></entry><entry><title>The Winning Font in Court Opinions</title><link href="http://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/" rel="alternate"></link><updated>2012-01-27T22:15:58+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-27:posts/2012/01/27/and-the-winning-font-in-court-documents-is/</id><summary type="html">&lt;p&gt;At CourtListener, we're developing a new system to convert scanned court 
+documents to text. As part of our development we've analyzed more than 1,000 
+court opinions to determine what fonts courts are using. &lt;/p&gt;
+&lt;p&gt;Now that we have this information, our next step is to create training data 
+for &lt;a href="http://code.google.com/p/tesseract-ocr/"&gt;our OCR system&lt;/a&gt; so that it specializes in these fonts, 
+but for now we've attached &lt;a href="http://michaeljaylissner.com/archive/court-font-analysis/font-analysis.ods"&gt;a spreadsheet&lt;/a&gt; with our findings, 
+and &lt;a href="http://michaeljaylissner.com/archive/court-font-analysis/extract_font_metadata_from_files.py"&gt;a script that can be used by others&lt;/a&gt; to extract font metadata 
+from PDFs.&lt;/p&gt;
 &lt;p&gt;Unsurprisingly, the top font &amp;mdash; drumroll please &amp;mdash; is Times New Roman. &lt;/p&gt;
 &lt;table&gt;
     &lt;tr&gt;
@@ -104,7 +113,7 @@ cntraining *.tr
         &lt;td&gt;953
         &lt;td&gt;867
         &lt;td&gt;47
-        &lt;td&gt;&lt;strong&gt;3321&lt;/strong&gt;
+        &lt;td&gt;**3321**
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Courier
@@ -112,7 +121,7 @@ cntraining *.tr
         &lt;td&gt;333
         &lt;td&gt;209
         &lt;td&gt;131
-        &lt;td&gt;&lt;strong&gt;1042&lt;/strong&gt;
+        &lt;td&gt;**1042**
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Arial
@@ -120,7 +129,7 @@ cntraining *.tr
         &lt;td&gt;39
         &lt;td&gt;11
         &lt;td&gt;41
-        &lt;td&gt;&lt;strong&gt;455&lt;/strong&gt;
+        &lt;td&gt;**455**
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Symbol
@@ -128,7 +137,7 @@ cntraining *.tr
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;&lt;strong&gt;212&lt;/strong&gt;
+        &lt;td&gt;**212**
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Helvetica
@@ -136,7 +145,7 @@ cntraining *.tr
         &lt;td&gt;161
         &lt;td&gt;2
         &lt;td&gt;2
-        &lt;td&gt;&lt;strong&gt;189&lt;/strong&gt;
+        &lt;td&gt;**189**
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Century Schoolbook
@@ -144,7 +153,7 @@ cntraining *.tr
         &lt;td&gt;54
         &lt;td&gt;52
         &lt;td&gt;9
-        &lt;td&gt;&lt;strong&gt;173&lt;/strong&gt;
+        &lt;td&gt;**173**
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Garamond
@@ -152,7 +161,7 @@ cntraining *.tr
         &lt;td&gt;42
         &lt;td&gt;41
         &lt;td&gt;0
-        &lt;td&gt;&lt;strong&gt;127&lt;/strong&gt;
+        &lt;td&gt;**127**
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Palatino Linotype
@@ -160,7 +169,7 @@ cntraining *.tr
         &lt;td&gt;24
         &lt;td&gt;24
         &lt;td&gt;1
-        &lt;td&gt;&lt;strong&gt;85&lt;/strong&gt;
+        &lt;td&gt;**85**
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Old English
@@ -168,7 +177,7 @@ cntraining *.tr
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;&lt;strong&gt;42&lt;/strong&gt;
+        &lt;td&gt;**42**
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Lincoln
@@ -176,6 +185,6 @@ cntraining *.tr
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;&lt;strong&gt;27&lt;/strong&gt;
+        &lt;td&gt;**27**
     &lt;/tr&gt;
 &lt;/table&gt;</summary><category term="typography"></category><category term="tesseract"></category><category term="Python"></category><category term="ocr"></category><category term="font"></category><category term="courtlistener.com"></category></entry></feed>

@@ -1,435 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/photo" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-11-14T16:28:44+01:00</updated><entry><title>Testing Deletion Speed of Online Photo Sites</title><link href="http://michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" rel="alternate"></link><updated>2009-11-14T16:28:44+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-14:posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/</id><summary type="html">&lt;p&gt;
-&lt;strong&gt;Update, 2010-03-08:&lt;/strong&gt;Added an image at drop.io&lt;br&gt;
-&lt;strong&gt;Update, 2010-01-28:&lt;/strong&gt; Added an image at Orkut.com&lt;br&gt;
-&lt;strong&gt;Update 2, 2010-01-28:&lt;/strong&gt; At &lt;a href="http://www.ftc.gov/bcp/workshops/privacyroundtables/index.shtml" target="_blank"&gt;the FTC round table&lt;/a&gt; today, Facebook's director of public policy, Tim Sparapani, claimed that information deleted from Facebook cannot be retrieved even by Facebook staff, because it is almost instantly deleted. I informed him this was not true in the case of pictures, and he said he would look into it. Will update this post when/if I hear more.&lt;/p&gt;
-
-&lt;p&gt;Imagine an embarrassing photo of you is placed online by one of your friends. You ask them to take it down, and they do. Now, imagine that your enemy had gotten a link to that photo, and had posted it to their blog. You'd hope that your friend taking the photo down would in fact delete the photo, but I'm sorry to say that isn't always the case.&lt;/p&gt;
-
-&lt;p&gt;Inspired by &lt;a href="http://arstechnica.com/web/news/2009/07/are-those-photos-really-deleted-from-facebook-think-twice.ars" target="_blank"&gt;Jacqui Cheng's article&lt;/a&gt;, I decided to test some of the more popular online services for photo hosting to see what happens when you "delete" a photo from their site. On &lt;strong&gt;November 14&lt;sup&gt;th&lt;/sup&gt;, 2009&lt;/strong&gt;, I uploaded and then deleted the following image of a black box with white text to Facebook, Flickr, Picasa, MySpace, Photobucket, Shutterfly, Twitpic and WalMart:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://michaeljaylissner.com/files/images/PostedAndDeleted.jpg"&gt;
-&lt;p&gt;When you look below, if you can see the black box for a site, that means that it was not truly deleted and is still live. You can verify this by clicking on the image. This is checked each time this page is loaded, so the information is constantly verified. If the image has been deleted, you will see the date that it was deleted.&lt;/p&gt;&lt;/p&gt;
-&lt;p&gt;There are a number of reasons why photo services might be lazy about properly removing images from their site, but until they have proper deletion mechanisms, we should all think twice about what we upload.&lt;/p&gt;
-
-&lt;p&gt;If there's a service that is not shown here that you'd like to see, please &lt;a href="/contact"&gt;let me know&lt;/a&gt;. And now, without further ado, I present, the ongoing results of the test:&lt;/p&gt;
-
-&lt;h4&gt;Facebook:&lt;/h4&gt;
-
-&lt;p&gt;This file was properly deleted from their server as of at least May 27, 2010.&lt;/p&gt;
-
-&lt;h4&gt;Flickr:&lt;/h4&gt;
-
-&lt;p&gt;ED: Flickr began showing the following message approximately an hour after the image was "deleted."&lt;/p&gt;
-
-&lt;?php
-    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
-    if (@fclose(@fopen("http://farm3.static.flickr.com/2734/4103818411_886e19efaa_o.jpg", "r"))) {
-        //$file_handle = fopen($date_file, 'w');
-        //fwrite($file_handle, "Test");
-        //fclose($file_handle);
-?&gt;
-&lt;a href="http://farm3.static.flickr.com/2734/4103818411_886e19efaa_o.jpg"&gt;&lt;img src="http://farm3.static.flickr.com/2734/4103818411_886e19efaa_o.jpg"&gt;&lt;/a&gt;
-
-&lt;?php
-    } else {
-        //echo "Photo not found";
-        //Photo wasn't found, therefore we check the record to see if this is news
-        $file_handle = fopen($date_file, 'a+');
-
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
-        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;flickr&amp;quot; ) {
-            //Then we have an entry in our table, print that date.
-            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-
-            $record_found = &amp;quot;True&amp;quot;;
-            //echo &amp;quot;We have an entry in our table&amp;quot;;
-            break;
-        } else {
-            $record_found = &amp;quot;False&amp;quot;;
-        }
-        //echo &amp;quot;We are in the while loop.&amp;quot;;
-    }
-
-    //echo $record_found;
-
-    if ($record_found != &amp;quot;True&amp;quot;) {
-        //The file lacks an entry, we should make one, then print it.
-        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
-        $entry = &amp;quot;flickr&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
-        fwrite($file_handle, $entry);
-        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-    }
-    fclose($file_handle);
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;?&amp;gt;&lt;/p&gt;
-&lt;h4&gt;Picasa:&lt;/h4&gt;
-
-&lt;?php
-    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
-    if (@fclose(@fopen("http://lh6.ggpht.com/_UOjTrSYk4Hs/Sv9QNMo-IvI/AAAAAAAAOAI/OdpZgVWXyNU/PostedAndDeleted.jpg", "r"))) {
-        //$file_handle = fopen($date_file, 'w');
-        //fwrite($file_handle, "Test");
-        //fclose($file_handle);
-?&gt;
-&lt;a href="http://lh6.ggpht.com/_UOjTrSYk4Hs/Sv9QNMo-IvI/AAAAAAAAOAI/OdpZgVWXyNU/PostedAndDeleted.jpg"&gt;&lt;img src="http://lh6.ggpht.com/_UOjTrSYk4Hs/Sv9QNMo-IvI/AAAAAAAAOAI/OdpZgVWXyNU/PostedAndDeleted.jpg"&gt;&lt;/a&gt;
-
-&lt;?php
-    } else {
-        //echo "Photo not found";
-        //Photo wasn't found, therefore we check the record to see if this is news
-        $file_handle = fopen($date_file, 'a+');
-
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
-        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;picasa&amp;quot; ) {
-            //Then we have an entry in our table, print that date.
-            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-            $record_found = &amp;quot;True&amp;quot;;
-            //echo &amp;quot;We have an entry in our table&amp;quot;;
-            break;
-        } else {
-            $record_found = &amp;quot;False&amp;quot;;
-        }
-        //echo &amp;quot;We are in the while loop.&amp;quot;;
-    }
-
-    //echo $record_found;
-
-    if ($record_found != &amp;quot;True&amp;quot;) {
-        //The file lacks an entry, we should make one, then print it.
-        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
-        $entry = &amp;quot;picasa&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
-        fwrite($file_handle, $entry);
-        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-    }
-    fclose($file_handle);
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;?&amp;gt;&lt;/p&gt;
-&lt;h4&gt;MySpace:&lt;/h4&gt;
-
-&lt;?php
-    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
-    if (@fclose(@fopen("http://c3.ac-images.myspacecdn.com/images02/48/l_45a08ba940b2424a8f28f609e4c855ca.jpg", "r"))) {
-        //$file_handle = fopen($date_file, 'w');
-        //fwrite($file_handle, "Test");
-        //fclose($file_handle);
-?&gt;
-&lt;a href="http://c3.ac-images.myspacecdn.com/images02/48/l_45a08ba940b2424a8f28f609e4c855ca.jpg"&gt;&lt;img src="http://c3.ac-images.myspacecdn.com/images02/48/l_45a08ba940b2424a8f28f609e4c855ca.jpg"&gt;&lt;/a&gt;
-
-&lt;?php
-    } else {
-        //echo "Photo not found";
-        //Photo wasn't found, therefore we check the record to see if this is news
-        $file_handle = fopen($date_file, 'a+');
-
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
-        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;myspace&amp;quot; ) {
-            //Then we have an entry in our table, print that date.
-            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-            $record_found = &amp;quot;True&amp;quot;;
-            //echo &amp;quot;We have an entry in our table&amp;quot;;
-            break;
-        } else {
-            $record_found = &amp;quot;False&amp;quot;;
-        }
-        //echo &amp;quot;We are in the while loop.&amp;quot;;
-    }
-
-    //echo $record_found;
-
-    if ($record_found != &amp;quot;True&amp;quot;) {
-        //The file lacks an entry, we should make one, then print it.
-        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
-        $entry = &amp;quot;myspace&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
-        fwrite($file_handle, $entry);
-        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-    }
-    fclose($file_handle);
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;?&amp;gt;&lt;/p&gt;
-&lt;h4&gt;Photobucket:&lt;/h4&gt;
-
-&lt;?php
-    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
-    if (@fclose(@fopen("http://i900.photobucket.com/albums/ac202/mlissner/PostedAndDeleted.jpg?t=1258257985", "r"))) {
-        //$file_handle = fopen($date_file, 'w');
-        //fwrite($file_handle, "Test");
-        //fclose($file_handle);
-?&gt;
-&lt;a href="http://i900.photobucket.com/albums/ac202/mlissner/PostedAndDeleted.jpg?t=1258257985"&gt;&lt;img src="http://i900.photobucket.com/albums/ac202/mlissner/PostedAndDeleted.jpg?t=1258257985"&gt;&lt;/a&gt;
-
-&lt;?php
-    } else {
-        //echo "Photo not found";
-        //Photo wasn't found, therefore we check the record to see if this is news
-        $file_handle = fopen($date_file, 'a+');
-
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
-        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;photobucket&amp;quot; ) {
-            //Then we have an entry in our table, print that date.
-            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-            $record_found = &amp;quot;True&amp;quot;;
-            //echo &amp;quot;We have an entry in our table&amp;quot;;
-            break;
-        } else {
-            $record_found = &amp;quot;False&amp;quot;;
-        }
-        //echo &amp;quot;We are in the while loop.&amp;quot;;
-    }
-
-    //echo $record_found;
-
-    if ($record_found != &amp;quot;True&amp;quot;) {
-        //The file lacks an entry, we should make one, then print it.
-        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
-        $entry = &amp;quot;photobucket&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
-        fwrite($file_handle, $entry);
-        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-    }
-    fclose($file_handle);
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;?&amp;gt;&lt;/p&gt;
-&lt;h4&gt;Shutterfly:&lt;/h4&gt;
-
-&lt;?php
-    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
-    if (@fclose(@fopen("http://im1.shutterfly.com/media/47b9cf35b3127ccef8c9be9d18a800000040O00ActW7Ro4cuWQPbz4W/cC/f%3D0/ps%3D50/r%3D0/rx%3D720/ry%3D480/", "r"))) {
-        //$file_handle = fopen($date_file, 'w');
-        //fwrite($file_handle, "Test");
-        //fclose($file_handle);
-?&gt;
-&lt;a href="http://im1.shutterfly.com/media/47b9cf35b3127ccef8c9be9d18a800000040O00ActW7Ro4cuWQPbz4W/cC/f%3D0/ps%3D50/r%3D0/rx%3D720/ry%3D480/"&gt;&lt;img src="http://im1.shutterfly.com/media/47b9cf35b3127ccef8c9be9d18a800000040O00ActW7Ro4cuWQPbz4W/cC/f%3D0/ps%3D50/r%3D0/rx%3D720/ry%3D480/"&gt;&lt;/a&gt;
-
-&lt;?php
-    } else {
-        //echo "Photo not found";
-        //Photo wasn't found, therefore we check the record to see if this is news
-        $file_handle = fopen($date_file, 'a+');
-
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
-        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;shutterfly&amp;quot; ) {
-            //Then we have an entry in our table, print that date.
-            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-            $record_found = &amp;quot;True&amp;quot;;
-            //echo &amp;quot;We have an entry in our table&amp;quot;;
-            break;
-        } else {
-            $record_found = &amp;quot;False&amp;quot;;
-        }
-        //echo &amp;quot;We are in the while loop.&amp;quot;;
-    }
-
-    //echo $record_found;
-
-    if ($record_found != &amp;quot;True&amp;quot;) {
-        //The file lacks an entry, we should make one, then print it.
-        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
-        $entry = &amp;quot;shutterfly&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
-        fwrite($file_handle, $entry);
-        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-    }
-    fclose($file_handle);
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;?&amp;gt;&lt;/p&gt;
-&lt;h4&gt;Twitpic:&lt;/h4&gt;
-
-&lt;?php
-    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
-    if (@fclose(@fopen("http://s3.amazonaws.com/twitpic/photos/full/42974767.jpg?AWSAccessKeyId=0ZRYP5X5F6FSMBCCSE82&amp;Expires=1258259853&amp;Signature=kAS%2F430H9o5nXYqfSjVGx4mRO7U%3D", "r"))) {
-        //$file_handle = fopen($date_file, 'w');
-        //fwrite($file_handle, "Test");
-        //fclose($file_handle);
-?&gt;
-&lt;a href="http://s3.amazonaws.com/twitpic/photos/full/42974767.jpg?AWSAccessKeyId=0ZRYP5X5F6FSMBCCSE82&amp;Expires=1258259853&amp;Signature=kAS%2F430H9o5nXYqfSjVGx4mRO7U%3D"&gt;&lt;img src="http://s3.amazonaws.com/twitpic/photos/full/42974767.jpg?AWSAccessKeyId=0ZRYP5X5F6FSMBCCSE82&amp;Expires=1258259853&amp;Signature=kAS%2F430H9o5nXYqfSjVGx4mRO7U%3D"&gt;&lt;/a&gt;
-
-&lt;?php
-    } else {
-        //echo "Photo not found";
-        //Photo wasn't found, therefore we check the record to see if this is news
-        $file_handle = fopen($date_file, 'a+');
-
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
-        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;twitpic&amp;quot; ) {
-            //Then we have an entry in our table, print that date.
-            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-            $record_found = &amp;quot;True&amp;quot;;
-            //echo &amp;quot;We have an entry in our table&amp;quot;;
-            break;
-        } else {
-            $record_found = &amp;quot;False&amp;quot;;
-        }
-        //echo &amp;quot;We are in the while loop.&amp;quot;;
-    }
-
-    //echo $record_found;
-
-    if ($record_found != &amp;quot;True&amp;quot;) {
-        //The file lacks an entry, we should make one, then print it.
-        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
-        $entry = &amp;quot;twitpic&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
-        fwrite($file_handle, $entry);
-        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-    }
-    fclose($file_handle);
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;?&amp;gt;&lt;/p&gt;
-&lt;h4&gt;Walmart:&lt;/h4&gt;
-
-&lt;?php
-    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
-    if (@fclose(@fopen("http://images.photos1.walmart.com/232323232%7Ffp432%3B4%3Enu%3D3%3A%3A2%3E%3A8%3A%3E238%3EWSNRCG%3D326634885%3B329nu0mrj", "r"))) {
-        //$file_handle = fopen($date_file, 'w');
-        //fwrite($file_handle, "Test");
-        //fclose($file_handle);
-?&gt;
-&lt;a href="http://images.photos1.walmart.com/232323232%7Ffp432%3B4%3Enu%3D3%3A%3A2%3E%3A8%3A%3E238%3EWSNRCG%3D326634885%3B329nu0mrj"&gt;&lt;img src="http://images.photos1.walmart.com/232323232%7Ffp432%3B4%3Enu%3D3%3A%3A2%3E%3A8%3A%3E238%3EWSNRCG%3D326634885%3B329nu0mrj"&gt;&lt;/a&gt;
-
-&lt;?php
-    } else {
-        //echo "Photo not found";
-        //Photo wasn't found, therefore we check the record to see if this is news
-        $file_handle = fopen($date_file, 'a+');
-
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
-        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;walmart&amp;quot; ) {
-            //Then we have an entry in our table, print that date.
-            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-            $record_found = &amp;quot;True&amp;quot;;
-            //echo &amp;quot;We have an entry in our table&amp;quot;;
-            break;
-        } else {
-            $record_found = &amp;quot;False&amp;quot;;
-        }
-        //echo &amp;quot;We are in the while loop.&amp;quot;;
-    }
-
-    //echo $record_found;
-
-    if ($record_found != &amp;quot;True&amp;quot;) {
-        //The file lacks an entry, we should make one, then print it.
-        //echo &amp;quot;File lacks an entry, making one.&amp;quot;;
-        $entry = &amp;quot;walmart&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
-        fwrite($file_handle, $entry);
-        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-    }
-    fclose($file_handle);
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;?&amp;gt;&lt;/p&gt;
-&lt;h4&gt;Google Orkut (added 2010-01-28 - disregard the date in the image itself)&lt;/h4&gt;
-
-&lt;?php
-    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
-    if (@fclose(@fopen("http://images.orkut.com/orkut/photos/NwAAAA40TqrVmtf2vIA1oouDdb9vUTcjWDAQqVo_mBa45mvjdqMPiHhSaHxekFNT596b5sVYh593XRK-5Nquk0_WOQMAm1T1UJmPN1ZDUab24PgUE8b4ZMm09Mjj.jpg", "r"))) {
-        //$file_handle = fopen($date_file, 'w');
-        //fwrite($file_handle, "Test");
-        //fclose($file_handle);
-?&gt;
-&lt;a href="http://images.orkut.com/orkut/photos/NwAAAA40TqrVmtf2vIA1oouDdb9vUTcjWDAQqVo_mBa45mvjdqMPiHhSaHxekFNT596b5sVYh593XRK-5Nquk0_WOQMAm1T1UJmPN1ZDUab24PgUE8b4ZMm09Mjj.jpg"&gt;&lt;img src="http://images.orkut.com/orkut/photos/NwAAAA40TqrVmtf2vIA1oouDdb9vUTcjWDAQqVo_mBa45mvjdqMPiHhSaHxekFNT596b5sVYh593XRK-5Nquk0_WOQMAm1T1UJmPN1ZDUab24PgUE8b4ZMm09Mjj.jpg"&gt;&lt;/a&gt;
-
-&lt;?php
-    } else {
-        //echo "Photo not found";
-        //Photo wasn't found, therefore we check the record to see if this is news
-        $file_handle = fopen($date_file, 'a+');
-
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
-        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;orkut&amp;quot; ) {
-            //Then we have an entry in our table, print that date.
-            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-            $record_found = &amp;quot;True&amp;quot;;
-            //echo &amp;quot;We have an entry in our table&amp;quot;;
-            break;
-        } else {
-            $record_found = &amp;quot;False&amp;quot;;
-        }
-        //echo &amp;quot;We are in the while loop.&amp;quot;;
-    }
-
-    //echo $record_found;
-
-    if ($record_found != &amp;quot;True&amp;quot;) {
-        //The file lacks an entry, we should make one, then print it.
-        $entry = &amp;quot;orkut&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
-        fwrite($file_handle, $entry);
-        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-    }
-    fclose($file_handle);
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;?&amp;gt;&lt;/p&gt;
-&lt;h4&gt;Drop.io (added 08 March 2010)&lt;/h4&gt;
-
-&lt;?php
-    $date_file = '/home/mlissner/drupal/deletedPhotosRecord.csv';
-    if (@fclose(@fopen("http://stlth.s3.amazonaws.com/assets/production/f449e7e0-ed92-012b-5667-fd14949c244a/bf4e59f0-0d07-012d-28da-f1a36935425c/PostedAndDeleted_large.jpg?Signature=Ud3VvGCtqoJHKRlHRd14S17GC6E%3D&amp;Expires=1268071274&amp;AWSAccessKeyId=1DHMN2J6JW2RM0N4PC82", "r"))) {
-        //$file_handle = fopen($date_file, 'w');
-        //fwrite($file_handle, "Test");
-        //fclose($file_handle);
-?&gt;
-&lt;a href="http://stlth.s3.amazonaws.com/assets/production/f449e7e0-ed92-012b-5667-fd14949c244a/bf4e59f0-0d07-012d-28da-f1a36935425c/PostedAndDeleted_large.jpg?Signature=Ud3VvGCtqoJHKRlHRd14S17GC6E%3D&amp;Expires=1268071274&amp;AWSAccessKeyId=1DHMN2J6JW2RM0N4PC82"&gt;&lt;img src="http://stlth.s3.amazonaws.com/assets/production/f449e7e0-ed92-012b-5667-fd14949c244a/bf4e59f0-0d07-012d-28da-f1a36935425c/PostedAndDeleted_large.jpg?Signature=Ud3VvGCtqoJHKRlHRd14S17GC6E%3D&amp;Expires=1268071274&amp;AWSAccessKeyId=1DHMN2J6JW2RM0N4PC82"&gt;&lt;/a&gt;
-
-&lt;?php
-    } else {
-        //echo "Photo not found";
-        //Photo wasn't found, therefore we check the record to see if this is news
-        $file_handle = fopen($date_file, 'a+');
-
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;feof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
-        &lt;span class="nv"&gt;$line_of_text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;fgetcsv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$file_handle&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nv"&gt;$line_of_text&lt;/span&gt;&lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; == &amp;quot;drop&amp;quot; ) {
-            //Then we have an entry in our table, print that date.
-            print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . $line_of_text&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-            $record_found = &amp;quot;True&amp;quot;;
-            //echo &amp;quot;We have an entry in our table&amp;quot;;
-            break;
-        } else {
-            $record_found = &amp;quot;False&amp;quot;;
-        }
-        //echo &amp;quot;We are in the while loop.&amp;quot;;
-    }
-
-    //echo $record_found;
-
-    if ($record_found != &amp;quot;True&amp;quot;) {
-        //The file lacks an entry, we should make one, then print it.
-        $entry = &amp;quot;drop&amp;quot; . &amp;quot;, &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;\n&amp;quot;;
-        fwrite($file_handle, $entry);
-        print &amp;quot;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;This file was properly deleted from their server as of at least &amp;quot; . date(&amp;quot;j F Y&amp;quot;) . &amp;quot;.&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt; \n&amp;quot;;
-    }
-    fclose($file_handle);
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;?&amp;gt;&lt;/p&gt;</summary><category term="Walmart"></category><category term="Twitpic"></category><category term="Shutterfly"></category><category term="service"></category><category term="right to delete"></category><category term="privacy"></category><category term="Picassa"></category><category term="Photobucket"></category><category term="photo"></category><category term="Orkut"></category><category term="MySpace"></category><category term="google"></category><category term="Flickr"></category><category term="facebook"></category><category term="delete"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/photo" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-11-14T16:28:44+01:00</updated><entry><title>Testing Deletion Speed of Online Photo Sites</title><link href="http://michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" rel="alternate"></link><updated>2009-11-14T16:28:44+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-14:posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/</id><summary type="html">
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2014-08-22&lt;/strong&gt;: While updating this blog to a new platform, 
+I wound down these tests and put notes about each service's final result. 
+After nearly five years, some of these sites still haven't taken down the 
+image.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2010-03-08&lt;/strong&gt;: Added an image at drop.io&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2010-01-28&lt;/strong&gt;: Added an image at Orkut.com&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2010-01-28&lt;/strong&gt;: At &lt;a href="http://www.ftc.gov/bcp/workshops/privacyroundtables/index.shtml"&gt;the FTC privacy round table&lt;/a&gt; today, 
+Facebook's director of public policy, Tim Sparapani, claimed that information 
+deleted from Facebook cannot be retrieved even by Facebook staff, 
+because it is almost instantly deleted. I informed him this was not true in
+the case of pictures, and he said he would look into it. Will update this 
+post when/if I hear more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="background-and-threat-model"&gt;Background and Threat Model&lt;/h2&gt;
+&lt;p&gt;Imagine an embarrassing photo of you is placed online by one of your 
+friends. You ask them to take it down, and they do. Now, 
+imagine that your enemy had gotten a link to that photo, 
+and had posted it to their blog. You'd hope that your friend taking the 
+photo down would in fact delete the photo, but I'm sorry to say that isn't 
+always the case.&lt;/p&gt;
+&lt;p&gt;Inspired by &lt;a href="http://arstechnica.com/web/news/2009/07/are-those-photos-really-deleted-from-facebook-think-twice.ars"&gt;Jacqui Cheng's article&lt;/a&gt;, I decided to test some of the 
+more popular online services for photo hosting to see what happens when you
+press the delete button on a photo from their site. On &lt;strong&gt;November 
+14&lt;sup&gt;th&lt;/sup&gt;, 2009&lt;/strong&gt;, I uploaded and then deleted the following image of
+a black box with white text to Facebook, Flickr, Picasa, MySpace, Photobucket, 
+Shutterfly, Twitpic and WalMart. A few months later, 
+I also added drop.io and Orkut: &lt;/p&gt;
+&lt;p&gt;&lt;img alt="I will attempt to delete this photo" src="/images/photo-deletion-tests/PostedAndDeleted.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;When you look below, if you can see the black box for a site, 
+that means that it was not truly deleted and is still live. You can verify 
+this by clicking on the image. This is checked each time this page is 
+loaded, so the information is constantly verified. If the image has been 
+deleted, you will see the date that it was deleted.&lt;/p&gt;
+&lt;p&gt;There are a number of reasons why photo services might be lazy about 
+properly removing images from their site, but until they have proper 
+deletion mechanisms, we should all think twice about what we upload.&lt;/p&gt;
+&lt;p&gt;If there's a service that is not shown here that you'd like to see, 
+please &lt;a href="/contact"&gt;let me know&lt;/a&gt;. And now, without further ado, 
+I present, the ongoing results of the test:&lt;/p&gt;
+&lt;h2 id="facebook"&gt;Facebook&lt;/h2&gt;
+&lt;p&gt;Facebook properly deleted the photo from their server as of May 27, 2010.&lt;/p&gt;
+&lt;h2 id="flickr"&gt;Flickr&lt;/h2&gt;
+&lt;p&gt;Flickr began showing the following message approximately an hour after the 
+image was deleted.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Flickr Response" src="/images/photo-deletion-tests/flickr-response.jpg"/&gt;&lt;/p&gt;
+&lt;h2 id="picasa"&gt;Picasa&lt;/h2&gt;
+&lt;p&gt;Picasa properly deleted the photo from their server as of at least November
+15, 2009.&lt;/p&gt;
+&lt;h2 id="myspace"&gt;MySpace&lt;/h2&gt;
+&lt;p&gt;At an unknown time, MySpace began showing this photo instead:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="MySpace Response" src="/images/photo-deletion-tests/myspace.png"/&gt;&lt;/p&gt;
+&lt;h2 id="photobucket"&gt;Photobucket&lt;/h2&gt;
+&lt;p&gt;Photobucket properly deleted the photo from their server as of at least 
+November 14, 2009.&lt;/p&gt;
+&lt;h2 id="shutterfly"&gt;Shutterfly&lt;/h2&gt;
+&lt;p&gt;As of 2014-08-22, Shutterfly still shows &lt;a href="http://im1.shutterfly.com/media/47b9cf35b3127ccef8c9be9d18a800000040O00ActW7Ro4cuWQPbz4W/cC/f%3D0/ps%3D50/r%3D0/rx%3D720/ry%3D480/"&gt;the original image on their 
+server&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="twitpic"&gt;Twitpic&lt;/h2&gt;
+&lt;p&gt;Twitpic properly deleted the photo from their server as of at least 
+November 14, 2009.&lt;/p&gt;
+&lt;h2 id="walmart"&gt;Walmart&lt;/h2&gt;
+&lt;p&gt;As of 2014-08-22, Walmart still shows &lt;a href="http://images.photos1.walmart.com/232323232%7Ffp432%3B4%3Enu%3D3%3A%3A2%3E%3A8%3A%3E238%3EWSNRCG%3D326634885%3B329nu0mrj"&gt;the original image on their 
+server&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="google-orkut-added-2010-01-28"&gt;Google Orkut (added 2010-01-28)&lt;/h2&gt;
+&lt;p&gt;Despite being &lt;a href="http://thenextweb.com/google/2014/06/30/google-shutting-orkut-social-network-september-30/"&gt;nearly shut down completely&lt;/a&gt;, as of 2014-08-22, 
+Orkut still shows &lt;a href="http://images.orkut.com/orkut/photos/NwAAAA40TqrVmtf2vIA1oouDdb9vUTcjWDAQqVo_mBa45mvjdqMPiHhSaHxekFNT596b5sVYh593XRK-5Nquk0_WOQMAm1T1UJmPN1ZDUab24PgUE8b4ZMm09Mjj.jpg"&gt;the original image on their server&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="dropio-added-08-march-2010"&gt;Drop.io (added 08 March 2010)&lt;/h2&gt;
+&lt;p&gt;Drop.io properly deleted the photo from their server as of 8 March 2010, 
+the day it was added.&lt;/p&gt;</summary><category term="Walmart"></category><category term="Twitpic"></category><category term="Shutterfly"></category><category term="service"></category><category term="right to delete"></category><category term="privacy"></category><category term="Picassa"></category><category term="Photobucket"></category><category term="photo"></category><category term="Orkut"></category><category term="MySpace"></category><category term="google"></category><category term="Flickr"></category><category term="facebook"></category><category term="delete"></category></entry></feed>

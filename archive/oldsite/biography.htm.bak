@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>MichaelJayLissner.com  >  Michael Lissner's Biography</title>
+		<meta name="author" content="Michael Lissner">
+		<meta name="description" content="content" >
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/onecol.css">
+		<SCRIPT TYPE="text/javascript">
+		<!--
+		// copyright 1999 Idocs, Inc. http://www.idocs.com/tags/
+		// Distribute this script freely, but please keep this
+		// notice with the code.
+
+		var rollOverArr=new Array();
+		function setrollover(OverImgSrc,pageImageName)
+		{
+		if (! document.images)return;
+		if (pageImageName == null)
+		    pageImageName = document.images[document.images.length-1].name;
+		rollOverArr[pageImageName]=new Object;
+		rollOverArr[pageImageName].overImg = new Image;
+		rollOverArr[pageImageName].overImg.src=OverImgSrc;
+		}
+
+		function rollover(pageImageName)
+		{
+		if (! document.images)return;
+		if (! rollOverArr[pageImageName])return;
+		if (! rollOverArr[pageImageName].outImg)
+		    {
+		    rollOverArr[pageImageName].outImg = new Image;
+		    rollOverArr[pageImageName].outImg.src = document.images[pageImageName].src;
+		    }
+		document.images[pageImageName].src=rollOverArr[pageImageName].overImg.src;
+		}
+
+		function rollout(pageImageName)
+		{
+		if (! document.images)return;
+		if (! rollOverArr[pageImageName])return;
+		document.images[pageImageName].src=rollOverArr[pageImageName].outImg.src;
+		}
+		//-->
+		</SCRIPT>
+		<SCRIPT TYPE="text/javascript">
+			<!--
+			setrollover('/assets/images/buttonover-0-0.jpg',   'home');
+			setrollover('/assets/images/buttonover-1-0.jpg',   'biography');
+			setrollover('/assets/images/buttonover-2-0.jpg',   'cv');
+			setrollover('/assets/images/buttonover-3-0.jpg',   'aboutsite');
+			setrollover('/assets/images/buttonover-4-0.jpg',   'pics');
+			setrollover('/assets/images/buttonover-5-0.jpg',   'charity');
+			setrollover('/assets/images/buttonover-6-0.jpg',   'contact');
+			//-->
+		</script>
+	</head>
+
+
+
+	<body>
+		<div id="container">
+
+				<!Begin #banner>
+				<div id="banner">
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td colspan="2"><img src="/assets/images/spacer.gif" height="20"></td>
+						</tr>
+						<tr>
+							<td><img src="/assets/images/spacer.gif" width="20" height="1"></td>
+							<td><h1><a class="header" href="http://www.michaeljaylissner.com">MichaelJayLissner.com</a></h1></td>
+						</tr>
+					</table>
+				</div><!End #banner>
+
+
+				<!Begin #buttons>
+				<div id="buttons">
+					<table cellpadding="0" cellspacing="0" border="0">
+			  			<tr>
+			  				<td>
+			  					<a href="index.htm" onMouseOver = "rollover('home')" onMouseOut = "rollout('home')">
+			  						<img src="/assets/images/button-0-0.jpg" name="home" width="88" height="30" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="biography.htm" onMouseOver = "rollover('biography')" onMouseOut = "rollout('biography')">
+			  						<img src="/assets/images/buttonover-1-0.jpg" width="118" height="30"  name="biography" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="cv.htm" onMouseOver = "rollover('cv')" onMouseOut = "rollout('cv')">
+			  						<img src="/assets/images/button-2-0.jpg" width="157" height="30" name="cv" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="about_site.htm" onMouseOver = "rollover('aboutsite')" onMouseOut = "rollout('aboutsite')">
+			  						<img src="/assets/images/button-3-0.jpg" width="111" height="30"  name="aboutsite" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="pics/index.htm" onMouseOver = "rollover('pics')" onMouseOut = "rollout('pics')">
+			  						<img src="/assets/images/button-4-0.jpg" width="137" height="30" name="pics" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="charity.htm" onMouseOver = "rollover('charity')" onMouseOut = "rollout('charity')">
+			  						<img src="/assets/images/button-5-0.jpg" width="91" height="30" name="charity" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="contact.htm" onMouseOver = "rollover('contact')" onMouseOut = "rollout('contact')">
+			  						<img src="/assets/images/button-6-0.jpg" width="98" height="30" name="contact" border="none">
+			  					</a>
+			  				</td>
+			  			</tr>
+			  		</table>
+			  	</div><!End #button>
+
+
+
+				<!Begin #content>
+				<div id="content">
+					<table cellpadding="0" cellspacing="0" border="0">
+				  		<tr>
+<td>
+							  		<h3>Biography</h3>
+							  		<p>This is the latest (and more concise, less Leo Tolstoy) version of the Michael Lissner's biography. The <a href="http://www.michaeljaylissner.com/archive/biography.html">last version</a> was written in September 2005.</p>
+
+							  		<p><strong>10 November 2006</strong></p>
+							  		<p>Michael Jay Lissner was born to parents David and Katharine Lissner on June 9th, 1982. He was his mom's third;
+							  		his father's second child. His two siblings from his mother, were a boy and a girl. James, his older brother was
+							  		about seven years his elder; his sister, Jessica, was about three when he was born.</p>
+
+							  		<p>Michael spent the first few years of his life growing in up La Crescenta, a suburb of Los Angeles. He was obsessed
+							  		with Legos, did well in elementary school, had unusually wide feet, broke his right arm once, and was otherwise pretty
+							  		uneventful.</p>
+
+							  		<p>Around the time that he was completing elementary school in La Cresenta, his father, David moved the family
+							  		company down to Mexico, where he believed it would be better able to grow without the constant threat of lawsuits and false
+							  		insurance claims from factory workers. As a result, the Lissner family moved to a wealthy suburb of San Diego, Coronado, where
+							  		David could easily commute to work, and the children could get one of the best public educations possible.</p>
+
+							  		<p>It was in Coronado that Michael would truly grow up, as it was there that he lived during the formative ages of 12 through 18.
+							  		While in Coronado, Michael had many hobbies, and was truly a busy person. For years he loved roller blading, and rode his "blades"
+							  		for miles and miles every day. When that got old, he began training for a road bike race that was to never quite come together.
+							  		After that, he become very involved in woodworking, a hobby that was inspired by his father's teaching him about carpentry, and
+							  		one which would absorb more time than many other of his hobbies combined. For a sampling of the projects that he worked on, try
+							  		the <a href="pics/index.htm">pictures section</a>.</p>
+
+							  		<p>All while he was doing all of the above activities, he was regularly attending Boy Scout meetings, (where he would eventually get
+							  		his Eagle), playing for one or two soccer teams, and getting pretty good grades in school. He broke his right arm a second time, cut
+							  		open his hand with a hatchet for eight stitches, cut open his knee for 40, but was otherwise fairly uneventful.</p>
+
+							  		<p>After finishing up High School, Michael was accepted to <a href="http://www.pitzer.edu">Pitzer College</a>, a small liberal arts school outside of Los Angeles, and
+							       at the end of the summer of 2000, he moved up there, where he would spend the next four years of his life. While at Pitzer, Michael
+							       took a number of different classes, ranging from neuroscience to C++ programming language.</p>
+
+									<p>His great interest though while enrolled at Pitzer turned out to be politics. By the time he graduated, he was simultaneously a member of
+									upwards of a dozen policy setting committees, had meetings every day of the week, had been dorm president for several years, had helped to create a fourth
+									meal in the dining hall, had secured the free art policy for future students, and had influenced policy in as many areas as he could find
+									the time. It kept him busy, and more interestingly, he suffered no major injuries to his body during this time aside from one chipped bone in his ankle and several
+									rolled ankles.</p>
+
+									<p>After graduating from Pitzer, Michael moved to Berkeley and began working for his dad selling <a href="http://www.benchpro.com">the company</a> product, workbenches. He
+									worked as an inside salesman and learned a very important lesson - He's not very good at sales. However, the job was not all bad - he worked from
+									home, gained knowledge of the inner workings of sales, and made a decent wage, which he carefully saved for an upcoming trip that he had been
+									planning since his junior year at Pitzer College.</p>
+
+									<p>After working for his dad for about a year, he resigned and took the money he saved and walked about 2,600 miles from Mexico to Canada via the
+									<a href="http://www.pcta.org">Pacific Crest Trail</a>. It was a life changing event, that took about five months to complete, and
+									involved walking over 100 marathons. Much time was spent thinking about life and death, motivations, happiness and the like. Mostly though his mind
+									was at ease, thinking of nothing at all (see the <a href="pics">pictures section</a> for more on that). Upon arriving at Canada, Michael had suffered
+									almost no injuries, and promptly did his best to get back into the mainstream society.</p>
+
+									<p>The first step in this process was to shave his five-month beard and get a job. The job he was to find was for <a href="http://www.co.contra-costa.ca.us/depart/service/index1.html">Contra Costa County Community Services
+									Department</a>, where he currently works running state and federal reports, reworking spreadsheets and doing general admistration tasks.</p>
+							  	</td>
+							  </tr>
+						</tr>
+					</table>
+				</div><!End #content>
+
+				<!Begin #footer>
+				<div id="footer">
+					<hr>
+					<script language="javascript" src="http://www.quotedb.com/quote/quote.php?action=random_quote&=&a[44]=44&a[4]=4&a[52]=52&a[76]=76&a[525]=525&a[107]=107&a[229]=229&a[87]=87&a[45]=45&a[23]=23&a[73]=73&a[421]=421&a[631]=631&a[48]=48&a[231]=231&a[336]=336&"></script>
+				</div><!End #footer>
+			</div><!End #container>
+	</body>
+</html>

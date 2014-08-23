@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/ubuntu" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-07-22T14:42:37+02:00</updated><entry><title>Gnome-Do is Pretty Damned Impressive</title><link href="http://michaeljaylissner.com/posts/2009/07/22/gnome-do-is-pretty-damned-impressive/" rel="alternate"></link><updated>2009-07-22T14:42:37+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-22:posts/2009/07/22/gnome-do-is-pretty-damned-impressive/</id><summary type="html">&lt;p&gt;If you've talked to me about Ubuntu in the past year or so, I probably mentioned to you that one of my favorite things about using it is a program called &lt;a href="http://do.davebsd.com/" target="_blank"&gt;gnome-do&lt;/a&gt;. It's a little hard to explain gnome-do without an example, so I'll explain how I just made the following tweet, sharing a picture from my garden: &lt;blockquote&gt;Artichoke has finally flowered. It's quite something: &lt;a href="http://tinyurl.com/mn7pjp" target="_blank"&gt;http://tinyurl.com/mn7pjp&lt;/a&gt;&lt;/blockquote&gt;To make this tweet, I needed to find the picture on my computer, upload it to the web, create a tinyurl of the picture's location, and then tweet the URL.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/ubuntu" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-07-22T14:42:37+02:00</updated><entry><title>Gnome-Do is Pretty Damned Impressive</title><link href="http://michaeljaylissner.com/posts/2009/07/22/gnome-do-is-pretty-damned-impressive/" rel="alternate"></link><updated>2009-07-22T14:42:37+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-22:posts/2009/07/22/gnome-do-is-pretty-damned-impressive/</id><summary type="html">&lt;p&gt;If you've talked to me about Ubuntu in the past year or so, I probably mentioned to you that one of my favorite things about using it is a program called &lt;a href="http://do.davebsd.com/"&gt;gnome-do&lt;/a&gt;. It's a little hard to explain gnome-do without an example, so I'll explain how I just made the following tweet, sharing a picture from my garden: &lt;blockquote&gt;Artichoke has finally flowered. It's quite something: &lt;a href="http://tinyurl.com/mn7pjp"&gt;http://tinyurl.com/mn7pjp&lt;/a&gt;&lt;/blockquote&gt;To make this tweet, I needed to find the picture on my computer, upload it to the web, create a tinyurl of the picture's location, and then tweet the URL.&lt;/p&gt;
 &lt;p&gt;Traditionally, the process would be the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Open a web browser&lt;/li&gt;
@@ -90,7 +90,7 @@ as root run:&lt;/p&gt;
 
 &lt;p&gt;That will make init know about the file, and run it at startup. Happy 
 awakenings!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href="http://ubuntuforums.org/showthread.php?t=711747" target="_blank"&gt;http://ubuntuforums.org/showthread.php?t=711747&lt;/a&gt;&lt;/p&gt;</summary><category term="ubuntu"></category><category term="Linux"></category></entry><entry><title>Install Citrix In Ubuntu Hardy Heron</title><link href="http://michaeljaylissner.com/posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/" rel="alternate"></link><updated>2008-06-02T09:44:53+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-06-02:posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/</id><summary type="html">&lt;p&gt;For a while there, I was struggling to get the Citrix client installed on 
+&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href="http://ubuntuforums.org/showthread.php?t=711747"&gt;http://ubuntuforums.org/showthread.php?t=711747&lt;/a&gt;&lt;/p&gt;</summary><category term="ubuntu"></category><category term="Linux"></category></entry><entry><title>Install Citrix In Ubuntu Hardy Heron</title><link href="http://michaeljaylissner.com/posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/" rel="alternate"></link><updated>2008-06-02T09:44:53+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-06-02:posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/</id><summary type="html">&lt;p&gt;For a while there, I was struggling to get the Citrix client installed on 
 my computer. It was frustrating, and I put hours into debugging it, 
 and trying to get it to work. In the end, I took a circuitous route, 
 installing VirtualBox in Ubuntu, Windows in VirtualBox, Firefox in Windows,
@@ -120,27 +120,37 @@ rename their extension so they are .crt files, and move them to &lt;/p&gt;
 &lt;p&gt;:::bash
  /usr/lib/ICAClient/keystore/cacerts&lt;/p&gt;
 &lt;p&gt;Restart Firefox, and you should be good.&lt;/p&gt;
-&lt;p&gt;Thanks to &lt;a href="http://skarh.wordpress.com/2008/05/20/how-to-citrix-on-ubuntu/"&gt;Skarh&lt;/a&gt; for this how to.&lt;/p&gt;</summary><category term="Linux"></category><category term="ubuntu"></category><category term="citrix"></category></entry><entry><title>Remap Caps Lock as Backspace in Windows and Linux</title><link href="http://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/" rel="alternate"></link><updated>2008-04-29T21:33:41+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-29:posts/2008/04/29/remap-caps-lock-as-backspace/</id><summary type="html">&lt;p&gt;A while back my wrist started hurting from reaching for the cursed backspace key. I was making too many mistakes. My solution was to remap the caps lock key on all the computers I use to act as an additional backspace key. How did I do it? Well, I'm glad you asked. I'll tell you.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;In Windows&lt;/strong&gt;
-EDIT: I noticed that the picture doesn't have all the detail you need. The easier way to do this, is to download the registry key attached to this post, and to right click it, selecting merge. After that, restart the computer, and you should be all set.&lt;/p&gt;
-&lt;p&gt;To remap the caps lock to function as a backspace key in Windows, one must edit the registry keys. To do that, go to Start &amp;gt; Run..., and type in regedit. In the editor that opens up, navigate to the key shown in the picture below, and create a new key named Scancode Map of the type REG_BINARY. Give it the value shown in the picture, restart, and you're set. If things get wacky, delete the key and try again.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/files/images/Windows%20Registry%20Remap%20Screenshot.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;In Linux&lt;/strong&gt;
-I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
+&lt;p&gt;Thanks to &lt;a href="http://skarh.wordpress.com/2008/05/20/how-to-citrix-on-ubuntu/"&gt;Skarh&lt;/a&gt; for this how to.&lt;/p&gt;</summary><category term="Linux"></category><category term="ubuntu"></category><category term="citrix"></category></entry><entry><title>Remap Caps Lock as Backspace in Windows and Linux</title><link href="http://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/" rel="alternate"></link><updated>2008-04-29T21:33:41+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-29:posts/2008/04/29/remap-caps-lock-as-backspace/</id><summary type="html">
+&lt;p&gt;A while back my wrist started hurting from reaching for the cursed backspace
+key. I was making too many mistakes. My solution was to remap the caps 
+lock key on all the computers I use to act as an additional backspace key.
+How did I do it? Well, I'm glad you asked. I'll tell you.&lt;/p&gt;
+&lt;h2 id="in-windows"&gt;In Windows&lt;/h2&gt;
+&lt;p&gt;EDIT: I noticed that the picture doesn't have all the detail you need. The 
+easier way to do this, is to download the registry key attached to this 
+post, and to right click it, selecting merge. After that, 
+restart the computer, and you should be all set.&lt;/p&gt;
+&lt;p&gt;To remap the caps lock to function as a backspace key in Windows, 
+one must edit the registry keys. To do that, go to &lt;code&gt;Start &amp;gt; Run...&lt;/code&gt;, 
+and type in &lt;code&gt;regedit&lt;/code&gt;. In the editor that opens up, navigate to the key shown
+in the picture below, and create a new key named Scancode Map of the type 
+&lt;code&gt;REG_BINARY&lt;/code&gt;. Give it the value shown in the picture, restart, 
+and you're set. If things get wacky, delete the key and try again.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="/images/Windows%20Registry%20Remap%20Screenshot.jpg"/&gt;&lt;/p&gt;
+&lt;h2 id="in-linux"&gt;In Linux&lt;/h2&gt;
+&lt;p&gt;I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
 by opening a terminal, and running the xev program. Once that is running, 
 press the caps lock key, and it will tell you the numerical value of that key. 
 For example, my output from that command looks like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;mlissner@opal2% xev
-KeyPress event, serial 28, synthetic NO, window 0x4800001,
-root 0x59, subw 0x0, &lt;span class="nb"&gt;time &lt;/span&gt;2775892, &lt;span class="o"&gt;(&lt;/span&gt;373,636&lt;span class="o"&gt;)&lt;/span&gt;, root:&lt;span class="o"&gt;(&lt;/span&gt;376,685&lt;span class="o"&gt;)&lt;/span&gt;,
-state 0x0, &amp;lt;strong&amp;gt;keycode 66&amp;lt;/strong&amp;gt; &lt;span class="o"&gt;(&lt;/span&gt;keysym 0xff08, Caps_Lock&lt;span class="o"&gt;)&lt;/span&gt;, same_screen YES,
-XKeysymToKeycode returns keycode: 22
-XLookupString gives 1 bytes: &lt;span class="o"&gt;(&lt;/span&gt;08&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
-&lt;span class="s2"&gt;XmbLookupString gives 1 bytes: (08) &amp;quot;&lt;/span&gt;
-XFilterEvent returns: False
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mlissner&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;opal2&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;xev&lt;/span&gt;
+&lt;span class="n"&gt;KeyPress&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;serial&lt;/span&gt; &lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;synthetic&lt;/span&gt; &lt;span class="n"&gt;NO&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="mh"&gt;0x4800001&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="mh"&gt;0x59&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;subw&lt;/span&gt; &lt;span class="mh"&gt;0x0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt; &lt;span class="mi"&gt;2775892&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;373&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;636&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;376&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;685&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="mh"&gt;0x0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;keycode&lt;/span&gt; &lt;span class="mi"&gt;66&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keysym&lt;/span&gt; &lt;span class="mh"&gt;0xff08&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Caps_Lock&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;same_screen&lt;/span&gt; &lt;span class="n"&gt;YES&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="n"&gt;XKeysymToKeycode&lt;/span&gt; &lt;span class="n"&gt;returns&lt;/span&gt; &lt;span class="n"&gt;keycode&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;
+&lt;span class="n"&gt;XLookupString&lt;/span&gt; &lt;span class="n"&gt;gives&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="s"&gt;"&lt;/span&gt;
+&lt;span class="n"&gt;XmbLookupString&lt;/span&gt; &lt;span class="n"&gt;gives&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;bytes&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;08&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="s"&gt;"&lt;/span&gt;
+&lt;span class="n"&gt;XFilterEvent&lt;/span&gt; &lt;span class="n"&gt;returns&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;False&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;In there, you will see the keycode for the capslock key, in my case, number 
 66. Using that, create a file in your home directory called .Xmodmap, and put 
 the following in it:&lt;/p&gt;
@@ -150,21 +160,15 @@ the following in it:&lt;/p&gt;
 &lt;span class="n"&gt;remove&lt;/span&gt; &lt;span class="n"&gt;Lock&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Caps_Lock&lt;/span&gt;
 &lt;span class="n"&gt;keycode&lt;/span&gt; &lt;span class="mi"&gt;66&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BackSpace&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Once that is done, the next time you log in, your caps lock will function as a 
 backspace. The only remaining problem is that it still does not have the 
 auto-repeat function that backspace should have. To fix that, run:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;xset r 66
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;xset&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="mi"&gt;66&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;That will make things work properly, but you need to run that every time you 
 log in, or else it won't work properly. To fix that run:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo gedit /etc/X11/Xsession.d/50x11-common_determine-startup
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;gedit&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;X11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Xsession&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="n"&gt;x11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;common_determine&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;startup&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;And add xset r 66 to the bottom.&lt;/p&gt;
+&lt;p&gt;And add &lt;code&gt;xset r 66&lt;/code&gt; to the bottom.&lt;/p&gt;
 &lt;p&gt;That should do it.&lt;/p&gt;
 &lt;p&gt;Source: http://ubuntuforums.org/showthread.php?t=369402&lt;/p&gt;</summary><category term="windows"></category><category term="ubuntu"></category><category term="microsoft"></category><category term="Linux"></category></entry></feed>

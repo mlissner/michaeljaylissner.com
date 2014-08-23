@@ -66,7 +66,7 @@ could certainly bring it up, even if it were never crawled. &lt;/p&gt;
 &lt;p&gt;A third class of search engines support neither the robots HTML meta tag, nor the x-robots-tag HTTP header. These are typically less popular or less mature crawlers, and so they must be blocked using robots.txt. There are two approaches to this. The first is to list blocked pages individually in the robots.txt file, and the second is to simply block these search engines from all access. While it's possible to list each private document in robots.txt, doing so creates a privacy loophole, since it lists all private documents in one place. At CourtListener, therefore, we take a conservative approach, and completely block all search engines that do not support the HTML meta tag or the x-robots-tag HTTP header.&lt;/p&gt;
 &lt;p&gt;The final action we take when we receive a request that a document on our site stop appearring in search results, is to use the webmaster tools provided by the major search engines&lt;sup&gt;1&lt;/sup&gt; to explicitly ask those search engines to exclude the document(s) from their results.&lt;/p&gt;
 &lt;p&gt;Between these measures, private documents on CourtListener should be removed from all major and minor search engines. Where posssible this strategy takes a very granular approach, and where minor search engines do not support certain standards, we take a conservative approach, blocking them entirely.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update, 2012-04-29:&lt;/strong&gt; You may also want to look at our &lt;a href="http://michaeljaylissner.com/blog/further-privacy-protections-at-courtlistener"&gt;discussion of the impact of putting people's names into your URLs, and the way that affects your sitemap files&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update, 2012-04-29:&lt;/strong&gt; You may also want to look at our &lt;a href="http://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/"&gt;discussion of the impact of putting people's names into your URLs, and the way that affects your sitemap files&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- actual footnotes --&gt;
 
 &lt;ol&gt;
@@ -76,9 +76,17 @@ Webmaster Tools&lt;/a&gt;. Before it was merged into Bing's tools,
 we also previously used &lt;a href="http://siteexplorer.search.yahoo
 .com/"&gt;Yahoo's Site Explorer&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;</summary><category term="robots.txt"></category><category term="privacy"></category><category term="practical obscurity"></category><category term="policy"></category><category term="courtlistener.com"></category><category term="courtlistener.com"></category><category term="policy"></category><category term="practical obscurity"></category><category term="privacy"></category><category term="robots.txt"></category></entry><entry><title>More Security Papers: Breaking ReCAPTCHA and Proactive Methods for Secure Design</title><link href="http://michaeljaylissner.com/posts/2009/12/12/more-security-papers-breaking-recaptcha-and-proactive-methods-for-secure-design/" rel="alternate"></link><updated>2009-12-12T12:07:58+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-12:posts/2009/12/12/more-security-papers-breaking-recaptcha-and-proactive-methods-for-secure-design/</id><summary type="html">&lt;p&gt;Two more security papers today. &lt;/p&gt;
-&lt;p&gt;In the first, &lt;em&gt;Breaking ReCAPTCHA&lt;/em&gt; I discuss a few methods that ReCAPTCHAs can be hacked, and talk a bit about the ways that they were attacked by the Anonymous hacker group. I should mention at the outset that none of the approaches here are particularly useful though, and that ultimately, the hacker group beat ReCAPTCHA by simply out numbering it.&lt;/p&gt;
-&lt;p&gt;The second paper is a brief discussion of some approaches an organization might take when beginning a project in which security is a high concern. Essentially, it takes a chronological approach, from the start to the end of the project. &lt;/p&gt;
-&lt;p&gt;Enjoy.&lt;/p&gt;</summary><category term="security"></category><category term="captcha"></category><category term="ReCAPTCHA"></category><category term="Design"></category></entry><entry><title>Analyzing Facebook's Security Mechanisms</title><link href="http://michaeljaylissner.com/posts/2009/11/15/analyzing-facebooks-security-mechanisms/" rel="alternate"></link><updated>2009-11-15T17:43:55+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-15:posts/2009/11/15/analyzing-facebooks-security-mechanisms/</id><summary type="html">&lt;p&gt;For my &lt;a href="http://is219.blogspot.com/" target="_blank"&gt;Privacy, 
+&lt;p&gt;In the first, &lt;a href="http://michaeljaylissner.com/pdfs/breaking-recaptcha.pdf"&gt;&lt;strong&gt;Breaking ReCAPTCHA&lt;/strong&gt;&lt;/a&gt; I discuss a few methods that 
+ReCAPTCHAs can be hacked, and talk a bit about the ways that they were 
+attacked by the Anonymous hacker group. I should mention at the outset that
+none of the approaches here are particularly useful though, 
+and that ultimately, the hacker group beat ReCAPTCHA by simply out 
+numbering it.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://michaeljaylissner.com/pdfs/proactive-security.pdf"&gt;The &lt;em&gt;second paper&lt;/em&gt;&lt;/a&gt; is a brief discussion of some approaches an 
+organization might take when beginning a project in which security is a 
+high concern. Essentially, it takes a chronological approach, 
+from the start to the end of the project. &lt;/p&gt;
+&lt;p&gt;Enjoy.&lt;/p&gt;</summary><category term="security"></category><category term="captcha"></category><category term="ReCAPTCHA"></category><category term="Design"></category></entry><entry><title>Analyzing Facebook's Security Mechanisms</title><link href="http://michaeljaylissner.com/posts/2009/11/15/analyzing-facebooks-security-mechanisms/" rel="alternate"></link><updated>2009-11-15T17:43:55+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-15:posts/2009/11/15/analyzing-facebooks-security-mechanisms/</id><summary type="html">&lt;p&gt;For my &lt;a href="http://is219.blogspot.com/"&gt;Privacy, 
 Security and Cryptography&lt;/a&gt; class, we studied a set of 13 principles for 
 secure systems:&lt;/p&gt;
 &lt;ol&gt;
@@ -99,32 +107,55 @@ secure systems:&lt;/p&gt;
 &lt;p&gt;For our midterm, we were asked to analyze how Facebook exemplifies or does not 
 follow these principles. It was an interesting assignment, which finally 
 forced me to think more thoroughly about Facebook's security policies, and I'm
-happy to attach my findings here. &lt;/p&gt;
+happy to &lt;a href="http://michaeljaylissner.com/pdfs/facebook-security.pdf"&gt;attach my findings&lt;/a&gt; here. &lt;/p&gt;
 &lt;p&gt;For some people these may be rather run of the mill notes. For others, you may 
 be surprised at poor security of the world's biggest photo and social 
 networking site.&lt;/p&gt;
-&lt;p&gt;Enjoy.&lt;/p&gt;</summary><category term="security"></category><category term="facebook"></category><category term="paper"></category><category term="privacy"></category></entry><entry><title>Google Resonds to the Twitter Attack</title><link href="http://michaeljaylissner.com/posts/2009/10/02/google-responds-to-the-twitter-attack/" rel="alternate"></link><updated>2009-10-02T20:37:12+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-02:posts/2009/10/02/google-responds-to-the-twitter-attack/</id><summary type="html">&lt;p&gt;A few months ago, Twitter was hacked by means of a &lt;a href="http://www.techcrunch.com/2009/07/19/the-anatomy-of-the-twitter-attack/" target="_blank"&gt;clever, yet somewhat obvious approach&lt;/a&gt;. Today, I saw the following alert on my Gmail account, ensuring that this security vulnerability is fixed. I'm often impressed by Gmail, but this is great to see:&lt;blockquote&gt;
-Hey, this is important: If you ever lose access to your account, you can send password reset info to [myemailaddress@michaeljaylissner.com]. This address is correct | Update this address&lt;/blockquote&gt;What happened in the case of Twitter was that a hacker did the following:&lt;/p&gt;
+&lt;p&gt;Enjoy.&lt;/p&gt;</summary><category term="security"></category><category term="facebook"></category><category term="paper"></category><category term="privacy"></category></entry><entry><title>Google Resonds to the Twitter Attack</title><link href="http://michaeljaylissner.com/posts/2009/10/02/google-responds-to-the-twitter-attack/" rel="alternate"></link><updated>2009-10-02T20:37:12+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-02:posts/2009/10/02/google-responds-to-the-twitter-attack/</id><summary type="html">&lt;p&gt;A few months ago, Twitter was hacked by means of a &lt;a href="http://www.techcrunch.com/2009/07/19/the-anatomy-of-the-twitter-attack/"&gt;clever, 
+yet somewhat obvious approach&lt;/a&gt;. Today, I saw the following alert on my Gmail
+account, ensuring that this security vulnerability is fixed. I'm often 
+impressed by Gmail, but this is great to see:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hey, this is important: If you ever lose access to your account, 
+you can send password reset info to [myemailaddress@michaeljaylissner.com]. 
+This address is correct | Update this address&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What happened in the case of Twitter was that a hacker did the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Figured out the Gmail address of a Twitter employee&lt;/li&gt;
-&lt;li&gt;Went to &lt;a href="https://www.google.com/accounts/ForgotPasswd?service=mail&amp;fpOnly=1" target="_blank"&gt;Gmail's password reminder&lt;/a&gt;, and requested a reminder&lt;/li&gt;
-&lt;li&gt;This informed him that an email reminder was sent to a specific Hotmail address&lt;/li&gt;
+&lt;li&gt;Went to &lt;a href="https://www.google.com/accounts/ForgotPasswd?service=mail&amp;amp;fpOnly=1"&gt;Gmail's password reminder&lt;/a&gt;, and requested a reminder&lt;/li&gt;
+&lt;li&gt;This informed the hacker that an email reminder was sent to a specific 
+ Hotmail address&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;That Hotmail address had been automatically closed due to disuse&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;He set up that email account, since it was now available&lt;/li&gt;
-&lt;li&gt;He then requested another password reminder, which summarily sent an email to his new Hotmail account&lt;/li&gt;
-&lt;li&gt;This gave him complete access to the Twitter employee's gmail account (and thus a lot of other stuff)&lt;/li&gt;
+&lt;li&gt;The hacker set up that email account, since it was now available&lt;/li&gt;
+&lt;li&gt;The hacker then requested another password reminder, which summarily sent an 
+ email to his new Hotmail account&lt;/li&gt;
+&lt;li&gt;This gave the hacker complete access to the Twitter employee's gmail 
+ account (and thus a lot of other stuff)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The new alert that Gmail is now popping up should serve the function of updating this, and, if done correctly, should fix this problem permanently. Well done Gmail.&lt;/p&gt;</summary><category term="security"></category><category term="Twitter"></category><category term="gmail"></category><category term="secret questions"></category><category term="passwords"></category></entry><entry><title>Rethinking Facebook Privacy Settings</title><link href="http://michaeljaylissner.com/posts/2009/08/17/rethinking-facebook-privacy-settings/" rel="alternate"></link><updated>2009-08-17T12:09:06+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-08-17:posts/2009/08/17/rethinking-facebook-privacy-settings/</id><summary type="html">&lt;p&gt;Ars Technica has &lt;a href="http://arstechnica.com/web/news/2009/08/meshing-social-networking-and-privacy-on-facebook.ars" target="_blank"&gt;an article&lt;/a&gt; today outlining some excellent techniques for safeguarding your privacy while using Facebook. One of the best methods explained in the article is to cordon off your friends into different groups of people, and to then set different permissions for those groups. Thus, the common technique is to put your ex-partners into one group, your friends into another, family into another, and thus down the line.&lt;/p&gt;
+&lt;p&gt;The new alert that Gmail is now popping up should serve the function of 
+updating this, and, if done correctly, should fix this problem permanently.
+Well done Gmail.&lt;/p&gt;</summary><category term="security"></category><category term="Twitter"></category><category term="gmail"></category><category term="secret questions"></category><category term="passwords"></category></entry><entry><title>Rethinking Facebook Privacy Settings</title><link href="http://michaeljaylissner.com/posts/2009/08/17/rethinking-facebook-privacy-settings/" rel="alternate"></link><updated>2009-08-17T12:09:06+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-08-17:posts/2009/08/17/rethinking-facebook-privacy-settings/</id><summary type="html">&lt;p&gt;Ars Technica has &lt;a href="http://arstechnica.com/web/news/2009/08/meshing-social-networking-and-privacy-on-facebook.ars"&gt;an article&lt;/a&gt; today outlining some excellent techniques for safeguarding your privacy while using Facebook. One of the best methods explained in the article is to cordon off your friends into different groups of people, and to then set different permissions for those groups. Thus, the common technique is to put your ex-partners into one group, your friends into another, family into another, and thus down the line.&lt;/p&gt;
 &lt;p&gt;But  in practice this technique is nigh on impossible. I have family members (such as cousins) that are close friends, and so-called friends that, really, I haven't talked to since high school. Beyond this, managing the groups is a problem too since over time, some of your friends become closer and others more distant. &lt;/p&gt;
 &lt;p&gt;Thinking through this problem, I have come up with a better, and perhaps more obvious solution: Simply organize your Facebook friends into groups based on how much you want those people to know about you. In practice I found this to be fairly simple with only three groups: Loose Privacy, Standard Privacy, and Strict Privacy. Bosses, ex-partners and distant friends go into the Strict category, close friends and current partners go into the Loose category, and everybody else goes into the Medium category. &lt;/p&gt;
 &lt;p&gt;Admittedly, this dumbs down the power that Facebook gives you to categorize your friends into groups, but in practice, it's much easier to maintain, since there are only three lists, and it's clear who belongs in which.&lt;/p&gt;
 &lt;p&gt;A second group of  settings that people are likely unaware of are those that "limit what types of information your friends can see about you through applications." These are important and creepy because by default, when your friends install an application, that application can see and aggregate an incredible quantity of information about you, even without your or your friend's permission or knowledge. As part of its &lt;a href="http://dotrights.org"&gt;dotrights campaign&lt;/a&gt;, the ACLU is currently working on an application that demonstrates this loophole, but for the moment, it's probably wise to adjust these settings. &lt;/p&gt;
-&lt;p&gt;To adjust these settings so third-party applications can see as little information as possible (without your friends simply not using them), go to Settings &amp;gt; Privacy &amp;gt; Applications, and then click on the "Other" tab (&lt;a href="http://www.facebook.com/privacy/?view=platform&amp;tab=other" target="_blank"&gt;this link&lt;/a&gt; should also work, if you're logged in). Once on that page, uncheck all of the boxes in the first section, and save your settings.&lt;/p&gt;</summary><category term="facebook"></category><category term="privacy"></category><category term="configuration"></category></entry><entry><title>Making Prey of Computer Thieves</title><link href="http://michaeljaylissner.com/posts/2009/07/25/making-prey-of-computer-thieves/" rel="alternate"></link><updated>2009-07-25T22:39:35+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-25:posts/2009/07/25/making-prey-of-computer-thieves/</id><summary type="html">&lt;p&gt;Laptops get stolen. It sucks, but we know it happens from time to time. Recently, I've been checking out programs that can help to catch the thieves (and dabbling in writing my own).&lt;/p&gt;
-&lt;p&gt;One program that I found, called &lt;a href="http://preyproject.com" target="_blank"&gt;Prey&lt;/a&gt;, helps to do just this. Once installed, every few minutes it will check a website to see if a page exists. If that page exists, it will collect a bunch of information about the computer, and send that (using SMTP of your choice) to an email address of your choice.&lt;/p&gt;
-&lt;p&gt;So, for example, if I set up a web page at http://michaeljaylissner.com/laptop-stolen, in a few minutes, Prey will see that page, and will collect the following information:&lt;/p&gt;
+&lt;p&gt;To adjust these settings so third-party applications can see as little information as possible (without your friends simply not using them), go to Settings &amp;gt; Privacy &amp;gt; Applications, and then click on the "Other" tab (&lt;a href="http://www.facebook.com/privacy/?view=platform&amp;tab=other"&gt;this link&lt;/a&gt; should also work, if you're logged in). Once on that page, uncheck all of the boxes in the first section, and save your settings.&lt;/p&gt;</summary><category term="facebook"></category><category term="privacy"></category><category term="configuration"></category></entry><entry><title>Making Prey of Computer Thieves</title><link href="http://michaeljaylissner.com/posts/2009/07/25/making-prey-of-computer-thieves/" rel="alternate"></link><updated>2009-07-25T22:39:35+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-25:posts/2009/07/25/making-prey-of-computer-thieves/</id><summary type="html">&lt;p&gt;Laptops get stolen. It sucks, but we know it happens from time to time. 
+Recently, I've been checking out programs that can help to catch the 
+thieves (and dabbling in writing my own).&lt;/p&gt;
+&lt;p&gt;One program that I found, called &lt;a href="http://preyproject.com"&gt;Prey&lt;/a&gt;, helps to do just this. Once 
+installed, every few minutes it will check a website to see if a page 
+exists. If that page exists, it will collect a bunch of information about 
+the computer, and send that (using SMTP of your choice) to an email address
+ of your choice.&lt;/p&gt;
+&lt;p&gt;So, for example, if I set up a web page at http://michaeljaylissner
+.com/laptop-stolen, in a few minutes, Prey will see that page, 
+and will collect the following information:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The IP address where my computer is connected (this is almost as good as the thief's physical address)&lt;/li&gt;
-&lt;li&gt;The name of the wireless network my computer is connected to, and a list of the others in the area&lt;/li&gt;
+&lt;li&gt;The IP address where my computer is connected (this is almost as good as 
+ the thief's physical address)&lt;/li&gt;
+&lt;li&gt;The name of the wireless network my computer is connected to, and a list of 
+ the others in the area&lt;/li&gt;
 &lt;li&gt;The MAC address of the wireless router my computer is connected to&lt;/li&gt;
 &lt;li&gt;How long my computer has been on (uptime)&lt;/li&gt;
 &lt;li&gt;Any files that have been modified in the last X minutes&lt;/li&gt;
@@ -133,24 +164,43 @@ Hey, this is important: If you ever lose access to your account, you can send pa
 &lt;li&gt;A picture of the thief, if you have a webcam enabled&lt;/li&gt;
 &lt;li&gt;And best of all, a screenshot at the time of the report&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Once I get the email with all this information, it's just a matter of taking it to the police, and convincing them to take action on it. &lt;/p&gt;
-&lt;p&gt;Of course, all of this could be useless if the thief decides to immediately wipe the data on the computer, but it's a good safeguard that can weed out the dumb thieves at least.&lt;/p&gt;
-&lt;p&gt;EDIT: Forgot to mention the webcam on the first version.&lt;/p&gt;</summary><category term="security"></category><category term="prey"></category></entry><entry><title>A Real Problem You Should Fix. Now.</title><link href="http://michaeljaylissner.com/posts/2009/04/12/a-real-problem-you-should-fix-now/" rel="alternate"></link><updated>2009-04-12T14:36:49+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-04-12:posts/2009/04/12/a-real-problem-you-should-fix-now/</id><summary type="html">&lt;p&gt;I've mentioned secret questions on my site before, but I never quite realized how much of a problem they are until today, when I discovered &lt;a href="http://uspublicrecords.com" target="_blank"&gt;uspublicrecords.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once I get the email with all this information, it's just a matter of taking 
+it to the police, and convincing them to take action on it. &lt;/p&gt;
+&lt;p&gt;Of course, all of this could be useless if the thief decides to immediately
+wipe the data on the computer, but it's a good safeguard that can weed out 
+the dumb thieves at least.&lt;/p&gt;</summary><category term="security"></category><category term="prey"></category></entry><entry><title>A Real Problem You Should Fix. Now.</title><link href="http://michaeljaylissner.com/posts/2009/04/12/a-real-problem-you-should-fix-now/" rel="alternate"></link><updated>2009-04-12T14:36:49+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-04-12:posts/2009/04/12/a-real-problem-you-should-fix-now/</id><summary type="html">&lt;p&gt;I've mentioned secret questions on my site before, but I never quite realized how much of a problem they are until today, when I discovered &lt;a href="http://uspublicrecords.com"&gt;uspublicrecords.com&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It's a simple site. You put in a name, and if it has that person in its database, it gives you their age, middle name, and family members. So far, I haven't found any names it &lt;i&gt;doesn't&lt;/i&gt; have.&lt;/p&gt;
 &lt;p&gt;Using this information, I went and checked a friend's gmail secret question, which was, "What is your father's middle name?" I just happened to have that information from uspublicrecords.com, so I put it in, and changed their email password.* &lt;/p&gt;
 &lt;p&gt;It's pretty creepy how easy this is, and fixing this problem could take days as you check all your secret questions one by one. This might make a good mashup: a system for checking all your secret questions.&lt;/p&gt;
 &lt;p&gt;Anyway, now might be a good time to go change your secret questions, cause if it has anything to do with middle names, that site will hand them right out.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;With their OK, of course.&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="security"></category><category term="problems"></category><category term="mashup idea"></category></entry><entry><title>On Airport Security and Knives</title><link href="http://michaeljaylissner.com/posts/2008/09/22/on-airport-security-and-knives/" rel="alternate"></link><updated>2008-09-22T16:39:48+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-22:posts/2008/09/22/on-airport-security-and-knives/</id><summary type="html">&lt;p&gt;&lt;img src="http://www.michaeljaylissner.com/files/images/opinel_splits.jpeg" style="float: left; padding: 10px"&gt; I had the occasion to go through airport security over the weekend, and I realized an interesting thing. If you want to get through security with a large knife, all you have to do is try to slip one through in your bag a few times over the course of a few days or weeks. &lt;/p&gt;
-&lt;p&gt;Each time you fail, you act like an idiot ("oops!"), and give them the knife, proceeding without it to your airplane. Eventually, the guy watching the x-ray screen will miss the knife, you will proceed, and you will finally be able to cut your airplane steak.&lt;/p&gt;
-&lt;p&gt;I learned this lesson by accident when I nearly missed my plane. I had planned on checking my small bag with the knife in it, but when I arrived at the airport late (my fault), I could either miss my plane, or try to sneak the knife through.&lt;/p&gt;
-&lt;p&gt;Since I didn't want to miss my flight, I tried and succeeded to get the pictured knife through. Pretty amazing that a three inch blade can pass right by, eh?&lt;/p&gt;
-&lt;p&gt;I wonder if terrorists are patient...&lt;/p&gt;</summary><category term="politics"></category><category term="security"></category><category term="knife"></category></entry><entry><title>There's a Lesson About Yahoo! Security I Learned from Palin Today</title><link href="http://michaeljaylissner.com/posts/2008/09/17/there-is-a-lesson-about-yahoo-security-i-learned-from-palin-today/" rel="alternate"></link><updated>2008-09-17T15:08:09+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-17:posts/2008/09/17/there-is-a-lesson-about-yahoo-security-i-learned-from-palin-today/</id><summary type="html">&lt;p&gt;The lesson is this: Yahoo! doesn't use encryption on their webmail. I'll repeat that: YAHOO! DOESN'T USE ENCRYPTION ON THEIR WEBMAIL! &lt;/p&gt;
-&lt;p&gt;I'm nothing short of shocked. I could have sworn that Yahoo! was a $26B company. Surely, SURELY they, of all people would see the importance and value of secure email, right? Nope. &lt;/p&gt;
-&lt;p&gt;They've been offering free email since at least April of 1996 when they had their IPO. Somehow in the last 12 years they never secured the damned thing? What?&lt;/p&gt;
-&lt;p&gt;Note below the conspicuous use of http rather than https:
-&lt;img src="http://www.michaeljaylissner.com/files/images/yahooSecuritySucks.png"&gt;&lt;/p&gt;</summary><category term="palin"></category><category term="security"></category><category term="yahoo"></category></entry><entry><title>I Am Me, Dammit!</title><link href="http://michaeljaylissner.com/posts/2008/09/15/i-am-me-dammit/" rel="alternate"></link><updated>2008-09-15T15:00:30+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-15:posts/2008/09/15/i-am-me-dammit/</id><summary type="html">&lt;p&gt;Well, it happened. The bastards stole my identity. They somehow got my credit 
+&lt;/ul&gt;</summary><category term="security"></category><category term="problems"></category><category term="mashup idea"></category></entry><entry><title>On Airport Security and Knives</title><link href="http://michaeljaylissner.com/posts/2008/09/22/on-airport-security-and-knives/" rel="alternate"></link><updated>2008-09-22T16:39:48+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-22:posts/2008/09/22/on-airport-security-and-knives/</id><summary type="html">&lt;p&gt;&lt;img alt="No Alt" src="http://michaeljaylissner.com/images/opinel_splits.jpeg" /&gt; &lt;/p&gt;
+&lt;p&gt;I had the occasion to go through airport security over the weekend, 
+and I realized an interesting thing. If you want to get through security 
+with a large knife, all you have to do is try to slip one through in your 
+bag a few times over the course of a few days or weeks. &lt;/p&gt;
+&lt;p&gt;Each time you fail, you act like an idiot ("oops!"), 
+and give them the knife, proceeding without it to your airplane. Eventually,
+the guy watching the x-ray screen will miss the knife, you will proceed, 
+and you will finally be able to cut your airplane steak.&lt;/p&gt;
+&lt;p&gt;I learned this lesson by accident when I nearly missed my plane. I had 
+planned on checking my small bag with the knife in it, 
+but when I arrived at the airport late (my fault), I could either miss my 
+plane, or try to sneak the knife through.&lt;/p&gt;
+&lt;p&gt;Since I didn't want to miss my flight, I tried and succeeded to get the 
+pictured knife through. Pretty amazing that a three inch blade can pass 
+right by, eh?&lt;/p&gt;
+&lt;p&gt;I wonder if terrorists are patient...&lt;/p&gt;</summary><category term="politics"></category><category term="security"></category><category term="knife"></category></entry><entry><title>There's a Lesson About Yahoo! Security I Learned from Palin Today</title><link href="http://michaeljaylissner.com/posts/2008/09/17/there-is-a-lesson-about-yahoo-security-i-learned-from-palin-today/" rel="alternate"></link><updated>2008-09-17T15:08:09+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-17:posts/2008/09/17/there-is-a-lesson-about-yahoo-security-i-learned-from-palin-today/</id><summary type="html">&lt;p&gt;The lesson is this: Yahoo! doesn't use encryption on their webmail. I'll 
+repeat that: YAHOO! DOESN'T USE ENCRYPTION ON THEIR WEBMAIL! &lt;/p&gt;
+&lt;p&gt;I'm nothing short of shocked. I could have sworn that Yahoo! was a $26B 
+company. Surely, SURELY they, of all people would see the importance and 
+value of secure email, right? Nope. &lt;/p&gt;
+&lt;p&gt;They've been offering free email since at least April of 1996 when they had 
+their IPO. Somehow in the last 12 years they never secured the damned thing?
+ What?&lt;/p&gt;
+&lt;p&gt;Note below the conspicuous use of http rather than https:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No Alt" src="http://michaeljaylissner.com/images/yahooSecuritySucks.png" /&gt;&lt;/p&gt;</summary><category term="palin"></category><category term="security"></category><category term="yahoo"></category></entry><entry><title>I Am Me, Dammit!</title><link href="http://michaeljaylissner.com/posts/2008/09/15/i-am-me-dammit/" rel="alternate"></link><updated>2008-09-15T15:00:30+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-15:posts/2008/09/15/i-am-me-dammit/</id><summary type="html">&lt;p&gt;Well, it happened. The bastards stole my identity. They somehow got my credit 
 card number, address, phone number, etc, took them, and put them to use. Grand 
 total losses: $309. Not too bad, considering.&lt;/p&gt;
 &lt;p&gt;I've called my credit card company, and they promise to reimburse me for my 

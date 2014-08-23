@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/css" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-04-26T11:31:19+02:00</updated><entry><title>Papa's Got a Brand New Look</title><link href="http://michaeljaylissner.com/posts/2009/04/26/papas-got-a-brand-new-look/" rel="alternate"></link><updated>2009-04-26T11:31:19+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-04-26:posts/2009/04/26/papas-got-a-brand-new-look/</id><summary type="html">&lt;p&gt;OK, here's the scoop. I've given the site a major revamp and a new look. &lt;/p&gt;
-&lt;p&gt;Here's the old one:
-&lt;a href="http://michaeljaylissner.com/archive/oldsitev3/Site%20v3.png"&gt;&lt;img src="http://michaeljaylissner.com/archive/oldsitev3/Site%20v3,%20thumb.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;And the new:
-&lt;a href="http://michaeljaylissner.com/archive/oldsitev3/Site%20v.4.png"&gt;&lt;img src="http://michaeljaylissner.com/archive/oldsitev3/Site%20v.4,%20thumb.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://michaeljaylissner.com/poll/new-theme-old-theme"&gt;And here's a poll to make a vote and/or comment on the changes.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;There were a number of reasons I wanted to make a change, and I think the new design accomplishes most of them. First, I wanted to change to a static width layout. It was a long time coming, and now people with big screens and/or high resolution won't have to deal with ridiculous line lengths. Second, the new design should do wonders for links, which didn't really stand out before. Third, I've dropped the login box at the right, since I was the only one that ever logged in. Actually, I've dropped the whole column, so we're down to two columns now, not three. &lt;/p&gt;
-&lt;p&gt;Something I wasn't really planning on doing was the color change. I liked the muted greens, but I think the topics I discuss have largely moved away from environmental ones, so perhaps the blue makes more sense and will better evoke what I'm going for. &lt;/p&gt;
+&lt;p&gt;Here's the old one:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Old site" src="/images/oldsite/v3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;And the new:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Old site" src="/images/oldsite/v4.png" /&gt;&lt;/p&gt;
+&lt;p&gt;There were a number of reasons I wanted to make a change, 
+and I think the new design accomplishes most of them. First, 
+I wanted to change to a static width layout. It was a long time coming, 
+and now people with big screens and/or high resolution won't have to deal 
+with ridiculous line lengths. Second, the new design should do wonders for 
+links, which didn't really stand out before. Third, I've dropped the login 
+box at the right, since I was the only one that ever logged in. Actually, 
+I've dropped the whole column, so we're down to two columns now, not three. &lt;/p&gt;
+&lt;p&gt;Something I wasn't really planning on doing was the color change. I liked 
+the muted greens, but I think the topics I discuss have largely moved away 
+from environmental ones, so perhaps the blue makes more sense and will 
+better evoke what I'm going for. &lt;/p&gt;
 &lt;p&gt;Thoughts? Bugs? Comments?&lt;/p&gt;</summary><category term="drupal"></category><category term="site"></category><category term="css"></category></entry></feed>

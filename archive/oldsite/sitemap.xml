@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
+   <url>
+      <loc>http://www.michaeljaylissner.com/index.htm</loc>
+      <lastmod>2006-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>http://www.michaeljaylissner.com/about_site.htm</loc>
+      <lastmod>2006-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.4</priority>
+   </url>
+
+   <url>
+      <loc>http://www.michaeljaylissner.com/biography.htm</loc>
+      <lastmod>2006-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>http://www.michaeljaylissner.com/barfacts.php</loc>
+      <lastmod>2005-11-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.3</priority>
+   </url>
+
+   <url>
+      <loc>http://www.michaeljaylissner.com/charity.htm</loc>
+      <lastmod>2006-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>http://www.michaeljaylissner.com/contact.htm</loc>
+      <lastmod>2006-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+   </url>
+
+   <url>
+      <loc>http://www.michaeljaylissner.com/cv.htm</loc>
+      <lastmod>2006-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+
+   <url>
+      <loc>http://www.michaeljaylissner.com/geoslots.htm</loc>
+      <lastmod>2006-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>http://www.michaeljaylissner.com/map.htm</loc>
+      <lastmod>2006-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <url>
+      <loc>http://www.michaeljaylissner.com/pics/index.htm</loc>
+      <lastmod>2006-12-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+
+   <url>
+      <loc>http://www.michaeljaylissner.com/woodwork/default.htm</loc>
+      <lastmod>2005-11-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.4</priority>
+   </url>
+
+   <url>
+      <loc>http://www.michaeljaylissner.com/archive/default.htm</loc>
+      <lastmod>2005-11-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+   </url>
+</urlset>

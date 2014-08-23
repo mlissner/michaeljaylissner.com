@@ -36,6 +36,7 @@
                         <ul class="nav pull-right top-menu">
                             <li ><a href="../../../../..">Home</a></li>
                             <li ><a href="../../../../../pages/about.html">About this Site</a></li>
+                            <li ><a href="../../../../../pages/crazed-deer.html">Crazed Deer</a></li>
                             <li ><a href="../../../../../categories.html">Categories</a></li>
                             <li ><a href="../../../../../tags.html">Tags</a></li>
                             <li ><a href="../../../../../archives.html">Archives</a></li>
@@ -59,17 +60,29 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <p>I took some time today and wrote up a script that can be run to eliminate autocomplete=off in Firefox. It basically does the same thing as is described <a href="http://michaeljaylissner.com/blog/rid-thyself-of-autocomplete-in-firefox">here</a>, but it automates it. </p>
+            <p>I took some time today and wrote up <a href="../../../../../archive/autocomplete-killer.sh">a script</a> that can be run to 
+eliminate 
+<code>autocomplete=off</code> in Firefox. It basically does the same thing as is 
+described <a href="../../../../../posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/">here</a>, but it automates it. </p>
 <p>The script can be run with one of five arguments:</p>
 <ul>
-<li>You can choose to use find (--find) or locate (--locate) to find the files that need to be changed on your system;</li>
-<li>You can dictate the location of the file if you want to modify a specific one or know exactly where it's located (--dictate);</li>
-<li>You can choose to use the Ubuntu default location (--default); or</li>
-<li>You can print the help information (--help)</li>
+<li>You can choose to use find (<code>--find</code>) or locate (<code>--locate</code>) to find the 
+ files that need to be changed on your system;</li>
+<li>You can dictate the location of the file if you want to modify a 
+ specific one or know exactly where it's located (<code>--dictate</code>);</li>
+<li>You can choose to use the Ubuntu default location (<code>--default</code>); or</li>
+<li>You can print the help information (<code>--help</code>)</li>
 </ul>
-<p>Once the program is run, it will make a back up, and modify it the original versions of the file. Once that's complete, all you have to do is restart Firefox.</p>
-<p>It has been pointed out to me by some security folks that removing autocomplete's functionality from the browser might not be the best thing, since it will allow you to save your passwords in the browser. There's some truth to that: Anything that's on your computer can be hacked. So, if you're going to use this script, use it wisely.</p>
-<p>Here's the code. I've attached it to this message as well. Any bugs or comments are greatly appreciated.</p>
+<p>Once the program is run, it will make a back up, and modify it the original
+ versions of the file. Once that's complete, all you have to do is restart 
+ Firefox.</p>
+<p>It has been pointed out to me by some security folks that removing a
+utocomplete's functionality from the browser might not be the best thing, 
+since it will allow you to save your passwords in the browser. There's some
+ truth to that: Anything that's on your computer can be hacked. So, 
+ if you're going to use this script, use it wisely.</p>
+<p>Here's the code. I've attached it to this message as well. Any bugs or 
+comments are greatly appreciated.</p>
 <div class="highlight"><pre><span class="c">#!/bin/bash</span>
 <span class="c"># a simple script to destroy autocomplete in linux installations.</span>
 

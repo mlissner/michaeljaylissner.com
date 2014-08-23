@@ -36,6 +36,7 @@
                         <ul class="nav pull-right top-menu">
                             <li ><a href="../../../../..">Home</a></li>
                             <li ><a href="../../../../../pages/about.html">About this Site</a></li>
+                            <li ><a href="../../../../../pages/crazed-deer.html">Crazed Deer</a></li>
                             <li ><a href="../../../../../categories.html">Categories</a></li>
                             <li ><a href="../../../../../tags.html">Tags</a></li>
                             <li ><a href="../../../../../archives.html">Archives</a></li>
@@ -59,7 +60,7 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
-            <p>I spent the past couple days on one of my first Python projects - using the <a href="http://www.yelp.com/developers" target="_blank">Yelp API</a> to compile a list of restaurants in a defined geographic area.</p>
+            <p>I spent the past couple days on one of my first Python projects - using the <a href="http://www.yelp.com/developers">Yelp API</a> to compile a list of restaurants in a defined geographic area.</p>
 <p>It's been a good project. Because of some limitations of the API, I had to do some interesting tricks to make it work. One problem with the API is that it only allows 20 hits per query, so if you want to do a big query, you have to divide it up into tiny queries that have fewer than 20 hits each. </p>
 <p>To accomplish that, if a query gets 20 hits within those two points, it will divide the longer dimension of the rectangle created by the points in half, and perform a query on each of those two new rectangles. For each of those, if there are 20 hits, it will again divide it in two and perform two new queries, and so forth until less than 20 hits are found for the rectangle. Once less than 20 hits are found, the data is entered into a database. Once all the points have been added to the database, a comma separated file is created, and the program ends. </p>
 <p>It was pretty incredible switching to Python for this project from my usual Java, and also using an official API for the first time. This project ended up being about 200 lines (half of which are comments). I can't imagine how long it would be with Java, since I used some rather powerful Python modules to accomplish this (namely, csv, urllib &amp; json).</p>
@@ -68,7 +69,7 @@
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="../../../../../posts/2008/12/19/cheney-is-so-fing-shady-it-pisses-me-off/" title="Previous: Cheney is so f***ing shady, it pisses me off.">Cheney is so f***ing shady, it pisses me off.</a></li>
+                <li class="previous_article">« <a href="../../../../../posts/2008/12/19/cheney-is-so-fing-shady-it-pisses-me-off/" title="Previous: Cheney is so shady, it pisses me off.">Cheney is so shady, it pisses me off.</a></li>
  
                 <li class="next_article"><a href="../../../../../posts/2008/12/29/dear-mr-gore/" title="Next: Dear Mr. Gore">Dear Mr. Gore</a> »</li>
             </ul>

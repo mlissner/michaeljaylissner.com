@@ -63,10 +63,14 @@ Well, things are winding down, and it looks like I am about ready to go now. The
 &lt;p&gt;Even though it seems like everything is a go, I feel somewhat strange. In a few days, I&amp;#39;m going to begin walking. After walking for a few days, I&amp;#39;m going to continue walking. Then, after a few weeks of walking, yes, I am going to walk some more. Eventually, after five months of it, I will stop walking, if and only if I have made it to Canada. Sounds simple, but I get bored easily. I&amp;#39;ve never done anything quite like this before, so I can only guess how my mind and body will react. I&amp;#39;m pretty confident about how my body will react (aside from my ankles and hips), but I know my mind is going to go insane at least temporarily. I was trying to explain to a friend last night about how it will happen when my brain tries to make me quit. I think that at first my brain will tell me that I&amp;#39;m bored. Then it will tell me to quit, that there&amp;#39;s no point in going on if I&amp;#39;m not having fun. Eventually, I will tell it to go away and mind its own business, but it&amp;#39;s harassed me incessently in the past, and it will continue harassing me on and on even after I&amp;#39;ve asked it to leave me alone. The trick is going to be telling it to go away, and remembering all the reasons that I am on the trail - the beauty, the challenge, the isolation.&lt;/p&gt;
 &lt;p&gt;I guess I have cold feet a little bit right now, but I&amp;#39;m quite excited. I know it will be the trip that defines the next chapters in my life, and I know that I will leave the trip a changed person.&lt;/p&gt;
 &lt;p&gt;The next post will be from the trail.&lt;/p&gt;</summary><category term="pct"></category><category term="hiking"></category><category term="me"></category></entry><entry><title>PCT Data Project - DONE</title><link href="http://michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/" rel="alternate"></link><updated>2007-12-12T21:29:57+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-12-12:posts/2007/12/12/pct-temperature-project-done/</id><summary type="html">&lt;p&gt;I'm happy to announce that the PCT data project is complete! &lt;/p&gt;
-&lt;p&gt;Over the past several weeks/months, I have been slaving away over my computer writing this program. When used, it will generate a dynamic graphing area that will load up temperature data for one to six PCT hikers. &lt;/p&gt;
-&lt;p&gt;All those that are interested in the most complicated programming assignment I have ever worked on are welcome to check it out at &lt;a href="http://www.michaeljaylissner.com/pct-temperatures"&gt;michaeljaylissner.com/pct-temperatures&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I am officially a free man once again! Thanks to all who made this possible with their encouragement and patience! &lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>The Great Temperature Data Project</title><link href="http://michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/" rel="alternate"></link><updated>2007-11-01T20:40:55+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-11-01:posts/2007/11/01/great-temperature-data-project/</id><summary type="html">&lt;p&gt;Back in '05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
-carried a little device called an &lt;a href="http://www.iButton.com" target="_blank"&gt;iButton&lt;/a&gt;. 
+&lt;p&gt;Over the past several weeks/months, I have been slaving away over my 
+computer writing this program. When used, it will generate a dynamic 
+graphing area that will load up temperature data for one to six PCT hikers. &lt;/p&gt;
+&lt;p&gt;All those that are interested in the most complicated programming 
+assignment I have ever worked on &lt;a href="{filename}/pct-temperatures/"&gt;are welcome to check it out&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I am officially a free man once again! Thanks to all who made this possible
+with their encouragement and patience! &lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>The Great Temperature Data Project</title><link href="http://michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/" rel="alternate"></link><updated>2007-11-01T20:40:55+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-11-01:posts/2007/11/01/great-temperature-data-project/</id><summary type="html">&lt;p&gt;Back in '05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
+carried a little device called an &lt;a href="http://www.iButton.com"&gt;iButton&lt;/a&gt;. 
 This little device contains essentially three things: a clock, a bit of memory 
 and a thermometer. It's waterproof, accurate to 0.1 degree Celsius, and is about 
 the size of five dimes stacked one upon another. There are a bunch of silly 
@@ -79,7 +83,7 @@ for about 150 days, for an astounding 3600 data points, and about 150
 oscillations from the daytime high to the nighttime low. I've spent some time 
 working with the data, and it's pretty much impossible to make much use of....unless 
 you write a program to interpret it. You can 
-&lt;a href="http://charityhikers.org/pct/temps.htm" target="_blank"&gt;see it for 
+&lt;a href="http://charityhikers.org/pct/temps.htm"&gt;see it for 
 yourself&lt;/a&gt; if you're interested.&lt;/p&gt;
 &lt;p&gt;Well, as fate should have it, I am currently enrolled in a Java programming 
 class, and I have the option of doing a final project of my own choosing. 
@@ -90,41 +94,26 @@ range that they choose (e.g. 5pm to 10pm for September 20th to 23rd).  &lt;/p&gt
 &lt;p&gt;Once this is done, I will attempt to post it here, but here's the question to 
 you dear reader, do you have any suggestions as to features that you would be 
 interested in seeing in an applet of this sort? Thoughts?&lt;/p&gt;
-&lt;p&gt;I'm quite excited about getting this info out there. Finally.&lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>My Destiny To Have A Beard</title><link href="http://michaeljaylissner.com/posts/2007/10/03/destiny-to-have-a-beard/" rel="alternate"></link><updated>2007-10-03T23:17:34+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-10-03:posts/2007/10/03/destiny-to-have-a-beard/</id><summary type="html">&lt;p&gt;
-I've been doing some thinking, and I think that my destiny* wants me to have a beard. Let's take a quick walk through my past, shall we? &lt;br /&gt;
-&lt;br /&gt;
-First, I was into woodworking. I described it as, &amp;quot;My first great passion.&amp;quot; Observe this picture. It's the first hit on google images for the word &amp;quot;woodworker&amp;quot;.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;img src="/files/images/MasseyWoodworker_0.jpg" alt="Woodworker" width="270" height="339" align="bottom" /&gt;&lt;br /&gt;
-&lt;br /&gt;
-Next, after sort of putting woodworking aside for a while, I got really into hiking; thru hiking to be precise. This picture is the third or fourth hit for &amp;quot;thru hiker&amp;quot; on google images, but I hasten to add that it is the first hit that contains a picture of a person.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;img src="/files/images/NimbleWill_Web0.jpg" alt="Thru-Hiker" width="200" height="236" align="bottom" /&gt; 
-&lt;/p&gt;
-
-&lt;p&gt;
-Finally, as you may have noticed, I'm pretty into Linux these days. It's could be a phase as well (we'll see), but observe this image, also pulled from google images. Admittedly it's not hit number one, but I don't count pictures of college kids or penguins out of principle. 
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;img src="/files/images/7087f1_1.png" alt="Linux Guy" width="416" height="293" align="bottom" /&gt;&lt;br /&gt;
-&lt;br /&gt;
-So. It seems I should have a beard. There is a problem with this plan though, and to illustrate that problem, I have this picture of me, when I tried it for myself. Damn.
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;img src="http://michaeljaylissner.com/files/images/DSC00772.preview.jpg" alt="Bearded me" width="288" height="384" align="bottom" /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-&lt;br /&gt;
-What will come after Linux? Will it be Lumberjack or hippie...time will tell. 
-&lt;/p&gt;
-
-&lt;p&gt;
-*Destiny is a load of bunk, and we all know it deep down.
-&lt;/p&gt;</summary><category term="pct"></category><category term="me"></category></entry></feed>
+&lt;p&gt;I'm quite excited about getting this info out there. Finally.&lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>My Destiny To Have A Beard</title><link href="http://michaeljaylissner.com/posts/2007/10/03/destiny-to-have-a-beard/" rel="alternate"></link><updated>2007-10-03T23:17:34+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-10-03:posts/2007/10/03/destiny-to-have-a-beard/</id><summary type="html">&lt;p&gt;I've been doing some thinking, and I think that my destiny* wants me to have
+a beard. Let's take a quick walk through my past, shall we?&lt;/p&gt;
+&lt;p&gt;First, I was into woodworking. I described it as, &amp;quot;My first great 
+passion.&amp;quot; Observe this picture. It's the first hit on google images for
+the word &amp;quot;woodworker&amp;quot;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="/images/bearded-destiny/wood.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Next, after sort of putting woodworking aside for a while, 
+I got really into hiking; thru hiking to be precise. This picture is the 
+third or fourth hit for &amp;quot;thru hiker&amp;quot; on google images, 
+but I hasten to add that it is the first hit that contains a picture of a 
+person.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="/images/bearded-destiny/thru.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Finally, as you may have noticed, I'm pretty into Linux these days. It's 
+could be a phase as well (we'll see), but observe this image, 
+also pulled from google images. Admittedly it's not hit number one, 
+but I don't count pictures of college kids or penguins out of principle. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="/images/bearded-destiny/linux.png" /&gt;&lt;/p&gt;
+&lt;p&gt;So. It seems I should have a beard. There is a problem with this plan 
+though, and to illustrate that problem, I have this picture of me, 
+when I tried it for myself. Damn.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="/images/bearded-destiny/me.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;What will come after Linux? Will it be Lumberjack or hippie...time will tell. &lt;/p&gt;
+&lt;p&gt;*Destiny is a load of bunk and we all know it deep down!&lt;/p&gt;</summary><category term="pct"></category><category term="me"></category></entry></feed>

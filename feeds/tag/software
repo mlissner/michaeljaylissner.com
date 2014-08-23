@@ -4,13 +4,13 @@
 &lt;p&gt;Here are this year's results, including amount donated and links to their donation page. Please let me know if I'm making any grave mistakes:
 &lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;strong&gt;Organization&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Amount&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;Link to donate&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Pacific Crest Trail Association&lt;/td&gt;&lt;td&gt;$25&lt;/td&gt;&lt;td&gt;&lt;a href="https://www.pcta.org/help/donate_form.asp" target="_blank"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Secular Coalition&lt;/td&gt;&lt;td&gt;$15 &lt;/td&gt;&lt;td&gt; &lt;a href="http://donate.secular.org/index.html" target="_blank"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Pitzer College (my alma mater)        &lt;/td&gt;&lt;td&gt; $30 &lt;/td&gt;&lt;td&gt; &lt;a href="https://mypz.pitzer.edu/NetCommunity/SSLPage.aspx?pid=184" target="_blank"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Zotero                                &lt;/td&gt;&lt;td&gt; $25 &lt;/td&gt;&lt;td&gt; &lt;a href="http://chnm.gmu.edu/donate/" target="_blank"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Electronic Frontier Foundation        &lt;/td&gt;&lt;td&gt; $40 &lt;/td&gt;&lt;td&gt; &lt;a href="http://www.eff.org/support" target="_blank"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Catalog Choice                        &lt;/td&gt;&lt;td&gt; $10 &lt;/td&gt;&lt;td&gt; &lt;a href="http://www.catalogchoice.org/donate" target="_blank"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Food and Water Watch                  &lt;/td&gt;&lt;td&gt; $10 &lt;/td&gt;&lt;td&gt; &lt;a href="https://salsa.democracyinaction.org/o/1185/t/3287/shop/custom.jsp?donate_page_KEY=3545" target="_blank"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;Creative Commons                      &lt;/td&gt;&lt;td&gt; $20 &lt;/td&gt;&lt;td&gt; &lt;a href="https://support.creativecommons.org/donate" target="_blank"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;International AIDS Vaccine Initiative &lt;/td&gt;&lt;td&gt; $10&lt;/td&gt;&lt;td&gt; &lt;a href="http://www.iavi.org/how-to-help/donate/Pages/default.aspx" target="_blank"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Pacific Crest Trail Association&lt;/td&gt;&lt;td&gt;$25&lt;/td&gt;&lt;td&gt;&lt;a href="https://www.pcta.org/help/donate_form.asp"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Secular Coalition&lt;/td&gt;&lt;td&gt;$15 &lt;/td&gt;&lt;td&gt; &lt;a href="http://donate.secular.org/index.html"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Pitzer College (my alma mater)        &lt;/td&gt;&lt;td&gt; $30 &lt;/td&gt;&lt;td&gt; &lt;a href="https://mypz.pitzer.edu/NetCommunity/SSLPage.aspx?pid=184"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Zotero                                &lt;/td&gt;&lt;td&gt; $25 &lt;/td&gt;&lt;td&gt; &lt;a href="http://chnm.gmu.edu/donate/"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Electronic Frontier Foundation        &lt;/td&gt;&lt;td&gt; $40 &lt;/td&gt;&lt;td&gt; &lt;a href="http://www.eff.org/support"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Catalog Choice                        &lt;/td&gt;&lt;td&gt; $10 &lt;/td&gt;&lt;td&gt; &lt;a href="http://www.catalogchoice.org/donate"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Food and Water Watch                  &lt;/td&gt;&lt;td&gt; $10 &lt;/td&gt;&lt;td&gt; &lt;a href="https://salsa.democracyinaction.org/o/1185/t/3287/shop/custom.jsp?donate_page_KEY=3545"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Creative Commons                      &lt;/td&gt;&lt;td&gt; $20 &lt;/td&gt;&lt;td&gt; &lt;a href="https://support.creativecommons.org/donate"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;International AIDS Vaccine Initiative &lt;/td&gt;&lt;td&gt; $10&lt;/td&gt;&lt;td&gt; &lt;a href="http://www.iavi.org/how-to-help/donate/Pages/default.aspx"&gt;Donate&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;gnome-do                              &lt;/td&gt;&lt;td&gt; $15 &lt;/td&gt;&lt;td&gt; Summon &amp;gt; Donate &amp;gt; Enter&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</summary><category term="charity"></category><category term="donations"></category><category term="software"></category><category term="good causes"></category></entry></feed>

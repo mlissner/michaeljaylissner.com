@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/database" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2014-06-18T00:00:00+02:00</updated><entry><title>Reworking the CourtListener Datamodel</title><link href="http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/" rel="alternate"></link><updated>2014-06-18T00:00:00+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2014-06-18:posts/2014/06/18/reworking-the-courtlistener-datamodel/</id><summary type="html">&lt;p&gt;Brian and I have  been hard at work the past week figuring out how to make &lt;a href="https://www.courtlistener.com/"&gt;CourtListener&lt;/a&gt; able to understand more that one document type. Our goal right now is to make it possible to add:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/database" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2014-06-18T00:00:00+02:00</updated><entry><title>Reworking the CourtListener Datamodel</title><link href="http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/" rel="alternate"></link><updated>2014-06-18T00:00:00+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2014-06-18:posts/2014/06/18/reworking-the-courtlistener-datamodel/</id><summary type="html">&lt;p&gt;Brian and I have  been hard at work the past week figuring out how to make 
+&lt;a href="https://www.courtlistener.com/"&gt;CourtListener&lt;/a&gt; able to understand more that one document type. Our goal
+ right now is to make it possible to add:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;oral arguments and other audio content,&lt;/li&gt;
 &lt;li&gt;video content if it's available,&lt;/li&gt;
 &lt;li&gt;content from &lt;a href="https://www.recapthelaw.org"&gt;RECAP&lt;/a&gt;, and&lt;/li&gt;
 &lt;li&gt;thousands of ninth circuit briefs that Resource.org &lt;a href="https://law.resource.org/pub/us/case/ca9/"&gt;has recently scanned&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The problem with our current database is that it's not organized in a way that supports linkages between content. So, if we have the oral argument and the opinion from a single case, we have no way of pointing them at each other. Turns out this is a sticky problem. &lt;/p&gt;
-&lt;p&gt;The solution we've come up with is an architecture like the following:
-&lt;img src="http://michaeljaylissner.com/files/new-schema-design-compact_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;The problem with our current database is that it's not organized in a way 
+that supports linkages between content. So, if we have the oral argument 
+and the opinion from a single case, we have no way of pointing them at each
+other. Turns out this is a sticky problem. &lt;/p&gt;
+&lt;p&gt;The solution we've come up with is an architecture like the following:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="New Schema" src="/images/new-schema-design-compact_0.png" /&gt;&lt;/p&gt;
 &lt;p&gt;(we also have &lt;a href="http://owncloud.freelawproject.org/public.php?service=files&amp;amp;t=76ef76ec69488fb72b4d96dba4809339"&gt;a more detailed version&lt;/a&gt; and &lt;a href="http://owncloud.freelawproject.org/public.php?service=files&amp;amp;t=62510f0282b06948e8c3d3b1e4946ec0"&gt;an editable version&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;And eventually, this will also have a Case table above the docket that allows multiple dockets to be associated with a single case. For now though, that's moot, as we don't have anyway of figuring out which dockets go together. &lt;/p&gt;
-&lt;p&gt;The first stage of this will be to add support for oral arguments, since they make a simple case to work with. Once that's complete the next stage will be either to add the RECAP documents or those from Resource.org. &lt;/p&gt;
+&lt;p&gt;And eventually, this will also have a Case table above the docket that 
+allows multiple dockets to be associated with a single case. For now though,
+that's moot, as we don't have anyway of figuring out which dockets go 
+together. &lt;/p&gt;
+&lt;p&gt;The first stage of this will be to add support for oral arguments, 
+since they make a simple case to work with. Once that's complete the next 
+stage will be either to add the RECAP documents or those from Resource.org. &lt;/p&gt;
 &lt;h3 id="urls"&gt;URLs&lt;/h3&gt;
-&lt;p&gt;Since this is such a big change, we're also taking this opportunity to re-work our URLs. Currently, they look like this:&lt;/p&gt;
+&lt;p&gt;Since this is such a big change, we're also taking this opportunity to 
+re-work our URLs. Currently, they look like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;court&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;alpha&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;numeric&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -23,7 +34,11 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;A few things bug me about that. First, it doesn't tell you anything about what kind of thing you can expect to see if you click that link. Second, the alpha-numeric ID is kind of lame. It's just a reference to the database primary key for the item, and we should just show that value (in this case, "yjn" means "108713"). To fix both of these issues, the new URLs will be:&lt;/p&gt;
+&lt;p&gt;A few things bug me about that. First, it doesn't tell you anything about 
+what kind of thing you can expect to see if you click that link. Second, 
+the alpha-numeric ID is kind of lame. It's just a reference to the database
+primary key for the item, and we should just show that value (in this case,
+"yjn" means "108713"). To fix both of these issues, the new URLs will be:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;opinion&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;numeric&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -33,7 +48,8 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;That should be easier to read and should tell you what type of item you're about to look at. Don't worry, the old URLs will keep working just fine. &lt;/p&gt;
+&lt;p&gt;That should be easier to read and should tell you what type of item you're 
+about to look at. Don't worry, the old URLs will keep working just fine. &lt;/p&gt;
 &lt;p&gt;And the rest of the new URLs will be:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;oral&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;argument&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;numeric&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;docket&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;numeric&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;id&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;case&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
@@ -46,14 +62,31 @@
 
 
 &lt;h3 id="api"&gt;API&lt;/h3&gt;
-&lt;p&gt;We expect these changes to come with changes to the API, so we'll likely be releasing API version 1.1 that will add suport for dockets and oral arguments. &lt;/p&gt;
-&lt;p&gt;The current version 1.0 should keep working just fine, since we're not changing any of the underlying data, but I expect that it will have some changes to the URLs and things like that. I'll be posting more about this in &lt;a href="http://lists.freelawproject.org/cgi-bin/mailman/listinfo/dev"&gt;the CourtListener dev list.&lt;/a&gt; as the changes become more clear and as we sort out what a fair policy is for the deprecation of old APIs. &lt;/p&gt;</summary><category term="CourtListener"></category><category term="data modeling"></category><category term="database"></category></entry><entry><title>Changes and Plans at CourtListener.com</title><link href="http://michaeljaylissner.com/posts/2010/11/04/changes-and-plans-at-courtlistener/" rel="alternate"></link><updated>2010-11-04T23:30:21+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2010-11-04:posts/2010/11/04/changes-and-plans-at-courtlistener/</id><summary type="html">&lt;p&gt;A few weeks ago, we made a fairly major change at CourtListener.com to include ID numbers in all of our case URLs. This change meant that links that were previously like this:&lt;blockquote&gt;http://courtlistener.com/scotus/Wong-v.-Smith/&lt;/blockquote&gt;Are now like this:&lt;blockquote&gt;http://courtlistener.com/scotus/&lt;strong&gt;V5o&lt;/strong&gt;/wong-v-smith/&lt;/blockquote&gt;Most of the old links should continue to work, but using the new links should be much faster and more reliable. The major difference between the two is the ID number, which is encoded as a set of numbers (in this case &lt;em&gt;V5o&lt;/em&gt;). This ID corresponds directly with the ID number in our database, aiding us greatly in serving up cases quickly and accurately.&lt;/p&gt;
+&lt;p&gt;We expect these changes to come with changes to the API, 
+so we'll likely be releasing API version 1.1 that will add suport for 
+dockets and oral arguments. &lt;/p&gt;
+&lt;p&gt;The current version 1.0 should keep working just fine, 
+since we're not changing any of the underlying data, 
+but I expect that it will have some changes to the URLs and things like 
+that. I'll be posting more about this in &lt;a href="http://lists.freelawproject.org/cgi-bin/mailman/listinfo/dev"&gt;the CourtListener dev list&lt;/a&gt;. 
+as the changes become more clear and as we sort out what a fair policy is 
+for the deprecation of old APIs. &lt;/p&gt;</summary><category term="CourtListener"></category><category term="data modeling"></category><category term="database"></category></entry><entry><title>Changes and Plans at CourtListener.com</title><link href="http://michaeljaylissner.com/posts/2010/11/04/changes-and-plans-at-courtlistener/" rel="alternate"></link><updated>2010-11-04T23:30:21+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2010-11-04:posts/2010/11/04/changes-and-plans-at-courtlistener/</id><summary type="html">&lt;p&gt;A few weeks ago, we made a fairly major change at CourtListener.com to include ID numbers in all of our case URLs. This change meant that links that were previously like this:&lt;blockquote&gt;http://courtlistener.com/scotus/Wong-v.-Smith/&lt;/blockquote&gt;Are now like this:&lt;blockquote&gt;http://courtlistener.com/scotus/&lt;strong&gt;V5o&lt;/strong&gt;/wong-v-smith/&lt;/blockquote&gt;Most of the old links should continue to work, but using the new links should be much faster and more reliable. The major difference between the two is the ID number, which is encoded as a set of numbers (in this case &lt;em&gt;V5o&lt;/em&gt;). This ID corresponds directly with the ID number in our database, aiding us greatly in serving up cases quickly and accurately.&lt;/p&gt;
 &lt;p&gt;Around the same time as this change, we added social networking links to all of our case pages to make them easier to share with friends and colleagues. These links use our new tiny domain, &lt;em&gt;http://crt.li/&lt;/em&gt;, and should thus be ideal for websites like Twitter or Reddit.&lt;/p&gt;
 &lt;p&gt;In the next few months we will be getting a major new server, and will be migrating our data to it. This will allow us to serve more data, and&amp;mdash;drum roll please&amp;mdash;will allow us to begin serving audio content on the site. That's right, in the next few months, we will begin getting oral arguments from the circuit courts, and will be serving it directly to you on the case pages. &lt;/p&gt;
 &lt;p&gt;We also have plans to revisit our search interface in order to add date filtering and query building so look for that soon.&lt;/p&gt;
-&lt;p&gt;As always, we welcome your feedback and support, so don't hesitate to get in touch with us if you have any questions or suggestions.&lt;/p&gt;</summary><category term="courtlistener.com"></category><category term="Web Architecture"></category><category term="database"></category></entry><entry><title>Script to Clean Up F-Spot Database</title><link href="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/" rel="alternate"></link><updated>2009-10-14T00:30:12+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-14:posts/2009/10/14/script-to-cleanup-fspot-database/</id><summary type="html">&lt;p&gt;One of the more popular photo management applications for Linux is f-spot, but unfortunately it has a rather glaring bug. It uses a sqlite3 database internally to track which pictures you've imported into it, what tags they have, etc. However, if you delete, move or rename any of the files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It's annoying, and there's no particularly easy way to deal with it...until now.&lt;/p&gt;
-&lt;p&gt;The script below (and attached) simply iterates through all of the photos that are in f-spot's database, and checks to see if those photos exist on your hard drive. If you run it in demo-mode, it will show you which files look problematic, and if you run it in normal mode, it will delete those database entries so that your database is cleaned up (but not before backing up your database, just in case).&lt;/p&gt;
-&lt;p&gt;In my very limited testing, it works very well, any additional feedback or bug reporting is more than welcome. &lt;/p&gt;
+&lt;p&gt;As always, we welcome your feedback and support, so don't hesitate to get in touch with us if you have any questions or suggestions.&lt;/p&gt;</summary><category term="courtlistener.com"></category><category term="Web Architecture"></category><category term="database"></category></entry><entry><title>Script to Clean Up F-Spot Database</title><link href="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/" rel="alternate"></link><updated>2009-10-14T00:30:12+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-14:posts/2009/10/14/script-to-cleanup-fspot-database/</id><summary type="html">&lt;p&gt;One of the more popular photo management applications for Linux is f-spot, 
+but unfortunately it has a rather glaring bug. It uses a sqlite3 database 
+internally to track which pictures you've imported into it, 
+what tags they have, etc. However, if you delete, move or rename any of the
+files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It's annoying, and there's no particularly easy way to deal with it...until now.&lt;/p&gt;
+&lt;p&gt;The script below simply iterates through all of the photos 
+that are in f-spot's database, and checks to see if those photos exist on 
+your hard drive. If you run it in demo-mode, it will show you which files 
+look problematic, and if you run it in normal mode, 
+it will delete those database entries so that your database is cleaned up 
+(but not before backing up your database, just in case).&lt;/p&gt;
+&lt;p&gt;In my very limited testing, it works very well, any additional feedback or 
+bug reporting is more than welcome. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class="c"&gt;# A script to find missing files in the f-spot database, and then delete them.&lt;/span&gt;

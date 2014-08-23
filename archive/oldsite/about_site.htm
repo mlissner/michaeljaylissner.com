@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>MichaelJayLissner.com  >  About Site</title>
+		<meta name="author" content="Michael Lissner">
+		<meta name="description" content="content" >
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+		<link rel="stylesheet" type="text/css" href="assets/stylesheets/onecol.css">
+		<SCRIPT TYPE="text/javascript">
+		<!--
+		// copyright 1999 Idocs, Inc. http://www.idocs.com/tags/
+		// Distribute this script freely, but please keep this
+		// notice with the code.
+
+		var rollOverArr=new Array();
+		function setrollover(OverImgSrc,pageImageName)
+		{
+		if (! document.images)return;
+		if (pageImageName == null)
+		    pageImageName = document.images[document.images.length-1].name;
+		rollOverArr[pageImageName]=new Object;
+		rollOverArr[pageImageName].overImg = new Image;
+		rollOverArr[pageImageName].overImg.src=OverImgSrc;
+		}
+
+		function rollover(pageImageName)
+		{
+		if (! document.images)return;
+		if (! rollOverArr[pageImageName])return;
+		if (! rollOverArr[pageImageName].outImg)
+		    {
+		    rollOverArr[pageImageName].outImg = new Image;
+		    rollOverArr[pageImageName].outImg.src = document.images[pageImageName].src;
+		    }
+		document.images[pageImageName].src=rollOverArr[pageImageName].overImg.src;
+		}
+
+		function rollout(pageImageName)
+		{
+		if (! document.images)return;
+		if (! rollOverArr[pageImageName])return;
+		document.images[pageImageName].src=rollOverArr[pageImageName].outImg.src;
+		}
+		//-->
+		</SCRIPT>
+		<SCRIPT TYPE="text/javascript">
+			<!--
+			setrollover('assets/images/buttonover-0-0.jpg',   'home');
+			setrollover('assets/images/buttonover-1-0.jpg',   'biography');
+			setrollover('assets/images/buttonover-2-0.jpg',   'cv');
+			setrollover('assets/images/buttonover-3-0.jpg',   'aboutsite');
+			setrollover('assets/images/buttonover-4-0.jpg',   'pics');
+			setrollover('assets/images/buttonover-5-0.jpg',   'charity');
+			setrollover('assets/images/buttonover-6-0.jpg',   'contact');
+			//-->
+		</script>
+	</head>
+
+
+
+	<body>
+		<div id="container">
+
+				<!Begin #banner>
+				<div id="banner">
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td colspan="2"><img src="assets/images/spacer.gif" height="20"></td>
+						</tr>
+						<tr>
+							<td><img src="assets/images/spacer.gif" width="20" height="1"></td>
+							<td><h1><a class="header" href="http://www.michaeljaylissner.com">MichaelJayLissner.com</a></h1></td>
+						</tr>
+					</table>
+				</div><!End #banner>
+
+
+				<!Begin #buttons>
+				<div id="buttons">
+					<table cellpadding="0" cellspacing="0" border="0">
+			  			<tr>
+			  				<td>
+			  					<a href="index.htm" onMouseOver = "rollover('home')" onMouseOut = "rollout('home')">
+			  						<img src="assets/images/button-0-0.jpg" name="home" width="88" height="30" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="biography.htm" onMouseOver = "rollover('biography')" onMouseOut = "rollout('biography')">
+			  						<img src="assets/images/button-1-0.jpg" width="118" height="30"  name="biography" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="cv.htm" onMouseOver = "rollover('cv')" onMouseOut = "rollout('cv')">
+			  						<img src="assets/images/button-2-0.jpg" width="157" height="30" name="cv" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="about_site.htm" onMouseOver = "rollover('aboutsite')" onMouseOut = "rollout('aboutsite')">
+			  						<img src="assets/images/buttonover-3-0.jpg" width="111" height="30"  name="aboutsite" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="pics/index.htm" onMouseOver = "rollover('pics')" onMouseOut = "rollout('pics')">
+			  						<img src="assets/images/button-4-0.jpg" width="137" height="30" name="pics" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="charity.htm" onMouseOver = "rollover('charity')" onMouseOut = "rollout('charity')">
+			  						<img src="assets/images/button-5-0.jpg" width="91" height="30" name="charity" border="none">
+			  					</a>
+			  				</td>
+			  				<td>
+			  					<a href="contact.htm" onMouseOver = "rollover('contact')" onMouseOut = "rollout('contact')">
+			  						<img src="assets/images/button-6-0.jpg" width="98" height="30" name="contact" border="none">
+			  					</a>
+			  				</td>
+			  			</tr>
+			  		</table>
+			  	</div><!End #button>
+
+
+
+				<!Begin #content>
+				<div id="content">
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td>
+						  		<h3>About This Site</h3>
+						  		<p>The CSS, HTML and PHP that create this site were hand-coded by Michael Lissner in the Fedora Linux enviornment utilizing the vim, Screem and Bluefish applications for text manipulation, the GIMP for the images, gFTP for FTP purposes, and of course, Mozilla Firefox for testing.</p>
+						  		<p>Past Projects have been made in the Windows XP Professional enviornment utilizing Adobe Photoshop, Macromedia Dreamweaver CS, Internet Explorer 6 and once again, Mozilla Firefox.</p>
+						  		<p>All material on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">Creative Commons copyright</a>.</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+						  	</td>
+						</tr>
+					</table>
+
+
+					<table cellpadding="0" cellspacing="0" border="0">
+					  		<tr>
+					  			<td>
+						  			<img src="assets/images/spacer.gif" width="44">
+						  		</td>
+					  			<td>
+					  				<a href="http://www.redhat.com/fedora">
+					  					<img src="assets/images/fedora-logo.png" height="35" width="111">
+					  				</a>
+					  			</td>
+					  			<td>
+						  			<img src="assets/images/spacer.gif" width="44">
+						  		</td>
+						  		<td>
+								  	<!--Creative Commons License-->
+							  		<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+							  		<img alt="Creative Commons License" src="assets/images/somerights20.png"/></a><!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+									<Work rdf:about="">
+									<license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/" />
+									<dc:title>michaeljaylissner.com</dc:title>
+									<dc:date>2006</dc:date>
+									<dc:description>Personal Website of Michael Jay Lissner</dc:description>
+									<dc:creator><Agent><dc:title>Michael Jay Lissner</dc:title></Agent></dc:creator>
+									<dc:rights><Agent><dc:title>Michael Jay Lissner</dc:title></Agent></dc:rights>
+									<dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+									</Work>
+									<License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+						  		</td>
+						  		<td>
+						  			<img src="assets/images/spacer.gif" width="44">
+						  		</td>
+							  	<td>
+							  		<a href="http://www.gimp.org">
+							  			<img src="assets/images/gimplogo.jpg" width="55" height="41" alt="The Gimp Logo">
+							  		</a>
+							  	</td>
+							  	<td>
+						  			<img src="assets/images/spacer.gif" width="44">
+						  		</td>
+						  		<td>
+						  			<a href="http://www.linux.org">
+						  				<img src="assets/images/tuxlogo.gif" width="45" height="53" alt="Tux Logo">
+						  			</a>
+						  		</td>
+						  		<td>
+						  			<img src="assets/images/spacer.gif" width="44">
+						  		</td>
+						  		<td>
+						  			<a href="http://www.screem.org">
+						  				<img src="assets/images/screem.png" alt="Screem Logo" width="45" height="45">
+						  			</a>
+						  		</td>
+						  		<td>
+						  			<img src="assets/images/spacer.gif" width="44">
+						 		</td>
+						 		<td>
+						 			<a href="http://www.gftp.org">
+						 				<img src="assets/images/gftp.png" width="52" height="48" >
+						 			</a>
+						 		</td>
+							  	<td>
+						  			<img src="assets/images/spacer.gif" width="44">
+						  		</td>
+						  		<td>
+						  			<a href="http://www.firefox.com">
+						  				<img src="assets/images/firefox.png" alt="Firefox Logo" width="50" height="50">
+						  			</a>
+						  		</td>
+
+							</tr>
+						</table>
+				</div><!End #content>
+
+				<!Begin #footer>
+				<div id="footer">
+					<hr>
+					<script language="javascript" src="http://www.quotedb.com/quote/quote.php?action=random_quote&=&a[44]=44&a[4]=4&a[52]=52&a[76]=76&a[525]=525&a[107]=107&a[229]=229&a[87]=87&a[45]=45&a[23]=23&a[73]=73&a[421]=421&a[631]=631&a[48]=48&a[231]=231&a[336]=336&"></script>
+				</div><!End #footer>
+			</div><!End #container>
+	</body>
+</html>

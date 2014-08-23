@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/rant" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-05-24T23:34:44+02:00</updated><entry><title>Every Now and Again, I Rant About Ipods. This is One of Those Times</title><link href="http://michaeljaylissner.com/posts/2009/05/24/sometimes-i-rant-about-ipods/" rel="alternate"></link><updated>2009-05-24T23:34:44+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-05-24:posts/2009/05/24/sometimes-i-rant-about-ipods/</id><summary type="html">&lt;p&gt;Like the title says, every now and again, I have to rant about how annoying iPods (and by extension, Apple) are. This is one of those times.&lt;/p&gt;
-&lt;p&gt;The picture below represents the folder hierarchy of my 20GB iPod, as displayed in the Ubuntu Disk Analyzer:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://michaeljaylissner.com/files/images/ipods%20annoy%20me.png"&gt;&lt;/p&gt;
-&lt;p&gt;Right now, this iPod is nearly full. I filled it with a very normal hodge-podge of songs. Naturally, I like some artists better than others, and so, I have more of their songs. The Beatles and Zeppelin, for example, I have a lot of. A-Ha, and Four Non Blondes, not so much. When this is the case, I'll have a folder filled with lots of songs - a big folder. If you look at the image above though, you'll see that my iPod is organized into 50 equal directories, named r1 to r50.&lt;/p&gt;
-&lt;p&gt;Now, why would Apple do this? Why would they take perfectly organized songs in neat and tidy folders and then split them into 50 folders with meaningless names? Because that makes it more of a pain in the butt to figure out what music is on the iPod, and in theory makes it harder to share the songs. For the copyright violators, this should slow them down. &lt;/p&gt;
-&lt;p&gt;For the rest of the world, it's a pain, because rather than browsing our iPod like we would a normal music player, instead we must use iTunes, or, if we use Linux, reverse engineer the thing, which invariably doesn't work that well. &lt;/p&gt;
-&lt;p&gt;Apple could have made a device that worked normally on all computers, like everybody else did, but instead they have locked us into iTunes, a weird directory structure, and a system designed to be as obscure as possible. Not cool.&lt;/p&gt;</summary><category term="ipod"></category><category term="rant"></category><category term="DRM"></category></entry><entry><title>Cheney is so f***ing shady, it pisses me off.</title><link href="http://michaeljaylissner.com/posts/2008/12/19/cheney-is-so-fing-shady-it-pisses-me-off/" rel="alternate"></link><updated>2008-12-19T21:35:28+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-12-19:posts/2008/12/19/cheney-is-so-fing-shady-it-pisses-me-off/</id><summary type="html">&lt;p&gt;Cheney is &lt;a href="http://www.google.com/hostednews/ap/article/ALeqM5jz2z92QFdgFrIMAJC-4GQcHOm3MgD955ETCO0" target="_blank"&gt;at 
-work&lt;/a&gt; to keep his records from becoming public as part of the National 
-Archives when he goes out of office. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/rant" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-05-24T23:34:44+02:00</updated><entry><title>Every Now and Again, I Rant About Ipods</title><link href="http://michaeljaylissner.com/posts/2009/05/24/sometimes-i-rant-about-ipods/" rel="alternate"></link><updated>2009-05-24T23:34:44+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-05-24:posts/2009/05/24/sometimes-i-rant-about-ipods/</id><summary type="html">&lt;p&gt;Like the title says, every now and again, I have to rant about how annoying
+iPods (and by extension, Apple) are. This is one of those times.&lt;/p&gt;
+&lt;p&gt;The picture below represents the folder hierarchy of my 20GB iPod, 
+as displayed in the Ubuntu Disk Analyzer:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="iPods Annoy Me" src="/images/ipods%20annoy%20me.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Right now, this iPod is nearly full. I filled it with a very normal 
+hodge-podge of songs. Naturally, I like some artists better than others, 
+and so, I have more of their songs. &lt;em&gt;The Beatles&lt;/em&gt; and &lt;em&gt;Zeppelin&lt;/em&gt;, for example, 
+I have a lot of. &lt;em&gt;A-Ha&lt;/em&gt;, and &lt;em&gt;Four Non Blonds&lt;/em&gt;, not so much. When this is the 
+case, I'll have a folder filled with lots of songs - a big folder. If you 
+look at the image above though, you'll see that my iPod is organized into 
+50 equal directories, named r1 to r50.&lt;/p&gt;
+&lt;p&gt;Now, why would Apple do this? Why would they take perfectly organized songs
+in neat and tidy folders and then split them into 50 folders with 
+meaningless names? Because that makes it more of a pain in the butt to 
+figure out what music is on the iPod, and in theory makes it harder to 
+share the songs. For the copyright violators, this should slow them down. &lt;/p&gt;
+&lt;p&gt;For the rest of the world, it's a pain, because rather than browsing our 
+iPod like we would a normal music player, instead we must use iTunes, or, 
+if we use Linux, reverse engineer the thing, which invariably doesn't work 
+that well. &lt;/p&gt;
+&lt;p&gt;Apple could have made a device that worked normally on all computers, 
+like everybody else did, but instead they have locked us into iTunes, 
+a weird directory structure, and a system designed to be as obscure as 
+possible. Not cool.&lt;/p&gt;</summary><category term="ipod"></category><category term="rant"></category><category term="DRM"></category></entry><entry><title>Cheney is so shady, it pisses me off.</title><link href="http://michaeljaylissner.com/posts/2008/12/19/cheney-is-so-fing-shady-it-pisses-me-off/" rel="alternate"></link><updated>2008-12-19T21:35:28+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-12-19:posts/2008/12/19/cheney-is-so-fing-shady-it-pisses-me-off/</id><summary type="html">&lt;p&gt;Cheney is &lt;a href="http://www.google.com/hostednews/ap/article/ALeqM5jz2z92QFdgFrIMAJC-4GQcHOm3MgD955ETCO0"&gt;at work&lt;/a&gt; to keep his records from becoming public as part of 
+the National Archives when he goes out of office. &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The vice president alone may determine what constitutes vice presidential
  records or personal records, how his records will be created, maintained, 
@@ -17,7 +34,7 @@ Archives when he goes out of office. &lt;/p&gt;
 &lt;p&gt;I can think of no reason why this would be necessary unless he's the shadiest 
 person ever in office. Oh, right.&lt;/p&gt;
 &lt;p&gt;As an ex-government worker, I can testify to how ridiculous this is: It's 
-really f***ing ridiculous.&lt;/p&gt;</summary><category term="rant"></category><category term="archive"></category><category term="cheney"></category><category term="government"></category></entry><entry><title>I Am Me, Dammit!</title><link href="http://michaeljaylissner.com/posts/2008/09/15/i-am-me-dammit/" rel="alternate"></link><updated>2008-09-15T15:00:30+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-15:posts/2008/09/15/i-am-me-dammit/</id><summary type="html">&lt;p&gt;Well, it happened. The bastards stole my identity. They somehow got my credit 
+really fucking ridiculous.&lt;/p&gt;</summary><category term="rant"></category><category term="archive"></category><category term="cheney"></category><category term="government"></category></entry><entry><title>I Am Me, Dammit!</title><link href="http://michaeljaylissner.com/posts/2008/09/15/i-am-me-dammit/" rel="alternate"></link><updated>2008-09-15T15:00:30+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-15:posts/2008/09/15/i-am-me-dammit/</id><summary type="html">&lt;p&gt;Well, it happened. The bastards stole my identity. They somehow got my credit 
 card number, address, phone number, etc, took them, and put them to use. Grand 
 total losses: $309. Not too bad, considering.&lt;/p&gt;
 &lt;p&gt;I've called my credit card company, and they promise to reimburse me for my 
@@ -32,7 +49,7 @@ more info than they should have. Arg. &lt;/p&gt;
 &lt;p&gt;After all of the services that credit cards have tried to sell me over the 
 years to protect me from this kind of thing, I'm happy to say that I'm fine 
 without them. It's really not the end of the world...it's annoying though, yes.&lt;/p&gt;</summary><category term="rant"></category><category term="theft"></category><category term="bastard"></category><category term="identity"></category><category term="security"></category></entry><entry><title>Amazon Has mp3's! I Wish I Could Download Them...</title><link href="http://michaeljaylissner.com/posts/2008/01/22/amazon-has-mp3s/" rel="alternate"></link><updated>2008-01-22T19:04:40+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-01-22:posts/2008/01/22/amazon-has-mp3s/</id><summary type="html">&lt;p&gt;It made some headlines, and is about to make more during superbowl. 
-&lt;a href="http://www.news.com/8301-10784_3-9848258-7.html?tag=newsmap" target="_blank"&gt;Amazon 
+&lt;a href="http://www.news.com/8301-10784_3-9848258-7.html?tag=newsmap"&gt;Amazon 
 has started selling mp3's from all four of the major record labels.&lt;/a&gt; It's a 
 pretty cool revelation, so I went ahead and checked it out.&lt;/p&gt;
 &lt;p&gt;Guess what? Linux users, you are screwed. In order to download albums from 

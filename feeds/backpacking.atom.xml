@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/backpacking.atom.xml" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2013-11-27T10:19:46+01:00</updated><entry><title>Our New Zealand Blog</title><link href="http://michaeljaylissner.com/posts/2013/11/27/our-new-zealand-blog/" rel="alternate"></link><updated>2013-11-27T10:19:46+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2013-11-27:posts/2013/11/27/our-new-zealand-blog/</id><summary type="html">&lt;p&gt;If you seek our blog about our journey on the Te Araroa trail, it lies down 
-&lt;a href="http://trampnewzealand.wordpress.com/"&gt;this path&lt;/a&gt;.&lt;/p&gt;</summary><category term="te araroa"></category><category term="new zealand"></category><category term="blog"></category><category term="Z"></category></entry><entry><title>Snow Mountain Distance Map</title><link href="http://michaeljaylissner.com/posts/2013/08/27/snow-mountain-distance-map/" rel="alternate"></link><updated>2013-08-27T10:48:25+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2013-08-27:posts/2013/08/27/snow-mountain-distance-map/</id><summary type="html">&lt;p&gt;I put on my cartographer's hat today and made a distance map for Snow Mountain. The regular map for this area doesn't have any distance markers on it, so these are based on talking with the ranger in the park. He seemed knowledgeable, so these numbers are probably the best we'll get for a while. &lt;/p&gt;
-&lt;p&gt;If somebody discovers that the rangers in Snow Mountain finally have firm distances, let me know what they are, and I'll happily update this map. Until then, attached is the map as both an SVG and a png. Enjoy.&lt;/p&gt;</summary><category term="backpacking"></category><category term="snow mountain"></category><category term="maps"></category><category term="cartography"></category></entry><entry><title>Best Energy Pack for Ultra-light, long-distance Backpacking</title><link href="http://michaeljaylissner.com/posts/2013/07/19/battery-packs-for-ultralight-long-distance-backpacking/" rel="alternate"></link><updated>2013-07-19T14:13:25+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2013-07-19:posts/2013/07/19/battery-packs-for-ultralight-long-distance-backpacking/</id><summary type="html">&lt;p&gt;Obviously, the best ultalight battery pack is &lt;strong&gt;no&lt;/strong&gt; battery pack, 
+&lt;a href="http://trampnewzealand.wordpress.com/"&gt;this path&lt;/a&gt;.&lt;/p&gt;</summary><category term="te araroa"></category><category term="new zealand"></category><category term="blog"></category><category term="Z"></category></entry><entry><title>Snow Mountain Distance Map</title><link href="http://michaeljaylissner.com/posts/2013/08/27/snow-mountain-distance-map/" rel="alternate"></link><updated>2013-08-27T10:48:25+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2013-08-27:posts/2013/08/27/snow-mountain-distance-map/</id><summary type="html">&lt;p&gt;I put on my cartographer's hat today and made a distance map 
+(&lt;a href="http://michaeljaylissner.com/archive/distance-map.png"&gt;png&lt;/a&gt;/&lt;a href="http://michaeljaylissner.com/archive/distance-map.svg"&gt;svg&lt;/a&gt;) for Snow 
+Mountain. The regular map for this area doesn't have any distance markers 
+on it, so these are based on talking with the ranger in the park. He seemed
+knowledgeable, so these numbers are probably the best we'll get for a while. &lt;/p&gt;
+&lt;p&gt;If somebody discovers that the rangers in Snow Mountain finally have firm 
+distances, let me know what they are, and I'll happily update this map. 
+Until then, attached is the map as both an SVG and a png. Enjoy.&lt;/p&gt;</summary><category term="backpacking"></category><category term="snow mountain"></category><category term="maps"></category><category term="cartography"></category></entry><entry><title>Best Energy Pack for Ultra-light, long-distance Backpacking</title><link href="http://michaeljaylissner.com/posts/2013/07/19/battery-packs-for-ultralight-long-distance-backpacking/" rel="alternate"></link><updated>2013-07-19T14:13:25+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2013-07-19:posts/2013/07/19/battery-packs-for-ultralight-long-distance-backpacking/</id><summary type="html">&lt;p&gt;Obviously, the best ultalight battery pack is &lt;strong&gt;no&lt;/strong&gt; battery pack, 
 but on our trip we're going to be bringing a phone, a camera, 
 an MP3 player and two headlamps. The phone doubles as our GPS and the 
 headlamps might be USB rechargeable. Having spare energy to get us through 
 longer sections is important.&lt;/p&gt;
-&lt;p&gt;I've completed some research, investigating which are the best options. As I
- was reviewing the many battery pack and solar charger solutions that are 
- out there, I came to a few conclusions right off the bat:&lt;/p&gt;
+&lt;p&gt;I've completed &lt;a href="http://michaeljaylissner.com/archive/battery-research.xlsx"&gt;some research&lt;/a&gt;, investigating which are the best 
+options. As I
+was reviewing the many battery pack and solar charger solutions that are 
+out there, I came to a few conclusions right off the bat:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The models with turbines, like the &lt;a href="http://www.shopetoncorp.com/detail/ETO+NBOTU2000+RED"&gt;Eton BoostTurbine2000&lt;/a&gt; are crap. I
   called Eton to ask them how many cranks it would take to charge a phone. The technical support guy's response: "You'd be at it all day. These are meant for emergency use only." So turbines are out.&lt;/li&gt;
@@ -38,17 +45,18 @@ durable and efficient. There are a few features you probably want in particular:
 &lt;li&gt;Finally, you want the most energy packed into the smallest, lightest device. &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;When looking at all these features, there are three standout energy packs, 
-the &lt;a href="http://www.myinnergie.com/productdetail.php?productid=237&amp;amp;languageid=1"&gt;Innergie PocketCell Duo&lt;/a&gt;, the &lt;a href="http://www.ianker.com/anker-astro-external-battery-backup-charger/product/79UN53V1-B8P56A"&gt;Anker Astro 5600&lt;/a&gt; and the &lt;a href="http://usa.just-mobile.com/all/gum-doubleplus.html"&gt;Just Mobile Gum++&lt;/a&gt;. &lt;/p&gt;
+the &lt;a href="http://www.myinnergie.com/productdetail.php?productid=237&amp;amp;languageid=1"&gt;Innergie PocketCell Duo&lt;/a&gt;, the &lt;a href="http://www.ianker.com/anker-astro-external-battery-backup-charger/product/79UN53V1-B8P56A"&gt;Anker Astro 5600&lt;/a&gt; and 
+the &lt;a href="http://usa.just-mobile.com/all/gum-doubleplus.html"&gt;Just Mobile Gum++&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;The Anker Astro ($30) is the lightest of the bunch, but it also is complex,
- charges slowly when plugged in, and has a complex body. It has a 
- flashlight, for what that's worth, and, at 4.2 ounces, 
- has an energy density of 1333 mAh/oz. It does not appear to have 
- passthrough functionality. &lt;/p&gt;
+charges slowly when plugged in, and has a complex body. It has a 
+flashlight, for what that's worth, and, at 4.2 ounces, 
+has an energy density of 1333 mAh/oz. It does not appear to have 
+passthrough functionality. &lt;/p&gt;
 &lt;p&gt;The Just Mobile Gum++ ($90) is a very simple, lightweight and durable 
 option. At 4.6 ounces, it's still very light. It has a slightly lower 
 energy density from the Astro (1304 mAh/oz), but boasts an ABS shell, 
 the fastest charge rate when plugged in (2500 mA), and just generally looks
- like a good, simple option.&lt;/p&gt;
+like a good, simple option.&lt;/p&gt;
 &lt;p&gt;Finally is the Innergie PocketCell Duo ($90). This is the most powerful of 
 the bunch, at 6800 mAh, has the highest energy density at 1456 mAh/oz) and 
 has two output ports (both at 2100 mA). Unfortunately, unlike the Gum++, 
@@ -87,7 +95,10 @@ etc. Something is going wrong with that company.&lt;/p&gt;</summary><category te
 &lt;li&gt;My legs again were abused: Scratches from the night hike with no flashlight, and sunburns from poor sunscreen application.&lt;/li&gt;
 &lt;li&gt;The itinerary pushed our muscles without injury (unlike last time).&lt;/li&gt;
 &lt;li&gt;Z is a natural backpacker and a great hiking partner.&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="backpacking"></category><category term="desolation wilderness"></category><category term="Z"></category><category term="camping"></category></entry><entry><title>The Contents of My First Aid Kit</title><link href="http://michaeljaylissner.com/posts/2009/07/17/the-contents-of-my-first-aid-kit/" rel="alternate"></link><updated>2009-07-17T21:15:02+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-17:posts/2009/07/17/the-contents-of-my-first-aid-kit/</id><summary type="html">&lt;p&gt;I present to you approximately a decade's worth of first aid kit refinement. Emphasis is on completeness and lightness. Inside a custom silnylon envelope (with no zippers or fasteners that might slow down frostbitten, missing or otherwise failing hands), I have the following:&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="backpacking"></category><category term="desolation wilderness"></category><category term="Z"></category><category term="camping"></category></entry><entry><title>The Contents of My First Aid Kit</title><link href="http://michaeljaylissner.com/posts/2009/07/17/the-contents-of-my-first-aid-kit/" rel="alternate"></link><updated>2009-07-17T21:15:02+02:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-17:posts/2009/07/17/the-contents-of-my-first-aid-kit/</id><summary type="html">&lt;p&gt;I present to you approximately a decade's worth of first aid kit refinement.
+Emphasis is on completeness and lightness. Inside a custom silnylon 
+envelope (with no zippers or fasteners that might slow down frostbitten, 
+missing or otherwise failing hands), I have the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;An ultra-fine tipped 0.5ml syringe&lt;/li&gt;
 &lt;li&gt;A 1ml glass vial of epinephren&lt;/li&gt;
@@ -108,7 +119,7 @@ etc. Something is going wrong with that company.&lt;/p&gt;</summary><category te
 &lt;li&gt;Seven 120mg pseudoephedrine hydrocloride (Sudafed) pills&lt;/li&gt;
 &lt;li&gt;Six diphenhydramine hydrochloride (Benadryl) pills&lt;/li&gt;
 &lt;li&gt;Dosage and indication instructions for all of the above pills&lt;/li&gt;
-&lt;li&gt;A SOAP note (see attached for a sample - very important item)&lt;/li&gt;
+&lt;li&gt;A &lt;a href="http://michaeljaylissner.com/archive/SOAPA_Note.xls"&gt;SOAP note&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Total weight is 124.7 grams (4.4 oz.). Don't take this as medical advice. &lt;/p&gt;</summary><category term="backpacking"></category><category term="first aid"></category><category term="gear"></category></entry><entry><title>Snow Camping in Sequoia</title><link href="http://michaeljaylissner.com/posts/2009/02/20/snow-camping-in-sequoia/" rel="alternate"></link><updated>2009-02-20T19:25:01+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-02-20:posts/2009/02/20/snow-camping-in-sequoia/</id><summary type="html">&lt;p&gt;I went snow camping with some friends in Sequoia National Park last weekend, 
 and had a blast as always. We built a quinzhee and went snow shoeing and cross 
@@ -116,20 +127,24 @@ country skiing. The pictures are online if you are interested in seeing them,
 and per my custom, I brought along a couple of iButtons so that we could 
 record our temperature the entire time. &lt;/p&gt;
 &lt;p&gt;I set them up to record the temperature every five minutes to an accuracy of 
-0.1 degree Celsius. I just got a chance to work with the data a bit and I 
+0.1 degree Celsius. I just got a chance to work with &lt;a href="http://michaeljaylissner.com/archive/sequoia-temps.xls"&gt;the data&lt;/a&gt; a bit and I 
 threw together a quick chart. The data are attached, if anybody is interested, 
 but the chart really tells the story better than the 2,400 data points do.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://michaeljaylissner.com/files/images/Labeled%20Temperatures2.png"&gt;&lt;img src="http://michaeljaylissner.com/files/images/Labeled%20Temperatures2.png" width="450"&gt;&lt;/a&gt;
-&lt;i&gt;&lt;a href="http://michaeljaylissner.com/files/images/Labeled%20Temperatures2.png"&gt;Click for fullsize view&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;</summary><category term="camping"></category><category term="vacations"></category><category term="snow"></category></entry><entry><title>Went Solo Backpacking this Weekend</title><link href="http://michaeljaylissner.com/posts/2008/02/24/went-solo-backpacking-this-weekend/" rel="alternate"></link><updated>2008-02-24T22:07:32+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-24:posts/2008/02/24/went-solo-backpacking-this-weekend/</id><summary type="html">&lt;p&gt;I went solo backpacking this weekend for the first time in a LONG time. I think the last time I really did a trip like this one was actually before I did the &lt;a href="http://www.pcta.org" target="_blank"&gt;PCT&lt;/a&gt;, which was back in '04. &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://michaeljaylissner.com/images/Labeled Temperatures2.png"&gt;&lt;img alt="iButton Temperatures" src="/images/Labeled%20Temperatures2.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://michaeljaylissner.com/images/Labeled Temperatures2.png"&gt;&lt;em&gt;Click for full-size view&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</summary><category term="camping"></category><category term="vacations"></category><category term="snow"></category></entry><entry><title>Went Solo Backpacking this Weekend</title><link href="http://michaeljaylissner.com/posts/2008/02/24/went-solo-backpacking-this-weekend/" rel="alternate"></link><updated>2008-02-24T22:07:32+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-24:posts/2008/02/24/went-solo-backpacking-this-weekend/</id><summary type="html">&lt;p&gt;I went solo backpacking this weekend for the first time in a LONG time. I think the last time I really did a trip like this one was actually before I did the &lt;a href="http://www.pcta.org"&gt;PCT&lt;/a&gt;, which was back in '04. &lt;/p&gt;
 &lt;p&gt;I went out to Point Reyes National Park, leaving Friday after work, and returning Sunday. On Friday, I camped at the ranger station, and on Saturday, I set out on an ambitious trek covering 25 miles that day, and 5 the next. I had packed extremely lightly with no water filtration, no stove, pot, spoon. Really, the only things in my pack were food, clothes, a tarp and stakes, some knick knacks and a water bladder. &lt;/p&gt;
-&lt;p&gt;With the light load, things were going well on Saturday morning, but then, a little after lunch, it started to rain. Then pour. Then the winds came on. All in all, as it should turn out, this was &lt;a href="http://www.sfgate.com/cgi-bin/article.cgi?f=/n/a/2008/02/22/state/n105157S77.DTL&amp;hw=rain&amp;sn=024&amp;sc=254" target="_blank"&gt;one hell of a storm&lt;/a&gt;. I set up my day so that I do a loop starting on the east heading south, and then I would hook west and head north along the coast. This meant that once the storm hit, I would be heading north on an incredibly exposed trail for about 15 miles. &lt;/p&gt;
+&lt;p&gt;With the light load, things were going well on Saturday morning, but then, a little after lunch, it started to rain. Then pour. Then the winds came on. All in all, as it should turn out, this was &lt;a href="http://www.sfgate.com/cgi-bin/article.cgi?f=/n/a/2008/02/22/state/n105157S77.DTL&amp;hw=rain&amp;sn=024&amp;sc=254"&gt;one hell of a storm&lt;/a&gt;. I set up my day so that I do a loop starting on the east heading south, and then I would hook west and head north along the coast. This meant that once the storm hit, I would be heading north on an incredibly exposed trail for about 15 miles. &lt;/p&gt;
 &lt;p&gt;Let me tell you folks, it was an adventure. I was so exposed that I felt like I could not stop to eat, drink or anything, so I just kept hiking for the entire distance, until I reached camp, after a long, long day. At one point, in one of the windier areas, I was running downhill, the wind coming on so hard that I began to be detached from the earth. It was actually lifting me off the ground...not a lot, just a little, but enough to be a worry. &lt;/p&gt;
 &lt;p&gt;Anyway, despite the adventure, the trip was good. It gave me some time to reflect on all the changes coming on in my life, and to get out and feel alive. &lt;/p&gt;
 &lt;p&gt;Did I find the answer to my question of Cal vs. UW? No...not in nature I didn't.&lt;/p&gt;</summary><category term="hiking"></category><category term="me"></category></entry><entry><title>PCT Data Project - DONE</title><link href="http://michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/" rel="alternate"></link><updated>2007-12-12T21:29:57+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-12-12:posts/2007/12/12/pct-temperature-project-done/</id><summary type="html">&lt;p&gt;I'm happy to announce that the PCT data project is complete! &lt;/p&gt;
-&lt;p&gt;Over the past several weeks/months, I have been slaving away over my computer writing this program. When used, it will generate a dynamic graphing area that will load up temperature data for one to six PCT hikers. &lt;/p&gt;
-&lt;p&gt;All those that are interested in the most complicated programming assignment I have ever worked on are welcome to check it out at &lt;a href="http://www.michaeljaylissner.com/pct-temperatures"&gt;michaeljaylissner.com/pct-temperatures&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I am officially a free man once again! Thanks to all who made this possible with their encouragement and patience! &lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>The Great Temperature Data Project</title><link href="http://michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/" rel="alternate"></link><updated>2007-11-01T20:40:55+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-11-01:posts/2007/11/01/great-temperature-data-project/</id><summary type="html">&lt;p&gt;Back in '05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
-carried a little device called an &lt;a href="http://www.iButton.com" target="_blank"&gt;iButton&lt;/a&gt;. 
+&lt;p&gt;Over the past several weeks/months, I have been slaving away over my 
+computer writing this program. When used, it will generate a dynamic 
+graphing area that will load up temperature data for one to six PCT hikers. &lt;/p&gt;
+&lt;p&gt;All those that are interested in the most complicated programming 
+assignment I have ever worked on &lt;a href="{filename}/pct-temperatures/"&gt;are welcome to check it out&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I am officially a free man once again! Thanks to all who made this possible
+with their encouragement and patience! &lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>The Great Temperature Data Project</title><link href="http://michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/" rel="alternate"></link><updated>2007-11-01T20:40:55+01:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-11-01:posts/2007/11/01/great-temperature-data-project/</id><summary type="html">&lt;p&gt;Back in '05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
+carried a little device called an &lt;a href="http://www.iButton.com"&gt;iButton&lt;/a&gt;. 
 This little device contains essentially three things: a clock, a bit of memory 
 and a thermometer. It's waterproof, accurate to 0.1 degree Celsius, and is about 
 the size of five dimes stacked one upon another. There are a bunch of silly 
@@ -142,7 +157,7 @@ for about 150 days, for an astounding 3600 data points, and about 150
 oscillations from the daytime high to the nighttime low. I've spent some time 
 working with the data, and it's pretty much impossible to make much use of....unless 
 you write a program to interpret it. You can 
-&lt;a href="http://charityhikers.org/pct/temps.htm" target="_blank"&gt;see it for 
+&lt;a href="http://charityhikers.org/pct/temps.htm"&gt;see it for 
 yourself&lt;/a&gt; if you're interested.&lt;/p&gt;
 &lt;p&gt;Well, as fate should have it, I am currently enrolled in a Java programming 
 class, and I have the option of doing a final project of my own choosing. 
