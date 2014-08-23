@@ -4,9 +4,15 @@ Tags: typography, tesseract, Python, ocr, font, courtlistener.com
 Category: Tech
 
 
-At CourtListener, we're developing a new system to convert scanned court documents to text. As part of our development we've analyzed more than 1,000 court opinions to determine what fonts courts are using. 
+At CourtListener, we're developing a new system to convert scanned court 
+documents to text. As part of our development we've analyzed more than 1,000 
+court opinions to determine what fonts courts are using. 
 
-Now that we have this information,our next step is to create training data for [our OCR system][1] so that it specializes in these fonts, but for now we've attached a spreadsheet with our findings, and a script that can be used by others to extract font metadata from PDFs.
+Now that we have this information, our next step is to create training data 
+for [our OCR system][1] so that it specializes in these fonts, 
+but for now we've attached [a spreadsheet][ss] with our findings, 
+and [a script that can be used by others][script] to extract font metadata 
+from PDFs.
 
 Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman. 
 
@@ -25,7 +31,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>953
         <td>867
         <td>47
-        <td><strong>3321</strong>
+        <td>**3321**
     </tr>
     <tr>
         <td>Courier
@@ -33,7 +39,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>333
         <td>209
         <td>131
-        <td><strong>1042</strong>
+        <td>**1042**
     </tr>
     <tr>
         <td>Arial
@@ -41,7 +47,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>39
         <td>11
         <td>41
-        <td><strong>455</strong>
+        <td>**455**
     </tr>
     <tr>
         <td>Symbol
@@ -49,7 +55,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>0
         <td>0
         <td>0
-        <td><strong>212</strong>
+        <td>**212**
     </tr>
     <tr>
         <td>Helvetica
@@ -57,7 +63,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>161
         <td>2
         <td>2
-        <td><strong>189</strong>
+        <td>**189**
     </tr>
     <tr>
         <td>Century Schoolbook
@@ -65,7 +71,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>54
         <td>52
         <td>9
-        <td><strong>173</strong>
+        <td>**173**
     </tr>
     <tr>
         <td>Garamond
@@ -73,7 +79,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>42
         <td>41
         <td>0
-        <td><strong>127</strong>
+        <td>**127**
     </tr>
     <tr>
         <td>Palatino Linotype
@@ -81,7 +87,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>24
         <td>24
         <td>1
-        <td><strong>85</strong>
+        <td>**85**
     </tr>
     <tr>
         <td>Old English
@@ -89,7 +95,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>0
         <td>0
         <td>0
-        <td><strong>42</strong>
+        <td>**42**
     </tr>
     <tr>
         <td>Lincoln
@@ -97,8 +103,10 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>0
         <td>0
         <td>0
-        <td><strong>27</strong>
+        <td>**27**
     </tr>
 </table>
 
 [1]: http://code.google.com/p/tesseract-ocr/
+[ss]: {filename}/archive/court-font-analysis/font-analysis.ods
+[script]: {filename}/archive/court-font-analysis/extract_font_metadata_from_files.py 

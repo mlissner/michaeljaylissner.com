@@ -9,11 +9,11 @@ The time came to do a little stats work and figure out why this is. Here are the
 
 While there is a strong predominance of the letters A-E, there is also one in the P-T range. This leads me to believe that I should hunt for music in that area more often.
 
-<img src="http://www.michaeljaylissner.com/files/images/Number%20of%20Occurances%20Pentads-img1.png">
+![No Alt]({filename}/images/Number%20of%20Occurances%20Pentads-img1.png)
 
 While I expected A-E to come out ahead, who would have thought that B would have more than 80 artists, almost twice the second most common letter? 
 
-<img src="http://www.michaeljaylissner.com/files/images/Number%20of%20Occurances%20Pentads-img2.png">
+![No Alt]({filename}/images/Number%20of%20Occurances%20Pentads-img2.png)
 
 
 So, what conclusions does this lead to? One: That I need to look at my music beyond the letter D. Two: That B is a very popular letter.

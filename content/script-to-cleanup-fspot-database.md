@@ -3,11 +3,21 @@ Date: 2009-10-14T00:30:12
 Tags: sqlite3, f-spot, database, bash
 Category: Tech
 
-One of the more popular photo management applications for Linux is f-spot, but unfortunately it has a rather glaring bug. It uses a sqlite3 database internally to track which pictures you've imported into it, what tags they have, etc. However, if you delete, move or rename any of the files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It's annoying, and there's no particularly easy way to deal with it...until now.
+One of the more popular photo management applications for Linux is f-spot, 
+but unfortunately it has a rather glaring bug. It uses a sqlite3 database 
+internally to track which pictures you've imported into it, 
+what tags they have, etc. However, if you delete, move or rename any of the
+files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It's annoying, and there's no particularly easy way to deal with it...until now.
 
-The script below (and attached) simply iterates through all of the photos that are in f-spot's database, and checks to see if those photos exist on your hard drive. If you run it in demo-mode, it will show you which files look problematic, and if you run it in normal mode, it will delete those database entries so that your database is cleaned up (but not before backing up your database, just in case).
+The script below simply iterates through all of the photos 
+that are in f-spot's database, and checks to see if those photos exist on 
+your hard drive. If you run it in demo-mode, it will show you which files 
+look problematic, and if you run it in normal mode, 
+it will delete those database entries so that your database is cleaned up 
+(but not before backing up your database, just in case).
 
-In my very limited testing, it works very well, any additional feedback or bug reporting is more than welcome. 
+In my very limited testing, it works very well, any additional feedback or 
+bug reporting is more than welcome. 
 
     :::bash
     #!/bin/bash

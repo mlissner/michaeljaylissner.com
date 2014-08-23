@@ -5,7 +5,7 @@ Category: Personal
 
 
 Well, we got back from Peru on Sunday (pictures forthcoming), and today was my 
-last day at work with the <a href="http://ehsd.org/comm000.html" target="_blank">Community 
+last day at work with the <a href="http://ehsd.org/comm000.html">Community 
 Services Bureau</a> of Contra Costa County. 
 
 I've never worked somewhere for so long - all in all,  it was about three 
@@ -19,7 +19,7 @@ it hasn't sunk in yet because I have been on vacation for the past two weeks
 (and am used to not going to work), but ultimately, I feel pretty normal, 
 which is odd.
 
-Tomorrow is the first day of school at the <a href="http://ischool.berkeley.edu" target="_blank">Berkeley 
+Tomorrow is the first day of school at the <a href="http://ischool.berkeley.edu">Berkeley 
 School of Information</a>. I've got my classes all set up, and I'm shocked at 
 exactly how awesome the classes are. 
 

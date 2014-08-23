@@ -5,7 +5,7 @@ Category: Backpacking
 
 
 Back in '05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
-carried a little device called an <a href="http://www.iButton.com" target="_blank">iButton</a>. 
+carried a little device called an <a href="http://www.iButton.com">iButton</a>. 
 This little device contains essentially three things: a clock, a bit of memory 
 and a thermometer. It's waterproof, accurate to 0.1 degree Celsius, and is about 
 the size of five dimes stacked one upon another. There are a bunch of silly 
@@ -19,7 +19,7 @@ for about 150 days, for an astounding 3600 data points, and about 150
 oscillations from the daytime high to the nighttime low. I've spent some time 
 working with the data, and it's pretty much impossible to make much use of....unless 
 you write a program to interpret it. You can 
-<a href="http://charityhikers.org/pct/temps.htm" target="_blank">see it for 
+<a href="http://charityhikers.org/pct/temps.htm">see it for 
 yourself</a> if you're interested.
 
 Well, as fate should have it, I am currently enrolled in a Java programming 

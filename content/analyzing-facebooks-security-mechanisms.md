@@ -4,7 +4,7 @@ Tags: security, facebook, paper, privacy
 Category: Privacy and Security
 
 
-For my <a href="http://is219.blogspot.com/" target="_blank">Privacy, 
+For my <a href="http://is219.blogspot.com/">Privacy, 
 Security and Cryptography</a> class, we studied a set of 13 principles for 
 secure systems:
 
@@ -25,10 +25,12 @@ secure systems:
 For our midterm, we were asked to analyze how Facebook exemplifies or does not 
 follow these principles. It was an interesting assignment, which finally 
 forced me to think more thoroughly about Facebook's security policies, and I'm
-happy to attach my findings here. 
+happy to [attach my findings][1] here. 
 
 For some people these may be rather run of the mill notes. For others, you may 
 be surprised at poor security of the world's biggest photo and social 
 networking site.
 
 Enjoy.
+
+[1]: {filename}/pdfs/facebook-security.pdf

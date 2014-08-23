@@ -29,4 +29,4 @@ Some of those are more striking than others. Like the four rapes, or the 59 stol
 
 Jeesh.
 
-Source: <a href="http://www.ci.berkeley.ca.us/ContentDisplay.aspx?id=7060" target="_blank">http://www.ci.berkeley.ca.us/ContentDisplay.aspx?id=7060</a>
+Source: <a href="http://www.ci.berkeley.ca.us/ContentDisplay.aspx?id=7060">http://www.ci.berkeley.ca.us/ContentDisplay.aspx?id=7060</a>

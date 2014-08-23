@@ -4,8 +4,8 @@ Tags: recovery, Project idea, debian, data, curation
 Category: Policy and Politics
 
 There's an interesting problem that I've run into a number of times that goes 
-like this: You want to start a new project studying <strong>X</strong> dump of 
-data, and you have a great idea of how to do <strong>Y</strong> with it. You 
+like this: You want to start a new project studying **X** dump of 
+data, and you have a great idea of how to do **Y** with it. You 
 go download the data, but then you spend hours (days and weeks) manipulating 
 it, manicuring it, and stuffing it neatly into a database. The problem is that 
 the data is in <em>their</em> format, and they probably haven't told you much 
@@ -15,8 +15,8 @@ what you wish you were doing was simply <em>working with it</em>.
 
 In other words, the data format and quality keeps you from working with the 
 data itself. I've run into this a number of times, most notably when trying to 
-work with the <a href="http://www.recovery.gov/FAQ/Pages/DownLoadCenter.aspx" target="_blank">Recovery 
-Data</a>. I've also had fun working with <a href="http://census.gov" target="_blank">census 
+work with the <a href="http://www.recovery.gov/FAQ/Pages/DownLoadCenter.aspx">Recovery 
+Data</a>. I've also had fun working with <a href="http://census.gov">census 
 data</a>, geographic data, and the list goes on. There are any number of useful 
 data sources that are provided by non-profits and government bodies, such as 
 population, economic, health, and agricultural data.

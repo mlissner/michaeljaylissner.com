@@ -16,7 +16,7 @@ Here's the tally:
 <tr><td>Olympic Peninsula Backpacking</td><td>2</td><td>1356</td></tr>
 <tr><td>Paris, Brussels</td><td>2</td><td>11092</td></tr>
 <tr><td>Law via the Internet Conference at Ithaca</td><td>4</td><td>5454</td></tr>
-<tr><td><strong>TOTAL<strong></td><td><strong>26</strong></td><td><strong>52571</strong></td></tr>
+<tr><td>**TOTAL**</td><td>**26**</td><td>**52571**</td></tr>
 </table>
 
 I'm pretty sure some things are left out from the beginning of the year, and I'm still trying to figure out how I ended up doing so much goddamn traveling. For comparison's sake, I must note that the Earth is 24,901 around its belly, and this is a total of more than twice that. 

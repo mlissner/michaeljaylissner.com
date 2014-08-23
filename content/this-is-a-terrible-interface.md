@@ -5,6 +5,6 @@ Category: Design
 
 The UI for a KDE Python IDE is about the worst I have ever seen:
 
-<img src="http://michaeljaylissner.com/files/images/clutter.preview.png">
+![No alt](/images/clutter.png)
 
 That's about 90 buttons.

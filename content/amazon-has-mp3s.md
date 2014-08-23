@@ -5,7 +5,7 @@ Category: Rant
 
 
 It made some headlines, and is about to make more during superbowl. 
-<a href="http://www.news.com/8301-10784_3-9848258-7.html?tag=newsmap" target="_blank">Amazon 
+<a href="http://www.news.com/8301-10784_3-9848258-7.html?tag=newsmap">Amazon 
 has started selling mp3's from all four of the major record labels.</a> It's a 
 pretty cool revelation, so I went ahead and checked it out.
 

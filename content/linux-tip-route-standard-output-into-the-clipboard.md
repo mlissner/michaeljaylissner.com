@@ -33,4 +33,4 @@ Anyway, if you want to route standard output into the system clipboard, you will
 Will put the word hello into the clipboard. Ctrl + V will then paste that 
 value into whatever application desired.
 
-Thanks to aaron at <a href="http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676" target="_blank">http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676</a> for help with this question.
+Thanks to aaron at <a href="http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676">http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676</a> for help with this question.

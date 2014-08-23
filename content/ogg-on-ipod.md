@@ -13,7 +13,7 @@ For the uninitiated, the ogg format is like the MP3 or the AAC format, except fo
 The other reason that I am hereby requesting ogg on my iPod  is because it's better. It sounds better. It compresses better. Are there other metrics that we should be using? None that I know of. I want ogg. Steve Jobs, do you hear me now?! 
 </p>
 <p>
-Now, the theoretical argument above holds water, but I have personal reasons for this desire: I have 357 ogg files that I can't listen to on my iPod! This pretty much gives me three choices: One, install <a href="http://www.rockbox.org/" target="_blank" title="Rockbox.org">Rockbox</a> on my iPod (I have, it didn't work reliably). Two, convert the ogg files to MP3s (this solution would create inferior-quality songs). Or, three, only listen to those songs on my computer (also a lame solution). 
+Now, the theoretical argument above holds water, but I have personal reasons for this desire: I have 357 ogg files that I can't listen to on my iPod! This pretty much gives me three choices: One, install <a href="http://www.rockbox.org/" title="Rockbox.org">Rockbox</a> on my iPod (I have, it didn't work reliably). Two, convert the ogg files to MP3s (this solution would create inferior-quality songs). Or, three, only listen to those songs on my computer (also a lame solution). 
 </p>
 <p>
 I should also mention while I am on this rant that I have flac files as well. Why doesn't the iPod support those! iPods are great, but these are serious shortcomings.

@@ -83,4 +83,4 @@ we also previously used <a href="http://siteexplorer.search.yahoo
 [8]: http://scholar.google.com/scholar?hl=en&q=practical+obscurity+privacy
 [10]: http://www.bing.com/community/site_blogs/b/webmaster/archive/2009/08/21/prevent-a-bot-from-getting-lost-in-space-sem-101.aspx
 [11]: https://support.google.com/webmasters/bin/answer.py?hl=en&answer=93710
-[12]: http://michaeljaylissner.com/blog/further-privacy-protections-at-courtlistener
+[12]: {filename}/further-privacy-protections-at-courtlistener.md

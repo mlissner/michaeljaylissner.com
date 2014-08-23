@@ -21,7 +21,7 @@ notes expanding the concepts from above:
 1. When you're making your new MySQL database, I found the command line to 
 be the easiest way to do it, but there are a lot of instructions on how to 
 do it with web-based tools. For a good tutorial on the command line method 
-check this out <a href="http://drupal.org/node/22675" target="_blank">http://drupal.org/node/22675</a>.
+check this out <a href="http://drupal.org/node/22675">http://drupal.org/node/22675</a>.
 
 2. The directory hierarchy was one of the more complicated parts of this for 
 some reason. Essentially, it should look like this:

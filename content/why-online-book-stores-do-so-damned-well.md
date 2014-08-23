@@ -18,8 +18,8 @@ I feel a bad about this process, but on the other hand, before now I didn't real
 <table>
 <tr>
 	<td></td>
-	<td><strong>On Campus</strong></td>
-	<td><strong>Online</strong></td>
+	<td>**On Campus**</td>
+	<td>**Online**</td>
 </tr>
 <tr>
 	<td>Intellectual Foundations of Information Organization</td>
@@ -67,9 +67,9 @@ I feel a bad about this process, but on the other hand, before now I didn't real
 	<td>$87</td>
 </tr>
 <tr>
-	<td><strong>Grand Total Spent:</strong></td>
+	<td>**Grand Total Spent:**</td>
 	<td></td>
-	<td><strong>$258</strong></td>
+	<td>**$258**</td>
 </tr>
 </table>
 

@@ -18,4 +18,4 @@ If you want to do that after a delay, the trick is to use the sleep command like
     :::bash"
     sleep 10; import screenshot.png
 
-I found this tip along with a lot of others on <a href="http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux" target="_blank">this blog</a>. There are some other interesting techniques there as well.
+I found this tip along with a lot of others on <a href="http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux">this blog</a>. There are some other interesting techniques there as well.

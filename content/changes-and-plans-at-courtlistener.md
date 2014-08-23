@@ -4,7 +4,7 @@ Tags: courtlistener.com, Web Architecture, database
 Category: Tech
 
 
-A few weeks ago, we made a fairly major change at CourtListener.com to include ID numbers in all of our case URLs. This change meant that links that were previously like this:<blockquote>http://courtlistener.com/scotus/Wong-v.-Smith/</blockquote>Are now like this:<blockquote>http://courtlistener.com/scotus/<strong>V5o</strong>/wong-v-smith/</blockquote>Most of the old links should continue to work, but using the new links should be much faster and more reliable. The major difference between the two is the ID number, which is encoded as a set of numbers (in this case <em>V5o</em>). This ID corresponds directly with the ID number in our database, aiding us greatly in serving up cases quickly and accurately.
+A few weeks ago, we made a fairly major change at CourtListener.com to include ID numbers in all of our case URLs. This change meant that links that were previously like this:<blockquote>http://courtlistener.com/scotus/Wong-v.-Smith/</blockquote>Are now like this:<blockquote>http://courtlistener.com/scotus/**V5o**/wong-v-smith/</blockquote>Most of the old links should continue to work, but using the new links should be much faster and more reliable. The major difference between the two is the ID number, which is encoded as a set of numbers (in this case <em>V5o</em>). This ID corresponds directly with the ID number in our database, aiding us greatly in serving up cases quickly and accurately.
 
 Around the same time as this change, we added social networking links to all of our case pages to make them easier to share with friends and colleagues. These links use our new tiny domain, <em>http://crt.li/</em>, and should thus be ideal for websites like Twitter or Reddit.
 

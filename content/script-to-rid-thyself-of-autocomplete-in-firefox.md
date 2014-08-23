@@ -3,20 +3,32 @@ Date: 2009-12-15T17:41:27
 Tags: security, Linux, firefox, bash, autocomplete
 Category: Tech
 
-I took some time today and wrote up a script that can be run to eliminate autocomplete=off in Firefox. It basically does the same thing as is described <a href="http://michaeljaylissner.com/blog/rid-thyself-of-autocomplete-in-firefox">here</a>, but it automates it. 
+I took some time today and wrote up [a script][script] that can be run to 
+eliminate 
+`autocomplete=off` in Firefox. It basically does the same thing as is 
+described [here][1], but it automates it. 
 
 The script can be run with one of five arguments:
 
- - You can choose to use find (--find) or locate (--locate) to find the files that need to be changed on your system;
- - You can dictate the location of the file if you want to modify a specific one or know exactly where it's located (--dictate);
- - You can choose to use the Ubuntu default location (--default); or
- - You can print the help information (--help)
+ - You can choose to use find (`--find`) or locate (`--locate`) to find the 
+ files that need to be changed on your system;
+ - You can dictate the location of the file if you want to modify a 
+ specific one or know exactly where it's located (`--dictate`);
+ - You can choose to use the Ubuntu default location (`--default`); or
+ - You can print the help information (`--help`)
 
-Once the program is run, it will make a back up, and modify it the original versions of the file. Once that's complete, all you have to do is restart Firefox.
+Once the program is run, it will make a back up, and modify it the original
+ versions of the file. Once that's complete, all you have to do is restart 
+ Firefox.
 
-It has been pointed out to me by some security folks that removing autocomplete's functionality from the browser might not be the best thing, since it will allow you to save your passwords in the browser. There's some truth to that: Anything that's on your computer can be hacked. So, if you're going to use this script, use it wisely.
+It has been pointed out to me by some security folks that removing a
+utocomplete's functionality from the browser might not be the best thing, 
+since it will allow you to save your passwords in the browser. There's some
+ truth to that: Anything that's on your computer can be hacked. So, 
+ if you're going to use this script, use it wisely.
 
-Here's the code. I've attached it to this message as well. Any bugs or comments are greatly appreciated.
+Here's the code. I've attached it to this message as well. Any bugs or 
+comments are greatly appreciated.
 
     :::bash
     #!/bin/bash
@@ -168,3 +180,6 @@ Here's the code. I've attached it to this message as well. Any bugs or comments 
                exit 1;
         esac
     fi
+
+[1]: {filename}/rid-thyself-of-autocomplete-in-firefox.md
+[script]: {filename}/archive/autocomplete-killer.sh

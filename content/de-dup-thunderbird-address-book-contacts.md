@@ -4,9 +4,9 @@ Tags: thunderbird, de-dup
 Category: Tech
 
 
-For the longest time, I've been annoyed with Thunderbird because it doesn't catch duplicate contacts as you enter them into your address book. This seems like a standard thing to check for, but even in the <a href="http://www.mozillamessaging.com/en-US/thunderbird/3.0b4/" target="_blank">latest release</a>, this still hasn't <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=129393" target="_blank">been</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=45946" target="_blank">fixed</a>.
+For the longest time, I've been annoyed with Thunderbird because it doesn't catch duplicate contacts as you enter them into your address book. This seems like a standard thing to check for, but even in the <a href="http://www.mozillamessaging.com/en-US/thunderbird/3.0b4/">latest release</a>, this still hasn't <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=129393">been</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=45946">fixed</a>.
 
-This was really starting to get out of control for me, so I did some thinking today about how to fix it, and finally came up with an answer. There is <a href="https://addons.mozilla.org/en-US/thunderbird/addon/2505" target="_blank">an add-on</a> that's supposed to do this, but it hasn't been updated in years, and doesn't work on the latest version. 
+This was really starting to get out of control for me, so I did some thinking today about how to fix it, and finally came up with an answer. There is <a href="https://addons.mozilla.org/en-US/thunderbird/addon/2505">an add-on</a> that's supposed to do this, but it hasn't been updated in years, and doesn't work on the latest version. 
 
 So here's the process that worked for me:
 

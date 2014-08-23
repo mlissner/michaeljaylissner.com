@@ -4,7 +4,7 @@ Tags: infotech, cyberlaw, Lessig
 Category: Policy and Politics
 
 For my new Cyberlaw course, we were assigned a reading by Lawrence Lessig 
-called <a href="www.lessig.org/content/articles/works/finalhls.pdf" target="_blank"><i>The 
+called <a href="www.lessig.org/content/articles/works/finalhls.pdf"><i>The 
 Law of the Horse</i></a>. In it, he writes about how code can control law, and 
 vise versa. He makes some good points that are intuitive yet bear saying 
 nonetheless. Cyberspace as it currently exists is a largely unregulated domain. 

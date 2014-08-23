@@ -10,9 +10,13 @@ and per my custom, I brought along a couple of iButtons so that we could
 record our temperature the entire time. 
 
 I set them up to record the temperature every five minutes to an accuracy of 
-0.1 degree Celsius. I just got a chance to work with the data a bit and I 
+0.1 degree Celsius. I just got a chance to work with [the data][2] a bit and I 
 threw together a quick chart. The data are attached, if anybody is interested, 
 but the chart really tells the story better than the 2,400 data points do.
 
-<a href="http://michaeljaylissner.com/files/images/Labeled%20Temperatures2.png"><img src="http://michaeljaylissner.com/files/images/Labeled%20Temperatures2.png" width="450"></a>
-<i><a href="http://michaeljaylissner.com/files/images/Labeled%20Temperatures2.png">Click for fullsize view</a></i>
+[![iButton Temperatures](/images/Labeled%20Temperatures2.png)][1]
+
+[*Click for full-size view*][1]
+
+[1]: {filename}/images/Labeled%20Temperatures2.png
+[2]: {filename}/archive/sequoia-temps.xls

@@ -15,7 +15,7 @@ since 2005 when the storm blew through.
 What surprised me (aside from the [markings][1]) is that people are moving 
 back into this area, rebuilding their houses, and generally, pouring money into 
 the location. On the one hand, it makes sense since it's their home, but on the 
-other, I can't help but think that <i><strong>somebody</strong></i> should stop 
+other, I can't help but think that <i>**somebody**</i> should stop 
 this from happening. From what I've learned while here, the 9th Ward is an area 
 of New Orleans that is going to flood if there is another hurricane 
 Katrina...which there will be sooner or later. Considering that Katrina 

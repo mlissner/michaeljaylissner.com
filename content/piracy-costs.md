@@ -3,7 +3,7 @@ Date: 2008-10-08T14:12:00
 Tags: piracy, bad statistics
 Category: Policy and Politics
 
-Ars Technica has a <a href="http://arstechnica.com/articles/culture/dodgy-digits-behind-the-war-on-piracy.ars/1" target="_blank">good article today</a> about the costs of piracy where they debunk (in four glorious pages) two figures that are often cited to explain just how bad the piracy problem has become.
+Ars Technica has a <a href="http://arstechnica.com/articles/culture/dodgy-digits-behind-the-war-on-piracy.ars/1">good article today</a> about the costs of piracy where they debunk (in four glorious pages) two figures that are often cited to explain just how bad the piracy problem has become.
 
 They've done an excellent job showing that the figures are absolutely bogus, but their conclusion really makes quite a point. For reference, the first figure is that 750,000 jobs have been lost due to piracy, and the second is that piracy costs $200-$250 billion. 
 

@@ -19,10 +19,10 @@ Do we really want this person in any position of power? To reiterate, she was ma
 
 Incredible. Please help get this word out. This is awful, and not just a passing concern.
 
-<strong>References</strong>
-<sup>1.</sup> <a href="http://www.time.com/time/politics/article/0,8599,1837918,00.html" target="_blank">http://www.time.com/time/politics/article/0,8599,1837918,00.html</a>
-<sup>2.</sup> <a href="http://ap.google.com/article/ALeqM5jNulPSqaP1eyysv8ENJWhk0ZSrPgD92VJPL00" target="_blank">http://ap.google.com/article/ALeqM5jNulPSqaP1eyysv8ENJWhk0ZSrPgD92VJPL00</a>
-<sup>3.</sup> <a href="http://en.wikipedia.org/wiki/Wasilla,_Alaska" target="_blank">http://en.wikipedia.org/wiki/Wasilla,_Alaska</a>
-<sup>4.</sup> <a href="http://www.juneauempire.com/stories/101906/sta_20061019031.shtml" target="_blank">http://www.juneauempire.com/stories/101906/sta_20061019031.shtml</a>
-<sup>5.</sup> <a href="http://dwb.adn.com/news/politics/elections/story/8347904p-8243554c.html" target="_blank">http://dwb.adn.com/news/politics/elections/story/8347904p-8243554c.html</a>
-<sup>6.</sup> <a href="http://www.timesonline.co.uk/tol/news/environment/article3987891.ece" target="_blank">http://www.timesonline.co.uk/tol/news/environment/article3987891.ece</a>
+**References**
+<sup>1.</sup> <a href="http://www.time.com/time/politics/article/0,8599,1837918,00.html">http://www.time.com/time/politics/article/0,8599,1837918,00.html</a>
+<sup>2.</sup> <a href="http://ap.google.com/article/ALeqM5jNulPSqaP1eyysv8ENJWhk0ZSrPgD92VJPL00">http://ap.google.com/article/ALeqM5jNulPSqaP1eyysv8ENJWhk0ZSrPgD92VJPL00</a>
+<sup>3.</sup> <a href="http://en.wikipedia.org/wiki/Wasilla,_Alaska">http://en.wikipedia.org/wiki/Wasilla,_Alaska</a>
+<sup>4.</sup> <a href="http://www.juneauempire.com/stories/101906/sta_20061019031.shtml">http://www.juneauempire.com/stories/101906/sta_20061019031.shtml</a>
+<sup>5.</sup> <a href="http://dwb.adn.com/news/politics/elections/story/8347904p-8243554c.html">http://dwb.adn.com/news/politics/elections/story/8347904p-8243554c.html</a>
+<sup>6.</sup> <a href="http://www.timesonline.co.uk/tol/news/environment/article3987891.ece">http://www.timesonline.co.uk/tol/news/environment/article3987891.ece</a>

@@ -3,7 +3,10 @@ Date: 2009-07-17T21:15:02
 Tags: backpacking, first aid, gear
 Category: Backpacking
 
-I present to you approximately a decade's worth of first aid kit refinement. Emphasis is on completeness and lightness. Inside a custom silnylon envelope (with no zippers or fasteners that might slow down frostbitten, missing or otherwise failing hands), I have the following:
+I present to you approximately a decade's worth of first aid kit refinement.
+Emphasis is on completeness and lightness. Inside a custom silnylon 
+envelope (with no zippers or fasteners that might slow down frostbitten, 
+missing or otherwise failing hands), I have the following:
 
  - An ultra-fine tipped 0.5ml syringe
  - A 1ml glass vial of epinephren
@@ -24,7 +27,8 @@ I present to you approximately a decade's worth of first aid kit refinement. Emp
  - Seven 120mg pseudoephedrine hydrocloride (Sudafed) pills
  - Six diphenhydramine hydrochloride (Benadryl) pills
  - Dosage and indication instructions for all of the above pills
- - A SOAP note (see attached for a sample - very important item)
-
+ - A [SOAP note][1]
 
 Total weight is 124.7 grams (4.4 oz.). Don't take this as medical advice. 
+
+[1]: {filename}/archive/SOAPA_Note.xls

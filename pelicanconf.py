@@ -13,9 +13,9 @@ TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
-#FEED_ALL_ATOM = None
-#CATEGORY_FEED_ATOM = None
-#TRANSLATION_FEED_ATOM = None
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -34,7 +34,11 @@ USE_FOLDER_AS_CATEGORY = False
 DISPLAY_CATEGORIES_ON_MENU = True
 SLUGIFY_SOURCE = 'basename'
 DELETE_OUTPUT_DIRECTORY = True
-TYPOGRIFY = True
+
+# Sadly disabled because it wraps capital letters in HTML attributes in still
+# more HTML. Possible to toggle and verify by looking at "Previous" link at:
+# https://mlissner.github.io/michaeljaylissner.com/posts/2013/07/19/battery-packs-for-ultralight-long-distance-backpacking/
+TYPOGRIFY = False
 
 # URL settings
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
@@ -79,7 +83,8 @@ MD_EXTENSIONS = (['codehilite(css_class=highlight)', 'extra', 'headerid',
                   'toc'])
 DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives', 'search',
                      '404'))
-STATIC_PATHS = ['theme/images', 'images']
+STATIC_PATHS = ['theme/images', 'images', 'archive', 'pdfs']
+ARTICLE_EXCLUDES = ['archive', 'pdfs']
 TAG_SAVE_AS = ''
 CATEGORY_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''

@@ -3,17 +3,32 @@ Date: 2012-02-11T10:53:30
 Tags: tesseract, ocr, howto, font
 Category: Tech
 
+[TOC]
 
-*Update:* I've turned off commenting on this article because it was just a bunch of people asking for help and never getting any. If you need help with these instructions, go to Stack Overflow and ask there. If you have corrections to the article, please send them directly to me using the Contact form.
+## Status
 
-[Tesseract][1] is a great and powerful OCR engine, but their [instructions for adding a new font][2] are incredibly long and complicated. At CourtListener we have to handle several unusual [blackletter fonts][3], so we had to go through this process a few times. Below I've explained the process so others may more easily add fonts to their system.
+I'm attempting to keep this up to date as Tesseract changes. If you have 
+questions or corrections, please send them directly using the [contact 
+page][contact].
+
+I've turned off commenting on this article because it was just a 
+bunch of people asking for help and never getting any. If you need help 
+with these instructions, go to Stack Overflow and ask there.
+
+## Introduction
+
+[Tesseract][1] is a great and powerful OCR engine, but their [instructions 
+for adding a new font][2] are incredibly long and complicated. At 
+CourtListener we have to handle several unusual [blackletter fonts][3], 
+so we had to go through this process a few times. Below I've explained the 
+process so others may more easily add fonts to their system.
 
 The process has a few major steps:
 
  * [Create training documents][4]
  * [Teach Tesseract about the documents][5]
 
-### Create training documents
+## Create training documents
 
 To create training documents, open up MS Word or LibreOffice, paste in the contents of the attached file named 'standard-training-text.txt'. This file contains the training text that is used by Tesseract for the included fonts.
 
@@ -25,7 +40,7 @@ Save the document as a PDF (call it [lang].font-name.exp0.pdf, with lang being a
 
 You'll now have a good training image called lang.font-name.exp0.tif. If you're adding multiple fonts, or bold, italic or underline, repeat this process multiple times, creating one doc &rarr; pdf &rarr;  tiff per font variation.
 
-### Train Tesseract
+## Train Tesseract
 
 The next step is to run tesseract over the image(s) we just created, and to see how well it can do with the new font. After it's taken its best shot, we then give it corrections. It'll provide us with a box file, which is just a file containing x,y coordinates of each letter it found along with what letter it thinks it is. So let's see what it can do:
 
@@ -66,8 +81,8 @@ So, for example, if you use the standard training data, you might end up with a 
     eng.georgiab.box 0 1 0 1 0
     eng.georgiai.box 1 0 0 1 0
     eng.georgiaz.box 1 1 0 1 0
-    <strong>eng.lincoln.box 0 0 0 0 1</strong>
-    <strong>eng.old-english.box 0 0 0 0 1</strong>
+    eng.lincoln.box 0 0 0 0 1
+    eng.old-english.box 0 0 0 0 1
     eng.times.box 0 0 0 1 0
     eng.timesbd.box 0 1 0 1 0
     eng.timesbi.box 1 1 0 1 0
@@ -101,6 +116,11 @@ This will create all the data files you need, and you just need to move them to 
 
 And that, good friend, is it. Worst process for a human, ever.
 
+## Enclosures
+
+ - [Training data file][td]
+ - [Old English example file][oldenglish]
+
 [1]: http://code.google.com/p/tesseract-ocr/
 [2]: http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3
 [3]: http://en.wikipedia.org/wiki/Blackletter
@@ -112,3 +132,6 @@ And that, good friend, is it. Worst process for a human, ever.
 [9]: http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#The_last_file_(unicharambigs)
 [10]: http://www.sil.org/iso639-3/iso-639-3_Name_Index_20120203.tab
 [11]: http://code.google.com/p/moshpytt/issues/detail?id=2
+[contact]: {filename}/contact.md
+[td]: {filename}/archive/ocr/standard-training-text.txt
+[oldenglish]: {filename}/archive/ocr/old-english.doc

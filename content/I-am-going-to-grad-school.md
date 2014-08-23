@@ -4,7 +4,7 @@ Tags: infotech, me
 Category: Personal
 
 
-I hadn't mentioned this previously here on the blog, but for the past several months, I've been working my butt off putting together two grad school applications for Masters of Information Management (MIMS). The two applications were for <a href="http://ischool.berkeley.edu" target="_blank">UC Berkeley School of Information</a> and <a href="http://www.ischool.washington.edu" target="_blank">University of Washington Information School</a>. 
+I hadn't mentioned this previously here on the blog, but for the past several months, I've been working my butt off putting together two grad school applications for Masters of Information Management (MIMS). The two applications were for <a href="http://ischool.berkeley.edu">UC Berkeley School of Information</a> and <a href="http://www.ischool.washington.edu">University of Washington Information School</a>. 
 
 I am elated to announce that yesterday I heard from UW, and today I heard from Cal. They have both officially offered me entrance into the Fall 2008 class. Amazing. 
 

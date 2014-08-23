@@ -4,7 +4,7 @@ Tags: security, problems, mashup idea
 Category: Privacy and Security
 
 
-I've mentioned secret questions on my site before, but I never quite realized how much of a problem they are until today, when I discovered <a href="http://uspublicrecords.com" target="_blank">uspublicrecords.com</a>.
+I've mentioned secret questions on my site before, but I never quite realized how much of a problem they are until today, when I discovered <a href="http://uspublicrecords.com">uspublicrecords.com</a>.
 
 It's a simple site. You put in a name, and if it has that person in its database, it gives you their age, middle name, and family members. So far, I haven't found any names it <i>doesn't</i> have.
 

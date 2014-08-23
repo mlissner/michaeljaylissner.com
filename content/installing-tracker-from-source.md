@@ -5,7 +5,7 @@ Category: Tech
 
 I've been working over the past several weeks on getting Tracker to work better on my system. There are a couple reasons that I'm doing this. The first is that by default on Ubuntu, Tracker doesn't support a number of meta formats (such as the tags in JPEGs, ID3 info in MP3s, and the like). The second was that the RDF parsing code in the default Ubuntu version is a bit buggy, and the new version is better. It's been a bit of a pain figuring out the install process, so I figured I'd post here so others might have an easier time.
 
-The <a href="http://projects.gnome.org/tracker/start.html" target="_blank">online instructions</a> say to simply download the code, and to install it. No big deal, right? Well...in reality, it's a bit harder than that. The process I went through was to download the source from <a href="http://projects.gnome.org/tracker/download.html" target="_blank">here</a> per the instructions, unpack the source files, and to run the configure command. 
+The <a href="http://projects.gnome.org/tracker/start.html">online instructions</a> say to simply download the code, and to install it. No big deal, right? Well...in reality, it's a bit harder than that. The process I went through was to download the source from <a href="http://projects.gnome.org/tracker/download.html">here</a> per the instructions, unpack the source files, and to run the configure command. 
 
 After the configure command is run each time, it will give you a summary of which components will be installed, and which will not. If you have all the dependencies necessary, and include a couple of arguments to the configure command, everything will get installed. If not, certain pieces will be missing. 
 

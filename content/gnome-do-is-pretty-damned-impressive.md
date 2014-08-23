@@ -4,7 +4,7 @@ Tags: ubuntu, gnome-do, productivity
 Category: Tech
 
 
-If you've talked to me about Ubuntu in the past year or so, I probably mentioned to you that one of my favorite things about using it is a program called <a href="http://do.davebsd.com/" target="_blank">gnome-do</a>. It's a little hard to explain gnome-do without an example, so I'll explain how I just made the following tweet, sharing a picture from my garden: <blockquote>Artichoke has finally flowered. It's quite something: <a href="http://tinyurl.com/mn7pjp" target="_blank">http://tinyurl.com/mn7pjp</a></blockquote>To make this tweet, I needed to find the picture on my computer, upload it to the web, create a tinyurl of the picture's location, and then tweet the URL.
+If you've talked to me about Ubuntu in the past year or so, I probably mentioned to you that one of my favorite things about using it is a program called <a href="http://do.davebsd.com/">gnome-do</a>. It's a little hard to explain gnome-do without an example, so I'll explain how I just made the following tweet, sharing a picture from my garden: <blockquote>Artichoke has finally flowered. It's quite something: <a href="http://tinyurl.com/mn7pjp">http://tinyurl.com/mn7pjp</a></blockquote>To make this tweet, I needed to find the picture on my computer, upload it to the web, create a tinyurl of the picture's location, and then tweet the URL.
 
 Traditionally, the process would be the following:
 

@@ -35,5 +35,5 @@ heroes. And consider also how little attention is given to antiwar movements and
  
 If you haven't read <i>[Passionate Declarations][2]</i>, you should.
 
-[1]: http://michaeljaylissner.com/blog/howard-zinn-the-use-and-abuse-of-history
+[1]: {filename}/howard-zinn-the-use-and-abuse-of-history.md
 [2]: http://www.amazon.com/exec/obidos/ASIN/0060557672/simiansbooksonli

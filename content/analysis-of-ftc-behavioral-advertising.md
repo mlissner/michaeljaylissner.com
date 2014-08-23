@@ -4,9 +4,13 @@ Tags: principles, policy, paper, law, FTC, advertising
 Category: Policy and Politics
 
 
-It's coming down to the end of the semester, and after I finished the attached paper on FTC laws as the apply to online advertising, I did some calculations to figure out what I have to do still. 
+It's coming down to the end of the semester, and after I finished [the 
+attached paper][1] on FTC laws as the apply to online advertising, 
+I did some calculations to figure out what I have to do still. 
 
-Turns out I have 68-95 pages to write (give or take), and two projects to complete between today and early May. Things are going to get interesting. 
+Turns out I have 68-95 pages to write (give or take), 
+and two projects to complete between today and early May. Things are going 
+to get interesting. 
 
 The lay of the land looks like this:
 
@@ -18,3 +22,5 @@ The lay of the land looks like this:
 
 
 For now, I'll reserve my thoughts on the attached analysis, but I tried to analyze the ways that the FTC regulates online advertising...within an eight page limit. 
+
+[1]: {filename}/pdfs/ftc.pdf

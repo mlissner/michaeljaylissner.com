@@ -67,5 +67,5 @@ as root run:
 That will make init know about the file, and run it at startup. Happy 
 awakenings!
 
-<strong>Source:</strong> <a href="http://ubuntuforums.org/showthread.php?t=711747" target="_blank">http://ubuntuforums.org/showthread.php?t=711747</a>
+**Source:** <a href="http://ubuntuforums.org/showthread.php?t=711747">http://ubuntuforums.org/showthread.php?t=711747</a>
 

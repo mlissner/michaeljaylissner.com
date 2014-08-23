@@ -15,14 +15,14 @@ it's pretty obvious that he doesn't use the internet. It would probably be a
 useful tool for his line of work.
 
 In a similar vein, McCain said, "Well, basically, 
-<strong>it's a Google</strong>. You just, you know, what you can find out now on the Internet. It's remarkable, you know." Emphasis mine.
+**it's a Google**. You just, you know, what you can find out now on the Internet. It's remarkable, you know." Emphasis mine.
 
 He also says, "I am a [computer] illiterate that has to rely on my wife for 
 all of the assistance that I can get."
 
-<a href="http://www.cnn.com/video/#/video/politics/2008/06/25/moos.mccain.doesnt.compute.cnn" target="_blank">Observe here</a>.
+<a href="http://www.cnn.com/video/#/video/politics/2008/06/25/moos.mccain.doesnt.compute.cnn">Observe here</a>.
 
-This is really, really sad. Is there <strong>ANY</strong> job for which you 
+This is really, really sad. Is there **ANY** job for which you 
 would deliberately hire somebody that professes internet and computer illiteracy?
 
 Shocking.

@@ -3,7 +3,7 @@ Date: 2008-12-21T16:41:13
 Tags: Python, yelp, programming, scrape
 Category: Tech
 
-I spent the past couple days on one of my first Python projects - using the <a href="http://www.yelp.com/developers" target="_blank">Yelp API</a> to compile a list of restaurants in a defined geographic area.
+I spent the past couple days on one of my first Python projects - using the <a href="http://www.yelp.com/developers">Yelp API</a> to compile a list of restaurants in a defined geographic area.
 
 It's been a good project. Because of some limitations of the API, I had to do some interesting tricks to make it work. One problem with the API is that it only allows 20 hits per query, so if you want to do a big query, you have to divide it up into tiny queries that have fewer than 20 hits each. 
 

@@ -5,7 +5,7 @@ Category: Policy and Politics
 
 
 I was happy to read the news today that <a href="http://www.iht
-.com/articles/2009/01/13/america/13gitmo.php?page=1" target="_blank">Obama 
+.com/articles/2009/01/13/america/13gitmo.php?page=1">Obama 
 plans to close Guantanamo Bay prison camp</a>. This is good news for 
 America, and should be good news for the prisoners there. 
 

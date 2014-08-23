@@ -11,3 +11,12 @@ Tags:
 Categories:
 
 [TOC]
+
+
+An image:
+
+![Alt Text]({filename}/images/han.jpg)
+
+Some links:
+[a link relative to content root]({filename}/article1.md)
+[a link relative to current file]({filename}../article1.md)
