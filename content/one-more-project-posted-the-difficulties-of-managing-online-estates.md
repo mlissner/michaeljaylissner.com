@@ -6,7 +6,7 @@ Category: Policy and Politics
 
 Well, one more paper down, one more to go! Today I completed the final paper 
 for [my class on information law and policy][1], which was one of my best 
-classes this semester. It was a pretty tough one that required a <i>lot</i> of 
+classes this semester. It was a pretty tough one that required a *lot* of 
 reading and a lot of extra work for the assignments, but I found it quite 
 rewarding in the end. 
 

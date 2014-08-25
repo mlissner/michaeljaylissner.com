@@ -8,15 +8,15 @@ of the things that have been on my list for far too long. One of those
 things was to build a repair stand for the work I do on the bikes in my life. 
 For about $50, you can build this stand, which works remarkably well. 
 
-![No alt](/images/bike-stand/000-DSC02109.JPG)
+![No alt]({filename}/images/bike-stand/000-DSC02109.JPG)
 
-![No alt](/images/bike-stand/000-DSC02106.JPG)
+![No alt]({filename}/images/bike-stand/000-DSC02106.JPG)
 
-![No alt](/images/bike-stand/001-DSC02110.JPG)
+![No alt]({filename}/images/bike-stand/001-DSC02110.JPG)
 
-![No alt](/images/bike-stand/002-DSC02111.JPG)
+![No alt]({filename}/images/bike-stand/002-DSC02111.JPG)
 
-![No alt](/images/bike-stand/003-DSC02112.JPG)
+![No alt]({filename}/images/bike-stand/003-DSC02112.JPG)
 
 Essentially, what you need to make this beauty is five pipes, 
 a 90 degree elbow, a 45 degree elbow, and a welder. Since I don't weld, 

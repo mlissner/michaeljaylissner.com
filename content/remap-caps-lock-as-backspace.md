@@ -13,9 +13,9 @@ How did I do it? Well, I'm glad you asked. I'll tell you.
 ## In Windows
 
 EDIT: I noticed that the picture doesn't have all the detail you need. The 
-easier way to do this, is to download the registry key attached to this 
-post, and to right click it, selecting merge. After that, 
-restart the computer, and you should be all set.
+easier way to do this, is to download [this registry key][1] post, 
+and to right click it, selecting merge. After that, restart the computer, and 
+you should be all set.
 
 To remap the caps lock to function as a backspace key in Windows, 
 one must edit the registry keys. To do that, go to `Start > Run...`, 
@@ -24,7 +24,7 @@ in the picture below, and create a new key named Scancode Map of the type
 `REG_BINARY`. Give it the value shown in the picture, restart, 
 and you're set. If things get wacky, delete the key and try again.
 
-![No alt](/images/Windows%20Registry%20Remap%20Screenshot.jpg)
+![No alt]({filename}/images/Windows%20Registry%20Remap%20Screenshot.jpg)
 
 ## In Linux
 
@@ -71,5 +71,7 @@ And add `xset r 66` to the bottom.
 
 That should do it.
 
-Source: http://ubuntuforums.org/showthread.php?t=369402
+[Source][2]
 
+[1]: {filename}/archive/scancode.reg
+[2]: http://ubuntuforums.org/showthread.php?t=369402

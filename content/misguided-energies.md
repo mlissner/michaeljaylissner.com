@@ -3,7 +3,7 @@ Date: 2008-10-31T00:07:18
 Tags: oil, sustainability
 Category: Policy and Politics
 
-From <i>[Winning the Oil Endgame][1]</i> (free login required):
+From *[Winning the Oil Endgame][1]* (free login required):
 
 > The average new U.S. light vehicle in 2003 had 24% more weight,
  93% more horsepower, and 29% faster 0-60-mph time than in 1981, 

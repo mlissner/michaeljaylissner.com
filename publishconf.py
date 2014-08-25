@@ -10,8 +10,9 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://michaeljaylissner.com'
-RELATIVE_URLS = True
+#SITEURL = 'http://michaeljaylissner.com'
+SITEURL = 'http://mlissner.github.io/michaeljaylissner.com'
+RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
@@ -20,5 +21,5 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
+DISQUS_SITENAME = "michaeljaylissner"
 #GOOGLE_ANALYTICS = ""

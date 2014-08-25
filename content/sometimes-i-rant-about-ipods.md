@@ -10,7 +10,7 @@ iPods (and by extension, Apple) are. This is one of those times.
 The picture below represents the folder hierarchy of my 20GB iPod, 
 as displayed in the Ubuntu Disk Analyzer:
 
-![iPods Annoy Me](/images/ipods%20annoy%20me.png)
+![iPods Annoy Me]({filename}/images/ipods%20annoy%20me.png)
 
 Right now, this iPod is nearly full. I filled it with a very normal 
 hodge-podge of songs. Naturally, I like some artists better than others, 

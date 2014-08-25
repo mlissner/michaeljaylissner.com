@@ -4,7 +4,7 @@ Tags: concord, police, frustration
 Category: Personal
 
 
-I was walking to work a few months ago, enjoying the crisp summer morning air, and I came to a stop light that instructed me to wait to cross. It being a one-way street, I looked left, saw no cars for a block and a half, and casually walked across the road, against the traffic light's firm instruction. I continued walking for another third of a block, and then heard a siren blare behind me <i>on the sidewalk</i>.
+I was walking to work a few months ago, enjoying the crisp summer morning air, and I came to a stop light that instructed me to wait to cross. It being a one-way street, I looked left, saw no cars for a block and a half, and casually walked across the road, against the traffic light's firm instruction. I continued walking for another third of a block, and then heard a siren blare behind me *on the sidewalk*.
 
 Incredibly, I was getting pulled over (so to speak), by a motorcycle cop (now illegally riding on the sidewalk) for defying a traffic light while on foot. I was &ndash; and still am &ndash; in shock. I expressed my disbelief to the officer, "You're kidding right?" He was not. "You have better things to do with your time, right?" He did not. He told me a woeful tale of how he has to call parents in the middle of the night to tell them that their child had been hit while crossing the road. I informed him that I was in fact a professional walker that literally walked halfway across the continent, and that I was pretty much OK crossing the street. He insisted he was doing me a favor, and teaching me a lesson.
 

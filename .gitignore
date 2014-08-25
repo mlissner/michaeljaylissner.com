@@ -1,4 +1,6 @@
 .idea
 *.iml
+
+cache
 original_content_from_drupal.csv
 output

@@ -7,11 +7,11 @@ OK, here's the scoop. I've given the site a major revamp and a new look.
 
 Here's the old one:
 
-![Old site](/images/oldsite/v3.png)
+![Old site]({filename}/images/oldsite/v3.png)
 
 And the new:
 
-![Old site](/images/oldsite/v4.png)
+![Old site]({filename}/images/oldsite/v4.png)
 
 There were a number of reasons I wanted to make a change, 
 and I think the new design accomplishes most of them. First, 

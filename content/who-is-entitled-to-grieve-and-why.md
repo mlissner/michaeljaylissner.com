@@ -9,8 +9,8 @@ not exactly about the Internet and death, but it's interesting to think
 about ways the Interne  may have made relationships more complex and how 
 that has affected who is socially allowed to grieve.
 
-From <i>[Memorializing Loved Ones on the World Wide 
-Web][1]</i>:
+From *[Memorializing Loved Ones on the World Wide 
+Web][1]*:
 
 > There are unwritten but familiar rules, however, about who is entitled to
 grieve. Pine, for example, claimed that in "compartmentalized society, 

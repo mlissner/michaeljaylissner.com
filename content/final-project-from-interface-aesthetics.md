@@ -7,7 +7,7 @@ Category: Design
 I had my last day of actual class today, and the semester is really 
 beginning to wind down. I still have at least 60 pages of writing to do in 
 the next two weeks, but somehow it will get done. One class that I 
-<i>have</i> finished my final project work for is [Interface 
+*have* finished my final project work for is [Interface 
 Aesthetics][1], which was a survey class covering typography, color, 
 layout, web design, and a handful of other topics. 
 

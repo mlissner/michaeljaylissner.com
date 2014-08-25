@@ -3,9 +3,9 @@ Date: 2007-10-12T22:53:24
 Tags: singularity, book, infotech
 Category: Policy and Politics
 
-I know what you're thinking: &quot;The Singularity - What is Mike talking about? This must be stupid.&quot; I'm here to say that it might be stupid, but bear with me because I can't decide if it is, and I need to know the public consensus. 
+I know what you're thinking: "The Singularity - What is Mike talking about? This must be stupid." I'm here to say that it might be stupid, but bear with me because I can't decide if it is, and I need to know the public consensus. 
 
-The Singularity is this theory I have been reading far too much about that there will come a time when &quot;computers transcend biology.&quot; Think about that for a moment: computers...transcend...biology. In other words, there will come a time when computers are so advanced that they have moved beyond the limitations of biology; beyond what we now think of as computers, and into some biocomputing nano-thing.
+The Singularity is this theory I have been reading far too much about that there will come a time when "computers transcend biology." Think about that for a moment: computers...transcend...biology. In other words, there will come a time when computers are so advanced that they have moved beyond the limitations of biology; beyond what we now think of as computers, and into some biocomputing nano-thing.
 
 The book I'm reading right now is <em>The Singularity is Near</em> by Ray Kurzweil. It sounds like a joke, and you'd think he was some two-bit writer that didn't cite his references, or that didn't know his shit, but sadly, the book has over 100 pages of references, and the man teaches at Stanford. So he's qualified to write about crazy future ideas. 
 

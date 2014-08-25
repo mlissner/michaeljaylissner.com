@@ -3,7 +3,7 @@ Date: 2007-11-30T16:43:36
 Tags: google
 Category: Design
 
-![No alt](/images/ParthenonGoldenRatio.png)
+![No alt]({filename}/images/ParthenonGoldenRatio.png)
 
 In case you haven't heard about this before, the [Golden Ratio][1] is the 
 concept of how to define the most aesthetically pleasing ratio between two 
@@ -21,7 +21,7 @@ shorter plus the longer distance.
 
 If that's too confusing, perhaps this will help:
 
-![No alt](/images/Golden%20Ratio%20Formula.png)
+![No alt]({filename}/images/Golden%20Ratio%20Formula.png)
 
 Still confused? How about this: The Golden Ratio is 1.61803399.
 

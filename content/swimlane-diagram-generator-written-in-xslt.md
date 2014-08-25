@@ -15,7 +15,7 @@ that converts the XML data to HTML, Javascript and SVG.
 The final product looks something like this (anonymized with Presidential 
 info for good measure):
 
-[![Diagram](/images/swimlane-screenshot.png)][1]
+[![Diagram]({filename}/images/swimlane-screenshot.png)][1]
 
 *(click through for complete demo)*
 

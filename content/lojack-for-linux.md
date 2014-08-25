@@ -3,7 +3,7 @@ Date: 2007-09-23T14:56:19
 Tags: Linux
 Category: Tech
 
-I have been spending some time lately shopping for laptops, and I noticed an interesting product on the shelves these days: <i>LoJack for Laptops</i>. It's an interesting concept, because I think LoJack could do a lot of cool things these days for just about anything you buy that's worth more than a couple hundred bucks. My bike, for example, would be another object I would want LoJack for if the system were cheaper. 
+I have been spending some time lately shopping for laptops, and I noticed an interesting product on the shelves these days: *LoJack for Laptops*. It's an interesting concept, because I think LoJack could do a lot of cool things these days for just about anything you buy that's worth more than a couple hundred bucks. My bike, for example, would be another object I would want LoJack for if the system were cheaper. 
 
 I checked out the LoJack installation software, figuring it would inform me that I had to have a GPS chip installed in my laptop for it to work, but to my surprise, it just uses IP addresses. From what I could figure out, it works in two ways. One, it sends your IP address to a centralized server at some regular interval. Two, it allows a back door entrance into your computer so that if your computer is stolen, you can monitor the location of it more closely, bug the new owner, convince them to give it back, etc.
 

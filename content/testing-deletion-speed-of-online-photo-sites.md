@@ -37,7 +37,7 @@ a black box with white text to Facebook, Flickr, Picasa, MySpace, Photobucket,
 Shutterfly, Twitpic and WalMart. A few months later, 
 I also added drop.io and Orkut: 
 
-![I will attempt to delete this photo](/images/photo-deletion-tests/PostedAndDeleted.jpg)
+![I will attempt to delete this photo]({filename}/images/photo-deletion-tests/PostedAndDeleted.jpg)
 
 When you look below, if you can see the black box for a site, 
 that means that it was not truly deleted and is still live. You can verify 
@@ -64,7 +64,7 @@ Facebook properly deleted the photo from their server as of May 27, 2010.
 Flickr began showing the following message approximately an hour after the 
 image was deleted.
 
-![Flickr Response](/images/photo-deletion-tests/flickr-response.jpg)
+![Flickr Response]({filename}/images/photo-deletion-tests/flickr-response.jpg)
 
 
 ## Picasa
@@ -77,7 +77,7 @@ Picasa properly deleted the photo from their server as of at least November
 
 At an unknown time, MySpace began showing this photo instead:
 
-![MySpace Response](/images/photo-deletion-tests/myspace.png)
+![MySpace Response]({filename}/images/photo-deletion-tests/myspace.png)
 
 
 ## Photobucket

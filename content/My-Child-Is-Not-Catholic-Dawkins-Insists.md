@@ -4,7 +4,7 @@ Date: 2008-03-09T10:34:27
 Tags: me, atheism, Cal
 Category: Policy and Politics
 
-![Dawkins](/images/dawkins.jpg)
+![Dawkins]({filename}/images/dawkins.jpg)
 
 I had the pleasure of going to see [Richard Dawkins][2] last night at Cal. 
 Although our fourth-row seating probably influenced my judgement, 

@@ -9,12 +9,12 @@ It's a pretty useful site because it asks pretty thorough questions,
 and then reports on you vs. historical American, you vs. the world, 
 you vs. lightbulbs, etc. Here's my consumption of energy:
 
-![No alt](/images/wattzon.png)
+![No alt]({filename}/images/wattzon.png)
 
 Pretty cool right? Who knew that my biggest environmental damage is coming 
 from government? Here's me vs. historical Americans:
 
-![No alt](/images/wattzon2.png)
+![No alt]({filename}/images/wattzon2.png)
 
 So I'm doing pretty well relative to the average American, 
 and I need to follow Thoreau's advice about not paying my taxes. Got it.

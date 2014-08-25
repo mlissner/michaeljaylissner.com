@@ -20,7 +20,7 @@ a representative sample of the county at large. With that in mind however,
 extrapolations could likely be made by comparing the number of children in 
 a geographic area against the number of children analyzed herein.
 
-![No alt](/images/ehsd/Residential%20Density%20of%20Families2.png)
+![No alt]({filename}/images/ehsd/Residential%20Density%20of%20Families2.png)
 
 The data that is used was exported from the Bureau's <q>COPA</q> database, 
 pseudo-anonymized by the Bureau,<a name="ref1"></a><a href=".#fn1"><sup>1</sup></a> 
@@ -69,7 +69,7 @@ caregiver in the child's life, even when there is not. A less pessimistic
 explanation could be that a child is able to develop equally well 
 regardless of whether they have one or two caregivers.
 
-![No alt](/images/ehsd/By%20Secondary%20Caregiver.png)
+![No alt]({filename}/images/ehsd/By%20Secondary%20Caregiver.png)
 
 In a similar vein, I examined if there was a correlation between family 
 size and the developmental scores of a child. As can be seen below, 
@@ -78,14 +78,14 @@ could be that the added difficulty a caregiver might experience taking care
 of a larger family might be equally offset by the additional attention and
 stimulus a larger family provides to a child.</p>
 
-![No alt](/images/ehsd/Number%20in%20Household.png)
+![No alt]({filename}/images/ehsd/Number%20in%20Household.png)
 
 Another potential indicator of home stability could be age of the parent, 
 since older parents are more likely to have stable lives. As indicated 
 below, as the parental age increases, so too do the scores of their 
 children.
 
-![No alt](/images/ehsd/PC%20Age.png)
+![No alt]({filename}/images/ehsd/PC%20Age.png)
 
 Teen parenting is known to be very difficult, but of the 41 teen parents 
 that were in the data set, their children do not score significantly worse 
@@ -93,7 +93,7 @@ on the developmental measures. An interesting fact that emerged during this
 analysis was that there were no teen-aged male primary caregivers in the 
 data set of more than 6,000 primary caregivers. </p>
 
-![No alt](/images/ehsd/Teen%20Parent,%20PC%20Gender.png)
+![No alt]({filename}/images/ehsd/Teen%20Parent,%20PC%20Gender.png)
 
 A final test that I ran on this data was to see if there was a correlation 
 between the number of hours that a primary caregiver works and the 
@@ -105,7 +105,7 @@ the primary caregiver worked more hours until they began working <em>more
 than</em> eight hours/day, at which point developmental scores begin to 
 rise again.
 
-![No alt](/images/ehsd/PC%20Hours%20Per%20Day%202.png)
+![No alt]({filename}/images/ehsd/PC%20Hours%20Per%20Day%202.png)
 
 Ultimately, and much to my surprise, it appears that my hypothesis &mdash; 
 that an increase in parental involvement results in a more developmentally 
@@ -127,7 +127,7 @@ In looking at the child's English skill, as described by their primary
 caregiver, a very clear trend emerges, confirming this hypothesis: As 
 English skills improve, children score higher on developmental assessments.
 
-![No alt](/images/ehsd/English%20Skill.png)
+![No alt]({filename}/images/ehsd/English%20Skill.png)
 
 When the primary languages are broadly binned by geographic origin, 
 clear trends emerge in the average assessment results of the children. 
@@ -136,7 +136,7 @@ it appears that children with African and European languages on average
 have lower developmental scores than those children that speak Spanish, 
 English, Middle Eastern or Asian languages.
 
-![No alt](/images/ehsd/Language%20Origin.png)
+![No alt]({filename}/images/ehsd/Language%20Origin.png)
 
 
 ### Hypothesis 3: Gender and race/ethnicity will not affect the development of the children, but disability status will.
@@ -152,12 +152,12 @@ their second language, significant differences can be seen between races,
 but this finding mirrors that above, with non-English speakers performing 
 worse on the developmental measures.
 
-![No alt](/images/ehsd/By%20Race%20and%20Language.png)
+![No alt]({filename}/images/ehsd/By%20Race%20and%20Language.png)
 
 Consistent with my hypothesis, differences between child gender and 
 developmental scores can also be considered negligible.
 
-![No alt](/images/ehsd/By%20Gender.png)
+![No alt]({filename}/images/ehsd/By%20Gender.png)
 
 I decided to examine the average development of the children against their 
 disability status in order to determine the validity of the developmental 
@@ -170,7 +170,7 @@ are generally administered by county workers that are aware of the
 disability status of the children, it remains unclear whether this 
 contributes to the extreme results shown below.</p>
 
-![No alt](/images/ehsd/By%20Disability%20Status.png)
+![No alt]({filename}/images/ehsd/By%20Disability%20Status.png)
 
 
 ## Tool Analysis

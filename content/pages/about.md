@@ -31,17 +31,17 @@ You're looking at the fifth version of this site.
 
 The fourth version was run on Drupal, and looked something like this:
 
-![Site v4](/images/oldsite/v4.png)
+![Site v4]({filename}/images/oldsite/v4.png)
 
 The third version was much the same with regards to content and technology, 
 but with the [Pleroma theme][5]. It looked something like this:
 
-![Site v3](/images/oldsite/v3.png)
+![Site v3]({filename}/images/oldsite/v3.png)
 
 Wandering further back in time, the [second version][6] was hand-coded in the 
 Fedora and Ubuntu environments utilizing vim. It looked something like this:
 
-![Site v2](/images/oldsite/v2.png)
+![Site v2]({filename}/images/oldsite/v2.png)
 
 You can [still kinda browse that one][6] even today.
 
@@ -50,7 +50,7 @@ environment utilizing Adobe Photoshop, Macromedia Dreamweaver CS, Internet
 Explorer and Mozilla Firefox. It was a dark time, but even that one [still 
 kind of works][8]. It looked something like this:
 
-![Site v1](/images/oldsite/v1.png)
+![Site v1]({filename}/images/oldsite/v1.png)
 
 *Yes, it was made by a five year old.*
 

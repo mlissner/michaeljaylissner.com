@@ -5,7 +5,7 @@ Category: Environment
 
 
 Last semester I took a class at the UC Berkeley School of Business (Haas) 
-entitled <i>Metrics of Sustainability</i>. It was an interesting class all 
+entitled *Metrics of Sustainability*. It was an interesting class all 
 in all, though frustrating at times because of the emphasis on making 
 sustainability something that businesses will ***want*** to do. Our 
 professor was a jocular fellow, though his history at large companies 

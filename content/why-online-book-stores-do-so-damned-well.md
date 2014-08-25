@@ -14,7 +14,7 @@ This year, as I shopped for books and readers, I decided to keep my receipts and
  - Receive them on my doorstep
  - Return the originals to the campus store
 
-I feel a bad about this process, but on the other hand, before now I didn't realize just <i>how</i> expensive the books are on campus. Take a look:
+I feel a bad about this process, but on the other hand, before now I didn't realize just *how* expensive the books are on campus. Take a look:
 <table>
 <tr>
 	<td></td>

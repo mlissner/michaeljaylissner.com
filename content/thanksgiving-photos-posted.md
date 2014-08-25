@@ -3,7 +3,7 @@ Date: 2007-11-29T23:45:18
 Tags: pictures, events
 Category: Pictures
 
-![No alt](/images/CIMG1483.resized.resized.JPG)
+![No alt]({filename}/images/CIMG1483.resized.resized.JPG)
 
 The pictures from Thanksgiving are posted in the photo area. If you can't 
 find them, it's probably because you need to login. 

@@ -8,12 +8,12 @@ I had the chance to see <a href="http://en.wikipedia.org/wiki/Richard_Stallman" 
 </p>
 <p>
 If that doesn't convince you of his awesomeness, allow me to roughly quote a part of his introduction:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moderator: &quot;...Richard Stallman has been awarded with four PhD's -- &quot;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stallman: &quot;--That's six now.&quot;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moderator: &quot;I guess somebody needs to update Wikipedia...&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moderator: "...Richard Stallman has been awarded with four PhD's -- "<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stallman: "--That's six now."<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Moderator: "I guess somebody needs to update Wikipedia..."
 </p>
 <p>
-The speech he chose was &quot;Copyright vs. Community in the Age of Computer Networks.&quot; It was a real real eye-opener for me. I assumed that the recording and publishing companies were essentially screwing the artists, but I had no idea just how bad it really was. Imagine, if you will, that your garage band suddenly became really popular, and that you got signed with a big recording company. They publish your album, and they distribute it across the USA, where it sells well. You'd expect that your art would probably be making you some good money, would you not? I know I would, but apparently that's not how it works. 
+The speech he chose was "Copyright vs. Community in the Age of Computer Networks." It was a real real eye-opener for me. I assumed that the recording and publishing companies were essentially screwing the artists, but I had no idea just how bad it really was. Imagine, if you will, that your garage band suddenly became really popular, and that you got signed with a big recording company. They publish your album, and they distribute it across the USA, where it sells well. You'd expect that your art would probably be making you some good money, would you not? I know I would, but apparently that's not how it works. 
 </p>
 <p>
 The way Stallman tells it, the first place they nail you is by charging you for the distribution. So, until your album has sold some critical quantity, you're still paying back the record company the loan they gave you to distribute your album (sounds vaguely like the mafia here, but it gets worse). The next place they nail you is by not giving you much of the album sales. I would think that you'd be given a good buck or two of each album sold, but apparently it's more like a quarter, or maybe 50 cents. Not much profit there.

@@ -10,7 +10,7 @@ every belief furthered the dream and the ideals of the American state. After
  and a year of Obama sounding increasing like an echo of Bush, 
  it is truly tragic that we are losing this thinker. 
 
-I [posted][1] this quote from Zinn's <i>Passionate Declarations</i> 
+I [posted][1] this quote from Zinn's *Passionate Declarations* 
 some time ago, but now more than ever it seems relevant:
 
 > What sorts of values and ideals are encouraged in the young people of the
@@ -33,7 +33,7 @@ heroes. And consider also how little attention is given to antiwar movements and
  locomotive that pulls the train of government in the direction of equality 
  and justice. Such histories create a passive and subordinate citizenry.
  
-If you haven't read <i>[Passionate Declarations][2]</i>, you should.
+If you haven't read *[Passionate Declarations][2]*, you should.
 
 [1]: {filename}/howard-zinn-the-use-and-abuse-of-history.md
 [2]: http://www.amazon.com/exec/obidos/ASIN/0060557672/simiansbooksonli

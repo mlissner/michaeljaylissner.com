@@ -19,7 +19,7 @@ so I decided to invest it in a mutual fund, half as an experiment,
 half cause the odds were indeed in my favor. My risk was doing well...I was
 up...and then, this happened with no explanation.
 
-![No alt](/images/chrtsrv.gif)
+![No alt]({filename}/images/chrtsrv.gif)
 
 Any ideas out there as to what happened? I still have six months before I 
 have to pay Visa back, but nevertheless, this is annoying.

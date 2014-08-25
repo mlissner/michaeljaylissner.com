@@ -9,7 +9,7 @@ given me. It's a rip off from [a hilarious short][1] by Don Hertzfeldt.
 
 I have missed this picture for so long.
 
-![Banana](/images/I%20am%20a%20banana.jpeg)
+![Banana]({filename}/images/I%20am%20a%20banana.jpeg)
 
 The rest of the murals at Pitzer, including a bronze sculpture by Peter 
 Harper can be [found here][2].

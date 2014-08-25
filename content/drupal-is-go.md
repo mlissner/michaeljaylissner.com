@@ -4,7 +4,7 @@ Tags: blog, me, drupal
 Category: Tech
 
 
-Well, I can't say I have had a serious blog before, so with this very sentence, I am forging new ground for myself, and through the strange magic of the Internet, for everybody else in the world (except China, who I will now block from this blog by writing the following word: &quot;democracy&quot;).
+Well, I can't say I have had a serious blog before, so with this very sentence, I am forging new ground for myself, and through the strange magic of the Internet, for everybody else in the world (except China, who I will now block from this blog by writing the following word: "democracy").
  
 There's a pressure here of course not to have any typos and to make this post significant and poignant, but if I know me - and I think I do - I shouldn't set high bars like that for myself. I should just enjoy the medium, allow mistakes early and often, and proceed with the reason I am here to write today, which, according to the title of this post is to discuss the software of this very blog.
 

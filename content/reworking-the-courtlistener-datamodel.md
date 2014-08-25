@@ -20,7 +20,7 @@ other. Turns out this is a sticky problem.
 
 The solution we've come up with is an architecture like the following:
 
-![New Schema](/images/new-schema-design-compact_0.png)
+![New Schema]({filename}/images/new-schema-design-compact_0.png)
 
 (we also have [a more detailed version][3] and [an editable version][4])
 

@@ -11,7 +11,7 @@ real estate, and will make Firefox a little easier to use at the same time.
 
 Once these are set up, Firefox will look like this:
 
-![No alt](/images/Firefox%20Screenshot.png)
+![No alt]({filename}/images/Firefox%20Screenshot.png)
 
 These changes do the following:
 
@@ -61,7 +61,7 @@ functionality, I recommend the [Cybersearch extension][7], which uses keywords
 in the URL bar to complete searches. For example, if I type "wiki windows," 
 it gives me the top ten wikipedia pages for the term windows:
 
-![No alt](/images/Firefox%20Cybersearch%20Example.png)
+![No alt]({filename}/images/Firefox%20Cybersearch%20Example.png)
 
 This also works for Google and Amazon, and just about any other site you 
 can think of.

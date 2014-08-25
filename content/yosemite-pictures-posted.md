@@ -3,7 +3,7 @@ Date: 2008-02-19T23:07:59
 Tags: pictures, camping
 Category: Pictures
 
-![No alt](/images/Yosemite%20Cover%20Pic.JPG)
+![No alt]({filename}/images/Yosemite%20Cover%20Pic.JPG)
 
 Just a quick note today to announce that pictures from last weekend are 
 posted in the photo area for those of you that have logins. 

@@ -5,4 +5,4 @@ Tags: deer, backpacking
 This deer licked us all night long while we were hiking on the PCT. What a 
 strange night that was.
 
-![Insane Deer](/images/crazed-deer.jpeg)
+![Insane Deer]({filename}/images/crazed-deer.jpeg)

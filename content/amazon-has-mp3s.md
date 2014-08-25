@@ -16,5 +16,5 @@ of files from the Internet, and never have I needed a special tool other than
 Firefox. Why now? 
 
 Amazon, if you're going to do something great like this, do it whole hog. 
-Don't make me install junkware. After all, I'm <i>choosing</i> to give you 
+Don't make me install junkware. After all, I'm *choosing* to give you 
 money, right? 

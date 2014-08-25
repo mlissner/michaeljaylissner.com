@@ -4,7 +4,7 @@ Tags: eco-tip
 Category: Environment
 
 
-![No alt](/images/longnowclock.jpg)
+![No alt]({filename}/images/longnowclock.jpg)
 
 Well, somehow two weeks have already gone past, and it's time for another 
 eco-tip. This week is going to be an easy one for me because on Sunday I saw
@@ -18,8 +18,8 @@ most environmental thinking these days.
 
 So much talk is given to global warming, that it seems like we're forgetting
  the whole point of the environmental movement. The point is 
- <i>**not**</i> that the world is getting warmer, 
- or even that the climate is changing. The point <i>**is**</i> 
+ ***not*** that the world is getting warmer, 
+ or even that the climate is changing. The point ***is*** 
  that if the climate changes very much, we'll probably all die. It's like 
  the joke about having a fear of heights: It's not that you're afraid of 
  being up high - it's that you're scared that if you fall, 

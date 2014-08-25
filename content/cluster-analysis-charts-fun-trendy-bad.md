@@ -12,4 +12,4 @@ For the record people, these are bad. They imply that there is some circular rel
 
 Please? 
 
-<i>EDIT: I should add - don't use line graphs for things that don't progress from A to B to C either. For those things, use bar graphs, or column graphs.</i>
+*EDIT: I should add - don't use line graphs for things that don't progress from A to B to C either. For those things, use bar graphs, or column graphs.*

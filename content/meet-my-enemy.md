@@ -14,7 +14,7 @@ So, not only is [Fiji water expensive][1], but it also COMES FROM FIJI!!!!
 Think about that for a moment. Fiji is an island in the middle of the 
 Pacific. Behold the planet Earth, and the island of Fiji:
 
-[![No alt](/images/FijiMap2.png)][2]
+[![No alt]({filename}/images/FijiMap2.png)][2]
 
 Somehow, the water must get from there to here (it's about 5,
 500 miles to the bay area). Luckily, the bottle is square so they can fit a

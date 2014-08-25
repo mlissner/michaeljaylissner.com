@@ -14,7 +14,7 @@ I set them up to record the temperature every five minutes to an accuracy of
 threw together a quick chart. The data are attached, if anybody is interested, 
 but the chart really tells the story better than the 2,400 data points do.
 
-[![iButton Temperatures](/images/Labeled%20Temperatures2.png)][1]
+[![iButton Temperatures]({filename}/images/Labeled%20Temperatures2.png)][1]
 
 [*Click for full-size view*][1]
 
