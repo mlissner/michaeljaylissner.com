@@ -9,7 +9,7 @@ I learn and use XSLT, so I took the opportunity to write an XSLT script
 that converts the XML data to HTML, Javascript and SVG. &lt;/p&gt;
 &lt;p&gt;The final product looks something like this (anonymized with Presidential 
 info for good measure):&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://mlissner.github.io/michaeljaylissner.com/archive/swimlanes/dummy.html"&gt;&lt;img alt="Diagram" src="/images/swimlane-screenshot.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://mlissner.github.io/michaeljaylissner.com/archive/swimlanes/dummy.html"&gt;&lt;img alt="Diagram" src="http://mlissner.github.io/michaeljaylissner.com/images/swimlane-screenshot.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;(click through for complete demo)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For the technically inclined: The program is an XSLT script, 
 which converts the XML into HTML and Javascript. The Javascript is then 

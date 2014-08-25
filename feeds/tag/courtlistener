@@ -13,7 +13,7 @@ that supports linkages between content. So, if we have the oral argument
 and the opinion from a single case, we have no way of pointing them at each
 other. Turns out this is a sticky problem. &lt;/p&gt;
 &lt;p&gt;The solution we've come up with is an architecture like the following:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="New Schema" src="/images/new-schema-design-compact_0.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="New Schema" src="http://mlissner.github.io/michaeljaylissner.com/images/new-schema-design-compact_0.png" /&gt;&lt;/p&gt;
 &lt;p&gt;(we also have &lt;a href="http://owncloud.freelawproject.org/public.php?service=files&amp;amp;t=76ef76ec69488fb72b4d96dba4809339"&gt;a more detailed version&lt;/a&gt; and &lt;a href="http://owncloud.freelawproject.org/public.php?service=files&amp;amp;t=62510f0282b06948e8c3d3b1e4946ec0"&gt;an editable version&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;And eventually, this will also have a Case table above the docket that 
 allows multiple dockets to be associated with a single case. For now though,

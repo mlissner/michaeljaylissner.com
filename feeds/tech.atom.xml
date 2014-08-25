@@ -13,7 +13,7 @@ that supports linkages between content. So, if we have the oral argument
 and the opinion from a single case, we have no way of pointing them at each
 other. Turns out this is a sticky problem. &lt;/p&gt;
 &lt;p&gt;The solution we've come up with is an architecture like the following:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="New Schema" src="/images/new-schema-design-compact_0.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="New Schema" src="http://mlissner.github.io/michaeljaylissner.com/images/new-schema-design-compact_0.png" /&gt;&lt;/p&gt;
 &lt;p&gt;(we also have &lt;a href="http://owncloud.freelawproject.org/public.php?service=files&amp;amp;t=76ef76ec69488fb72b4d96dba4809339"&gt;a more detailed version&lt;/a&gt; and &lt;a href="http://owncloud.freelawproject.org/public.php?service=files&amp;amp;t=62510f0282b06948e8c3d3b1e4946ec0"&gt;an editable version&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;And eventually, this will also have a Case table above the docket that 
 allows multiple dockets to be associated with a single case. For now though,
@@ -459,7 +459,7 @@ I learn and use XSLT, so I took the opportunity to write an XSLT script
 that converts the XML data to HTML, Javascript and SVG. &lt;/p&gt;
 &lt;p&gt;The final product looks something like this (anonymized with Presidential 
 info for good measure):&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://mlissner.github.io/michaeljaylissner.com/archive/swimlanes/dummy.html"&gt;&lt;img alt="Diagram" src="/images/swimlane-screenshot.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://mlissner.github.io/michaeljaylissner.com/archive/swimlanes/dummy.html"&gt;&lt;img alt="Diagram" src="http://mlissner.github.io/michaeljaylissner.com/images/swimlane-screenshot.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;(click through for complete demo)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For the technically inclined: The program is an XSLT script, 
 which converts the XML into HTML and Javascript. The Javascript is then 
@@ -949,7 +949,7 @@ press the delete button on a photo from their site. On &lt;strong&gt;November
 a black box with white text to Facebook, Flickr, Picasa, MySpace, Photobucket, 
 Shutterfly, Twitpic and WalMart. A few months later, 
 I also added drop.io and Orkut: &lt;/p&gt;
-&lt;p&gt;&lt;img alt="I will attempt to delete this photo" src="/images/photo-deletion-tests/PostedAndDeleted.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="I will attempt to delete this photo" src="http://mlissner.github.io/michaeljaylissner.com/images/photo-deletion-tests/PostedAndDeleted.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;When you look below, if you can see the black box for a site, 
 that means that it was not truly deleted and is still live. You can verify 
 this by clicking on the image. This is checked each time this page is 
@@ -966,13 +966,13 @@ I present, the ongoing results of the test:&lt;/p&gt;
 &lt;h2 id="flickr"&gt;Flickr&lt;/h2&gt;
 &lt;p&gt;Flickr began showing the following message approximately an hour after the 
 image was deleted.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Flickr Response" src="/images/photo-deletion-tests/flickr-response.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Flickr Response" src="http://mlissner.github.io/michaeljaylissner.com/images/photo-deletion-tests/flickr-response.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="picasa"&gt;Picasa&lt;/h2&gt;
 &lt;p&gt;Picasa properly deleted the photo from their server as of at least November
 15, 2009.&lt;/p&gt;
 &lt;h2 id="myspace"&gt;MySpace&lt;/h2&gt;
 &lt;p&gt;At an unknown time, MySpace began showing this photo instead:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="MySpace Response" src="/images/photo-deletion-tests/myspace.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="MySpace Response" src="http://mlissner.github.io/michaeljaylissner.com/images/photo-deletion-tests/myspace.png"/&gt;&lt;/p&gt;
 &lt;h2 id="photobucket"&gt;Photobucket&lt;/h2&gt;
 &lt;p&gt;Photobucket properly deleted the photo from their server as of at least 
 November 14, 2009.&lt;/p&gt;
@@ -1277,7 +1277,7 @@ The idea here is to take the best concepts from Chrome and Safari,
 and apply them to Firefox. These changes will maximize your use of screen 
 real estate, and will make Firefox a little easier to use at the same time.&lt;/p&gt;
 &lt;p&gt;Once these are set up, Firefox will look like this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="/images/Firefox%20Screenshot.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/Firefox Screenshot.png" /&gt;&lt;/p&gt;
 &lt;p&gt;These changes do the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Reduce the status bar to 1px at the bottom of the screen&lt;/li&gt;
@@ -1325,7 +1325,7 @@ thus allowing more space for the URL bar. To replace the search box's
 functionality, I recommend the &lt;a href="http://cybernetnews.com/cybersearch/"&gt;Cybersearch extension&lt;/a&gt;, which uses keywords 
 in the URL bar to complete searches. For example, if I type "wiki windows," 
 it gives me the top ten wikipedia pages for the term windows:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="/images/Firefox%20Cybersearch%20Example.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/Firefox Cybersearch Example.png" /&gt;&lt;/p&gt;
 &lt;p&gt;This also works for Google and Amazon, and just about any other site you 
 can think of.&lt;/p&gt;
 &lt;p&gt;Once all of this is completed, you should have created about 70 vertical 
@@ -1380,9 +1380,9 @@ Tab, c, enter. This copied the tinyurl to the clipboard.
 Twitter message, CTRL + V, tab, t. This posted my twitter message.&lt;/blockquote&gt;&lt;/p&gt;
 &lt;p&gt;Clearly, there is a bit of a learning curve, and some configuration that you have to set up so it knows your usernames, but once it is set, it makes such complicated posts much easier to complete. And I should mention, this is only the beginning of what it can do.&lt;/p&gt;</summary><category term="ubuntu"></category><category term="gnome-do"></category><category term="productivity"></category></entry><entry><title>Papa's Got a Brand New Look</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2009/04/26/papas-got-a-brand-new-look/" rel="alternate"></link><updated>2009-04-26T11:31:19+02:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2009-04-26:michaeljaylissner.com/posts/2009/04/26/papas-got-a-brand-new-look/</id><summary type="html">&lt;p&gt;OK, here's the scoop. I've given the site a major revamp and a new look. &lt;/p&gt;
 &lt;p&gt;Here's the old one:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Old site" src="/images/oldsite/v3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Old site" src="http://mlissner.github.io/michaeljaylissner.com/images/oldsite/v3.png" /&gt;&lt;/p&gt;
 &lt;p&gt;And the new:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Old site" src="/images/oldsite/v4.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Old site" src="http://mlissner.github.io/michaeljaylissner.com/images/oldsite/v4.png" /&gt;&lt;/p&gt;
 &lt;p&gt;There were a number of reasons I wanted to make a change, 
 and I think the new design accomplishes most of them. First, 
 I wanted to change to a static width layout. It was a long time coming, 
@@ -1896,7 +1896,7 @@ and type in &lt;code&gt;regedit&lt;/code&gt;. In the editor that opens up, navig
 in the picture below, and create a new key named Scancode Map of the type 
 &lt;code&gt;REG_BINARY&lt;/code&gt;. Give it the value shown in the picture, restart, 
 and you're set. If things get wacky, delete the key and try again.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="/images/Windows%20Registry%20Remap%20Screenshot.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/Windows Registry Remap Screenshot.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="in-linux"&gt;In Linux&lt;/h2&gt;
 &lt;p&gt;I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
 by opening a terminal, and running the xev program. Once that is running, 

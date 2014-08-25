@@ -136,7 +136,7 @@ and type in &lt;code&gt;regedit&lt;/code&gt;. In the editor that opens up, navig
 in the picture below, and create a new key named Scancode Map of the type 
 &lt;code&gt;REG_BINARY&lt;/code&gt;. Give it the value shown in the picture, restart, 
 and you're set. If things get wacky, delete the key and try again.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="/images/Windows%20Registry%20Remap%20Screenshot.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/Windows Registry Remap Screenshot.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="in-linux"&gt;In Linux&lt;/h2&gt;
 &lt;p&gt;I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
 by opening a terminal, and running the xev program. Once that is running, 

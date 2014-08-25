@@ -16,9 +16,9 @@
 &lt;p&gt;In that light, today I've transferred this website over to the people at &lt;a href="http://slicehost.com"&gt;slicehost&lt;/a&gt;. This will give me (almost) all the freedom of running the server myself, and should relieve some of the headaches I've had for the past couple of years when it came to power outages, comcast and AT&amp;amp;T outages, and the like.&lt;/p&gt;
 &lt;p&gt;Moving the site over has been a bit complicated, so if you see anything weird, let me know via the &lt;a href="/contact"&gt;contact&lt;/a&gt; link, which should work as of now. &lt;/p&gt;</summary><category term="slicehost"></category><category term="drupal"></category></entry><entry><title>Papa's Got a Brand New Look</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2009/04/26/papas-got-a-brand-new-look/" rel="alternate"></link><updated>2009-04-26T11:31:19+02:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2009-04-26:michaeljaylissner.com/posts/2009/04/26/papas-got-a-brand-new-look/</id><summary type="html">&lt;p&gt;OK, here's the scoop. I've given the site a major revamp and a new look. &lt;/p&gt;
 &lt;p&gt;Here's the old one:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Old site" src="/images/oldsite/v3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Old site" src="http://mlissner.github.io/michaeljaylissner.com/images/oldsite/v3.png" /&gt;&lt;/p&gt;
 &lt;p&gt;And the new:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Old site" src="/images/oldsite/v4.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Old site" src="http://mlissner.github.io/michaeljaylissner.com/images/oldsite/v4.png" /&gt;&lt;/p&gt;
 &lt;p&gt;There were a number of reasons I wanted to make a change, 
 and I think the new design accomplishes most of them. First, 
 I wanted to change to a static width layout. It was a long time coming, 

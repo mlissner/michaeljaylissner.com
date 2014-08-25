@@ -42,7 +42,7 @@ press the delete button on a photo from their site. On &lt;strong&gt;November
 a black box with white text to Facebook, Flickr, Picasa, MySpace, Photobucket, 
 Shutterfly, Twitpic and WalMart. A few months later, 
 I also added drop.io and Orkut: &lt;/p&gt;
-&lt;p&gt;&lt;img alt="I will attempt to delete this photo" src="/images/photo-deletion-tests/PostedAndDeleted.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="I will attempt to delete this photo" src="http://mlissner.github.io/michaeljaylissner.com/images/photo-deletion-tests/PostedAndDeleted.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;When you look below, if you can see the black box for a site, 
 that means that it was not truly deleted and is still live. You can verify 
 this by clicking on the image. This is checked each time this page is 
@@ -59,13 +59,13 @@ I present, the ongoing results of the test:&lt;/p&gt;
 &lt;h2 id="flickr"&gt;Flickr&lt;/h2&gt;
 &lt;p&gt;Flickr began showing the following message approximately an hour after the 
 image was deleted.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Flickr Response" src="/images/photo-deletion-tests/flickr-response.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Flickr Response" src="http://mlissner.github.io/michaeljaylissner.com/images/photo-deletion-tests/flickr-response.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="picasa"&gt;Picasa&lt;/h2&gt;
 &lt;p&gt;Picasa properly deleted the photo from their server as of at least November
 15, 2009.&lt;/p&gt;
 &lt;h2 id="myspace"&gt;MySpace&lt;/h2&gt;
 &lt;p&gt;At an unknown time, MySpace began showing this photo instead:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="MySpace Response" src="/images/photo-deletion-tests/myspace.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="MySpace Response" src="http://mlissner.github.io/michaeljaylissner.com/images/photo-deletion-tests/myspace.png"/&gt;&lt;/p&gt;
 &lt;h2 id="photobucket"&gt;Photobucket&lt;/h2&gt;
 &lt;p&gt;Photobucket properly deleted the photo from their server as of at least 
 November 14, 2009.&lt;/p&gt;
@@ -94,7 +94,7 @@ is listed on the left under the recent music. I did a little playing around in
 the heart of Drupal, and modified this block so that it has text links for 
 RSS and for an email service I just discovered from Google.&lt;/p&gt;</summary><category term="google"></category><category term="blog"></category><category term="drupal"></category><category term="rss"></category></entry><entry><title>Search Concept</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2008/01/15/seach-concept/" rel="alternate"></link><updated>2008-01-15T18:00:04+01:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2008-01-15:michaeljaylissner.com/posts/2008/01/15/seach-concept/</id><summary type="html">&lt;p&gt;There's this ongoing problem I've been having in that search engines do not have the ability to search the insides of password protected sites. It's a little frustrating from time to time because so many sites have gads of information that search engines just can't get to, which means that you have to rely on the site's search engine, which invariably does not work very well. &lt;/p&gt;
 &lt;p&gt;So, here's the concept. The search engine creates an opt-in program wherein websites (like banks for example) can give the engine a generic login and password, and then the search engine can get in, crawl the site, make an index, and then get out. Later, when you search for content, you can search for that information, if you desire, but to see it, you'll need to log in.&lt;/p&gt;
-&lt;p&gt;Similarly, if you are a person who uses the secure site, you can give the search engine the ability to log in as you, and then crawl the site for your information. Thus, if you gave the search engine the login to your bank, you could later search for all your transactions at Cha Cha's restaurant....or whatever. Actually, this might be a privacy concern...but it's a thought.&lt;/p&gt;</summary><category term="google"></category><category term="infotech"></category><category term="concept"></category></entry><entry><title>The Prettiest Ratio and Google</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2007/11/30/the-prettiest-ratio-and-google/" rel="alternate"></link><updated>2007-11-30T16:43:36+01:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2007-11-30:michaeljaylissner.com/posts/2007/11/30/the-prettiest-ratio-and-google/</id><summary type="html">&lt;p&gt;&lt;img alt="No alt" src="/images/ParthenonGoldenRatio.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Similarly, if you are a person who uses the secure site, you can give the search engine the ability to log in as you, and then crawl the site for your information. Thus, if you gave the search engine the login to your bank, you could later search for all your transactions at Cha Cha's restaurant....or whatever. Actually, this might be a privacy concern...but it's a thought.&lt;/p&gt;</summary><category term="google"></category><category term="infotech"></category><category term="concept"></category></entry><entry><title>The Prettiest Ratio and Google</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2007/11/30/the-prettiest-ratio-and-google/" rel="alternate"></link><updated>2007-11-30T16:43:36+01:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2007-11-30:michaeljaylissner.com/posts/2007/11/30/the-prettiest-ratio-and-google/</id><summary type="html">&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/ParthenonGoldenRatio.png" /&gt;&lt;/p&gt;
 &lt;p&gt;In case you haven't heard about this before, the &lt;a href="http://en.wikipedia.org/wiki/Golden_ratio#Relationship_to_Fibonacci_sequence"&gt;Golden Ratio&lt;/a&gt; is the 
 concept of how to define the most aesthetically pleasing ratio between two 
 lengths, and can be found pretty much everywhere dating back all the way to
@@ -108,7 +108,7 @@ smaller of two distances should be related in the same way to the longer of
 two distances as the longer of two distances is related to the sum of the 
 shorter plus the longer distance.&lt;/p&gt;
 &lt;p&gt;If that's too confusing, perhaps this will help:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="/images/Golden%20Ratio%20Formula.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/Golden Ratio Formula.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Still confused? How about this: The Golden Ratio is 1.61803399.&lt;/p&gt;
 &lt;p&gt;I went online a few days ago to figure out how to dimension an applet that 
 I was making, and discovered yet another cool Google tool. Googling for 
