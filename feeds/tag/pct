@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://mlissner.github.io/michaeljaylissner.com/" rel="alternate"></link><link href="http://mlissner.github.io/michaeljaylissner.com/feeds/tag/pct" rel="self"></link><id>http://mlissner.github.io/michaeljaylissner.com/</id><updated>2008-02-26T19:07:14+01:00</updated><entry><title>Treasures of Old Websites Part II</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites-part-ii/" rel="alternate"></link><updated>2008-02-26T19:07:14+01:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2008-02-26:michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites-part-ii/</id><summary type="html">&lt;p&gt;I also found the attached news articles I had posted on my website. Pretty 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="//mlissner.github.io/michaeljaylissner.com/" rel="alternate"></link><link href="//mlissner.github.io/michaeljaylissner.com/feeds/tag/pct" rel="self"></link><id>//mlissner.github.io/michaeljaylissner.com/</id><updated>2008-02-26T19:07:14-08:00</updated><entry><title>Treasures of Old Websites Part II</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites-part-ii/" rel="alternate"></link><updated>2008-02-26T19:07:14-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2008-02-26:michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites-part-ii/</id><summary type="html">&lt;p&gt;I also found the attached news articles I had posted on my website. Pretty 
 funny/embarrassing stuff.&lt;/p&gt;
 &lt;h3 id="enclosures"&gt;Enclosures:&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="http://mlissner.github.io/michaeljaylissner.com/pdfs/pct-news-articles/claremont-courier.pdf"&gt;Claremont Courier: Pitzer Graduate Ventures 2,650 Miles on Foot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://mlissner.github.io/michaeljaylissner.com/pdfs/pct-news-articles/inland-valley-bulletin.pdf"&gt;Oaklnd Tribune: Hike to Cure AIDS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://mlissner.github.io/michaeljaylissner.com/pdfs/pct-news-articles/oakland-tribune.pdf"&gt;Inland Valley Daily Bulletin: Pitzer Grad to Attempt Mexico-to-Canada 
+&lt;li&gt;&lt;a href="//mlissner.github.io/michaeljaylissner.com/pdfs/pct-news-articles/claremont-courier.pdf"&gt;Claremont Courier: Pitzer Graduate Ventures 2,650 Miles on Foot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="//mlissner.github.io/michaeljaylissner.com/pdfs/pct-news-articles/inland-valley-bulletin.pdf"&gt;Oaklnd Tribune: Hike to Cure AIDS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="//mlissner.github.io/michaeljaylissner.com/pdfs/pct-news-articles/oakland-tribune.pdf"&gt;Inland Valley Daily Bulletin: Pitzer Grad to Attempt Mexico-to-Canada 
 Hike&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://mlissner.github.io/michaeljaylissner.com/pdfs/pct-news-articles/pitzer-college-press-release.pdf"&gt;Pitzer College Press Release&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="pct"></category><category term="hiking"></category><category term="me"></category></entry><entry><title>Treasures of Old Websites</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites/" rel="alternate"></link><updated>2008-02-26T18:58:04+01:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2008-02-26:michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites/</id><summary type="html">
+&lt;li&gt;&lt;a href="//mlissner.github.io/michaeljaylissner.com/pdfs/pct-news-articles/pitzer-college-press-release.pdf"&gt;Pitzer College Press Release&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="pct"></category><category term="hiking"></category><category term="me"></category></entry><entry><title>Treasures of Old Websites</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites/" rel="alternate"></link><updated>2008-02-26T18:58:04-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2008-02-26:michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites/</id><summary type="html">
 &lt;h2 id="background"&gt;Background&lt;/h2&gt;
 &lt;p&gt;I've been working the past couple of days on getting my other site, 
 charityhikers.org moved over to my home server and recreated on Drupal. It's 
@@ -50,7 +50,7 @@ many permits all taped to my wall.&lt;/p&gt;
 &lt;p&gt;Last weekend I took some time to actually study my first aid stuff. I 
 discovered that I had indeed forgotten the many nuances of it as I had 
 imagined I would. I did think of a brilliant way to remember it all though: I 
-finally made my own &lt;a href="http://mlissner.github.io/michaeljaylissner.com/archive/SOAPA_Note.xls"&gt;SOAP note&lt;/a&gt;. These are the things you use when an 
+finally made my own &lt;a href="//mlissner.github.io/michaeljaylissner.com/archive/SOAPA_Note.xls"&gt;SOAP note&lt;/a&gt;. These are the things you use when an 
 accident occurs to make sure you take all the right vital signs and ask all the 
 right questions. By making my own, I essentially wrote myself a guide to first 
 aid.&lt;/p&gt;
@@ -302,14 +302,14 @@ challenge, the isolation.&lt;/p&gt;
 &lt;p&gt;I guess I have cold feet a little bit right now, but I'm quite excited. I 
 know it will be the trip that defines the next chapters in my life, and I know 
 that I will leave the trip a changed person.&lt;/p&gt;
-&lt;p&gt;The next post will be from the trail.&lt;/p&gt;</summary><category term="pct"></category><category term="hiking"></category><category term="me"></category></entry><entry><title>PCT Data Project - DONE</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/" rel="alternate"></link><updated>2007-12-12T21:29:57+01:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2007-12-12:michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/</id><summary type="html">&lt;p&gt;I'm happy to announce that the PCT data project is complete! &lt;/p&gt;
+&lt;p&gt;The next post will be from the trail.&lt;/p&gt;</summary><category term="pct"></category><category term="hiking"></category><category term="me"></category></entry><entry><title>PCT Data Project - DONE</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/" rel="alternate"></link><updated>2007-12-12T21:29:57-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2007-12-12:michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/</id><summary type="html">&lt;p&gt;I'm happy to announce that the PCT data project is complete! &lt;/p&gt;
 &lt;p&gt;Over the past several weeks/months, I have been slaving away over my 
 computer writing this program. When used, it will generate a dynamic 
 graphing area that will load up temperature data for one to six PCT hikers. &lt;/p&gt;
 &lt;p&gt;All those that are interested in the most complicated programming 
 assignment I have ever worked on &lt;a href="{filename}/pct-temperatures/"&gt;are welcome to check it out&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I am officially a free man once again! Thanks to all who made this possible
-with their encouragement and patience! &lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>The Great Temperature Data Project</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/" rel="alternate"></link><updated>2007-11-01T20:40:55+01:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2007-11-01:michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/</id><summary type="html">&lt;p&gt;Back in '05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
+with their encouragement and patience! &lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>The Great Temperature Data Project</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/" rel="alternate"></link><updated>2007-11-01T20:40:55-07:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2007-11-01:michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/</id><summary type="html">&lt;p&gt;Back in '05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
 carried a little device called an &lt;a href="http://www.iButton.com"&gt;iButton&lt;/a&gt;. 
 This little device contains essentially three things: a clock, a bit of memory 
 and a thermometer. It's waterproof, accurate to 0.1 degree Celsius, and is about 
@@ -334,26 +334,26 @@ range that they choose (e.g. 5pm to 10pm for September 20th to 23rd).  &lt;/p&gt
 &lt;p&gt;Once this is done, I will attempt to post it here, but here's the question to 
 you dear reader, do you have any suggestions as to features that you would be 
 interested in seeing in an applet of this sort? Thoughts?&lt;/p&gt;
-&lt;p&gt;I'm quite excited about getting this info out there. Finally.&lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>My Destiny To Have A Beard</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2007/10/03/destiny-to-have-a-beard/" rel="alternate"></link><updated>2007-10-03T23:17:34+02:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2007-10-03:michaeljaylissner.com/posts/2007/10/03/destiny-to-have-a-beard/</id><summary type="html">&lt;p&gt;I've been doing some thinking, and I think that my destiny* wants me to have
+&lt;p&gt;I'm quite excited about getting this info out there. Finally.&lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>My Destiny To Have A Beard</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2007/10/03/destiny-to-have-a-beard/" rel="alternate"></link><updated>2007-10-03T23:17:34-07:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2007-10-03:michaeljaylissner.com/posts/2007/10/03/destiny-to-have-a-beard/</id><summary type="html">&lt;p&gt;I've been doing some thinking, and I think that my destiny* wants me to have
 a beard. Let's take a quick walk through my past, shall we?&lt;/p&gt;
 &lt;p&gt;First, I was into woodworking. I described it as, "My first great 
 passion." Observe this picture. It's the first hit on google images for
 the word "woodworker".&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/bearded-destiny/wood.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="//mlissner.github.io/michaeljaylissner.com/images/bearded-destiny/wood.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;Next, after sort of putting woodworking aside for a while, 
 I got really into hiking; thru hiking to be precise. This picture is the 
 third or fourth hit for "thru hiker" on google images, 
 but I hasten to add that it is the first hit that contains a picture of a 
 person.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/bearded-destiny/thru.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="//mlissner.github.io/michaeljaylissner.com/images/bearded-destiny/thru.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;Finally, as you may have noticed, I'm pretty into Linux these days. It's 
 could be a phase as well (we'll see), but observe this image, 
 also pulled from google images. Admittedly it's not hit number one, 
 but I don't count pictures of college kids or penguins out of principle. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/bearded-destiny/linux.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="//mlissner.github.io/michaeljaylissner.com/images/bearded-destiny/linux.png" /&gt;&lt;/p&gt;
 &lt;p&gt;So. It seems I should have a beard. There is a problem with this plan 
 though, and to illustrate that problem, I have this picture of me, 
 when I tried it for myself. Damn.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/bearded-destiny/me.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="//mlissner.github.io/michaeljaylissner.com/images/bearded-destiny/me.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;What will come after Linux? Will it be Lumberjack or hippie...time will tell. &lt;/p&gt;
 &lt;p&gt;*Destiny is a load of bunk and we all know it deep down!&lt;/p&gt;</summary><category term="pct"></category><category term="me"></category></entry></feed>

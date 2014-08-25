@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://mlissner.github.io/michaeljaylissner.com/" rel="alternate"></link><link href="http://mlissner.github.io/michaeljaylissner.com/feeds/tag/usability" rel="self"></link><id>http://mlissner.github.io/michaeljaylissner.com/</id><updated>2009-08-12T11:34:22+02:00</updated><entry><title>Firefox Modifications for Maximal Screen Real Estate and Usability</title><link href="http://mlissner.github.io/michaeljaylissner.com/posts/2009/08/12/firefox-modifications-for-real-estate-and-usability/" rel="alternate"></link><updated>2009-08-12T11:34:22+02:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2009-08-12:michaeljaylissner.com/posts/2009/08/12/firefox-modifications-for-real-estate-and-usability/</id><summary type="html">&lt;p&gt;I've been playing around lately with concepts to make Firefox more useful on
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="//mlissner.github.io/michaeljaylissner.com/" rel="alternate"></link><link href="//mlissner.github.io/michaeljaylissner.com/feeds/tag/usability" rel="self"></link><id>//mlissner.github.io/michaeljaylissner.com/</id><updated>2009-08-12T11:34:22-07:00</updated><entry><title>Firefox Modifications for Maximal Screen Real Estate and Usability</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2009/08/12/firefox-modifications-for-real-estate-and-usability/" rel="alternate"></link><updated>2009-08-12T11:34:22-07:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2009-08-12:michaeljaylissner.com/posts/2009/08/12/firefox-modifications-for-real-estate-and-usability/</id><summary type="html">&lt;p&gt;I've been playing around lately with concepts to make Firefox more useful on
 my laptop, and I've come up with a few solutions I thought I would share. 
 The idea here is to take the best concepts from Chrome and Safari, 
 and apply them to Firefox. These changes will maximize your use of screen 
 real estate, and will make Firefox a little easier to use at the same time.&lt;/p&gt;
 &lt;p&gt;Once these are set up, Firefox will look like this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/Firefox Screenshot.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="//mlissner.github.io/michaeljaylissner.com/images/Firefox Screenshot.png" /&gt;&lt;/p&gt;
 &lt;p&gt;These changes do the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Reduce the status bar to 1px at the bottom of the screen&lt;/li&gt;
@@ -53,7 +53,7 @@ thus allowing more space for the URL bar. To replace the search box's
 functionality, I recommend the &lt;a href="http://cybernetnews.com/cybersearch/"&gt;Cybersearch extension&lt;/a&gt;, which uses keywords 
 in the URL bar to complete searches. For example, if I type "wiki windows," 
 it gives me the top ten wikipedia pages for the term windows:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="http://mlissner.github.io/michaeljaylissner.com/images/Firefox Cybersearch Example.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="//mlissner.github.io/michaeljaylissner.com/images/Firefox Cybersearch Example.png" /&gt;&lt;/p&gt;
 &lt;p&gt;This also works for Google and Amazon, and just about any other site you 
 can think of.&lt;/p&gt;
 &lt;p&gt;Once all of this is completed, you should have created about 70 vertical 
