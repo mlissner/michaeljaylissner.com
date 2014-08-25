@@ -2,30 +2,41 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Michael Lissner" />
         <meta name="copyright" content="Michael Lissner" />
 
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
 <meta name="keywords" content="eco-tip, computer, Environment, " />
-        <title>Eco-tip 4 - Hibernate vs. Suspend - Michael Jay Lissner
+
+<meta property="og:title" content="Eco-tip 4 - Hibernate vs. Suspend "/>
+<meta property="og:url" content="//mlissner.github.io/michaeljaylissner.com/posts/2007/12/07/eco-tip-4-hibernate-vs-suspend/" />
+<meta property="og:description" content="For some reason, this bit of knowledge just hasn&#39;t gotten out there to the masses. I guess it&#39;s a bit nerdy, but here goes. When computers are not in use, they can do two very different things. They can either suspend, or they can hibernate (or you can ..." />
+<meta property="og:site_name" content="Michael Jay Lissner" />
+<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:published_time" content="2007-12-07T18:22:49" />
+<meta name="twitter:title" content="Eco-tip 4 - Hibernate vs. Suspend ">
+<meta name="twitter:description" content="For some reason, this bit of knowledge just hasn&#39;t gotten out there to the masses. I guess it&#39;s a bit nerdy, but here goes. When computers are not in use, they can do two very different things. They can either suspend, or they can hibernate (or you can ...">
+
+        <title>Eco-tip 4 - Hibernate vs. Suspend  · Michael Jay Lissner
 </title>
-        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/solarizedlight.css" media="screen">
-        <link rel="shortcut icon" href="//mlissner.github.io/michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
-        <link rel="icon" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/custom.css" media="screen">
+        <link href="//mlissner.github.io/michaeljaylissner.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Michael Jay Lissner - Full Atom Feed" />
     </head>
     <body>
         <div id="content-sans-footer">
         <div class="navbar navbar-static-top">
             <div class="navbar-inner">
-                <div class="container">
+                <div class="container-fluid">
+                    <div class="span1"></div>
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -52,7 +63,7 @@
                 <div class="span10">
 <article>
 <div class="row-fluid">
-    <header class="page_header span10 offset2">
+    <header class="page-header span10 offset2">
     <h1><a href="//mlissner.github.io/michaeljaylissner.com/posts/2007/12/07/eco-tip-4-hibernate-vs-suspend/"> Eco-tip 4 - Hibernate vs. Suspend  </a></h1>
     </header>
 </div>
@@ -60,35 +71,26 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
+            
             <p>For some reason, this bit of knowledge just hasn't gotten out there to the masses. I guess it's a bit nerdy, but here goes. When computers are not in use, they can do two very different things. They can either suspend, or they can hibernate (or you can turn them off of course). When they suspend, they go into a power saving mode that stores the state of your computer in RAM. When they are hibernating, the state of your computer is stored on the hard drive. </p>
 <p>This is an important distinction because RAM requires energy to store information (making it volatile memory), and your hard drive does not (making it non-volatile memory). Hence, any time your computer is in suspend mode, it is incurring a negative environmental impact, and any time it is hibernating, it is incurring no more impact than a lump of silicon.</p>
 <p>So. I won't get into how to deal with these in GNU+Linux, (because I can't get my laptop to do either), but <a href="http://www.microsoft.com/windowsxp/using/mobility/getstarted/hibernate.mspx">this article</a> has some good information on how to do it in XP. If you are a Mac owner, this decision has been made for you. Your computer will suspend and hibernate at the same time, and there is no easy way I know of to hibernate only. (They call this SafeSleep, and the idea is that if the RAM hasn't been reset by a loss of power, it will boot from RAM. Otherwise, it will boot from the hard drive.) </p>
 <p>I should also mention that hibernation is a great alternative to leaving your computer on when you go home at the end of the day. It saves the state exactly how you left the computer, and saves the environment by not using energy through the night.  </p>
-            <aside>
-            <nav>
-            <ul class="articles_timeline">
- 
-                <li class="previous_article">« <a href="//mlissner.github.io/michaeljaylissner.com/posts/2007/11/30/the-prettiest-ratio-and-google/" title="Previous: The Prettiest Ratio and Google">The Prettiest Ratio and Google</a></li>
- 
-                <li class="next_article"><a href="//mlissner.github.io/michaeljaylissner.com/posts/2007/12/10/pitzer-college-murals/" title="Next: Pitzer College Murals">Pitzer College Murals</a> »</li>
-            </ul>
-            </nav>
-            </aside>
-<section>
-<hr/>
+            
+            <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">
-            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2" 
-                href="//mlissner.github.io/michaeljaylissner.com/posts/2007/12/07/eco-tip-4-hibernate-vs-suspend//#disqus_thread">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="//mlissner.github.io/michaeljaylissner.com/posts/2007/12/07/eco-tip-4-hibernate-vs-suspend/#disqus_thread">
                 Comments
             </a>
         </div>
         <div id="disqus_thread" class="accordion-body collapse">
             <div class="accordion-inner">
                 <div class="comments">
-<div id="disqus_thread"></div>
+                    <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'michaeljaylissner';
         var disqus_identifier = '//mlissner.github.io/michaeljaylissner.com/posts/2007/12/07/eco-tip-4-hibernate-vs-suspend/';
@@ -101,38 +103,41 @@
      })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
             </div>
         </div>
     </div>
 </div>
 </section>
+
+            <hr/>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
- 
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2007-12-07T18:22:49">Dec 7, 2007</time>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#Environment-ref">Environment</a> 
+            <a class="category-link" href="//mlissner.github.io/michaeljaylissner.com/categories.html#environment-ref">Environment</a>
             <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article"> 
-                <li><a href="/tags.html#computer-ref">computer
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#computer-ref">computer
                     <span>4</span>
 </a></li>
-                <li><a href="/tags.html#eco-tip-ref">eco-tip
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#eco-tip-ref">eco-tip
                     <span>6</span>
 </a></li>
             </ul>
-
         </div>
         </section>
-    </div>
-    </article>
+</div>
+</article>
                 </div>
                 <div class="span1"></div>
             </div>
         </div>
+        <div id="push"></div>
     </div>
 <footer>
 <div id="footer">
@@ -142,7 +147,7 @@
     </ul>
 </div>
 </footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
         <script>
             function validateForm(query)
             {
@@ -150,15 +155,46 @@
             }
         </script>
 
-<script type="text/javascript">
-    var disqus_shortname = 'michaeljaylissner';
+            <script type="text/javascript">
+var disqus_shortname = 'michaeljaylissner';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
 
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
+
     </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
 </html>

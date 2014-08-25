@@ -2,30 +2,41 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Michael Lissner" />
         <meta name="copyright" content="Michael Lissner" />
 
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
 <meta name="keywords" content="x-robots-tag, search, robots, privacy, Tech, " />
-        <title>Support for x-robots-tag and robots HTML meta tag - Michael Jay Lissner
+
+<meta property="og:title" content="Support for x-robots-tag and robots HTML meta tag "/>
+<meta property="og:url" content="//mlissner.github.io/michaeljaylissner.com/posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/" />
+<meta property="og:description" content="As part of our research for our post on how we block search engines, we looked into which search engines support which privacy standards. This information doesn&#39;t seem to exist anywhere else on the Internet, so below are our findings, starting with the big guys, and moving towards more ..." />
+<meta property="og:site_name" content="Michael Jay Lissner" />
+<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:published_time" content="2012-01-24T23:20:20" />
+<meta name="twitter:title" content="Support for x-robots-tag and robots HTML meta tag ">
+<meta name="twitter:description" content="As part of our research for our post on how we block search engines, we looked into which search engines support which privacy standards. This information doesn&#39;t seem to exist anywhere else on the Internet, so below are our findings, starting with the big guys, and moving towards more ...">
+
+        <title>Support for x-robots-tag and robots HTML meta tag  · Michael Jay Lissner
 </title>
-        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/solarizedlight.css" media="screen">
-        <link rel="shortcut icon" href="//mlissner.github.io/michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
-        <link rel="icon" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/custom.css" media="screen">
+        <link href="//mlissner.github.io/michaeljaylissner.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Michael Jay Lissner - Full Atom Feed" />
     </head>
     <body>
         <div id="content-sans-footer">
         <div class="navbar navbar-static-top">
             <div class="navbar-inner">
-                <div class="container">
+                <div class="container-fluid">
+                    <div class="span1"></div>
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -52,7 +63,7 @@
                 <div class="span10">
 <article>
 <div class="row-fluid">
-    <header class="page_header span10 offset2">
+    <header class="page-header span10 offset2">
     <h1><a href="//mlissner.github.io/michaeljaylissner.com/posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/"> Support for x-robots-tag and robots HTML meta tag  </a></h1>
     </header>
 </div>
@@ -60,6 +71,7 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
+            
             <p>As part of our research for <a href="/blog/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents">our post</a> on how we block search engines, we looked into which search engines support which privacy standards. This information doesn't seem to exist anywhere else on the Internet, so below are our findings, starting with the big guys, and moving towards more obscure or foreign search engines.</p>
 <h4 id="google-bing">Google, Bing</h4>
 <p>Google (known as Googlebot) and Bing (known as Bingbot) support the x-robots-tag header and the robots HTML tag. Here's <a href="http://support.google.com/webmasters/bin/answer.py?hl=en&amp;answer=79812">Google's page</a> on the topic. And <a href="http://www.bing.com/community/site_blogs/b/webmaster/archive/2009/08/21/prevent-a-bot-from-getting-lost-in-space-sem-101.aspx">here's Bing's</a>. The <a href="http://www.bing.com/community/site_blogs/b/webmaster/archive/2009/11/04/msnbot-1-1-is-retired.aspx">msnbot is retired</a>.</p>
@@ -71,31 +83,21 @@
 <p>The Internet Archive uses Alexa's crawler, which is known as ia_archiver. This crawler does not seem to support either the HTML robots meta tag nor the x-robots-tag HTTP header. Their page on the subject <a href="http://www.alexa.com/help/webmasters">is here</a>. I have requested more information from them, and will update this page if I hear back.</p>
 <h4 id="duckduckgo-blekko-baidu">Duckduckgo, Blekko, Baidu</h4>
 <p>Duckduckgo and Blekko do not support either the robots meta tag nor the x-robots-tag header, per emails I've had with each of them. I also requested information from Baidu, but their response totally ignored my question and was in Chinese. They do have some information <a href="http://wenku.baidu.com/view/ec4457d4b14e852458fb5793.html">here</a>, but it does not seem to provide any information on the noindex value for the robots tag. In any case, the only way to block these crawlers seems to be via a robots.txt file.</p>
-            <aside>
-            <nav>
-            <ul class="articles_timeline">
- 
-                <li class="previous_article">« <a href="//mlissner.github.io/michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/" title="Previous: Respecting privacy while providing hundreds of thousands of public documents">Respecting privacy while providing hundreds of thousands of public documents</a></li>
- 
-                <li class="next_article"><a href="//mlissner.github.io/michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/" title="Next: The Winning Font in Court Opinions">The Winning Font in Court Opinions</a> »</li>
-            </ul>
-            </nav>
-            </aside>
-<section>
-<hr/>
+            
+            <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">
-            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2" 
-                href="//mlissner.github.io/michaeljaylissner.com/posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag//#disqus_thread">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="//mlissner.github.io/michaeljaylissner.com/posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/#disqus_thread">
                 Comments
             </a>
         </div>
         <div id="disqus_thread" class="accordion-body collapse">
             <div class="accordion-inner">
                 <div class="comments">
-<div id="disqus_thread"></div>
+                    <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'michaeljaylissner';
         var disqus_identifier = '//mlissner.github.io/michaeljaylissner.com/posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/';
@@ -108,44 +110,47 @@
      })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
             </div>
         </div>
     </div>
 </div>
 </section>
+
+            <hr/>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
- 
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2012-01-24T23:20:20">Jan 24, 2012</time>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#Tech-ref">Tech</a> 
+            <a class="category-link" href="//mlissner.github.io/michaeljaylissner.com/categories.html#tech-ref">Tech</a>
             <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article"> 
-                <li><a href="/tags.html#privacy-ref">privacy
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#privacy-ref">privacy
                     <span>8</span>
 </a></li>
-                <li><a href="/tags.html#robots-ref">robots
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#robots-ref">robots
                     <span>1</span>
 </a></li>
-                <li><a href="/tags.html#search-ref">search
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#search-ref">search
                     <span>1</span>
 </a></li>
-                <li><a href="/tags.html#x-robots-tag-ref">x-robots-tag
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#x-robots-tag-ref">x-robots-tag
                     <span>1</span>
 </a></li>
             </ul>
-
         </div>
         </section>
-    </div>
-    </article>
+</div>
+</article>
                 </div>
                 <div class="span1"></div>
             </div>
         </div>
+        <div id="push"></div>
     </div>
 <footer>
 <div id="footer">
@@ -155,7 +160,7 @@
     </ul>
 </div>
 </footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
         <script>
             function validateForm(query)
             {
@@ -163,15 +168,46 @@
             }
         </script>
 
-<script type="text/javascript">
-    var disqus_shortname = 'michaeljaylissner';
+            <script type="text/javascript">
+var disqus_shortname = 'michaeljaylissner';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
 
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
+
     </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
 </html>

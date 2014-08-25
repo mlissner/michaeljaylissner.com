@@ -2,30 +2,41 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Michael Lissner" />
         <meta name="copyright" content="Michael Lissner" />
 
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
+
 <meta name="keywords" content="google, yahoo, dropbox, two-factor authentication, charles schwab, facebook, paypal, amazon, Privacy and Security, " />
-        <title>Enabling Two-Factor Authentication - Michael Jay Lissner
+
+<meta property="og:title" content="Enabling Two-Factor Authentication "/>
+<meta property="og:url" content="//mlissner.github.io/michaeljaylissner.com/posts/2013/02/02/enabling-two-factor-authentication/" />
+<meta property="og:description" content="This post is as much Public Service Announcement as anything else. I didn&#39;t realize that two-factor authentication had finally taken off. It&#39;s practically vital for your email account (you&#39;re asking for trouble without it), but in the past year or so, a bunch of other services have ..." />
+<meta property="og:site_name" content="Michael Jay Lissner" />
+<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:published_time" content="2013-02-02T14:27:15" />
+<meta name="twitter:title" content="Enabling Two-Factor Authentication ">
+<meta name="twitter:description" content="This post is as much Public Service Announcement as anything else. I didn&#39;t realize that two-factor authentication had finally taken off. It&#39;s practically vital for your email account (you&#39;re asking for trouble without it), but in the past year or so, a bunch of other services have ...">
+
+        <title>Enabling Two-Factor Authentication  · Michael Jay Lissner
 </title>
-        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/solarizedlight.css" media="screen">
-        <link rel="shortcut icon" href="//mlissner.github.io/michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
-        <link rel="icon" href="//mlissner.github.io/michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" />
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="//mlissner.github.io/michaeljaylissner.com/theme/css/custom.css" media="screen">
+        <link href="//mlissner.github.io/michaeljaylissner.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Michael Jay Lissner - Full Atom Feed" />
     </head>
     <body>
         <div id="content-sans-footer">
         <div class="navbar navbar-static-top">
             <div class="navbar-inner">
-                <div class="container">
+                <div class="container-fluid">
+                    <div class="span1"></div>
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -52,7 +63,7 @@
                 <div class="span10">
 <article>
 <div class="row-fluid">
-    <header class="page_header span10 offset2">
+    <header class="page-header span10 offset2">
     <h1><a href="//mlissner.github.io/michaeljaylissner.com/posts/2013/02/02/enabling-two-factor-authentication/"> Enabling Two-Factor Authentication  </a></h1>
     </header>
 </div>
@@ -60,6 +71,7 @@
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
 
+            
             <p>This post is as much Public Service Announcement as anything else. I didn't realize that two-factor authentication had finally taken off. It's practically vital for your email account (you're asking for trouble without it), but in the past year or so, a bunch of other services have begun offering it. </p>
 <p>Today I went on a little security binge, and found that I could turn on two-factor authentication at:</p>
 <ul>
@@ -74,31 +86,21 @@
 <p>One note about Charles Schwab is that getting their fob is great, but it's hardly all you should do to secure your account. You should also set up what they call a "verbal password" that you have to provide whenever you call in. Without it, it's pretty easy to get into an account via their surprisingly weak phone security.</p>
 <p>Anyway, this is a pretty good list so far. The companies are using a handful of different techniques for doing this, but they all seem pretty solid in the end. Google's, naturally, seems to be one of the most robust, but I'm impressed there's so much offered.</p>
 <p>Go set these up! </p>
-            <aside>
-            <nav>
-            <ul class="articles_timeline">
- 
-                <li class="previous_article">« <a href="//mlissner.github.io/michaeljaylissner.com/posts/2013/01/04/2013-donations/" title="Previous: 2013 Donations">2013 Donations</a></li>
- 
-                <li class="next_article"><a href="//mlissner.github.io/michaeljaylissner.com/posts/2013/02/05/so-you-wanna-buy-a-bike/" title="Next: So you wanna buy a bike">So you wanna buy a bike</a> »</li>
-            </ul>
-            </nav>
-            </aside>
-<section>
-<hr/>
+            
+            <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">
-            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2" 
-                href="//mlissner.github.io/michaeljaylissner.com/posts/2013/02/02/enabling-two-factor-authentication//#disqus_thread">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="//mlissner.github.io/michaeljaylissner.com/posts/2013/02/02/enabling-two-factor-authentication/#disqus_thread">
                 Comments
             </a>
         </div>
         <div id="disqus_thread" class="accordion-body collapse">
             <div class="accordion-inner">
                 <div class="comments">
-<div id="disqus_thread"></div>
+                    <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'michaeljaylissner';
         var disqus_identifier = '//mlissner.github.io/michaeljaylissner.com/posts/2013/02/02/enabling-two-factor-authentication/';
@@ -111,56 +113,59 @@
      })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>                </div>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
             </div>
         </div>
     </div>
 </div>
 </section>
+
+            <hr/>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
- 
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2013-02-02T14:27:15">Feb 2, 2013</time>
             <h4>Category</h4>
-            <a class="category-link" href="/categories.html#Privacy-and-Security-ref">Privacy and Security</a> 
+            <a class="category-link" href="//mlissner.github.io/michaeljaylissner.com/categories.html#privacy-and-security-ref">Privacy and Security</a>
             <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article"> 
-                <li><a href="/tags.html#amazon-ref">amazon
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#amazon-ref">amazon
                     <span>2</span>
 </a></li>
-                <li><a href="/tags.html#charles-schwab-ref">charles schwab
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#charles-schwab-ref">charles schwab
                     <span>1</span>
 </a></li>
-                <li><a href="/tags.html#dropbox-ref">dropbox
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#dropbox-ref">dropbox
                     <span>1</span>
 </a></li>
-                <li><a href="/tags.html#facebook-ref">facebook
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#facebook-ref">facebook
                     <span>5</span>
 </a></li>
-                <li><a href="/tags.html#google-ref">google
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#google-ref">google
                     <span>6</span>
 </a></li>
-                <li><a href="/tags.html#paypal-ref">paypal
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#paypal-ref">paypal
                     <span>1</span>
 </a></li>
-                <li><a href="/tags.html#two-factor-authentication-ref">two-factor authentication
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#two-factor-authentication-ref">two-factor authentication
                     <span>1</span>
 </a></li>
-                <li><a href="/tags.html#yahoo-ref">yahoo
+                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#yahoo-ref">yahoo
                     <span>3</span>
 </a></li>
             </ul>
-
         </div>
         </section>
-    </div>
-    </article>
+</div>
+</article>
                 </div>
                 <div class="span1"></div>
             </div>
         </div>
+        <div id="push"></div>
     </div>
 <footer>
 <div id="footer">
@@ -170,7 +175,7 @@
     </ul>
 </div>
 </footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
         <script>
             function validateForm(query)
             {
@@ -178,15 +183,46 @@
             }
         </script>
 
-<script type="text/javascript">
-    var disqus_shortname = 'michaeljaylissner';
+            <script type="text/javascript">
+var disqus_shortname = 'michaeljaylissner';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
 
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
+
     </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
 </html>
