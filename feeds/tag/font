@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="//mlissner.github.io/michaeljaylissner.com/" rel="alternate"></link><link href="//mlissner.github.io/michaeljaylissner.com/feeds/tag/font" rel="self"></link><id>//mlissner.github.io/michaeljaylissner.com/</id><updated>2012-02-11T10:53:30-08:00</updated><entry><title>Adding New Fonts to Tesseract 3 OCR Engine</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/" rel="alternate"></link><updated>2012-02-11T10:53:30-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2012-02-11:michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="//michaeljaylissner.com/" rel="alternate"></link><link href="//michaeljaylissner.com/feeds/tag/font" rel="self"></link><id>//michaeljaylissner.com/</id><updated>2012-02-11T10:53:30-08:00</updated><entry><title>Adding New Fonts to Tesseract 3 OCR Engine</title><link href="//michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/" rel="alternate"></link><updated>2012-02-11T10:53:30-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-02-11:posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/</id><summary type="html">
 &lt;h2 id="status"&gt;Status&lt;/h2&gt;
 &lt;p&gt;I'm attempting to keep this up to date as Tesseract changes. If you have 
-questions or corrections, please send them directly using the &lt;a href="//mlissner.github.io/michaeljaylissner.com/contact"&gt;contact 
+questions or corrections, please send them directly using the &lt;a href="//michaeljaylissner.com/contact"&gt;contact 
 page&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I've turned off commenting on this article because it was just a 
 bunch of people asking for help and never getting any. If you need help 
@@ -87,15 +87,15 @@ cntraining *.tr
 &lt;p&gt;And that, good friend, is it. Worst process for a human, ever.&lt;/p&gt;
 &lt;h2 id="enclosures"&gt;Enclosures&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="//mlissner.github.io/michaeljaylissner.com/archive/ocr/standard-training-text.txt"&gt;Training data file&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="//mlissner.github.io/michaeljaylissner.com/archive/ocr/old-english.doc"&gt;Old English example file&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="tesseract"></category><category term="ocr"></category><category term="howto"></category><category term="font"></category></entry><entry><title>The Winning Font in Court Opinions</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/" rel="alternate"></link><updated>2012-01-27T22:15:58-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2012-01-27:michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/</id><summary type="html">&lt;p&gt;At CourtListener, we're developing a new system to convert scanned court 
+&lt;li&gt;&lt;a href="//michaeljaylissner.com/archive/ocr/standard-training-text.txt"&gt;Training data file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="//michaeljaylissner.com/archive/ocr/old-english.doc"&gt;Old English example file&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="tesseract"></category><category term="ocr"></category><category term="howto"></category><category term="font"></category></entry><entry><title>The Winning Font in Court Opinions</title><link href="//michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/" rel="alternate"></link><updated>2012-01-27T22:15:58-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-27:posts/2012/01/27/and-the-winning-font-in-court-documents-is/</id><summary type="html">&lt;p&gt;At CourtListener, we're developing a new system to convert scanned court 
 documents to text. As part of our development we've analyzed more than 1,000 
 court opinions to determine what fonts courts are using. &lt;/p&gt;
 &lt;p&gt;Now that we have this information, our next step is to create training data 
 for &lt;a href="http://code.google.com/p/tesseract-ocr/"&gt;our OCR system&lt;/a&gt; so that it specializes in these fonts, 
-but for now we've attached &lt;a href="//mlissner.github.io/michaeljaylissner.com/archive/court-font-analysis/font-analysis.ods"&gt;a spreadsheet&lt;/a&gt; with our findings, 
-and &lt;a href="//mlissner.github.io/michaeljaylissner.com/archive/court-font-analysis/extract_font_metadata_from_files.py"&gt;a script that can be used by others&lt;/a&gt; to extract font metadata 
+but for now we've attached &lt;a href="//michaeljaylissner.com/archive/court-font-analysis/font-analysis.ods"&gt;a spreadsheet&lt;/a&gt; with our findings, 
+and &lt;a href="//michaeljaylissner.com/archive/court-font-analysis/extract_font_metadata_from_files.py"&gt;a script that can be used by others&lt;/a&gt; to extract font metadata 
 from PDFs.&lt;/p&gt;
 &lt;p&gt;Unsurprisingly, the top font &amp;mdash; drumroll please &amp;mdash; is Times New Roman. &lt;/p&gt;
 &lt;table&gt;

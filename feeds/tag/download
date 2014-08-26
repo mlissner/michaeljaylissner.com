@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="//mlissner.github.io/michaeljaylissner.com/" rel="alternate"></link><link href="//mlissner.github.io/michaeljaylissner.com/feeds/tag/download" rel="self"></link><id>//mlissner.github.io/michaeljaylissner.com/</id><updated>2011-02-20T00:27:20-08:00</updated><entry><title>Firefox images and icons</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2011/02/20/firefox-images-and-icons/" rel="alternate"></link><updated>2011-02-20T00:27:20-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2011-02-20:michaeljaylissner.com/posts/2011/02/20/firefox-images-and-icons/</id><summary type="html">&lt;p&gt;A few weeks ago, I was in need of a free star icon, and for the life of me,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="//michaeljaylissner.com/" rel="alternate"></link><link href="//michaeljaylissner.com/feeds/tag/download" rel="self"></link><id>//michaeljaylissner.com/</id><updated>2011-02-20T00:27:20-08:00</updated><entry><title>Firefox images and icons</title><link href="//michaeljaylissner.com/posts/2011/02/20/firefox-images-and-icons/" rel="alternate"></link><updated>2011-02-20T00:27:20-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2011-02-20:posts/2011/02/20/firefox-images-and-icons/</id><summary type="html">&lt;p&gt;A few weeks ago, I was in need of a free star icon, and for the life of me,
  I couldn't find one that was quite right. I scoured over the Internet, 
  all the while noticing the perfect little star in my browser.&lt;/p&gt;
 &lt;p&gt;A couple of times, I Googled for Firefox icons, but I couldn't find them 
@@ -10,6 +10,6 @@ share.&lt;/p&gt;
 organized more usefully in the actual Firefox source, 
 but if you don't mind a little icon browsing, the attached zip should have 
 all the icons you see in your browser.&lt;/p&gt;
-&lt;p&gt;&lt;a href="//mlissner.github.io/michaeljaylissner.com/archive/firefox-images.zip"&gt;&lt;strong&gt;Enjoy.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="//michaeljaylissner.com/archive/firefox-images.zip"&gt;&lt;strong&gt;Enjoy.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;PS - these are licensed under the following licenses: MPL 1.1/GPL 2.0/LGPL 
 2.1, and are copyright Mozilla.&lt;/p&gt;</summary><category term="firefox"></category><category term="images"></category><category term="icons"></category><category term="zip"></category><category term="download"></category></entry></feed>

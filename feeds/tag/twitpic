@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="//mlissner.github.io/michaeljaylissner.com/" rel="alternate"></link><link href="//mlissner.github.io/michaeljaylissner.com/feeds/tag/twitpic" rel="self"></link><id>//mlissner.github.io/michaeljaylissner.com/</id><updated>2009-11-14T16:28:44-08:00</updated><entry><title>Testing Deletion Speed of Online Photo Sites</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" rel="alternate"></link><updated>2009-11-14T16:28:44-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2009-11-14:michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="//michaeljaylissner.com/" rel="alternate"></link><link href="//michaeljaylissner.com/feeds/tag/twitpic" rel="self"></link><id>//michaeljaylissner.com/</id><updated>2009-11-14T16:28:44-08:00</updated><entry><title>Testing Deletion Speed of Online Photo Sites</title><link href="//michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" rel="alternate"></link><updated>2009-11-14T16:28:44-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-14:posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/</id><summary type="html">
 &lt;h2 id="updates"&gt;Updates&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;2014-08-22&lt;/strong&gt;: While updating this blog to a new platform, 
@@ -29,7 +29,7 @@ press the delete button on a photo from their site. On &lt;strong&gt;November
 a black box with white text to Facebook, Flickr, Picasa, MySpace, Photobucket, 
 Shutterfly, Twitpic and WalMart. A few months later, 
 I also added drop.io and Orkut: &lt;/p&gt;
-&lt;p&gt;&lt;img alt="I will attempt to delete this photo" src="//mlissner.github.io/michaeljaylissner.com/images/photo-deletion-tests/PostedAndDeleted.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="I will attempt to delete this photo" src="//michaeljaylissner.com/images/photo-deletion-tests/PostedAndDeleted.jpg"/&gt;&lt;/p&gt;
 &lt;p&gt;When you look below, if you can see the black box for a site, 
 that means that it was not truly deleted and is still live. You can verify 
 this by clicking on the image. This is checked each time this page is 
@@ -39,20 +39,20 @@ deleted, you will see the date that it was deleted.&lt;/p&gt;
 properly removing images from their site, but until they have proper 
 deletion mechanisms, we should all think twice about what we upload.&lt;/p&gt;
 &lt;p&gt;If there's a service that is not shown here that you'd like to see, 
-please &lt;a href="//mlissner.github.io/michaeljaylissner.com/contact"&gt;let me know&lt;/a&gt;. And now, without further ado, 
+please &lt;a href="//michaeljaylissner.com/contact"&gt;let me know&lt;/a&gt;. And now, without further ado, 
 I present, the ongoing results of the test:&lt;/p&gt;
 &lt;h2 id="facebook"&gt;Facebook&lt;/h2&gt;
 &lt;p&gt;Facebook properly deleted the photo from their server as of May 27, 2010.&lt;/p&gt;
 &lt;h2 id="flickr"&gt;Flickr&lt;/h2&gt;
 &lt;p&gt;Flickr began showing the following message approximately an hour after the 
 image was deleted.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Flickr Response" src="//mlissner.github.io/michaeljaylissner.com/images/photo-deletion-tests/flickr-response.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Flickr Response" src="//michaeljaylissner.com/images/photo-deletion-tests/flickr-response.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="picasa"&gt;Picasa&lt;/h2&gt;
 &lt;p&gt;Picasa properly deleted the photo from their server as of at least November
 15, 2009.&lt;/p&gt;
 &lt;h2 id="myspace"&gt;MySpace&lt;/h2&gt;
 &lt;p&gt;At an unknown time, MySpace began showing this photo instead:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="MySpace Response" src="//mlissner.github.io/michaeljaylissner.com/images/photo-deletion-tests/myspace.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="MySpace Response" src="//michaeljaylissner.com/images/photo-deletion-tests/myspace.png"/&gt;&lt;/p&gt;
 &lt;h2 id="photobucket"&gt;Photobucket&lt;/h2&gt;
 &lt;p&gt;Photobucket properly deleted the photo from their server as of at least 
 November 14, 2009.&lt;/p&gt;
