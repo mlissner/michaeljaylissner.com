@@ -1,7 +1,7 @@
 Title: On DRM and the Darknet
 Date: 2008-09-15T21:09:43
 Tags: microsoft, DRM, darknet
-Category: Policy and Politics
+Category: Policy & Politics
 
 I just read <a href="http://www.google.com/url?sa=t&source=web&ct=res&cd=1&url=http%3A%2F%2Fcrypto.stanford.edu%2FDRM2002%2Fdarknet5.doc&ei=VTLPSLfdG5m0sQOo1ciIBw&usg=AFQjCNHZkIYjxy6LnWvUSt6kGrZ3SYLMZQ&sig2=hz865qMKNfakTgDi4sUVpA">an 
 interesting paper</a> written by some Microsoft engineers on the subject of 

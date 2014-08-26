@@ -1,7 +1,7 @@
 Title: Respecting privacy while providing hundreds of thousands of public documents
 Date: 2012-01-16T22:13:22
 Tags: robots.txt, privacy, practical obscurity, policy, courtlistener.com, courtlistener.com, policy, practical obscurity, privacy, robots.txt
-Category: Privacy and Security
+Category: Privacy & Security
 
 At CourtListener, we have always taken privacy very seriously. We [have over 600,000][7] cases currently, most of which are available on Google and other search engines. But in the interest of privacy, we make two broad exceptions to what's available on search engines: 
 

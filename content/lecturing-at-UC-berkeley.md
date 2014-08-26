@@ -34,4 +34,4 @@ started doing student presentations this week, and that has helped
 everybody get a little more skin in the game.
 
 [1]: http://courses.ischool.berkeley.edu/i153-waim/su10/
-[2]: {filename}/papers-and-projects/
+[2]: {filename}/pages/projects-and-papers.md

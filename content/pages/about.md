@@ -1,6 +1,7 @@
-Title: About this Site
+Title: About Site
 Date: 2014-08-17
 Tags: about, privacy, site, meta
+Menu: True
 
 [TOC]
 

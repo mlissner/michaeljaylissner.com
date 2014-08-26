@@ -63,7 +63,7 @@ repository. It should be fairly easy to modify though to fit your own needs.
 
 [1]: http://cyberlawcases.com/
 [2]: http://www.ischool.berkeley.edu/programs/masters/projects/2010/judicialnlp
-[3]: http://bitbucket.org/mlissner/legal-current-awareness/
+[3]: https://github.com/freelawproject/courtlistener
 [4]: http://www.gnu.org/licenses/agpl.html
 [5]: http://en.wikipedia.org/wiki/Jacobsen_v._Katzer
 [6]: http://www.copyright.gov/docs/fees.html

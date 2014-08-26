@@ -1,7 +1,7 @@
 Title: A Website that Irks My Soul, and the Internet's Inability to Kill It
 Date: 2007-11-19T21:15:49
 Tags: infotech
-Category: Policy and Politics
+Category: Policy & Politics
 
 
 There's a website a friend pointed out to me. It's called c o n s e r v o p 

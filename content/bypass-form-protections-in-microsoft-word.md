@@ -1,7 +1,7 @@
 Title: Bypass Form Protection in MS Word
 Date: 2008-04-18T10:13:22
 Tags: microsoft, msword, hacking
-Category: Privacy and Security
+Category: Privacy & Security
 
 
 I recently had the occasion to need to get around the form protection in an 

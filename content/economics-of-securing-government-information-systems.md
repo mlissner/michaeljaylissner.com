@@ -10,7 +10,7 @@ The problem that I discovered is a simple one, and is one that is <a href="http:
 
 Now, without going into too much detail, this is not necessarily the end of the world. When you use the Internet, the information that transfers between you and websites is split up into packets, and these packets are sent down whatever wire appears to have the least load and the greatest speed. As a result, there is no guarantee all of your information will ever be sent through the same computer, and it's challenging for a hacker to place a computer between you and the website you're using.
 
-Unfortunately though, there are some bottlenecks, and sometimes &mdash; not always &mdash; all of your information <em>will</em> pass through the same point between you and the server. Bottlenecks can occur in a number of places, such as:
+Unfortunately though, there are some bottlenecks, and sometimes &mdash; not always &mdash; all of your information *will* pass through the same point between you and the server. Bottlenecks can occur in a number of places, such as:
 
 
  - **The web host's computers and wires** &mdash; Unless a custom <a href="http://en.wikipedia.org/wiki/Name_server">DNS server</a> is being used, all the information going to or from the server has to go through some host's computer system. If they are logging the information, and if the login information is sent in plaintext, they will immediately have it.
@@ -23,7 +23,7 @@ Thus, you might say that it's OK to have an unencrypted login page, if you don't
 
 But I digress and should proceed with the tale. Around 2007, I found this vulnerability and used <a href="http://www.wireshark.org/">Wireshark</a> to demonstrate it to my managers and to the vendor. At that time, it seemed like it would be quickly fixed, and that we could go on with our lives.
 
-Then some time passed, and nothing happened. I reminded a few people, but still nothing. The problem persisted, and I handed off my job to somebody else so that I could go back to school. But even once I was back in school, occasionally something would remind me of the problem, and I'd check to see if it was fixed. But it wasn't. So I reminded my old co-workers that they had a problem (which wasn't my favorite thing to do), and I assumed it would be taken care of. Except it <em>still</em> wasn't.
+Then some time passed, and nothing happened. I reminded a few people, but still nothing. The problem persisted, and I handed off my job to somebody else so that I could go back to school. But even once I was back in school, occasionally something would remind me of the problem, and I'd check to see if it was fixed. But it wasn't. So I reminded my old co-workers that they had a problem (which wasn't my favorite thing to do), and I assumed it would be taken care of. Except it *still* wasn't.
 
 At this point, I had to decide how much of a moral duty I had to get this fixed, since I was unaffiliated with the organization for about a year by that time. Proceeding to bring up this issue meant that I would probably annoy a number of people, and that I would likely damage relationships I had spent years building, but to not bring it up meant that thousands of people's records would continue to be insecure.
 
@@ -35,7 +35,7 @@ The questions now are, what took so damned long, and what can be done to avoid t
 1. **Lack of security personnel** &mdash; Nowhere in either organizations was there a person that was designated to discover and push security problems.
 1. **Vagueness of the problem** &mdash; I was able to demonstrate the problem to my superiors and to the vendor, and to explain how it could be a problem, but it wasn't a smoking gun. There had been no security failure, nor was there any obvious thing that an average user could exploit.
 1. **Competing projects** &mdash; At the time I discovered the problem, there were many other competing projects that were on the table. To push them aside to fix a vague and unexploited problem did not seem like a good use of resources.
-1. **Relationship maintenance and imbalances** &mdash; In 2007, when I reported this, I was not a part of the senior management, and did not have a strong relationship with the vendor. Conversely, my bosses <em>did</em> have a relationship with the vendor, but they might not have wanted to jeopardize it by pressuring the vendor to fix a security problem.
+1. **Relationship maintenance and imbalances** &mdash; In 2007, when I reported this, I was not a part of the senior management, and did not have a strong relationship with the vendor. Conversely, my bosses *did* have a relationship with the vendor, but they might not have wanted to jeopardize it by pressuring the vendor to fix a security problem.
 1. **Vague economic incentives** &mdash; With this 
 vulnerability, it was unclear if anybody would ever know if a hacker had 
 been logging into the system and collecting information. If one had, 

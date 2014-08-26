@@ -1,7 +1,7 @@
 Title: Maps We Really Need to Use More
 Date: 2008-10-21T11:21:27
 Tags: maps, education, AIDS/HIV, healthcare, visualizations
-Category: Information Visualization and Statistics
+Category: Information Visualization & Statistics
 
 I stumbled across some incredible maps yesterday while looking at some maps of the status of the American election. 
 

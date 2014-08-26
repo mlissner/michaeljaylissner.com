@@ -1,7 +1,7 @@
 Title: The eBook Wars Continue, but The Gravy Train Hasn't Arrived
 Date: 2010-07-24T17:15:23
 Tags: nook, kindle, ebook, content
-Category: Policy and Politics
+Category: Policy & Politics
 
 Friends, I hate to be a wet towel, but do us all a favor: Don't buy an ebook reader yet. I know, I know, Amazon just dropped the price of the Kindle by like 30% or something, which is very cool, but better things are coming if we vote with our feet.
 

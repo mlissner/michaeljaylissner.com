@@ -7,4 +7,7 @@ When I <a href="/blog/drupal-is-go">started</a> this blog more than two years ag
 
 In that light, today I've transferred this website over to the people at <a href="http://slicehost.com">slicehost</a>. This will give me (almost) all the freedom of running the server myself, and should relieve some of the headaches I've had for the past couple of years when it came to power outages, comcast and AT&T outages, and the like.
 
-Moving the site over has been a bit complicated, so if you see anything weird, let me know via the <a href="/contact">contact</a> link, which should work as of now. 
+Moving the site over has been a bit complicated, so if you see anything weird, 
+let me know via the [contact][1] link, which should work as of now. 
+
+[1]: {filename}/pages/contact.md

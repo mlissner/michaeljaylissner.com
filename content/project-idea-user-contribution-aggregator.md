@@ -3,7 +3,7 @@ Date: 2010-06-28T14:20:41
 Tags: user contribution, reputational system, Project idea, open source, aggregation
 Category: Tech
 
-As a frequent contributor to various open source projects, I find that I often want to know just how much I have contributed over the years, and to which projects. With enough time, I could figure out every bug that I've filed, every comment I've posted, every patch that I've submitted (there aren't many), and every <em>contribution</em> I've made. But it would take me a LOT of effort, and after not too long, I'd be knee deep in records and notes of where I had been.
+As a frequent contributor to various open source projects, I find that I often want to know just how much I have contributed over the years, and to which projects. With enough time, I could figure out every bug that I've filed, every comment I've posted, every patch that I've submitted (there aren't many), and every *contribution* I've made. But it would take me a LOT of effort, and after not too long, I'd be knee deep in records and notes of where I had been.
 
 For people that contribute and work on such projects, knowing these kinds of things is valuable in forming an online reputation. This lets people know whether you are a helpful person, what you find interesting, and where your expertise may be. If you're looking for work in such a field, it's great to be able to point to a record of contribution, and say, "Yes, I am interested in this field, and I have a track record to prove it." It creates competition amongst contributors.
 

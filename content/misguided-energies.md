@@ -1,7 +1,7 @@
 Title: Misdirected Energies
 Date: 2008-10-31T00:07:18
 Tags: oil, sustainability
-Category: Policy and Politics
+Category: Policy & Politics
 
 From *[Winning the Oil Endgame][1]* (free login required):
 

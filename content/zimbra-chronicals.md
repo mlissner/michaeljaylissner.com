@@ -31,4 +31,4 @@ Give me a couple more days, I'm working on it. In the mean time,
 the [contact][2] link does work.
 
 [1]: http://www.redhatxchange.com/Zimbra.html
-[2]: {filename}/contact/
+[2]: {filename}/pages/contact.md

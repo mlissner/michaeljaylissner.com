@@ -1,17 +1,17 @@
 Title: Project Idea: "Community-Curated Data Repository"
 Date: 2010-08-02T13:02:42
 Tags: recovery, Project idea, debian, data, curation
-Category: Policy and Politics
+Category: Policy & Politics
 
 There's an interesting problem that I've run into a number of times that goes 
 like this: You want to start a new project studying **X** dump of 
 data, and you have a great idea of how to do **Y** with it. You 
 go download the data, but then you spend hours (days and weeks) manipulating 
 it, manicuring it, and stuffing it neatly into a database. The problem is that 
-the data is in <em>their</em> format, and they probably haven't told you much 
+the data is in *their* format, and they probably haven't told you much 
 about it, much less put it into a useful format for other people. You have no 
 option but to figure it out, optimize it, make it queryable, etc, when really, 
-what you wish you were doing was simply <em>working with it</em>.
+what you wish you were doing was simply *working with it*.
 
 In other words, the data format and quality keeps you from working with the 
 data itself. I've run into this a number of times, most notably when trying to 
@@ -23,7 +23,7 @@ population, economic, health, and agricultural data.
 
 The solution to this problem is simple. A community needs to be built around 
 curating the data and providing it in useful formats, and a repository of some 
-sort needs to be made so people can download <em>and install</em> the data. 
+sort needs to be made so people can download *and install* the data. 
 Similar ideas have come up a few times in various formats. Most notably, 
 Google has taken a stab at solving this with their <a href="http://www.google.com/publicdata/home" 
 target="_blank">public data sets</a>, and back around the turn of the 

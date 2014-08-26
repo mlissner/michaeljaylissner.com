@@ -50,7 +50,7 @@ properly removing images from their site, but until they have proper
 deletion mechanisms, we should all think twice about what we upload.
 
 If there's a service that is not shown here that you'd like to see, 
-please <a href="/contact">let me know</a>. And now, without further ado, 
+please [let me know][10]. And now, without further ado, 
 I present, the ongoing results of the test:
 
 
@@ -121,3 +121,4 @@ the day it was added.
 [3]: http://images.photos1.walmart.com/232323232%7Ffp432%3B4%3Enu%3D3%3A%3A2%3E%3A8%3A%3E238%3EWSNRCG%3D326634885%3B329nu0mrj
 [4]: http://thenextweb.com/google/2014/06/30/google-shutting-orkut-social-network-september-30/
 [5]: http://images.orkut.com/orkut/photos/NwAAAA40TqrVmtf2vIA1oouDdb9vUTcjWDAQqVo_mBa45mvjdqMPiHhSaHxekFNT596b5sVYh593XRK-5Nquk0_WOQMAm1T1UJmPN1ZDUab24PgUE8b4ZMm09Mjj.jpg
+[10]: {filename}/pages/contact.md

@@ -1,7 +1,7 @@
 Title: Top Five Problems with Major American Elections
 Date: 2008-01-20T13:04:07
 Tags: politics, elections
-Category: Policy and Politics
+Category: Policy & Politics
 
 I've been thinking about elections a lot lately (even before that last post), and I've come up with five things that are simply broken about democracy. Call me a commie or a socialist or something if you must, but I challenge you to identify why these are not critical flaws with our system. 
 

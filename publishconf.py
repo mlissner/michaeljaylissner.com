@@ -10,12 +10,13 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-#SITEURL = 'http://michaeljaylissner.com'
-SITEURL = 'http://mlissner.github.io/michaeljaylissner.com'
+#SITEURL = '//michaeljaylissner.com'
+SITEURL = '//mlissner.github.io/michaeljaylissner.com'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+TAG_FEED_ATOM = 'feeds/tag/%s'
 
 DELETE_OUTPUT_DIRECTORY = True
 

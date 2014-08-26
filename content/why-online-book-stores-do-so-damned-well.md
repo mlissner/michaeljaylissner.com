@@ -1,7 +1,7 @@
 Title: Why Online Booksellers do so Damned Well
 Date: 2008-09-13T09:31:19
 Tags: berkeley, books
-Category: Economics and Business
+Category: Economics & Business
 
 Lately in Berkeley, a number of our independent bookstores have closed their doors for business. In every case, the rumor I've heard from the employees lays the blame squarely on online competition. I'm not entirely sure I buy the argument as the sole cause, but there probably is some truth to it. 
 

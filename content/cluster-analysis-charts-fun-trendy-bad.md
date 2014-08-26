@@ -1,7 +1,7 @@
 Title: Radar Analysis Charts: Fun, Trendy, BAD!
 Date: 2008-10-08T16:08:09
 Tags: bad statistics, visualizations
-Category: Information Visualization and Statistics
+Category: Information Visualization & Statistics
 
 
 There is this trend that seems to be popping up everywhere of using radar charts such as this one:

@@ -1,7 +1,7 @@
 Title: Guantanamo to Close, But They're Just Moving the Prisoners
 Date: 2009-01-12T23:17:53
 Tags: torture, prison camp, Obama, Cuba
-Category: Policy and Politics
+Category: Policy & Politics
 
 
 I was happy to read the news today that <a href="http://www.iht

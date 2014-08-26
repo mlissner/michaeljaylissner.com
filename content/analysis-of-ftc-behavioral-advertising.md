@@ -1,7 +1,7 @@
 Title: An Analysis of FTC Behavioral Advertising and an End of Semester Countdown
 Date: 2009-04-02T14:44:40
 Tags: principles, policy, paper, law, FTC, advertising
-Category: Policy and Politics
+Category: Policy & Politics
 
 
 It's coming down to the end of the semester, and after I finished [the 

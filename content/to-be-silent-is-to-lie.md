@@ -1,7 +1,7 @@
 Title: To Be Silent is To Lie
 Date: 2008-12-05T17:01:32
 Tags: eagle scout, discrimination, boy scouts
-Category: Policy and Politics
+Category: Policy & Politics
 
 ![No alt]({filename}/images/eagle-badge.jpeg)
 

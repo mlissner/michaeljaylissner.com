@@ -132,6 +132,6 @@ And that, good friend, is it. Worst process for a human, ever.
 [9]: http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#The_last_file_(unicharambigs)
 [10]: http://www.sil.org/iso639-3/iso-639-3_Name_Index_20120203.tab
 [11]: http://code.google.com/p/moshpytt/issues/detail?id=2
-[contact]: {filename}/contact.md
+[contact]: {filename}/pages/contact.md
 [td]: {filename}/archive/ocr/standard-training-text.txt
 [oldenglish]: {filename}/archive/ocr/old-english.doc

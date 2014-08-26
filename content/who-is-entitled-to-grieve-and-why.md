@@ -1,7 +1,7 @@
 Title: Who Is Entitled to Grieve and Why
 Date: 2009-04-13T19:39:27
 Tags: digital death, online grief, mourning
-Category: Policy and Politics
+Category: Policy & Politics
 
 I've been doing some research about how the Internet changes the way we 
 handle and cope with real life death, and I found a good quote today. It's 

@@ -1,7 +1,7 @@
 Title: A Real Problem You Should Fix. Now.
 Date: 2009-04-12T14:36:49
 Tags: security, problems, mashup idea
-Category: Privacy and Security
+Category: Privacy & Security
 
 
 I've mentioned secret questions on my site before, but I never quite realized how much of a problem they are until today, when I discovered <a href="http://uspublicrecords.com">uspublicrecords.com</a>.

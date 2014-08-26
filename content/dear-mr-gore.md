@@ -1,7 +1,7 @@
 Title: Dear Mr. Gore
 Date: 2008-12-29T22:55:21
 Tags: copyright, climate change, global warming
-Category: Policy and Politics
+Category: Policy & Politics
 
 
 Honorable Al Gore

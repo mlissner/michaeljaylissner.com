@@ -1,7 +1,7 @@
 Title: Exploratory Analysis of Service Recipients of the Contra Costa County Community Services Bureau
 Date: 2010-02-26T17:45:19
 Tags: information visualization, contra costa county, research, Tableau, data exploration
-Category: Information Visualization and Statistics
+Category: Information Visualization & Statistics
 
 [TOC]
 
@@ -101,8 +101,8 @@ developmental results for a child. Again, although I had expected the
 children of parents working as many as 12 hours/day to have lower 
 developmental scores than those of parents working fewer hours, 
 this was not borne out by the data. Instead, there is a downward trend as 
-the primary caregiver worked more hours until they began working <em>more 
-than</em> eight hours/day, at which point developmental scores begin to 
+the primary caregiver worked more hours until they began working *more 
+than* eight hours/day, at which point developmental scores begin to 
 rise again.
 
 ![No alt]({filename}/images/ehsd/PC%20Hours%20Per%20Day%202.png)
@@ -181,7 +181,7 @@ of the information exploration tools that are natively available on the
 Linux OS. Unfortunately, this search ended quite quickly. I discovered a 
 number of tools that can be used for visualization of data, 
 particularly scientific visualization, but I was unable to find anything 
-that had the data <em>exploration</em> features found in the Windows-based 
+that had the data *exploration* features found in the Windows-based 
 Tableau software.
 
 Because it is a $1,000 Windows-only product, I was hesitant to spend a lot 
@@ -201,7 +201,7 @@ I am still not always certain what double-clicking certain things will do.
 A better system for this type of interaction is used by Gnumeric, 
 which is a Linux-based spreadsheet application. In it, 
 you can right-click a visualization, and it will allow you to edit 
-<em>all</em> of its properties, which are divided according to axis, plot, 
+*all* of its properties, which are divided according to axis, plot, 
 data source, etc. With this form of interaction, it is very easy to find a 
 setting a second time, and all of the settings are located in one central 
 location, saving you from having to remember where to click in various 

@@ -1,7 +1,7 @@
 Title: Quiet Friday News About CIA Interrogation Techniques
 Date: 2009-04-17T18:36:34
 Tags: news, torture, cia, interrogation, ACLU
-Category: Policy and Politics
+Category: Policy & Politics
 
 Well, it's a quiet Friday afternoon here in America, so that can mean only one thing: it's time for organizations to release whatever news they've been trying to keep quiet for the week. This weeks' big news is that a number of memos authorizing, rationalizing and generally condoning torture and interrogation <a href="http://news.google.com/news?pz=1&ncl=1334762857&topic=h">have been released to the ACLU</a>. 
 

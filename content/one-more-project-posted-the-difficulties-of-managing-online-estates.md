@@ -2,7 +2,7 @@ Title: The Difficulties of Managing Online Estates
 Subtitle: Still unsolved
 Date: 2009-05-15T12:22:02
 Tags: thanatosensitivity, paper
-Category: Policy and Politics
+Category: Policy & Politics
 
 Well, one more paper down, one more to go! Today I completed the final paper 
 for [my class on information law and policy][1], which was one of my best 

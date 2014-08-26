@@ -1,7 +1,7 @@
 Title: There's a Lesson About Yahoo! Security I Learned from Palin Today
 Date: 2008-09-17T15:08:09
 Tags: palin, security, yahoo
-Category: Privacy and Security
+Category: Privacy & Security
 
 
 The lesson is this: Yahoo! doesn't use encryption on their webmail. I'll 

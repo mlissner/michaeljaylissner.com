@@ -1,7 +1,7 @@
 Title: Rebuilding the 9th Ward in New Orleans
 Date: 2008-11-30T20:11:06
 Tags: policy, katrina, disaster, bad ideas
-Category: Policy and Politics
+Category: Policy & Politics
 
 I've spent Thanksgiving in the Deep South this year at my girlfriend's 
 grandparent's house. It's been a great trip, but one thing about it keeps 

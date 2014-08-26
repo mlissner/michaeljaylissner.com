@@ -32,87 +32,87 @@ For thoroughness, here is a table containing the results from this test.
 </tr>
 <tr>
   <td>2<sup>nd</sup></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-2ndCircuit-08-6301-cv_opn.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-2ndCircuit-08-6301-cv_opn.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-2ndCircuit-08-6301-cv_opn.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/2ndCircuit-08-6301-cv_opn.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-2ndCircuit-08-6301-cv_opn.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-2ndCircuit-08-6301-cv_opn.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-2ndCircuit-08-6301-cv_opn.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/2ndCircuit-08-6301-cv_opn.pdf">*link*</a></td>
 </tr>
 <tr>
   <td>3<sup>rd</sup></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-3rdCircuit-091225p.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-3rdCircuit-091225p.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-3rdCircuit-091225p.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/3rdCircuit-091225p.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-3rdCircuit-091225p.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-3rdCircuit-091225p.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-3rdCircuit-091225p.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/3rdCircuit-091225p.pdf">*link*</a></td>
 </tr>
 <tr>
   <td>4<sup>th</sup></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-4thCircuit-082373.P.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-4thCircuit-082373.P.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-4thCircuit-082373.P.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/4thCircuit-082373.P.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-4thCircuit-082373.P.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-4thCircuit-082373.P.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-4thCircuit-082373.P.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/4thCircuit-082373.P.pdf">*link*</a></td>
 </tr>
 <tr>
   <td>5<sup>th</sup></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-5thCircuit-07-30815-CR0.wpd.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-5thCircuit-07-30815-CR0.wpd.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-5thCircuit-07-30815-CR0.wpd.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/5thCircuit-07-30815-CR0.wpd.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-5thCircuit-07-30815-CR0.wpd.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-5thCircuit-07-30815-CR0.wpd.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-5thCircuit-07-30815-CR0.wpd.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/5thCircuit-07-30815-CR0.wpd.pdf">*link*</a></td>
 </tr>
 <tr>
   <td>6<sup>th</sup></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-6thCircuit-10a0023p-06.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-6thCircuit-10a0023p-06.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-6thCircuit-10a0023p-06.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/6thCircuit-10a0023p-06.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-6thCircuit-10a0023p-06.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-6thCircuit-10a0023p-06.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-6thCircuit-10a0023p-06.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/6thCircuit-10a0023p-06.pdf">*link*</a></td>
 </tr>
 <tr>
   <td>7<sup>th</sup></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-7thCircuit-UZ1FFY4T.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-7thCircuit-UZ1FFY4T.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-7thCircuit-UZ1FFY4T.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/7thCircuit-UZ1FFY4T.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-7thCircuit-UZ1FFY4T.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-7thCircuit-UZ1FFY4T.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-7thCircuit-UZ1FFY4T.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/7thCircuit-UZ1FFY4T.pdf">*link*</a></td>
 </tr>
 <tr>
   <td>8<sup>th</sup></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-8thCircuit-071306U.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-8thCircuit-071306U.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-8thCircuit-071306U.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/8thCircuit-071306U.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-8thCircuit-071306U.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-8thCircuit-071306U.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-8thCircuit-071306U.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/8thCircuit-071306U.pdf">*link*</a></td>
 </tr>
 <tr>
   <td>9<sup>th</sup></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-9thCircuit-07-55393.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-9thCircuit-07-55393.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-9thCircuit-07-55393.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/9thCircuit-07-55393.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-9thCircuit-07-55393.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-9thCircuit-07-55393.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-9thCircuit-07-55393.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/9thCircuit-07-55393.pdf">*link*</a></td>
 </tr>
 <tr>
   <td>10<sup>th</sup></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-10thCircuit-06-6247.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-10thCircuit-06-6247.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-10thCircuit-06-6247.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/10thCircuit-06-6247.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-10thCircuit-06-6247.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-10thCircuit-06-6247.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-10thCircuit-06-6247.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/10thCircuit-06-6247.pdf">*link*</a></td>
 </tr>
 <tr>
   <td>11<sup>th</sup></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-11thCircuit-200814991.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-11thCircuit-200814991.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-11thCircuit-200814991.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/11thCircuit-200814991.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-11thCircuit-200814991.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-11thCircuit-200814991.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-11thCircuit-200814991.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/11thCircuit-200814991.pdf">*link*</a></td>
 </tr>
 <tr>
   <td>DC Circuit</td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-DC-Circuit-07-3125-1229519.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-DC-Circuit-07-3125-1229519.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-DC-Circuit-07-3125-1229519.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/DC-Circuit-07-3125-1229519.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-DC-Circuit-07-3125-1229519.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-DC-Circuit-07-3125-1229519.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-DC-Circuit-07-3125-1229519.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/DC-Circuit-07-3125-1229519.pdf">*link*</a></td>
 </tr>
 <tr>
   <td>Federal Circuit</td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-FederalCircuit-09-1361.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-FederalCircuit-09-1361.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-FederalCircuit-09-1361.html"><em>link</em></a></td>
-  <td><a href="{filename}/archive/pdf-to-html-test/FederalCircuit-09-1361.pdf"><em>link</em></a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-FederalCircuit-09-1361.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-FederalCircuit-09-1361.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-FederalCircuit-09-1361.html">*link*</a></td>
+  <td><a href="{filename}/archive/pdf-to-html-test/FederalCircuit-09-1361.pdf">*link*</a></td>
 </tr>
 </table>
 

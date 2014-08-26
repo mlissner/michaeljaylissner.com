@@ -4,8 +4,8 @@ Tags: proposal, presentations, me, lvi2012, juriscraper, courtlistener.com
 Category: Tech
 
 The [Law Via the Internet][2] conference is  celebrating its 20th anniversary
- at Cornell University on October 7-9th. I will be attending, 
- and with any luck, I'll be presenting on the topic proposed below.
+at Cornell University on October 7-9th. I will be attending, 
+and with any luck, I'll be presenting on the topic proposed below.
 
 ### Wrangling Court Data on a National Level ###
 
@@ -62,5 +62,5 @@ and Juriscraper is the culmination of what we've learned. We hope that by
 presenting our work at LVI 2012, we will be able to share what we have 
 learned and gain additional collaborators in our work.
 
-[1]: https://bitbucket.org/mlissner/juriscraper/ 
+[1]: https://github.com/freelawproject/juriscraper/ 
 [2]: http://blog.law.cornell.edu/lvi2012/

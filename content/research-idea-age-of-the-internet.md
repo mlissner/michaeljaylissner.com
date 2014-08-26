@@ -1,7 +1,7 @@
 Title: Research Idea &ndash; The Age of the Internet
 Date: 2009-01-05T15:41:47
 Tags: Internet, Project idea
-Category: Policy and Politics
+Category: Policy & Politics
 
 I blogged [a while back][1] about a Firefox command that would tell you 
 the last modified date of the page you were looking at, 

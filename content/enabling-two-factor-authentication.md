@@ -1,7 +1,7 @@
 Title: Enabling Two-Factor Authentication
 Date: 2013-02-02T14:27:15
 Tags: google, yahoo, dropbox, two-factor authentication, charles schwab, facebook, paypal, amazon
-Category: Privacy and Security
+Category: Privacy & Security
 
 
 This post is as much Public Service Announcement as anything else. I didn't realize that two-factor authentication had finally taken off. It's practically vital for your email account (you're asking for trouble without it), but in the past year or so, a bunch of other services have begun offering it. 

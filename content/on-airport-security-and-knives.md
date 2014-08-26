@@ -1,7 +1,7 @@
 Title: On Airport Security and Knives
 Date: 2008-09-22T16:39:48
 Tags: politics, security, knife
-Category: Privacy and Security
+Category: Privacy & Security
 
 ![No Alt]({filename}/images/opinel_splits.jpeg) 
 

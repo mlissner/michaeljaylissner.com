@@ -1,7 +1,7 @@
 Title: How to help end Boy Scouts of America's ban on gays
 Date: 2013-04-19T10:18:05
 Tags: howto, homosexuality, boy scouts
-Category: Policy and Politics
+Category: Policy & Politics
 
 
 On May 3rd, the Boy Scouts are considering lifting their ban on gays, and are putting a vote to the local and national councils. This means that it's easy to influence the vote by calling in and expressing your opinion. It's simple to do so, and more voices could change the direction of the Boy Scouts of America, allowing all boys to be included and accepted. 

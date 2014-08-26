@@ -1,7 +1,7 @@
 Title: Google Resonds to the Twitter Attack
 Date: 2009-10-02T20:37:12
 Tags: security, Twitter, gmail, secret questions, passwords
-Category: Privacy and Security
+Category: Privacy & Security
 
 
 A few months ago, Twitter was hacked by means of a [clever, 

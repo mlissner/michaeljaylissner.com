@@ -65,7 +65,7 @@ comments are greatly appreciated.
         autocompleteDestroyer.sh exists with a status of 0 if it encounters no problems. An exit status of 1 means incorrect usage. An exit status of 2 indicates it was unable to find your files. An exit status of 3 indicates the user terminated the program. An exit status of 4 means it encountered problems editing your file.
     
     BUGS
-        If any bugs are encountered, please see michaeljaylissner.com/contact
+        If any bugs are encountered, please see http://michaeljaylissner.com/contact/
     
     AUTHOR AND COPYRIGHT
         This script was authored by Michael Lissner and is released under GNU GPLv3.

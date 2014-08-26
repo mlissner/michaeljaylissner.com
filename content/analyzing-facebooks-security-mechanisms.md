@@ -1,7 +1,7 @@
 Title: Analyzing Facebook's Security Mechanisms
 Date: 2009-11-15T17:43:55
 Tags: security, facebook, paper, privacy
-Category: Privacy and Security
+Category: Privacy & Security
 
 
 For my <a href="http://is219.blogspot.com/">Privacy, 

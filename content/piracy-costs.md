@@ -1,7 +1,7 @@
 Title: Piracy "Costs"
 Date: 2008-10-08T14:12:00
 Tags: piracy, bad statistics
-Category: Policy and Politics
+Category: Policy & Politics
 
 Ars Technica has a <a href="http://arstechnica.com/articles/culture/dodgy-digits-behind-the-war-on-piracy.ars/1">good article today</a> about the costs of piracy where they debunk (in four glorious pages) two figures that are often cited to explain just how bad the piracy problem has become.
 

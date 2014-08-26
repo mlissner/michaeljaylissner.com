@@ -12,7 +12,7 @@ rid of the ones that are no longer updated or simply gone.
 
 Check it out on BitBucket and give it a whirl. It'll go through an OPML file, 
 check all the feeds in it, and make a new file for you that has them cleaned
- out. In my case, it purged about 20% of the feeds I had -- a big improvement. 
+out. In my case, it purged about 20% of the feeds I had -- a big improvement. 
 
 It's a simple tool, but look, if your friend hasn't updated their blog in 
 two years...they're probably not going to. If the feed is gone, you no longer 

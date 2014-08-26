@@ -15,4 +15,4 @@ assignment I have ever worked on [are welcome to check it out][1].
 I am officially a free man once again! Thanks to all who made this possible
 with their encouragement and patience! 
 
-[1]: {filename}/pct-temperatures/
+[1]: {filename}/pages/pct-temperatures.md

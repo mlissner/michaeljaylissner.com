@@ -1,7 +1,7 @@
 Title: Making Prey of Computer Thieves
 Date: 2009-07-25T22:39:35
 Tags: security, prey
-Category: Privacy and Security
+Category: Privacy & Security
 
 Laptops get stolen. It sucks, but we know it happens from time to time. 
 Recently, I've been checking out programs that can help to catch the 

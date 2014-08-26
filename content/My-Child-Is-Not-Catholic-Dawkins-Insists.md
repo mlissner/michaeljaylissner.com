@@ -2,7 +2,7 @@ Title: My Child Is NOT Catholic
 Subtitle: Dawkins Insists
 Date: 2008-03-09T10:34:27
 Tags: me, atheism, Cal
-Category: Policy and Politics
+Category: Policy & Politics
 
 ![Dawkins]({filename}/images/dawkins.jpg)
 

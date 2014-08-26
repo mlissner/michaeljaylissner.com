@@ -15,4 +15,4 @@ I'd love to get any feedback I can about this. It's probably still got some bugs
 
 **Update:** I got in touch with the developer of Xacobeo. There's an --html flag that you can pass to it at startup, if that's your intention. If you use that, it indeed uses the same DOM parser that my tool does. Sigh. Affordances are important, especially in a GUI-based tool.
 
-[1]: https://bitbucket.org/mlissner/lxml-xpath-tester/
+[1]: https://github.com/mlissner/lxml-xpath-tester/

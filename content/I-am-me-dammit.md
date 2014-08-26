@@ -1,7 +1,7 @@
 Title: I Am Me, Dammit! 
 Date: 2008-09-15T15:00:30
 Tags: rant, theft, bastard, identity, security
-Category: Privacy and Security
+Category: Privacy & Security
 
 
 Well, it happened. The bastards stole my identity. They somehow got my credit 

@@ -1,7 +1,7 @@
 Title: Some Legal Gems
 Date: 2009-12-12T23:11:37
 Tags: law, patriotism, red cross, olympics
-Category: Policy and Politics
+Category: Policy & Politics
 
 As anybody who has been following my <a href="http://twitter.com/mlissner">twitter stream</a> today knows, I have been spending the entire day hunting, pecking, avoiding, and kind of working on my final exam for my <a href="http://people.ischool.berkeley.edu/~bcarver/mediawiki/index.php/Intellectual_Property_Law_for_the_Information_Industries_Syllabus">Intellectual Property Law Class</a>.
 

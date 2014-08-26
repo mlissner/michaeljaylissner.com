@@ -1,7 +1,7 @@
 Title: Zeran v. AOL Paper Posted
 Date: 2009-03-18T12:47:06
 Tags: cyberlaw, paper, Zeran, AOL
-Category: Policy and Politics
+Category: Policy & Politics
 
 I normally would post my work here for posterity when I finished it, but my latest assignment was actually due online as a Wikipedia article. 
 

@@ -1,7 +1,7 @@
 Title: Confused About Obama
 Date: 2009-01-23T13:35:55
 Tags: politics, Obama, change
-Category: Policy and Politics
+Category: Policy & Politics
 
 
 You know, I was 18 when Bush came into power. I had embarrassingly weak knowledge of politics, and didn't vote in the election despite some people getting rather annoyed with me about it. I argued at the time (and I stand by this), that people should only vote if they know enough to vote the right way. At the time, I felt like I didn't know enough.
