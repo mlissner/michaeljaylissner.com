@@ -6,7 +6,7 @@ rid of the ones that are no longer updated or simply gone. &lt;/p&gt;
 &lt;p&gt;&lt;a href="https://bitbucket.org/mlissner/trim-my-feeds/overview"&gt;So I built a tool.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Check it out on BitBucket and give it a whirl. It'll go through an OPML file, 
 check all the feeds in it, and make a new file for you that has them cleaned
- out. In my case, it purged about 20% of the feeds I had -- a big improvement. &lt;/p&gt;
+out. In my case, it purged about 20% of the feeds I had -- a big improvement. &lt;/p&gt;
 &lt;p&gt;It's a simple tool, but look, if your friend hasn't updated their blog in 
 two years...they're probably not going to. If the feed is gone, you no longer 
 need it cluttering your life. If a feed has been redirected, you should fix 

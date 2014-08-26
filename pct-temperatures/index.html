@@ -12,18 +12,17 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Final Project, courtlistener.com, announcements, Tech, " />
 
-<meta property="og:title" content="Announcing CourtListener.com "/>
-<meta property="og:url" content="//mlissner.github.io/michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/" />
-<meta property="og:description" content="I&#39;m elated to announce today that I am officially taking the ropes of my final project and letting it loose into the wild. It&#39;s been seven months since development on it officially started and finally, the beta version is done and the report is released. If you haven ..." />
+<meta property="og:title" content="Pacific Crest Temperature Project  - Alas, now defunct! "/>
+<meta property="og:url" content="//mlissner.github.io/michaeljaylissner.com/pct-temperatures" />
+<meta property="og:description" content="Introduction As mentioned in a previous blog post, in 2005 and 2006 six hikers carried iButton thermocron devices 2,650 miles from Mexico to Canada along the Pacific Crest Trail. These devices consist of a sealed canister about the size of five stacked dimes. Inside the canister is the following ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
 <meta property="og:article:author" content="Michael Lissner" />
-<meta property="og:article:published_time" content="2010-05-01T20:08:16" />
-<meta name="twitter:title" content="Announcing CourtListener.com ">
-<meta name="twitter:description" content="I&#39;m elated to announce today that I am officially taking the ropes of my final project and letting it loose into the wild. It&#39;s been seven months since development on it officially started and finally, the beta version is done and the report is released. If you haven ...">
+<meta property="og:article:published_time" content="2007-11-21T00:00:00" />
+<meta name="twitter:title" content="Pacific Crest Temperature Project  - Alas, now defunct! ">
+<meta name="twitter:description" content="Introduction As mentioned in a previous blog post, in 2005 and 2006 six hikers carried iButton thermocron devices 2,650 miles from Mexico to Canada along the Pacific Crest Trail. These devices consist of a sealed canister about the size of five stacked dimes. Inside the canister is the following ...">
 
-        <title>Announcing CourtListener.com  · Michael Jay Lissner
+        <title>Pacific Crest Temperature Project  - Alas, now defunct!  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -66,65 +65,94 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="//mlissner.github.io/michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/"> Announcing CourtListener.com  </a></h1>
+    <h1><a href="//mlissner.github.io/michaeljaylissner.com/pct-temperatures"> Pacific Crest Temperature Project  <small> Alas, now defunct! </small>  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
-        <div class="span8 offset2 article-content">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#applet-and-java-project">Applet and Java Project</a></li>
+<li><a href="#caveats-and-warnings">Caveats and Warnings</a></li>
+<li><a href="#hiker-start-and-end-dates">Hiker Start and End Dates</a></li>
+<li><a href="#the-applet">The Applet</a></li>
+<li><a href="#bugs-and-questions">Bugs and Questions</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
 
             
-            <p>I'm elated to announce today that I am officially taking the ropes of my 
-final project and letting it loose into the wild. It's been seven months 
-since development on it officially started and finally, 
-the beta version is done and <a href="//mlissner.github.io/michaeljaylissner.com/pdfs/courtlistener-final-report.pdf">the report</a> is released.</p>
-<p>If you haven't been following along, the <a href="http://courtlistener.com">project 
-itself</a> is an open source legal research tool which allows anybody to 
-keep up to date with federal precedents as they are set by the 13 Federal 
-Circuit courts. Right now, it has <a href="http://courtlistener.com/coverage/">more 
-than 130,000 documents in its corpus</a>, 
-including almost all of the Supreme Court record dating back to 1754. Every 
-day it downloads the latest documents within about a half hour of when 
-each court publishes them.</p>
-<p>One thing we've focused on while building the site has making it as useful 
-as possible for as many people as possible. Since not everybody likes 
-getting updates in their inbox, we've also tied the search engine in with 
-an Atom feed generator so that you can search for whatever you want, 
-and then follow updates in your feed reader.</p>
-<p>Everything we've built uses a powerful boolean search engine on the backend. 
-At present, there are <a href="https://www.courtlistener.com/search/advanced-techniques/">a ton of boolean connectors</a> that you can use on our 
-site to search our corpus or create alerts and feeds. Unlike full text search 
-that most people are familiar with, boolean search allows incredibly complex 
-queries, such as every document mentioning Attorney General Holder that is 
-published in the Third Circuit of Appeals (<a href="http://courtlistener.com/search/results/?q=%40court+ca3+%40doctext+holder&amp;search=">@court ca3 @doctext holder</a>), 
-or perhaps every document that mentions "Roe" and "Wade" within ten words of 
-each other (<a href="http://courtlistener.com/search/results/?q=%40doctext+%22roe+wade%22~10&amp;search=">@doctext "roe wade"~10</a>).</p>
-<p>But that's not all. Because we also want you to be able to use this 
-efficiently during your day-to-day searching, 
-we've built an <a href="http://courtlistener.com/tools/">add-on that will 
-work in most browsers</a>, which allows you to search CourtListener.com 
-without first going to our homepage.</p>
-<p>You can also browse all of documents in our corpus, 
-or you can go to the details page for an opinion, where you can read the 
-text of its body without having to download a PDF and crank up Adobe Acrobat.</p>
-<p>As I mentioned earlier, this project has been designed as an open source 
-project, so if you're looking for something to contribute to, 
-look no further. We have a very active <a href="https://github.com/freelawproject/courtlistener/issues">bug list</a> where you can dip your 
-toes in, or if you prefer something meatier, we can cook something up 
-specifically for you.</p>
-<p>I've greatly enjoyed working on this project so far, 
-and I'd love to get more people using it, working on it, 
-and recommending it to their friends. We're already planning version 1.0, 
-so drop me a line if you're interested in helping out, otherwise, <a href="https://www.courtlistener.com">go check it 
-out already</a>, and see all that it has to offer!</p>
-            
+<h2 id="introduction">Introduction</h2>
+<p>As mentioned in a <a href="//mlissner.github.io/michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/">previous blog post</a>, in 2005 and 2006 six hikers carried 
+<a href="http://www.maxim-ic.com/products/ibutton/">iButton thermocron</a> devices 2,650 miles from Mexico to Canada along the 
+<a href="http://www.pcta.org">Pacific Crest Trail</a>. These devices consist of a sealed canister about the
+size of five stacked dimes. Inside the canister is the following:</p>
+<ul>
+<li>A piece of computer memory</li>
+<li>A digital clock</li>
+<li>A thermometer</li>
+</ul>
+<p>Each hour, these devices were programmed to check the temperature and record 
+it to the memory. Upon returning from the journey, the devices were connected 
+to a computer and the data was extracted. All told, there are about 18,522 
+data points – too many to be plotted in any one graph. As a result of 
+the struggle to make meaningful use of this data, the applet below was created. </p>
+<h2 id="applet-and-java-project">Applet and Java Project</h2>
+<p>This applet was created as a final project for Java: Discovering its Power, a 
+class offered by <a href="http://www.unex.berkeley.edu/">University of California Berkeley Extension</a>. The source 
+code is <a href="https://github.com/mlissner/pct-temperature-project/">on github</a>, and modifications or updates are more than 
+welcome. You can find the hiker's raw data in the <a href="https://github.com/mlissner/pct-temperature-project/tree/master/data">data directory</a>. You 
+will see that it is in <code>.csv</code> format. The fields are: month, day, year, hour, 
+temperature).</p>
+<p>To use the applet, simply select the date range that you are interested in 
+displaying, the time of day that interests you, the hikers whose data you want 
+to see, and press the 'generate' button.</p>
+<h2 id="caveats-and-warnings">Caveats and Warnings</h2>
+<p>There are a few caveats about using this data:</p>
+<ul>
+<li>The primary caveat is that these results are all passive data, which is to 
+ say that these measurements were not taken by a careful experiment, but 
+ rather by a device that was carried somewhere in a backpack for the length of 
+ a five month journey. As a result, the figures shown can vary greatly 
+ depending on how the device was treated, where it was when it took its 
+ measurement, and any number of other factors.</li>
+<li>Ground temperatures and solar energy can be very extreme. Many of these 
+ hikers carried their iButton in a pack that might have been set within one or 
+ two inches of the ground or directly in the sun, where the temperature can 
+ seem unreal. I have seen measurements ranging from about 10 to 160 degrees F. 
+ These are actual measurements.</li>
+<li>Different hikers move at different paces, and take off-trail days at 
+ different times. There is no guarantee that the figures you are looking at 
+ were measured while the hiker was on the trail.</li>
+</ul>
+<h2 id="hiker-start-and-end-dates">Hiker Start and End Dates</h2>
+<p>Adam Bradley: 5/15/06 to 9/24/06<br/>
+Matt Church: 4/28/06 to 6/22/06<br/>
+Robert Francisco: 4/25/06 to 9/26/06<br/>
+Michael Lissner: 4/21/05 to 9/12/05<br/>
+Jeff Singewald: 4/22/06 to 9/6/06  </p>
+<h2 id="the-applet">The Applet</h2>
+<p>Unfortunately, the applet has been retired due to the obviation of Java 
+Applets. Try though I might to make it continue working, ultimately it needs to
+be recoded, likely in JavaScript. Contributions welcome.</p>
+<h2 id="bugs-and-questions">Bugs and Questions</h2>
+<p>Inevitably, we shall find bugs and problems with this applet. When that 
+happens, please post them on Github.</p>
+<p>Any questions about the use of this applet are more than welcome. Just <a href="//mlissner.github.io/michaeljaylissner.com/contact">send 
+me a jot</a> or make a comment below.</p>
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="//mlissner.github.io/michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/#disqus_thread">
+                href="//mlissner.github.io/michaeljaylissner.com/pct-temperatures#disqus_thread">
                 Comments
             </a>
         </div>
@@ -134,8 +162,8 @@ out already</a>, and see all that it has to offer!</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'michaeljaylissner';
-        var disqus_identifier = '//mlissner.github.io/michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/';
-    var disqus_url = '//mlissner.github.io/michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/';
+        var disqus_identifier = '//mlissner.github.io/michaeljaylissner.com/pct-temperatures';
+    var disqus_url = '//mlissner.github.io/michaeljaylissner.com/pct-temperatures';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -153,30 +181,13 @@ out already</a>, and see all that it has to offer!</p>
 </div>
 </section>
 
-            <hr/>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
-            <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2010-05-01T20:08:16">May 1, 2010</time>
-            <h4>Category</h4>
-            <a class="category-link" href="//mlissner.github.io/michaeljaylissner.com/categories.html#tech-ref">Tech</a>
-            <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article">
-                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#announcements-ref">announcements
-                    <span>1</span>
-</a></li>
-                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#courtlistenercom-ref">courtlistener.com
-                    <span>12</span>
-</a></li>
-                <li><a href="//mlissner.github.io/michaeljaylissner.com/tags.html#final-project-ref">Final Project
-                    <span>5</span>
-</a></li>
-            </ul>
         </div>
         </section>
-</div>
-</article>
+    </div>
+    </article>
                 </div>
                 <div class="span1"></div>
             </div>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="//mlissner.github.io/michaeljaylissner.com/" rel="alternate"></link><link href="//mlissner.github.io/michaeljaylissner.com/feeds/tag/dmca" rel="self"></link><id>//mlissner.github.io/michaeljaylissner.com/</id><updated>2010-01-15T10:27:18-08:00</updated><entry><title>How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/" rel="alternate"></link><updated>2010-01-15T10:27:18-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2010-01-15:michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/</id><summary type="html">&lt;p&gt;&lt;strong&gt;Updated, 2010-01-24:&lt;/strong&gt; Some edits regarding the Affero license (thanks to
 Brian at &lt;a href="http://cyberlawcases.com/"&gt;http://cyberlawcases.com&lt;/a&gt; for the corrections).&lt;/p&gt;
 &lt;p&gt;I've finally begun doing some of the actual coding for &lt;a href="http://www.ischool.berkeley.edu/programs/masters/projects/2010/judicialnlp"&gt;my final 
-project&lt;/a&gt; so the time has come to set up &lt;a href="http://bitbucket.org/mlissner/legal-current-awareness/"&gt;a mercurial repository&lt;/a&gt; to 
+project&lt;/a&gt; so the time has come to set up &lt;a href="https://github.com/freelawproject/courtlistener"&gt;a mercurial repository&lt;/a&gt; to 
 hold the code.&lt;/p&gt;
 &lt;p&gt;Once we complete our project, we will have built a free product that 
 competes with some of the core functionality of both LexisNexis and 
