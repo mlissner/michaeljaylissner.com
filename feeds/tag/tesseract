@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="//mlissner.github.io/michaeljaylissner.com/" rel="alternate"></link><link href="//mlissner.github.io/michaeljaylissner.com/feeds/tag/tesseract" rel="self"></link><id>//mlissner.github.io/michaeljaylissner.com/</id><updated>2012-02-11T10:53:30-08:00</updated><entry><title>Adding New Fonts to Tesseract 3 OCR Engine</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/" rel="alternate"></link><updated>2012-02-11T10:53:30-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2012-02-11:michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/</id><summary type="html">
 &lt;h2 id="status"&gt;Status&lt;/h2&gt;
 &lt;p&gt;I'm attempting to keep this up to date as Tesseract changes. If you have 
-questions or corrections, please send them directly using the &lt;a href="{filename}/contact.md"&gt;contact 
+questions or corrections, please send them directly using the &lt;a href="//mlissner.github.io/michaeljaylissner.com/contact"&gt;contact 
 page&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I've turned off commenting on this article because it was just a 
 bunch of people asking for help and never getting any. If you need help 

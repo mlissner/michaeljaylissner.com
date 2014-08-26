@@ -56,7 +56,7 @@ cat &lt;span class="s"&gt;&amp;lt;&amp;lt;EOF&lt;/span&gt;
 &lt;span class="s"&gt;    autocompleteDestroyer.sh exists with a status of 0 if it encounters no problems. An exit status of 1 means incorrect usage. An exit status of 2 indicates it was unable to find your files. An exit status of 3 indicates the user terminated the program. An exit status of 4 means it encountered problems editing your file.&lt;/span&gt;
 
 &lt;span class="s"&gt;BUGS&lt;/span&gt;
-&lt;span class="s"&gt;    If any bugs are encountered, please see michaeljaylissner.com/contact&lt;/span&gt;
+&lt;span class="s"&gt;    If any bugs are encountered, please see http://michaeljaylissner.com/contact/&lt;/span&gt;
 
 &lt;span class="s"&gt;AUTHOR AND COPYRIGHT&lt;/span&gt;
 &lt;span class="s"&gt;    This script was authored by Michael Lissner and is released under GNU GPLv3.&lt;/span&gt;

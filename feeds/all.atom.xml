@@ -327,8 +327,8 @@ it's possible that a Google search for the party name could turn up results
 sitemaps so that they use the noindex X-Robots-Tag HTTP header. This tells 
 search crawlers that they are welcome to read our sitemaps, 
 but that they should avoid serving them or indexing them.&lt;/p&gt;</summary><category term="sitemaps.xml"></category><category term="privacy"></category><category term="policy"></category><category term="courtlistener.com"></category></entry><entry><title>My Presentation Proposal for LVI 2012</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2012/03/15/my-presentation-proposal-for-lvi-2012/" rel="alternate"></link><updated>2012-03-15T20:09:29-07:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2012-03-15:michaeljaylissner.com/posts/2012/03/15/my-presentation-proposal-for-lvi-2012/</id><summary type="html">&lt;p&gt;The &lt;a href="http://blog.law.cornell.edu/lvi2012/"&gt;Law Via the Internet&lt;/a&gt; conference is  celebrating its 20th anniversary
- at Cornell University on October 7-9th. I will be attending, 
- and with any luck, I'll be presenting on the topic proposed below.&lt;/p&gt;
+at Cornell University on October 7-9th. I will be attending, 
+and with any luck, I'll be presenting on the topic proposed below.&lt;/p&gt;
 &lt;h3 id="wrangling-court-data-on-a-national-level"&gt;Wrangling Court Data on a National Level&lt;/h3&gt;
 &lt;p&gt;Access to case law has recently become easier than ever: By simply visiting 
 a court's website it is now possible to find and read thousands of cases 
@@ -384,7 +384,7 @@ presenting our work at LVI 2012, we will be able to share what we have
 learned and gain additional collaborators in our work.&lt;/p&gt;</summary><category term="proposal"></category><category term="presentations"></category><category term="me"></category><category term="lvi2012"></category><category term="juriscraper"></category><category term="courtlistener.com"></category></entry><entry><title>Adding New Fonts to Tesseract 3 OCR Engine</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/" rel="alternate"></link><updated>2012-02-11T10:53:30-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2012-02-11:michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/</id><summary type="html">
 &lt;h2 id="status"&gt;Status&lt;/h2&gt;
 &lt;p&gt;I'm attempting to keep this up to date as Tesseract changes. If you have 
-questions or corrections, please send them directly using the &lt;a href="{filename}/contact.md"&gt;contact 
+questions or corrections, please send them directly using the &lt;a href="//mlissner.github.io/michaeljaylissner.com/contact"&gt;contact 
 page&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I've turned off commenting on this article because it was just a 
 bunch of people asking for help and never getting any. If you need help 
@@ -902,7 +902,7 @@ which is a lot of talking time. I imagine it's not easy for the students to
 &lt;li&gt;Browsers&lt;/li&gt;
 &lt;li&gt;Privacy&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If you're interested, I've posted my slides for these in the &lt;a href="{filename}/papers-and-projects/"&gt;projects and 
+&lt;p&gt;If you're interested, I've posted my slides for these in the &lt;a href="//mlissner.github.io/michaeljaylissner.com/projects-and-papers"&gt;projects and 
 papers&lt;/a&gt; section of the site. It's definitely true that the best way to 
 learn it to teach.&lt;/p&gt;
 &lt;p&gt;I've also been learning a little about how to get the class to participate 
@@ -1380,7 +1380,8 @@ heroes. And consider also how little attention is given to antiwar movements and
 &lt;/blockquote&gt;
 &lt;p&gt;If you haven't read &lt;em&gt;&lt;a href="http://www.amazon.com/exec/obidos/ASIN/0060557672/simiansbooksonli"&gt;Passionate Declarations&lt;/a&gt;&lt;/em&gt;, you should.&lt;/p&gt;</summary><category term="zinn"></category><category term="RIP"></category><category term="politics"></category><category term="me"></category></entry><entry><title>New Server!</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2010/01/26/new-server/" rel="alternate"></link><updated>2010-01-26T20:22:42-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2010-01-26:michaeljaylissner.com/posts/2010/01/26/new-server/</id><summary type="html">&lt;p&gt;When I &lt;a href="/blog/drupal-is-go"&gt;started&lt;/a&gt; this blog more than two years ago, it was an experiment in blogging and an experiment in running my own server. At this point, it's safe to say that the results of the experiment are in. While running my own server out of my attic has been an enlightening experience, teaching me about everything from DNS to PHP, ultimately, I have come to the conclusion that if I want a reliable, powerful and secure sever, running it myself is not the way to do it.&lt;/p&gt;
 &lt;p&gt;In that light, today I've transferred this website over to the people at &lt;a href="http://slicehost.com"&gt;slicehost&lt;/a&gt;. This will give me (almost) all the freedom of running the server myself, and should relieve some of the headaches I've had for the past couple of years when it came to power outages, comcast and AT&amp;amp;T outages, and the like.&lt;/p&gt;
-&lt;p&gt;Moving the site over has been a bit complicated, so if you see anything weird, let me know via the &lt;a href="/contact"&gt;contact&lt;/a&gt; link, which should work as of now. &lt;/p&gt;</summary><category term="slicehost"></category><category term="drupal"></category></entry><entry><title>How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/" rel="alternate"></link><updated>2010-01-15T10:27:18-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2010-01-15:michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/</id><summary type="html">&lt;p&gt;&lt;strong&gt;Updated, 2010-01-24:&lt;/strong&gt; Some edits regarding the Affero license (thanks to
+&lt;p&gt;Moving the site over has been a bit complicated, so if you see anything weird, 
+let me know via the &lt;a href="//mlissner.github.io/michaeljaylissner.com/contact"&gt;contact&lt;/a&gt; link, which should work as of now. &lt;/p&gt;</summary><category term="slicehost"></category><category term="drupal"></category></entry><entry><title>How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/" rel="alternate"></link><updated>2010-01-15T10:27:18-08:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2010-01-15:michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/</id><summary type="html">&lt;p&gt;&lt;strong&gt;Updated, 2010-01-24:&lt;/strong&gt; Some edits regarding the Affero license (thanks to
 Brian at &lt;a href="http://cyberlawcases.com/"&gt;http://cyberlawcases.com&lt;/a&gt; for the corrections).&lt;/p&gt;
 &lt;p&gt;I've finally begun doing some of the actual coding for &lt;a href="http://www.ischool.berkeley.edu/programs/masters/projects/2010/judicialnlp"&gt;my final 
 project&lt;/a&gt; so the time has come to set up &lt;a href="http://bitbucket.org/mlissner/legal-current-awareness/"&gt;a mercurial repository&lt;/a&gt; to 
@@ -1514,7 +1515,7 @@ cat &lt;span class="s"&gt;&amp;lt;&amp;lt;EOF&lt;/span&gt;
 &lt;span class="s"&gt;    autocompleteDestroyer.sh exists with a status of 0 if it encounters no problems. An exit status of 1 means incorrect usage. An exit status of 2 indicates it was unable to find your files. An exit status of 3 indicates the user terminated the program. An exit status of 4 means it encountered problems editing your file.&lt;/span&gt;
 
 &lt;span class="s"&gt;BUGS&lt;/span&gt;
-&lt;span class="s"&gt;    If any bugs are encountered, please see michaeljaylissner.com/contact&lt;/span&gt;
+&lt;span class="s"&gt;    If any bugs are encountered, please see http://michaeljaylissner.com/contact/&lt;/span&gt;
 
 &lt;span class="s"&gt;AUTHOR AND COPYRIGHT&lt;/span&gt;
 &lt;span class="s"&gt;    This script was authored by Michael Lissner and is released under GNU GPLv3.&lt;/span&gt;
@@ -1720,7 +1721,7 @@ deleted, you will see the date that it was deleted.&lt;/p&gt;
 properly removing images from their site, but until they have proper 
 deletion mechanisms, we should all think twice about what we upload.&lt;/p&gt;
 &lt;p&gt;If there's a service that is not shown here that you'd like to see, 
-please &lt;a href="/contact"&gt;let me know&lt;/a&gt;. And now, without further ado, 
+please &lt;a href="//mlissner.github.io/michaeljaylissner.com/contact"&gt;let me know&lt;/a&gt;. And now, without further ado, 
 I present, the ongoing results of the test:&lt;/p&gt;
 &lt;h2 id="facebook"&gt;Facebook&lt;/h2&gt;
 &lt;p&gt;Facebook properly deleted the photo from their server as of May 27, 2010.&lt;/p&gt;
@@ -4497,7 +4498,7 @@ out, and the point of this post is, if you've been sending emails to any
 they're not going through. But you probably have realized this, 
 because they're bouncing back to you. Well, now you know why.&lt;/p&gt;
 &lt;p&gt;Give me a couple more days, I'm working on it. In the mean time, 
-the &lt;a href="{filename}/contact/"&gt;contact&lt;/a&gt; link does work.&lt;/p&gt;</summary><category term="Linux"></category><category term="zimbra"></category></entry><entry><title>Richard Stallman, Eccentric or Rather Well-Spoken?</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2007/09/12/richard-stallman-founder-of-gnu/" rel="alternate"></link><updated>2007-09-12T21:48:22-07:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2007-09-12:michaeljaylissner.com/posts/2007/09/12/richard-stallman-founder-of-gnu/</id><summary type="html">&lt;p&gt;
+the &lt;a href="//mlissner.github.io/michaeljaylissner.com/contact"&gt;contact&lt;/a&gt; link does work.&lt;/p&gt;</summary><category term="Linux"></category><category term="zimbra"></category></entry><entry><title>Richard Stallman, Eccentric or Rather Well-Spoken?</title><link href="//mlissner.github.io/michaeljaylissner.com/posts/2007/09/12/richard-stallman-founder-of-gnu/" rel="alternate"></link><updated>2007-09-12T21:48:22-07:00</updated><author><name>Michael Lissner</name></author><id>tag:mlissner.github.io,2007-09-12:michaeljaylissner.com/posts/2007/09/12/richard-stallman-founder-of-gnu/</id><summary type="html">&lt;p&gt;
 I had the chance to see &lt;a href="http://en.wikipedia.org/wiki/Richard_Stallman" title="Wikipedia Link"&gt;Richard Stallman &lt;/a&gt;speak the other day at the &lt;a href="http://ischool.berkeley.edu" title="ischool.berkeley.edu"&gt;UC Berkeley School of Information&lt;/a&gt;, and it was quite an experience. In case you don't know the name, Richard Stallman is the man behind GNU, and GNU is the software/philosophy that makes GNU/Linux what it is. Stallman's belief is that all software, and indeed just about everything that you create should be freely available to anybody that wants it. This is in stark opposition to the Microsoftian or even the Apple perspective of software, and indeed Stallman has written a book about this called &lt;em&gt;Free Software, Free Society&lt;/em&gt;. As you might expect, from a man with such beliefs, the book itself is free, and &lt;a href="http://www.gnu.org/philosophy/fsfs/rms-essays.pdf"&gt;you can find it here&lt;/a&gt;.  
 &lt;/p&gt;
 
