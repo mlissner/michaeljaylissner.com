@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/design" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2010-03-13T18:28:28-08:00</updated><entry><title>Designing the Final Project</title><link href="http://michaeljaylissner.com/posts/2010/03/13/designing-the-final-project/" rel="alternate"></link><updated>2010-03-13T18:28:28-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2010-03-13:posts/2010/03/13/designing-the-final-project/</id><summary type="html">&lt;p&gt;Over the past week, I've been working to create scrapers for each of the 13 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="://michaeljaylissner.com/" rel="alternate"></link><link href="://michaeljaylissner.com/feeds/tag/design" rel="self"></link><id>://michaeljaylissner.com/</id><updated>2010-03-13T18:28:28-08:00</updated><entry><title>Designing the Final Project</title><link href="://michaeljaylissner.com/posts/2010/03/13/designing-the-final-project/" rel="alternate"></link><updated>2010-03-13T18:28:28-08:00</updated><author><name>Michael Lissner</name></author><id>tag:,2010-03-13:://michaeljaylissner.com/posts/2010/03/13/designing-the-final-project/</id><summary type="html">&lt;p&gt;Over the past week, I've been working to create scrapers for each of the 13 
 federal appeals courts. Last night I finally finished the last of them, 
 so today I'm moving on to the design of the site. Design is always much 
 better when people work in a team, so I'm putting these designs here so 
@@ -40,14 +40,14 @@ this up, I've already come across a couple problems:&lt;/p&gt;
 &lt;li&gt;The about page is pretty hard to find. It may need more emphasis.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I'm sure there are more problems I'm not seeing. That's why I need your help
-. What am I missing? What should I change? What's stupid? What's outmoded?&lt;/p&gt;</summary><category term="wire frame"></category><category term="Final Project"></category><category term="Design"></category></entry><entry><title>More Security Papers: Breaking ReCAPTCHA and Proactive Methods for Secure Design</title><link href="http://michaeljaylissner.com/posts/2009/12/12/more-security-papers-breaking-recaptcha-and-proactive-methods-for-secure-design/" rel="alternate"></link><updated>2009-12-12T12:07:58-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-12:posts/2009/12/12/more-security-papers-breaking-recaptcha-and-proactive-methods-for-secure-design/</id><summary type="html">&lt;p&gt;Two more security papers today. &lt;/p&gt;
-&lt;p&gt;In the first, &lt;a href="http://michaeljaylissner.com/pdfs/breaking-recaptcha.pdf"&gt;&lt;strong&gt;Breaking ReCAPTCHA&lt;/strong&gt;&lt;/a&gt; I discuss a few methods that 
+. What am I missing? What should I change? What's stupid? What's outmoded?&lt;/p&gt;</summary><category term="wire frame"></category><category term="Final Project"></category><category term="Design"></category></entry><entry><title>More Security Papers: Breaking ReCAPTCHA and Proactive Methods for Secure Design</title><link href="://michaeljaylissner.com/posts/2009/12/12/more-security-papers-breaking-recaptcha-and-proactive-methods-for-secure-design/" rel="alternate"></link><updated>2009-12-12T12:07:58-08:00</updated><author><name>Michael Lissner</name></author><id>tag:,2009-12-12:://michaeljaylissner.com/posts/2009/12/12/more-security-papers-breaking-recaptcha-and-proactive-methods-for-secure-design/</id><summary type="html">&lt;p&gt;Two more security papers today. &lt;/p&gt;
+&lt;p&gt;In the first, &lt;a href="://michaeljaylissner.com/pdfs/breaking-recaptcha.pdf"&gt;&lt;strong&gt;Breaking ReCAPTCHA&lt;/strong&gt;&lt;/a&gt; I discuss a few methods that 
 ReCAPTCHAs can be hacked, and talk a bit about the ways that they were 
 attacked by the Anonymous hacker group. I should mention at the outset that
 none of the approaches here are particularly useful though, 
 and that ultimately, the hacker group beat ReCAPTCHA by simply out 
 numbering it.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://michaeljaylissner.com/pdfs/proactive-security.pdf"&gt;The &lt;em&gt;second paper&lt;/em&gt;&lt;/a&gt; is a brief discussion of some approaches an 
+&lt;p&gt;&lt;a href="://michaeljaylissner.com/pdfs/proactive-security.pdf"&gt;The &lt;em&gt;second paper&lt;/em&gt;&lt;/a&gt; is a brief discussion of some approaches an 
 organization might take when beginning a project in which security is a 
 high concern. Essentially, it takes a chronological approach, 
 from the start to the end of the project. &lt;/p&gt;

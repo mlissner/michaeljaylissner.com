@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/windows" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2012-12-27T11:20:36-08:00</updated><entry><title>Setting up etherpad with postgres on Windows</title><link href="http://michaeljaylissner.com/posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/" rel="alternate"></link><updated>2012-12-27T11:20:36-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-12-27:posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/</id><summary type="html">&lt;p&gt;There don't seem to be any successful installation instructions for postgres on Windows. It's not that hard, but there are a couple things you need to do. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="://michaeljaylissner.com/" rel="alternate"></link><link href="://michaeljaylissner.com/feeds/tag/windows" rel="self"></link><id>://michaeljaylissner.com/</id><updated>2012-12-27T11:20:36-08:00</updated><entry><title>Setting up etherpad with postgres on Windows</title><link href="://michaeljaylissner.com/posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/" rel="alternate"></link><updated>2012-12-27T11:20:36-08:00</updated><author><name>Michael Lissner</name></author><id>tag:,2012-12-27:://michaeljaylissner.com/posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/</id><summary type="html">&lt;p&gt;There don't seem to be any successful installation instructions for postgres on Windows. It's not that hard, but there are a couple things you need to do. &lt;/p&gt;
 &lt;p&gt;I haven't gone through these instructions to make sure they work, but this is roughly what I've done to get my Postgres/Windows/Node/Etherpad working together:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Install git&lt;/li&gt;
@@ -33,7 +33,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;@&lt;/span&gt;&lt;span class="k"&gt;ECHO&lt;/span&gt; &lt;span class="k"&gt;OFF&lt;/span&gt;
 &lt;span class="p"&gt;@&lt;/span&gt;REM This runs etherpad with stdout and stderr getting redirected to special logs
 &lt;span class="k"&gt;call&lt;/span&gt; D:\etherpad\etherpad-lite\start.bat &amp;gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;D&lt;/span&gt;:\etherpad\etherpad-lite\logs\stdout.log &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;D&lt;/span&gt;:\etherpad\etherpad-lite\logs\stderr.log
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="windows"></category><category term="postgres"></category><category term="node"></category><category term="etherpad"></category></entry><entry><title>A Fresh Install of Vista on an HP Laptop</title><link href="http://michaeljaylissner.com/posts/2009/07/23/a-fresh-install-of-vista-on-an-hp-laptop/" rel="alternate"></link><updated>2009-07-23T21:59:02-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-23:posts/2009/07/23/a-fresh-install-of-vista-on-an-hp-laptop/</id><summary type="html">&lt;p&gt;I just used a recovery disk to install Vista on an HP laptop. I'm shocked by what it came with. Just looking at the desktop shows the following software that was installed without me even being able to stop it:&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="windows"></category><category term="postgres"></category><category term="node"></category><category term="etherpad"></category></entry><entry><title>A Fresh Install of Vista on an HP Laptop</title><link href="://michaeljaylissner.com/posts/2009/07/23/a-fresh-install-of-vista-on-an-hp-laptop/" rel="alternate"></link><updated>2009-07-23T21:59:02-07:00</updated><author><name>Michael Lissner</name></author><id>tag:,2009-07-23:://michaeljaylissner.com/posts/2009/07/23/a-fresh-install-of-vista-on-an-hp-laptop/</id><summary type="html">&lt;p&gt;I just used a recovery disk to install Vista on an HP laptop. I'm shocked by what it came with. Just looking at the desktop shows the following software that was installed without me even being able to stop it:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A shortcut to AOL Sign Up&lt;/li&gt;
 &lt;li&gt;Easy Internet Services&lt;/li&gt;
@@ -53,14 +53,14 @@
 &lt;li&gt;A giant Easy Sign-up dialog box&lt;/li&gt;
 &lt;li&gt;A Yahoo! search bar&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Good god. And I paid for this? Unbelievable.&lt;/p&gt;</summary><category term="windows"></category><category term="vista"></category><category term="junkware"></category><category term="HP"></category></entry><entry><title>Remap Caps Lock as Backspace in Windows and Linux</title><link href="http://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/" rel="alternate"></link><updated>2008-04-29T21:33:41-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-29:posts/2008/04/29/remap-caps-lock-as-backspace/</id><summary type="html">
+&lt;p&gt;Good god. And I paid for this? Unbelievable.&lt;/p&gt;</summary><category term="windows"></category><category term="vista"></category><category term="junkware"></category><category term="HP"></category></entry><entry><title>Remap Caps Lock as Backspace in Windows and Linux</title><link href="://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/" rel="alternate"></link><updated>2008-04-29T21:33:41-07:00</updated><author><name>Michael Lissner</name></author><id>tag:,2008-04-29:://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/</id><summary type="html">
 &lt;p&gt;A while back my wrist started hurting from reaching for the cursed backspace
 key. I was making too many mistakes. My solution was to remap the caps 
 lock key on all the computers I use to act as an additional backspace key.
 How did I do it? Well, I'm glad you asked. I'll tell you.&lt;/p&gt;
 &lt;h2 id="in-windows"&gt;In Windows&lt;/h2&gt;
 &lt;p&gt;EDIT: I noticed that the picture doesn't have all the detail you need. The 
-easier way to do this, is to download &lt;a href="http://michaeljaylissner.com/archive/scancode.reg"&gt;this registry key&lt;/a&gt; post, 
+easier way to do this, is to download &lt;a href="://michaeljaylissner.com/archive/scancode.reg"&gt;this registry key&lt;/a&gt; post, 
 and to right click it, selecting merge. After that, restart the computer, and 
 you should be all set.&lt;/p&gt;
 &lt;p&gt;To remap the caps lock to function as a backspace key in Windows, 
@@ -69,7 +69,7 @@ and type in &lt;code&gt;regedit&lt;/code&gt;. In the editor that opens up, navig
 in the picture below, and create a new key named Scancode Map of the type 
 &lt;code&gt;REG_BINARY&lt;/code&gt;. Give it the value shown in the picture, restart, 
 and you're set. If things get wacky, delete the key and try again.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/Windows Registry Remap Screenshot.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="://michaeljaylissner.com/images/Windows Registry Remap Screenshot.jpg"/&gt;&lt;/p&gt;
 &lt;h2 id="in-linux"&gt;In Linux&lt;/h2&gt;
 &lt;p&gt;I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
 by opening a terminal, and running the xev program. Once that is running, 
