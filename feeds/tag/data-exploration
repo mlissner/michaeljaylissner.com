@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="//michaeljaylissner.com/" rel="alternate"></link><link href="//michaeljaylissner.com/feeds/tag/data-exploration" rel="self"></link><id>//michaeljaylissner.com/</id><updated>2010-02-26T17:45:19-08:00</updated><entry><title>Exploratory Analysis of Service Recipients of the Contra Costa County Community Services Bureau</title><link href="//michaeljaylissner.com/posts/2010/02/26/exploratory-analysis-of-service-recipients-of-community-services-bureau/" rel="alternate"></link><updated>2010-02-26T17:45:19-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2010-02-26:posts/2010/02/26/exploratory-analysis-of-service-recipients-of-community-services-bureau/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/data-exploration" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2010-02-26T17:45:19-08:00</updated><entry><title>Exploratory Analysis of Service Recipients of the Contra Costa County Community Services Bureau</title><link href="http://michaeljaylissner.com/posts/2010/02/26/exploratory-analysis-of-service-recipients-of-community-services-bureau/" rel="alternate"></link><updated>2010-02-26T17:45:19-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2010-02-26:posts/2010/02/26/exploratory-analysis-of-service-recipients-of-community-services-bureau/</id><summary type="html">
 &lt;h2 id="introduction-and-background"&gt;Introduction and Background&lt;/h2&gt;
 &lt;p&gt;As part of my &lt;a href="http://courses.ischool.berkeley.edu/i247/s10/schedule.html"&gt;information visualization&lt;/a&gt; class at the &lt;a href="http://ischool.berkeley.edu"&gt;UC Berkeley 
 School of Information&lt;/a&gt;, I have completed an exploratory analysis of the 
@@ -13,7 +13,7 @@ neediest families and children, and thus the data should not be considered
 a representative sample of the county at large. With that in mind however, 
 extrapolations could likely be made by comparing the number of children in 
 a geographic area against the number of children analyzed herein.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="//michaeljaylissner.com/images/ehsd/Residential Density of Families2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ehsd/Residential Density of Families2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;The data that is used was exported from the Bureau's &lt;q&gt;COPA&lt;/q&gt; database, 
 pseudo-anonymized by the Bureau,&lt;a name="ref1"&gt;&lt;/a&gt;&lt;a href=".#fn1"&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; 
 and then provided to me for this research. The COPA database is an online 
@@ -54,25 +54,25 @@ This priority might create an incentive to report that there is a secondary
 caregiver in the child's life, even when there is not. A less pessimistic 
 explanation could be that a child is able to develop equally well 
 regardless of whether they have one or two caregivers.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="//michaeljaylissner.com/images/ehsd/By Secondary Caregiver.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ehsd/By Secondary Caregiver.png"/&gt;&lt;/p&gt;
 &lt;p&gt;In a similar vein, I examined if there was a correlation between family 
 size and the developmental scores of a child. As can be seen below, 
 no correlation seems to exist in this dataset. An explanation for this 
 could be that the added difficulty a caregiver might experience taking care
 of a larger family might be equally offset by the additional attention and
 stimulus a larger family provides to a child.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="//michaeljaylissner.com/images/ehsd/Number in Household.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ehsd/Number in Household.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Another potential indicator of home stability could be age of the parent, 
 since older parents are more likely to have stable lives. As indicated 
 below, as the parental age increases, so too do the scores of their 
 children.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="//michaeljaylissner.com/images/ehsd/PC Age.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ehsd/PC Age.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Teen parenting is known to be very difficult, but of the 41 teen parents 
 that were in the data set, their children do not score significantly worse 
 on the developmental measures. An interesting fact that emerged during this
 analysis was that there were no teen-aged male primary caregivers in the 
 data set of more than 6,000 primary caregivers. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="//michaeljaylissner.com/images/ehsd/Teen Parent, PC Gender.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ehsd/Teen Parent, PC Gender.png"/&gt;&lt;/p&gt;
 &lt;p&gt;A final test that I ran on this data was to see if there was a correlation 
 between the number of hours that a primary caregiver works and the 
 developmental results for a child. Again, although I had expected the 
@@ -82,7 +82,7 @@ this was not borne out by the data. Instead, there is a downward trend as
 the primary caregiver worked more hours until they began working &lt;em&gt;more 
 than&lt;/em&gt; eight hours/day, at which point developmental scores begin to 
 rise again.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="//michaeljaylissner.com/images/ehsd/PC Hours Per Day 2.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ehsd/PC Hours Per Day 2.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Ultimately, and much to my surprise, it appears that my hypothesis — 
 that an increase in parental involvement results in a more developmentally 
 advanced child — is not borne out by the data. With the exception of 
@@ -98,14 +98,14 @@ the child's primary language.&lt;/p&gt;
 &lt;p&gt;In looking at the child's English skill, as described by their primary 
 caregiver, a very clear trend emerges, confirming this hypothesis: As 
 English skills improve, children score higher on developmental assessments.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="//michaeljaylissner.com/images/ehsd/English Skill.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ehsd/English Skill.png"/&gt;&lt;/p&gt;
 &lt;p&gt;When the primary languages are broadly binned by geographic origin, 
 clear trends emerge in the average assessment results of the children. 
 Although the sample sizes are small for some of the bins, 
 it appears that children with African and European languages on average 
 have lower developmental scores than those children that speak Spanish, 
 English, Middle Eastern or Asian languages.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="//michaeljaylissner.com/images/ehsd/Language Origin.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ehsd/Language Origin.png"/&gt;&lt;/p&gt;
 &lt;h3 id="hypothesis-3-gender-and-raceethnicity-will-not-affect-the-development-of-the-children-but-disability-status-will"&gt;Hypothesis 3: Gender and race/ethnicity will not affect the development of the children, but disability status will.&lt;/h3&gt;
 &lt;p&gt;Although in many cases, race/ethnicity and language are tightly coupled, 
 my hypothesis is that race/ethnicity will not be a significant factor in 
@@ -117,10 +117,10 @@ their developmental advancement. For those children for whom English is
 their second language, significant differences can be seen between races, 
 but this finding mirrors that above, with non-English speakers performing 
 worse on the developmental measures.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="//michaeljaylissner.com/images/ehsd/By Race and Language.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ehsd/By Race and Language.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Consistent with my hypothesis, differences between child gender and 
 developmental scores can also be considered negligible.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="//michaeljaylissner.com/images/ehsd/By Gender.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ehsd/By Gender.png"/&gt;&lt;/p&gt;
 &lt;p&gt;I decided to examine the average development of the children against their 
 disability status in order to determine the validity of the developmental 
 assessments themselves. Since children that have diagnosed disabilities 
@@ -130,7 +130,7 @@ this should serve as a useful proxy for the validity of the assessment. &lt;/p&g
 are generally administered by county workers that are aware of the 
 disability status of the children, it remains unclear whether this 
 contributes to the extreme results shown below.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="No alt" src="//michaeljaylissner.com/images/ehsd/By Disability Status.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ehsd/By Disability Status.png"/&gt;&lt;/p&gt;
 &lt;h2 id="tool-analysis"&gt;Tool Analysis&lt;/h2&gt;
 &lt;p&gt;For this research, I have used a number of tools, 
 few of which worked particularly well. I began this work by doing a survey 

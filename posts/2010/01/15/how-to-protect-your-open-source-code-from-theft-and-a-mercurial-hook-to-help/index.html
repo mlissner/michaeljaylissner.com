@@ -15,33 +15,35 @@
 <meta name="keywords" content="mercurial, hook, Final Project, DMCA, copyright, Affero GPLv3, courtlistener.com, Tech, " />
 
 <meta property="og:title" content="How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help "/>
-<meta property="og:url" content="//michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/" />
+<meta property="og:url" content="http://michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/" />
 <meta property="og:description" content="Updated, 2010-01-24: Some edits regarding the Affero license (thanks to Brian at http://cyberlawcases.com for the corrections). I&#39;ve finally begun doing some of the actual coding for my final project so the time has come to set up a mercurial repository to hold the code. Once we complete ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
 <meta property="og:article:author" content="Michael Lissner" />
 <meta property="og:article:published_time" content="2010-01-15T10:27:18" />
 <meta name="twitter:title" content="How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help ">
 <meta name="twitter:description" content="Updated, 2010-01-24: Some edits regarding the Affero license (thanks to Brian at http://cyberlawcases.com for the corrections). I&#39;ve finally begun doing some of the actual coding for my final project so the time has come to set up a mercurial repository to hold the code. Once we complete ...">
+<meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
+<meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
         <title>How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="//michaeljaylissner.com/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="//michaeljaylissner.com/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="//michaeljaylissner.com/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="//michaeljaylissner.com/theme/css/custom.css" media="screen">
-        <link rel="shortcut icon" href="//michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" type="image/png" />
-        <link rel="icon" href="//michaeljaylissner.com/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" href="//michaeljaylissner.com/theme/images/apple-touch-icon.png"  type="image/png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="//michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="//michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="//michaeljaylissner.com/theme/images/apple-touch-icon-76x76.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="//michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="//michaeljaylissner.com/theme/images/apple-touch-icon-120x120.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="//michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="//michaeljaylissner.com/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link href="//michaeljaylissner.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Michael Jay Lissner - Full Atom Feed" />
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://michaeljaylissner.com/theme/css/custom.css" media="screen">
+        <link rel="shortcut icon" href="http://michaeljaylissner.com/theme/images/favicon.ico" type="image/x-icon" type="image/png" />
+        <link rel="icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="http://michaeljaylissner.com/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="http://michaeljaylissner.com/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link href="http://michaeljaylissner.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Michael Jay Lissner - Full Atom Feed" />
     </head>
     <body>
         <div id="content-sans-footer">
@@ -54,16 +56,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="//michaeljaylissner.com/"><span class=site-name>Michael Jay Lissner</span></a>
+                    <a class="brand" href="http://michaeljaylissner.com/"><span class=site-name>Michael Jay Lissner</span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href="//michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="//michaeljaylissner.com/about">About Site</a></li>
-                                        <li ><a href="//michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="//michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
-                            <li ><a href="//michaeljaylissner.com/tags.html">Tags</a></li>
-                            <li ><a href="//michaeljaylissner.com/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="//michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            <li ><a href="http://michaeljaylissner.com">Home</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                            <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
+                            <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -76,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="//michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/"> How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/"> How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help  </a></h1>
     </header>
 </div>
 
@@ -120,7 +122,7 @@ notices, or leave our copyright information intact. (Placing such notices
 in each file is also <a href="http://www.fsf.org/licensing/licenses/gpl-howto.html">the recommendation</a> of the Free Software 
 Foundation.)</p>
 <p>To place our information into each and every file of code that we upload 
-publicly, I wrote <a href="//michaeljaylissner.com/archive/checklicense.py">a short mercurial hook</a> that  adds copyright and 
+publicly, I wrote <a href="http://michaeljaylissner.com/archive/checklicense.py">a short mercurial hook</a> that  adds copyright and 
 licensing information it to the top of every file that is modified or added 
 to the repository. To use the script, simply make it executable, 
 place it in the .hg directory of your project, and add the following lines
@@ -141,7 +143,7 @@ repository. It should be fairly easy to modify though to fit your own needs.</p>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="//michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/#disqus_thread">
+                href="http://michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/#disqus_thread">
                 Comments
             </a>
         </div>
@@ -151,8 +153,8 @@ repository. It should be fairly easy to modify though to fit your own needs.</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'michaeljaylissner';
-        var disqus_identifier = '//michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/';
-    var disqus_url = '//michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/';
+        var disqus_identifier = 'http://michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/';
+    var disqus_url = 'http://michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -177,31 +179,38 @@ repository. It should be fairly easy to modify though to fit your own needs.</p>
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2010-01-15T10:27:18">Jan 15, 2010</time>
             <h4>Category</h4>
-            <a class="category-link" href="//michaeljaylissner.com/categories.html#tech-ref">Tech</a>
+            <a class="category-link" href="http://michaeljaylissner.com/categories.html#tech-ref">Tech</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="//michaeljaylissner.com/tags.html#affero-gplv3-ref">Affero GPLv3
+                <li><a href="http://michaeljaylissner.com/tags.html#affero-gplv3-ref">Affero GPLv3
                     <span>1</span>
 </a></li>
-                <li><a href="//michaeljaylissner.com/tags.html#copyright-ref">copyright
+                <li><a href="http://michaeljaylissner.com/tags.html#copyright-ref">copyright
                     <span>8</span>
 </a></li>
-                <li><a href="//michaeljaylissner.com/tags.html#courtlistenercom-ref">courtlistener.com
+                <li><a href="http://michaeljaylissner.com/tags.html#courtlistenercom-ref">courtlistener.com
                     <span>12</span>
 </a></li>
-                <li><a href="//michaeljaylissner.com/tags.html#dmca-ref">DMCA
+                <li><a href="http://michaeljaylissner.com/tags.html#dmca-ref">DMCA
                     <span>2</span>
 </a></li>
-                <li><a href="//michaeljaylissner.com/tags.html#final-project-ref">Final Project
+                <li><a href="http://michaeljaylissner.com/tags.html#final-project-ref">Final Project
                     <span>5</span>
 </a></li>
-                <li><a href="//michaeljaylissner.com/tags.html#hook-ref">hook
+                <li><a href="http://michaeljaylissner.com/tags.html#hook-ref">hook
                     <span>1</span>
 </a></li>
-                <li><a href="//michaeljaylissner.com/tags.html#mercurial-ref">mercurial
+                <li><a href="http://michaeljaylissner.com/tags.html#mercurial-ref">mercurial
                     <span>2</span>
 </a></li>
             </ul>
+<h4>Contact</h4>
+    <a href="http://twitter.com/mlissner" title="My Twitter Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-twitter sidebar-social-links"></i></a>
+    <a href="http://github.com/mlissner" title="My Github Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-github sidebar-social-links"></i></a>
+    <a href="mailto:mlissner+blog@michaeljaylissner.com" title="My Email Address" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-envelope sidebar-social-links"></i></a>
         </div>
         </section>
 </div>
