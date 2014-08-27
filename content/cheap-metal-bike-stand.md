@@ -1,6 +1,6 @@
 Title: Cheap Metal Bike Stand
 Date: 2009-12-29T12:05:12
-Tags: metallurgy, craft, bikes, bike repair, me
+Tags: metallurgy, craft, biking, bike repair, me
 Category: Make
 
 It's my winter break right now, so I'm taking advantage of it by doing some 

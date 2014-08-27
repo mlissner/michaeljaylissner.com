@@ -24,10 +24,7 @@ DISPLAY_CATEGORIES_ON_MENU = True
 SLUGIFY_SOURCE = 'basename'
 DELETE_OUTPUT_DIRECTORY = True
 
-# Sadly disabled because it wraps capital letters in HTML attributes in still
-# more HTML. Possible to toggle and verify by looking at "Previous" link at:
-# https://mlissner.github.io/michaeljaylissner.com/posts/2013/07/19/battery-packs-for-ultralight-long-distance-backpacking/
-TYPOGRIFY = False
+TYPOGRIFY = True
 
 # URL settings
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
@@ -43,6 +40,7 @@ PLUGINS = [
     'sitemap',
     'tipue_search',
     'extract_toc',
+    'neighbors',
 ]
 SITEMAP = {
     'format': 'xml',
@@ -77,23 +75,35 @@ MD_EXTENSIONS = ([
 
 DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives', 'search',
                      '404'))
-STATIC_PATHS = ['theme/images', 'images', 'archive', 'pdfs']
-ARTICLE_EXCLUDES = ['archive', 'pdfs']
+STATIC_PATHS = [
+    'theme/images',
+    'images',
+    'archive',
+    'pdfs',
+    'extra/CNAME',
+    'scripts',
+]
+ARTICLE_EXCLUDES = ['archive', 'pdfs', 'scripts']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
+USE_SHORTCUT_ICONS = True
 TAG_SAVE_AS = ''
 CATEGORY_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
-#DISPLAY_PAGES_ON_MENU = False
-AUTHOR = "Michael Lissner"
 TWITTER_USERNAME = 'mlissner'
 GOOGLE_PLUS_PROFILE_URL = 'https://plus.google.com/+MikeLissner'
+
+SOCIAL = (
+    ('Twitter', 'http://twitter.com/mlissner'),
+    ('Github', 'http://github.com/mlissner'),
+    ('Email', 'mailto:mlissner+blog@michaeljaylissner.com'),
+)
+FEATURED_IMAGE = SITEURL + '/theme/images/apple-touch-icon-152x152.png'
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
-DISQUS_SITENAME = 'michaeljaylissner'
-
 LANDING_PAGE_ABOUT = {
-    'title': 'I make things from atoms and bits',
+    #'title': 'I make things from atoms and bits',
     'details': """<p>My name is Mike Lissner. I am the founder and lead developer of
     <a href="http://freelawproject.com">Free Law Project</a> where I spend most
     of my time making <a href="https://www.courtlistener.com">CourtListener</a>,

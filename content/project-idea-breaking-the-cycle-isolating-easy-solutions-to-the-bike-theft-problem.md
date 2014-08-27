@@ -1,6 +1,6 @@
 Title: Project Idea: "Breaking the Cycle: Isolating Easy Solutions to the Bike Theft Problem"
 Date: 2010-06-15T11:44:13
-Tags: theft, system design, Project idea, bicycle
+Tags: theft, system design, Project idea, biking
 Category: Bikes
 
 I've decided that I should start blogging my project ideas so that they may be aired more widely in public. I have amassed quite a number of these, and have been sitting on them for some time, but more and more, it's looking like I won't have time to get to all of my ideas. Starting today, I'll be writing out ideas that I have had. If you have project ideas of your own that you think might be interesting to share here, let me know, and we'll get yours posted too. If you're interested in pursuing one of these ideas, go for it!
