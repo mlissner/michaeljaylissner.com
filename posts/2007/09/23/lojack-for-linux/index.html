@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="Linux, Tech, " />
 
-<meta property="og:title" content="LoJack for Linux "/>
+<meta property="og:title" content="LoJack for Linux "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2007/09/23/lojack-for-linux/" />
-<meta property="og:description" content="I have been spending some time lately shopping for laptops, and I noticed an interesting product on the shelves these days: LoJack for Laptops. It&#39;s an interesting concept, because I think LoJack could do a lot of cool things these days for just about anything you buy that&#39;s ..." />
+<meta property="og:description" content="I have been spending some time lately shopping for laptops, and I noticed an interesting product on the shelves these days: LoJack for Laptops. It’s an interesting concept, because I think LoJack could do a lot of cool things these days for just about anything you buy that’s ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2007-09-23T14:56:19" />
-<meta name="twitter:title" content="LoJack for Linux ">
-<meta name="twitter:description" content="I have been spending some time lately shopping for laptops, and I noticed an interesting product on the shelves these days: LoJack for Laptops. It&#39;s an interesting concept, because I think LoJack could do a lot of cool things these days for just about anything you buy that&#39;s ...">
+<meta name="twitter:title" content="LoJack for Linux ">
+<meta name="twitter:description" content="I have been spending some time lately shopping for laptops, and I noticed an interesting product on the shelves these days: LoJack for Laptops. It’s an interesting concept, because I think LoJack could do a lot of cool things these days for just about anything you buy that’s ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>LoJack for Linux  · Michael Jay Lissner
+        <title>LoJack for Linux  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2007/09/23/lojack-for-linux/"> LoJack for Linux  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2007/09/23/lojack-for-linux/"> LoJack for&nbsp;Linux  </a></h1>
     </header>
 </div>
 
@@ -86,12 +86,12 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I have been spending some time lately shopping for laptops, and I noticed an interesting product on the shelves these days: <em>LoJack for Laptops</em>. It's an interesting concept, because I think LoJack could do a lot of cool things these days for just about anything you buy that's worth more than a couple hundred bucks. My bike, for example, would be another object I would want LoJack for if the system were cheaper. </p>
-<p>I checked out the LoJack installation software, figuring it would inform me that I had to have a GPS chip installed in my laptop for it to work, but to my surprise, it just uses IP addresses. From what I could figure out, it works in two ways. One, it sends your IP address to a centralized server at some regular interval. Two, it allows a back door entrance into your computer so that if your computer is stolen, you can monitor the location of it more closely, bug the new owner, convince them to give it back, etc.</p>
-<p>I got to thinking about this, and from what I can tell, there isn't anything here that a Linux laptop can't easily accomplish. The only tricky part I can think of is the back door thing, because I imagine most routers block incoming traffic on pretty much every port except 80, so ssh'ing into the computer might be tricky even once you know the correct IP to use.</p>
-<p>As for determining the external IP, I found <a href="http://linux.byexamples.com/archives/307/what-is-my-public-ip-address/">this site</a>, which pretty much fits the bill. The basic idea is to go to one of the million whatsmyip.com-type websites via command line, and grep the IP out of the code. One hilarious thing I found on there was <a href="http://www.moanmyip.com">moanmyip.com</a>. I highly recommend a visit if you're "visually impaired".</p>
-<p>Anyway, now that the men in the room are good and turned on, the script pretty much needs three more things: 1. A centralized server to collect the IPs, 2. That ssh back door to mess with the thief, and 3. The script itself!</p>
-<p>Updates to come.</p>
+            <p>I have been spending some time lately shopping for laptops, and I noticed an interesting product on the shelves these days: <em>LoJack for Laptops</em>. It&#8217;s an interesting concept, because I think LoJack could do a lot of cool things these days for just about anything you buy that&#8217;s worth more than a couple hundred bucks. My bike, for example, would be another object I would want LoJack for if the system were&nbsp;cheaper. </p>
+<p>I checked out the LoJack installation software, figuring it would inform me that I had to have a <span class="caps">GPS</span> chip installed in my laptop for it to work, but to my surprise, it just uses <span class="caps">IP</span> addresses. From what I could figure out, it works in two ways. One, it sends your <span class="caps">IP</span> address to a centralized server at some regular interval. Two, it allows a back door entrance into your computer so that if your computer is stolen, you can monitor the location of it more closely, bug the new owner, convince them to give it back,&nbsp;etc.</p>
+<p>I got to thinking about this, and from what I can tell, there isn&#8217;t anything here that a Linux laptop can&#8217;t easily accomplish. The only tricky part I can think of is the back door thing, because I imagine most routers block incoming traffic on pretty much every port except 80, so ssh&#8217;ing into the computer might be tricky even once you know the correct <span class="caps">IP</span> to&nbsp;use.</p>
+<p>As for determining the external <span class="caps">IP</span>, I found <a href="http://linux.byexamples.com/archives/307/what-is-my-public-ip-address/">this site</a>, which pretty much fits the bill. The basic idea is to go to one of the million whatsmyip.com-type websites via command line, and grep the <span class="caps">IP</span> out of the code. One hilarious thing I found on there was <a href="http://www.moanmyip.com">moanmyip.com</a>. I highly recommend a visit if you&#8217;re &#8220;visually&nbsp;impaired&#8221;.</p>
+<p>Anyway, now that the men in the room are good and turned on, the script pretty much needs three more things: 1. A centralized server to collect the IPs, 2. That ssh back door to mess with the thief, and 3. The script&nbsp;itself!</p>
+<p>Updates to&nbsp;come.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -129,6 +129,14 @@
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2007/09/16/ogg-on-ipod/" title="Previous: I want ogg on my iPod">I want ogg on my iPod</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2007/09/24/a-modest-miracle/" title="Next: A Modest Miracle">A Modest Miracle</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

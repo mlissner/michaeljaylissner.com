@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/sqlite3" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-10-14T00:30:12-07:00</updated><entry><title>Script to Clean Up F-Spot Database</title><link href="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/" rel="alternate"></link><updated>2009-10-14T00:30:12-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-14:posts/2009/10/14/script-to-cleanup-fspot-database/</id><summary type="html">&lt;p&gt;One of the more popular photo management applications for Linux is f-spot, 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/sqlite3" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-10-14T00:30:12-07:00</updated><entry><title>Script to Clean Up F-Spot Database</title><link href="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/" rel="alternate"></link><updated>2009-10-14T00:30:12-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-14:posts/2009/10/14/script-to-cleanup-fspot-database/</id><summary type="html">&lt;p&gt;One of the more popular photo management applications for Linux is f-spot, 
 but unfortunately it has a rather glaring bug. It uses a sqlite3 database 
-internally to track which pictures you've imported into it, 
+internally to track which pictures you&amp;#8217;ve imported into it, 
 what tags they have, etc. However, if you delete, move or rename any of the
-files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It's annoying, and there's no particularly easy way to deal with it...until now.&lt;/p&gt;
+files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It&amp;#8217;s annoying, and there&amp;#8217;s no particularly easy way to deal with it&amp;#8230;until&amp;nbsp;now.&lt;/p&gt;
 &lt;p&gt;The script below simply iterates through all of the photos 
-that are in f-spot's database, and checks to see if those photos exist on 
+that are in f-spot&amp;#8217;s database, and checks to see if those photos exist on 
 your hard drive. If you run it in demo-mode, it will show you which files 
 look problematic, and if you run it in normal mode, 
 it will delete those database entries so that your database is cleaned up 
-(but not before backing up your database, just in case).&lt;/p&gt;
+(but not before backing up your database, just in&amp;nbsp;case).&lt;/p&gt;
 &lt;p&gt;In my very limited testing, it works very well, any additional feedback or 
-bug reporting is more than welcome. &lt;/p&gt;
+bug reporting is more than&amp;nbsp;welcome. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class="c"&gt;# A script to find missing files in the f-spot database, and then delete them.&lt;/span&gt;

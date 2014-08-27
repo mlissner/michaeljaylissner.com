@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -16,12 +16,12 @@
 
 <meta property="og:title" content="URL Hacking at REI.com "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2012/07/31/url-hacking-at-rei-dot-com/" />
-<meta property="og:description" content="I&#39;m about two hours away from heading on vacation to Montreal, but I wanted to post a quick update about a vulnerability I found on REI.com last night. The vulnerability was a simple one. A few days ago, to get a 15% off coupon, I signed up for ..." />
+<meta property="og:description" content="I’m about two hours away from heading on vacation to Montreal, but I wanted to post a quick update about a vulnerability I found on REI.com last night. The vulnerability was a simple one. A few days ago, to get a 15% off coupon, I signed up for ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2012-07-31T19:19:00" />
 <meta name="twitter:title" content="URL Hacking at REI.com ">
-<meta name="twitter:description" content="I&#39;m about two hours away from heading on vacation to Montreal, but I wanted to post a quick update about a vulnerability I found on REI.com last night. The vulnerability was a simple one. A few days ago, to get a 15% off coupon, I signed up for ...">
+<meta name="twitter:description" content="I’m about two hours away from heading on vacation to Montreal, but I wanted to post a quick update about a vulnerability I found on REI.com last night. The vulnerability was a simple one. A few days ago, to get a 15% off coupon, I signed up for ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2012/07/31/url-hacking-at-rei-dot-com/"> URL Hacking at REI.com  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2012/07/31/url-hacking-at-rei-dot-com/"> <span class="caps">URL</span> Hacking at <span class="caps">REI</span>.com  </a></h1>
     </header>
 </div>
 
@@ -86,16 +86,16 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I'm about two hours away from heading on vacation to Montreal, but I wanted to post a quick update about a vulnerability I found on REI.com last night.</p>
-<p>The vulnerability was a simple one. A few days ago, to get a 15% off coupon, I signed up for their Gear Mail newsletter. It eventually came, and at the bottom it had a link to unsubscribe, which I clicked (I was only after the 15% sign-up coupon). </p>
-<p>The link led to:</p>
-<p>http://email.rei.com/cgi-bin12/DM/t/nCT4n0N3xbv0ESo05DPf0Et&amp;EmailAddr=mlissner@michaeljaylissner.com</p>
-<p>Which redirects to:</p>
+            <p>I&#8217;m about two hours away from heading on vacation to Montreal, but I wanted to post a quick update about a vulnerability I found on <span class="caps">REI</span>.com last&nbsp;night.</p>
+<p>The vulnerability was a simple one. A few days ago, to get a 15% off coupon, I signed up for their Gear Mail newsletter. It eventually came, and at the bottom it had a link to unsubscribe, which I clicked (I was only after the 15% sign-up&nbsp;coupon). </p>
+<p>The link led&nbsp;to:</p>
+<p>http://email.rei.com/cgi-bin12/<span class="caps">DM</span>/t/nCT4n0N3xbv0ESo05DPf0Et&amp;EmailAddr=mlissner@michaeljaylissner.com</p>
+<p>Which redirects&nbsp;to:</p>
 <p>https://preferences.rei.com/rei/rei_PrefCtr.asp?EmailAddr=mlissner@michaeljaylissner.com</p>
-<p>I immediately noticed the badness in these URLs, and at a whim, I tried modifying the URL to use a friend's email address. Sure enough it worked, and I could look up the full name and zip code of anybody who had an email address that was in REI's system.</p>
-<p>Around midnight last night, I sent REI an email informing them of the problem, giving them a month to fix it, and I posted on Twitter that I had found a vulnerability on REI.com. Naively, I thought that if I didn't post the link on Twitter, nobody would be able to figure it out, but of course, by morning a friend of mine (a security/privacy researcher, sigh) had found the link and posted it. Not only that, but for fun, he had tried his address book against the link, and turned up 30 of his friend's names and zip codes out of a sample of about 200.</p>
-<p>I sent another note to REI to make sure that they knew about the link now being in the open, and that the month I promised them had been curtailed by my own mistake. </p>
-<p>It's now 7:15pm, about 19 hours after I first informed them of the problem, and it's fixed. It still seems to be possible for me to update your email subscriptions, but at least I can't look up information about you.</p>
+<p>I immediately noticed the badness in these URLs, and at a whim, I tried modifying the <span class="caps">URL</span> to use a friend&#8217;s email address. Sure enough it worked, and I could look up the full name and zip code of anybody who had an email address that was in <span class="caps">REI</span>&#8217;s&nbsp;system.</p>
+<p>Around midnight last night, I sent <span class="caps">REI</span> an email informing them of the problem, giving them a month to fix it, and I posted on Twitter that I had found a vulnerability on <span class="caps">REI</span>.com. Naively, I thought that if I didn&#8217;t post the link on Twitter, nobody would be able to figure it out, but of course, by morning a friend of mine (a security/privacy researcher, sigh) had found the link and posted it. Not only that, but for fun, he had tried his address book against the link, and turned up 30 of his friend&#8217;s names and zip codes out of a sample of about&nbsp;200.</p>
+<p>I sent another note to <span class="caps">REI</span> to make sure that they knew about the link now being in the open, and that the month I promised them had been curtailed by my own&nbsp;mistake. </p>
+<p>It&#8217;s now 7:15pm, about 19 hours after I first informed them of the problem, and it&#8217;s fixed. It still seems to be possible for me to update your email subscriptions, but at least I can&#8217;t look up information about&nbsp;you.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -133,6 +133,14 @@
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2012/05/20/new-tool-for-testing-lxml-xpath-queries/" title="Previous: New tool for testing lxml XPath queries">New tool for testing lxml XPath queries</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2012/09/16/calculate-the-average-elevation-for-a-trip-using-a-tcx-file/" title="Next: Calculating the average elevation of a trip using a TCX file">Calculating the average elevation of a trip using a TCX file</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

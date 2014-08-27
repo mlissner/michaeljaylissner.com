@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/etchosts" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-02-19T20:45:10-08:00</updated><entry><title>Location Based DNS Switching For Internet vs. Intranet</title><link href="http://michaeljaylissner.com/posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/" rel="alternate"></link><updated>2009-02-19T20:45:10-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-02-19:posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/</id><summary type="html">&lt;p&gt;I realized over the weekend that since I run my own mail server out of my 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/etchosts" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-02-19T20:45:10-08:00</updated><entry><title>Location Based DNS Switching For Internet vs. Intranet</title><link href="http://michaeljaylissner.com/posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/" rel="alternate"></link><updated>2009-02-19T20:45:10-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-02-19:posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/</id><summary type="html">&lt;p&gt;I realized over the weekend that since I run my own mail server out of my 
 home, I can configure my computer to download my mail over the intranet 
 whenever I am on my home network. By doing this, I can drastically reduce my
 mail download times because it cuts the Internet out of the equation. Rather
-than using DNS + the Internet to get my mail, I can download it directly 
-from internal IP address of the server. &lt;/p&gt;
+than using &lt;span class="caps"&gt;DNS&lt;/span&gt; + the Internet to get my mail, I can download it directly 
+from internal &lt;span class="caps"&gt;IP&lt;/span&gt; address of the&amp;nbsp;server. &lt;/p&gt;
 &lt;p&gt;To understand how to set this up, you have to understand that whenever you 
-use a domain name (like michaeljaylissner.com), your computer does an IP 
-lookup. First, it looks in /etc/hosts to see if it knows the IP of the 
-domain locally. If it does, it will use the IP listed there. If it does 
-not, it will ask your Internet provider what IP to use, 
+use a domain name (like michaeljaylissner.com), your computer does an &lt;span class="caps"&gt;IP&lt;/span&gt; 
+lookup. First, it looks in /etc/hosts to see if it knows the &lt;span class="caps"&gt;IP&lt;/span&gt; of the 
+domain locally. If it does, it will use the &lt;span class="caps"&gt;IP&lt;/span&gt; listed there. If it does 
+not, it will ask your Internet provider what &lt;span class="caps"&gt;IP&lt;/span&gt; to use, 
 and will use that. Thus, what we want to do is set up the computer so that 
-when we are at home, /etc/hosts provides the internal IP of our server, 
-and so when we are not at home, it does not.&lt;/p&gt;
+when we are at home, /etc/hosts provides the internal &lt;span class="caps"&gt;IP&lt;/span&gt; of our server, 
+and so when we are not at home, it does&amp;nbsp;not.&lt;/p&gt;
 &lt;p&gt;When I am at home, I am always on a wireless network called, 
 &lt;code&gt;pizzapuppysantaclaus&lt;/code&gt;. Thus, by checking what wireless network I am 
 connected to, I can check if I am at home, and make whatever changes are 
 necessary. Conveniently, whenever you change network connections, 
 you run all of the scripts located in &lt;code&gt;/etc/network/if-up.d/&lt;/code&gt;. Thus, 
 we will put a small script in there that checks what wireless network we are
- on, and then changes our /etc/hosts file if necessary.&lt;/p&gt;
+ on, and then changes our /etc/hosts file if&amp;nbsp;necessary.&lt;/p&gt;
 &lt;p&gt;To set up this configuration, I made three files. The first is the script 
 mentioned above, which needs to be owned by root, 
 and placed in &lt;code&gt;/etc/network/if-up.d&lt;/code&gt;. You can name it whatever you want, 
 and by changing &lt;code&gt;pizzapuppysantaclaus&lt;/code&gt; to the name of your network, 
-you can fit it to your needs. Here's the contents of the script:&lt;/p&gt;
+you can fit it to your needs. Here&amp;#8217;s the contents of the&amp;nbsp;script:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#First, we check if we are connected to pizzapuppysantaclaus&lt;/span&gt;
 
 &lt;span class="c"&gt;#If grep has a hit, we&amp;#39;re connected, and $? will equal 0, if not, $? will equal 1&lt;/span&gt;
@@ -45,7 +45,7 @@ iwconfig 2&amp;gt; /dev/null | grep pizzapuppysantaclaus &amp;gt; /dev/null
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This script simply performs a check of our wireless ID. If it's 
+&lt;p&gt;This script simply performs a check of our wireless &lt;span class="caps"&gt;ID&lt;/span&gt;. If it&amp;#8217;s 
 &lt;code&gt;pizzapuppysantaclaus&lt;/code&gt;, it switches &lt;code&gt;/etc/hostsIntranet&lt;/code&gt; for &lt;code&gt;/etc/hosts&lt;/code&gt;. If 
 not, it switches &lt;code&gt;/etc/hostsInternet&lt;/code&gt; for &lt;code&gt;/etc/hosts&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The contents of &lt;code&gt;/etc/hostsIntranet&lt;/code&gt; are:&lt;/p&gt;
@@ -70,5 +70,5 @@ and set its owner to root with execute permission. Create a file called
 &lt;code&gt;/etc/hostsIntranet&lt;/code&gt;, that contains your intranet configuration, 
 as shown above. Make a copy of your normal &lt;code&gt;/etc/hosts&lt;/code&gt; file called 
 &lt;code&gt;/etc/hostsInternet&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;Once all that's done, you should be all set. Any questions, 
-please feel free to comment!&lt;/p&gt;</summary><category term="script"></category><category term="project"></category><category term="/etc/hosts"></category><category term="networking"></category><category term="DNS"></category></entry></feed>
+&lt;p&gt;Once all that&amp;#8217;s done, you should be all set. Any questions, 
+please feel free to&amp;nbsp;comment!&lt;/p&gt;</summary><category term="script"></category><category term="project"></category><category term="/etc/hosts"></category><category term="networking"></category><category term="DNS"></category></entry></feed>

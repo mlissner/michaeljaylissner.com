@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="CourtListener, data modeling, database, Tech, " />
 
-<meta property="og:title" content="Reworking the CourtListener Datamodel  - Work, iterate, work, iterate… "/>
+<meta property="og:title" content="Reworking the CourtListener Datamodel  - Work, iterate, work, iterate… "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/" />
-<meta property="og:description" content="Brian and I have been hard at work the past week figuring out how to make CourtListener able to understand more that one document type. Our goal right now is to make it possible to add: oral arguments and other audio content, video content if it&#39;s available, content from ..." />
+<meta property="og:description" content="Brian and I have been hard at work the past week figuring out how to make CourtListener able to understand more that one document type. Our goal right now is to make it possible to add: oral arguments and other audio content, video content if it’s available, content from ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2014-06-18T00:00:00" />
-<meta name="twitter:title" content="Reworking the CourtListener Datamodel  - Work, iterate, work, iterate… ">
-<meta name="twitter:description" content="Brian and I have been hard at work the past week figuring out how to make CourtListener able to understand more that one document type. Our goal right now is to make it possible to add: oral arguments and other audio content, video content if it&#39;s available, content from ...">
+<meta name="twitter:title" content="Reworking the CourtListener Datamodel  - Work, iterate, work, iterate… ">
+<meta name="twitter:description" content="Brian and I have been hard at work the past week figuring out how to make CourtListener able to understand more that one document type. Our goal right now is to make it possible to add: oral arguments and other audio content, video content if it’s available, content from ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Reworking the CourtListener Datamodel  - Work, iterate, work, iterate…  · Michael Jay Lissner
+        <title>Reworking the CourtListener Datamodel  - Work, iterate, work, iterate…  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/"> Reworking the CourtListener Datamodel  <small> Work, iterate, work, iterate&hellip; </small>  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/"> Reworking the CourtListener&nbsp;Datamodel  <small> Work, iterate, work, iterate&hellip; </small>  </a></h1>
     </header>
 </div>
 
@@ -88,44 +88,43 @@
             
             <p>Brian and I have  been hard at work the past week figuring out how to make 
 <a href="https://www.courtlistener.com/">CourtListener</a> able to understand more that one document type. Our goal
- right now is to make it possible to add:</p>
+ right now is to make it possible to&nbsp;add:</p>
 <ul>
-<li>oral arguments and other audio content,</li>
-<li>video content if it's available,</li>
-<li>content from <a href="https://www.recapthelaw.org">RECAP</a>, and</li>
-<li>thousands of ninth circuit briefs that Resource.org <a href="https://law.resource.org/pub/us/case/ca9/">has recently scanned</a></li>
+<li>oral arguments and other audio&nbsp;content,</li>
+<li>video content if it&#8217;s&nbsp;available,</li>
+<li>content from <a href="https://www.recapthelaw.org"><span class="caps">RECAP</span></a>,&nbsp;and</li>
+<li>thousands of ninth circuit briefs that Resource.org <a href="https://law.resource.org/pub/us/case/ca9/">has recently&nbsp;scanned</a></li>
 </ul>
-<p>The problem with our current database is that it's not organized in a way 
+<p>The problem with our current database is that it&#8217;s not organized in a way 
 that supports linkages between content. So, if we have the oral argument 
 and the opinion from a single case, we have no way of pointing them at each
-other. Turns out this is a sticky problem. </p>
-<p>The solution we've come up with is an architecture like the following:</p>
+other. Turns out this is a sticky&nbsp;problem. </p>
+<p>The solution we&#8217;ve come up with is an architecture like the&nbsp;following:</p>
 <p><img alt="New Schema" src="http://michaeljaylissner.com/images/new-schema-design-compact_0.png" /></p>
 <p>(we also have <a href="http://owncloud.freelawproject.org/public.php?service=files&amp;t=76ef76ec69488fb72b4d96dba4809339">a more detailed version</a> and <a href="http://owncloud.freelawproject.org/public.php?service=files&amp;t=62510f0282b06948e8c3d3b1e4946ec0">an editable version</a>)</p>
 <p>And eventually, this will also have a Case table above the docket that 
 allows multiple dockets to be associated with a single case. For now though,
-that's moot, as we don't have anyway of figuring out which dockets go 
-together. </p>
+that&#8217;s moot, as we don&#8217;t have anyway of figuring out which dockets go&nbsp;together. </p>
 <p>The first stage of this will be to add support for oral arguments, 
-since they make a simple case to work with. Once that's complete the next 
-stage will be either to add the RECAP documents or those from Resource.org. </p>
+since they make a simple case to work with. Once that&#8217;s complete the next 
+stage will be either to add the <span class="caps">RECAP</span> documents or those from&nbsp;Resource.org. </p>
 <h3 id="urls">URLs</h3>
-<p>Since this is such a big change, we're also taking this opportunity to 
-re-work our URLs. Currently, they look like this:</p>
+<p>Since this is such a big change, we&#8217;re also taking this opportunity to 
+re-work our URLs. Currently, they look like&nbsp;this:</p>
 <div class="highlight"><pre><span class="o">/</span><span class="err">$</span><span class="n">court</span><span class="o">/</span><span class="err">$</span><span class="n">alpha</span><span class="o">-</span><span class="n">numeric</span><span class="o">-</span><span class="n">id</span><span class="o">/</span><span class="k">case</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">the</span><span class="o">-</span><span class="k">case</span><span class="o">/</span>
 </pre></div>
 
 
-<p>For example:</p>
+<p>For&nbsp;example:</p>
 <div class="highlight"><pre><span class="nl">https:</span><span class="c1">//www.courtlistener.com/scotus/yjn/roe-v-wade/</span>
 </pre></div>
 
 
-<p>A few things bug me about that. First, it doesn't tell you anything about 
+<p>A few things bug me about that. First, it doesn&#8217;t tell you anything about 
 what kind of thing you can expect to see if you click that link. Second, 
-the alpha-numeric ID is kind of lame. It's just a reference to the database
+the alpha-numeric <span class="caps">ID</span> is kind of lame. It&#8217;s just a reference to the database
 primary key for the item, and we should just show that value (in this case,
-"yjn" means "108713"). To fix both of these issues, the new URLs will be:</p>
+&#8220;yjn&#8221; means &#8220;108713&#8221;). To fix both of these issues, the new URLs will&nbsp;be:</p>
 <div class="highlight"><pre><span class="o">/</span><span class="n">opinion</span><span class="o">/</span><span class="err">$</span><span class="n">numeric</span><span class="o">-</span><span class="n">id</span><span class="o">/</span><span class="k">case</span><span class="o">-</span><span class="n">name</span><span class="o">/</span>
 </pre></div>
 
@@ -135,29 +134,29 @@ primary key for the item, and we should just show that value (in this case,
 </pre></div>
 
 
-<p>That should be easier to read and should tell you what type of item you're 
-about to look at. Don't worry, the old URLs will keep working just fine. </p>
-<p>And the rest of the new URLs will be:</p>
+<p>That should be easier to read and should tell you what type of item you&#8217;re 
+about to look at. Don&#8217;t worry, the old URLs will keep working just&nbsp;fine. </p>
+<p>And the rest of the new URLs will&nbsp;be:</p>
 <div class="highlight"><pre><span class="o">/</span><span class="n">oral</span><span class="o">-</span><span class="n">argument</span><span class="o">/</span><span class="err">$</span><span class="n">numeric</span><span class="o">-</span><span class="n">id</span><span class="o">/</span><span class="k">case</span><span class="o">-</span><span class="n">name</span><span class="o">/</span>
 <span class="o">/</span><span class="n">docket</span><span class="o">/</span><span class="err">$</span><span class="n">numeric</span><span class="o">-</span><span class="n">id</span><span class="o">/</span><span class="k">case</span><span class="o">-</span><span class="n">name</span><span class="o">/</span>
 </pre></div>
 
 
-<p>and eventually:</p>
+<p>and&nbsp;eventually:</p>
 <div class="highlight"><pre><span class="o">/</span><span class="n">recap</span><span class="o">/</span><span class="err">$</span><span class="n">numeric</span><span class="o">-</span><span class="n">id</span><span class="o">/</span><span class="k">case</span><span class="o">-</span><span class="n">name</span><span class="o">/</span>
 </pre></div>
 
 
-<h3 id="api">API</h3>
-<p>We expect these changes to come with changes to the API, 
-so we'll likely be releasing API version 1.1 that will add suport for 
-dockets and oral arguments. </p>
+<h3 id="api"><span class="caps">API</span></h3>
+<p>We expect these changes to come with changes to the <span class="caps">API</span>, 
+so we&#8217;ll likely be releasing <span class="caps">API</span> version 1.1 that will add suport for 
+dockets and oral&nbsp;arguments. </p>
 <p>The current version 1.0 should keep working just fine, 
-since we're not changing any of the underlying data, 
+since we&#8217;re not changing any of the underlying data, 
 but I expect that it will have some changes to the URLs and things like 
-that. I'll be posting more about this in <a href="http://lists.freelawproject.org/cgi-bin/mailman/listinfo/dev">the CourtListener dev list</a>. 
+that. I&#8217;ll be posting more about this in <a href="http://lists.freelawproject.org/cgi-bin/mailman/listinfo/dev">the CourtListener dev list</a>. 
 as the changes become more clear and as we sort out what a fair policy is 
-for the deprecation of old APIs. </p>
+for the deprecation of old&nbsp;APIs. </p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -195,6 +194,14 @@ for the deprecation of old APIs. </p>
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2013/11/27/our-new-zealand-blog/" title="Previous: Our New Zealand Blog">Our New Zealand Blog</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2014/08/27/site-v5-is-go/" title="Next: New Version of the Site is Now Live - Better, Faster, Stronger">New Version of the Site is Now Live <small>Better, Faster, Stronger</small></a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

@@ -1,85 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/courtlistenercom" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2012-05-20T15:48:06-07:00</updated><entry><title>New tool for testing lxml XPath queries</title><link href="http://michaeljaylissner.com/posts/2012/05/20/new-tool-for-testing-lxml-xpath-queries/" rel="alternate"></link><updated>2012-05-20T15:48:06-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-05-20:posts/2012/05/20/new-tool-for-testing-lxml-xpath-queries/</id><summary type="html">&lt;p&gt;I got a bit frustrated today, and decided that I should build a tool to fix my frustration. The problem was that we're using a lot of XPath queries to scrape various court websites, but there was no tool that could be used to test xpath expressions efficiently.&lt;/p&gt;
-&lt;p&gt;There are a couple tools that are quite similar to what I just built: There's one called Xacobeo, Eclipse has one built in, and even Firebug has a tool that does similar. Unfortunately though, these each operate on a different DOM interpretation than the one that lxml builds. &lt;/p&gt;
-&lt;p&gt;So the problem I was running into was that while these tools helped, I consistently had the problem that when the HTML got nasty, they'd start falling over. &lt;/p&gt;
-&lt;p&gt;No more! Today I built &lt;a href="https://github.com/mlissner/lxml-xpath-tester/"&gt;a quick Django app&lt;/a&gt; that can be run locally or on a server. It's quite simple. You input some HTML and an XPath expression, and it will tell you the matches for that expression. It has syntax highlighting, and a few other tricks up its sleeve, but it's pretty basic on the whole.&lt;/p&gt;
-&lt;p&gt;I'd love to get any feedback I can about this. It's probably still got some bugs, but it's small enough that they should be quite easy to stamp out.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; I got in touch with the developer of Xacobeo. There's an --html flag that you can pass to it at startup, if that's your intention. If you use that, it indeed uses the same DOM parser that my tool does. Sigh. Affordances are important, especially in a GUI-based tool.&lt;/p&gt;</summary><category term="Python"></category><category term="lxml"></category><category term="juriscraper"></category><category term="courtlistener.com"></category></entry><entry><title>Further privacy protections at CourtListener</title><link href="http://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/" rel="alternate"></link><updated>2012-04-27T17:05:21-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-04-27:posts/2012/04/27/further-privacy-protections-at-courtlistener/</id><summary type="html">&lt;p&gt;I've &lt;a href="http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/"&gt;written previously&lt;/a&gt; about the lengths we go to at CourtListener to
- protect people's privacy, and today we completed one more privacy enhancement. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/courtlistenercom" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2012-05-20T15:48:06-07:00</updated><entry><title>New tool for testing lxml XPath queries</title><link href="http://michaeljaylissner.com/posts/2012/05/20/new-tool-for-testing-lxml-xpath-queries/" rel="alternate"></link><updated>2012-05-20T15:48:06-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-05-20:posts/2012/05/20/new-tool-for-testing-lxml-xpath-queries/</id><summary type="html">&lt;p&gt;I got a bit frustrated today, and decided that I should build a tool to fix my frustration. The problem was that we&amp;#8217;re using a lot of XPath queries to scrape various court websites, but there was no tool that could be used to test xpath expressions&amp;nbsp;efficiently.&lt;/p&gt;
+&lt;p&gt;There are a couple tools that are quite similar to what I just built: There&amp;#8217;s one called Xacobeo, Eclipse has one built in, and even Firebug has a tool that does similar. Unfortunately though, these each operate on a different &lt;span class="caps"&gt;DOM&lt;/span&gt; interpretation than the one that lxml&amp;nbsp;builds. &lt;/p&gt;
+&lt;p&gt;So the problem I was running into was that while these tools helped, I consistently had the problem that when the &lt;span class="caps"&gt;HTML&lt;/span&gt; got nasty, they&amp;#8217;d start falling&amp;nbsp;over. &lt;/p&gt;
+&lt;p&gt;No more! Today I built &lt;a href="https://github.com/mlissner/lxml-xpath-tester/"&gt;a quick Django app&lt;/a&gt; that can be run locally or on a server. It&amp;#8217;s quite simple. You input some &lt;span class="caps"&gt;HTML&lt;/span&gt; and an XPath expression, and it will tell you the matches for that expression. It has syntax highlighting, and a few other tricks up its sleeve, but it&amp;#8217;s pretty basic on the&amp;nbsp;whole.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;d love to get any feedback I can about this. It&amp;#8217;s probably still got some bugs, but it&amp;#8217;s small enough that they should be quite easy to stamp&amp;nbsp;out.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; I got in touch with the developer of Xacobeo. There&amp;#8217;s an &amp;#8212;html flag that you can pass to it at startup, if that&amp;#8217;s your intention. If you use that, it indeed uses the same &lt;span class="caps"&gt;DOM&lt;/span&gt; parser that my tool does. Sigh. Affordances are important, especially in a &lt;span class="caps"&gt;GUI&lt;/span&gt;-based&amp;nbsp;tool.&lt;/p&gt;</summary><category term="Python"></category><category term="lxml"></category><category term="juriscraper"></category><category term="courtlistener.com"></category></entry><entry><title>Further privacy protections at CourtListener</title><link href="http://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/" rel="alternate"></link><updated>2012-04-27T17:05:21-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-04-27:posts/2012/04/27/further-privacy-protections-at-courtlistener/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve &lt;a href="http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/"&gt;written previously&lt;/a&gt; about the lengths we go to at CourtListener to
+ protect people&amp;#8217;s privacy, and today we completed one more privacy&amp;nbsp;enhancement. &lt;/p&gt;
 &lt;p&gt;After my last post on this topic, we discovered that although we had 
 already blocked cases from appearing in the search results of all major 
 search engines, we had a privacy leak in the form of our computer-readable 
 sitemaps. These sitemaps contain links to every page within a website, 
 and since those links contain the names of the parties in a case, 
-it's possible that a Google search for the party name could turn up results
- that should be hidden.&lt;/p&gt;
+it&amp;#8217;s possible that a Google search for the party name could turn up results
+ that should be&amp;nbsp;hidden.&lt;/p&gt;
 &lt;p&gt;This was problematic, and as of now we have changed the way we serve 
-sitemaps so that they use the noindex X-Robots-Tag HTTP header. This tells 
+sitemaps so that they use the noindex X-Robots-Tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. This tells 
 search crawlers that they are welcome to read our sitemaps, 
-but that they should avoid serving them or indexing them.&lt;/p&gt;</summary><category term="sitemaps.xml"></category><category term="privacy"></category><category term="policy"></category><category term="courtlistener.com"></category></entry><entry><title>My Presentation Proposal for LVI 2012</title><link href="http://michaeljaylissner.com/posts/2012/03/15/my-presentation-proposal-for-lvi-2012/" rel="alternate"></link><updated>2012-03-15T20:09:29-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-03-15:posts/2012/03/15/my-presentation-proposal-for-lvi-2012/</id><summary type="html">&lt;p&gt;The &lt;a href="http://blog.law.cornell.edu/lvi2012/"&gt;Law Via the Internet&lt;/a&gt; conference is  celebrating its 20th anniversary
+but that they should avoid serving them or indexing&amp;nbsp;them.&lt;/p&gt;</summary><category term="sitemaps.xml"></category><category term="privacy"></category><category term="policy"></category><category term="courtlistener.com"></category></entry><entry><title>My Presentation Proposal for LVI 2012</title><link href="http://michaeljaylissner.com/posts/2012/03/15/my-presentation-proposal-for-lvi-2012/" rel="alternate"></link><updated>2012-03-15T20:09:29-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-03-15:posts/2012/03/15/my-presentation-proposal-for-lvi-2012/</id><summary type="html">&lt;p&gt;The &lt;a href="http://blog.law.cornell.edu/lvi2012/"&gt;Law Via the Internet&lt;/a&gt; conference is  celebrating its 20th anniversary
 at Cornell University on October 7-9th. I will be attending, 
-and with any luck, I'll be presenting on the topic proposed below.&lt;/p&gt;
-&lt;h3 id="wrangling-court-data-on-a-national-level"&gt;Wrangling Court Data on a National Level&lt;/h3&gt;
+and with any luck, I&amp;#8217;ll be presenting on the topic proposed&amp;nbsp;below.&lt;/p&gt;
+&lt;h3 id="wrangling-court-data-on-a-national-level"&gt;Wrangling Court Data on a National&amp;nbsp;Level&lt;/h3&gt;
 &lt;p&gt;Access to case law has recently become easier than ever: By simply visiting 
-a court's website it is now possible to find and read thousands of cases 
+a court&amp;#8217;s website it is now possible to find and read thousands of cases 
 withou  ever leaving your home. At the same time, there are nearly a hundred
  court websites, many of these websites suffer from poor funding or 
  prioritization, and gaining a higher-level view of the law can be 
- challenging. "&lt;a href="https://github.com/freelawproject/juriscraper/"&gt;Juriscraper&lt;/a&gt;" is a new project designed to ease these 
+ challenging. &amp;#8220;&lt;a href="https://github.com/freelawproject/juriscraper/"&gt;Juriscraper&lt;/a&gt;&amp;#8221; is a new project designed to ease these 
  problems for all those that wish to collect these court opinions daily. The
-  project is under active development, and we are looking for others to get 
-  involved.&lt;/p&gt;
+  project is under active development, and we are looking for others to get&amp;nbsp;involved.&lt;/p&gt;
 &lt;p&gt;Juriscraper is a liberally-licensed open source library that can be picked 
 up and used by any organization to scrape the case data from court websites.
  In addition to a simply scraping the websites and extracting metadata from 
- them, Juriscraper has a number of other design goals:   &lt;/p&gt;
+ them, Juriscraper has a number of other design&amp;nbsp;goals:   &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Extensibility to support video, oral argument audio, and other media types&lt;/li&gt;
-&lt;li&gt;Support for all metadata provided by court websites&lt;/li&gt;
-&lt;li&gt;Extensibility to support varied geographies and jurisdictions&lt;/li&gt;
-&lt;li&gt;Generalized object-oriented architecture with little or no code repetition&lt;/li&gt;
-&lt;li&gt;Standardized coding techniques using the latest libraries and standards (Python, xpath, lxml, requests, chardet)&lt;/li&gt;
-&lt;li&gt;Simple installation, configuration, and API&lt;/li&gt;
-&lt;li&gt;Friendly and transparent to court websites&lt;/li&gt;
+&lt;li&gt;Extensibility to support video, oral argument audio, and other media&amp;nbsp;types&lt;/li&gt;
+&lt;li&gt;Support for all metadata provided by court&amp;nbsp;websites&lt;/li&gt;
+&lt;li&gt;Extensibility to support varied geographies and&amp;nbsp;jurisdictions&lt;/li&gt;
+&lt;li&gt;Generalized object-oriented architecture with little or no code&amp;nbsp;repetition&lt;/li&gt;
+&lt;li&gt;Standardized coding techniques using the latest libraries and standards (Python, xpath, lxml, requests,&amp;nbsp;chardet)&lt;/li&gt;
+&lt;li&gt;Simple installation, configuration, and &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Friendly and transparent to court&amp;nbsp;websites&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;As well as a number of features:  &lt;/p&gt;
+&lt;p&gt;As well as a number of&amp;nbsp;features:  &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Harmonizatio  of metadata (US, USA, United States of America, 
+&lt;li&gt;Harmonizatio  of metadata (&lt;span class="caps"&gt;US&lt;/span&gt;, &lt;span class="caps"&gt;USA&lt;/span&gt;, United States of America, 
  etc ? United States; et al, et. al., etc. get eliminated; vs., v, 
- vs ? v.; all dates are Python objects; etc.)&lt;/li&gt;
+ vs ? v.; all dates are Python objects;&amp;nbsp;etc.)&lt;/li&gt;
 &lt;li&gt;Smart title-casing of case names (several courts provide case names in 
- uppercase only)&lt;/li&gt;
-&lt;li&gt;Sanity checking and sorting of metadata values returned by court websites&lt;/li&gt;
+ uppercase&amp;nbsp;only)&lt;/li&gt;
+&lt;li&gt;Sanity checking and sorting of metadata values returned by court&amp;nbsp;websites&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Once implemented, Juriscraper is part of a two-part system. The second part 
-is the caller, which uses the API, and which itself solves some interesting 
-questions:  &lt;/p&gt;
+is the caller, which uses the &lt;span class="caps"&gt;API&lt;/span&gt;, and which itself solves some interesting&amp;nbsp;questions:  &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;How are duplicates detected and avoided? &lt;/li&gt;
-&lt;li&gt;How can the impact on court websites be minimized?&lt;/li&gt;
-&lt;li&gt;How can mime type detection be completed successfully so that textual contents can be extracted?&lt;/li&gt;
-&lt;li&gt;What should we do if it is an image-based PDF?&lt;ul&gt;
-&lt;li&gt;How should HTML be tidied?&lt;/li&gt;
-&lt;li&gt;How often should we check a court website for new content?  &lt;/li&gt;
+&lt;li&gt;How are duplicates detected and&amp;nbsp;avoided? &lt;/li&gt;
+&lt;li&gt;How can the impact on court websites be&amp;nbsp;minimized?&lt;/li&gt;
+&lt;li&gt;How can mime type detection be completed successfully so that textual contents can be&amp;nbsp;extracted?&lt;/li&gt;
+&lt;li&gt;What should we do if it is an image-based &lt;span class="caps"&gt;PDF&lt;/span&gt;?&lt;ul&gt;
+&lt;li&gt;How should &lt;span class="caps"&gt;HTML&lt;/span&gt; be&amp;nbsp;tidied?&lt;/li&gt;
+&lt;li&gt;How often should we check a court website for new&amp;nbsp;content?  &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;What should we do in case of failure?&lt;/li&gt;
+&lt;li&gt;What should we do in case of&amp;nbsp;failure?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Juriscraper is currently deployed by CourtListener.com to scrape all of the 
 Federal Appeals courts, and we are slowly adding additional state courts 
-over the coming weeks. &lt;/p&gt;
+over the coming&amp;nbsp;weeks. &lt;/p&gt;
 &lt;p&gt;We have been scraping these sites in various ways for several years, 
-and Juriscraper is the culmination of what we've learned. We hope that by 
-presenting our work at LVI 2012, we will be able to share what we have 
-learned and gain additional collaborators in our work.&lt;/p&gt;</summary><category term="proposal"></category><category term="presentations"></category><category term="me"></category><category term="lvi2012"></category><category term="juriscraper"></category><category term="courtlistener.com"></category></entry><entry><title>The Winning Font in Court Opinions</title><link href="http://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/" rel="alternate"></link><updated>2012-01-27T22:15:58-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-27:posts/2012/01/27/and-the-winning-font-in-court-documents-is/</id><summary type="html">&lt;p&gt;At CourtListener, we're developing a new system to convert scanned court 
-documents to text. As part of our development we've analyzed more than 1,000 
-court opinions to determine what fonts courts are using. &lt;/p&gt;
+and Juriscraper is the culmination of what we&amp;#8217;ve learned. We hope that by 
+presenting our work at &lt;span class="caps"&gt;LVI&lt;/span&gt; 2012, we will be able to share what we have 
+learned and gain additional collaborators in our&amp;nbsp;work.&lt;/p&gt;</summary><category term="proposal"></category><category term="presentations"></category><category term="me"></category><category term="lvi2012"></category><category term="juriscraper"></category><category term="courtlistener.com"></category></entry><entry><title>The Winning Font in Court Opinions</title><link href="http://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/" rel="alternate"></link><updated>2012-01-27T22:15:58-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-27:posts/2012/01/27/and-the-winning-font-in-court-documents-is/</id><summary type="html">&lt;p&gt;At CourtListener, we&amp;#8217;re developing a new system to convert scanned court 
+documents to text. As part of our development we&amp;#8217;ve analyzed more than 1,000 
+court opinions to determine what fonts courts are&amp;nbsp;using. &lt;/p&gt;
 &lt;p&gt;Now that we have this information, our next step is to create training data 
-for &lt;a href="http://code.google.com/p/tesseract-ocr/"&gt;our OCR system&lt;/a&gt; so that it specializes in these fonts, 
-but for now we've attached &lt;a href="http://michaeljaylissner.com/archive/court-font-analysis/font-analysis.ods"&gt;a spreadsheet&lt;/a&gt; with our findings, 
+for &lt;a href="http://code.google.com/p/tesseract-ocr/"&gt;our &lt;span class="caps"&gt;OCR&lt;/span&gt; system&lt;/a&gt; so that it specializes in these fonts, 
+but for now we&amp;#8217;ve attached &lt;a href="http://michaeljaylissner.com/archive/court-font-analysis/font-analysis.ods"&gt;a spreadsheet&lt;/a&gt; with our findings, 
 and &lt;a href="http://michaeljaylissner.com/archive/court-font-analysis/extract_font_metadata_from_files.py"&gt;a script that can be used by others&lt;/a&gt; to extract font metadata 
-from PDFs.&lt;/p&gt;
-&lt;p&gt;Unsurprisingly, the top font &amp;mdash; drumroll please &amp;mdash; is Times New Roman. &lt;/p&gt;
+from&amp;nbsp;PDFs.&lt;/p&gt;
+&lt;p&gt;Unsurprisingly, the top font &amp;mdash; drumroll please &amp;mdash; is Times New&amp;nbsp;Roman. &lt;/p&gt;
 &lt;table&gt;
     &lt;tr&gt;
         &lt;th&gt;Font&lt;/td&gt;
@@ -169,30 +167,30 @@ from PDFs.&lt;/p&gt;
         &lt;td&gt;0
         &lt;td&gt;**27**
     &lt;/tr&gt;
-&lt;/table&gt;</summary><category term="typography"></category><category term="tesseract"></category><category term="Python"></category><category term="ocr"></category><category term="font"></category><category term="courtlistener.com"></category></entry><entry><title>Respecting privacy while providing hundreds of thousands of public documents</title><link href="http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/" rel="alternate"></link><updated>2012-01-16T22:13:22-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-16:posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/</id><summary type="html">&lt;p&gt;At CourtListener, we have always taken privacy very seriously. We &lt;a href="http://courtlistener.com/coverage/"&gt;have over 600,000&lt;/a&gt; cases currently, most of which are available on Google and other search engines. But in the interest of privacy, we make two broad exceptions to what's available on search engines: &lt;/p&gt;
+&lt;/table&gt;</summary><category term="typography"></category><category term="tesseract"></category><category term="Python"></category><category term="ocr"></category><category term="font"></category><category term="courtlistener.com"></category></entry><entry><title>Respecting privacy while providing hundreds of thousands of public documents</title><link href="http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/" rel="alternate"></link><updated>2012-01-16T22:13:22-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-16:posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/</id><summary type="html">&lt;p&gt;At CourtListener, we have always taken privacy very seriously. We &lt;a href="http://courtlistener.com/coverage/"&gt;have over 600,000&lt;/a&gt; cases currently, most of which are available on Google and other search engines. But in the interest of privacy, we make two broad exceptions to what&amp;#8217;s available on search&amp;nbsp;engines: &lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;As is stated in our &lt;a href="http://courtlistener.com/removal/"&gt;removal policy&lt;/a&gt;, if someone gets in touch with us in writing and requests that we block search engines from indexing a document, we generally attempt to do so within a few hours. &lt;/li&gt;
-&lt;li&gt;If we discover a privacy problem within a case, we proactively block search engines from indexing it. &lt;/li&gt;
+&lt;li&gt;As is stated in our &lt;a href="http://courtlistener.com/removal/"&gt;removal policy&lt;/a&gt;, if someone gets in touch with us in writing and requests that we block search engines from indexing a document, we generally attempt to do so within a few&amp;nbsp;hours. &lt;/li&gt;
+&lt;li&gt;If we discover a privacy problem within a case, we proactively block search engines from indexing&amp;nbsp;it. &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Each of these exceptions presents interesting problems. In the case of requests to prevent indexing by search engines, we're often faced with an ethical dilemma, since in many instances, the party making the request is merely displeased that their involvement in the case is easy to discover and/or they are simply embarrassed by their past. In this case, the question we have to ask ourselves is: Where is the balance between the person's right to privacy and the public's need to access court records, and to what extent do changes in &lt;a href="http://scholar.google.com/scholar?hl=en&amp;amp;q=practical+obscurity+privacy"&gt;practical obscurity&lt;/a&gt; compel action on our behalf? For example, if someone convicted of murder or child molestation is trying to make information about their past harder to discover, how should we weigh the public's interest in easily locating this information via a search engine? In the case of convicted child molesters, we can look to &lt;a href="http://en.wikipedia.org/wiki/Megan%27s_Law"&gt;Megan's law&lt;/a&gt; for a public policy stance on the issue, but even that forces us to ask to what extent we should chart our own path, and to what extent we should follow public policy decisions. &lt;/p&gt;
-&lt;p&gt;On the opposite end of the spectrum, many of the cases that we block search engines from indexing are asylum cases where a person has lost an attempt to stay in the United States, and been sent back to a country where they feel unsafe. In such cases, it seems clear that it's important to keep the person's name out of search engine results, but still we must ask to what extent do we have an obligation to identify and block such cases from appearing proactively rather than post hoc? &lt;/p&gt;
-&lt;p&gt;In both of these scenarios, we have taken a middle ground that we hope strikes a balance between the public's need for court documents and an individual's desire or need for privacy. Instead of either proactively blocking search engines from indexing cases or keeping cases in search results against a party's request, our current policy is to block search engines from indexing a web page as each request comes in. We currently have 190 cases that are blocked from search results, and the number increases regularly. &lt;/p&gt;
-&lt;p&gt;Where we do take proactive measures to block cases from search results is where we have discovered unredacted or &lt;a href="https://freedom-to-tinker.com/blog/tblee/what-gets-redacted-pacer"&gt;improperly redacted&lt;/a&gt; social security numbers in a case. Taking a cue from the now-defunct Altlaw, whenever a case is added, we look for character strings that appear to be social security numbers, tax ID numbers or alien ID numbers. If we find any such strings, we replace them with x's, and we try to make sure the unredacted document does not appear in search results outside of CourtListener. &lt;/p&gt;
-&lt;p&gt;The methods we have used to block cases from appearing in search results have evolved over time, and I'd like to share what we've learned so others can give us feedback and learn from our experiences. There are five technical measures we use to keep a case out of search results: &lt;/p&gt;
+&lt;p&gt;Each of these exceptions presents interesting problems. In the case of requests to prevent indexing by search engines, we&amp;#8217;re often faced with an ethical dilemma, since in many instances, the party making the request is merely displeased that their involvement in the case is easy to discover and/or they are simply embarrassed by their past. In this case, the question we have to ask ourselves is: Where is the balance between the person&amp;#8217;s right to privacy and the public&amp;#8217;s need to access court records, and to what extent do changes in &lt;a href="http://scholar.google.com/scholar?hl=en&amp;amp;q=practical+obscurity+privacy"&gt;practical obscurity&lt;/a&gt; compel action on our behalf? For example, if someone convicted of murder or child molestation is trying to make information about their past harder to discover, how should we weigh the public&amp;#8217;s interest in easily locating this information via a search engine? In the case of convicted child molesters, we can look to &lt;a href="http://en.wikipedia.org/wiki/Megan%27s_Law"&gt;Megan&amp;#8217;s law&lt;/a&gt; for a public policy stance on the issue, but even that forces us to ask to what extent we should chart our own path, and to what extent we should follow public policy&amp;nbsp;decisions. &lt;/p&gt;
+&lt;p&gt;On the opposite end of the spectrum, many of the cases that we block search engines from indexing are asylum cases where a person has lost an attempt to stay in the United States, and been sent back to a country where they feel unsafe. In such cases, it seems clear that it&amp;#8217;s important to keep the person&amp;#8217;s name out of search engine results, but still we must ask to what extent do we have an obligation to identify and block such cases from appearing proactively rather than post&amp;nbsp;hoc? &lt;/p&gt;
+&lt;p&gt;In both of these scenarios, we have taken a middle ground that we hope strikes a balance between the public&amp;#8217;s need for court documents and an individual&amp;#8217;s desire or need for privacy. Instead of either proactively blocking search engines from indexing cases or keeping cases in search results against a party&amp;#8217;s request, our current policy is to block search engines from indexing a web page as each request comes in. We currently have 190 cases that are blocked from search results, and the number increases&amp;nbsp;regularly. &lt;/p&gt;
+&lt;p&gt;Where we do take proactive measures to block cases from search results is where we have discovered unredacted or &lt;a href="https://freedom-to-tinker.com/blog/tblee/what-gets-redacted-pacer"&gt;improperly redacted&lt;/a&gt; social security numbers in a case. Taking a cue from the now-defunct Altlaw, whenever a case is added, we look for character strings that appear to be social security numbers, tax &lt;span class="caps"&gt;ID&lt;/span&gt; numbers or alien &lt;span class="caps"&gt;ID&lt;/span&gt; numbers. If we find any such strings, we replace them with x&amp;#8217;s, and we try to make sure the unredacted document does not appear in search results outside of&amp;nbsp;CourtListener. &lt;/p&gt;
+&lt;p&gt;The methods we have used to block cases from appearing in search results have evolved over time, and I&amp;#8217;d like to share what we&amp;#8217;ve learned so others can give us feedback and learn from our experiences. There are five technical measures we use to keep a case out of search&amp;nbsp;results: &lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;robots.txt file &lt;/li&gt;
-&lt;li&gt;HTML meta noindex tags &lt;/li&gt;
-&lt;li&gt;HTTP X-Robots-Tag headers &lt;/li&gt;
-&lt;li&gt;sitemaps.xml files &lt;/li&gt;
-&lt;li&gt;The webmaster tools provided by the search engines themselves&lt;/li&gt;
+&lt;li&gt;robots.txt&amp;nbsp;file &lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt; meta noindex&amp;nbsp;tags &lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt; X-Robots-Tag&amp;nbsp;headers &lt;/li&gt;
+&lt;li&gt;sitemaps.xml&amp;nbsp;files &lt;/li&gt;
+&lt;li&gt;The webmaster tools provided by the search engines&amp;nbsp;themselves&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Each of these deserves a moment of explanation. &lt;a href="http://www.robotstxt.org/"&gt;robots.txt&lt;/a&gt; is a protocol that is respected by all major search engines internationally, and which allows site authors (such as myself) to identify web pages that shouldn't be crawled. Note that I said &lt;strong&gt;crawled&lt;/strong&gt; not &lt;strong&gt;indexed&lt;/strong&gt;. This is a very important distinction, as I'll explain momentarily. &lt;/p&gt;
-&lt;p&gt;HTML meta tags are a tag that you can place into the HTML of a page, and which instructs search engines not to &lt;strong&gt;index&lt;/strong&gt; a page. Since this is an HTML format, this method only works on HTML pages. &lt;/p&gt;
-&lt;p&gt;HTTP X-Robots-Tag headers are similar to HTML meta tags, but they allow site authors to request that an &lt;em&gt;item&lt;/em&gt; not be indexed. That item may be an HTML page, but equally, it may be a PDF or even an image that should not searchable. &lt;/p&gt;
-&lt;p&gt;Further, we provide an &lt;a href="http://www.sitemaps.org/protocol.html"&gt;XML sitemap&lt;/a&gt; that search engines can understand, and which tells them about every page on the site that they should crawl and index. &lt;/p&gt;
+&lt;p&gt;Each of these deserves a moment of explanation. &lt;a href="http://www.robotstxt.org/"&gt;robots.txt&lt;/a&gt; is a protocol that is respected by all major search engines internationally, and which allows site authors (such as myself) to identify web pages that shouldn&amp;#8217;t be crawled. Note that I said &lt;strong&gt;crawled&lt;/strong&gt; not &lt;strong&gt;indexed&lt;/strong&gt;. This is a very important distinction, as I&amp;#8217;ll explain&amp;nbsp;momentarily. &lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt; meta tags are a tag that you can place into the &lt;span class="caps"&gt;HTML&lt;/span&gt; of a page, and which instructs search engines not to &lt;strong&gt;index&lt;/strong&gt; a page. Since this is an &lt;span class="caps"&gt;HTML&lt;/span&gt; format, this method only works on &lt;span class="caps"&gt;HTML&lt;/span&gt;&amp;nbsp;pages. &lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt; X-Robots-Tag headers are similar to &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tags, but they allow site authors to request that an &lt;em&gt;item&lt;/em&gt; not be indexed. That item may be an &lt;span class="caps"&gt;HTML&lt;/span&gt; page, but equally, it may be a &lt;span class="caps"&gt;PDF&lt;/span&gt; or even an image that should not&amp;nbsp;searchable. &lt;/p&gt;
+&lt;p&gt;Further, we provide an &lt;a href="http://www.sitemaps.org/protocol.html"&gt;&lt;span class="caps"&gt;XML&lt;/span&gt; sitemap&lt;/a&gt; that search engines can understand, and which tells them about every page on the site that they should crawl and&amp;nbsp;index. &lt;/p&gt;
 &lt;p&gt;All of these elements fit together into a complicated melange that has 
 absorbed many development hours over the past two years, 
-as different search engines interpret these standards in different ways. &lt;/p&gt;
+as different search engines interpret these standards in different&amp;nbsp;ways. &lt;/p&gt;
 &lt;p&gt;For example, Google and Bing interpret the robots.txt files as blocks to 
 their crawlers. This means that web pages listed in robots.txt will not be 
 &lt;strong&gt;crawled&lt;/strong&gt; by Google or Bing, but that does not mean those pages will not 
@@ -200,53 +198,53 @@ be &lt;strong&gt;indexed&lt;/strong&gt;. Indeed, if Google or Bing learn of the 
 page (for example, because another page linked to it), 
 then they will include it in &lt;a href="http://www.youtube.com/watch?v=KBdEwpRQRD0"&gt;their&lt;/a&gt; &lt;a href="http://www.bing.com/community/site_blogs/b/webmaster/archive/2009/08/21/prevent-a-bot-from-getting-lost-in-space-sem-101.aspx"&gt;indexes&lt;/a&gt;. This is true even if 
 robots.txt explicitly blocks robots from crawling the page, 
-because to include it in their indexes, they don't &lt;strong&gt;have to&lt;/strong&gt; crawl it 
+because to include it in their indexes, they don&amp;#8217;t &lt;strong&gt;have to&lt;/strong&gt; crawl it 
 &amp;mdash; they just need to know about it! Even your own link to a page is 
-sufficient for Google or Bing to know about the page. And what's worse, 
-if you have a good URL with descriptive words within it, 
-Google or Bing will know the terms in the URLs even when they haven't 
-crawled the page. So if your URL is example
+sufficient for Google or Bing to know about the page. And what&amp;#8217;s worse, 
+if you have a good &lt;span class="caps"&gt;URL&lt;/span&gt; with descriptive words within it, 
+Google or Bing will know the terms in the URLs even when they haven&amp;#8217;t 
+crawled the page. So if your &lt;span class="caps"&gt;URL&lt;/span&gt; is example
 .com/private-page-about-michael-jackson, a query for [ Michael Jackson ] 
-could certainly bring it up, even if it were never crawled. &lt;/p&gt;
-&lt;p&gt;The solution to this is to allow Google and Bing to crawl the pages, but to use noindex meta or HTTP tags. If these are in place, the pages will not appear in the index at all. This sounds paradoxical: to exclude pages from appearing in Google and Bing, you have to allow them to be crawled? &lt;a href="https://support.google.com/webmasters/bin/answer.py?hl=en&amp;amp;answer=93710"&gt;Yes, that's correct&lt;/a&gt;. Furthermore, it's theoretically possible that Google or Bing could learn about a page on your site from a link, and then not crawl it immediately or at all. In this case, they will know the URL, but won't know about and X-Robots-Tag headers or meta tags. Thus, they might include the document against your wishes. For this reason, it's important to &lt;strong&gt;include&lt;/strong&gt; private pages in your sitemap.xml file, inviting and encouraging Google and Bing to crawl the page specifically so the page can be excluded from their indexes.&lt;/p&gt;
-&lt;p&gt;Yahoo! uses Bing to power their search engine, and AOL uses Google, so the above strategy applies to them as well.&lt;/p&gt;
-&lt;p&gt;Other search engines take a different approach to robots.txt. Ask.com, The Internet Archive and the Russian search engine Yandex.ru all respect the robots meta tag, but not the x-robots-tag HTTP header. Thus, for these search engines, the strategy above works for HTML files, but not for any other files. These crawlers therefore need to be blocked from accessing those other files. On the upside, unlike Google and Bing, it appears that these search engines will not show a document in their results if they have not crawled it. Thus, using robots.txt alone should be sufficient.&lt;/p&gt;
-&lt;p&gt;A third class of search engines support neither the robots HTML meta tag, nor the x-robots-tag HTTP header. These are typically less popular or less mature crawlers, and so they must be blocked using robots.txt. There are two approaches to this. The first is to list blocked pages individually in the robots.txt file, and the second is to simply block these search engines from all access. While it's possible to list each private document in robots.txt, doing so creates a privacy loophole, since it lists all private documents in one place. At CourtListener, therefore, we take a conservative approach, and completely block all search engines that do not support the HTML meta tag or the x-robots-tag HTTP header.&lt;/p&gt;
-&lt;p&gt;The final action we take when we receive a request that a document on our site stop appearring in search results, is to use the webmaster tools provided by the major search engines&lt;sup&gt;1&lt;/sup&gt; to explicitly ask those search engines to exclude the document(s) from their results.&lt;/p&gt;
-&lt;p&gt;Between these measures, private documents on CourtListener should be removed from all major and minor search engines. Where posssible this strategy takes a very granular approach, and where minor search engines do not support certain standards, we take a conservative approach, blocking them entirely.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update, 2012-04-29:&lt;/strong&gt; You may also want to look at our &lt;a href="http://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/"&gt;discussion of the impact of putting people's names into your URLs, and the way that affects your sitemap files&lt;/a&gt;.&lt;/p&gt;
+could certainly bring it up, even if it were never&amp;nbsp;crawled. &lt;/p&gt;
+&lt;p&gt;The solution to this is to allow Google and Bing to crawl the pages, but to use noindex meta or &lt;span class="caps"&gt;HTTP&lt;/span&gt; tags. If these are in place, the pages will not appear in the index at all. This sounds paradoxical: to exclude pages from appearing in Google and Bing, you have to allow them to be crawled? &lt;a href="https://support.google.com/webmasters/bin/answer.py?hl=en&amp;amp;answer=93710"&gt;Yes, that&amp;#8217;s correct&lt;/a&gt;. Furthermore, it&amp;#8217;s theoretically possible that Google or Bing could learn about a page on your site from a link, and then not crawl it immediately or at all. In this case, they will know the &lt;span class="caps"&gt;URL&lt;/span&gt;, but won&amp;#8217;t know about and X-Robots-Tag headers or meta tags. Thus, they might include the document against your wishes. For this reason, it&amp;#8217;s important to &lt;strong&gt;include&lt;/strong&gt; private pages in your sitemap.xml file, inviting and encouraging Google and Bing to crawl the page specifically so the page can be excluded from their&amp;nbsp;indexes.&lt;/p&gt;
+&lt;p&gt;Yahoo! uses Bing to power their search engine, and &lt;span class="caps"&gt;AOL&lt;/span&gt; uses Google, so the above strategy applies to them as&amp;nbsp;well.&lt;/p&gt;
+&lt;p&gt;Other search engines take a different approach to robots.txt. Ask.com, The Internet Archive and the Russian search engine Yandex.ru all respect the robots meta tag, but not the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. Thus, for these search engines, the strategy above works for &lt;span class="caps"&gt;HTML&lt;/span&gt; files, but not for any other files. These crawlers therefore need to be blocked from accessing those other files. On the upside, unlike Google and Bing, it appears that these search engines will not show a document in their results if they have not crawled it. Thus, using robots.txt alone should be&amp;nbsp;sufficient.&lt;/p&gt;
+&lt;p&gt;A third class of search engines support neither the robots &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tag, nor the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. These are typically less popular or less mature crawlers, and so they must be blocked using robots.txt. There are two approaches to this. The first is to list blocked pages individually in the robots.txt file, and the second is to simply block these search engines from all access. While it&amp;#8217;s possible to list each private document in robots.txt, doing so creates a privacy loophole, since it lists all private documents in one place. At CourtListener, therefore, we take a conservative approach, and completely block all search engines that do not support the &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tag or the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt;&amp;nbsp;header.&lt;/p&gt;
+&lt;p&gt;The final action we take when we receive a request that a document on our site stop appearring in search results, is to use the webmaster tools provided by the major search engines&lt;sup&gt;1&lt;/sup&gt; to explicitly ask those search engines to exclude the document(s) from their&amp;nbsp;results.&lt;/p&gt;
+&lt;p&gt;Between these measures, private documents on CourtListener should be removed from all major and minor search engines. Where posssible this strategy takes a very granular approach, and where minor search engines do not support certain standards, we take a conservative approach, blocking them&amp;nbsp;entirely.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update, 2012-04-29:&lt;/strong&gt; You may also want to look at our &lt;a href="http://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/"&gt;discussion of the impact of putting people&amp;#8217;s names into your URLs, and the way that affects your sitemap files&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- actual footnotes --&gt;
 
 &lt;ol&gt;
-&lt;li&gt;We use &lt;a href="http://www.google.com/webmasters/tools"&gt;Google's Webmaster 
-Tools&lt;/a&gt; and &lt;a href="http://www.bing.com/toolbox/webmaster"&gt;Bing's 
-Webmaster Tools&lt;/a&gt;. Before it was merged into Bing's tools, 
+&lt;li&gt;We use &lt;a href="http://www.google.com/webmasters/tools"&gt;Google&amp;#8217;s Webmaster 
+Tools&lt;/a&gt; and &lt;a href="http://www.bing.com/toolbox/webmaster"&gt;Bing&amp;#8217;s 
+Webmaster Tools&lt;/a&gt;. Before it was merged into Bing&amp;#8217;s tools, 
 we also previously used &lt;a href="http://siteexplorer.search.yahoo
-.com/"&gt;Yahoo's Site Explorer&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="robots.txt"></category><category term="privacy"></category><category term="practical obscurity"></category><category term="policy"></category><category term="courtlistener.com"></category><category term="courtlistener.com"></category><category term="policy"></category><category term="practical obscurity"></category><category term="privacy"></category><category term="robots.txt"></category></entry><entry><title>Respecting privacy while providing hundreds of thousands of public documents</title><link href="http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/" rel="alternate"></link><updated>2012-01-16T22:13:22-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-16:posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/</id><summary type="html">&lt;p&gt;At CourtListener, we have always taken privacy very seriously. We &lt;a href="http://courtlistener.com/coverage/"&gt;have over 600,000&lt;/a&gt; cases currently, most of which are available on Google and other search engines. But in the interest of privacy, we make two broad exceptions to what's available on search engines: &lt;/p&gt;
+.com/"&gt;Yahoo&amp;#8217;s Site Explorer&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="robots.txt"></category><category term="privacy"></category><category term="practical obscurity"></category><category term="policy"></category><category term="courtlistener.com"></category><category term="courtlistener.com"></category><category term="policy"></category><category term="practical obscurity"></category><category term="privacy"></category><category term="robots.txt"></category></entry><entry><title>Respecting privacy while providing hundreds of thousands of public documents</title><link href="http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/" rel="alternate"></link><updated>2012-01-16T22:13:22-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-16:posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/</id><summary type="html">&lt;p&gt;At CourtListener, we have always taken privacy very seriously. We &lt;a href="http://courtlistener.com/coverage/"&gt;have over 600,000&lt;/a&gt; cases currently, most of which are available on Google and other search engines. But in the interest of privacy, we make two broad exceptions to what&amp;#8217;s available on search&amp;nbsp;engines: &lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;As is stated in our &lt;a href="http://courtlistener.com/removal/"&gt;removal policy&lt;/a&gt;, if someone gets in touch with us in writing and requests that we block search engines from indexing a document, we generally attempt to do so within a few hours. &lt;/li&gt;
-&lt;li&gt;If we discover a privacy problem within a case, we proactively block search engines from indexing it. &lt;/li&gt;
+&lt;li&gt;As is stated in our &lt;a href="http://courtlistener.com/removal/"&gt;removal policy&lt;/a&gt;, if someone gets in touch with us in writing and requests that we block search engines from indexing a document, we generally attempt to do so within a few&amp;nbsp;hours. &lt;/li&gt;
+&lt;li&gt;If we discover a privacy problem within a case, we proactively block search engines from indexing&amp;nbsp;it. &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Each of these exceptions presents interesting problems. In the case of requests to prevent indexing by search engines, we're often faced with an ethical dilemma, since in many instances, the party making the request is merely displeased that their involvement in the case is easy to discover and/or they are simply embarrassed by their past. In this case, the question we have to ask ourselves is: Where is the balance between the person's right to privacy and the public's need to access court records, and to what extent do changes in &lt;a href="http://scholar.google.com/scholar?hl=en&amp;amp;q=practical+obscurity+privacy"&gt;practical obscurity&lt;/a&gt; compel action on our behalf? For example, if someone convicted of murder or child molestation is trying to make information about their past harder to discover, how should we weigh the public's interest in easily locating this information via a search engine? In the case of convicted child molesters, we can look to &lt;a href="http://en.wikipedia.org/wiki/Megan%27s_Law"&gt;Megan's law&lt;/a&gt; for a public policy stance on the issue, but even that forces us to ask to what extent we should chart our own path, and to what extent we should follow public policy decisions. &lt;/p&gt;
-&lt;p&gt;On the opposite end of the spectrum, many of the cases that we block search engines from indexing are asylum cases where a person has lost an attempt to stay in the United States, and been sent back to a country where they feel unsafe. In such cases, it seems clear that it's important to keep the person's name out of search engine results, but still we must ask to what extent do we have an obligation to identify and block such cases from appearing proactively rather than post hoc? &lt;/p&gt;
-&lt;p&gt;In both of these scenarios, we have taken a middle ground that we hope strikes a balance between the public's need for court documents and an individual's desire or need for privacy. Instead of either proactively blocking search engines from indexing cases or keeping cases in search results against a party's request, our current policy is to block search engines from indexing a web page as each request comes in. We currently have 190 cases that are blocked from search results, and the number increases regularly. &lt;/p&gt;
-&lt;p&gt;Where we do take proactive measures to block cases from search results is where we have discovered unredacted or &lt;a href="https://freedom-to-tinker.com/blog/tblee/what-gets-redacted-pacer"&gt;improperly redacted&lt;/a&gt; social security numbers in a case. Taking a cue from the now-defunct Altlaw, whenever a case is added, we look for character strings that appear to be social security numbers, tax ID numbers or alien ID numbers. If we find any such strings, we replace them with x's, and we try to make sure the unredacted document does not appear in search results outside of CourtListener. &lt;/p&gt;
-&lt;p&gt;The methods we have used to block cases from appearing in search results have evolved over time, and I'd like to share what we've learned so others can give us feedback and learn from our experiences. There are five technical measures we use to keep a case out of search results: &lt;/p&gt;
+&lt;p&gt;Each of these exceptions presents interesting problems. In the case of requests to prevent indexing by search engines, we&amp;#8217;re often faced with an ethical dilemma, since in many instances, the party making the request is merely displeased that their involvement in the case is easy to discover and/or they are simply embarrassed by their past. In this case, the question we have to ask ourselves is: Where is the balance between the person&amp;#8217;s right to privacy and the public&amp;#8217;s need to access court records, and to what extent do changes in &lt;a href="http://scholar.google.com/scholar?hl=en&amp;amp;q=practical+obscurity+privacy"&gt;practical obscurity&lt;/a&gt; compel action on our behalf? For example, if someone convicted of murder or child molestation is trying to make information about their past harder to discover, how should we weigh the public&amp;#8217;s interest in easily locating this information via a search engine? In the case of convicted child molesters, we can look to &lt;a href="http://en.wikipedia.org/wiki/Megan%27s_Law"&gt;Megan&amp;#8217;s law&lt;/a&gt; for a public policy stance on the issue, but even that forces us to ask to what extent we should chart our own path, and to what extent we should follow public policy&amp;nbsp;decisions. &lt;/p&gt;
+&lt;p&gt;On the opposite end of the spectrum, many of the cases that we block search engines from indexing are asylum cases where a person has lost an attempt to stay in the United States, and been sent back to a country where they feel unsafe. In such cases, it seems clear that it&amp;#8217;s important to keep the person&amp;#8217;s name out of search engine results, but still we must ask to what extent do we have an obligation to identify and block such cases from appearing proactively rather than post&amp;nbsp;hoc? &lt;/p&gt;
+&lt;p&gt;In both of these scenarios, we have taken a middle ground that we hope strikes a balance between the public&amp;#8217;s need for court documents and an individual&amp;#8217;s desire or need for privacy. Instead of either proactively blocking search engines from indexing cases or keeping cases in search results against a party&amp;#8217;s request, our current policy is to block search engines from indexing a web page as each request comes in. We currently have 190 cases that are blocked from search results, and the number increases&amp;nbsp;regularly. &lt;/p&gt;
+&lt;p&gt;Where we do take proactive measures to block cases from search results is where we have discovered unredacted or &lt;a href="https://freedom-to-tinker.com/blog/tblee/what-gets-redacted-pacer"&gt;improperly redacted&lt;/a&gt; social security numbers in a case. Taking a cue from the now-defunct Altlaw, whenever a case is added, we look for character strings that appear to be social security numbers, tax &lt;span class="caps"&gt;ID&lt;/span&gt; numbers or alien &lt;span class="caps"&gt;ID&lt;/span&gt; numbers. If we find any such strings, we replace them with x&amp;#8217;s, and we try to make sure the unredacted document does not appear in search results outside of&amp;nbsp;CourtListener. &lt;/p&gt;
+&lt;p&gt;The methods we have used to block cases from appearing in search results have evolved over time, and I&amp;#8217;d like to share what we&amp;#8217;ve learned so others can give us feedback and learn from our experiences. There are five technical measures we use to keep a case out of search&amp;nbsp;results: &lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;robots.txt file &lt;/li&gt;
-&lt;li&gt;HTML meta noindex tags &lt;/li&gt;
-&lt;li&gt;HTTP X-Robots-Tag headers &lt;/li&gt;
-&lt;li&gt;sitemaps.xml files &lt;/li&gt;
-&lt;li&gt;The webmaster tools provided by the search engines themselves&lt;/li&gt;
+&lt;li&gt;robots.txt&amp;nbsp;file &lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt; meta noindex&amp;nbsp;tags &lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt; X-Robots-Tag&amp;nbsp;headers &lt;/li&gt;
+&lt;li&gt;sitemaps.xml&amp;nbsp;files &lt;/li&gt;
+&lt;li&gt;The webmaster tools provided by the search engines&amp;nbsp;themselves&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Each of these deserves a moment of explanation. &lt;a href="http://www.robotstxt.org/"&gt;robots.txt&lt;/a&gt; is a protocol that is respected by all major search engines internationally, and which allows site authors (such as myself) to identify web pages that shouldn't be crawled. Note that I said &lt;strong&gt;crawled&lt;/strong&gt; not &lt;strong&gt;indexed&lt;/strong&gt;. This is a very important distinction, as I'll explain momentarily. &lt;/p&gt;
-&lt;p&gt;HTML meta tags are a tag that you can place into the HTML of a page, and which instructs search engines not to &lt;strong&gt;index&lt;/strong&gt; a page. Since this is an HTML format, this method only works on HTML pages. &lt;/p&gt;
-&lt;p&gt;HTTP X-Robots-Tag headers are similar to HTML meta tags, but they allow site authors to request that an &lt;em&gt;item&lt;/em&gt; not be indexed. That item may be an HTML page, but equally, it may be a PDF or even an image that should not searchable. &lt;/p&gt;
-&lt;p&gt;Further, we provide an &lt;a href="http://www.sitemaps.org/protocol.html"&gt;XML sitemap&lt;/a&gt; that search engines can understand, and which tells them about every page on the site that they should crawl and index. &lt;/p&gt;
+&lt;p&gt;Each of these deserves a moment of explanation. &lt;a href="http://www.robotstxt.org/"&gt;robots.txt&lt;/a&gt; is a protocol that is respected by all major search engines internationally, and which allows site authors (such as myself) to identify web pages that shouldn&amp;#8217;t be crawled. Note that I said &lt;strong&gt;crawled&lt;/strong&gt; not &lt;strong&gt;indexed&lt;/strong&gt;. This is a very important distinction, as I&amp;#8217;ll explain&amp;nbsp;momentarily. &lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt; meta tags are a tag that you can place into the &lt;span class="caps"&gt;HTML&lt;/span&gt; of a page, and which instructs search engines not to &lt;strong&gt;index&lt;/strong&gt; a page. Since this is an &lt;span class="caps"&gt;HTML&lt;/span&gt; format, this method only works on &lt;span class="caps"&gt;HTML&lt;/span&gt;&amp;nbsp;pages. &lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;HTTP&lt;/span&gt; X-Robots-Tag headers are similar to &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tags, but they allow site authors to request that an &lt;em&gt;item&lt;/em&gt; not be indexed. That item may be an &lt;span class="caps"&gt;HTML&lt;/span&gt; page, but equally, it may be a &lt;span class="caps"&gt;PDF&lt;/span&gt; or even an image that should not&amp;nbsp;searchable. &lt;/p&gt;
+&lt;p&gt;Further, we provide an &lt;a href="http://www.sitemaps.org/protocol.html"&gt;&lt;span class="caps"&gt;XML&lt;/span&gt; sitemap&lt;/a&gt; that search engines can understand, and which tells them about every page on the site that they should crawl and&amp;nbsp;index. &lt;/p&gt;
 &lt;p&gt;All of these elements fit together into a complicated melange that has 
 absorbed many development hours over the past two years, 
-as different search engines interpret these standards in different ways. &lt;/p&gt;
+as different search engines interpret these standards in different&amp;nbsp;ways. &lt;/p&gt;
 &lt;p&gt;For example, Google and Bing interpret the robots.txt files as blocks to 
 their crawlers. This means that web pages listed in robots.txt will not be 
 &lt;strong&gt;crawled&lt;/strong&gt; by Google or Bing, but that does not mean those pages will not 
@@ -254,82 +252,82 @@ be &lt;strong&gt;indexed&lt;/strong&gt;. Indeed, if Google or Bing learn of the 
 page (for example, because another page linked to it), 
 then they will include it in &lt;a href="http://www.youtube.com/watch?v=KBdEwpRQRD0"&gt;their&lt;/a&gt; &lt;a href="http://www.bing.com/community/site_blogs/b/webmaster/archive/2009/08/21/prevent-a-bot-from-getting-lost-in-space-sem-101.aspx"&gt;indexes&lt;/a&gt;. This is true even if 
 robots.txt explicitly blocks robots from crawling the page, 
-because to include it in their indexes, they don't &lt;strong&gt;have to&lt;/strong&gt; crawl it 
+because to include it in their indexes, they don&amp;#8217;t &lt;strong&gt;have to&lt;/strong&gt; crawl it 
 &amp;mdash; they just need to know about it! Even your own link to a page is 
-sufficient for Google or Bing to know about the page. And what's worse, 
-if you have a good URL with descriptive words within it, 
-Google or Bing will know the terms in the URLs even when they haven't 
-crawled the page. So if your URL is example
+sufficient for Google or Bing to know about the page. And what&amp;#8217;s worse, 
+if you have a good &lt;span class="caps"&gt;URL&lt;/span&gt; with descriptive words within it, 
+Google or Bing will know the terms in the URLs even when they haven&amp;#8217;t 
+crawled the page. So if your &lt;span class="caps"&gt;URL&lt;/span&gt; is example
 .com/private-page-about-michael-jackson, a query for [ Michael Jackson ] 
-could certainly bring it up, even if it were never crawled. &lt;/p&gt;
-&lt;p&gt;The solution to this is to allow Google and Bing to crawl the pages, but to use noindex meta or HTTP tags. If these are in place, the pages will not appear in the index at all. This sounds paradoxical: to exclude pages from appearing in Google and Bing, you have to allow them to be crawled? &lt;a href="https://support.google.com/webmasters/bin/answer.py?hl=en&amp;amp;answer=93710"&gt;Yes, that's correct&lt;/a&gt;. Furthermore, it's theoretically possible that Google or Bing could learn about a page on your site from a link, and then not crawl it immediately or at all. In this case, they will know the URL, but won't know about and X-Robots-Tag headers or meta tags. Thus, they might include the document against your wishes. For this reason, it's important to &lt;strong&gt;include&lt;/strong&gt; private pages in your sitemap.xml file, inviting and encouraging Google and Bing to crawl the page specifically so the page can be excluded from their indexes.&lt;/p&gt;
-&lt;p&gt;Yahoo! uses Bing to power their search engine, and AOL uses Google, so the above strategy applies to them as well.&lt;/p&gt;
-&lt;p&gt;Other search engines take a different approach to robots.txt. Ask.com, The Internet Archive and the Russian search engine Yandex.ru all respect the robots meta tag, but not the x-robots-tag HTTP header. Thus, for these search engines, the strategy above works for HTML files, but not for any other files. These crawlers therefore need to be blocked from accessing those other files. On the upside, unlike Google and Bing, it appears that these search engines will not show a document in their results if they have not crawled it. Thus, using robots.txt alone should be sufficient.&lt;/p&gt;
-&lt;p&gt;A third class of search engines support neither the robots HTML meta tag, nor the x-robots-tag HTTP header. These are typically less popular or less mature crawlers, and so they must be blocked using robots.txt. There are two approaches to this. The first is to list blocked pages individually in the robots.txt file, and the second is to simply block these search engines from all access. While it's possible to list each private document in robots.txt, doing so creates a privacy loophole, since it lists all private documents in one place. At CourtListener, therefore, we take a conservative approach, and completely block all search engines that do not support the HTML meta tag or the x-robots-tag HTTP header.&lt;/p&gt;
-&lt;p&gt;The final action we take when we receive a request that a document on our site stop appearring in search results, is to use the webmaster tools provided by the major search engines&lt;sup&gt;1&lt;/sup&gt; to explicitly ask those search engines to exclude the document(s) from their results.&lt;/p&gt;
-&lt;p&gt;Between these measures, private documents on CourtListener should be removed from all major and minor search engines. Where posssible this strategy takes a very granular approach, and where minor search engines do not support certain standards, we take a conservative approach, blocking them entirely.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update, 2012-04-29:&lt;/strong&gt; You may also want to look at our &lt;a href="http://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/"&gt;discussion of the impact of putting people's names into your URLs, and the way that affects your sitemap files&lt;/a&gt;.&lt;/p&gt;
+could certainly bring it up, even if it were never&amp;nbsp;crawled. &lt;/p&gt;
+&lt;p&gt;The solution to this is to allow Google and Bing to crawl the pages, but to use noindex meta or &lt;span class="caps"&gt;HTTP&lt;/span&gt; tags. If these are in place, the pages will not appear in the index at all. This sounds paradoxical: to exclude pages from appearing in Google and Bing, you have to allow them to be crawled? &lt;a href="https://support.google.com/webmasters/bin/answer.py?hl=en&amp;amp;answer=93710"&gt;Yes, that&amp;#8217;s correct&lt;/a&gt;. Furthermore, it&amp;#8217;s theoretically possible that Google or Bing could learn about a page on your site from a link, and then not crawl it immediately or at all. In this case, they will know the &lt;span class="caps"&gt;URL&lt;/span&gt;, but won&amp;#8217;t know about and X-Robots-Tag headers or meta tags. Thus, they might include the document against your wishes. For this reason, it&amp;#8217;s important to &lt;strong&gt;include&lt;/strong&gt; private pages in your sitemap.xml file, inviting and encouraging Google and Bing to crawl the page specifically so the page can be excluded from their&amp;nbsp;indexes.&lt;/p&gt;
+&lt;p&gt;Yahoo! uses Bing to power their search engine, and &lt;span class="caps"&gt;AOL&lt;/span&gt; uses Google, so the above strategy applies to them as&amp;nbsp;well.&lt;/p&gt;
+&lt;p&gt;Other search engines take a different approach to robots.txt. Ask.com, The Internet Archive and the Russian search engine Yandex.ru all respect the robots meta tag, but not the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. Thus, for these search engines, the strategy above works for &lt;span class="caps"&gt;HTML&lt;/span&gt; files, but not for any other files. These crawlers therefore need to be blocked from accessing those other files. On the upside, unlike Google and Bing, it appears that these search engines will not show a document in their results if they have not crawled it. Thus, using robots.txt alone should be&amp;nbsp;sufficient.&lt;/p&gt;
+&lt;p&gt;A third class of search engines support neither the robots &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tag, nor the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. These are typically less popular or less mature crawlers, and so they must be blocked using robots.txt. There are two approaches to this. The first is to list blocked pages individually in the robots.txt file, and the second is to simply block these search engines from all access. While it&amp;#8217;s possible to list each private document in robots.txt, doing so creates a privacy loophole, since it lists all private documents in one place. At CourtListener, therefore, we take a conservative approach, and completely block all search engines that do not support the &lt;span class="caps"&gt;HTML&lt;/span&gt; meta tag or the x-robots-tag &lt;span class="caps"&gt;HTTP&lt;/span&gt;&amp;nbsp;header.&lt;/p&gt;
+&lt;p&gt;The final action we take when we receive a request that a document on our site stop appearring in search results, is to use the webmaster tools provided by the major search engines&lt;sup&gt;1&lt;/sup&gt; to explicitly ask those search engines to exclude the document(s) from their&amp;nbsp;results.&lt;/p&gt;
+&lt;p&gt;Between these measures, private documents on CourtListener should be removed from all major and minor search engines. Where posssible this strategy takes a very granular approach, and where minor search engines do not support certain standards, we take a conservative approach, blocking them&amp;nbsp;entirely.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update, 2012-04-29:&lt;/strong&gt; You may also want to look at our &lt;a href="http://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/"&gt;discussion of the impact of putting people&amp;#8217;s names into your URLs, and the way that affects your sitemap files&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- actual footnotes --&gt;
 
 &lt;ol&gt;
-&lt;li&gt;We use &lt;a href="http://www.google.com/webmasters/tools"&gt;Google's Webmaster 
-Tools&lt;/a&gt; and &lt;a href="http://www.bing.com/toolbox/webmaster"&gt;Bing's 
-Webmaster Tools&lt;/a&gt;. Before it was merged into Bing's tools, 
+&lt;li&gt;We use &lt;a href="http://www.google.com/webmasters/tools"&gt;Google&amp;#8217;s Webmaster 
+Tools&lt;/a&gt; and &lt;a href="http://www.bing.com/toolbox/webmaster"&gt;Bing&amp;#8217;s 
+Webmaster Tools&lt;/a&gt;. Before it was merged into Bing&amp;#8217;s tools, 
 we also previously used &lt;a href="http://siteexplorer.search.yahoo
-.com/"&gt;Yahoo's Site Explorer&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="robots.txt"></category><category term="privacy"></category><category term="practical obscurity"></category><category term="policy"></category><category term="courtlistener.com"></category><category term="courtlistener.com"></category><category term="policy"></category><category term="practical obscurity"></category><category term="privacy"></category><category term="robots.txt"></category></entry><entry><title>Integrating Solr Search with Django at CourtListener</title><link href="http://michaeljaylissner.com/posts/2011/12/02/integrating-solr-search-with-django-at-courtlistener/" rel="alternate"></link><updated>2011-12-02T09:37:39-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2011-12-02:posts/2011/12/02/integrating-solr-search-with-django-at-courtlistener/</id><summary type="html">
-&lt;p&gt;Over the past few weeks, I've been hard at work on the new version of &lt;a href="http://courtlistener.com"&gt;CourtListener&lt;/a&gt;. Unfortunately, progress has been slower than I'd like due to the limitations of the Solr frameworks I've been using. There are a number of competing frameworks available, each with its own strengths and pitfalls.&lt;/p&gt;
-&lt;p&gt;So far, I've tried two of the popular ones, &lt;a href="http://haystacksearch.org/"&gt;Haystack&lt;/a&gt; and &lt;a href="http://opensource.timetric.com/sunburnt/index.html"&gt;Sunburnt&lt;/a&gt;. I'm pretty impressed by both, but today's blog post is to outline the problems I'm having with these frameworks so that others that are faced with choosing one might be better informed. The difference between these frameworks is vast. Haystack aims to solve all of your integration needs, while Sunburnt is a fairly lightweight wrapper around Solr.&lt;/p&gt;
-&lt;h2 id="courtlisteners-needs"&gt;CourtListener's needs&lt;/h2&gt;
+.com/"&gt;Yahoo&amp;#8217;s Site Explorer&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="robots.txt"></category><category term="privacy"></category><category term="practical obscurity"></category><category term="policy"></category><category term="courtlistener.com"></category><category term="courtlistener.com"></category><category term="policy"></category><category term="practical obscurity"></category><category term="privacy"></category><category term="robots.txt"></category></entry><entry><title>Integrating Solr Search with Django at CourtListener</title><link href="http://michaeljaylissner.com/posts/2011/12/02/integrating-solr-search-with-django-at-courtlistener/" rel="alternate"></link><updated>2011-12-02T09:37:39-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2011-12-02:posts/2011/12/02/integrating-solr-search-with-django-at-courtlistener/</id><summary type="html">
+&lt;p&gt;Over the past few weeks, I’ve been hard at work on the new version of &lt;a href="http://courtlistener.com"&gt;CourtListener&lt;/a&gt;. Unfortunately, progress has been slower than I’d like due to the limitations of the Solr frameworks I’ve been using. There are a number of competing frameworks available, each with its own strengths and pitfalls.&lt;/p&gt;
+&lt;p&gt;So far, I’ve tried two of the popular ones, &lt;a href="http://haystacksearch.org/"&gt;Haystack&lt;/a&gt; and &lt;a href="http://opensource.timetric.com/sunburnt/index.html"&gt;Sunburnt&lt;/a&gt;. I’m pretty impressed by both, but today’s blog post is to outline the problems I’m having with these frameworks so that others that are faced with choosing one might be better informed. The difference between these frameworks is vast. Haystack aims to solve all of your integration needs, while Sunburnt is a fairly lightweight wrapper around Solr.&lt;/p&gt;
+&lt;h2 id="courtlisteners-needs"&gt;CourtListener’s needs&lt;/h2&gt;
 &lt;p&gt;At CourtListener, we have some big goals for the new search version. At its
-core, it's essentially a search-powered site, so we have some big needs:&lt;/p&gt;
+core, it’s essentially a search-powered site, so we have some big needs:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.uxmatters.com/mt/archives/2009/09/best-practices-for-designing-faceted-search-filters.php"&gt;Parallel Faceted Search&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.uxmatters.com/mt/archives/2009/09/best-practices-for-designing-faceted-search-filters.php"&gt;Parallel Faceted Search&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Highlighting&lt;/li&gt;
-&lt;li&gt;Complex boolean searches supported by Solr's eDisMax syntax&lt;/li&gt;
-&lt;li&gt;Snippets below search results and in emails&lt;/li&gt;
-&lt;li&gt;Standard search stuff: field-level boosting, result and facet counts, field-level searching, result pagination, performance, etc.&lt;/li&gt;
+&lt;li&gt;Complex boolean searches supported by Solr’s eDisMax syntax&lt;/li&gt;
+&lt;li&gt;Snippets below search results and in emails&lt;/li&gt;
+&lt;li&gt;Standard search stuff: field-level boosting, result and facet counts, field-level searching, result pagination, performance, etc.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;We're currently using &lt;a href="http://sphinxsearch.com"&gt;Sphinx Search&lt;/a&gt; with &lt;a href="http://github.com/dcramer/django-sphinx"&gt;django-sphinx&lt;/a&gt;, which does a fine job, but it has some problems:&lt;/p&gt;
+&lt;p&gt;We’re currently using &lt;a href="http://sphinxsearch.com"&gt;Sphinx Search&lt;/a&gt; with &lt;a href="http://github.com/dcramer/django-sphinx"&gt;django-sphinx&lt;/a&gt;, which does a fine job, but it has some problems:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;django-sphinx hasn't been maintained in years, and requires patching&lt;/li&gt;
-&lt;li&gt;django-sphinx doesn't support snippets&lt;/li&gt;
-&lt;li&gt;Sphinx doesn't (yet) support real time indexing (though it's in beta, I believe)&lt;/li&gt;
-&lt;li&gt;Sphinx doesn't have the community and features that Solr does&lt;/li&gt;
-&lt;li&gt;Unfamiliar syntax for users&lt;/li&gt;
+&lt;li&gt;django-sphinx hasn’t been maintained in years, and requires patching&lt;/li&gt;
+&lt;li&gt;django-sphinx doesn’t support snippets&lt;/li&gt;
+&lt;li&gt;Sphinx doesn’t (yet) support real time indexing (though it’s in beta, I believe)&lt;/li&gt;
+&lt;li&gt;Sphinx doesn’t have the community and features that Solr does&lt;/li&gt;
+&lt;li&gt;Unfamiliar syntax for users&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In general, these problems aren't too difficult, but in combination, they make for a poor user experience. The last point is a real deal breaker, since most users are accustomed to making queries like [ site:google.com ], which works for Solr and Google, but not for Sphinx. In Sphinx, your query is [ @site(google.com) ]. While we could do post processing of the user's query to convert it to Google/Solr-style syntax, it's unreliable and prone to failing in corner cases. Parsing queries is hard. More on this in a moment. &lt;/p&gt;
-&lt;h2 id="lets-try-haystack"&gt;Let's try Haystack&lt;/h2&gt;
-&lt;p&gt;In switching from Sphinx, I first tried Haystack as a solution, since it has excellent documentation and seems to be the most popular solution. I spent about two weeks learning about it and getting it in place, but ultimately, I gave up on it because I found that I was subclassing it everywhere. Haystack is a good solution, to be sure, but I found that I was:&lt;/p&gt;
+&lt;p&gt;In general, these problems aren’t too difficult, but in combination, they make for a poor user experience. The last point is a real deal breaker, since most users are accustomed to making queries like [ site:google.com ], which works for Solr and Google, but not for Sphinx. In Sphinx, your query is [ @site(google.com) ]. While we could do post processing of the user’s query to convert it to Google/Solr-style syntax, it’s unreliable and prone to failing in corner cases. Parsing queries is hard. More on this in a moment. &lt;/p&gt;
+&lt;h2 id="lets-try-haystack"&gt;Let’s try Haystack&lt;/h2&gt;
+&lt;p&gt;In switching from Sphinx, I first tried Haystack as a solution, since it has excellent documentation and seems to be the most popular solution. I spent about two weeks learning about it and getting it in place, but ultimately, I gave up on it because I found that I was subclassing it everywhere. Haystack is a good solution, to be sure, but I found that I was:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Subclassing the FacetView so it could support parallel facet counts&lt;/li&gt;
-&lt;li&gt;Subclassing the FacetForm for another feature I needed&lt;/li&gt;
-&lt;li&gt;Subclassing the Solr backend so it could support Solr's highlighting syntax&lt;/li&gt;
-&lt;li&gt;Further subclassing the Solr backend so it can support additional Solr parameters that aren't built in&lt;/li&gt;
-&lt;li&gt;...etc...&lt;/li&gt;
+&lt;li&gt;Subclassing the FacetView so it could support parallel facet counts&lt;/li&gt;
+&lt;li&gt;Subclassing the FacetForm for another feature I needed&lt;/li&gt;
+&lt;li&gt;Subclassing the Solr backend so it could support Solr’s highlighting syntax&lt;/li&gt;
+&lt;li&gt;Further subclassing the Solr backend so it can support additional Solr parameters that aren’t built in&lt;/li&gt;
+&lt;li&gt;…etc…&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I worked on that third point for the better part of a day before deciding that Haystack wasn't for me. Rather than spending my time working on the search needs of CourtListener, I was spending most of it hacking on Haystack, and trying to understand the way it fits together. It's not unreasonably complex, but there is a LOT of documentation, and a lot of complexity that I don't need (such as the ability to switch search backends). Instead of a big solution that allows me to subclass whatever I need (which is good), I needed a lighter-weight solution that was more nimble, and which allowed me to interact with Solr in a more direct way.&lt;/p&gt;
-&lt;h2 id="enter-sunburnt"&gt;Enter Sunburnt&lt;/h2&gt;
-&lt;p&gt;Sunburnt is a lightweight solution that is everything that Haystack isn't. From the moment it's installed, you can start making queries without configuring Django to use it, and without really knowing much else. Its documentation is a single page, which is actually a big relief after coming from Haystack. But Sunburnt has a major problem in its design: It doesn't support just sending queries to Solr. The expectation in Sunburnt is that each system using it does post-processing on the user's query, and then submits the query to Sunburnt in stages. &lt;/p&gt;
-&lt;p&gt;So, if a user searches for "foo bar", rather than just passing that to Sunburnt, you have to split on the white space, then pass: &lt;/p&gt;
+&lt;p&gt;I worked on that third point for the better part of a day before deciding that Haystack wasn’t for me. Rather than spending my time working on the search needs of CourtListener, I was spending most of it hacking on Haystack, and trying to understand the way it fits together. It’s not unreasonably complex, but there is a &lt;span class="caps"&gt;LOT&lt;/span&gt; of documentation, and a lot of complexity that I don’t need (such as the ability to switch search backends). Instead of a big solution that allows me to subclass whatever I need (which is good), I needed a lighter-weight solution that was more nimble, and which allowed me to interact with Solr in a more direct way.&lt;/p&gt;
+&lt;h2 id="enter-sunburnt"&gt;Enter Sunburnt&lt;/h2&gt;
+&lt;p&gt;Sunburnt is a lightweight solution that is everything that Haystack isn’t. From the moment it’s installed, you can start making queries without configuring Django to use it, and without really knowing much else. Its documentation is a single page, which is actually a big relief after coming from Haystack. But Sunburnt has a major problem in its design: It doesn’t support just sending queries to Solr. The expectation in Sunburnt is that each system using it does post-processing on the user’s query, and then submits the query to Sunburnt in stages. &lt;/p&gt;
+&lt;p&gt;So, if a user searches for “foo bar”, rather than just passing that to Sunburnt, you have to split on the white space, then pass: &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;si&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;query&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'foo'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;query&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'bar'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;At first you think, "OK, I can do that - just split on white space, no big deal." Then you start thinking about the &lt;a href="http://lucene.apache.org/java/3_4_0/queryparsersyntax.html#Escaping%20Special%20Characters"&gt;other syntax&lt;/a&gt; that Solr supports, and you realize that you have a real problem if you have to split up queries appropriately. Trust me when I say that you don't want to be thinking about how to send a query like this one to Sunburnt: [ foo bar "jakarta apache"~10 ]. &lt;/p&gt;
-&lt;p&gt;The author of Sunburnt will point out that there's a workaround for this problem. You can use &lt;/p&gt;
+&lt;p&gt;At first you think, “&lt;span class="caps"&gt;OK&lt;/span&gt;, I can do that - just split on white space, no big deal.” Then you start thinking about the &lt;a href="http://lucene.apache.org/java/3_4_0/queryparsersyntax.html#Escaping%20Special%20Characters"&gt;other syntax&lt;/a&gt; that Solr supports, and you realize that you have a real problem if you have to split up queries appropriately. Trust me when I say that you don’t want to be thinking about how to send a query like this one to Sunburnt: [ foo bar “jakarta apache”~10 ]. &lt;/p&gt;
+&lt;p&gt;The author of Sunburnt will point out that there’s a workaround for this problem. You can use &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;si&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'"jakarta apache"~10'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;That works, to a point, but that syntax isn't supported on facets, so your facet counts won't have the same counts as your results. And so, Sunburnt, though powerful and lightweight, fails.&lt;/p&gt;
-&lt;h2 id="what-now"&gt;What now?&lt;/h2&gt;
-&lt;p&gt;Good question.&lt;/p&gt;</summary><category term="Sunburnt"></category><category term="Solr"></category><category term="Haystack"></category><category term="django"></category><category term="courtlistener.com"></category></entry><entry><title>The abolishment of the Emergency Court of Appeals (April 18, 1962)</title><link href="http://michaeljaylissner.com/posts/2011/08/10/the-abolishment-of-the-emergency-court-of-appeals-1962/" rel="alternate"></link><updated>2011-08-10T20:50:54-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2011-08-10:posts/2011/08/10/the-abolishment-of-the-emergency-court-of-appeals-1962/</id><summary type="html">&lt;p&gt;One of the coming features at &lt;a href="http://courtlistener.com"&gt;CourtListener&lt;/a&gt; is an API for the law. Part of that feature is going to be some basic information about the courts themselves, so I spent some time over the weekend researching courts that served a special purpose but were since abolished.&lt;/p&gt;
-&lt;p&gt;One such court was the &lt;a href="https://secure.wikimedia.org/wikipedia/en/wiki/Emergency_Court_of_Appeals"&gt;Emergency Court of Appeals&lt;/a&gt;. It was created during World War II to set prices, and, naturally, was the court of appeals for many cases. The creation date of the court is prominently published in various places on the Internet, but the abolishment history of the court was very difficult to find. After researching online for some time, and learning that my library card had expired (sigh), I put in a query with the &lt;a href="http://www.loc.gov"&gt;Library of Congress&lt;/a&gt;, which provides free research of these types of things.&lt;/p&gt;
+&lt;p&gt;That works, to a point, but that syntax isn’t supported on facets, so your facet counts won’t have the same counts as your results. And so, Sunburnt, though powerful and lightweight, fails.&lt;/p&gt;
+&lt;h2 id="what-now"&gt;What now?&lt;/h2&gt;
+&lt;p&gt;Good question.&lt;/p&gt;</summary><category term="Sunburnt"></category><category term="Solr"></category><category term="Haystack"></category><category term="django"></category><category term="courtlistener.com"></category></entry><entry><title>The abolishment of the Emergency Court of Appeals (April 18, 1962)</title><link href="http://michaeljaylissner.com/posts/2011/08/10/the-abolishment-of-the-emergency-court-of-appeals-1962/" rel="alternate"></link><updated>2011-08-10T20:50:54-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2011-08-10:posts/2011/08/10/the-abolishment-of-the-emergency-court-of-appeals-1962/</id><summary type="html">&lt;p&gt;One of the coming features at &lt;a href="http://courtlistener.com"&gt;CourtListener&lt;/a&gt; is an &lt;span class="caps"&gt;API&lt;/span&gt; for the law. Part of that feature is going to be some basic information about the courts themselves, so I spent some time over the weekend researching courts that served a special purpose but were since&amp;nbsp;abolished.&lt;/p&gt;
+&lt;p&gt;One such court was the &lt;a href="https://secure.wikimedia.org/wikipedia/en/wiki/Emergency_Court_of_Appeals"&gt;Emergency Court of Appeals&lt;/a&gt;. It was created during World War &lt;span class="caps"&gt;II&lt;/span&gt; to set prices, and, naturally, was the court of appeals for many cases. The creation date of the court is prominently published in various places on the Internet, but the abolishment history of the court was very difficult to find. After researching online for some time, and learning that my library card had expired (sigh), I put in a query with the &lt;a href="http://www.loc.gov"&gt;Library of Congress&lt;/a&gt;, which provides free research of these types of&amp;nbsp;things.&lt;/p&gt;
 &lt;p&gt;Within a couple days, the provided me with this amazing response, 
- which I'm sharing here, and on the above Wikipedia article:&lt;/p&gt;
+ which I&amp;#8217;m sharing here, and on the above Wikipedia&amp;nbsp;article:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;As stated in the Legislative Notes to 50 U.S. Code Appendix § 921 to 926, 
-as posted at http://www.law.cornell.edu/uscode/html/uscode50a/usc_sec_50a_00000921----000-notes.html, 
+&lt;p&gt;As stated in the Legislative Notes to 50 &lt;span class="caps"&gt;U.S.&lt;/span&gt; Code Appendix § 921 to 926, 
+as posted at http://www.law.cornell.edu/uscode/html/uscode50a/usc_sec_50a_00000921&amp;#8212;&amp;#8212;000-notes.html, 
 the following explanation is given regarding the amendment and repeal of Act 
-of Jan. 30, 1942, ch. 26, title II, § 204, 56 Stat. 23, 31-33: &lt;/p&gt;
-&lt;p&gt;"Section 924, acts Jan. 30, 1942, ch. 26, title II, § 204, 
+of Jan. 30, 1942, ch. 26, title &lt;span class="caps"&gt;II&lt;/span&gt;, § 204, 56 Stat. 23,&amp;nbsp;31-33: &lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Section 924, acts Jan. 30, 1942, ch. 26, title &lt;span class="caps"&gt;II&lt;/span&gt;, § 204, 
 56 Stat. 31; June 30, 1944, ch. 325, title I, § 107, 58 Stat. 639; June 30, 
 1945, ch. 214, § 6, 59 Stat. 308; July 30, 1947, ch. 361, title I, § 101, 
 61 Stat. 619; June 25, 1948, ch. 646, § 32(a), 62 Stat. 991; May 24, 1949, 
@@ -346,16 +344,15 @@ the Defense Production Act of 1950, act Sept. 8, 1950, ch. 932,
 64 Stat. 798, classified to sections 2061 to 2166 of this Appendix, 
 continued the Court to review regulations and orders relating to price 
 control. The Housing and Rent Act of 1948 and the Defense Production Act of 
-1950 both terminated, however, the Court remained in existence "to complete 
+1950 both terminated, however, the Court remained in existence &amp;#8220;to complete 
 the adjudication of rights and liabilities incurred prior to their 
-termination dates." (Transcript of Proceedings of the Final Session of the 
+termination dates.&amp;#8221; (Transcript of Proceedings of the Final Session of the 
 Court, 299 F.2d 1.) The final decision of the Court, Rosenzweig v. General 
 Services Administration, 1961, 299 F.2d 22, was decided on Dec. 6, 
 1961. A petition for rehearing was denied on Jan. 2, 1962, 
 and a petition for writ of certiorari to the Supreme Court of the United 
-States was denied on Mar. 19, 1962, 82 S. Ct. 830. &lt;/p&gt;
-&lt;p&gt;The order of Chief Judge Albert B. Maris, set forth in 299 F.2d 20, 
-provided: &lt;/p&gt;
+States was denied on Mar. 19, 1962, 82 S. Ct.&amp;nbsp;830. &lt;/p&gt;
+&lt;p&gt;The order of Chief Judge Albert B. Maris, set forth in 299 F.2d 20,&amp;nbsp;provided: &lt;/p&gt;
 &lt;p&gt;The business of this Court having been completed, it is ordered that at the
 expiration of 30 days from this date, if a petition for certiorari has not 
 been filed in the Supreme Court in Case No. 676 [Rosenzweig v. General 
@@ -364,68 +361,68 @@ records and papers of the Court in his office to the General Services
 Administration for permanent custody as records of the Government, 
 and shall thereupon inform the Chief Justice of the United States that the 
 work of the Court has been completed and that the designations of the judges
- of the Court may therefore appropriately be terminated. &lt;/p&gt;
+ of the Court may therefore appropriately be&amp;nbsp;terminated. &lt;/p&gt;
 &lt;p&gt;If a petition for certiorari is filed in Case No. 676 this order shall take
 effect and be carried out at the expiration of 30 days after the final 
-disposition of Case No. 676.&lt;/p&gt;
+disposition of Case No.&amp;nbsp;676.&lt;/p&gt;
 &lt;p&gt;In accordance with the terms of this order, the petition for certiorari 
-having been filed, and denied Mar. 19, 1962, the Court terminated on Apr. 18, 1962." &lt;/p&gt;
+having been filed, and denied Mar. 19, 1962, the Court terminated on Apr. 18,&amp;nbsp;1962.&amp;#8221; &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Pretty fantastic research. And for free! Thanks LOC.&lt;/p&gt;</summary><category term="loc"></category><category term="law"></category><category term="history"></category><category term="courtlistener.com"></category><category term="api"></category></entry><entry><title>Changes and Plans at CourtListener.com</title><link href="http://michaeljaylissner.com/posts/2010/11/04/changes-and-plans-at-courtlistener/" rel="alternate"></link><updated>2010-11-04T23:30:21-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2010-11-04:posts/2010/11/04/changes-and-plans-at-courtlistener/</id><summary type="html">&lt;p&gt;A few weeks ago, we made a fairly major change at CourtListener.com to include ID numbers in all of our case URLs. This change meant that links that were previously like this:&lt;blockquote&gt;http://courtlistener.com/scotus/Wong-v.-Smith/&lt;/blockquote&gt;Are now like this:&lt;blockquote&gt;http://courtlistener.com/scotus/&lt;strong&gt;V5o&lt;/strong&gt;/wong-v-smith/&lt;/blockquote&gt;Most of the old links should continue to work, but using the new links should be much faster and more reliable. The major difference between the two is the ID number, which is encoded as a set of numbers (in this case &lt;em&gt;V5o&lt;/em&gt;). This ID corresponds directly with the ID number in our database, aiding us greatly in serving up cases quickly and accurately.&lt;/p&gt;
-&lt;p&gt;Around the same time as this change, we added social networking links to all of our case pages to make them easier to share with friends and colleagues. These links use our new tiny domain, &lt;em&gt;http://crt.li/&lt;/em&gt;, and should thus be ideal for websites like Twitter or Reddit.&lt;/p&gt;
-&lt;p&gt;In the next few months we will be getting a major new server, and will be migrating our data to it. This will allow us to serve more data, and&amp;mdash;drum roll please&amp;mdash;will allow us to begin serving audio content on the site. That's right, in the next few months, we will begin getting oral arguments from the circuit courts, and will be serving it directly to you on the case pages. &lt;/p&gt;
-&lt;p&gt;We also have plans to revisit our search interface in order to add date filtering and query building so look for that soon.&lt;/p&gt;
-&lt;p&gt;As always, we welcome your feedback and support, so don't hesitate to get in touch with us if you have any questions or suggestions.&lt;/p&gt;</summary><category term="courtlistener.com"></category><category term="Web Architecture"></category><category term="database"></category></entry><entry><title>Announcing CourtListener.com</title><link href="http://michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/" rel="alternate"></link><updated>2010-05-01T20:08:16-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2010-05-01:posts/2010/05/01/announcing-courtlistener/</id><summary type="html">&lt;p&gt;I'm elated to announce today that I am officially taking the ropes of my 
-final project and letting it loose into the wild. It's been seven months 
+&lt;p&gt;Pretty fantastic research. And for free! Thanks &lt;span class="caps"&gt;LOC&lt;/span&gt;.&lt;/p&gt;</summary><category term="loc"></category><category term="law"></category><category term="history"></category><category term="courtlistener.com"></category><category term="api"></category></entry><entry><title>Changes and Plans at CourtListener.com</title><link href="http://michaeljaylissner.com/posts/2010/11/04/changes-and-plans-at-courtlistener/" rel="alternate"></link><updated>2010-11-04T23:30:21-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-11-04:posts/2010/11/04/changes-and-plans-at-courtlistener/</id><summary type="html">&lt;p&gt;A few weeks ago, we made a fairly major change at CourtListener.com to include &lt;span class="caps"&gt;ID&lt;/span&gt; numbers in all of our case URLs. This change meant that links that were previously like this:&lt;blockquote&gt;http://courtlistener.com/scotus/Wong-v.-Smith/&lt;/blockquote&gt;Are now like this:&lt;blockquote&gt;http://courtlistener.com/scotus/&lt;strong&gt;V5o&lt;/strong&gt;/wong-v-smith/&lt;/blockquote&gt;Most of the old links should continue to work, but using the new links should be much faster and more reliable. The major difference between the two is the &lt;span class="caps"&gt;ID&lt;/span&gt; number, which is encoded as a set of numbers (in this case &lt;em&gt;V5o&lt;/em&gt;). This &lt;span class="caps"&gt;ID&lt;/span&gt; corresponds directly with the &lt;span class="caps"&gt;ID&lt;/span&gt; number in our database, aiding us greatly in serving up cases quickly and&amp;nbsp;accurately.&lt;/p&gt;
+&lt;p&gt;Around the same time as this change, we added social networking links to all of our case pages to make them easier to share with friends and colleagues. These links use our new tiny domain, &lt;em&gt;http://crt.li/&lt;/em&gt;, and should thus be ideal for websites like Twitter or&amp;nbsp;Reddit.&lt;/p&gt;
+&lt;p&gt;In the next few months we will be getting a major new server, and will be migrating our data to it. This will allow us to serve more data, and&amp;mdash;drum roll please&amp;mdash;will allow us to begin serving audio content on the site. That&amp;#8217;s right, in the next few months, we will begin getting oral arguments from the circuit courts, and will be serving it directly to you on the case&amp;nbsp;pages. &lt;/p&gt;
+&lt;p&gt;We also have plans to revisit our search interface in order to add date filtering and query building so look for that&amp;nbsp;soon.&lt;/p&gt;
+&lt;p&gt;As always, we welcome your feedback and support, so don&amp;#8217;t hesitate to get in touch with us if you have any questions or&amp;nbsp;suggestions.&lt;/p&gt;</summary><category term="courtlistener.com"></category><category term="Web Architecture"></category><category term="database"></category></entry><entry><title>Announcing CourtListener.com</title><link href="http://michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/" rel="alternate"></link><updated>2010-05-01T20:08:16-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-05-01:posts/2010/05/01/announcing-courtlistener/</id><summary type="html">&lt;p&gt;I&amp;#8217;m elated to announce today that I am officially taking the ropes of my 
+final project and letting it loose into the wild. It&amp;#8217;s been seven months 
 since development on it officially started and finally, 
-the beta version is done and &lt;a href="http://michaeljaylissner.com/pdfs/courtlistener-final-report.pdf"&gt;the report&lt;/a&gt; is released.&lt;/p&gt;
-&lt;p&gt;If you haven't been following along, the &lt;a href="http://courtlistener.com"&gt;project 
+the beta version is done and &lt;a href="http://michaeljaylissner.com/pdfs/courtlistener-final-report.pdf"&gt;the report&lt;/a&gt; is&amp;nbsp;released.&lt;/p&gt;
+&lt;p&gt;If you haven&amp;#8217;t been following along, the &lt;a href="http://courtlistener.com"&gt;project 
 itself&lt;/a&gt; is an open source legal research tool which allows anybody to 
 keep up to date with federal precedents as they are set by the 13 Federal 
 Circuit courts. Right now, it has &lt;a href="http://courtlistener.com/coverage/"&gt;more 
 than 130,000 documents in its corpus&lt;/a&gt;, 
 including almost all of the Supreme Court record dating back to 1754. Every 
 day it downloads the latest documents within about a half hour of when 
-each court publishes them.&lt;/p&gt;
-&lt;p&gt;One thing we've focused on while building the site has making it as useful 
+each court publishes&amp;nbsp;them.&lt;/p&gt;
+&lt;p&gt;One thing we&amp;#8217;ve focused on while building the site has making it as useful 
 as possible for as many people as possible. Since not everybody likes 
-getting updates in their inbox, we've also tied the search engine in with 
+getting updates in their inbox, we&amp;#8217;ve also tied the search engine in with 
 an Atom feed generator so that you can search for whatever you want, 
-and then follow updates in your feed reader.&lt;/p&gt;
-&lt;p&gt;Everything we've built uses a powerful boolean search engine on the backend. 
+and then follow updates in your feed&amp;nbsp;reader.&lt;/p&gt;
+&lt;p&gt;Everything we&amp;#8217;ve built uses a powerful boolean search engine on the backend. 
 At present, there are &lt;a href="https://www.courtlistener.com/search/advanced-techniques/"&gt;a ton of boolean connectors&lt;/a&gt; that you can use on our 
 site to search our corpus or create alerts and feeds. Unlike full text search 
 that most people are familiar with, boolean search allows incredibly complex 
 queries, such as every document mentioning Attorney General Holder that is 
 published in the Third Circuit of Appeals (&lt;a href="http://courtlistener.com/search/results/?q=%40court+ca3+%40doctext+holder&amp;amp;search="&gt;@court ca3 @doctext holder&lt;/a&gt;), 
-or perhaps every document that mentions "Roe" and "Wade" within ten words of 
-each other (&lt;a href="http://courtlistener.com/search/results/?q=%40doctext+%22roe+wade%22~10&amp;amp;search="&gt;@doctext "roe wade"~10&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;But that's not all. Because we also want you to be able to use this 
+or perhaps every document that mentions &amp;#8220;Roe&amp;#8221; and &amp;#8220;Wade&amp;#8221; within ten words of 
+each other (&lt;a href="http://courtlistener.com/search/results/?q=%40doctext+%22roe+wade%22~10&amp;amp;search="&gt;@doctext &amp;#8220;roe wade&amp;#8221;~10&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;But that&amp;#8217;s not all. Because we also want you to be able to use this 
 efficiently during your day-to-day searching, 
-we've built an &lt;a href="http://courtlistener.com/tools/"&gt;add-on that will 
+we&amp;#8217;ve built an &lt;a href="http://courtlistener.com/tools/"&gt;add-on that will 
 work in most browsers&lt;/a&gt;, which allows you to search CourtListener.com 
-without first going to our homepage.&lt;/p&gt;
+without first going to our&amp;nbsp;homepage.&lt;/p&gt;
 &lt;p&gt;You can also browse all of documents in our corpus, 
 or you can go to the details page for an opinion, where you can read the 
-text of its body without having to download a PDF and crank up Adobe Acrobat.&lt;/p&gt;
+text of its body without having to download a &lt;span class="caps"&gt;PDF&lt;/span&gt; and crank up Adobe&amp;nbsp;Acrobat.&lt;/p&gt;
 &lt;p&gt;As I mentioned earlier, this project has been designed as an open source 
-project, so if you're looking for something to contribute to, 
+project, so if you&amp;#8217;re looking for something to contribute to, 
 look no further. We have a very active &lt;a href="https://github.com/freelawproject/courtlistener/issues"&gt;bug list&lt;/a&gt; where you can dip your 
 toes in, or if you prefer something meatier, we can cook something up 
-specifically for you.&lt;/p&gt;
-&lt;p&gt;I've greatly enjoyed working on this project so far, 
-and I'd love to get more people using it, working on it, 
-and recommending it to their friends. We're already planning version 1.0, 
-so drop me a line if you're interested in helping out, otherwise, &lt;a href="https://www.courtlistener.com"&gt;go check it 
-out already&lt;/a&gt;, and see all that it has to offer!&lt;/p&gt;</summary><category term="Final Project"></category><category term="courtlistener.com"></category><category term="announcements"></category></entry><entry><title>Converting PDF Files to HTML</title><link href="http://michaeljaylissner.com/posts/2010/02/06/converting-pdf-files-to-html/" rel="alternate"></link><updated>2010-02-06T15:03:18-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2010-02-06:posts/2010/02/06/converting-pdf-files-to-html/</id><summary type="html">&lt;p&gt;For my final project, we are considering posting court cases on our site, and so I did some work today analyzing how best to convert the PDF files the courts give us to HTML that people can actually use. I looked briefly at google docs, since it has an amazing tool that converts PDF files to something resembling text, but short of spending a few days hacking the site, I couldn't figure out any easy way to leverage their technology in any sort of automated way. &lt;/p&gt;
-&lt;p&gt;The other two tools I have looked at today are &lt;a href="http://www.foolabs.com/xpdf/"&gt;pdftotext&lt;/a&gt; and &lt;a href="http://pdftohtml.sourceforge.net/"&gt;pdftohtml&lt;/a&gt;, which, not surprisingly, do what their names claim they do. Since we're going to be pulling cases from the 13 federal circuit courts, I wanted to figure out which method works best for which court, and which method will provide us with the most generalizable solution across whatever PDF a court may crank out.&lt;/p&gt;
-&lt;p&gt;The short version is that the best option seems to be:&lt;/p&gt;
+specifically for&amp;nbsp;you.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve greatly enjoyed working on this project so far, 
+and I&amp;#8217;d love to get more people using it, working on it, 
+and recommending it to their friends. We&amp;#8217;re already planning version 1.0, 
+so drop me a line if you&amp;#8217;re interested in helping out, otherwise, &lt;a href="https://www.courtlistener.com"&gt;go check it 
+out already&lt;/a&gt;, and see all that it has to&amp;nbsp;offer!&lt;/p&gt;</summary><category term="Final Project"></category><category term="courtlistener.com"></category><category term="announcements"></category></entry><entry><title>Converting PDF Files to HTML</title><link href="http://michaeljaylissner.com/posts/2010/02/06/converting-pdf-files-to-html/" rel="alternate"></link><updated>2010-02-06T15:03:18-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-02-06:posts/2010/02/06/converting-pdf-files-to-html/</id><summary type="html">&lt;p&gt;For my final project, we are considering posting court cases on our site, and so I did some work today analyzing how best to convert the &lt;span class="caps"&gt;PDF&lt;/span&gt; files the courts give us to &lt;span class="caps"&gt;HTML&lt;/span&gt; that people can actually use. I looked briefly at google docs, since it has an amazing tool that converts &lt;span class="caps"&gt;PDF&lt;/span&gt; files to something resembling text, but short of spending a few days hacking the site, I couldn&amp;#8217;t figure out any easy way to leverage their technology in any sort of automated&amp;nbsp;way. &lt;/p&gt;
+&lt;p&gt;The other two tools I have looked at today are &lt;a href="http://www.foolabs.com/xpdf/"&gt;pdftotext&lt;/a&gt; and &lt;a href="http://pdftohtml.sourceforge.net/"&gt;pdftohtml&lt;/a&gt;, which, not surprisingly, do what their names claim they do. Since we&amp;#8217;re going to be pulling cases from the 13 federal circuit courts, I wanted to figure out which method works best for which court, and which method will provide us with the most generalizable solution across whatever &lt;span class="caps"&gt;PDF&lt;/span&gt; a court may crank&amp;nbsp;out.&lt;/p&gt;
+&lt;p&gt;The short version is that the best option seems to&amp;nbsp;be:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;pdftotext -htmlmeta -layout -enc &lt;span class="s1"&gt;&amp;#39;UTF-8&amp;#39;&lt;/span&gt; yourfile.pdf
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This creates an html file with the text of the case laid out best as possible, some basic html meta data applied, and the UTF-8 encoding applied. &lt;/p&gt;
-&lt;p&gt;Before coming to this conclusion though, I looked at two settings that pdftohtml has. With the -c argument, it can generate a 'complex' HTML document that closely resembles that of the original. Without the -c argument, it will create a more simple document. Although the complex documents are rather impressive in appearance, they're abysmal when it comes to the quality of the HTML code that is generated. For an example, look at the source code for this &lt;a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-2ndCircuit-08-6301-cv_opn.html"&gt;this file&lt;/a&gt;. If, on the other hand, the -c argument is not run, and the simple documents are generated, the appearance of the final product is worse than the simple text documents that are created by pdftotext. Check out &lt;a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-2ndCircuit-08-6301-cv_opn.html"&gt;this one&lt;/a&gt; for example.&lt;/p&gt;
+&lt;p&gt;This creates an html file with the text of the case laid out best as possible, some basic html meta data applied, and the &lt;span class="caps"&gt;UTF&lt;/span&gt;-8 encoding&amp;nbsp;applied. &lt;/p&gt;
+&lt;p&gt;Before coming to this conclusion though, I looked at two settings that pdftohtml has. With the -c argument, it can generate a &amp;#8216;complex&amp;#8217; &lt;span class="caps"&gt;HTML&lt;/span&gt; document that closely resembles that of the original. Without the -c argument, it will create a more simple document. Although the complex documents are rather impressive in appearance, they&amp;#8217;re abysmal when it comes to the quality of the &lt;span class="caps"&gt;HTML&lt;/span&gt; code that is generated. For an example, look at the source code for this &lt;a href="/archive/shared/pdf-to-html-test/pdftohtml-complex-noframes-noimages-2ndCircuit-08-6301-cv_opn.html"&gt;this file&lt;/a&gt;. If, on the other hand, the -c argument is not run, and the simple documents are generated, the appearance of the final product is worse than the simple text documents that are created by pdftotext. Check out &lt;a href="/archive/shared/pdf-to-html-test/pdftohtml-simple-noframes-noimages-2ndCircuit-08-6301-cv_opn.html"&gt;this one&lt;/a&gt; for&amp;nbsp;example.&lt;/p&gt;
 &lt;p&gt;For thoroughness, here is a table containing the results from this test.
 &lt;table&gt;
 &lt;tr&gt;
@@ -433,11 +430,11 @@ out already&lt;/a&gt;, and see all that it has to offer!&lt;/p&gt;</summary><cat
   &lt;th&gt;pdftotext&lt;/th&gt;
   &lt;th&gt;pdftohtml complex&lt;/th&gt;
   &lt;th&gt;pdftotext simple&lt;/th&gt;
-  &lt;th&gt;Original PDF&lt;/th&gt;
+  &lt;th&gt;Original &lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
   &lt;td&gt;1&lt;sup&gt;st&lt;/sup&gt;&lt;/td&gt;
-  &lt;td colspan="4" align="center"&gt;The first circuit publishes in HTML Format by default&lt;/td&gt;
+  &lt;td colspan="4" align="center"&gt;The first circuit publishes in &lt;span class="caps"&gt;HTML&lt;/span&gt; Format by default&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
   &lt;td&gt;2&lt;sup&gt;nd&lt;/sup&gt;&lt;/td&gt;
@@ -510,7 +507,7 @@ out already&lt;/a&gt;, and see all that it has to offer!&lt;/p&gt;</summary><cat
   &lt;td&gt;&lt;a href="http://michaeljaylissner.com/archive/pdf-to-html-test/11thCircuit-200814991.pdf"&gt;&lt;em&gt;link&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-  &lt;td&gt;DC Circuit&lt;/td&gt;
+  &lt;td&gt;&lt;span class="caps"&gt;DC&lt;/span&gt; Circuit&lt;/td&gt;
   &lt;td&gt;&lt;a href="http://michaeljaylissner.com/archive/pdf-to-html-test/pdftotext-layout-htmlmeta-utf-8-DC-Circuit-07-3125-1229519.html"&gt;&lt;em&gt;link&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;&lt;a href="http://michaeljaylissner.com/archive/pdf-to-html-test/pdftohtml-complex-noframes-noimages-DC-Circuit-07-3125-1229519.html"&gt;&lt;em&gt;link&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;td&gt;&lt;a href="http://michaeljaylissner.com/archive/pdf-to-html-test/pdftohtml-simple-noframes-noimages-DC-Circuit-07-3125-1229519.html"&gt;&lt;em&gt;link&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
@@ -524,47 +521,46 @@ out already&lt;/a&gt;, and see all that it has to offer!&lt;/p&gt;</summary><cat
   &lt;td&gt;&lt;a href="http://michaeljaylissner.com/archive/pdf-to-html-test/FederalCircuit-09-1361.pdf"&gt;&lt;em&gt;link&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A caveat regarding pdftotext:&lt;/strong&gt; This library is developed by a company called &lt;a href="http://www.glyphandcog.com/index.html"&gt;Glyph &amp;amp; Cog&lt;/a&gt;. Although the code is open source, I couldn't for the life of me figure out how to file a bug against it. This doesn't particularly bode well for using something as a dependency. On the flip side, Glyph &amp;amp; Cog is happy to provide support for the product.&lt;/p&gt;</summary><category term="pdftotext"></category><category term="pdftohtml"></category><category term="pdf"></category><category term="Final Project"></category><category term="courtlistener.com"></category></entry><entry><title>How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help</title><link href="http://michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/" rel="alternate"></link><updated>2010-01-15T10:27:18-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2010-01-15:posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/</id><summary type="html">&lt;p&gt;&lt;strong&gt;Updated, 2010-01-24:&lt;/strong&gt; Some edits regarding the Affero license (thanks to
-Brian at &lt;a href="http://cyberlawcases.com/"&gt;http://cyberlawcases.com&lt;/a&gt; for the corrections).&lt;/p&gt;
-&lt;p&gt;I've finally begun doing some of the actual coding for &lt;a href="http://www.ischool.berkeley.edu/programs/masters/projects/2010/judicialnlp"&gt;my final 
+&lt;p&gt;&lt;strong&gt;A caveat regarding pdftotext:&lt;/strong&gt; This library is developed by a company called &lt;a href="http://www.glyphandcog.com/index.html"&gt;Glyph &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Cog&lt;/a&gt;. Although the code is open source, I couldn&amp;#8217;t for the life of me figure out how to file a bug against it. This doesn&amp;#8217;t particularly bode well for using something as a dependency. On the flip side, Glyph &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; Cog is happy to provide support for the&amp;nbsp;product.&lt;/p&gt;</summary><category term="pdftotext"></category><category term="pdftohtml"></category><category term="pdf"></category><category term="Final Project"></category><category term="courtlistener.com"></category></entry><entry><title>How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help</title><link href="http://michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/" rel="alternate"></link><updated>2010-01-15T10:27:18-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-01-15:posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/</id><summary type="html">&lt;p&gt;&lt;strong&gt;Updated, 2010-01-24:&lt;/strong&gt; Some edits regarding the Affero license (thanks to
+Brian at &lt;a href="http://cyberlawcases.com/"&gt;http://cyberlawcases.com&lt;/a&gt; for the&amp;nbsp;corrections).&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve finally begun doing some of the actual coding for &lt;a href="http://www.ischool.berkeley.edu/programs/masters/projects/2010/judicialnlp"&gt;my final 
 project&lt;/a&gt; so the time has come to set up &lt;a href="https://github.com/freelawproject/courtlistener"&gt;a mercurial repository&lt;/a&gt; to 
-hold the code.&lt;/p&gt;
+hold the&amp;nbsp;code.&lt;/p&gt;
 &lt;p&gt;Once we complete our project, we will have built a free product that 
 competes with some of the core functionality of both LexisNexis and 
-Westlaw, so something we wanted to do was make sure they couldn't steal our
-code, enhance their product and thus moot ours.&lt;/p&gt;
-&lt;p&gt;To achieve this, we're using the &lt;a href="http://www.gnu.org/licenses/agpl.html"&gt;GNU Affero General Public License 
+Westlaw, so something we wanted to do was make sure they couldn&amp;#8217;t steal our
+code, enhance their product and thus moot&amp;nbsp;ours.&lt;/p&gt;
+&lt;p&gt;To achieve this, we&amp;#8217;re using the &lt;a href="http://www.gnu.org/licenses/agpl.html"&gt;&lt;span class="caps"&gt;GNU&lt;/span&gt; Affero General Public License 
 v3&lt;/a&gt;, which allows people to take our code for free, but requires that they 
-publicly share any modifications that they make to the code. The normal GNU 
+publicly share any modifications that they make to the code. The normal &lt;span class="caps"&gt;GNU&lt;/span&gt; 
 General Public License allows the code to be used at no cost, 
 but only requires that changes to the code be shared with the public if one
 distributes the changed version to the public. With a server-based 
 project, like ours, one could operate modified versions of the code 
 without ever having a need to distribute any of the software to the public. 
-This loophole is closed by the Affero license.&lt;/p&gt;
+This loophole is closed by the Affero&amp;nbsp;license.&lt;/p&gt;
 &lt;p&gt;In order to license our work, we must be its copyright holder. This is easy
 enough, since we get copyright instantly in the U.S., but, 
 as has been demonstrated in &lt;a href="http://en.wikipedia.org/wiki/Jacobsen_v._Katzer"&gt;Jacobsen v. Katzer&lt;/a&gt;, in order to seek remedies 
 for copyright violations, we would have to register everything we made with 
 the copyright office. This &lt;a href="http://www.copyright.gov/docs/fees.html"&gt;costs $35&lt;/a&gt; per registration, 
-and with open source software, it's not clear whether each and every 
-version needs to be registered or just major releases, or what. &lt;/p&gt;
+and with open source software, it&amp;#8217;s not clear whether each and every 
+version needs to be registered or just major releases, or&amp;nbsp;what. &lt;/p&gt;
 &lt;p&gt;Since this is too onerous to be practical, an additional approach to 
-protecting our works is useful, and in the DMCA (&lt;a href="http://www.copyright.gov/title17/92chap5.html#506"&gt;17 U.S.C. § 506(d)&lt;/a&gt;), 
-remedies are provided for the "fraudulent removal of copyright notice." 
+protecting our works is useful, and in the &lt;span class="caps"&gt;DMCA&lt;/span&gt; (&lt;a href="http://www.copyright.gov/title17/92chap5.html#506"&gt;17 &lt;span class="caps"&gt;U.S.C.&lt;/span&gt;§ 506(d)&lt;/a&gt;), 
+remedies are provided for the &amp;#8220;fraudulent removal of copyright notice.&amp;#8221; 
 Although these do not (in any way) match the protections provided by normal
 copyright registration, they are a useful place to begin. Thus, 
 if we place a copyright notice into each file of our code, 
-those using our code must either risk violating the DMCA by removing these
+those using our code must either risk violating the &lt;span class="caps"&gt;DMCA&lt;/span&gt; by removing these
 notices, or leave our copyright information intact. (Placing such notices
-in each file is also &lt;a href="http://www.fsf.org/licensing/licenses/gpl-howto.html"&gt;the recommendation&lt;/a&gt; of the Free Software 
-Foundation.)&lt;/p&gt;
+in each file is also &lt;a href="http://www.fsf.org/licensing/licenses/gpl-howto.html"&gt;the recommendation&lt;/a&gt; of the Free Software&amp;nbsp;Foundation.)&lt;/p&gt;
 &lt;p&gt;To place our information into each and every file of code that we upload 
 publicly, I wrote &lt;a href="http://michaeljaylissner.com/archive/checklicense.py"&gt;a short mercurial hook&lt;/a&gt; that  adds copyright and 
 licensing information it to the top of every file that is modified or added 
 to the repository. To use the script, simply make it executable, 
 place it in the .hg directory of your project, and add the following lines
-to .hg/hgrc:&lt;/p&gt;
+to&amp;nbsp;.hg/hgrc:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;[hooks]
 pretxncommit = .hg/checklicense.py
 &lt;/pre&gt;&lt;/div&gt;
@@ -573,4 +569,4 @@ pretxncommit = .hg/checklicense.py
 &lt;p&gt;A couple of things I should note about this script is that it currently 
 only checks for java and python files, and that it requires files called 
 java_license.txt and python_license.txt to be in the root of your 
-repository. It should be fairly easy to modify though to fit your own needs.&lt;/p&gt;</summary><category term="mercurial"></category><category term="hook"></category><category term="Final Project"></category><category term="DMCA"></category><category term="copyright"></category><category term="Affero GPLv3"></category><category term="courtlistener.com"></category></entry></feed>
+repository. It should be fairly easy to modify though to fit your own&amp;nbsp;needs.&lt;/p&gt;</summary><category term="mercurial"></category><category term="hook"></category><category term="Final Project"></category><category term="DMCA"></category><category term="copyright"></category><category term="Affero GPLv3"></category><category term="courtlistener.com"></category></entry></feed>

@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="security, Linux, firefox, bash, autocomplete, Tech, " />
 
-<meta property="og:title" content="Script to Rid Thyself of Autocomplete = Off in Firefox "/>
+<meta property="og:title" content="Script to Rid Thyself of Autocomplete = Off in Firefox "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/" />
-<meta property="og:description" content="I took some time today and wrote up a script that can be run to eliminate autocomplete=off in Firefox. It basically does the same thing as is described here, but it automates it. The script can be run with one of five arguments: You can choose to use find ..." />
+<meta property="og:description" content="I took some time today and wrote up a script that can be run to eliminate autocomplete=off in Firefox. It basically does the same thing as is described here, but it automates it. The script can be run with one of five arguments: You can choose to use find ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2009-12-15T17:41:27" />
-<meta name="twitter:title" content="Script to Rid Thyself of Autocomplete = Off in Firefox ">
-<meta name="twitter:description" content="I took some time today and wrote up a script that can be run to eliminate autocomplete=off in Firefox. It basically does the same thing as is described here, but it automates it. The script can be run with one of five arguments: You can choose to use find ...">
+<meta name="twitter:title" content="Script to Rid Thyself of Autocomplete = Off in Firefox ">
+<meta name="twitter:description" content="I took some time today and wrote up a script that can be run to eliminate autocomplete=off in Firefox. It basically does the same thing as is described here, but it automates it. The script can be run with one of five arguments: You can choose to use find ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Script to Rid Thyself of Autocomplete = Off in Firefox  · Michael Jay Lissner
+        <title>Script to Rid Thyself of Autocomplete = Off in Firefox  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/"> Script to Rid Thyself of Autocomplete = Off in Firefox  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/"> Script to Rid Thyself of Autocomplete = Off in&nbsp;Firefox  </a></h1>
     </header>
 </div>
 
@@ -89,26 +89,25 @@
             <p>I took some time today and wrote up <a href="http://michaeljaylissner.com/archive/autocomplete-killer.sh">a script</a> that can be run to 
 eliminate 
 <code>autocomplete=off</code> in Firefox. It basically does the same thing as is 
-described <a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/">here</a>, but it automates it. </p>
-<p>The script can be run with one of five arguments:</p>
+described <a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/">here</a>, but it automates&nbsp;it. </p>
+<p>The script can be run with one of five&nbsp;arguments:</p>
 <ul>
 <li>You can choose to use find (<code>--find</code>) or locate (<code>--locate</code>) to find the 
- files that need to be changed on your system;</li>
+ files that need to be changed on your&nbsp;system;</li>
 <li>You can dictate the location of the file if you want to modify a 
- specific one or know exactly where it's located (<code>--dictate</code>);</li>
-<li>You can choose to use the Ubuntu default location (<code>--default</code>); or</li>
+ specific one or know exactly where it&#8217;s located (<code>--dictate</code>);</li>
+<li>You can choose to use the Ubuntu default location (<code>--default</code>);&nbsp;or</li>
 <li>You can print the help information (<code>--help</code>)</li>
 </ul>
 <p>Once the program is run, it will make a back up, and modify it the original
- versions of the file. Once that's complete, all you have to do is restart 
- Firefox.</p>
+ versions of the file. Once that&#8217;s complete, all you have to do is restart&nbsp;Firefox.</p>
 <p>It has been pointed out to me by some security folks that removing a
-utocomplete's functionality from the browser might not be the best thing, 
-since it will allow you to save your passwords in the browser. There's some
- truth to that: Anything that's on your computer can be hacked. So, 
- if you're going to use this script, use it wisely.</p>
-<p>Here's the code. I've attached it to this message as well. Any bugs or 
-comments are greatly appreciated.</p>
+utocomplete&#8217;s functionality from the browser might not be the best thing, 
+since it will allow you to save your passwords in the browser. There&#8217;s some
+ truth to that: Anything that&#8217;s on your computer can be hacked. So, 
+ if you&#8217;re going to use this script, use it&nbsp;wisely.</p>
+<p>Here&#8217;s the code. I&#8217;ve attached it to this message as well. Any bugs or 
+comments are greatly&nbsp;appreciated.</p>
 <div class="highlight"><pre><span class="c">#!/bin/bash</span>
 <span class="c"># a simple script to destroy autocomplete in linux installations.</span>
 
@@ -296,6 +295,14 @@ cat <span class="s">&lt;&lt;EOF</span>
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2009/12/12/some-legal-gems/" title="Previous: Some Legal Gems">Some Legal Gems</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2009/12/29/cheap-metal-bike-stand/" title="Next: Cheap Metal Bike Stand">Cheap Metal Bike Stand</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/" />
 <meta property="og:description" content="I recently began using my laptop at my desk with a USB keyboard and mouse, and I thought I would explain how to set up Ubuntu so that USB peripherals will wake up your computer from sleep mode. This is convenient if you have your laptop set up such that ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2008-07-14T20:27:57" />
 <meta name="twitter:title" content="Wake Your Computer by USB ">
 <meta name="twitter:description" content="I recently began using my laptop at my desk with a USB keyboard and mouse, and I thought I would explain how to set up Ubuntu so that USB peripherals will wake up your computer from sleep mode. This is convenient if you have your laptop set up such that ...">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/"> Wake Your Computer by USB  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/"> Wake Your Computer by <span class="caps">USB</span>  </a></h1>
     </header>
 </div>
 
@@ -86,12 +86,12 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I recently began using my laptop at my desk with a USB keyboard and mouse, 
-and I thought I would explain how to set up Ubuntu so that USB peripherals 
+            <p>I recently began using my laptop at my desk with a <span class="caps">USB</span> keyboard and mouse, 
+and I thought I would explain how to set up Ubuntu so that <span class="caps">USB</span> peripherals 
 will wake up your computer from sleep mode. This is convenient if you have 
-your laptop set up such that the lid is closed and inaccessible.</p>
+your laptop set up such that the lid is closed and&nbsp;inaccessible.</p>
 <p>In Ubuntu, the way to set this up is to edit the file located at 
-<code>/proc/acpi/wakeup</code>. To see the current contents of this file do this:</p>
+<code>/proc/acpi/wakeup</code>. To see the current contents of this file do&nbsp;this:</p>
 <div class="highlight"><pre>% cat /proc/acpi/wakeup
 Device  S-state   Status   Sysfs node
 P0P2      S4     disabled  
@@ -113,39 +113,38 @@ SLPB      S4    *enabled
 </pre></div>
 
 
-<p>This shows you a number of devices, most of which I don't claim to 
-understand. The ones to notice are the USB ones, which you will see are 
-disabled by default.</p>
-<p>Once these are toggled on, your computer will wake up from sleep when USB 
-peripherals are used. To toggle one of these on, as root, run:</p>
+<p>This shows you a number of devices, most of which I don&#8217;t claim to 
+understand. The ones to notice are the <span class="caps">USB</span> ones, which you will see are 
+disabled by&nbsp;default.</p>
+<p>Once these are toggled on, your computer will wake up from sleep when <span class="caps">USB</span> 
+peripherals are used. To toggle one of these on, as root,&nbsp;run:</p>
 <div class="highlight"><pre><span class="nb">echo</span> <span class="s2">&quot;USB0&quot;</span> &gt; /proc/acpi/wakeup
 </pre></div>
 
 
-<p>This will toggle USB0 from disabled to enabled. To check this, 
-run <code>cat /proc/acpi/wakeup</code> again. You should see that it's enabled, 
-and you should be able to test this by suspending your computer.</p>
-<p>This will set up your computer to wake up from USB...for now. To make it 
+<p>This will toggle <span class="caps">USB0</span> from disabled to enabled. To check this, 
+run <code>cat /proc/acpi/wakeup</code> again. You should see that it&#8217;s enabled, 
+and you should be able to test this by suspending your&nbsp;computer.</p>
+<p>This will set up your computer to wake up from <span class="caps">USB</span>&#8230;for now. To make it 
 work after your computer has been restarted, you will need to write a short 
-init script named wake.sh with the following contents:</p>
+init script named wake.sh with the following&nbsp;contents:</p>
 <div class="highlight"><pre><span class="c">#!/bin/bash</span>
 <span class="nb">echo</span> <span class="s2">&quot;USB0&quot;</span> &gt; /proc/acpi/wakeup
 </pre></div>
 
 
-<p>Save this file to <code>/etc/init.d</code>, and make it executable by running:</p>
+<p>Save this file to <code>/etc/init.d</code>, and make it executable by&nbsp;running:</p>
 <div class="highlight"><pre>chmod +x wake.sh
 </pre></div>
 
 
 <p>Finally, once this file is in <code>/etc/init.d</code>, and is executable, 
-as root run:</p>
+as root&nbsp;run:</p>
 <div class="highlight"><pre>update-rc.d wake.sh defaults
 </pre></div>
 
 
-<p>That will make init know about the file, and run it at startup. Happy 
-awakenings!</p>
+<p>That will make init know about the file, and run it at startup. Happy&nbsp;awakenings!</p>
 <p><strong>Source:</strong> <a href="http://ubuntuforums.org/showthread.php?t=711747">http://ubuntuforums.org/showthread.php?t=711747</a></p>
             
             <section>
@@ -184,6 +183,14 @@ awakenings!</p>
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2008/07/13/the-facts-are-in-ars-technica-rocks/" title="Previous: The Facts are In - Ars Technica Rocks">The Facts are In - Ars Technica Rocks</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2008/07/17/my-linux-story/" title="Next: My Linux Story">My Linux Story</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/prey" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-07-25T22:39:35-07:00</updated><entry><title>Making Prey of Computer Thieves</title><link href="http://michaeljaylissner.com/posts/2009/07/25/making-prey-of-computer-thieves/" rel="alternate"></link><updated>2009-07-25T22:39:35-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-25:posts/2009/07/25/making-prey-of-computer-thieves/</id><summary type="html">&lt;p&gt;Laptops get stolen. It sucks, but we know it happens from time to time. 
-Recently, I've been checking out programs that can help to catch the 
-thieves (and dabbling in writing my own).&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/prey" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-07-25T22:39:35-07:00</updated><entry><title>Making Prey of Computer Thieves</title><link href="http://michaeljaylissner.com/posts/2009/07/25/making-prey-of-computer-thieves/" rel="alternate"></link><updated>2009-07-25T22:39:35-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-25:posts/2009/07/25/making-prey-of-computer-thieves/</id><summary type="html">&lt;p&gt;Laptops get stolen. It sucks, but we know it happens from time to time. 
+Recently, I&amp;#8217;ve been checking out programs that can help to catch the 
+thieves (and dabbling in writing my&amp;nbsp;own).&lt;/p&gt;
 &lt;p&gt;One program that I found, called &lt;a href="http://preyproject.com"&gt;Prey&lt;/a&gt;, helps to do just this. Once 
 installed, every few minutes it will check a website to see if a page 
 exists. If that page exists, it will collect a bunch of information about 
-the computer, and send that (using SMTP of your choice) to an email address
- of your choice.&lt;/p&gt;
+the computer, and send that (using &lt;span class="caps"&gt;SMTP&lt;/span&gt; of your choice) to an email address
+ of your&amp;nbsp;choice.&lt;/p&gt;
 &lt;p&gt;So, for example, if I set up a web page at http://michaeljaylissner
 .com/laptop-stolen, in a few minutes, Prey will see that page, 
-and will collect the following information:&lt;/p&gt;
+and will collect the following&amp;nbsp;information:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The IP address where my computer is connected (this is almost as good as 
- the thief's physical address)&lt;/li&gt;
+&lt;li&gt;The &lt;span class="caps"&gt;IP&lt;/span&gt; address where my computer is connected (this is almost as good as 
+ the thief&amp;#8217;s physical&amp;nbsp;address)&lt;/li&gt;
 &lt;li&gt;The name of the wireless network my computer is connected to, and a list of 
- the others in the area&lt;/li&gt;
-&lt;li&gt;The MAC address of the wireless router my computer is connected to&lt;/li&gt;
-&lt;li&gt;How long my computer has been on (uptime)&lt;/li&gt;
-&lt;li&gt;Any files that have been modified in the last X minutes&lt;/li&gt;
-&lt;li&gt;Any programs that are currently running&lt;/li&gt;
-&lt;li&gt;Any open connections to websites or online services&lt;/li&gt;
-&lt;li&gt;A picture of the thief, if you have a webcam enabled&lt;/li&gt;
-&lt;li&gt;And best of all, a screenshot at the time of the report&lt;/li&gt;
+ the others in the&amp;nbsp;area&lt;/li&gt;
+&lt;li&gt;The &lt;span class="caps"&gt;MAC&lt;/span&gt; address of the wireless router my computer is connected&amp;nbsp;to&lt;/li&gt;
+&lt;li&gt;How long my computer has been on&amp;nbsp;(uptime)&lt;/li&gt;
+&lt;li&gt;Any files that have been modified in the last X&amp;nbsp;minutes&lt;/li&gt;
+&lt;li&gt;Any programs that are currently&amp;nbsp;running&lt;/li&gt;
+&lt;li&gt;Any open connections to websites or online&amp;nbsp;services&lt;/li&gt;
+&lt;li&gt;A picture of the thief, if you have a webcam&amp;nbsp;enabled&lt;/li&gt;
+&lt;li&gt;And best of all, a screenshot at the time of the&amp;nbsp;report&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Once I get the email with all this information, it's just a matter of taking 
-it to the police, and convincing them to take action on it. &lt;/p&gt;
+&lt;p&gt;Once I get the email with all this information, it&amp;#8217;s just a matter of taking 
+it to the police, and convincing them to take action on&amp;nbsp;it. &lt;/p&gt;
 &lt;p&gt;Of course, all of this could be useless if the thief decides to immediately
-wipe the data on the computer, but it's a good safeguard that can weed out 
-the dumb thieves at least.&lt;/p&gt;</summary><category term="security"></category><category term="prey"></category></entry></feed>
+wipe the data on the computer, but it&amp;#8217;s a good safeguard that can weed out 
+the dumb thieves at&amp;nbsp;least.&lt;/p&gt;</summary><category term="security"></category><category term="prey"></category></entry></feed>

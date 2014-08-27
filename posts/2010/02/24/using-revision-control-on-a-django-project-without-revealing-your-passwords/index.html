@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="settings.py, revision control, Python, mercurial, django, Final Project, Tech, " />
 
-<meta property="og:title" content="Using Revision Control on a Django Project Without Revealing Your Passwords "/>
+<meta property="og:title" content="Using Revision Control on a Django Project Without Revealing Your Passwords "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2010/02/24/using-revision-control-on-a-django-project-without-revealing-your-passwords/" />
-<meta property="og:description" content="Just a quick post today, since this took me way too long to figure out. If you have a django project that you want to share without sharing the private bits of settings.py, there is an easy way to do this. I tried for a while to to set ..." />
+<meta property="og:description" content="Just a quick post today, since this took me way too long to figure out. If you have a django project that you want to share without sharing the private bits of settings.py, there is an easy way to do this. I tried for a while to to set ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2010-02-24T17:15:54" />
-<meta name="twitter:title" content="Using Revision Control on a Django Project Without Revealing Your Passwords ">
-<meta name="twitter:description" content="Just a quick post today, since this took me way too long to figure out. If you have a django project that you want to share without sharing the private bits of settings.py, there is an easy way to do this. I tried for a while to to set ...">
+<meta name="twitter:title" content="Using Revision Control on a Django Project Without Revealing Your Passwords ">
+<meta name="twitter:description" content="Just a quick post today, since this took me way too long to figure out. If you have a django project that you want to share without sharing the private bits of settings.py, there is an easy way to do this. I tried for a while to to set ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Using Revision Control on a Django Project Without Revealing Your Passwords  · Michael Jay Lissner
+        <title>Using Revision Control on a Django Project Without Revealing Your Passwords  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2010/02/24/using-revision-control-on-a-django-project-without-revealing-your-passwords/"> Using Revision Control on a Django Project Without Revealing Your Passwords  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2010/02/24/using-revision-control-on-a-django-project-without-revealing-your-passwords/"> Using Revision Control on a Django Project Without Revealing Your&nbsp;Passwords  </a></h1>
     </header>
 </div>
 
@@ -86,16 +86,16 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Just a quick post today, since this took me way too long to figure out. If you have a django project that you want to share without sharing the private bits of settings.py, there is an easy way to do this. </p>
-<p>I tried for a while to to set up mercurial hooks that would strip out my passwords before each commit, and then place them back after each commit, thus avoiding uploading them publicly. This does not work however because all of the mercurial hooks happen after snapshots of the modified files have been made. So you can edit the files using a hook, but your edits will only go into effect upon the <strong><em>next</em></strong> check in. Clearly, this will not do.</p>
-<p>Another solution that I tried was the mercurial <a href="http://mercurial.selenic.com/wiki/KeywordExtension">keyword extension</a>. This could work, but ultimately it does not because you have to remember to run it before and after each commit &mdash; something I know I'd forget sooner or later.</p>
+            <p>Just a quick post today, since this took me way too long to figure out. If you have a django project that you want to share without sharing the private bits of settings.py, there is an easy way to do&nbsp;this. </p>
+<p>I tried for a while to to set up mercurial hooks that would strip out my passwords before each commit, and then place them back after each commit, thus avoiding uploading them publicly. This does not work however because all of the mercurial hooks happen after snapshots of the modified files have been made. So you can edit the files using a hook, but your edits will only go into effect upon the <strong><em>next</em></strong> check in. Clearly, this will not&nbsp;do.</p>
+<p>Another solution that I tried was the mercurial <a href="http://mercurial.selenic.com/wiki/KeywordExtension">keyword extension</a>. This could work, but ultimately it does not because you have to remember to run it before and after each commit &mdash; something I know I&#8217;d forget sooner or&nbsp;later.</p>
 <p>The solution that <strong><em>does</em></strong> work is to split up your settings.py file into 
 multiple pieces such that there is a private file and a public file. I 
 followed the instructions <a href="http://code.djangoproject.com/wiki/SplitSettings#UsingalistofconffilesTransifex">here</a>, with the resulting code looking being 
 checked in <a href="https://github.com/freelawproject/courtlistener/blob/master/alert/settings.py">here</a> and <a href="https://github.com/freelawproject/courtlistener/blob/master/alert/settings/10-public.py">here</a>. There is also a file called 
-"20-private.py" which is not uploaded publicly, and which contains all the 
+&#8220;20-private.py&#8221; which is not uploaded publicly, and which contains all the 
 private bits of code that would normally be found in settings.py. Thus, all of 
-my settings can be found my django, but I do not have to share my private ones.</p>
+my settings can be found my django, but I do not have to share my private&nbsp;ones.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -133,6 +133,14 @@ my settings can be found my django, but I do not have to share my private ones.<
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2010/02/06/converting-pdf-files-to-html/" title="Previous: Converting PDF Files to HTML">Converting PDF Files to HTML</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2010/02/26/exploratory-analysis-of-service-recipients-of-community-services-bureau/" title="Next: Exploratory Analysis of Service Recipients of the Contra Costa County Community Services Bureau">Exploratory Analysis of Service Recipients of the Contra Costa County Community Services Bureau</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

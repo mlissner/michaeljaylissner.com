@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="Python, yelp, programming, scrape, Tech, " />
 
-<meta property="og:title" content="Yelp Scraper to Get Business Info in a Geographic Area "/>
+<meta property="og:title" content="Yelp Scraper to Get Business Info in a Geographic Area "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2008/12/21/yelp-scraper/" />
-<meta property="og:description" content="I spent the past couple days on one of my first Python projects - using the Yelp API to compile a list of restaurants in a defined geographic area. It&#39;s been a good project. Because of some limitations of the API, I had to do some interesting tricks to make ..." />
+<meta property="og:description" content="I spent the past couple days on one of my first Python projects - using the Yelp API to compile a list of restaurants in a defined geographic area. It’s been a good project. Because of some limitations of the API, I had to do some interesting tricks to make ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2008-12-21T16:41:13" />
-<meta name="twitter:title" content="Yelp Scraper to Get Business Info in a Geographic Area ">
-<meta name="twitter:description" content="I spent the past couple days on one of my first Python projects - using the Yelp API to compile a list of restaurants in a defined geographic area. It&#39;s been a good project. Because of some limitations of the API, I had to do some interesting tricks to make ...">
+<meta name="twitter:title" content="Yelp Scraper to Get Business Info in a Geographic Area ">
+<meta name="twitter:description" content="I spent the past couple days on one of my first Python projects - using the Yelp API to compile a list of restaurants in a defined geographic area. It’s been a good project. Because of some limitations of the API, I had to do some interesting tricks to make ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Yelp Scraper to Get Business Info in a Geographic Area  · Michael Jay Lissner
+        <title>Yelp Scraper to Get Business Info in a Geographic Area  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2008/12/21/yelp-scraper/"> Yelp Scraper to Get Business Info in a Geographic Area  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2008/12/21/yelp-scraper/"> Yelp Scraper to Get Business Info in a Geographic&nbsp;Area  </a></h1>
     </header>
 </div>
 
@@ -86,11 +86,11 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I spent the past couple days on one of my first Python projects - using the <a href="http://www.yelp.com/developers">Yelp API</a> to compile a list of restaurants in a defined geographic area.</p>
-<p>It's been a good project. Because of some limitations of the API, I had to do some interesting tricks to make it work. One problem with the API is that it only allows 20 hits per query, so if you want to do a big query, you have to divide it up into tiny queries that have fewer than 20 hits each. </p>
-<p>To accomplish that, if a query gets 20 hits within those two points, it will divide the longer dimension of the rectangle created by the points in half, and perform a query on each of those two new rectangles. For each of those, if there are 20 hits, it will again divide it in two and perform two new queries, and so forth until less than 20 hits are found for the rectangle. Once less than 20 hits are found, the data is entered into a database. Once all the points have been added to the database, a comma separated file is created, and the program ends. </p>
-<p>It was pretty incredible switching to Python for this project from my usual Java, and also using an official API for the first time. This project ended up being about 200 lines (half of which are comments). I can't imagine how long it would be with Java, since I used some rather powerful Python modules to accomplish this (namely, csv, urllib &amp; json).</p>
-<p>If anybody is interested in seeing/using the code, let me know. It should be useful if you need a list of restaurants or other businesses in a certain area. Worthy causes only please!</p>
+            <p>I spent the past couple days on one of my first Python projects - using the <a href="http://www.yelp.com/developers">Yelp <span class="caps">API</span></a> to compile a list of restaurants in a defined geographic&nbsp;area.</p>
+<p>It&#8217;s been a good project. Because of some limitations of the <span class="caps">API</span>, I had to do some interesting tricks to make it work. One problem with the <span class="caps">API</span> is that it only allows 20 hits per query, so if you want to do a big query, you have to divide it up into tiny queries that have fewer than 20 hits&nbsp;each. </p>
+<p>To accomplish that, if a query gets 20 hits within those two points, it will divide the longer dimension of the rectangle created by the points in half, and perform a query on each of those two new rectangles. For each of those, if there are 20 hits, it will again divide it in two and perform two new queries, and so forth until less than 20 hits are found for the rectangle. Once less than 20 hits are found, the data is entered into a database. Once all the points have been added to the database, a comma separated file is created, and the program&nbsp;ends. </p>
+<p>It was pretty incredible switching to Python for this project from my usual Java, and also using an official <span class="caps">API</span> for the first time. This project ended up being about 200 lines (half of which are comments). I can&#8217;t imagine how long it would be with Java, since I used some rather powerful Python modules to accomplish this (namely, csv, urllib <span class="amp">&amp;</span>&nbsp;json).</p>
+<p>If anybody is interested in seeing/using the code, let me know. It should be useful if you need a list of restaurants or other businesses in a certain area. Worthy causes only&nbsp;please!</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -128,6 +128,14 @@
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2008/12/19/cheney-is-so-fing-shady-it-pisses-me-off/" title="Previous: Cheney is so shady, it pisses me off.">Cheney is so shady, it pisses me off.</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2008/12/29/food/" title="Next: Food Choices - All the food that&#39;s fit to eat">Food Choices <small>All the food that's fit to eat</small></a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

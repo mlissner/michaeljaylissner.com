@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -16,12 +16,12 @@
 
 <meta property="og:title" content="Swimlane Diagram Generator Written in XSLT "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/" />
-<meta property="og:description" content="For the past couple years, I&#39;ve been wanting to make a swimlane diagram showing all of my roommates and which room they lived in. I considered drawing it out by hand with a charting program, but the idea of updating it whenever somebody moved in or out seemed daunting ..." />
+<meta property="og:description" content="For the past couple years, I’ve been wanting to make a swimlane diagram showing all of my roommates and which room they lived in. I considered drawing it out by hand with a charting program, but the idea of updating it whenever somebody moved in or out seemed daunting ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2010-09-06T23:26:18" />
 <meta name="twitter:title" content="Swimlane Diagram Generator Written in XSLT ">
-<meta name="twitter:description" content="For the past couple years, I&#39;ve been wanting to make a swimlane diagram showing all of my roommates and which room they lived in. I considered drawing it out by hand with a charting program, but the idea of updating it whenever somebody moved in or out seemed daunting ...">
+<meta name="twitter:description" content="For the past couple years, I’ve been wanting to make a swimlane diagram showing all of my roommates and which room they lived in. I considered drawing it out by hand with a charting program, but the idea of updating it whenever somebody moved in or out seemed daunting ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/"> Swimlane Diagram Generator Written in XSLT  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/"> Swimlane Diagram Generator Written in <span class="caps">XSLT</span>  </a></h1>
     </header>
 </div>
 
@@ -86,26 +86,26 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>For the past couple years, I've been wanting to make a swimlane diagram 
+            <p>For the past couple years, I&#8217;ve been wanting to make a swimlane diagram 
 showing all of my roommates and which room they lived in. I considered 
 drawing it out by hand with a charting program, but the idea of updating it
 whenever somebody moved in or out seemed daunting, and I decided that the 
-best thing would be to make a program that could generate a chart from XML. 
+best thing would be to make a program that could generate a chart from <span class="caps">XML</span>. 
 My new job at <a href="http://recommind.com">Recommind</a> requires that
-I learn and use XSLT, so I took the opportunity to write an XSLT script 
-that converts the XML data to HTML, Javascript and SVG. </p>
+I learn and use <span class="caps">XSLT</span>, so I took the opportunity to write an <span class="caps">XSLT</span> script 
+that converts the <span class="caps">XML</span> data to <span class="caps">HTML</span>, Javascript and <span class="caps">SVG</span>. </p>
 <p>The final product looks something like this (anonymized with Presidential 
-info for good measure):</p>
+info for good&nbsp;measure):</p>
 <p><a href="http://michaeljaylissner.com/archive/swimlanes/dummy.html"><img alt="Diagram" src="http://michaeljaylissner.com/images/swimlane-screenshot.png" /></a></p>
-<p><em>(click through for complete demo)</em></p>
-<p>For the technically inclined: The program is an XSLT script, 
-which converts the XML into HTML and Javascript. The Javascript is then 
+<p><em>(click through for complete&nbsp;demo)</em></p>
+<p>For the technically inclined: The program is an <span class="caps">XSLT</span> script, 
+which converts the <span class="caps">XML</span> into <span class="caps">HTML</span> and Javascript. The Javascript is then 
 interpreted by the <a href="http://raphaeljs.com/">Raphael library</a>, 
-which finally generates the SVG you see. It's overly complex, 
+which finally generates the <span class="caps">SVG</span> you see. It&#8217;s overly complex, 
 but it was a fun mis-mash of technologies to play with and the point was 
-learning new things as much as anything.</p>
+learning new things as much as&nbsp;anything.</p>
 <p>The transformation should work to make all kinds of swimlane diagrams, 
-so if you're interested in the code, let me know.</p>
+so if you&#8217;re interested in the code, let me&nbsp;know.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -143,6 +143,14 @@ so if you're interested in the code, let me know.</p>
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2010/08/11/using-pylint-in-geany/" title="Previous: Using Pylint in Geany">Using Pylint in Geany</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2010/11/04/changes-and-plans-at-courtlistener/" title="Next: Changes and Plans at CourtListener.com">Changes and Plans at CourtListener.com</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

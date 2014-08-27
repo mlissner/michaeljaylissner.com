@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/bash" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-12-15T17:41:27-08:00</updated><entry><title>Script to Rid Thyself of Autocomplete = Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-12-15T17:41:27-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-15:posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;I took some time today and wrote up &lt;a href="http://michaeljaylissner.com/archive/autocomplete-killer.sh"&gt;a script&lt;/a&gt; that can be run to 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/bash" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-12-15T17:41:27-08:00</updated><entry><title>Script to Rid Thyself of Autocomplete = Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-12-15T17:41:27-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-15:posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;I took some time today and wrote up &lt;a href="http://michaeljaylissner.com/archive/autocomplete-killer.sh"&gt;a script&lt;/a&gt; that can be run to 
 eliminate 
 &lt;code&gt;autocomplete=off&lt;/code&gt; in Firefox. It basically does the same thing as is 
-described &lt;a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"&gt;here&lt;/a&gt;, but it automates it. &lt;/p&gt;
-&lt;p&gt;The script can be run with one of five arguments:&lt;/p&gt;
+described &lt;a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"&gt;here&lt;/a&gt;, but it automates&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;The script can be run with one of five&amp;nbsp;arguments:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;You can choose to use find (&lt;code&gt;--find&lt;/code&gt;) or locate (&lt;code&gt;--locate&lt;/code&gt;) to find the 
- files that need to be changed on your system;&lt;/li&gt;
+ files that need to be changed on your&amp;nbsp;system;&lt;/li&gt;
 &lt;li&gt;You can dictate the location of the file if you want to modify a 
- specific one or know exactly where it's located (&lt;code&gt;--dictate&lt;/code&gt;);&lt;/li&gt;
-&lt;li&gt;You can choose to use the Ubuntu default location (&lt;code&gt;--default&lt;/code&gt;); or&lt;/li&gt;
+ specific one or know exactly where it&amp;#8217;s located (&lt;code&gt;--dictate&lt;/code&gt;);&lt;/li&gt;
+&lt;li&gt;You can choose to use the Ubuntu default location (&lt;code&gt;--default&lt;/code&gt;);&amp;nbsp;or&lt;/li&gt;
 &lt;li&gt;You can print the help information (&lt;code&gt;--help&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Once the program is run, it will make a back up, and modify it the original
- versions of the file. Once that's complete, all you have to do is restart 
- Firefox.&lt;/p&gt;
+ versions of the file. Once that&amp;#8217;s complete, all you have to do is restart&amp;nbsp;Firefox.&lt;/p&gt;
 &lt;p&gt;It has been pointed out to me by some security folks that removing a
-utocomplete's functionality from the browser might not be the best thing, 
-since it will allow you to save your passwords in the browser. There's some
- truth to that: Anything that's on your computer can be hacked. So, 
- if you're going to use this script, use it wisely.&lt;/p&gt;
-&lt;p&gt;Here's the code. I've attached it to this message as well. Any bugs or 
-comments are greatly appreciated.&lt;/p&gt;
+utocomplete&amp;#8217;s functionality from the browser might not be the best thing, 
+since it will allow you to save your passwords in the browser. There&amp;#8217;s some
+ truth to that: Anything that&amp;#8217;s on your computer can be hacked. So, 
+ if you&amp;#8217;re going to use this script, use it&amp;nbsp;wisely.&lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s the code. I&amp;#8217;ve attached it to this message as well. Any bugs or 
+comments are greatly&amp;nbsp;appreciated.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="c"&gt;# a simple script to destroy autocomplete in linux installations.&lt;/span&gt;
 
@@ -171,19 +170,19 @@ cat &lt;span class="s"&gt;&amp;lt;&amp;lt;EOF&lt;/span&gt;
            &lt;span class="nb"&gt;exit &lt;/span&gt;1;
     &lt;span class="k"&gt;esac&lt;/span&gt;
 &lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="security"></category><category term="Linux"></category><category term="firefox"></category><category term="bash"></category><category term="autocomplete"></category></entry><entry><title>Script to Clean Up F-Spot Database</title><link href="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/" rel="alternate"></link><updated>2009-10-14T00:30:12-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-14:posts/2009/10/14/script-to-cleanup-fspot-database/</id><summary type="html">&lt;p&gt;One of the more popular photo management applications for Linux is f-spot, 
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="security"></category><category term="Linux"></category><category term="firefox"></category><category term="bash"></category><category term="autocomplete"></category></entry><entry><title>Script to Clean Up F-Spot Database</title><link href="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/" rel="alternate"></link><updated>2009-10-14T00:30:12-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-14:posts/2009/10/14/script-to-cleanup-fspot-database/</id><summary type="html">&lt;p&gt;One of the more popular photo management applications for Linux is f-spot, 
 but unfortunately it has a rather glaring bug. It uses a sqlite3 database 
-internally to track which pictures you've imported into it, 
+internally to track which pictures you&amp;#8217;ve imported into it, 
 what tags they have, etc. However, if you delete, move or rename any of the
-files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It's annoying, and there's no particularly easy way to deal with it...until now.&lt;/p&gt;
+files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It&amp;#8217;s annoying, and there&amp;#8217;s no particularly easy way to deal with it&amp;#8230;until&amp;nbsp;now.&lt;/p&gt;
 &lt;p&gt;The script below simply iterates through all of the photos 
-that are in f-spot's database, and checks to see if those photos exist on 
+that are in f-spot&amp;#8217;s database, and checks to see if those photos exist on 
 your hard drive. If you run it in demo-mode, it will show you which files 
 look problematic, and if you run it in normal mode, 
 it will delete those database entries so that your database is cleaned up 
-(but not before backing up your database, just in case).&lt;/p&gt;
+(but not before backing up your database, just in&amp;nbsp;case).&lt;/p&gt;
 &lt;p&gt;In my very limited testing, it works very well, any additional feedback or 
-bug reporting is more than welcome. &lt;/p&gt;
+bug reporting is more than&amp;nbsp;welcome. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class="c"&gt;# A script to find missing files in the f-spot database, and then delete them.&lt;/span&gt;
@@ -322,9 +321,9 @@ bug reporting is more than welcome. &lt;/p&gt;
 &lt;span class="k"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Something strange happened. See the script for details. Exiting.&amp;quot;&lt;/span&gt;
     &lt;span class="nb"&gt;exit &lt;/span&gt;2;
 &lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="sqlite3"></category><category term="f-spot"></category><category term="database"></category><category term="bash"></category></entry><entry><title>A Script to Kill Evolution</title><link href="http://michaeljaylissner.com/posts/2008/10/13/a-script-to-kill-evolution/" rel="alternate"></link><updated>2008-10-13T17:36:05-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-10-13:posts/2008/10/13/a-script-to-kill-evolution/</id><summary type="html">&lt;p&gt;I use Evolution as my mail reader, and I like it. It has a lot of good features including a calendar, address book, memos and mail, as well as a number of others. One problem though is that it gets caught up when processing mail, and sometimes just won't come back.&lt;/p&gt;
-&lt;p&gt;The other problem is that it has several helper apps that are behind the scenes making things work properly, so if you try to just kill the application itself, those will still be running and your problem may not be solved.&lt;/p&gt;
-&lt;p&gt;My solution was to write a short script to kill all of Evolution and its helper apps. Hope this helps somebody else someday:&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="sqlite3"></category><category term="f-spot"></category><category term="database"></category><category term="bash"></category></entry><entry><title>A Script to Kill Evolution</title><link href="http://michaeljaylissner.com/posts/2008/10/13/a-script-to-kill-evolution/" rel="alternate"></link><updated>2008-10-13T17:36:05-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-10-13:posts/2008/10/13/a-script-to-kill-evolution/</id><summary type="html">&lt;p&gt;I use Evolution as my mail reader, and I like it. It has a lot of good features including a calendar, address book, memos and mail, as well as a number of others. One problem though is that it gets caught up when processing mail, and sometimes just won&amp;#8217;t come&amp;nbsp;back.&lt;/p&gt;
+&lt;p&gt;The other problem is that it has several helper apps that are behind the scenes making things work properly, so if you try to just kill the application itself, those will still be running and your problem may not be&amp;nbsp;solved.&lt;/p&gt;
+&lt;p&gt;My solution was to write a short script to kill all of Evolution and its helper apps. Hope this helps somebody else&amp;nbsp;someday:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;::: bash
 % more bin/evokill 
 &lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
@@ -334,4 +333,4 @@ ps aux | grep evolution
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This script just looks for any application that has the word evolution in its name, and then sends it the kill signal. Not too sophisticated, but it gets the job done. You could easily substitute the word evolution for something else as well.&lt;/p&gt;</summary><category term="evolution"></category><category term="bash"></category></entry></feed>
+&lt;p&gt;This script just looks for any application that has the word evolution in its name, and then sends it the kill signal. Not too sophisticated, but it gets the job done. You could easily substitute the word evolution for something else as&amp;nbsp;well.&lt;/p&gt;</summary><category term="evolution"></category><category term="bash"></category></entry></feed>

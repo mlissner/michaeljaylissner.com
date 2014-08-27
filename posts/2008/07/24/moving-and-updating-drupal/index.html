@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="drupal, apache2, Tech, " />
 
-<meta property="og:title" content="Moving and Updating Drupal "/>
+<meta property="og:title" content="Moving and Updating Drupal "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2008/07/24/moving-and-updating-drupal/" />
 <meta property="og:description" content="You may recall from one of my earlier posts that I was running two servers in my attic when I originally set things up at the end of last summer. Originally, I had one server for Zimbra, and the other for Drupal. I did this because I was scared that ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2008-07-24T22:45:32" />
-<meta name="twitter:title" content="Moving and Updating Drupal ">
+<meta name="twitter:title" content="Moving and Updating Drupal ">
 <meta name="twitter:description" content="You may recall from one of my earlier posts that I was running two servers in my attic when I originally set things up at the end of last summer. Originally, I had one server for Zimbra, and the other for Drupal. I did this because I was scared that ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Moving and Updating Drupal  · Michael Jay Lissner
+        <title>Moving and Updating Drupal  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2008/07/24/moving-and-updating-drupal/"> Moving and Updating Drupal  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2008/07/24/moving-and-updating-drupal/"> Moving and Updating&nbsp;Drupal  </a></h1>
     </header>
 </div>
 
@@ -86,13 +86,13 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>You may recall from one of my earlier posts that I was running two servers in my attic when I originally set things up at the end of last summer. Originally, I had one server for Zimbra, and the other for Drupal. I did this because I was scared that if I didn't, people would be unable to access the website without getting the email, and vice versa. I had no familiarity with apache, and a limited understanding of ports. </p>
-<p>Well, today I had a moment of inspiration, and decided it was time to retire the older of the two servers, and to move the Drupal installation to the Zimbra server.</p>
-<p>In addition to reducing the number of servers that I am maintaining, this also reduces the amount of energy I'm consuming, and also allowed me to update my Drupal installation. I was running Drupal 5.3 because that was the one that was in the Ubuntu repos, but I am now up to 5.9 (the most recent version).</p>
-<p>So, how did it go? It went pretty well. I had a backup of everything on my second server already, so it was largely a matter of copying things to the right places. Probably the most important lesson I learned is that symbolic links are not followed by rsnapshot, so my backups until this time have been incomplete. In my new installation, I am not using symbolic links, so that problem should be alleviated.</p>
-<p>Another challenge I encountered was that I had to update my dbconfig.php files to line up with the new database configuration, and I also had to spend some time getting the correct document root to function in apache2, which I also just installed.</p>
-<p>The biggest problem I encountered was that the clean URL's broke, and were a pain to get fixed. I have fixed those now, so the only remaining thing is to get gallery functioning again. The thing to remember here is that clean urls function by directory, and that the higher up the directory tree you go, the higher the priority of the .htacces files.</p>
-<p>As for Gallery2, I have to say it is a big pain, so I may just revert to trusting Google with my images. We'll see if I have another moment of inspiration.</p>
+            <p>You may recall from one of my earlier posts that I was running two servers in my attic when I originally set things up at the end of last summer. Originally, I had one server for Zimbra, and the other for Drupal. I did this because I was scared that if I didn&#8217;t, people would be unable to access the website without getting the email, and vice versa. I had no familiarity with apache, and a limited understanding of&nbsp;ports. </p>
+<p>Well, today I had a moment of inspiration, and decided it was time to retire the older of the two servers, and to move the Drupal installation to the Zimbra&nbsp;server.</p>
+<p>In addition to reducing the number of servers that I am maintaining, this also reduces the amount of energy I&#8217;m consuming, and also allowed me to update my Drupal installation. I was running Drupal 5.3 because that was the one that was in the Ubuntu repos, but I am now up to 5.9 (the most recent&nbsp;version).</p>
+<p>So, how did it go? It went pretty well. I had a backup of everything on my second server already, so it was largely a matter of copying things to the right places. Probably the most important lesson I learned is that symbolic links are not followed by rsnapshot, so my backups until this time have been incomplete. In my new installation, I am not using symbolic links, so that problem should be&nbsp;alleviated.</p>
+<p>Another challenge I encountered was that I had to update my dbconfig.php files to line up with the new database configuration, and I also had to spend some time getting the correct document root to function in apache2, which I also just&nbsp;installed.</p>
+<p>The biggest problem I encountered was that the clean <span class="caps">URL</span>&#8217;s broke, and were a pain to get fixed. I have fixed those now, so the only remaining thing is to get gallery functioning again. The thing to remember here is that clean urls function by directory, and that the higher up the directory tree you go, the higher the priority of the .htacces&nbsp;files.</p>
+<p>As for Gallery2, I have to say it is a big pain, so I may just revert to trusting Google with my images. We&#8217;ll see if I have another moment of&nbsp;inspiration.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -130,6 +130,14 @@
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2008/07/19/i-just-heard-about-this/" title="Previous: I Just Heard About This">I Just Heard About This</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2008/07/27/ubuntu-disk-usage-analyzer/" title="Next: Ubuntu Disk Usage Analyzer">Ubuntu Disk Usage Analyzer</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

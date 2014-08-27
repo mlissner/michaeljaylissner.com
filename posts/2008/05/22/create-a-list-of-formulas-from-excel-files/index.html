@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="microsoft, excel, Tech, " />
 
-<meta property="og:title" content="Create a List of Formulas from Excel Files "/>
+<meta property="og:title" content="Create a List of Formulas from Excel Files "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2008/05/22/create-a-list-of-formulas-from-excel-files/" />
 <meta property="og:description" content="I have begun training a replacement at work, and I need to teach him all of the excel formulas that we use in our department documents. I started making a list of all the formulas, but my mind quickly went blank, and I decided I needed a way to automate ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2008-05-22T12:16:59" />
-<meta name="twitter:title" content="Create a List of Formulas from Excel Files ">
+<meta name="twitter:title" content="Create a List of Formulas from Excel Files ">
 <meta name="twitter:description" content="I have begun training a replacement at work, and I need to teach him all of the excel formulas that we use in our department documents. I started making a list of all the formulas, but my mind quickly went blank, and I decided I needed a way to automate ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Create a List of Formulas from Excel Files  · Michael Jay Lissner
+        <title>Create a List of Formulas from Excel Files  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2008/05/22/create-a-list-of-formulas-from-excel-files/"> Create a List of Formulas from Excel Files  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2008/05/22/create-a-list-of-formulas-from-excel-files/"> Create a List of Formulas from Excel&nbsp;Files  </a></h1>
     </header>
 </div>
 
@@ -89,19 +89,18 @@
             <p>I have begun training a replacement at work, and I need to teach him all of 
 the excel formulas that we use in our department documents. I started making a 
 list of all the formulas, but my mind quickly went blank, and I decided I 
-needed a way to automate it. </p>
-<p>Here's the technique I figured out. Open each of the files that you believe 
-has useful formulas in it, and go to File &gt; Save as... Save each document into 
+needed a way to automate&nbsp;it. </p>
+<p>Here&#8217;s the technique I figured out. Open each of the files that you believe 
+has useful formulas in it, and go to File &gt; Save as&#8230; Save each document into 
 an empty directory as xml spreadsheets (.xml). If you open one of these 
-documents in a text editor, you are likely to see a line something like the 
-following: </p>
+documents in a text editor, you are likely to see a line something like the&nbsp;following: </p>
 <div class="highlight"><pre><span class="nt">&lt;Cell</span> <span class="na">ss:Formula=</span><span class="s">&quot;=SUM(C:C[1])&quot;</span><span class="nt">&gt;&lt;Data</span> <span class="na">ss:Type=</span><span class="s">&quot;Number&quot;</span><span class="nt">&gt;</span>0<span class="nt">&lt;/Data&gt;&lt;/Cell&gt;</span>
 </pre></div>
 
 
 <p>The key is that each row in your new xml documents that contains a formula 
 will have the formula keyword, so to isolate these, run the following on a 
-Unix computer in the directory where you saved all the xml documents.</p>
+Unix computer in the directory where you saved all the xml&nbsp;documents.</p>
 <div class="highlight"><pre>grep <span class="s1">&#39;Formula=&#39;</span> *.xml | sort | uniq &gt; uniqLinesWithFormulas.txt
 </pre></div>
 
@@ -111,7 +110,7 @@ each line from all of your <code>.xml</code> files that contains a formula. From
 you can skim them visually for useful formulas, or put the file into Excel 
 again and play with it there. This was as far as I needed to go in my 
 analysis. Once I had this done, it was pretty easy to see the 30 or so 
-formulas I regularly use.</p>
+formulas I regularly&nbsp;use.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -149,6 +148,14 @@ formulas I regularly use.</p>
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2008/05/20/dear-hillary/" title="Previous: Dear Hillary">Dear Hillary</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/" title="Next: Install Citrix In Ubuntu Hardy Heron">Install Citrix In Ubuntu Hardy Heron</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

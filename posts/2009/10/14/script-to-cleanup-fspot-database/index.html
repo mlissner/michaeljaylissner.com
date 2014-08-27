@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="sqlite3, f-spot, database, bash, Tech, " />
 
-<meta property="og:title" content="Script to Clean Up F-Spot Database "/>
+<meta property="og:title" content="Script to Clean Up F-Spot Database "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/" />
-<meta property="og:description" content="One of the more popular photo management applications for Linux is f-spot, but unfortunately it has a rather glaring bug. It uses a sqlite3 database internally to track which pictures you&#39;ve imported into it, what tags they have, etc. However, if you delete, move or rename any of the ..." />
+<meta property="og:description" content="One of the more popular photo management applications for Linux is f-spot, but unfortunately it has a rather glaring bug. It uses a sqlite3 database internally to track which pictures you’ve imported into it, what tags they have, etc. However, if you delete, move or rename any of the ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2009-10-14T00:30:12" />
-<meta name="twitter:title" content="Script to Clean Up F-Spot Database ">
-<meta name="twitter:description" content="One of the more popular photo management applications for Linux is f-spot, but unfortunately it has a rather glaring bug. It uses a sqlite3 database internally to track which pictures you&#39;ve imported into it, what tags they have, etc. However, if you delete, move or rename any of the ...">
+<meta name="twitter:title" content="Script to Clean Up F-Spot Database ">
+<meta name="twitter:description" content="One of the more popular photo management applications for Linux is f-spot, but unfortunately it has a rather glaring bug. It uses a sqlite3 database internally to track which pictures you’ve imported into it, what tags they have, etc. However, if you delete, move or rename any of the ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Script to Clean Up F-Spot Database  · Michael Jay Lissner
+        <title>Script to Clean Up F-Spot Database  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/"> Script to Clean Up F-Spot Database  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/"> Script to Clean Up F-Spot&nbsp;Database  </a></h1>
     </header>
 </div>
 
@@ -88,17 +88,17 @@
             
             <p>One of the more popular photo management applications for Linux is f-spot, 
 but unfortunately it has a rather glaring bug. It uses a sqlite3 database 
-internally to track which pictures you've imported into it, 
+internally to track which pictures you&#8217;ve imported into it, 
 what tags they have, etc. However, if you delete, move or rename any of the
-files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It's annoying, and there's no particularly easy way to deal with it...until now.</p>
+files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It&#8217;s annoying, and there&#8217;s no particularly easy way to deal with it&#8230;until&nbsp;now.</p>
 <p>The script below simply iterates through all of the photos 
-that are in f-spot's database, and checks to see if those photos exist on 
+that are in f-spot&#8217;s database, and checks to see if those photos exist on 
 your hard drive. If you run it in demo-mode, it will show you which files 
 look problematic, and if you run it in normal mode, 
 it will delete those database entries so that your database is cleaned up 
-(but not before backing up your database, just in case).</p>
+(but not before backing up your database, just in&nbsp;case).</p>
 <p>In my very limited testing, it works very well, any additional feedback or 
-bug reporting is more than welcome. </p>
+bug reporting is more than&nbsp;welcome. </p>
 <div class="highlight"><pre><span class="c">#!/bin/bash</span>
 
 <span class="c"># A script to find missing files in the f-spot database, and then delete them.</span>
@@ -275,6 +275,14 @@ bug reporting is more than welcome. </p>
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2009/10/09/de-dup-thunderbird-address-book-contacts/" title="Previous: Fix Duplicate Thunderbird Address Book Contacts">Fix Duplicate Thunderbird Address Book Contacts</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/" title="Next: Rid Thyself of Autocomplete=Off in Firefox">Rid Thyself of Autocomplete=Off in Firefox</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

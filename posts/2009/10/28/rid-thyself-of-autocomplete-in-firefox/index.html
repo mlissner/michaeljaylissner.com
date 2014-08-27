@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="firefox, frustration, autocomplete, Tech, " />
 
-<meta property="og:title" content="Rid Thyself of Autocomplete=Off in Firefox "/>
+<meta property="og:title" content="Rid Thyself of Autocomplete=Off in Firefox "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/" />
-<meta property="og:description" content="Update, 12-15-09: See this script for an automated way to apply this change. If you&#39;re at all like me, you use a password manager to keep track of all your passwords, and it works great. Most of the time. Except sometimes, it doesn&#39;t work, and you&#39;re confused ..." />
+<meta property="og:description" content="Update, 12-15-09: See this script for an automated way to apply this change. If you’re at all like me, you use a password manager to keep track of all your passwords, and it works great. Most of the time. Except sometimes, it doesn’t work, and you’re confused ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2009-10-28T09:39:19" />
-<meta name="twitter:title" content="Rid Thyself of Autocomplete=Off in Firefox ">
-<meta name="twitter:description" content="Update, 12-15-09: See this script for an automated way to apply this change. If you&#39;re at all like me, you use a password manager to keep track of all your passwords, and it works great. Most of the time. Except sometimes, it doesn&#39;t work, and you&#39;re confused ...">
+<meta name="twitter:title" content="Rid Thyself of Autocomplete=Off in Firefox ">
+<meta name="twitter:description" content="Update, 12-15-09: See this script for an automated way to apply this change. If you’re at all like me, you use a password manager to keep track of all your passwords, and it works great. Most of the time. Except sometimes, it doesn’t work, and you’re confused ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Rid Thyself of Autocomplete=Off in Firefox  · Michael Jay Lissner
+        <title>Rid Thyself of Autocomplete=Off in Firefox  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"> Rid Thyself of Autocomplete=Off in Firefox  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"> Rid Thyself of Autocomplete=Off in&nbsp;Firefox  </a></h1>
     </header>
 </div>
 
@@ -87,36 +87,35 @@
 
             
             <p><strong>Update, 12-15-09:</strong> See <a href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/">this script</a> for an automated way to apply 
-this change.</p>
-<p>If you're at all like me, you use a password manager to keep track of all 
+this&nbsp;change.</p>
+<p>If you&#8217;re at all like me, you use a password manager to keep track of all 
 your passwords, and it works great. Most of the time. Except sometimes, 
-it doesn't work, and you're confused why. Well, more often than not, 
-it's because your password manager has been blocked by the web page you're 
-viewing.</p>
+it doesn&#8217;t work, and you&#8217;re confused why. Well, more often than not, 
+it&#8217;s because your password manager has been blocked by the web page you&#8217;re&nbsp;viewing.</p>
 <p>If you look closely at the code of the page, somewhere in it, 
-you'll probably find something that looks like this:</p>
+you&#8217;ll probably find something that looks like&nbsp;this:</p>
 <div class="highlight"><pre><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;button&quot;</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span>  <span class="na">name=</span><span class="s">&quot;login&quot;</span> <span class="na">value=</span><span class="s">&quot;login&quot;</span> <span class="na">autocomplete=</span><span class="s">&quot;off&quot;</span><span class="nt">&gt;</span>
 </pre></div>
 
 
 <p>That autocomplete parameter that you see at the end there? Yeah, 
-that's the one that's blocking your password manager. So we must block it, 
-so it doesn't block us.</p>
-<p>There's a couple approaches to this, but probably the best is to disable 
-Firefox's ability to interpret autocomplete. The way to do this on Linux is
-to browse to:</p>
+that&#8217;s the one that&#8217;s blocking your password manager. So we must block it, 
+so it doesn&#8217;t block&nbsp;us.</p>
+<p>There&#8217;s a couple approaches to this, but probably the best is to disable 
+Firefox&#8217;s ability to interpret autocomplete. The way to do this on Linux is
+to browse&nbsp;to:</p>
 <div class="highlight"><pre><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">xulrunner</span><span class="o">-</span><span class="mf">1.9.1.5</span><span class="o">/</span><span class="n">components</span><span class="o">/</span><span class="n">nsLoginManager</span><span class="p">.</span><span class="n">js</span>
 </pre></div>
 
 
-<p>And in Windows, I believe it's at:</p>
+<p>And in Windows, I believe it&#8217;s&nbsp;at:</p>
 <div class="highlight"><pre><span class="nl">C:</span><span class="err">\</span><span class="n">Program</span> <span class="n">Files</span><span class="err">\</span><span class="n">Mozilla</span> <span class="n">Firefox</span><span class="err">\</span><span class="n">nsLoginManager</span><span class="p">.</span><span class="n">js</span>
 </pre></div>
 
 
-<p>Once you've found that file, open it in an editor, and find the section 
+<p>Once you&#8217;ve found that file, open it in an editor, and find the section 
 that has <code>isAutoCompleteDisabled</code>, and make it look like this (so it will 
-always return FALSE):</p>
+always return <span class="caps">FALSE</span>):</p>
 <div class="highlight"><pre><span class="cm">/*</span>
 <span class="cm"> * _isAutoCompleteDisabled</span>
 <span class="cm"> *</span>
@@ -133,7 +132,7 @@ always return FALSE):</p>
 </pre></div>
 
 
-<p>Once that's done, save the file, restart Firefox and you're all set.</p>
+<p>Once that&#8217;s done, save the file, restart Firefox and you&#8217;re all&nbsp;set.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -171,6 +170,14 @@ always return FALSE):</p>
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/" title="Previous: Script to Clean Up F-Spot Database">Script to Clean Up F-Spot Database</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" title="Next: Testing Deletion Speed of Online Photo Sites">Testing Deletion Speed of Online Photo Sites</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

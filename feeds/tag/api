@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/api" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2011-08-10T20:50:54-07:00</updated><entry><title>The abolishment of the Emergency Court of Appeals (April 18, 1962)</title><link href="http://michaeljaylissner.com/posts/2011/08/10/the-abolishment-of-the-emergency-court-of-appeals-1962/" rel="alternate"></link><updated>2011-08-10T20:50:54-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2011-08-10:posts/2011/08/10/the-abolishment-of-the-emergency-court-of-appeals-1962/</id><summary type="html">&lt;p&gt;One of the coming features at &lt;a href="http://courtlistener.com"&gt;CourtListener&lt;/a&gt; is an API for the law. Part of that feature is going to be some basic information about the courts themselves, so I spent some time over the weekend researching courts that served a special purpose but were since abolished.&lt;/p&gt;
-&lt;p&gt;One such court was the &lt;a href="https://secure.wikimedia.org/wikipedia/en/wiki/Emergency_Court_of_Appeals"&gt;Emergency Court of Appeals&lt;/a&gt;. It was created during World War II to set prices, and, naturally, was the court of appeals for many cases. The creation date of the court is prominently published in various places on the Internet, but the abolishment history of the court was very difficult to find. After researching online for some time, and learning that my library card had expired (sigh), I put in a query with the &lt;a href="http://www.loc.gov"&gt;Library of Congress&lt;/a&gt;, which provides free research of these types of things.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/api" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2011-08-10T20:50:54-07:00</updated><entry><title>The abolishment of the Emergency Court of Appeals (April 18, 1962)</title><link href="http://michaeljaylissner.com/posts/2011/08/10/the-abolishment-of-the-emergency-court-of-appeals-1962/" rel="alternate"></link><updated>2011-08-10T20:50:54-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2011-08-10:posts/2011/08/10/the-abolishment-of-the-emergency-court-of-appeals-1962/</id><summary type="html">&lt;p&gt;One of the coming features at &lt;a href="http://courtlistener.com"&gt;CourtListener&lt;/a&gt; is an &lt;span class="caps"&gt;API&lt;/span&gt; for the law. Part of that feature is going to be some basic information about the courts themselves, so I spent some time over the weekend researching courts that served a special purpose but were since&amp;nbsp;abolished.&lt;/p&gt;
+&lt;p&gt;One such court was the &lt;a href="https://secure.wikimedia.org/wikipedia/en/wiki/Emergency_Court_of_Appeals"&gt;Emergency Court of Appeals&lt;/a&gt;. It was created during World War &lt;span class="caps"&gt;II&lt;/span&gt; to set prices, and, naturally, was the court of appeals for many cases. The creation date of the court is prominently published in various places on the Internet, but the abolishment history of the court was very difficult to find. After researching online for some time, and learning that my library card had expired (sigh), I put in a query with the &lt;a href="http://www.loc.gov"&gt;Library of Congress&lt;/a&gt;, which provides free research of these types of&amp;nbsp;things.&lt;/p&gt;
 &lt;p&gt;Within a couple days, the provided me with this amazing response, 
- which I'm sharing here, and on the above Wikipedia article:&lt;/p&gt;
+ which I&amp;#8217;m sharing here, and on the above Wikipedia&amp;nbsp;article:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;As stated in the Legislative Notes to 50 U.S. Code Appendix § 921 to 926, 
-as posted at http://www.law.cornell.edu/uscode/html/uscode50a/usc_sec_50a_00000921----000-notes.html, 
+&lt;p&gt;As stated in the Legislative Notes to 50 &lt;span class="caps"&gt;U.S.&lt;/span&gt; Code Appendix § 921 to 926, 
+as posted at http://www.law.cornell.edu/uscode/html/uscode50a/usc_sec_50a_00000921&amp;#8212;&amp;#8212;000-notes.html, 
 the following explanation is given regarding the amendment and repeal of Act 
-of Jan. 30, 1942, ch. 26, title II, § 204, 56 Stat. 23, 31-33: &lt;/p&gt;
-&lt;p&gt;"Section 924, acts Jan. 30, 1942, ch. 26, title II, § 204, 
+of Jan. 30, 1942, ch. 26, title &lt;span class="caps"&gt;II&lt;/span&gt;, § 204, 56 Stat. 23,&amp;nbsp;31-33: &lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;Section 924, acts Jan. 30, 1942, ch. 26, title &lt;span class="caps"&gt;II&lt;/span&gt;, § 204, 
 56 Stat. 31; June 30, 1944, ch. 325, title I, § 107, 58 Stat. 639; June 30, 
 1945, ch. 214, § 6, 59 Stat. 308; July 30, 1947, ch. 361, title I, § 101, 
 61 Stat. 619; June 25, 1948, ch. 646, § 32(a), 62 Stat. 991; May 24, 1949, 
@@ -25,16 +25,15 @@ the Defense Production Act of 1950, act Sept. 8, 1950, ch. 932,
 64 Stat. 798, classified to sections 2061 to 2166 of this Appendix, 
 continued the Court to review regulations and orders relating to price 
 control. The Housing and Rent Act of 1948 and the Defense Production Act of 
-1950 both terminated, however, the Court remained in existence "to complete 
+1950 both terminated, however, the Court remained in existence &amp;#8220;to complete 
 the adjudication of rights and liabilities incurred prior to their 
-termination dates." (Transcript of Proceedings of the Final Session of the 
+termination dates.&amp;#8221; (Transcript of Proceedings of the Final Session of the 
 Court, 299 F.2d 1.) The final decision of the Court, Rosenzweig v. General 
 Services Administration, 1961, 299 F.2d 22, was decided on Dec. 6, 
 1961. A petition for rehearing was denied on Jan. 2, 1962, 
 and a petition for writ of certiorari to the Supreme Court of the United 
-States was denied on Mar. 19, 1962, 82 S. Ct. 830. &lt;/p&gt;
-&lt;p&gt;The order of Chief Judge Albert B. Maris, set forth in 299 F.2d 20, 
-provided: &lt;/p&gt;
+States was denied on Mar. 19, 1962, 82 S. Ct.&amp;nbsp;830. &lt;/p&gt;
+&lt;p&gt;The order of Chief Judge Albert B. Maris, set forth in 299 F.2d 20,&amp;nbsp;provided: &lt;/p&gt;
 &lt;p&gt;The business of this Court having been completed, it is ordered that at the
 expiration of 30 days from this date, if a petition for certiorari has not 
 been filed in the Supreme Court in Case No. 676 [Rosenzweig v. General 
@@ -43,11 +42,11 @@ records and papers of the Court in his office to the General Services
 Administration for permanent custody as records of the Government, 
 and shall thereupon inform the Chief Justice of the United States that the 
 work of the Court has been completed and that the designations of the judges
- of the Court may therefore appropriately be terminated. &lt;/p&gt;
+ of the Court may therefore appropriately be&amp;nbsp;terminated. &lt;/p&gt;
 &lt;p&gt;If a petition for certiorari is filed in Case No. 676 this order shall take
 effect and be carried out at the expiration of 30 days after the final 
-disposition of Case No. 676.&lt;/p&gt;
+disposition of Case No.&amp;nbsp;676.&lt;/p&gt;
 &lt;p&gt;In accordance with the terms of this order, the petition for certiorari 
-having been filed, and denied Mar. 19, 1962, the Court terminated on Apr. 18, 1962." &lt;/p&gt;
+having been filed, and denied Mar. 19, 1962, the Court terminated on Apr. 18,&amp;nbsp;1962.&amp;#8221; &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Pretty fantastic research. And for free! Thanks LOC.&lt;/p&gt;</summary><category term="loc"></category><category term="law"></category><category term="history"></category><category term="courtlistener.com"></category><category term="api"></category></entry></feed>
+&lt;p&gt;Pretty fantastic research. And for free! Thanks &lt;span class="caps"&gt;LOC&lt;/span&gt;.&lt;/p&gt;</summary><category term="loc"></category><category term="law"></category><category term="history"></category><category term="courtlistener.com"></category><category term="api"></category></entry></feed>

@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/autocomplete" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-12-15T17:41:27-08:00</updated><entry><title>Script to Rid Thyself of Autocomplete = Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-12-15T17:41:27-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-15:posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;I took some time today and wrote up &lt;a href="http://michaeljaylissner.com/archive/autocomplete-killer.sh"&gt;a script&lt;/a&gt; that can be run to 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/autocomplete" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-12-15T17:41:27-08:00</updated><entry><title>Script to Rid Thyself of Autocomplete = Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-12-15T17:41:27-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-15:posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;I took some time today and wrote up &lt;a href="http://michaeljaylissner.com/archive/autocomplete-killer.sh"&gt;a script&lt;/a&gt; that can be run to 
 eliminate 
 &lt;code&gt;autocomplete=off&lt;/code&gt; in Firefox. It basically does the same thing as is 
-described &lt;a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"&gt;here&lt;/a&gt;, but it automates it. &lt;/p&gt;
-&lt;p&gt;The script can be run with one of five arguments:&lt;/p&gt;
+described &lt;a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"&gt;here&lt;/a&gt;, but it automates&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;The script can be run with one of five&amp;nbsp;arguments:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;You can choose to use find (&lt;code&gt;--find&lt;/code&gt;) or locate (&lt;code&gt;--locate&lt;/code&gt;) to find the 
- files that need to be changed on your system;&lt;/li&gt;
+ files that need to be changed on your&amp;nbsp;system;&lt;/li&gt;
 &lt;li&gt;You can dictate the location of the file if you want to modify a 
- specific one or know exactly where it's located (&lt;code&gt;--dictate&lt;/code&gt;);&lt;/li&gt;
-&lt;li&gt;You can choose to use the Ubuntu default location (&lt;code&gt;--default&lt;/code&gt;); or&lt;/li&gt;
+ specific one or know exactly where it&amp;#8217;s located (&lt;code&gt;--dictate&lt;/code&gt;);&lt;/li&gt;
+&lt;li&gt;You can choose to use the Ubuntu default location (&lt;code&gt;--default&lt;/code&gt;);&amp;nbsp;or&lt;/li&gt;
 &lt;li&gt;You can print the help information (&lt;code&gt;--help&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Once the program is run, it will make a back up, and modify it the original
- versions of the file. Once that's complete, all you have to do is restart 
- Firefox.&lt;/p&gt;
+ versions of the file. Once that&amp;#8217;s complete, all you have to do is restart&amp;nbsp;Firefox.&lt;/p&gt;
 &lt;p&gt;It has been pointed out to me by some security folks that removing a
-utocomplete's functionality from the browser might not be the best thing, 
-since it will allow you to save your passwords in the browser. There's some
- truth to that: Anything that's on your computer can be hacked. So, 
- if you're going to use this script, use it wisely.&lt;/p&gt;
-&lt;p&gt;Here's the code. I've attached it to this message as well. Any bugs or 
-comments are greatly appreciated.&lt;/p&gt;
+utocomplete&amp;#8217;s functionality from the browser might not be the best thing, 
+since it will allow you to save your passwords in the browser. There&amp;#8217;s some
+ truth to that: Anything that&amp;#8217;s on your computer can be hacked. So, 
+ if you&amp;#8217;re going to use this script, use it&amp;nbsp;wisely.&lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s the code. I&amp;#8217;ve attached it to this message as well. Any bugs or 
+comments are greatly&amp;nbsp;appreciated.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="c"&gt;# a simple script to destroy autocomplete in linux installations.&lt;/span&gt;
 
@@ -171,37 +170,36 @@ cat &lt;span class="s"&gt;&amp;lt;&amp;lt;EOF&lt;/span&gt;
            &lt;span class="nb"&gt;exit &lt;/span&gt;1;
     &lt;span class="k"&gt;esac&lt;/span&gt;
 &lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="security"></category><category term="Linux"></category><category term="firefox"></category><category term="bash"></category><category term="autocomplete"></category></entry><entry><title>Rid Thyself of Autocomplete=Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-10-28T09:39:19-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-28:posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;&lt;strong&gt;Update, 12-15-09:&lt;/strong&gt; See &lt;a href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/"&gt;this script&lt;/a&gt; for an automated way to apply 
-this change.&lt;/p&gt;
-&lt;p&gt;If you're at all like me, you use a password manager to keep track of all 
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="security"></category><category term="Linux"></category><category term="firefox"></category><category term="bash"></category><category term="autocomplete"></category></entry><entry><title>Rid Thyself of Autocomplete=Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-10-28T09:39:19-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-28:posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;&lt;strong&gt;Update, 12-15-09:&lt;/strong&gt; See &lt;a href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/"&gt;this script&lt;/a&gt; for an automated way to apply 
+this&amp;nbsp;change.&lt;/p&gt;
+&lt;p&gt;If you&amp;#8217;re at all like me, you use a password manager to keep track of all 
 your passwords, and it works great. Most of the time. Except sometimes, 
-it doesn't work, and you're confused why. Well, more often than not, 
-it's because your password manager has been blocked by the web page you're 
-viewing.&lt;/p&gt;
+it doesn&amp;#8217;t work, and you&amp;#8217;re confused why. Well, more often than not, 
+it&amp;#8217;s because your password manager has been blocked by the web page you&amp;#8217;re&amp;nbsp;viewing.&lt;/p&gt;
 &lt;p&gt;If you look closely at the code of the page, somewhere in it, 
-you'll probably find something that looks like this:&lt;/p&gt;
+you&amp;#8217;ll probably find something that looks like&amp;nbsp;this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;button&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt;  &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;login&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;login&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;autocomplete=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;off&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;That autocomplete parameter that you see at the end there? Yeah, 
-that's the one that's blocking your password manager. So we must block it, 
-so it doesn't block us.&lt;/p&gt;
-&lt;p&gt;There's a couple approaches to this, but probably the best is to disable 
-Firefox's ability to interpret autocomplete. The way to do this on Linux is
-to browse to:&lt;/p&gt;
+that&amp;#8217;s the one that&amp;#8217;s blocking your password manager. So we must block it, 
+so it doesn&amp;#8217;t block&amp;nbsp;us.&lt;/p&gt;
+&lt;p&gt;There&amp;#8217;s a couple approaches to this, but probably the best is to disable 
+Firefox&amp;#8217;s ability to interpret autocomplete. The way to do this on Linux is
+to browse&amp;nbsp;to:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xulrunner&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;1.9.1.5&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;components&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nsLoginManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;And in Windows, I believe it's at:&lt;/p&gt;
+&lt;p&gt;And in Windows, I believe it&amp;#8217;s&amp;nbsp;at:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;C:&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Program&lt;/span&gt; &lt;span class="n"&gt;Files&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Mozilla&lt;/span&gt; &lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;nsLoginManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Once you've found that file, open it in an editor, and find the section 
+&lt;p&gt;Once you&amp;#8217;ve found that file, open it in an editor, and find the section 
 that has &lt;code&gt;isAutoCompleteDisabled&lt;/code&gt;, and make it look like this (so it will 
-always return FALSE):&lt;/p&gt;
+always return &lt;span class="caps"&gt;FALSE&lt;/span&gt;):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
 &lt;span class="cm"&gt; * _isAutoCompleteDisabled&lt;/span&gt;
 &lt;span class="cm"&gt; *&lt;/span&gt;
@@ -218,4 +216,4 @@ always return FALSE):&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Once that's done, save the file, restart Firefox and you're all set.&lt;/p&gt;</summary><category term="firefox"></category><category term="frustration"></category><category term="autocomplete"></category></entry></feed>
+&lt;p&gt;Once that&amp;#8217;s done, save the file, restart Firefox and you&amp;#8217;re all&amp;nbsp;set.&lt;/p&gt;</summary><category term="firefox"></category><category term="frustration"></category><category term="autocomplete"></category></entry></feed>

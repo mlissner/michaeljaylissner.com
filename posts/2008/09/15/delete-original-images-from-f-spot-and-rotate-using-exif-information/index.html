@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="script, f-spot, awk, grep, Tech, " />
 
-<meta property="og:title" content="Delete Original Images from F-Spot and Rotate Using Exif Information "/>
+<meta property="og:title" content="Delete Original Images from F-Spot and Rotate Using Exif Information "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2008/09/15/delete-original-images-from-f-spot-and-rotate-using-exif-information/" />
 <meta property="og:description" content="Over the past couple weeks, my girlfriend and I spent a lot of time working on the photos from our Peru trip. Since we used F-Spot to do our photo editing, when we were done we had a couple of problems when it came to transferring the photos back to ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2008-09-15T23:33:48" />
-<meta name="twitter:title" content="Delete Original Images from F-Spot and Rotate Using Exif Information ">
+<meta name="twitter:title" content="Delete Original Images from F-Spot and Rotate Using Exif Information ">
 <meta name="twitter:description" content="Over the past couple weeks, my girlfriend and I spent a lot of time working on the photos from our Peru trip. Since we used F-Spot to do our photo editing, when we were done we had a couple of problems when it came to transferring the photos back to ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Delete Original Images from F-Spot and Rotate Using Exif Information  · Michael Jay Lissner
+        <title>Delete Original Images from F-Spot and Rotate Using Exif Information  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2008/09/15/delete-original-images-from-f-spot-and-rotate-using-exif-information/"> Delete Original Images from F-Spot and Rotate Using Exif Information  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2008/09/15/delete-original-images-from-f-spot-and-rotate-using-exif-information/"> Delete Original Images from F-Spot and Rotate Using Exif&nbsp;Information  </a></h1>
     </header>
 </div>
 
@@ -86,51 +86,51 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Over the past couple weeks, my girlfriend and I spent a lot of time working on the photos from our Peru trip. Since we used F-Spot to do our photo editing, when we were done we had a couple of problems when it came to transferring the photos back to her computer which is running Vista. </p>
-<p>The first problem was that when we rotated images with F-Spot, it simply changed the exif information for the photo, and didn't change the pixels of the photo themselves. This was fine when viewed in F-Spot because it is aware of exif information, and displays the photos correctly. However, when we transferred the files to her computer, we discovered that Vista does not take exif information into account on the OS level, nor does Picassa. As a result, we needed to somehow rotate the images that had exif information indicating a non-normal rotation.</p>
-<p>The second problem we encountered is that in F-Spot when you edit a photo, it creates a second file with the edited photo, and leaves the original unchanged. So, if you edit file dsc00343.jpg, you get a second photo called dsc00343 (Modified).jpg. This is OK when in F-Spot, however, when we went to her computer, it was very hard for her to have ONLY the modified version of those photos, and to delete the originals (since the edited versions are better than the originals).</p>
-<p>To solve the first problem, I used a couple of tricks. The first thing I did was to make a copy of the photos in case all went south.</p>
+            <p>Over the past couple weeks, my girlfriend and I spent a lot of time working on the photos from our Peru trip. Since we used F-Spot to do our photo editing, when we were done we had a couple of problems when it came to transferring the photos back to her computer which is running&nbsp;Vista. </p>
+<p>The first problem was that when we rotated images with F-Spot, it simply changed the exif information for the photo, and didn&#8217;t change the pixels of the photo themselves. This was fine when viewed in F-Spot because it is aware of exif information, and displays the photos correctly. However, when we transferred the files to her computer, we discovered that Vista does not take exif information into account on the <span class="caps">OS</span> level, nor does Picassa. As a result, we needed to somehow rotate the images that had exif information indicating a non-normal&nbsp;rotation.</p>
+<p>The second problem we encountered is that in F-Spot when you edit a photo, it creates a second file with the edited photo, and leaves the original unchanged. So, if you edit file dsc00343.jpg, you get a second photo called dsc00343 (Modified).jpg. This is <span class="caps">OK</span> when in F-Spot, however, when we went to her computer, it was very hard for her to have <span class="caps">ONLY</span> the modified version of those photos, and to delete the originals (since the edited versions are better than the&nbsp;originals).</p>
+<p>To solve the first problem, I used a couple of tricks. The first thing I did was to make a copy of the photos in case all went&nbsp;south.</p>
 <div class="highlight"><pre>mkdir backupPhotos
 cp *.jpg *.jpeg backupPhotos
 <span class="nb">cd </span>backupPhotos
 </pre></div>
 
 
-<p>Once that is done, we can begin rotating images. For this, we will need the jhead program.</p>
+<p>Once that is done, we can begin rotating images. For this, we will need the jhead&nbsp;program.</p>
 <div class="highlight"><pre>sudo aptitude install jhead
 </pre></div>
 
 
-<p>Once that's installed, we rotate:</p>
+<p>Once that&#8217;s installed, we&nbsp;rotate:</p>
 <div class="highlight"><pre>jhead -autorot  *.jpg *.jpeg
 </pre></div>
 
 
-<p>This will rotate all of the files that have unusual information in the exif orientation field. </p>
-<p>Problem number one solved.</p>
-<p>For problem two, we will need to isolate all of the photos that have been modified, and delete the originals. To do this, we will capitalize on the fact that the renamed images use the original pictures name in their name. </p>
-<p>To begin with, we create a list of the photos that have been modified:</p>
+<p>This will rotate all of the files that have unusual information in the exif orientation&nbsp;field. </p>
+<p>Problem number one&nbsp;solved.</p>
+<p>For problem two, we will need to isolate all of the photos that have been modified, and delete the originals. To do this, we will capitalize on the fact that the renamed images use the original pictures name in their&nbsp;name. </p>
+<p>To begin with, we create a list of the photos that have been&nbsp;modified:</p>
 <div class="highlight"><pre>ls *.jpg *.jpeg | grep -i modified &gt; modifiedImages.txt
 </pre></div>
 
 
 <p>Using awk, we can separate out the original name of the photos. The following 
-commands will convert the ')' to '(' and will use the two '(' as a delimiters, 
+commands will convert the &#8216;)&#8217; to &#8216;(&#8216; and will use the two &#8216;(&#8216; as a delimiters, 
 returning the name of the file as the first field, and the .jpg or .jpeg as 
 the third field. After that, it will remove any spaces from the file name, and 
 will create a new file with a list of the modified pictures. It sounds 
-complicated, but the final result should work:</p>
+complicated, but the final result should&nbsp;work:</p>
 <div class="highlight"><pre>tr <span class="s1">&#39;)&#39;</span> <span class="s1">&#39;(&#39;</span> &amp;lt; modifiedImages.txt &gt; modifiedImages2.txt
 cat modifiedImages2.txt | awk -F<span class="s1">&#39;(&#39;</span> <span class="s1">&#39;{print $1,$3;}&#39;</span> | sed <span class="s1">&#39;s/  //g&#39;</span> &amp;gt; modifiedImages3.txt
 </pre></div>
 
 
-<p>You should now have a file called modifiedImages3.txt that contains the name of all of the original photos. To delete the pictures in this list from the collection - permanently - run:</p>
+<p>You should now have a file called modifiedImages3.txt that contains the name of all of the original photos. To delete the pictures in this list from the collection - permanently -&nbsp;run:</p>
 <div class="highlight"><pre>rm <span class="sb">`</span>cat modifiedImages3.txt<span class="sb">`</span>
 </pre></div>
 
 
-<p>You should now be able to transfer this entire directory of photos to another computer without rotation issues or duplicated photos.</p>
+<p>You should now be able to transfer this entire directory of photos to another computer without rotation issues or duplicated&nbsp;photos.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -168,6 +168,14 @@ cat modifiedImages2.txt | awk -F<span class="s1">&#39;(&#39;</span> <span class=
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2008/09/15/on-drm-and-the-darknet/" title="Previous: On DRM and the Darknet">On DRM and the Darknet</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2008/09/17/there-is-a-lesson-about-yahoo-security-i-learned-from-palin-today/" title="Next: There’s a Lesson About Yahoo! Security I Learned from Palin Today">There’s a Lesson About Yahoo! Security I Learned from Palin Today</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

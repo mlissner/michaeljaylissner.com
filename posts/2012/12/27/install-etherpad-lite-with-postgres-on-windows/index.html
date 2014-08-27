@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="windows, postgres, node, etherpad, Tech, " />
 
-<meta property="og:title" content="Setting up etherpad with postgres on Windows "/>
+<meta property="og:title" content="Setting up etherpad with postgres on Windows "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/" />
-<meta property="og:description" content="There don&#39;t seem to be any successful installation instructions for postgres on Windows. It&#39;s not that hard, but there are a couple things you need to do. I haven&#39;t gone through these instructions to make sure they work, but this is roughly what I&#39;ve done to ..." />
+<meta property="og:description" content="There don’t seem to be any successful installation instructions for postgres on Windows. It’s not that hard, but there are a couple things you need to do. I haven’t gone through these instructions to make sure they work, but this is roughly what I’ve done to ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2012-12-27T11:20:36" />
-<meta name="twitter:title" content="Setting up etherpad with postgres on Windows ">
-<meta name="twitter:description" content="There don&#39;t seem to be any successful installation instructions for postgres on Windows. It&#39;s not that hard, but there are a couple things you need to do. I haven&#39;t gone through these instructions to make sure they work, but this is roughly what I&#39;ve done to ...">
+<meta name="twitter:title" content="Setting up etherpad with postgres on Windows ">
+<meta name="twitter:description" content="There don’t seem to be any successful installation instructions for postgres on Windows. It’s not that hard, but there are a couple things you need to do. I haven’t gone through these instructions to make sure they work, but this is roughly what I’ve done to ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Setting up etherpad with postgres on Windows  · Michael Jay Lissner
+        <title>Setting up etherpad with postgres on Windows  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/"> Setting up etherpad with postgres on Windows  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/"> Setting up etherpad with postgres on&nbsp;Windows  </a></h1>
     </header>
 </div>
 
@@ -86,37 +86,37 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>There don't seem to be any successful installation instructions for postgres on Windows. It's not that hard, but there are a couple things you need to do. </p>
-<p>I haven't gone through these instructions to make sure they work, but this is roughly what I've done to get my Postgres/Windows/Node/Etherpad working together:</p>
+            <p>There don&#8217;t seem to be any successful installation instructions for postgres on Windows. It&#8217;s not that hard, but there are a couple things you need to&nbsp;do. </p>
+<p>I haven&#8217;t gone through these instructions to make sure they work, but this is roughly what I&#8217;ve done to get my Postgres/Windows/Node/Etherpad working&nbsp;together:</p>
 <ul>
-<li>Install git</li>
-<li>Install node.js</li>
+<li>Install&nbsp;git</li>
+<li>Install&nbsp;node.js</li>
 <li>Install python<ul>
-<li>add PYTHON as an env</li>
+<li>add <span class="caps">PYTHON</span> as an&nbsp;env</li>
 </ul>
 </li>
 <li>Install postgres<ul>
-<li>add C:\Program Files\PostgreSQL\9.2\bin to your path</li>
+<li>add C:\Program Files\PostgreSQL\9.2\bin to your&nbsp;path</li>
 </ul>
 </li>
-<li>Download etherpad-lite with git</li>
-<li>Run the etherpad-lite windows installer per the instructions</li>
+<li>Download etherpad-lite with&nbsp;git</li>
+<li>Run the etherpad-lite windows installer per the&nbsp;instructions</li>
 <li>start etherpad-lite<ul>
-<li>make sure it works with the dirty DB before getting exotic</li>
+<li>make sure it works with the dirty <span class="caps">DB</span> before getting&nbsp;exotic</li>
 </ul>
 </li>
 <li>Set up postgres<ul>
-<li>npm install pg (will throw an error about msbuild version, but ignore that, the native JS drivers are installed)</li>
-<li>add a user using pgadmin</li>
-<li>add a DB using pgadmin and the user created a second ago</li>
-<li>reconfigure to use postgres in the settings.json file</li>
+<li>npm install pg (will throw an error about msbuild version, but ignore that, the native <span class="caps">JS</span> drivers are&nbsp;installed)</li>
+<li>add a user using&nbsp;pgadmin</li>
+<li>add a <span class="caps">DB</span> using pgadmin and the user created a second&nbsp;ago</li>
+<li>reconfigure to use postgres in the settings.json&nbsp;file</li>
 </ul>
 </li>
-<li>Run start.bat to make sure it works</li>
-<li>Turn down the log messages to only ERROR in the settings.json file.</li>
-<li>Use <a href="http://nssm.cc/">NSSM</a> to daemonize it, per the instructions <a href="https://github.com/ether/etherpad-lite/wiki/How-to-deploy-Etherpad-Lite-as-a-service">here</a>.</li>
+<li>Run start.bat to make sure it&nbsp;works</li>
+<li>Turn down the log messages to only <span class="caps">ERROR</span> in the settings.json&nbsp;file.</li>
+<li>Use <a href="http://nssm.cc/"><span class="caps">NSSM</span></a> to daemonize it, per the instructions <a href="https://github.com/ether/etherpad-lite/wiki/How-to-deploy-Etherpad-Lite-as-a-service">here</a>.</li>
 </ul>
-<p>Note that NSSM doesn't yet have stdout and stderr redirection built in. Thus, to start the daemon with these working, you have to create a little script like this: </p>
+<p>Note that <span class="caps">NSSM</span> doesn&#8217;t yet have stdout and stderr redirection built in. Thus, to start the daemon with these working, you have to create a little script like&nbsp;this: </p>
 <div class="highlight"><pre><span class="p">@</span><span class="k">ECHO</span> <span class="k">OFF</span>
 <span class="p">@</span>REM This runs etherpad with stdout and stderr getting redirected to special logs
 <span class="k">call</span> D:\etherpad\etherpad-lite\start.bat &gt;<span class="p">&gt;</span> <span class="n">D</span>:\etherpad\etherpad-lite\logs\stdout.log <span class="m">2</span>&gt;<span class="p">&gt;</span> <span class="n">D</span>:\etherpad\etherpad-lite\logs\stderr.log
@@ -158,6 +158,14 @@
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2012/10/09/presentation-on-juriscraper-and-courtlistener-for-lvi2012/" title="Previous: Presentation on Juriscraper and CourtListener for LVI2012">Presentation on Juriscraper and CourtListener for LVI2012</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2012/12/31/year-in-review-2012-travel-edition-goddamn-too-much-traveling/" title="Next: Year in Review: Travel Edition">Year in Review: Travel Edition</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

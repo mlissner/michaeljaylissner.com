@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="Tracker, install, howto, desktop search, Tech, " />
 
-<meta property="og:title" content="Installing Tracker from Source "/>
+<meta property="og:title" content="Installing Tracker from Source "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2009/02/23/installing-tracker-from-source/" />
-<meta property="og:description" content="I&#39;ve been working over the past several weeks on getting Tracker to work better on my system. There are a couple reasons that I&#39;m doing this. The first is that by default on Ubuntu, Tracker doesn&#39;t support a number of meta formats (such as the tags in ..." />
+<meta property="og:description" content="I’ve been working over the past several weeks on getting Tracker to work better on my system. There are a couple reasons that I’m doing this. The first is that by default on Ubuntu, Tracker doesn’t support a number of meta formats (such as the tags in ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2009-02-23T00:13:40" />
-<meta name="twitter:title" content="Installing Tracker from Source ">
-<meta name="twitter:description" content="I&#39;ve been working over the past several weeks on getting Tracker to work better on my system. There are a couple reasons that I&#39;m doing this. The first is that by default on Ubuntu, Tracker doesn&#39;t support a number of meta formats (such as the tags in ...">
+<meta name="twitter:title" content="Installing Tracker from Source ">
+<meta name="twitter:description" content="I’ve been working over the past several weeks on getting Tracker to work better on my system. There are a couple reasons that I’m doing this. The first is that by default on Ubuntu, Tracker doesn’t support a number of meta formats (such as the tags in ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Installing Tracker from Source  · Michael Jay Lissner
+        <title>Installing Tracker from Source  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2009/02/23/installing-tracker-from-source/"> Installing Tracker from Source  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2009/02/23/installing-tracker-from-source/"> Installing Tracker from&nbsp;Source  </a></h1>
     </header>
 </div>
 
@@ -86,28 +86,28 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I've been working over the past several weeks on getting Tracker to work better on my system. There are a couple reasons that I'm doing this. The first is that by default on Ubuntu, Tracker doesn't support a number of meta formats (such as the tags in JPEGs, ID3 info in MP3s, and the like). The second was that the RDF parsing code in the default Ubuntu version is a bit buggy, and the new version is better. It's been a bit of a pain figuring out the install process, so I figured I'd post here so others might have an easier time.</p>
-<p>The <a href="http://projects.gnome.org/tracker/start.html">online instructions</a> say to simply download the code, and to install it. No big deal, right? Well...in reality, it's a bit harder than that. The process I went through was to download the source from <a href="http://projects.gnome.org/tracker/download.html">here</a> per the instructions, unpack the source files, and to run the configure command. </p>
-<p>After the configure command is run each time, it will give you a summary of which components will be installed, and which will not. If you have all the dependencies necessary, and include a couple of arguments to the configure command, everything will get installed. If not, certain pieces will be missing. </p>
-<p>The list of dependencies is a bit long, so before you run ./configure, you might as well install them. To do so, run:</p>
+            <p>I&#8217;ve been working over the past several weeks on getting Tracker to work better on my system. There are a couple reasons that I&#8217;m doing this. The first is that by default on Ubuntu, Tracker doesn&#8217;t support a number of meta formats (such as the tags in JPEGs, <span class="caps">ID3</span> info in MP3s, and the like). The second was that the <span class="caps">RDF</span> parsing code in the default Ubuntu version is a bit buggy, and the new version is better. It&#8217;s been a bit of a pain figuring out the install process, so I figured I&#8217;d post here so others might have an easier&nbsp;time.</p>
+<p>The <a href="http://projects.gnome.org/tracker/start.html">online instructions</a> say to simply download the code, and to install it. No big deal, right? Well&#8230;in reality, it&#8217;s a bit harder than that. The process I went through was to download the source from <a href="http://projects.gnome.org/tracker/download.html">here</a> per the instructions, unpack the source files, and to run the configure&nbsp;command. </p>
+<p>After the configure command is run each time, it will give you a summary of which components will be installed, and which will not. If you have all the dependencies necessary, and include a couple of arguments to the configure command, everything will get installed. If not, certain pieces will be&nbsp;missing. </p>
+<p>The list of dependencies is a bit long, so before you run ./configure, you might as well install them. To do so,&nbsp;run:</p>
 <div class="highlight"><pre>sudo aptitude install libgmime-2.0-2a libgmime-2.0-2-dev dbus-glib-1-dev libdbus-glib-1-dev libhal-dev libhal-storage-dev sqlite3-dev libsqlite3-dev libexif-dev libdeskbar-tracker libgsf-1-dev libjpeg62-dev libtiff4-dev libxine-dev libpoppler-dev libgstreamer0.10-dev libpoppler-glib-dev libtotem-plparser-dev libunac1-dev libexempi-dev libraptor1-dev libtracker-gtk-dev libgnome-desktop-dev libgnome-desktop-dev libnotify-dev
 </pre></div>
 
 
-<p>Once those are installed, run:</p>
+<p>Once those are installed,&nbsp;run:</p>
 <div class="highlight"><pre>./configure --enable-deskbar-applet --enable-tracker-applet --prefix<span class="o">=</span>/usr --sysconfdir<span class="o">=</span>/etc
 </pre></div>
 
 
-<p>After this, it should say that pretty much everything will be installed. If so, you can proceed to the commands below, and once those are complete, the latest version should be installed with full functionality.</p>
+<p>After this, it should say that pretty much everything will be installed. If so, you can proceed to the commands below, and once those are complete, the latest version should be installed with full&nbsp;functionality.</p>
 <div class="highlight"><pre>make
 sudo make install
 </pre></div>
 
 
-<p>If after running your configure script (<code>./configure</code>) it doesn't 
-indicate that everything will be installed, put in a comment below, and we'll 
-see what we can do.</p>
+<p>If after running your configure script (<code>./configure</code>) it doesn&#8217;t 
+indicate that everything will be installed, put in a comment below, and we&#8217;ll 
+see what we can&nbsp;do.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -145,6 +145,14 @@ see what we can do.</p>
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2009/02/20/snow-camping-in-sequoia/" title="Previous: Snow Camping in Sequoia">Snow Camping in Sequoia</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2009/03/18/zeran-v-aol-paper-posted/" title="Next: Zeran v. AOL Paper Posted">Zeran v. AOL Paper Posted</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

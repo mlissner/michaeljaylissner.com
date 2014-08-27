@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="tesseract, ocr, howto, font, Tech, " />
 
-<meta property="og:title" content="Adding New Fonts to Tesseract 3 OCR Engine "/>
+<meta property="og:title" content="Adding New Fonts to Tesseract 3 OCR Engine "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/" />
-<meta property="og:description" content="Status I&#39;m attempting to keep this up to date as Tesseract changes. If you have questions or corrections, please send them directly using the contact page. I&#39;ve turned off commenting on this article because it was just a bunch of people asking for help and never getting any ..." />
+<meta property="og:description" content="Status I’m attempting to keep this up to date as Tesseract changes. If you have questions or corrections, please send them directly using the contact page. I’ve turned off commenting on this article because it was just a bunch of people asking for help and never getting any ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2012-02-11T10:53:30" />
-<meta name="twitter:title" content="Adding New Fonts to Tesseract 3 OCR Engine ">
-<meta name="twitter:description" content="Status I&#39;m attempting to keep this up to date as Tesseract changes. If you have questions or corrections, please send them directly using the contact page. I&#39;ve turned off commenting on this article because it was just a bunch of people asking for help and never getting any ...">
+<meta name="twitter:title" content="Adding New Fonts to Tesseract 3 OCR Engine ">
+<meta name="twitter:description" content="Status I’m attempting to keep this up to date as Tesseract changes. If you have questions or corrections, please send them directly using the contact page. I’ve turned off commenting on this article because it was just a bunch of people asking for help and never getting any ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Adding New Fonts to Tesseract 3 OCR Engine  · Michael Jay Lissner
+        <title>Adding New Fonts to Tesseract 3 OCR Engine  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/"> Adding New Fonts to Tesseract 3 OCR Engine  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/"> Adding New Fonts to Tesseract 3 <span class="caps">OCR</span>&nbsp;Engine  </a></h1>
     </header>
 </div>
 
@@ -90,8 +90,8 @@
 <ul>
 <li><a href="#status">Status</a></li>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#create-training-documents">Create training documents</a></li>
-<li><a href="#train-tesseract">Train Tesseract</a></li>
+<li><a href="#create-training-documents">Create training documents</a></li>
+<li><a href="#train-tesseract">Train Tesseract</a></li>
 <li><a href="#enclosures">Enclosures</a></li>
 </ul>
 </div>
@@ -102,42 +102,42 @@
             
             
 <h2 id="status">Status</h2>
-<p>I'm attempting to keep this up to date as Tesseract changes. If you have 
+<p>I’m attempting to keep this up to date as Tesseract changes. If you have 
 questions or corrections, please send them directly using the <a href="http://michaeljaylissner.com/contact">contact 
 page</a>.</p>
-<p>I've turned off commenting on this article because it was just a 
+<p>I’ve turned off commenting on this article because it was just a 
 bunch of people asking for help and never getting any. If you need help 
-with these instructions, go to Stack Overflow and ask there.</p>
+with these instructions, go to Stack Overflow and ask there.</p>
 <h2 id="introduction">Introduction</h2>
-<p><a href="http://code.google.com/p/tesseract-ocr/">Tesseract</a> is a great and powerful OCR engine, but their <a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3">instructions 
+<p><a href="http://code.google.com/p/tesseract-ocr/">Tesseract</a> is a great and powerful <span class="caps">OCR</span> engine, but their <a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3">instructions 
 for adding a new font</a> are incredibly long and complicated. At 
 CourtListener we have to handle several unusual <a href="http://en.wikipedia.org/wiki/Blackletter">blackletter fonts</a>, 
-so we had to go through this process a few times. Below I've explained the 
-process so others may more easily add fonts to their system.</p>
-<p>The process has a few major steps:</p>
+so we had to go through this process a few times. Below I’ve explained the 
+process so others may more easily add fonts to their system.</p>
+<p>The process has a few major steps:</p>
 <ul>
-<li><a href="#create-training-docs">Create training documents</a></li>
-<li><a href="#train-tesseract">Teach Tesseract about the documents</a></li>
+<li><a href="#create-training-docs">Create training documents</a></li>
+<li><a href="#train-tesseract">Teach Tesseract about the documents</a></li>
 </ul>
-<h2 id="create-training-documents">Create training documents</h2>
-<p>To create training documents, open up MS Word or LibreOffice, paste in the contents of the attached file named 'standard-training-text.txt'. This file contains the training text that is used by Tesseract for the included fonts.</p>
-<p>Set your line spacing to at least 1.5, and space out the letters by about 1pt. using character spacing. I've attached a sample doc too, if that helps. Set the text to the font you want to use, and save it as font-name.doc.</p>
-<p>Save the document as a PDF (call it [lang].font-name.exp0.pdf, with lang being an <a href="http://www.sil.org/iso639-3/iso-639-3_Name_Index_20120203.tab">ISO-639 three letter abbreviation</a> for your language), and then use the following command to convert it to a 300dpi tiff (requires imagemagick):</p>
+<h2 id="create-training-documents">Create training documents</h2>
+<p>To create training documents, open up <span class="caps">MS</span> Word or LibreOffice, paste in the contents of the attached file named ‘standard-training-text.txt’. This file contains the training text that is used by Tesseract for the included fonts.</p>
+<p>Set your line spacing to at least 1.5, and space out the letters by about 1pt. using character spacing. I’ve attached a sample doc too, if that helps. Set the text to the font you want to use, and save it as font-name.doc.</p>
+<p>Save the document as a <span class="caps">PDF</span> (call it [lang].font-name.exp0.pdf, with lang being an <a href="http://www.sil.org/iso639-3/iso-639-3_Name_Index_20120203.tab"><span class="caps">ISO</span>-639 three letter abbreviation</a> for your language), and then use the following command to convert it to a 300dpi tiff (requires imagemagick):</p>
 <p><code>convert -density 300 -depth 4 lang.font-name.exp0.pdf lang.font-name.exp0.tif</code></p>
-<p>You'll now have a good training image called lang.font-name.exp0.tif. If you're adding multiple fonts, or bold, italic or underline, repeat this process multiple times, creating one doc → pdf →  tiff per font variation.</p>
-<h2 id="train-tesseract">Train Tesseract</h2>
-<p>The next step is to run tesseract over the image(s) we just created, and to see how well it can do with the new font. After it's taken its best shot, we then give it corrections. It'll provide us with a box file, which is just a file containing x,y coordinates of each letter it found along with what letter it thinks it is. So let's see what it can do:</p>
+<p>You’ll now have a good training image called lang.font-name.exp0.tif. If you’re adding multiple fonts, or bold, italic or underline, repeat this process multiple times, creating one doc → pdf →  tiff per font variation.</p>
+<h2 id="train-tesseract">Train Tesseract</h2>
+<p>The next step is to run tesseract over the image(s) we just created, and to see how well it can do with the new font. After it’s taken its best shot, we then give it corrections. It’ll provide us with a box file, which is just a file containing x,y coordinates of each letter it found along with what letter it thinks it is. So let’s see what it can do:</p>
 <div class="highlight"><pre><span class="n">tesseract</span> <span class="n">lang</span><span class="p">.</span><span class="n">font</span><span class="o">-</span><span class="n">name</span><span class="p">.</span><span class="n">exp0</span><span class="p">.</span><span class="n">tiff</span> <span class="n">lang</span><span class="p">.</span><span class="n">font</span><span class="o">-</span><span class="n">name</span><span class="p">.</span><span class="n">exp0</span> <span class="n">batch</span><span class="p">.</span><span class="n">nochop</span> <span class="n">makebox</span>
 </pre></div>
-<p>You'll now have a file called font-name.exp0.box, and you'll need to open it in a box-file editor. There are a bunch of these <a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#Box_File_Editors">on the Tesseract wiki</a>. The one that works for me (on Ubuntu) is <a href="http://code.google.com/p/moshpytt/">moshpytt</a>, though it doesn't support multi-page tiffs. If you need to use a multi-page tiff, see <a href="http://code.google.com/p/moshpytt/issues/detail?id=2">the issue on the topic</a> for tips. Once you've opened it, go through <strong>every</strong> letter, and make sure it was detected correctly. If a letter was skipped, add it as a row to the box file. Similarly, if two letters were detected as one, break them up into two lines.</p>
-<p>When that's done, you feed the box file back into tesseract:</p>
+<p>You’ll now have a file called font-name.exp0.box, and you’ll need to open it in a box-file editor. There are a bunch of these <a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#Box_File_Editors">on the Tesseract wiki</a>. The one that works for me (on Ubuntu) is <a href="http://code.google.com/p/moshpytt/">moshpytt</a>, though it doesn’t support multi-page tiffs. If you need to use a multi-page tiff, see <a href="http://code.google.com/p/moshpytt/issues/detail?id=2">the issue on the topic</a> for tips. Once you’ve opened it, go through <strong>every</strong> letter, and make sure it was detected correctly. If a letter was skipped, add it as a row to the box file. Similarly, if two letters were detected as one, break them up into two lines.</p>
+<p>When that’s done, you feed the box file back into tesseract:</p>
 <div class="highlight"><pre><span class="n">tesseract</span> <span class="n">eng</span><span class="p">.</span><span class="n">font</span><span class="o">-</span><span class="n">name</span><span class="p">.</span><span class="n">exp0</span><span class="p">.</span><span class="n">tif</span> <span class="n">eng</span><span class="p">.</span><span class="n">font</span><span class="o">-</span><span class="n">name</span><span class="p">.</span><span class="n">box</span> <span class="n">nobatch</span> <span class="n">box</span><span class="p">.</span><span class="n">train</span> <span class="p">.</span><span class="n">stderr</span>
 </pre></div>
-<p>Next, you need to detect the Character set used in all your box files:</p>
+<p>Next, you need to detect the Character set used in all your box files:</p>
 <div class="highlight"><pre><span class="n">unicharset_extractor</span> <span class="o">*</span><span class="p">.</span><span class="n">box</span>
 </pre></div>
-<p>When that's complete, you need to create a <code>font_properties</code> file. It should list every font you're training, one per line, and identify whether it has the following characteristics: &lt;fontname&gt; &lt;italic&gt; &lt;bold&gt; &lt;fixed&gt; &lt;serif&gt; &lt;fraktur&gt;</p>
-<p>So, for example, if you use the standard training data, you might end up with a file like this:</p>
+<p>When that’s complete, you need to create a <code>font_properties</code> file. It should list every font you’re training, one per line, and identify whether it has the following characteristics: &lt;fontname&gt; &lt;italic&gt; &lt;bold&gt; &lt;fixed&gt; &lt;serif&gt; &lt;fraktur&gt;</p>
+<p>So, for example, if you use the standard training data, you might end up with a file like this:</p>
 <div class="highlight"><pre>eng.arial.box 0 0 0 0 0
 eng.arialbd.box 0 1 0 0 0
 eng.arialbi.box 1 1 0 0 0
@@ -173,23 +173,23 @@ eng.verdanab.box 0 1 0 0 0
 eng.verdanai.box 1 0 0 0 0
 eng.verdanaz.box 1 1 0 0 0
 </pre></div>
-<p>Note that this is the standard font_properties file that should be supplied with Tesseract and I've added the two bold rows for the blackletter fonts I'm training. You can also see which fonts are included out of the box.</p>
-<p>We're getting near the end. Next, create the clustering data:</p>
+<p>Note that this is the standard font_properties file that should be supplied with Tesseract and I’ve added the two bold rows for the blackletter fonts I’m training. You can also see which fonts are included out of the box.</p>
+<p>We’re getting near the end. Next, create the clustering data:</p>
 <div class="highlight"><pre>mftraining -F font_properties -U unicharset -O lang.unicharset *.tr 
 cntraining *.tr
 </pre></div>
-<p>If you want, you can <a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#Dictionary_Data_(Optional)">create a wordlist</a> or a <a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#The_last_file_(unicharambigs)">unicharambigs file</a>. If you don't plan on doing that, the last step is to combine the various files we've created. </p>
-<p>To do that, rename each of the language files (normproto, Microfeat, inttemp, pffmtable) to have your lang prefix, and run (mind the dot at the end):</p>
+<p>If you want, you can <a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#Dictionary_Data_(Optional)">create a wordlist</a> or a <a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#The_last_file_(unicharambigs)">unicharambigs file</a>. If you don’t plan on doing that, the last step is to combine the various files we’ve created. </p>
+<p>To do that, rename each of the language files (normproto, Microfeat, inttemp, pffmtable) to have your lang prefix, and run (mind the dot at the end):</p>
 <div class="highlight"><pre><span class="n">combine_tessdata</span> <span class="n">lang</span><span class="p">.</span>
 </pre></div>
-<p>This will create all the data files you need, and you just need to move them to the correct place on your OS. On Ubuntu, I was able to move them to;</p>
+<p>This will create all the data files you need, and you just need to move them to the correct place on your <span class="caps">OS</span>. On Ubuntu, I was able to move them to;</p>
 <div class="highlight"><pre><span class="n">sudo</span> <span class="n">mv</span> <span class="n">eng</span><span class="p">.</span><span class="n">traineddata</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">tessdata</span><span class="o">/</span>
 </pre></div>
-<p>And that, good friend, is it. Worst process for a human, ever.</p>
+<p>And that, good friend, is it. Worst process for a human, ever.</p>
 <h2 id="enclosures">Enclosures</h2>
 <ul>
-<li><a href="http://michaeljaylissner.com/archive/ocr/standard-training-text.txt">Training data file</a></li>
-<li><a href="http://michaeljaylissner.com/archive/ocr/old-english.doc">Old English example file</a></li>
+<li><a href="http://michaeljaylissner.com/archive/ocr/standard-training-text.txt">Training data file</a></li>
+<li><a href="http://michaeljaylissner.com/archive/ocr/old-english.doc">Old English example file</a></li>
 </ul>
             
             <section>
@@ -228,6 +228,14 @@ cntraining *.tr
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/" title="Previous: The Winning Font in Court Opinions">The Winning Font in Court Opinions</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2012/03/15/my-presentation-proposal-for-lvi-2012/" title="Next: My Presentation Proposal for LVI 2012">My Presentation Proposal for LVI 2012</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

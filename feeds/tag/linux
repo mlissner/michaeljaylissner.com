@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/linux" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-12-15T17:41:27-08:00</updated><entry><title>Script to Rid Thyself of Autocomplete = Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-12-15T17:41:27-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-15:posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;I took some time today and wrote up &lt;a href="http://michaeljaylissner.com/archive/autocomplete-killer.sh"&gt;a script&lt;/a&gt; that can be run to 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/linux" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-12-15T17:41:27-08:00</updated><entry><title>Script to Rid Thyself of Autocomplete = Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-12-15T17:41:27-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-15:posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;I took some time today and wrote up &lt;a href="http://michaeljaylissner.com/archive/autocomplete-killer.sh"&gt;a script&lt;/a&gt; that can be run to 
 eliminate 
 &lt;code&gt;autocomplete=off&lt;/code&gt; in Firefox. It basically does the same thing as is 
-described &lt;a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"&gt;here&lt;/a&gt;, but it automates it. &lt;/p&gt;
-&lt;p&gt;The script can be run with one of five arguments:&lt;/p&gt;
+described &lt;a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"&gt;here&lt;/a&gt;, but it automates&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;The script can be run with one of five&amp;nbsp;arguments:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;You can choose to use find (&lt;code&gt;--find&lt;/code&gt;) or locate (&lt;code&gt;--locate&lt;/code&gt;) to find the 
- files that need to be changed on your system;&lt;/li&gt;
+ files that need to be changed on your&amp;nbsp;system;&lt;/li&gt;
 &lt;li&gt;You can dictate the location of the file if you want to modify a 
- specific one or know exactly where it's located (&lt;code&gt;--dictate&lt;/code&gt;);&lt;/li&gt;
-&lt;li&gt;You can choose to use the Ubuntu default location (&lt;code&gt;--default&lt;/code&gt;); or&lt;/li&gt;
+ specific one or know exactly where it&amp;#8217;s located (&lt;code&gt;--dictate&lt;/code&gt;);&lt;/li&gt;
+&lt;li&gt;You can choose to use the Ubuntu default location (&lt;code&gt;--default&lt;/code&gt;);&amp;nbsp;or&lt;/li&gt;
 &lt;li&gt;You can print the help information (&lt;code&gt;--help&lt;/code&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Once the program is run, it will make a back up, and modify it the original
- versions of the file. Once that's complete, all you have to do is restart 
- Firefox.&lt;/p&gt;
+ versions of the file. Once that&amp;#8217;s complete, all you have to do is restart&amp;nbsp;Firefox.&lt;/p&gt;
 &lt;p&gt;It has been pointed out to me by some security folks that removing a
-utocomplete's functionality from the browser might not be the best thing, 
-since it will allow you to save your passwords in the browser. There's some
- truth to that: Anything that's on your computer can be hacked. So, 
- if you're going to use this script, use it wisely.&lt;/p&gt;
-&lt;p&gt;Here's the code. I've attached it to this message as well. Any bugs or 
-comments are greatly appreciated.&lt;/p&gt;
+utocomplete&amp;#8217;s functionality from the browser might not be the best thing, 
+since it will allow you to save your passwords in the browser. There&amp;#8217;s some
+ truth to that: Anything that&amp;#8217;s on your computer can be hacked. So, 
+ if you&amp;#8217;re going to use this script, use it&amp;nbsp;wisely.&lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s the code. I&amp;#8217;ve attached it to this message as well. Any bugs or 
+comments are greatly&amp;nbsp;appreciated.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="c"&gt;# a simple script to destroy autocomplete in linux installations.&lt;/span&gt;
 
@@ -171,54 +170,54 @@ cat &lt;span class="s"&gt;&amp;lt;&amp;lt;EOF&lt;/span&gt;
            &lt;span class="nb"&gt;exit &lt;/span&gt;1;
     &lt;span class="k"&gt;esac&lt;/span&gt;
 &lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="security"></category><category term="Linux"></category><category term="firefox"></category><category term="bash"></category><category term="autocomplete"></category></entry><entry><title>Linux Tip - Route Standard Output Into to the Clipboard</title><link href="http://michaeljaylissner.com/posts/2008/08/28/linux-tip-route-standard-output-into-the-clipboard/" rel="alternate"></link><updated>2008-08-28T20:47:05-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-08-28:posts/2008/08/28/linux-tip-route-standard-output-into-the-clipboard/</id><summary type="html">&lt;p&gt;A friendly online stranger just taught me how to do something that has been plaguing me for some time. Ever since I learned how to use pipes in the unix commandline, I have wanted to know how to pipe the output of a command into the system clipboard.&lt;/p&gt;
-&lt;p&gt;For example, the echo command simply repeats whatever you tell it to. So if I run&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="security"></category><category term="Linux"></category><category term="firefox"></category><category term="bash"></category><category term="autocomplete"></category></entry><entry><title>Linux Tip - Route Standard Output Into to the Clipboard</title><link href="http://michaeljaylissner.com/posts/2008/08/28/linux-tip-route-standard-output-into-the-clipboard/" rel="alternate"></link><updated>2008-08-28T20:47:05-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-08-28:posts/2008/08/28/linux-tip-route-standard-output-into-the-clipboard/</id><summary type="html">&lt;p&gt;A friendly online stranger just taught me how to do something that has been plaguing me for some time. Ever since I learned how to use pipes in the unix commandline, I have wanted to know how to pipe the output of a command into the system&amp;nbsp;clipboard.&lt;/p&gt;
+&lt;p&gt;For example, the echo command simply repeats whatever you tell it to. So if I&amp;nbsp;run&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;echo &lt;/span&gt;hello
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The computer will give me the output &lt;/p&gt;
+&lt;p&gt;The computer will give me the&amp;nbsp;output &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;hello
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;By using a pipe (this symbol: |) I can route the output of one command into the input of another. &lt;/p&gt;
-&lt;p&gt;For example, if I run: &lt;/p&gt;
+&lt;p&gt;By using a pipe (this symbol: |) I can route the output of one command into the input of&amp;nbsp;another. &lt;/p&gt;
+&lt;p&gt;For example, if I&amp;nbsp;run: &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;echo &lt;/span&gt;hello | helloprogram
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;The helloprogram will receive the value of 'hello' as an input, and will do something with it. This allows stringing together small commands into long ones, which sometimes is incredibly handy. &lt;/p&gt;
-&lt;p&gt;Anyway, if you want to route standard output into the system clipboard, you will need to install an application called xclip. Once that is installed, a command such as:&lt;/p&gt;
+&lt;p&gt;The helloprogram will receive the value of &amp;#8216;hello&amp;#8217; as an input, and will do something with it. This allows stringing together small commands into long ones, which sometimes is incredibly&amp;nbsp;handy. &lt;/p&gt;
+&lt;p&gt;Anyway, if you want to route standard output into the system clipboard, you will need to install an application called xclip. Once that is installed, a command such&amp;nbsp;as:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;echo &lt;/span&gt;hello | xclip -i -selection clipboard
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Will put the word hello into the clipboard. Ctrl + V will then paste that 
-value into whatever application desired.&lt;/p&gt;
-&lt;p&gt;Thanks to aaron at &lt;a href="http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676"&gt;http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676&lt;/a&gt; for help with this question.&lt;/p&gt;</summary><category term="Linux"></category><category term="CLI"></category></entry><entry><title>Ubuntu Disk Usage Analyzer</title><link href="http://michaeljaylissner.com/posts/2008/07/27/ubuntu-disk-usage-analyzer/" rel="alternate"></link><updated>2008-07-27T18:00:00-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-07-27:posts/2008/07/27/ubuntu-disk-usage-analyzer/</id><summary type="html">&lt;p&gt;&lt;img alt="No Alt" src="http://michaeljaylissner.com/images/disk_usage-pic.png" /&gt;&lt;/p&gt;
+value into whatever application&amp;nbsp;desired.&lt;/p&gt;
+&lt;p&gt;Thanks to aaron at &lt;a href="http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676"&gt;http://www.cyberciti.biz/faq/linux-copying-with-middle-mouse-button/#comment-38676&lt;/a&gt; for help with this&amp;nbsp;question.&lt;/p&gt;</summary><category term="Linux"></category><category term="CLI"></category></entry><entry><title>Ubuntu Disk Usage Analyzer</title><link href="http://michaeljaylissner.com/posts/2008/07/27/ubuntu-disk-usage-analyzer/" rel="alternate"></link><updated>2008-07-27T18:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-07-27:posts/2008/07/27/ubuntu-disk-usage-analyzer/</id><summary type="html">&lt;p&gt;&lt;img alt="No Alt" src="http://michaeljaylissner.com/images/disk_usage-pic.png" /&gt;&lt;/p&gt;
 &lt;p&gt;One of my favorite utilities lately is the Disk Usage Analyzer that comes 
-installed on Ubuntu. It can be run either locally or remotely. &lt;/p&gt;
-&lt;p&gt;It's pretty awesome. I have been playing with my backups lately, 
+installed on Ubuntu. It can be run either locally or&amp;nbsp;remotely. &lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s pretty awesome. I have been playing with my backups lately, 
 and this utility allows me not only to see which directories are large, 
 but also where my files are taking up the most space. For example, 
 the picture at right depicts my home directory. By mousing over the slices 
-of the pie, you can see what's in them, and how big they are. By clicking on
+of the pie, you can see what&amp;#8217;s in them, and how big they are. By clicking on
 a slice, it becomes the center of the pie, and you can see which directories
-are within it (and how big they are). &lt;/p&gt;
-&lt;p&gt;In terms of UI, I have to say this one works very well for me. I have yet to
+are within it (and how big they&amp;nbsp;are). &lt;/p&gt;
+&lt;p&gt;In terms of &lt;span class="caps"&gt;UI&lt;/span&gt;, I have to say this one works very well for me. I have yet to
 see another app for this purpose anywhere else, though admittedly I have 
-not been looking that hard.&lt;/p&gt;</summary><category term="Linux"></category><category term="storage"></category></entry><entry><title>My Linux Story</title><link href="http://michaeljaylissner.com/posts/2008/07/17/my-linux-story/" rel="alternate"></link><updated>2008-07-17T20:03:38-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-07-17:posts/2008/07/17/my-linux-story/</id><summary type="html">&lt;p&gt;I thought I would post a quick entry today about how I came to be a Linux user and enthusiast. I guess it's a combination of a couple things.&lt;/p&gt;
-&lt;p&gt;Historically, what happened was that I was using XP and looking at thumbnails of some pictures in their file navigator. I was looking at about 300 pictures, and I didn't want to open them all up individually (this was before useful apps like Picasa came around). I just wanted to look at the thumbnails. Except those were too small, so I wanted to make them bigger. I spent about two hours searching online to try to figure out how to make such an adjustment. Eventually, I discovered a Windows "Powertool" that you could install. It seemed like overkill, but it did the job. What bugged me though about it was that obviously it didn't require a Powertool to adjust image size. It just required a tweak of some bit of code somewhere in the system. That was my tipping point. I decided I couldn't take the viruses, the expense and the closed product anymore, and promptly decided it was time for a new OS.&lt;/p&gt;
-&lt;p&gt;So that's what brought me to Linux. What kept me here is the openness and the philosophy. Sure, at times it's a bit trickier to get certain things done, but I love the philosophy that if I want a change, I can either make it myself if I am a programmer, or I can file a feature request with the developers. Somebody will read that request, and maybe it will get integrated, if it's a good enough idea.&lt;/p&gt;
-&lt;p&gt;I also love the fact that I can download, install and run an excellent email server, and a top-notch web server. For free. Also, no viruses. Ever. Nor any anti-virus software to pay for. And did I mention the whole thing is free? &lt;/p&gt;
-&lt;p&gt;As for the day to day stuff, I really don't notice much difference. At work, I use XP, which involves using Firefox, Word, Excel and Outlook (the latter three of which my work paid good money for). At home it's Firefox, Open Office and Evolution, all of which are very similar to the Microsoft package, only with better compatibility with other programs.&lt;/p&gt;
-&lt;p&gt;The other thing I really like about my Linux system is the ability to set things up like in the previous tutorial. I did an Internet search for "Linux wake on USB", and knew exactly how to adjust the system in a matter of moments. That kind of customization is a power you just don't have in Windows.&lt;/p&gt;</summary><category term="Linux"></category><category term="me"></category></entry><entry><title>Wake Your Computer by USB</title><link href="http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/" rel="alternate"></link><updated>2008-07-14T20:27:57-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-07-14:posts/2008/07/14/wake-your-computer-by-usb/</id><summary type="html">&lt;p&gt;I recently began using my laptop at my desk with a USB keyboard and mouse, 
-and I thought I would explain how to set up Ubuntu so that USB peripherals 
+not been looking that&amp;nbsp;hard.&lt;/p&gt;</summary><category term="Linux"></category><category term="storage"></category></entry><entry><title>My Linux Story</title><link href="http://michaeljaylissner.com/posts/2008/07/17/my-linux-story/" rel="alternate"></link><updated>2008-07-17T20:03:38-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-07-17:posts/2008/07/17/my-linux-story/</id><summary type="html">&lt;p&gt;I thought I would post a quick entry today about how I came to be a Linux user and enthusiast. I guess it&amp;#8217;s a combination of a couple&amp;nbsp;things.&lt;/p&gt;
+&lt;p&gt;Historically, what happened was that I was using &lt;span class="caps"&gt;XP&lt;/span&gt; and looking at thumbnails of some pictures in their file navigator. I was looking at about 300 pictures, and I didn&amp;#8217;t want to open them all up individually (this was before useful apps like Picasa came around). I just wanted to look at the thumbnails. Except those were too small, so I wanted to make them bigger. I spent about two hours searching online to try to figure out how to make such an adjustment. Eventually, I discovered a Windows &amp;#8220;Powertool&amp;#8221; that you could install. It seemed like overkill, but it did the job. What bugged me though about it was that obviously it didn&amp;#8217;t require a Powertool to adjust image size. It just required a tweak of some bit of code somewhere in the system. That was my tipping point. I decided I couldn&amp;#8217;t take the viruses, the expense and the closed product anymore, and promptly decided it was time for a new &lt;span class="caps"&gt;OS&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;So that&amp;#8217;s what brought me to Linux. What kept me here is the openness and the philosophy. Sure, at times it&amp;#8217;s a bit trickier to get certain things done, but I love the philosophy that if I want a change, I can either make it myself if I am a programmer, or I can file a feature request with the developers. Somebody will read that request, and maybe it will get integrated, if it&amp;#8217;s a good enough&amp;nbsp;idea.&lt;/p&gt;
+&lt;p&gt;I also love the fact that I can download, install and run an excellent email server, and a top-notch web server. For free. Also, no viruses. Ever. Nor any anti-virus software to pay for. And did I mention the whole thing is&amp;nbsp;free? &lt;/p&gt;
+&lt;p&gt;As for the day to day stuff, I really don&amp;#8217;t notice much difference. At work, I use &lt;span class="caps"&gt;XP&lt;/span&gt;, which involves using Firefox, Word, Excel and Outlook (the latter three of which my work paid good money for). At home it&amp;#8217;s Firefox, Open Office and Evolution, all of which are very similar to the Microsoft package, only with better compatibility with other&amp;nbsp;programs.&lt;/p&gt;
+&lt;p&gt;The other thing I really like about my Linux system is the ability to set things up like in the previous tutorial. I did an Internet search for &amp;#8220;Linux wake on &lt;span class="caps"&gt;USB&lt;/span&gt;&amp;#8221;, and knew exactly how to adjust the system in a matter of moments. That kind of customization is a power you just don&amp;#8217;t have in&amp;nbsp;Windows.&lt;/p&gt;</summary><category term="Linux"></category><category term="me"></category></entry><entry><title>Wake Your Computer by USB</title><link href="http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/" rel="alternate"></link><updated>2008-07-14T20:27:57-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-07-14:posts/2008/07/14/wake-your-computer-by-usb/</id><summary type="html">&lt;p&gt;I recently began using my laptop at my desk with a &lt;span class="caps"&gt;USB&lt;/span&gt; keyboard and mouse, 
+and I thought I would explain how to set up Ubuntu so that &lt;span class="caps"&gt;USB&lt;/span&gt; peripherals 
 will wake up your computer from sleep mode. This is convenient if you have 
-your laptop set up such that the lid is closed and inaccessible.&lt;/p&gt;
+your laptop set up such that the lid is closed and&amp;nbsp;inaccessible.&lt;/p&gt;
 &lt;p&gt;In Ubuntu, the way to set this up is to edit the file located at 
-&lt;code&gt;/proc/acpi/wakeup&lt;/code&gt;. To see the current contents of this file do this:&lt;/p&gt;
+&lt;code&gt;/proc/acpi/wakeup&lt;/code&gt;. To see the current contents of this file do&amp;nbsp;this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;% cat /proc/acpi/wakeup
 Device  S-state   Status   Sysfs node
 P0P2      S4     disabled  
@@ -240,103 +239,101 @@ SLPB      S4    *enabled
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This shows you a number of devices, most of which I don't claim to 
-understand. The ones to notice are the USB ones, which you will see are 
-disabled by default.&lt;/p&gt;
-&lt;p&gt;Once these are toggled on, your computer will wake up from sleep when USB 
-peripherals are used. To toggle one of these on, as root, run:&lt;/p&gt;
+&lt;p&gt;This shows you a number of devices, most of which I don&amp;#8217;t claim to 
+understand. The ones to notice are the &lt;span class="caps"&gt;USB&lt;/span&gt; ones, which you will see are 
+disabled by&amp;nbsp;default.&lt;/p&gt;
+&lt;p&gt;Once these are toggled on, your computer will wake up from sleep when &lt;span class="caps"&gt;USB&lt;/span&gt; 
+peripherals are used. To toggle one of these on, as root,&amp;nbsp;run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;USB0&amp;quot;&lt;/span&gt; &amp;gt; /proc/acpi/wakeup
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This will toggle USB0 from disabled to enabled. To check this, 
-run &lt;code&gt;cat /proc/acpi/wakeup&lt;/code&gt; again. You should see that it's enabled, 
-and you should be able to test this by suspending your computer.&lt;/p&gt;
-&lt;p&gt;This will set up your computer to wake up from USB...for now. To make it 
+&lt;p&gt;This will toggle &lt;span class="caps"&gt;USB0&lt;/span&gt; from disabled to enabled. To check this, 
+run &lt;code&gt;cat /proc/acpi/wakeup&lt;/code&gt; again. You should see that it&amp;#8217;s enabled, 
+and you should be able to test this by suspending your&amp;nbsp;computer.&lt;/p&gt;
+&lt;p&gt;This will set up your computer to wake up from &lt;span class="caps"&gt;USB&lt;/span&gt;&amp;#8230;for now. To make it 
 work after your computer has been restarted, you will need to write a short 
-init script named wake.sh with the following contents:&lt;/p&gt;
+init script named wake.sh with the following&amp;nbsp;contents:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;USB0&amp;quot;&lt;/span&gt; &amp;gt; /proc/acpi/wakeup
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Save this file to &lt;code&gt;/etc/init.d&lt;/code&gt;, and make it executable by running:&lt;/p&gt;
+&lt;p&gt;Save this file to &lt;code&gt;/etc/init.d&lt;/code&gt;, and make it executable by&amp;nbsp;running:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;chmod +x wake.sh
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Finally, once this file is in &lt;code&gt;/etc/init.d&lt;/code&gt;, and is executable, 
-as root run:&lt;/p&gt;
+as root&amp;nbsp;run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;update-rc.d wake.sh defaults
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;That will make init know about the file, and run it at startup. Happy 
-awakenings!&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href="http://ubuntuforums.org/showthread.php?t=711747"&gt;http://ubuntuforums.org/showthread.php?t=711747&lt;/a&gt;&lt;/p&gt;</summary><category term="ubuntu"></category><category term="Linux"></category></entry><entry><title>Install Citrix In Ubuntu Hardy Heron</title><link href="http://michaeljaylissner.com/posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/" rel="alternate"></link><updated>2008-06-02T09:44:53-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-06-02:posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/</id><summary type="html">&lt;p&gt;For a while there, I was struggling to get the Citrix client installed on 
+&lt;p&gt;That will make init know about the file, and run it at startup. Happy&amp;nbsp;awakenings!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href="http://ubuntuforums.org/showthread.php?t=711747"&gt;http://ubuntuforums.org/showthread.php?t=711747&lt;/a&gt;&lt;/p&gt;</summary><category term="ubuntu"></category><category term="Linux"></category></entry><entry><title>Install Citrix In Ubuntu Hardy Heron</title><link href="http://michaeljaylissner.com/posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/" rel="alternate"></link><updated>2008-06-02T09:44:53-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-06-02:posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/</id><summary type="html">&lt;p&gt;For a while there, I was struggling to get the Citrix client installed on 
 my computer. It was frustrating, and I put hours into debugging it, 
 and trying to get it to work. In the end, I took a circuitous route, 
 installing VirtualBox in Ubuntu, Windows in VirtualBox, Firefox in Windows,
-and finally Citrix in Firefox.&lt;/p&gt;
+and finally Citrix in&amp;nbsp;Firefox.&lt;/p&gt;
 &lt;p&gt;Last week, I took another stab at getting this done, and for some reason it
 went very smoothly. To install Citrix in Ubuntu Hardy Heron, begin by 
-&lt;a href="http://www.citrix.com/English/ss/downloads/details.asp?downloadId=3323&amp;amp;productId=186&amp;amp;c1=ost1349860#top"&gt;downloading&lt;/a&gt; the Citrix client as a .tar.gz.&lt;/p&gt;
-&lt;p&gt;Next, unpack the install file using the terminal by running: &lt;/p&gt;
+&lt;a href="http://www.citrix.com/English/ss/downloads/details.asp?downloadId=3323&amp;amp;productId=186&amp;amp;c1=ost1349860#top"&gt;downloading&lt;/a&gt; the Citrix client as a&amp;nbsp;.tar.gz.&lt;/p&gt;
+&lt;p&gt;Next, unpack the install file using the terminal by&amp;nbsp;running: &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo tar xvfz en.linuxx86.tar.gz
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Change into the Citrix directory, and run &lt;/p&gt;
+&lt;p&gt;Change into the Citrix directory, and&amp;nbsp;run &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sudo ./setupwfc
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;This will begin the install script. As it proceeds, 
-simply allow the default settings, and you should be good.&lt;/p&gt;
+simply allow the default settings, and you should be&amp;nbsp;good.&lt;/p&gt;
 &lt;p&gt;The final step is to install the root certificates. To do this, 
 attempt to start a Citrix program, and it may fail, 
 reporting an error message. In the message, it will tell you what 
 certificates it needs installed. Go to &lt;a href="https://www.geotrust.com/resources/root_certificates/index.asp"&gt;this website&lt;/a&gt;, and download the 
 certificates the error message informed you that you need by right clicking 
-their download links, and selecting "Save as..." Once those are downloaded,
-rename their extension so they are .crt files, and move them to &lt;/p&gt;
-&lt;p&gt;:::bash
- /usr/lib/ICAClient/keystore/cacerts&lt;/p&gt;
-&lt;p&gt;Restart Firefox, and you should be good.&lt;/p&gt;
-&lt;p&gt;Thanks to &lt;a href="http://skarh.wordpress.com/2008/05/20/how-to-citrix-on-ubuntu/"&gt;Skarh&lt;/a&gt; for this how to.&lt;/p&gt;</summary><category term="Linux"></category><category term="ubuntu"></category><category term="citrix"></category></entry><entry><title>Drag a Screenshot Using ImageMagick</title><link href="http://michaeljaylissner.com/posts/2008/05/17/drag-a-screenshot-using-imagemagick/" rel="alternate"></link><updated>2008-05-17T17:48:40-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-05-17:posts/2008/05/17/drag-a-screenshot-using-imagemagick/</id><summary type="html">&lt;p&gt;I learned an interesting trick while working on the Fuji water article. We all know that if you want to take a screenshot in Linux, all you usually have to do is press the "printscreen" button. That, however, takes a screenshot of the entire screen, which you then have to trim down into a useful bit of picture. &lt;/p&gt;
-&lt;p&gt;The trick I learned to make this easy is to simply type:&lt;/p&gt;
+their download links, and selecting &amp;#8220;Save as&amp;#8230;&amp;#8221; Once those are downloaded,
+rename their extension so they are .crt files, and move them&amp;nbsp;to &lt;/p&gt;
+&lt;p&gt;:::bash&amp;nbsp;/usr/lib/ICAClient/keystore/cacerts&lt;/p&gt;
+&lt;p&gt;Restart Firefox, and you should be&amp;nbsp;good.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href="http://skarh.wordpress.com/2008/05/20/how-to-citrix-on-ubuntu/"&gt;Skarh&lt;/a&gt; for this how&amp;nbsp;to.&lt;/p&gt;</summary><category term="Linux"></category><category term="ubuntu"></category><category term="citrix"></category></entry><entry><title>Drag a Screenshot Using ImageMagick</title><link href="http://michaeljaylissner.com/posts/2008/05/17/drag-a-screenshot-using-imagemagick/" rel="alternate"></link><updated>2008-05-17T17:48:40-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-05-17:posts/2008/05/17/drag-a-screenshot-using-imagemagick/</id><summary type="html">&lt;p&gt;I learned an interesting trick while working on the Fuji water article. We all know that if you want to take a screenshot in Linux, all you usually have to do is press the &amp;#8220;printscreen&amp;#8221; button. That, however, takes a screenshot of the entire screen, which you then have to trim down into a useful bit of&amp;nbsp;picture. &lt;/p&gt;
+&lt;p&gt;The trick I learned to make this easy is to simply&amp;nbsp;type:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;import screenshot.png
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;That will turn your cursor into a little crosshair, which you can drag across a section of the screen. &lt;/p&gt;
-&lt;p&gt;If you want to do that after a delay, the trick is to use the sleep command like so:&lt;/p&gt;
+&lt;p&gt;That will turn your cursor into a little crosshair, which you can drag across a section of the&amp;nbsp;screen. &lt;/p&gt;
+&lt;p&gt;If you want to do that after a delay, the trick is to use the sleep command like&amp;nbsp;so:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;sleep 10; import screenshot.png
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;I found this tip along with a lot of others on &lt;a href="http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux"&gt;this blog&lt;/a&gt;. There are some other interesting techniques there as well.&lt;/p&gt;</summary><category term="Linux"></category><category term="imageMagick"></category></entry><entry><title>Remap Caps Lock as Backspace in Windows and Linux</title><link href="http://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/" rel="alternate"></link><updated>2008-04-29T21:33:41-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-29:posts/2008/04/29/remap-caps-lock-as-backspace/</id><summary type="html">
+&lt;p&gt;I found this tip along with a lot of others on &lt;a href="http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux"&gt;this blog&lt;/a&gt;. There are some other interesting techniques there as&amp;nbsp;well.&lt;/p&gt;</summary><category term="Linux"></category><category term="imageMagick"></category></entry><entry><title>Remap Caps Lock as Backspace in Windows and Linux</title><link href="http://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/" rel="alternate"></link><updated>2008-04-29T21:33:41-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-29:posts/2008/04/29/remap-caps-lock-as-backspace/</id><summary type="html">
 &lt;p&gt;A while back my wrist started hurting from reaching for the cursed backspace
 key. I was making too many mistakes. My solution was to remap the caps 
 lock key on all the computers I use to act as an additional backspace key.
-How did I do it? Well, I'm glad you asked. I'll tell you.&lt;/p&gt;
-&lt;h2 id="in-windows"&gt;In Windows&lt;/h2&gt;
-&lt;p&gt;EDIT: I noticed that the picture doesn't have all the detail you need. The 
+How did I do it? Well, I’m glad you asked. I’ll tell you.&lt;/p&gt;
+&lt;h2 id="in-windows"&gt;In Windows&lt;/h2&gt;
+&lt;p&gt;&lt;span class="caps"&gt;EDIT&lt;/span&gt;: I noticed that the picture doesn’t have all the detail you need. The 
 easier way to do this, is to download &lt;a href="http://michaeljaylissner.com/archive/scancode.reg"&gt;this registry key&lt;/a&gt; post, 
 and to right click it, selecting merge. After that, restart the computer, and 
-you should be all set.&lt;/p&gt;
+you should be all set.&lt;/p&gt;
 &lt;p&gt;To remap the caps lock to function as a backspace key in Windows, 
 one must edit the registry keys. To do that, go to &lt;code&gt;Start &amp;gt; Run...&lt;/code&gt;, 
 and type in &lt;code&gt;regedit&lt;/code&gt;. In the editor that opens up, navigate to the key shown
 in the picture below, and create a new key named Scancode Map of the type 
 &lt;code&gt;REG_BINARY&lt;/code&gt;. Give it the value shown in the picture, restart, 
-and you're set. If things get wacky, delete the key and try again.&lt;/p&gt;
+and you’re set. If things get wacky, delete the key and try again.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/Windows Registry Remap Screenshot.jpg"/&gt;&lt;/p&gt;
-&lt;h2 id="in-linux"&gt;In Linux&lt;/h2&gt;
+&lt;h2 id="in-linux"&gt;In Linux&lt;/h2&gt;
 &lt;p&gt;I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
 by opening a terminal, and running the xev program. Once that is running, 
 press the caps lock key, and it will tell you the numerical value of that key. 
-For example, my output from that command looks like this:&lt;/p&gt;
+For example, my output from that command looks like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mlissner&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;opal2&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;xev&lt;/span&gt;
 &lt;span class="n"&gt;KeyPress&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;serial&lt;/span&gt; &lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;synthetic&lt;/span&gt; &lt;span class="n"&gt;NO&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="mh"&gt;0x4800001&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
 &lt;span class="n"&gt;root&lt;/span&gt; &lt;span class="mh"&gt;0x59&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;subw&lt;/span&gt; &lt;span class="mh"&gt;0x0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt; &lt;span class="mi"&gt;2775892&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;373&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;636&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;376&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;685&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
@@ -348,7 +345,7 @@ For example, my output from that command looks like this:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In there, you will see the keycode for the capslock key, in my case, number 
 66. Using that, create a file in your home directory called .Xmodmap, and put 
-the following in it:&lt;/p&gt;
+the following in it:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;!&lt;/span&gt;
 &lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="n"&gt;Make&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;caps&lt;/span&gt; &lt;span class="n"&gt;lock&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;backspace&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt;
 &lt;span class="o"&gt;!&lt;/span&gt;
@@ -357,24 +354,24 @@ the following in it:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Once that is done, the next time you log in, your caps lock will function as a 
 backspace. The only remaining problem is that it still does not have the 
-auto-repeat function that backspace should have. To fix that, run:&lt;/p&gt;
+auto-repeat function that backspace should have. To fix that, run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;xset&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="mi"&gt;66&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That will make things work properly, but you need to run that every time you 
-log in, or else it won't work properly. To fix that run:&lt;/p&gt;
+log in, or else it won’t work properly. To fix that run:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;gedit&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;etc&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;X11&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Xsession&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="n"&gt;x11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;common_determine&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;startup&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;And add &lt;code&gt;xset r 66&lt;/code&gt; to the bottom.&lt;/p&gt;
-&lt;p&gt;That should do it.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://ubuntuforums.org/showthread.php?t=369402"&gt;Source&lt;/a&gt;&lt;/p&gt;</summary><category term="windows"></category><category term="ubuntu"></category><category term="microsoft"></category><category term="Linux"></category></entry><entry><title>Install Garmin Topo! in Linux</title><link href="http://michaeljaylissner.com/posts/2008/02/11/install-garmin-topo-in-linux/" rel="alternate"></link><updated>2008-02-11T22:08:23-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-11:posts/2008/02/11/install-garmin-topo-in-linux/</id><summary type="html">&lt;p&gt;I'm planning a quick trip out to Yosemite for next weekend, and I wanted to print out a couple of maps from Garmin Topo! beforehand. The last time I used Topo! was about four years ago, when I had Windows XP installed. I don't remember how I installed it then, but that probably means it wasn't too challenging. &lt;/p&gt;
-&lt;p&gt;This time, however, I don't have a computer running Windows except for as a virtual client within Ubuntu, so I figured that would be the best place to begin. I booted up Windows XP, popped in the CD, mounted it within the virtual client, and tried to install. No dice: some error message. I played with it for a while, and I eventually decided that for some reason, it just wasn't going to work. &lt;/p&gt;
-&lt;p&gt;My next idea was to try installing Topo! within Ubuntu via Wine (Wine Is Not an Emulator). Wine is an application that attempts (and often fails, sometimes works) to allow Windows applications a method of working within Linux. I closed down Windows, opened the install CD within Ubuntu, and double-clicked the Setup.exe file. Amazingly, the Windows Install Shield business popped up, and the installation proceeded with no problems whatsoever.&lt;/p&gt;
-&lt;p&gt;Once that was done, the only remaining step was to make myself a nice link/alias/launcher. Once it's installed, the Topo! executable is located at ~/.wine/drive_c/TOPO!/TOPO.EXE, so it's just a matter of making a link to that, and you're all done.&lt;/p&gt;</summary><category term="Linux"></category><category term="camping"></category></entry><entry><title>Personal Music Collections</title><link href="http://michaeljaylissner.com/posts/2008/02/02/personal-music-collections/" rel="alternate"></link><updated>2008-02-02T20:02:59-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-02:posts/2008/02/02/personal-music-collections/</id><summary type="html">&lt;p&gt;I was curious which artists of mine had the most songs, so I ran:&lt;/p&gt;
+&lt;p&gt;And add &lt;code&gt;xset r 66&lt;/code&gt; to the bottom.&lt;/p&gt;
+&lt;p&gt;That should do it.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ubuntuforums.org/showthread.php?t=369402"&gt;Source&lt;/a&gt;&lt;/p&gt;</summary><category term="windows"></category><category term="ubuntu"></category><category term="microsoft"></category><category term="Linux"></category></entry><entry><title>Install Garmin Topo! in Linux</title><link href="http://michaeljaylissner.com/posts/2008/02/11/install-garmin-topo-in-linux/" rel="alternate"></link><updated>2008-02-11T22:08:23-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-11:posts/2008/02/11/install-garmin-topo-in-linux/</id><summary type="html">&lt;p&gt;I&amp;#8217;m planning a quick trip out to Yosemite for next weekend, and I wanted to print out a couple of maps from Garmin Topo! beforehand. The last time I used Topo! was about four years ago, when I had Windows &lt;span class="caps"&gt;XP&lt;/span&gt; installed. I don&amp;#8217;t remember how I installed it then, but that probably means it wasn&amp;#8217;t too&amp;nbsp;challenging. &lt;/p&gt;
+&lt;p&gt;This time, however, I don&amp;#8217;t have a computer running Windows except for as a virtual client within Ubuntu, so I figured that would be the best place to begin. I booted up Windows &lt;span class="caps"&gt;XP&lt;/span&gt;, popped in the &lt;span class="caps"&gt;CD&lt;/span&gt;, mounted it within the virtual client, and tried to install. No dice: some error message. I played with it for a while, and I eventually decided that for some reason, it just wasn&amp;#8217;t going to&amp;nbsp;work. &lt;/p&gt;
+&lt;p&gt;My next idea was to try installing Topo! within Ubuntu via Wine (Wine Is Not an Emulator). Wine is an application that attempts (and often fails, sometimes works) to allow Windows applications a method of working within Linux. I closed down Windows, opened the install &lt;span class="caps"&gt;CD&lt;/span&gt; within Ubuntu, and double-clicked the Setup.exe file. Amazingly, the Windows Install Shield business popped up, and the installation proceeded with no problems&amp;nbsp;whatsoever.&lt;/p&gt;
+&lt;p&gt;Once that was done, the only remaining step was to make myself a nice link/alias/launcher. Once it&amp;#8217;s installed, the Topo! executable is located at ~/.wine/drive_c/&lt;span class="caps"&gt;TOPO&lt;/span&gt;!/&lt;span class="caps"&gt;TOPO&lt;/span&gt;.&lt;span class="caps"&gt;EXE&lt;/span&gt;, so it&amp;#8217;s just a matter of making a link to that, and you&amp;#8217;re all&amp;nbsp;done.&lt;/p&gt;</summary><category term="Linux"></category><category term="camping"></category></entry><entry><title>Personal Music Collections</title><link href="http://michaeljaylissner.com/posts/2008/02/02/personal-music-collections/" rel="alternate"></link><updated>2008-02-02T20:02:59-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-02:posts/2008/02/02/personal-music-collections/</id><summary type="html">&lt;p&gt;I was curious which artists of mine had the most songs, so I&amp;nbsp;ran:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;du Music/ | sort -nr | head -11
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Now we know that my top ten artists are:&lt;/p&gt;
+&lt;p&gt;Now we know that my top ten artists&amp;nbsp;are:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;% du Music/ | sort -nr | head -11
 17582796        Music/
 490928  Music/Radiohead
@@ -387,49 +384,49 @@ log in, or else it won't work properly. To fix that run:&lt;/p&gt;
 276416  Music/Beck
 258544  Music/Nine Inch Nails
 248608  Music/Beatles, The
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Linux"></category><category term="music"></category></entry><entry><title>Volunteering At Last!</title><link href="http://michaeljaylissner.com/posts/2008/01/13/volunteering-at-last/" rel="alternate"></link><updated>2008-01-13T21:17:09-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-01-13:posts/2008/01/13/volunteering-at-last/</id><summary type="html">&lt;p&gt;For the last couple of years I've kinda, sorta been hunting on and off for 
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Linux"></category><category term="music"></category></entry><entry><title>Volunteering At Last!</title><link href="http://michaeljaylissner.com/posts/2008/01/13/volunteering-at-last/" rel="alternate"></link><updated>2008-01-13T21:17:09-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-01-13:posts/2008/01/13/volunteering-at-last/</id><summary type="html">&lt;p&gt;For the last couple of years I&amp;#8217;ve kinda, sorta been hunting on and off for 
 a place where I could volunteer some of my free time. I started at the 
 nearby university, thinking that I might be able to convince some kind 
 professor to teach me some things. When that failed, 
 I tried searching google for nonprofits that looked interesting. Failing 
 that, I went on a limb, and asked a professor of mine if he had any ideas 
-(he did, but they fell through). &lt;/p&gt;
+(he did, but they fell&amp;nbsp;through). &lt;/p&gt;
 &lt;p&gt;Finally, after all this time, one fell in my lap.  Last week, 
 I was looking for a place where I could donate my &lt;a href="http://michaeljaylissner.com/posts/2007/10/23/new-computer-and-give-away-pile/"&gt;old computer 
 hardware&lt;/a&gt;, and I discovered the &lt;a href="http://www.accrc.org/"&gt;Alameda County Computer Recycling 
 Center&lt;/a&gt;. It looks pretty darned cool. I will spend my time putting 
 together old computers into useful devices, and then installing Ubuntu or 
-Suse. In exchange, they will give computers (for free) to needy parties. &lt;/p&gt;
-&lt;p&gt;It's not helping the homeless, but it should be educational for me and, 
-ultimately for them. Plus, it will help to keep e-waste out of landfills.&lt;/p&gt;</summary><category term="Linux"></category><category term="computer"></category><category term="nonprofit"></category><category term="recycling"></category></entry><entry><title>LoJack for Linux Part II</title><link href="http://michaeljaylissner.com/posts/2007/09/25/lojack-on-linux-part-ii/" rel="alternate"></link><updated>2007-09-25T22:42:45-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-09-25:posts/2007/09/25/lojack-on-linux-part-ii/</id><summary type="html">&lt;p&gt;EDIT: See update in the comments&lt;/p&gt;
-&lt;p&gt;I did some &lt;a href="http://www.arsgeek.com/?p=1612"&gt;research&lt;/a&gt; after that last post, and I learned that the trick to this is to get a free account from dyndns.com, and then use the ddclient in daemon mode. That combination will allow you to track the IP of your computer no matter where it is, no script involved. &lt;/p&gt;
-&lt;p&gt;The other piece of this puzzle is somewhat more puzzling: How to access the computer after it is stolen. Ideally, this would happen via ssh, but in practice ssh almost always talks over port 22, and routers pretty much always block all ports. The only solution to this problem I can think of is to hack the thief's router once you know its IP address, but that's hardly a solution really.&lt;/p&gt;
-&lt;p&gt;The other caveat to consider is that if you need a password to log in, the ddclient won't get started in the first place because the thief won't be able to log in. So, what's the better solution: A password login, or ddclient? &lt;/p&gt;
-&lt;p&gt;Hmmm....any solutions to the ssh problem are more than welcome.&lt;/p&gt;</summary><category term="Linux"></category><category term="security"></category><category term="lojack"></category></entry><entry><title>LoJack for Linux</title><link href="http://michaeljaylissner.com/posts/2007/09/23/lojack-for-linux/" rel="alternate"></link><updated>2007-09-23T14:56:19-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-09-23:posts/2007/09/23/lojack-for-linux/</id><summary type="html">&lt;p&gt;I have been spending some time lately shopping for laptops, and I noticed an interesting product on the shelves these days: &lt;em&gt;LoJack for Laptops&lt;/em&gt;. It's an interesting concept, because I think LoJack could do a lot of cool things these days for just about anything you buy that's worth more than a couple hundred bucks. My bike, for example, would be another object I would want LoJack for if the system were cheaper. &lt;/p&gt;
-&lt;p&gt;I checked out the LoJack installation software, figuring it would inform me that I had to have a GPS chip installed in my laptop for it to work, but to my surprise, it just uses IP addresses. From what I could figure out, it works in two ways. One, it sends your IP address to a centralized server at some regular interval. Two, it allows a back door entrance into your computer so that if your computer is stolen, you can monitor the location of it more closely, bug the new owner, convince them to give it back, etc.&lt;/p&gt;
-&lt;p&gt;I got to thinking about this, and from what I can tell, there isn't anything here that a Linux laptop can't easily accomplish. The only tricky part I can think of is the back door thing, because I imagine most routers block incoming traffic on pretty much every port except 80, so ssh'ing into the computer might be tricky even once you know the correct IP to use.&lt;/p&gt;
-&lt;p&gt;As for determining the external IP, I found &lt;a href="http://linux.byexamples.com/archives/307/what-is-my-public-ip-address/"&gt;this site&lt;/a&gt;, which pretty much fits the bill. The basic idea is to go to one of the million whatsmyip.com-type websites via command line, and grep the IP out of the code. One hilarious thing I found on there was &lt;a href="http://www.moanmyip.com"&gt;moanmyip.com&lt;/a&gt;. I highly recommend a visit if you're "visually impaired".&lt;/p&gt;
-&lt;p&gt;Anyway, now that the men in the room are good and turned on, the script pretty much needs three more things: 1. A centralized server to collect the IPs, 2. That ssh back door to mess with the thief, and 3. The script itself!&lt;/p&gt;
-&lt;p&gt;Updates to come.&lt;/p&gt;</summary><category term="Linux"></category></entry><entry><title>Chronicals of installing Zimbra, OR If it looks awesome, it's probably a pain to install.</title><link href="http://michaeljaylissner.com/posts/2007/09/14/zimbra-chronicals/" rel="alternate"></link><updated>2007-09-14T00:24:56-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-09-14:posts/2007/09/14/zimbra-chronicals/</id><summary type="html">&lt;p&gt;First of all, &lt;a href="http://www.redhatxchange.com/Zimbra.html"&gt;check this out&lt;/a&gt;. Use the username 'admin' and the 
-password 'zcsadmin'. When you're done there, come back here, 
-and pick up where you left off. &lt;/p&gt;
-&lt;p&gt;It's pretty sweet right? Calendar functions, ajaxy goodness, tagging, 
+Suse. In exchange, they will give computers (for free) to needy&amp;nbsp;parties. &lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s not helping the homeless, but it should be educational for me and, 
+ultimately for them. Plus, it will help to keep e-waste out of&amp;nbsp;landfills.&lt;/p&gt;</summary><category term="Linux"></category><category term="computer"></category><category term="nonprofit"></category><category term="recycling"></category></entry><entry><title>LoJack for Linux Part II</title><link href="http://michaeljaylissner.com/posts/2007/09/25/lojack-on-linux-part-ii/" rel="alternate"></link><updated>2007-09-25T22:42:45-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-09-25:posts/2007/09/25/lojack-on-linux-part-ii/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;EDIT&lt;/span&gt;: See update in the&amp;nbsp;comments&lt;/p&gt;
+&lt;p&gt;I did some &lt;a href="http://www.arsgeek.com/?p=1612"&gt;research&lt;/a&gt; after that last post, and I learned that the trick to this is to get a free account from dyndns.com, and then use the ddclient in daemon mode. That combination will allow you to track the &lt;span class="caps"&gt;IP&lt;/span&gt; of your computer no matter where it is, no script&amp;nbsp;involved. &lt;/p&gt;
+&lt;p&gt;The other piece of this puzzle is somewhat more puzzling: How to access the computer after it is stolen. Ideally, this would happen via ssh, but in practice ssh almost always talks over port 22, and routers pretty much always block all ports. The only solution to this problem I can think of is to hack the thief&amp;#8217;s router once you know its &lt;span class="caps"&gt;IP&lt;/span&gt; address, but that&amp;#8217;s hardly a solution&amp;nbsp;really.&lt;/p&gt;
+&lt;p&gt;The other caveat to consider is that if you need a password to log in, the ddclient won&amp;#8217;t get started in the first place because the thief won&amp;#8217;t be able to log in. So, what&amp;#8217;s the better solution: A password login, or&amp;nbsp;ddclient? &lt;/p&gt;
+&lt;p&gt;Hmmm&amp;#8230;.any solutions to the ssh problem are more than&amp;nbsp;welcome.&lt;/p&gt;</summary><category term="Linux"></category><category term="security"></category><category term="lojack"></category></entry><entry><title>LoJack for Linux</title><link href="http://michaeljaylissner.com/posts/2007/09/23/lojack-for-linux/" rel="alternate"></link><updated>2007-09-23T14:56:19-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-09-23:posts/2007/09/23/lojack-for-linux/</id><summary type="html">&lt;p&gt;I have been spending some time lately shopping for laptops, and I noticed an interesting product on the shelves these days: &lt;em&gt;LoJack for Laptops&lt;/em&gt;. It&amp;#8217;s an interesting concept, because I think LoJack could do a lot of cool things these days for just about anything you buy that&amp;#8217;s worth more than a couple hundred bucks. My bike, for example, would be another object I would want LoJack for if the system were&amp;nbsp;cheaper. &lt;/p&gt;
+&lt;p&gt;I checked out the LoJack installation software, figuring it would inform me that I had to have a &lt;span class="caps"&gt;GPS&lt;/span&gt; chip installed in my laptop for it to work, but to my surprise, it just uses &lt;span class="caps"&gt;IP&lt;/span&gt; addresses. From what I could figure out, it works in two ways. One, it sends your &lt;span class="caps"&gt;IP&lt;/span&gt; address to a centralized server at some regular interval. Two, it allows a back door entrance into your computer so that if your computer is stolen, you can monitor the location of it more closely, bug the new owner, convince them to give it back,&amp;nbsp;etc.&lt;/p&gt;
+&lt;p&gt;I got to thinking about this, and from what I can tell, there isn&amp;#8217;t anything here that a Linux laptop can&amp;#8217;t easily accomplish. The only tricky part I can think of is the back door thing, because I imagine most routers block incoming traffic on pretty much every port except 80, so ssh&amp;#8217;ing into the computer might be tricky even once you know the correct &lt;span class="caps"&gt;IP&lt;/span&gt; to&amp;nbsp;use.&lt;/p&gt;
+&lt;p&gt;As for determining the external &lt;span class="caps"&gt;IP&lt;/span&gt;, I found &lt;a href="http://linux.byexamples.com/archives/307/what-is-my-public-ip-address/"&gt;this site&lt;/a&gt;, which pretty much fits the bill. The basic idea is to go to one of the million whatsmyip.com-type websites via command line, and grep the &lt;span class="caps"&gt;IP&lt;/span&gt; out of the code. One hilarious thing I found on there was &lt;a href="http://www.moanmyip.com"&gt;moanmyip.com&lt;/a&gt;. I highly recommend a visit if you&amp;#8217;re &amp;#8220;visually&amp;nbsp;impaired&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;Anyway, now that the men in the room are good and turned on, the script pretty much needs three more things: 1. A centralized server to collect the IPs, 2. That ssh back door to mess with the thief, and 3. The script&amp;nbsp;itself!&lt;/p&gt;
+&lt;p&gt;Updates to&amp;nbsp;come.&lt;/p&gt;</summary><category term="Linux"></category></entry><entry><title>Chronicals of installing Zimbra, OR If it looks awesome, it’s probably a pain to install.</title><link href="http://michaeljaylissner.com/posts/2007/09/14/zimbra-chronicals/" rel="alternate"></link><updated>2007-09-14T00:24:56-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-09-14:posts/2007/09/14/zimbra-chronicals/</id><summary type="html">&lt;p&gt;First of all, &lt;a href="http://www.redhatxchange.com/Zimbra.html"&gt;check this out&lt;/a&gt;. Use the username &amp;#8216;admin&amp;#8217; and the 
+password &amp;#8216;zcsadmin&amp;#8217;. When you&amp;#8217;re done there, come back here, 
+and pick up where you left&amp;nbsp;off. &lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s pretty sweet right? Calendar functions, ajaxy goodness, tagging, 
 searching, etc. Pretty much all you could want from a web email client, 
-right? Right. So I figured I'd download and install it. The first thing that
- worried me was that it wasn't in the repositories of Ubuntu software, 
- so it wasn't just a &lt;code&gt;sudo aptitude install zimbra&lt;/code&gt; away. So I 
+right? Right. So I figured I&amp;#8217;d download and install it. The first thing that
+ worried me was that it wasn&amp;#8217;t in the repositories of Ubuntu software, 
+ so it wasn&amp;#8217;t just a &lt;code&gt;sudo aptitude install zimbra&lt;/code&gt; away. So I 
  downloaded it to &lt;code&gt;/usr/src&lt;/code&gt;, unpacked it, found the install script 
  (&lt;code&gt;install.sh&lt;/code&gt;), and began the magic (&lt;code&gt;cd /usr/src/zsc; sudo ./install
  .sh&lt;/code&gt;)&lt;/p&gt;
-&lt;p&gt;Aside from the fact that my CPU overheated about 20 times while downloading 
+&lt;p&gt;Aside from the fact that my &lt;span class="caps"&gt;CPU&lt;/span&gt; overheated about 20 times while downloading 
 the Zimbra Suite (apparently it needed thermal grease and a heat sink 
-realignment), all went well until the install script got to resolving my MX 
+realignment), all went well until the install script got to resolving my &lt;span class="caps"&gt;MX&lt;/span&gt; 
 records, hostname, /etc/hosts file, etc. Apparently figuring these out is a 
 bloody pain in the ass (forgive the imagery, I mean it in the British sense)
-. So for the past few days I've been struggling with getting this figured 
-out, and the point of this post is, if you've been sending emails to any 
-@michaeljaylissner.com address, I'm ashamed to say, 
-they're not going through. But you probably have realized this, 
-because they're bouncing back to you. Well, now you know why.&lt;/p&gt;
-&lt;p&gt;Give me a couple more days, I'm working on it. In the mean time, 
-the &lt;a href="http://michaeljaylissner.com/contact"&gt;contact&lt;/a&gt; link does work.&lt;/p&gt;</summary><category term="Linux"></category><category term="zimbra"></category></entry></feed>
+. So for the past few days I&amp;#8217;ve been struggling with getting this figured 
+out, and the point of this post is, if you&amp;#8217;ve been sending emails to any 
+@michaeljaylissner.com address, I&amp;#8217;m ashamed to say, 
+they&amp;#8217;re not going through. But you probably have realized this, 
+because they&amp;#8217;re bouncing back to you. Well, now you know&amp;nbsp;why.&lt;/p&gt;
+&lt;p&gt;Give me a couple more days, I&amp;#8217;m working on it. In the mean time, 
+the &lt;a href="http://michaeljaylissner.com/contact"&gt;contact&lt;/a&gt; link does&amp;nbsp;work.&lt;/p&gt;</summary><category term="Linux"></category><category term="zimbra"></category></entry></feed>

@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/java" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2007-12-12T21:29:57-08:00</updated><entry><title>PCT Data Project - DONE</title><link href="http://michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/" rel="alternate"></link><updated>2007-12-12T21:29:57-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-12-12:posts/2007/12/12/pct-temperature-project-done/</id><summary type="html">&lt;p&gt;I'm happy to announce that the PCT data project is complete! &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/java" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2007-12-12T21:29:57-08:00</updated><entry><title>PCT Data Project - DONE</title><link href="http://michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/" rel="alternate"></link><updated>2007-12-12T21:29:57-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-12-12:posts/2007/12/12/pct-temperature-project-done/</id><summary type="html">&lt;p&gt;I&amp;#8217;m happy to announce that the &lt;span class="caps"&gt;PCT&lt;/span&gt; data project is&amp;nbsp;complete! &lt;/p&gt;
 &lt;p&gt;Over the past several weeks/months, I have been slaving away over my 
 computer writing this program. When used, it will generate a dynamic 
-graphing area that will load up temperature data for one to six PCT hikers. &lt;/p&gt;
+graphing area that will load up temperature data for one to six &lt;span class="caps"&gt;PCT&lt;/span&gt;&amp;nbsp;hikers. &lt;/p&gt;
 &lt;p&gt;All those that are interested in the most complicated programming 
 assignment I have ever worked on &lt;a href="http://michaeljaylissner.com/pct-temperatures"&gt;are welcome to check it out&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I am officially a free man once again! Thanks to all who made this possible
-with their encouragement and patience! &lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>The Great Temperature Data Project</title><link href="http://michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/" rel="alternate"></link><updated>2007-11-01T20:40:55-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-11-01:posts/2007/11/01/great-temperature-data-project/</id><summary type="html">&lt;p&gt;Back in '05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
+with their encouragement and&amp;nbsp;patience! &lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>The Great Temperature Data Project</title><link href="http://michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/" rel="alternate"></link><updated>2007-11-01T20:40:55-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-11-01:posts/2007/11/01/great-temperature-data-project/</id><summary type="html">&lt;p&gt;Back in &amp;#8216;05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
 carried a little device called an &lt;a href="http://www.iButton.com"&gt;iButton&lt;/a&gt;. 
 This little device contains essentially three things: a clock, a bit of memory 
-and a thermometer. It's waterproof, accurate to 0.1 degree Celsius, and is about 
+and a thermometer. It&amp;#8217;s waterproof, accurate to 0.1 degree Celsius, and is about 
 the size of five dimes stacked one upon another. There are a bunch of silly 
 things you can do with these, but what I chose to do with mine was to have it 
 record the temperature every hour on the hour for the entire time I was hiking, 
 with the idea being to get some good data about the temperature out there on 
-the PCT.&lt;/p&gt;
+the &lt;span class="caps"&gt;PCT&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;All in all, you can figure that the temperature was recorded 24 times a day 
 for about 150 days, for an astounding 3600 data points, and about 150 
-oscillations from the daytime high to the nighttime low. I've spent some time 
-working with the data, and it's pretty much impossible to make much use of....unless 
+oscillations from the daytime high to the nighttime low. I&amp;#8217;ve spent some time 
+working with the data, and it&amp;#8217;s pretty much impossible to make much use of&amp;#8230;.unless 
 you write a program to interpret it. You can 
 &lt;a href="http://charityhikers.org/pct/temps.htm"&gt;see it for 
-yourself&lt;/a&gt; if you're interested.&lt;/p&gt;
+yourself&lt;/a&gt; if you&amp;#8217;re&amp;nbsp;interested.&lt;/p&gt;
 &lt;p&gt;Well, as fate should have it, I am currently enrolled in a Java programming 
 class, and I have the option of doing a final project of my own choosing. 
 Having not put this data to good use has been a burden on my soul for a 
-couple of years now, and I've decided to make my final project an applet that 
+couple of years now, and I&amp;#8217;ve decided to make my final project an applet that 
 will allow a user to plot this data on a graph for any date range and any time 
-range that they choose (e.g. 5pm to 10pm for September 20th to 23rd).  &lt;/p&gt;
-&lt;p&gt;Once this is done, I will attempt to post it here, but here's the question to 
+range that they choose (e.g. 5pm to 10pm for September 20th to&amp;nbsp;23rd).  &lt;/p&gt;
+&lt;p&gt;Once this is done, I will attempt to post it here, but here&amp;#8217;s the question to 
 you dear reader, do you have any suggestions as to features that you would be 
-interested in seeing in an applet of this sort? Thoughts?&lt;/p&gt;
-&lt;p&gt;I'm quite excited about getting this info out there. Finally.&lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry></feed>
+interested in seeing in an applet of this sort?&amp;nbsp;Thoughts?&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m quite excited about getting this info out there.&amp;nbsp;Finally.&lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry></feed>

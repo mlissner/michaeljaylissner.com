@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/project" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-05-07T20:42:13-07:00</updated><entry><title>Final Project from Interface Aesthetics Class</title><link href="http://michaeljaylissner.com/posts/2009/05/07/final-project-from-interface-aesthetics/" rel="alternate"></link><updated>2009-05-07T20:42:13-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-05-07:posts/2009/05/07/final-project-from-interface-aesthetics/</id><summary type="html">&lt;p&gt;I had my last day of actual class today, and the semester is really 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/project" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-05-07T20:42:13-07:00</updated><entry><title>Final Project from Interface Aesthetics Class</title><link href="http://michaeljaylissner.com/posts/2009/05/07/final-project-from-interface-aesthetics/" rel="alternate"></link><updated>2009-05-07T20:42:13-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-05-07:posts/2009/05/07/final-project-from-interface-aesthetics/</id><summary type="html">&lt;p&gt;I had my last day of actual class today, and the semester is really 
 beginning to wind down. I still have at least 60 pages of writing to do in 
 the next two weeks, but somehow it will get done. One class that I 
 &lt;em&gt;have&lt;/em&gt; finished my final project work for is &lt;a href="http://courses.ischool.berkeley.edu/i290-20/s09/"&gt;Interface 
 Aesthetics&lt;/a&gt;, which was a survey class covering typography, color, 
-layout, web design, and a handful of other topics. &lt;/p&gt;
+layout, web design, and a handful of other&amp;nbsp;topics. &lt;/p&gt;
 &lt;p&gt;For the final project, we each made &lt;a href="http://michaeljaylissner.com/archive/interface-aesthetics.ppt"&gt;presentations of our work from the 
 semester&lt;/a&gt;, and on Monday from 4:10 to 6pm we will be 
 holding an &lt;a href="http://www.ischool.berkeley.edu/newsandevents/events/20090511exhibition"&gt;open house&lt;/a&gt; to share our work at the iSchool. A lot of it
  is really quite good, though this presentation is what I will be showing, 
- so this is one cat that's out of the bag.&lt;/p&gt;
+ so this is one cat that&amp;#8217;s out of the&amp;nbsp;bag.&lt;/p&gt;
 &lt;p&gt;Some of the work in the attached could still use some refinement, 
-but I will point you towards the ones titled "Type I," "Type II," 
-and "Icons," which I think came out pretty well.&lt;/p&gt;</summary><category term="project"></category><category term="interface aesthetics"></category></entry><entry><title>Location Based DNS Switching For Internet vs. Intranet</title><link href="http://michaeljaylissner.com/posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/" rel="alternate"></link><updated>2009-02-19T20:45:10-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-02-19:posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/</id><summary type="html">&lt;p&gt;I realized over the weekend that since I run my own mail server out of my 
+but I will point you towards the ones titled &amp;#8220;Type I,&amp;#8221; &amp;#8220;Type &lt;span class="caps"&gt;II&lt;/span&gt;,&amp;#8221; 
+and &amp;#8220;Icons,&amp;#8221; which I think came out pretty&amp;nbsp;well.&lt;/p&gt;</summary><category term="project"></category><category term="interface aesthetics"></category></entry><entry><title>Location Based DNS Switching For Internet vs. Intranet</title><link href="http://michaeljaylissner.com/posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/" rel="alternate"></link><updated>2009-02-19T20:45:10-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-02-19:posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/</id><summary type="html">&lt;p&gt;I realized over the weekend that since I run my own mail server out of my 
 home, I can configure my computer to download my mail over the intranet 
 whenever I am on my home network. By doing this, I can drastically reduce my
 mail download times because it cuts the Internet out of the equation. Rather
-than using DNS + the Internet to get my mail, I can download it directly 
-from internal IP address of the server. &lt;/p&gt;
+than using &lt;span class="caps"&gt;DNS&lt;/span&gt; + the Internet to get my mail, I can download it directly 
+from internal &lt;span class="caps"&gt;IP&lt;/span&gt; address of the&amp;nbsp;server. &lt;/p&gt;
 &lt;p&gt;To understand how to set this up, you have to understand that whenever you 
-use a domain name (like michaeljaylissner.com), your computer does an IP 
-lookup. First, it looks in /etc/hosts to see if it knows the IP of the 
-domain locally. If it does, it will use the IP listed there. If it does 
-not, it will ask your Internet provider what IP to use, 
+use a domain name (like michaeljaylissner.com), your computer does an &lt;span class="caps"&gt;IP&lt;/span&gt; 
+lookup. First, it looks in /etc/hosts to see if it knows the &lt;span class="caps"&gt;IP&lt;/span&gt; of the 
+domain locally. If it does, it will use the &lt;span class="caps"&gt;IP&lt;/span&gt; listed there. If it does 
+not, it will ask your Internet provider what &lt;span class="caps"&gt;IP&lt;/span&gt; to use, 
 and will use that. Thus, what we want to do is set up the computer so that 
-when we are at home, /etc/hosts provides the internal IP of our server, 
-and so when we are not at home, it does not.&lt;/p&gt;
+when we are at home, /etc/hosts provides the internal &lt;span class="caps"&gt;IP&lt;/span&gt; of our server, 
+and so when we are not at home, it does&amp;nbsp;not.&lt;/p&gt;
 &lt;p&gt;When I am at home, I am always on a wireless network called, 
 &lt;code&gt;pizzapuppysantaclaus&lt;/code&gt;. Thus, by checking what wireless network I am 
 connected to, I can check if I am at home, and make whatever changes are 
 necessary. Conveniently, whenever you change network connections, 
 you run all of the scripts located in &lt;code&gt;/etc/network/if-up.d/&lt;/code&gt;. Thus, 
 we will put a small script in there that checks what wireless network we are
- on, and then changes our /etc/hosts file if necessary.&lt;/p&gt;
+ on, and then changes our /etc/hosts file if&amp;nbsp;necessary.&lt;/p&gt;
 &lt;p&gt;To set up this configuration, I made three files. The first is the script 
 mentioned above, which needs to be owned by root, 
 and placed in &lt;code&gt;/etc/network/if-up.d&lt;/code&gt;. You can name it whatever you want, 
 and by changing &lt;code&gt;pizzapuppysantaclaus&lt;/code&gt; to the name of your network, 
-you can fit it to your needs. Here's the contents of the script:&lt;/p&gt;
+you can fit it to your needs. Here&amp;#8217;s the contents of the&amp;nbsp;script:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#First, we check if we are connected to pizzapuppysantaclaus&lt;/span&gt;
 
 &lt;span class="c"&gt;#If grep has a hit, we&amp;#39;re connected, and $? will equal 0, if not, $? will equal 1&lt;/span&gt;
@@ -58,7 +58,7 @@ iwconfig 2&amp;gt; /dev/null | grep pizzapuppysantaclaus &amp;gt; /dev/null
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;This script simply performs a check of our wireless ID. If it's 
+&lt;p&gt;This script simply performs a check of our wireless &lt;span class="caps"&gt;ID&lt;/span&gt;. If it&amp;#8217;s 
 &lt;code&gt;pizzapuppysantaclaus&lt;/code&gt;, it switches &lt;code&gt;/etc/hostsIntranet&lt;/code&gt; for &lt;code&gt;/etc/hosts&lt;/code&gt;. If 
 not, it switches &lt;code&gt;/etc/hostsInternet&lt;/code&gt; for &lt;code&gt;/etc/hosts&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The contents of &lt;code&gt;/etc/hostsIntranet&lt;/code&gt; are:&lt;/p&gt;
@@ -83,104 +83,104 @@ and set its owner to root with execute permission. Create a file called
 &lt;code&gt;/etc/hostsIntranet&lt;/code&gt;, that contains your intranet configuration, 
 as shown above. Make a copy of your normal &lt;code&gt;/etc/hosts&lt;/code&gt; file called 
 &lt;code&gt;/etc/hostsInternet&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;Once all that's done, you should be all set. Any questions, 
-please feel free to comment!&lt;/p&gt;</summary><category term="script"></category><category term="project"></category><category term="/etc/hosts"></category><category term="networking"></category><category term="DNS"></category></entry><entry><title>Working with matplotlib and pycairo</title><link href="http://michaeljaylissner.com/posts/2009/01/19/working-with-matplotlib-and-pycairo/" rel="alternate"></link><updated>2009-01-19T16:25:32-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2009-01-19:posts/2009/01/19/working-with-matplotlib-and-pycairo/</id><summary type="html">&lt;p&gt;I spent a good part of my winter break working on learning &lt;a href="http://python.org"&gt;Python&lt;/a&gt; and 
+&lt;p&gt;Once all that&amp;#8217;s done, you should be all set. Any questions, 
+please feel free to&amp;nbsp;comment!&lt;/p&gt;</summary><category term="script"></category><category term="project"></category><category term="/etc/hosts"></category><category term="networking"></category><category term="DNS"></category></entry><entry><title>Working with matplotlib and pycairo</title><link href="http://michaeljaylissner.com/posts/2009/01/19/working-with-matplotlib-and-pycairo/" rel="alternate"></link><updated>2009-01-19T16:25:32-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-01-19:posts/2009/01/19/working-with-matplotlib-and-pycairo/</id><summary type="html">&lt;p&gt;I spent a good part of my winter break working on learning &lt;a href="http://python.org"&gt;Python&lt;/a&gt; and 
 using it for projects. One project was the &lt;a href="http://michaeljaylissner.com/posts/2008/12/21/yelp-scraper/"&gt;Yelp scraper&lt;/a&gt; that I posted 
-about previously, and another was a report for my old work. &lt;/p&gt;
+about previously, and another was a report for my old&amp;nbsp;work. &lt;/p&gt;
 &lt;p&gt;The report is a statistical analysis of the development of about 2,000 children 
-aged three and four. For those interested, I'll try to post it here once 
+aged three and four. For those interested, I&amp;#8217;ll try to post it here once 
 the final version is ready to go. In the past when making the report, 
 I had been frustrated because there was no easy way to script the creation 
 of the 30 or so charts that need to be made. Excel had been our data 
-analysis tool, and as such, we were stuck with either using VBA to create 
-charts, or to do it by hand. Since nobody knew VBA, we always just buckled 
-down and did the work by hand.&lt;/p&gt;
+analysis tool, and as such, we were stuck with either using &lt;span class="caps"&gt;VBA&lt;/span&gt; to create 
+charts, or to do it by hand. Since nobody knew &lt;span class="caps"&gt;VBA&lt;/span&gt;, we always just buckled 
+down and did the work by&amp;nbsp;hand.&lt;/p&gt;
 &lt;p&gt;This time around, I discovered the &lt;a href="http://matplotlib.sourceforge.net/"&gt;&lt;code&gt;matplotlib&lt;/code&gt; Python library&lt;/a&gt;, 
 and used that to create the charts. It was an pretty rough experience all 
 in all. While simple graphs can be created in about five lines of code, 
 creating complicated ones took a good amount of work. For example, 
 to change the tick markers on a graph requires that you create tick 
 objects, and then manipulate them each individually in a for loop. Granted,
-I couldn't customize them at all in Excel, but figuring out that kind of 
-change was a pain indeed. &lt;/p&gt;
+I couldn&amp;#8217;t customize them at all in Excel, but figuring out that kind of 
+change was a pain&amp;nbsp;indeed. &lt;/p&gt;
 &lt;p&gt;The report itself required about 1,000 lines of code, 
 and each chart required about 100-200 lines. For custom charts, 
-I didn't find the library that useful, however towards the end of the 
+I didn&amp;#8217;t find the library that useful, however towards the end of the 
 report there are 30 charts, all of which are identical, 
 except for the data. For these charts, I was able to make a for loop that 
 created them all in about 20 minutes, whereas previously these took me a 
-few hours to make by hand. &lt;/p&gt;
+few hours to make by&amp;nbsp;hand. &lt;/p&gt;
 &lt;p&gt;Another library I spent some time learning was &lt;a href="http://www.cairographics.org/pycairo/"&gt;&lt;code&gt;pycairo&lt;/code&gt;&lt;/a&gt;, 
 which allows pixel by pixel editing of pictures. I had planned to use it to
 do any editing to the charts that I was unable to accomplish with the 
 &lt;code&gt;matplotlib&lt;/code&gt; library, but in the end, it was unnecessary. I have another 
 project coming up though that will use the &lt;code&gt;pycairo&lt;/code&gt; library, 
-so look for that soon.&lt;/p&gt;</summary><category term="Python"></category><category term="programming"></category><category term="matplotlib"></category><category term="pycairo"></category><category term="project"></category></entry><entry><title>Rsnapshot Backup Solution OR Why Backing Up Is Hard To Do</title><link href="http://michaeljaylissner.com/posts/2008/12/09/rsnapshot-backup-solution-or-why-backing-up-is-hard-to-do/" rel="alternate"></link><updated>2008-12-09T22:06:48-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-12-09:posts/2008/12/09/rsnapshot-backup-solution-or-why-backing-up-is-hard-to-do/</id><summary type="html">&lt;p&gt;I've been working on getting this post figured out for about five months. In this post, I am going to try to explain exactly how my backup works, and why. It's ridiculously complicated at times, but the detail is necessary on paper in some form or other.&lt;/p&gt;
-&lt;p&gt;For my backup system, I rely heavily on &lt;a href="http://rsnapshot.org"&gt;rsnapshot&lt;/a&gt;, which is a tool that uses rsync and some perl scripting to create snapshots of directories. Rsync is a pretty awesome tool. It functions like a simple copy/paste, except that it will check the destination directory of the paste and will only copy the necessary rsnapshot. As such, it can be interrupted in the middle of a copy, and will be able to continue later where it left off. Perl is a scripting language that has been used with rsync to give it some extra power.&lt;/p&gt;
-&lt;p&gt;This power is the ability to perform incremental backups, which is to say that if I have 5GB of data that I backup 10 days in a row, it will only take up about 5GB of data, total. However, if I have 5GB of data today, an additional 5GB tomorrow, and another 5GB the day after, which I backup each day for ten days, it will only require a total of 5GB of space the first day, 10GB the second day, 15GB the third day, and no more space after that for the remaining 7 days.&lt;/p&gt;
-&lt;p&gt;This is important if you want to backup your data on a regular basis. Since I run a server, I have several things that I must backup. I back these up on a daily, weekly, and monthly basis. The list includes:&lt;/p&gt;
+so look for that&amp;nbsp;soon.&lt;/p&gt;</summary><category term="Python"></category><category term="programming"></category><category term="matplotlib"></category><category term="pycairo"></category><category term="project"></category></entry><entry><title>Rsnapshot Backup Solution OR Why Backing Up Is Hard To Do</title><link href="http://michaeljaylissner.com/posts/2008/12/09/rsnapshot-backup-solution-or-why-backing-up-is-hard-to-do/" rel="alternate"></link><updated>2008-12-09T22:06:48-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-12-09:posts/2008/12/09/rsnapshot-backup-solution-or-why-backing-up-is-hard-to-do/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve been working on getting this post figured out for about five months. In this post, I am going to try to explain exactly how my backup works, and why. It&amp;#8217;s ridiculously complicated at times, but the detail is necessary on paper in some form or&amp;nbsp;other.&lt;/p&gt;
+&lt;p&gt;For my backup system, I rely heavily on &lt;a href="http://rsnapshot.org"&gt;rsnapshot&lt;/a&gt;, which is a tool that uses rsync and some perl scripting to create snapshots of directories. Rsync is a pretty awesome tool. It functions like a simple copy/paste, except that it will check the destination directory of the paste and will only copy the necessary rsnapshot. As such, it can be interrupted in the middle of a copy, and will be able to continue later where it left off. Perl is a scripting language that has been used with rsync to give it some extra&amp;nbsp;power.&lt;/p&gt;
+&lt;p&gt;This power is the ability to perform incremental backups, which is to say that if I have &lt;span class="caps"&gt;5GB&lt;/span&gt; of data that I backup 10 days in a row, it will only take up about &lt;span class="caps"&gt;5GB&lt;/span&gt; of data, total. However, if I have &lt;span class="caps"&gt;5GB&lt;/span&gt; of data today, an additional &lt;span class="caps"&gt;5GB&lt;/span&gt; tomorrow, and another &lt;span class="caps"&gt;5GB&lt;/span&gt; the day after, which I backup each day for ten days, it will only require a total of &lt;span class="caps"&gt;5GB&lt;/span&gt; of space the first day, &lt;span class="caps"&gt;10GB&lt;/span&gt; the second day, &lt;span class="caps"&gt;15GB&lt;/span&gt; the third day, and no more space after that for the remaining 7&amp;nbsp;days.&lt;/p&gt;
+&lt;p&gt;This is important if you want to backup your data on a regular basis. Since I run a server, I have several things that I must backup. I back these up on a daily, weekly, and monthly basis. The list&amp;nbsp;includes:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;My laptop is backed up wirelessly to the server's hard drive&lt;/li&gt;
-&lt;li&gt;The email server gets copied to an external USB drive (this includes all the Zimbra configuration rsnapshot as well as thousands of emails)&lt;/li&gt;
-&lt;li&gt;The web server gets backed up to the USB drive (this includes the Drupal installation and the MySQL database)&lt;/li&gt;
-&lt;li&gt;Lots of configuration rsnapshot for the servers go to the USB drive (i.e. the /etc/ directory)&lt;/li&gt;
-&lt;li&gt;And finally, the backup configuration itself goes to the USB drive&lt;/li&gt;
+&lt;li&gt;My laptop is backed up wirelessly to the server&amp;#8217;s hard&amp;nbsp;drive&lt;/li&gt;
+&lt;li&gt;The email server gets copied to an external &lt;span class="caps"&gt;USB&lt;/span&gt; drive (this includes all the Zimbra configuration rsnapshot as well as thousands of&amp;nbsp;emails)&lt;/li&gt;
+&lt;li&gt;The web server gets backed up to the &lt;span class="caps"&gt;USB&lt;/span&gt; drive (this includes the Drupal installation and the MySQL&amp;nbsp;database)&lt;/li&gt;
+&lt;li&gt;Lots of configuration rsnapshot for the servers go to the &lt;span class="caps"&gt;USB&lt;/span&gt; drive (i.e. the /etc/&amp;nbsp;directory)&lt;/li&gt;
+&lt;li&gt;And finally, the backup configuration itself goes to the &lt;span class="caps"&gt;USB&lt;/span&gt;&amp;nbsp;drive&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Each of these backups presents some challenging difficulties. For the web server, it is challenging because it is backing up MySQL, Zimbra and Drupal. In order to do this, I have to coordinate the MySQL database dump so that when the Drupal backup is triggered, it will copy the MySQL information over to the USB drive along with the normal Drupal information. For Zimbra, the email server has to be stopped, backed up, and then started again, which means control of the email server has to be carefully scripted.&lt;/p&gt;
-&lt;p&gt;The laptop presents a challenge because it is the only thing that is backed up wirelessly, and in order to do so, the server must authenticate itself to the laptop before it is allowed to log in and make the copies. If that wasn't complicated enough, in addition, the laptop needs to be set up with a static IP address so that the server can find it to perform the backup. Finally, the laptop needs to be ON, and connected to the network when the server attempts the backup. &lt;/p&gt;
-&lt;p&gt;Once all of that is figured out logically, you have to authenticate the laptop to the server, create the scripts, backup configurations and cron rsnapshot. I have attached some of these configuration rsnapshot to this post, provided they don't reveal too much of my network topology.&lt;/p&gt;
-&lt;p&gt;One final challenge that had to be overcome was connecting the USB drive to the server in such a way that it would always be mounted in the same location. In addition, I learned that FAT32 doesn't support file system links, and so I had to format the USB drive as ext3.&lt;/p&gt;
-&lt;p&gt;As of today, it's about five months since I began this project, and I believe I can say that the backup happens flawlessly on a daily, weekly and monthly basis. There are a few things I'd like to change however:&lt;/p&gt;
+&lt;p&gt;Each of these backups presents some challenging difficulties. For the web server, it is challenging because it is backing up MySQL, Zimbra and Drupal. In order to do this, I have to coordinate the MySQL database dump so that when the Drupal backup is triggered, it will copy the MySQL information over to the &lt;span class="caps"&gt;USB&lt;/span&gt; drive along with the normal Drupal information. For Zimbra, the email server has to be stopped, backed up, and then started again, which means control of the email server has to be carefully&amp;nbsp;scripted.&lt;/p&gt;
+&lt;p&gt;The laptop presents a challenge because it is the only thing that is backed up wirelessly, and in order to do so, the server must authenticate itself to the laptop before it is allowed to log in and make the copies. If that wasn&amp;#8217;t complicated enough, in addition, the laptop needs to be set up with a static &lt;span class="caps"&gt;IP&lt;/span&gt; address so that the server can find it to perform the backup. Finally, the laptop needs to be &lt;span class="caps"&gt;ON&lt;/span&gt;, and connected to the network when the server attempts the&amp;nbsp;backup. &lt;/p&gt;
+&lt;p&gt;Once all of that is figured out logically, you have to authenticate the laptop to the server, create the scripts, backup configurations and cron rsnapshot. I have attached some of these configuration rsnapshot to this post, provided they don&amp;#8217;t reveal too much of my network&amp;nbsp;topology.&lt;/p&gt;
+&lt;p&gt;One final challenge that had to be overcome was connecting the &lt;span class="caps"&gt;USB&lt;/span&gt; drive to the server in such a way that it would always be mounted in the same location. In addition, I learned that &lt;span class="caps"&gt;FAT32&lt;/span&gt; doesn&amp;#8217;t support file system links, and so I had to format the &lt;span class="caps"&gt;USB&lt;/span&gt; drive as&amp;nbsp;ext3.&lt;/p&gt;
+&lt;p&gt;As of today, it&amp;#8217;s about five months since I began this project, and I believe I can say that the backup happens flawlessly on a daily, weekly and monthly basis. There are a few things I&amp;#8217;d like to change&amp;nbsp;however:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;del&gt;I'd like to get an email notification when a backup fails&lt;/del&gt; &amp;mdash; Done - See comment below.&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;I'd like to begin backing up /etc/ on my laptop&lt;/del&gt; &amp;mdash; Done&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;At one point, I was backing up a list of all the installed software on my system - it'd be nice to have that again&lt;/del&gt; &amp;mdash; Done - I wrote a python script to do so&lt;/li&gt;
-&lt;li&gt;&lt;del&gt;The backup is unencrypted, so anybody can take the USB drive and have a heck of a lot of emails. Gotta fix that.&lt;/del&gt; &amp;mdash; See the note below in the comments for details.&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;I&amp;#8217;d like to get an email notification when a backup fails&lt;/del&gt; &amp;mdash; Done - See comment&amp;nbsp;below.&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;I&amp;#8217;d like to begin backing up /etc/ on my laptop&lt;/del&gt; &amp;mdash;&amp;nbsp;Done&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;At one point, I was backing up a list of all the installed software on my system - it&amp;#8217;d be nice to have that again&lt;/del&gt; &amp;mdash; Done - I wrote a python script to do&amp;nbsp;so&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;The backup is unencrypted, so anybody can take the &lt;span class="caps"&gt;USB&lt;/span&gt; drive and have a heck of a lot of emails. Gotta fix that.&lt;/del&gt; &amp;mdash; See the note below in the comments for&amp;nbsp;details.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Files of Interest&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Files of&amp;nbsp;Interest&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="http://michaeljaylissner.com/archive/rsnapshot/rsnapshotOpal.conf"&gt;rsnapshot configuration for my laptop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://michaeljaylissner.com/archive/rsnapshot/rsnapshotDrupal.conf"&gt;rsnapshot configuration for the Drupal server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://michaeljaylissner.com/archive/rsnapshot/rsnapshotOpal.conf"&gt;rsnapshot configuration for my&amp;nbsp;laptop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://michaeljaylissner.com/archive/rsnapshot/rsnapshotDrupal.conf"&gt;rsnapshot configuration for the Drupal&amp;nbsp;server&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://michaeljaylissner.com/archive/rsnapshot/rsnapshotEtcHome.conf"&gt;rsnapshot configuration for the backup configuration rsnapshot and the 
 &lt;code&gt;/etc&lt;/code&gt; directory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://michaeljaylissner.com/archive/rsnapshot/rsnapshotZimbra.conf"&gt;rsnapshot configuration for the Zimbra server&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Scripts to &lt;a href="http://michaeljaylissner.com/archive/rsnapshot/ZimbraStop"&gt;stop&lt;/a&gt; and &lt;a href="http://michaeljaylissner.com/archive/rsnapshot/ZimbraStart"&gt;start&lt;/a&gt; Zimbra&lt;/li&gt;
-&lt;li&gt;My &lt;a href="http://michaeljaylissner.com/archive/rsnapshot/cronlist.txt"&gt;cron file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://michaeljaylissner.com/archive/rsnapshot/rsnapshotZimbra.conf"&gt;rsnapshot configuration for the Zimbra&amp;nbsp;server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Scripts to &lt;a href="http://michaeljaylissner.com/archive/rsnapshot/ZimbraStop"&gt;stop&lt;/a&gt; and &lt;a href="http://michaeljaylissner.com/archive/rsnapshot/ZimbraStart"&gt;start&lt;/a&gt;&amp;nbsp;Zimbra&lt;/li&gt;
+&lt;li&gt;My &lt;a href="http://michaeljaylissner.com/archive/rsnapshot/cronlist.txt"&gt;cron&amp;nbsp;file&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;All in all, this just goes to show that backing up is a very difficult thing to do properly and automatically. It's one thing if you have a desktop that backs up to a USB drive. It's another if you have a server and a laptop. Had I known how long this would take going into it, I'm not sure I would have figured it all out. How the average computer user is supposed to figure this out is beyond me.&lt;/p&gt;</summary><category term="rsnapshot"></category><category term="archive"></category><category term="backup"></category><category term="project"></category></entry><entry><title>GIS Training</title><link href="http://michaeljaylissner.com/posts/2008/02/01/gis-training/" rel="alternate"></link><updated>2008-02-01T18:02:58-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-01:posts/2008/02/01/gis-training/</id><summary type="html">&lt;p&gt;My work sent me on a Geographic Information System (GIS) training today, and I must say it was a very educational experience. I was unfamiliar with GIS before the training, and after today, look what I can do:&lt;/p&gt;
+&lt;p&gt;All in all, this just goes to show that backing up is a very difficult thing to do properly and automatically. It&amp;#8217;s one thing if you have a desktop that backs up to a &lt;span class="caps"&gt;USB&lt;/span&gt; drive. It&amp;#8217;s another if you have a server and a laptop. Had I known how long this would take going into it, I&amp;#8217;m not sure I would have figured it all out. How the average computer user is supposed to figure this out is beyond&amp;nbsp;me.&lt;/p&gt;</summary><category term="rsnapshot"></category><category term="archive"></category><category term="backup"></category><category term="project"></category></entry><entry><title>GIS Training</title><link href="http://michaeljaylissner.com/posts/2008/02/01/gis-training/" rel="alternate"></link><updated>2008-02-01T18:02:58-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-01:posts/2008/02/01/gis-training/</id><summary type="html">&lt;p&gt;My work sent me on a Geographic Information System (&lt;span class="caps"&gt;GIS&lt;/span&gt;) training today, and I must say it was a very educational experience. I was unfamiliar with &lt;span class="caps"&gt;GIS&lt;/span&gt; before the training, and after today, look what I can&amp;nbsp;do:&lt;/p&gt;
 &lt;p&gt;&lt;img alt="No Alt" src="http://michaeljaylissner.com/images/gis-example2.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;The basic idea is to be able to take census tracts of land, combine them with population studies, and then to plot the information geographically (as above). The software of choice for places that need closed-source software (such as my work) seems to be ArcGIS, but there are several other open source versions that are free. The two that I've found so far are Grass and QuantumGIS (aka qgis). &lt;/p&gt;
-&lt;p&gt;From what I can tell, Grass is the original, old-skool GIS developed by the military, and Quantum is the up and coming GIS that wants to supplant it. I'll try to come back once I've tried them both, and let people know what I learn. In the mean time, I must say it's exciting to be able to make graphs like these. &lt;/p&gt;
-&lt;p&gt;Any requests for studies? I'm amped to test these out...&lt;/p&gt;</summary><category term="gis"></category><category term="project"></category></entry><entry><title>PCT Data Project - DONE</title><link href="http://michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/" rel="alternate"></link><updated>2007-12-12T21:29:57-08:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-12-12:posts/2007/12/12/pct-temperature-project-done/</id><summary type="html">&lt;p&gt;I'm happy to announce that the PCT data project is complete! &lt;/p&gt;
+&lt;p&gt;The basic idea is to be able to take census tracts of land, combine them with population studies, and then to plot the information geographically (as above). The software of choice for places that need closed-source software (such as my work) seems to be ArcGIS, but there are several other open source versions that are free. The two that I&amp;#8217;ve found so far are Grass and QuantumGIS (aka&amp;nbsp;qgis). &lt;/p&gt;
+&lt;p&gt;From what I can tell, Grass is the original, old-skool &lt;span class="caps"&gt;GIS&lt;/span&gt; developed by the military, and Quantum is the up and coming &lt;span class="caps"&gt;GIS&lt;/span&gt; that wants to supplant it. I&amp;#8217;ll try to come back once I&amp;#8217;ve tried them both, and let people know what I learn. In the mean time, I must say it&amp;#8217;s exciting to be able to make graphs like&amp;nbsp;these. &lt;/p&gt;
+&lt;p&gt;Any requests for studies? I&amp;#8217;m amped to test these&amp;nbsp;out&amp;#8230;&lt;/p&gt;</summary><category term="gis"></category><category term="project"></category></entry><entry><title>PCT Data Project - DONE</title><link href="http://michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/" rel="alternate"></link><updated>2007-12-12T21:29:57-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-12-12:posts/2007/12/12/pct-temperature-project-done/</id><summary type="html">&lt;p&gt;I&amp;#8217;m happy to announce that the &lt;span class="caps"&gt;PCT&lt;/span&gt; data project is&amp;nbsp;complete! &lt;/p&gt;
 &lt;p&gt;Over the past several weeks/months, I have been slaving away over my 
 computer writing this program. When used, it will generate a dynamic 
-graphing area that will load up temperature data for one to six PCT hikers. &lt;/p&gt;
+graphing area that will load up temperature data for one to six &lt;span class="caps"&gt;PCT&lt;/span&gt;&amp;nbsp;hikers. &lt;/p&gt;
 &lt;p&gt;All those that are interested in the most complicated programming 
 assignment I have ever worked on &lt;a href="http://michaeljaylissner.com/pct-temperatures"&gt;are welcome to check it out&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I am officially a free man once again! Thanks to all who made this possible
-with their encouragement and patience! &lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>The Great Temperature Data Project</title><link href="http://michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/" rel="alternate"></link><updated>2007-11-01T20:40:55-07:00</updated><author><name>Michael Lissner</name></author><id>tag:michaeljaylissner.com,2007-11-01:posts/2007/11/01/great-temperature-data-project/</id><summary type="html">&lt;p&gt;Back in '05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
+with their encouragement and&amp;nbsp;patience! &lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>The Great Temperature Data Project</title><link href="http://michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/" rel="alternate"></link><updated>2007-11-01T20:40:55-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-11-01:posts/2007/11/01/great-temperature-data-project/</id><summary type="html">&lt;p&gt;Back in &amp;#8216;05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
 carried a little device called an &lt;a href="http://www.iButton.com"&gt;iButton&lt;/a&gt;. 
 This little device contains essentially three things: a clock, a bit of memory 
-and a thermometer. It's waterproof, accurate to 0.1 degree Celsius, and is about 
+and a thermometer. It&amp;#8217;s waterproof, accurate to 0.1 degree Celsius, and is about 
 the size of five dimes stacked one upon another. There are a bunch of silly 
 things you can do with these, but what I chose to do with mine was to have it 
 record the temperature every hour on the hour for the entire time I was hiking, 
 with the idea being to get some good data about the temperature out there on 
-the PCT.&lt;/p&gt;
+the &lt;span class="caps"&gt;PCT&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;All in all, you can figure that the temperature was recorded 24 times a day 
 for about 150 days, for an astounding 3600 data points, and about 150 
-oscillations from the daytime high to the nighttime low. I've spent some time 
-working with the data, and it's pretty much impossible to make much use of....unless 
+oscillations from the daytime high to the nighttime low. I&amp;#8217;ve spent some time 
+working with the data, and it&amp;#8217;s pretty much impossible to make much use of&amp;#8230;.unless 
 you write a program to interpret it. You can 
 &lt;a href="http://charityhikers.org/pct/temps.htm"&gt;see it for 
-yourself&lt;/a&gt; if you're interested.&lt;/p&gt;
+yourself&lt;/a&gt; if you&amp;#8217;re&amp;nbsp;interested.&lt;/p&gt;
 &lt;p&gt;Well, as fate should have it, I am currently enrolled in a Java programming 
 class, and I have the option of doing a final project of my own choosing. 
 Having not put this data to good use has been a burden on my soul for a 
-couple of years now, and I've decided to make my final project an applet that 
+couple of years now, and I&amp;#8217;ve decided to make my final project an applet that 
 will allow a user to plot this data on a graph for any date range and any time 
-range that they choose (e.g. 5pm to 10pm for September 20th to 23rd).  &lt;/p&gt;
-&lt;p&gt;Once this is done, I will attempt to post it here, but here's the question to 
+range that they choose (e.g. 5pm to 10pm for September 20th to&amp;nbsp;23rd).  &lt;/p&gt;
+&lt;p&gt;Once this is done, I will attempt to post it here, but here&amp;#8217;s the question to 
 you dear reader, do you have any suggestions as to features that you would be 
-interested in seeing in an applet of this sort? Thoughts?&lt;/p&gt;
-&lt;p&gt;I'm quite excited about getting this info out there. Finally.&lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry></feed>
+interested in seeing in an applet of this sort?&amp;nbsp;Thoughts?&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m quite excited about getting this info out there.&amp;nbsp;Finally.&lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry></feed>

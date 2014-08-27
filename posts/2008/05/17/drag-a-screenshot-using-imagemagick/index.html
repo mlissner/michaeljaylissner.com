@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="Linux, imageMagick, Tech, " />
 
-<meta property="og:title" content="Drag a Screenshot Using ImageMagick "/>
+<meta property="og:title" content="Drag a Screenshot Using ImageMagick "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2008/05/17/drag-a-screenshot-using-imagemagick/" />
-<meta property="og:description" content="I learned an interesting trick while working on the Fuji water article. We all know that if you want to take a screenshot in Linux, all you usually have to do is press the &#34;printscreen&#34; button. That, however, takes a screenshot of the entire screen, which you then have to ..." />
+<meta property="og:description" content="I learned an interesting trick while working on the Fuji water article. We all know that if you want to take a screenshot in Linux, all you usually have to do is press the “printscreen” button. That, however, takes a screenshot of the entire screen, which you then have to ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2008-05-17T17:48:40" />
-<meta name="twitter:title" content="Drag a Screenshot Using ImageMagick ">
-<meta name="twitter:description" content="I learned an interesting trick while working on the Fuji water article. We all know that if you want to take a screenshot in Linux, all you usually have to do is press the &#34;printscreen&#34; button. That, however, takes a screenshot of the entire screen, which you then have to ...">
+<meta name="twitter:title" content="Drag a Screenshot Using ImageMagick ">
+<meta name="twitter:description" content="I learned an interesting trick while working on the Fuji water article. We all know that if you want to take a screenshot in Linux, all you usually have to do is press the “printscreen” button. That, however, takes a screenshot of the entire screen, which you then have to ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Drag a Screenshot Using ImageMagick  · Michael Jay Lissner
+        <title>Drag a Screenshot Using ImageMagick  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2008/05/17/drag-a-screenshot-using-imagemagick/"> Drag a Screenshot Using ImageMagick  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2008/05/17/drag-a-screenshot-using-imagemagick/"> Drag a Screenshot Using&nbsp;ImageMagick  </a></h1>
     </header>
 </div>
 
@@ -86,19 +86,19 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I learned an interesting trick while working on the Fuji water article. We all know that if you want to take a screenshot in Linux, all you usually have to do is press the "printscreen" button. That, however, takes a screenshot of the entire screen, which you then have to trim down into a useful bit of picture. </p>
-<p>The trick I learned to make this easy is to simply type:</p>
+            <p>I learned an interesting trick while working on the Fuji water article. We all know that if you want to take a screenshot in Linux, all you usually have to do is press the &#8220;printscreen&#8221; button. That, however, takes a screenshot of the entire screen, which you then have to trim down into a useful bit of&nbsp;picture. </p>
+<p>The trick I learned to make this easy is to simply&nbsp;type:</p>
 <div class="highlight"><pre>import screenshot.png
 </pre></div>
 
 
-<p>That will turn your cursor into a little crosshair, which you can drag across a section of the screen. </p>
-<p>If you want to do that after a delay, the trick is to use the sleep command like so:</p>
+<p>That will turn your cursor into a little crosshair, which you can drag across a section of the&nbsp;screen. </p>
+<p>If you want to do that after a delay, the trick is to use the sleep command like&nbsp;so:</p>
 <div class="highlight"><pre>sleep 10; import screenshot.png
 </pre></div>
 
 
-<p>I found this tip along with a lot of others on <a href="http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux">this blog</a>. There are some other interesting techniques there as well.</p>
+<p>I found this tip along with a lot of others on <a href="http://tips.webdesign10.com/how-to-take-a-screenshot-on-ubuntu-linux">this blog</a>. There are some other interesting techniques there as&nbsp;well.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -136,6 +136,14 @@
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2008/05/15/meet-my-enemy/" title="Previous: Meet My Enemy">Meet My Enemy</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2008/05/20/dear-hillary/" title="Next: Dear Hillary">Dear Hillary</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

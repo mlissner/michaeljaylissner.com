@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="Python, lxml, juriscraper, courtlistener.com, Tech, " />
 
-<meta property="og:title" content="New tool for testing lxml XPath queries "/>
+<meta property="og:title" content="New tool for testing lxml XPath queries "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2012/05/20/new-tool-for-testing-lxml-xpath-queries/" />
-<meta property="og:description" content="I got a bit frustrated today, and decided that I should build a tool to fix my frustration. The problem was that we&#39;re using a lot of XPath queries to scrape various court websites, but there was no tool that could be used to test xpath expressions efficiently. There ..." />
+<meta property="og:description" content="I got a bit frustrated today, and decided that I should build a tool to fix my frustration. The problem was that we’re using a lot of XPath queries to scrape various court websites, but there was no tool that could be used to test xpath expressions efficiently. There ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2012-05-20T15:48:06" />
-<meta name="twitter:title" content="New tool for testing lxml XPath queries ">
-<meta name="twitter:description" content="I got a bit frustrated today, and decided that I should build a tool to fix my frustration. The problem was that we&#39;re using a lot of XPath queries to scrape various court websites, but there was no tool that could be used to test xpath expressions efficiently. There ...">
+<meta name="twitter:title" content="New tool for testing lxml XPath queries ">
+<meta name="twitter:description" content="I got a bit frustrated today, and decided that I should build a tool to fix my frustration. The problem was that we’re using a lot of XPath queries to scrape various court websites, but there was no tool that could be used to test xpath expressions efficiently. There ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>New tool for testing lxml XPath queries  · Michael Jay Lissner
+        <title>New tool for testing lxml XPath queries  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2012/05/20/new-tool-for-testing-lxml-xpath-queries/"> New tool for testing lxml XPath queries  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2012/05/20/new-tool-for-testing-lxml-xpath-queries/"> New tool for testing lxml XPath&nbsp;queries  </a></h1>
     </header>
 </div>
 
@@ -86,12 +86,12 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I got a bit frustrated today, and decided that I should build a tool to fix my frustration. The problem was that we're using a lot of XPath queries to scrape various court websites, but there was no tool that could be used to test xpath expressions efficiently.</p>
-<p>There are a couple tools that are quite similar to what I just built: There's one called Xacobeo, Eclipse has one built in, and even Firebug has a tool that does similar. Unfortunately though, these each operate on a different DOM interpretation than the one that lxml builds. </p>
-<p>So the problem I was running into was that while these tools helped, I consistently had the problem that when the HTML got nasty, they'd start falling over. </p>
-<p>No more! Today I built <a href="https://github.com/mlissner/lxml-xpath-tester/">a quick Django app</a> that can be run locally or on a server. It's quite simple. You input some HTML and an XPath expression, and it will tell you the matches for that expression. It has syntax highlighting, and a few other tricks up its sleeve, but it's pretty basic on the whole.</p>
-<p>I'd love to get any feedback I can about this. It's probably still got some bugs, but it's small enough that they should be quite easy to stamp out.</p>
-<p><strong>Update:</strong> I got in touch with the developer of Xacobeo. There's an --html flag that you can pass to it at startup, if that's your intention. If you use that, it indeed uses the same DOM parser that my tool does. Sigh. Affordances are important, especially in a GUI-based tool.</p>
+            <p>I got a bit frustrated today, and decided that I should build a tool to fix my frustration. The problem was that we&#8217;re using a lot of XPath queries to scrape various court websites, but there was no tool that could be used to test xpath expressions&nbsp;efficiently.</p>
+<p>There are a couple tools that are quite similar to what I just built: There&#8217;s one called Xacobeo, Eclipse has one built in, and even Firebug has a tool that does similar. Unfortunately though, these each operate on a different <span class="caps">DOM</span> interpretation than the one that lxml&nbsp;builds. </p>
+<p>So the problem I was running into was that while these tools helped, I consistently had the problem that when the <span class="caps">HTML</span> got nasty, they&#8217;d start falling&nbsp;over. </p>
+<p>No more! Today I built <a href="https://github.com/mlissner/lxml-xpath-tester/">a quick Django app</a> that can be run locally or on a server. It&#8217;s quite simple. You input some <span class="caps">HTML</span> and an XPath expression, and it will tell you the matches for that expression. It has syntax highlighting, and a few other tricks up its sleeve, but it&#8217;s pretty basic on the&nbsp;whole.</p>
+<p>I&#8217;d love to get any feedback I can about this. It&#8217;s probably still got some bugs, but it&#8217;s small enough that they should be quite easy to stamp&nbsp;out.</p>
+<p><strong>Update:</strong> I got in touch with the developer of Xacobeo. There&#8217;s an &#8212;html flag that you can pass to it at startup, if that&#8217;s your intention. If you use that, it indeed uses the same <span class="caps">DOM</span> parser that my tool does. Sigh. Affordances are important, especially in a <span class="caps">GUI</span>-based&nbsp;tool.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -129,6 +129,14 @@
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/" title="Previous: Further privacy protections at CourtListener">Further privacy protections at CourtListener</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2012/07/31/url-hacking-at-rei-dot-com/" title="Next: URL Hacking at REI.com">URL Hacking at REI.com</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">

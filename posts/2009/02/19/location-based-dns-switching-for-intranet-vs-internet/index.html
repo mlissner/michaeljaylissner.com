@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Michael Lissner" />
-        <meta name="copyright" content="Michael Lissner" />
+        <meta name="author" content="Mike Lissner" />
+        <meta name="copyright" content="Mike Lissner" />
 
         <link rel="author" href=https://plus.google.com/+MikeLissner />
         <meta name="twitter:creator" content="@mlissner">
@@ -14,18 +14,18 @@
 
 <meta name="keywords" content="script, project, /etc/hosts, networking, DNS, Tech, " />
 
-<meta property="og:title" content="Location Based DNS Switching For Internet vs. Intranet "/>
+<meta property="og:title" content="Location Based DNS Switching For Internet vs. Intranet "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/" />
 <meta property="og:description" content="I realized over the weekend that since I run my own mail server out of my home, I can configure my computer to download my mail over the intranet whenever I am on my home network. By doing this, I can drastically reduce my mail download times because it cuts ..." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
-<meta property="og:article:author" content="Michael Lissner" />
+<meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2009-02-19T20:45:10" />
-<meta name="twitter:title" content="Location Based DNS Switching For Internet vs. Intranet ">
+<meta name="twitter:title" content="Location Based DNS Switching For Internet vs. Intranet ">
 <meta name="twitter:description" content="I realized over the weekend that since I run my own mail server out of my home, I can configure my computer to download my mail over the intranet whenever I am on my home network. By doing this, I can drastically reduce my mail download times because it cuts ...">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Location Based DNS Switching For Internet vs. Intranet  · Michael Jay Lissner
+        <title>Location Based DNS Switching For Internet vs. Intranet  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -60,9 +60,9 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
                             <li ><a href="http://michaeljaylissner.com">Home</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/about">About Site</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/about">About&nbsp;Site</a></li>
                                         <li ><a href="http://michaeljaylissner.com/contact">Contact</a></li>
-                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects & Papers</a></li>
+                                        <li ><a href="http://michaeljaylissner.com/projects-and-papers">Projects <span class="amp">&amp;</span>&nbsp;Papers</a></li>
                             <li ><a href="http://michaeljaylissner.com/tags.html">Tags</a></li>
                             <li ><a href="http://michaeljaylissner.com/archives.html">Archives</a></li>
                             <li><form class="navbar-search" action="http://michaeljaylissner.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
@@ -78,7 +78,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/"> Location Based DNS Switching For Internet vs. Intranet  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/"> Location Based <span class="caps">DNS</span> Switching For Internet vs.&nbsp;Intranet  </a></h1>
     </header>
 </div>
 
@@ -90,28 +90,28 @@
 home, I can configure my computer to download my mail over the intranet 
 whenever I am on my home network. By doing this, I can drastically reduce my
 mail download times because it cuts the Internet out of the equation. Rather
-than using DNS + the Internet to get my mail, I can download it directly 
-from internal IP address of the server. </p>
+than using <span class="caps">DNS</span> + the Internet to get my mail, I can download it directly 
+from internal <span class="caps">IP</span> address of the&nbsp;server. </p>
 <p>To understand how to set this up, you have to understand that whenever you 
-use a domain name (like michaeljaylissner.com), your computer does an IP 
-lookup. First, it looks in /etc/hosts to see if it knows the IP of the 
-domain locally. If it does, it will use the IP listed there. If it does 
-not, it will ask your Internet provider what IP to use, 
+use a domain name (like michaeljaylissner.com), your computer does an <span class="caps">IP</span> 
+lookup. First, it looks in /etc/hosts to see if it knows the <span class="caps">IP</span> of the 
+domain locally. If it does, it will use the <span class="caps">IP</span> listed there. If it does 
+not, it will ask your Internet provider what <span class="caps">IP</span> to use, 
 and will use that. Thus, what we want to do is set up the computer so that 
-when we are at home, /etc/hosts provides the internal IP of our server, 
-and so when we are not at home, it does not.</p>
+when we are at home, /etc/hosts provides the internal <span class="caps">IP</span> of our server, 
+and so when we are not at home, it does&nbsp;not.</p>
 <p>When I am at home, I am always on a wireless network called, 
 <code>pizzapuppysantaclaus</code>. Thus, by checking what wireless network I am 
 connected to, I can check if I am at home, and make whatever changes are 
 necessary. Conveniently, whenever you change network connections, 
 you run all of the scripts located in <code>/etc/network/if-up.d/</code>. Thus, 
 we will put a small script in there that checks what wireless network we are
- on, and then changes our /etc/hosts file if necessary.</p>
+ on, and then changes our /etc/hosts file if&nbsp;necessary.</p>
 <p>To set up this configuration, I made three files. The first is the script 
 mentioned above, which needs to be owned by root, 
 and placed in <code>/etc/network/if-up.d</code>. You can name it whatever you want, 
 and by changing <code>pizzapuppysantaclaus</code> to the name of your network, 
-you can fit it to your needs. Here's the contents of the script:</p>
+you can fit it to your needs. Here&#8217;s the contents of the&nbsp;script:</p>
 <div class="highlight"><pre><span class="c">#First, we check if we are connected to pizzapuppysantaclaus</span>
 
 <span class="c">#If grep has a hit, we&#39;re connected, and $? will equal 0, if not, $? will equal 1</span>
@@ -132,7 +132,7 @@ iwconfig 2&gt; /dev/null | grep pizzapuppysantaclaus &gt; /dev/null
 </pre></div>
 
 
-<p>This script simply performs a check of our wireless ID. If it's 
+<p>This script simply performs a check of our wireless <span class="caps">ID</span>. If it&#8217;s 
 <code>pizzapuppysantaclaus</code>, it switches <code>/etc/hostsIntranet</code> for <code>/etc/hosts</code>. If 
 not, it switches <code>/etc/hostsInternet</code> for <code>/etc/hosts</code>.</p>
 <p>The contents of <code>/etc/hostsIntranet</code> are:</p>
@@ -157,8 +157,8 @@ and set its owner to root with execute permission. Create a file called
 <code>/etc/hostsIntranet</code>, that contains your intranet configuration, 
 as shown above. Make a copy of your normal <code>/etc/hosts</code> file called 
 <code>/etc/hostsInternet</code>. </p>
-<p>Once all that's done, you should be all set. Any questions, 
-please feel free to comment!</p>
+<p>Once all that&#8217;s done, you should be all set. Any questions, 
+please feel free to&nbsp;comment!</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -196,6 +196,14 @@ please feel free to comment!</p>
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2009/02/13/thoreau-would-have-found-this-amusing-or-not/" title="Previous: Thoreau Would Have Found This Amusing…or not">Thoreau Would Have Found This Amusing…or not</a></li>
+                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2009/02/20/snow-camping-in-sequoia/" title="Next: Snow Camping in Sequoia">Snow Camping in Sequoia</a> »</li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
