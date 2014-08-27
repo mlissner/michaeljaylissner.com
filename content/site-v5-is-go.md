@@ -14,11 +14,11 @@ Version 4 was pretty nice though, while it lasted:
 
 ![Site v4]({filename}/images/oldsite/v4.png)
 
-*Other old versionf of the site [still available][old]*
+*Other old versions of the site [still available][old]!*
 
 ## The improvements
 
-This new version comes with some big improvements though that I'm quite 
+This new version comes with some big improvements that I'm quite 
 pleased with:
 
 1. If you find typoes in a blog post, you can edit them on Github and I can 
