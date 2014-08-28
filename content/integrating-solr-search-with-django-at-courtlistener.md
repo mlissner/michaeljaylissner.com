@@ -1,6 +1,6 @@
 Title: Integrating Solr Search with Django at CourtListener
 Date: 2011-12-02T09:37:39
-Tags: Sunburnt, Solr, Haystack, django, courtlistener.com
+Tags: Sunburnt, Solr, Haystack, django, CourtListener
 Category: Tech
 
 [TOC]

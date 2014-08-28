@@ -1,6 +1,6 @@
 Title: My Presentation Proposal for LVI 2012
 Date: 2012-03-15T20:09:29
-Tags: proposal, presentations, me, lvi2012, juriscraper, courtlistener.com
+Tags: proposal, presentations, me, lvi2012, juriscraper, CourtListener
 Category: Tech
 
 The [Law Via the Internet][2] conference is  celebrating its 20th anniversary

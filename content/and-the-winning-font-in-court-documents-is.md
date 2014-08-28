@@ -1,6 +1,6 @@
 Title: The Winning Font in Court Opinions
 Date: 2012-01-27T22:15:58
-Tags: typography, tesseract, Python, ocr, font, courtlistener.com
+Tags: typography, tesseract, Python, ocr, font, CourtListener
 Category: Tech
 
 

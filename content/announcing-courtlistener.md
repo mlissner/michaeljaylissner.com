@@ -1,6 +1,6 @@
 Title: Announcing CourtListener.com
 Date: 2010-05-01T20:08:16
-Tags: Final Project, courtlistener.com, announcements
+Tags: Final Project, CourtListener, announcements
 Category: Tech
 
 

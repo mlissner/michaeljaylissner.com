@@ -1,6 +1,6 @@
 Title: Further privacy protections at CourtListener
 Date: 2012-04-27T17:05:21
-Tags: sitemaps.xml, privacy, policy, courtlistener.com
+Tags: sitemaps.xml, privacy, policy, CourtListener
 Category: Policy & Politics
 
 

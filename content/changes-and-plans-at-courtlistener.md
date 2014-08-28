@@ -1,6 +1,6 @@
 Title: Changes and Plans at CourtListener.com
 Date: 2010-11-04T23:30:21
-Tags: courtlistener.com, Web Architecture, database
+Tags: CourtListener, Web Architecture, database
 Category: Tech
 
 

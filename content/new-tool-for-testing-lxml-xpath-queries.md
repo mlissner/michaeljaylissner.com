@@ -1,6 +1,6 @@
 Title: New tool for testing lxml XPath queries
 Date: 2012-05-20T15:48:06
-Tags: Python, lxml, juriscraper, courtlistener.com
+Tags: Python, lxml, juriscraper, CourtListener
 Category: Tech
 
 I got a bit frustrated today, and decided that I should build a tool to fix my frustration. The problem was that we're using a lot of XPath queries to scrape various court websites, but there was no tool that could be used to test xpath expressions efficiently.

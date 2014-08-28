@@ -1,6 +1,6 @@
 Title: How to Protect Your Open Source Code from Theft and a Mercurial Hook to Help
 Date: 2010-01-15T10:27:18
-Tags: mercurial, hook, Final Project, DMCA, copyright, Affero GPLv3, courtlistener.com
+Tags: mercurial, hook, Final Project, DMCA, copyright, Affero GPLv3, CourtListener
 Category: Tech
 
 
