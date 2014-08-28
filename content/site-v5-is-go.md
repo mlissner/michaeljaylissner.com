@@ -21,9 +21,9 @@ Version 4 was pretty nice though, while it lasted:
 This new version comes with some big improvements that I'm quite 
 pleased with:
 
-1. If you find typoes in a blog post, you can edit them on Github and I can 
+1. If you find typos in a blog post, you can edit them on Github and I can 
    easily integrate your changes. Check out the link on the right to 
-   edit the typoes in this very page. (I've left a few conspicuous ones as a 
+   edit the typos in this very page. (I've left a few conspicuous ones as a 
    treasure hunt for the reader!)
 1. The site is now *much* faster and can handle immense traffic without a 
    hitch, thanks to being hosted by [Github Pages][ghp]. The previous version would
