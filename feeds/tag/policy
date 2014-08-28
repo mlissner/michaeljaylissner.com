@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/policy" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2012-04-27T17:05:21-07:00</updated><entry><title>Further privacy protections at CourtListener</title><link href="http://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/" rel="alternate"></link><updated>2012-04-27T17:05:21-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-04-27:posts/2012/04/27/further-privacy-protections-at-courtlistener/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve &lt;a href="http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/"&gt;written previously&lt;/a&gt; about the lengths we go to at CourtListener to
- protect people&amp;#8217;s privacy, and today we completed one more privacy&amp;nbsp;enhancement. &lt;/p&gt;
+protect people&amp;#8217;s privacy, and today we completed one more privacy&amp;nbsp;enhancement. &lt;/p&gt;
 &lt;p&gt;After my last post on this topic, we discovered that although we had 
 already blocked cases from appearing in the search results of all major 
 search engines, we had a privacy leak in the form of our computer-readable 
 sitemaps. These sitemaps contain links to every page within a website, 
 and since those links contain the names of the parties in a case, 
 it&amp;#8217;s possible that a Google search for the party name could turn up results
- that should be&amp;nbsp;hidden.&lt;/p&gt;
+that should be&amp;nbsp;hidden.&lt;/p&gt;
 &lt;p&gt;This was problematic, and as of now we have changed the way we serve 
-sitemaps so that they use the noindex X-Robots-Tag &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. This tells 
+sitemaps so that they use the &lt;code&gt;noindex X-Robots-Tag&lt;/code&gt; &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. This tells 
 search crawlers that they are welcome to read our sitemaps, 
 but that they should avoid serving them or indexing&amp;nbsp;them.&lt;/p&gt;</summary><category term="sitemaps.xml"></category><category term="privacy"></category><category term="policy"></category><category term="courtlistener.com"></category></entry><entry><title>Respecting privacy while providing hundreds of thousands of public documents</title><link href="http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/" rel="alternate"></link><updated>2012-01-16T22:13:22-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-16:posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/</id><summary type="html">&lt;p&gt;At CourtListener, we have always taken privacy very seriously. We &lt;a href="http://courtlistener.com/coverage/"&gt;have over 600,000&lt;/a&gt; cases currently, most of which are available on Google and other search engines. But in the interest of privacy, we make two broad exceptions to what&amp;#8217;s available on search&amp;nbsp;engines: &lt;/p&gt;
 &lt;ol&gt;

@@ -87,16 +87,16 @@
 
             
             <p>I&#8217;ve <a href="http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/">written previously</a> about the lengths we go to at CourtListener to
- protect people&#8217;s privacy, and today we completed one more privacy&nbsp;enhancement. </p>
+protect people&#8217;s privacy, and today we completed one more privacy&nbsp;enhancement. </p>
 <p>After my last post on this topic, we discovered that although we had 
 already blocked cases from appearing in the search results of all major 
 search engines, we had a privacy leak in the form of our computer-readable 
 sitemaps. These sitemaps contain links to every page within a website, 
 and since those links contain the names of the parties in a case, 
 it&#8217;s possible that a Google search for the party name could turn up results
- that should be&nbsp;hidden.</p>
+that should be&nbsp;hidden.</p>
 <p>This was problematic, and as of now we have changed the way we serve 
-sitemaps so that they use the noindex X-Robots-Tag <span class="caps">HTTP</span> header. This tells 
+sitemaps so that they use the <code>noindex X-Robots-Tag</code> <span class="caps">HTTP</span> header. This tells 
 search crawlers that they are welcome to read our sitemaps, 
 but that they should avoid serving them or indexing&nbsp;them.</p>
             

@@ -91,7 +91,10 @@
 <p>So the problem I was running into was that while these tools helped, I consistently had the problem that when the <span class="caps">HTML</span> got nasty, they&#8217;d start falling&nbsp;over. </p>
 <p>No more! Today I built <a href="https://github.com/mlissner/lxml-xpath-tester/">a quick Django app</a> that can be run locally or on a server. It&#8217;s quite simple. You input some <span class="caps">HTML</span> and an XPath expression, and it will tell you the matches for that expression. It has syntax highlighting, and a few other tricks up its sleeve, but it&#8217;s pretty basic on the&nbsp;whole.</p>
 <p>I&#8217;d love to get any feedback I can about this. It&#8217;s probably still got some bugs, but it&#8217;s small enough that they should be quite easy to stamp&nbsp;out.</p>
-<p><strong>Update:</strong> I got in touch with the developer of Xacobeo. There&#8217;s an &#8212;html flag that you can pass to it at startup, if that&#8217;s your intention. If you use that, it indeed uses the same <span class="caps">DOM</span> parser that my tool does. Sigh. Affordances are important, especially in a <span class="caps">GUI</span>-based&nbsp;tool.</p>
+<p><strong>Update:</strong> I got in touch with the developer of Xacobeo. There&#8217;s an <code>--html</code> 
+flag that you can pass to it at startup, if that&#8217;s your intention. If you use 
+that, it indeed uses the same <span class="caps">DOM</span> parser that my tool does. Sigh. Affordances 
+are important, especially in a <span class="caps">GUI</span>-based&nbsp;tool.</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
