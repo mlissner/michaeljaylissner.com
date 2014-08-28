@@ -7,4 +7,4 @@
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; I got in touch with the developer of Xacobeo. There&amp;#8217;s an &lt;code&gt;--html&lt;/code&gt; 
 flag that you can pass to it at startup, if that&amp;#8217;s your intention. If you use 
 that, it indeed uses the same &lt;span class="caps"&gt;DOM&lt;/span&gt; parser that my tool does. Sigh. Affordances 
-are important, especially in a &lt;span class="caps"&gt;GUI&lt;/span&gt;-based&amp;nbsp;tool.&lt;/p&gt;</summary><category term="Python"></category><category term="lxml"></category><category term="juriscraper"></category><category term="courtlistener.com"></category></entry></feed>
+are important, especially in a &lt;span class="caps"&gt;GUI&lt;/span&gt;-based&amp;nbsp;tool.&lt;/p&gt;</summary><category term="Python"></category><category term="lxml"></category><category term="juriscraper"></category><category term="CourtListener"></category></entry></feed>

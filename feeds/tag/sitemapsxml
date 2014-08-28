@@ -11,4 +11,4 @@ that should be&amp;nbsp;hidden.&lt;/p&gt;
 &lt;p&gt;This was problematic, and as of now we have changed the way we serve 
 sitemaps so that they use the &lt;code&gt;noindex X-Robots-Tag&lt;/code&gt; &lt;span class="caps"&gt;HTTP&lt;/span&gt; header. This tells 
 search crawlers that they are welcome to read our sitemaps, 
-but that they should avoid serving them or indexing&amp;nbsp;them.&lt;/p&gt;</summary><category term="sitemaps.xml"></category><category term="privacy"></category><category term="policy"></category><category term="courtlistener.com"></category></entry></feed>
+but that they should avoid serving them or indexing&amp;nbsp;them.&lt;/p&gt;</summary><category term="sitemaps.xml"></category><category term="privacy"></category><category term="policy"></category><category term="CourtListener"></category></entry></feed>

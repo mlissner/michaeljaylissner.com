@@ -42,4 +42,4 @@ core, it’s essentially a search-powered site, so we have some big needs:&lt;/
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That works, to a point, but that syntax isn’t supported on facets, so your facet counts won’t have the same counts as your results. And so, Sunburnt, though powerful and lightweight, fails.&lt;/p&gt;
 &lt;h2 id="what-now"&gt;What now?&lt;/h2&gt;
-&lt;p&gt;Good question.&lt;/p&gt;</summary><category term="Sunburnt"></category><category term="Solr"></category><category term="Haystack"></category><category term="django"></category><category term="courtlistener.com"></category></entry></feed>
+&lt;p&gt;Good question.&lt;/p&gt;</summary><category term="Sunburnt"></category><category term="Solr"></category><category term="Haystack"></category><category term="django"></category><category term="CourtListener"></category></entry></feed>

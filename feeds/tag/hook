@@ -47,4 +47,4 @@ pretxncommit = .hg/checklicense.py
 &lt;p&gt;A couple of things I should note about this script is that it currently 
 only checks for java and python files, and that it requires files called 
 java_license.txt and python_license.txt to be in the root of your 
-repository. It should be fairly easy to modify though to fit your own&amp;nbsp;needs.&lt;/p&gt;</summary><category term="mercurial"></category><category term="hook"></category><category term="Final Project"></category><category term="DMCA"></category><category term="copyright"></category><category term="Affero GPLv3"></category><category term="courtlistener.com"></category></entry></feed>
+repository. It should be fairly easy to modify though to fit your own&amp;nbsp;needs.&lt;/p&gt;</summary><category term="mercurial"></category><category term="hook"></category><category term="Final Project"></category><category term="DMCA"></category><category term="copyright"></category><category term="Affero GPLv3"></category><category term="CourtListener"></category></entry></feed>
