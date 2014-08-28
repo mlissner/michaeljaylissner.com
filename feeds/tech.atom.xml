@@ -471,11 +471,37 @@ but if you don&amp;#8217;t mind a little icon browsing, the attached zip should 
 all the icons you see in your&amp;nbsp;browser.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://michaeljaylissner.com/archive/firefox-images.zip"&gt;&lt;strong&gt;Enjoy.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class="caps"&gt;PS&lt;/span&gt; - these are licensed under the following licenses: &lt;span class="caps"&gt;MPL&lt;/span&gt; 1.1/&lt;span class="caps"&gt;GPL&lt;/span&gt; 2.0/&lt;span class="caps"&gt;LGPL&lt;/span&gt; 
-2.1, and are copyright&amp;nbsp;Mozilla.&lt;/p&gt;</summary><category term="firefox"></category><category term="images"></category><category term="icons"></category><category term="zip"></category><category term="download"></category></entry><entry><title>Changes and Plans at CourtListener.com</title><link href="http://michaeljaylissner.com/posts/2010/11/04/changes-and-plans-at-courtlistener/" rel="alternate"></link><updated>2010-11-04T23:30:21-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-11-04:posts/2010/11/04/changes-and-plans-at-courtlistener/</id><summary type="html">&lt;p&gt;A few weeks ago, we made a fairly major change at CourtListener.com to include &lt;span class="caps"&gt;ID&lt;/span&gt; numbers in all of our case URLs. This change meant that links that were previously like this:&lt;blockquote&gt;http://courtlistener.com/scotus/Wong-v.-Smith/&lt;/blockquote&gt;Are now like this:&lt;blockquote&gt;http://courtlistener.com/scotus/&lt;strong&gt;V5o&lt;/strong&gt;/wong-v-smith/&lt;/blockquote&gt;Most of the old links should continue to work, but using the new links should be much faster and more reliable. The major difference between the two is the &lt;span class="caps"&gt;ID&lt;/span&gt; number, which is encoded as a set of numbers (in this case &lt;em&gt;V5o&lt;/em&gt;). This &lt;span class="caps"&gt;ID&lt;/span&gt; corresponds directly with the &lt;span class="caps"&gt;ID&lt;/span&gt; number in our database, aiding us greatly in serving up cases quickly and&amp;nbsp;accurately.&lt;/p&gt;
-&lt;p&gt;Around the same time as this change, we added social networking links to all of our case pages to make them easier to share with friends and colleagues. These links use our new tiny domain, &lt;em&gt;http://crt.li/&lt;/em&gt;, and should thus be ideal for websites like Twitter or&amp;nbsp;Reddit.&lt;/p&gt;
-&lt;p&gt;In the next few months we will be getting a major new server, and will be migrating our data to it. This will allow us to serve more data, and&amp;mdash;drum roll please&amp;mdash;will allow us to begin serving audio content on the site. That&amp;#8217;s right, in the next few months, we will begin getting oral arguments from the circuit courts, and will be serving it directly to you on the case&amp;nbsp;pages. &lt;/p&gt;
-&lt;p&gt;We also have plans to revisit our search interface in order to add date filtering and query building so look for that&amp;nbsp;soon.&lt;/p&gt;
-&lt;p&gt;As always, we welcome your feedback and support, so don&amp;#8217;t hesitate to get in touch with us if you have any questions or&amp;nbsp;suggestions.&lt;/p&gt;</summary><category term="courtlistener.com"></category><category term="Web Architecture"></category><category term="database"></category></entry><entry><title>Swimlane Diagram Generator Written in XSLT</title><link href="http://michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/" rel="alternate"></link><updated>2010-09-06T23:26:18-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-09-06:posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/</id><summary type="html">&lt;p&gt;For the past couple years, I&amp;#8217;ve been wanting to make a swimlane diagram 
+2.1, and are copyright&amp;nbsp;Mozilla.&lt;/p&gt;</summary><category term="firefox"></category><category term="images"></category><category term="icons"></category><category term="zip"></category><category term="download"></category></entry><entry><title>Changes and Plans at CourtListener.com</title><link href="http://michaeljaylissner.com/posts/2010/11/04/changes-and-plans-at-courtlistener/" rel="alternate"></link><updated>2010-11-04T23:30:21-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-11-04:posts/2010/11/04/changes-and-plans-at-courtlistener/</id><summary type="html">&lt;p&gt;A few weeks ago, we made a fairly major change at CourtListener.com to include 
+&lt;span class="caps"&gt;ID&lt;/span&gt; numbers in all of our case URLs. This change meant that links that were 
+previously like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;http:&lt;/span&gt;&lt;span class="c1"&gt;//courtlistener.com/scotus/Wong-v.-Smith/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Are now like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;http:&lt;/span&gt;&lt;span class="c1"&gt;//courtlistener.com/scotus/V5o/wong-v-smith/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Most of the old links should continue to work, but using the new links should 
+be much faster and more reliable. The major difference between the two is the 
+&lt;span class="caps"&gt;ID&lt;/span&gt; number, which is encoded as a set of numbers (in this case &lt;em&gt;V5o&lt;/em&gt;). This 
+&lt;span class="caps"&gt;ID&lt;/span&gt; corresponds directly with the &lt;span class="caps"&gt;ID&lt;/span&gt; number in our database, aiding us greatly 
+in serving up cases quickly and&amp;nbsp;accurately.&lt;/p&gt;
+&lt;p&gt;Around the same time as this change, we added social networking links to all 
+of our case pages to make them easier to share with friends and colleagues. 
+These links use our new tiny domain, &lt;em&gt;http://crt.li/&lt;/em&gt;, and should thus be 
+ideal for websites like Twitter or&amp;nbsp;Reddit.&lt;/p&gt;
+&lt;p&gt;In the next few months we will be getting a major new server, and will be 
+migrating our data to it. This will allow us to serve more data, 
+and&amp;mdash;drum roll please&amp;mdash;will allow us to begin serving audio content 
+on the site. That&amp;#8217;s right, in the next few months, we will begin getting oral 
+arguments from the circuit courts, and will be serving it directly to you on 
+the case&amp;nbsp;pages. &lt;/p&gt;
+&lt;p&gt;We also have plans to revisit our search interface in order to add date 
+filtering and query building so look for that&amp;nbsp;soon.&lt;/p&gt;
+&lt;p&gt;As always, we welcome your feedback and support, so don&amp;#8217;t hesitate to get in 
+touch with us if you have any questions or&amp;nbsp;suggestions.&lt;/p&gt;</summary><category term="courtlistener.com"></category><category term="Web Architecture"></category><category term="database"></category></entry><entry><title>Swimlane Diagram Generator Written in XSLT</title><link href="http://michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/" rel="alternate"></link><updated>2010-09-06T23:26:18-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-09-06:posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/</id><summary type="html">&lt;p&gt;For the past couple years, I&amp;#8217;ve been wanting to make a swimlane diagram 
 showing all of my roommates and which room they lived in. I considered 
 drawing it out by hand with a charting program, but the idea of updating it
 whenever somebody moved in or out seemed daunting, and I decided that the 
