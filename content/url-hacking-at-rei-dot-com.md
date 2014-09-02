@@ -9,11 +9,11 @@ The vulnerability was a simple one. A few days ago, to get a 15% off coupon, I s
 
 The link led to:
 
-http://email.rei.com/cgi-bin12/DM/t/nCT4n0N3xbv0ESo05DPf0Et&EmailAddr=mlissner@michaeljaylissner.com
+    http://email.rei.com/cgi-bin12/DM/t/nCT4n0N3xbv0ESo05DPf0Et&EmailAddr=mlissner@michaeljaylissner.com
 
 Which redirects to:
 
-https://preferences.rei.com/rei/rei_PrefCtr.asp?EmailAddr=mlissner@michaeljaylissner.com
+    https://preferences.rei.com/rei/rei_PrefCtr.asp?EmailAddr=mlissner@michaeljaylissner.com
 
 I immediately noticed the badness in these URLs, and at a whim, I tried modifying the URL to use a friend's email address. Sure enough it worked, and I could look up the full name and zip code of anybody who had an email address that was in REI's system.
 
