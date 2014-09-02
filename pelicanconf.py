@@ -73,6 +73,12 @@ MD_EXTENSIONS = ([
     'toc'
 ])
 
+#MAILCHIMP
+MAILCHIMP_FORM_ACTION = '//asdf.us2.list-manage.com/subscribe/post?u=87204b44efb46f0fd27b95167&amp;id=f511375e11'
+EMAIL_SUBSCRIPTION_LABEL = u'Get Weekly Updates'
+EMAIL_FIELD_PLACEHOLDER = u'Enter your email...'
+SUBSCRIBE_BUTTON_TITLE = u'Send Me Updates'
+
 DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives', 'search',
                      '404'))
 STATIC_PATHS = [
