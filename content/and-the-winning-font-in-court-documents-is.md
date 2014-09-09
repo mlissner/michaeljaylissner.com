@@ -31,7 +31,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>953
         <td>867
         <td>47
-        <td>**3321**
+        <td><strong>3321</strong>
     </tr>
     <tr>
         <td>Courier
@@ -39,7 +39,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>333
         <td>209
         <td>131
-        <td>**1042**
+        <td><strong>1042</strong>
     </tr>
     <tr>
         <td>Arial
@@ -47,7 +47,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>39
         <td>11
         <td>41
-        <td>**455**
+        <td><strong>455</strong>
     </tr>
     <tr>
         <td>Symbol
@@ -55,7 +55,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>0
         <td>0
         <td>0
-        <td>**212**
+        <td><strong>212</strong>
     </tr>
     <tr>
         <td>Helvetica
@@ -63,7 +63,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>161
         <td>2
         <td>2
-        <td>**189**
+        <td><strong>189</strong>
     </tr>
     <tr>
         <td>Century Schoolbook
@@ -71,7 +71,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>54
         <td>52
         <td>9
-        <td>**173**
+        <td><strong>173</strong>
     </tr>
     <tr>
         <td>Garamond
@@ -79,7 +79,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>42
         <td>41
         <td>0
-        <td>**127**
+        <td><strong>127</strong>
     </tr>
     <tr>
         <td>Palatino Linotype
@@ -87,7 +87,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>24
         <td>24
         <td>1
-        <td>**85**
+        <td><strong>85</strong>
     </tr>
     <tr>
         <td>Old English
@@ -95,7 +95,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>0
         <td>0
         <td>0
-        <td>**42**
+        <td><strong>42</strong>
     </tr>
     <tr>
         <td>Lincoln
@@ -103,7 +103,7 @@ Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New Roman.
         <td>0
         <td>0
         <td>0
-        <td>**27**
+        <td><strong>27</strong>
     </tr>
 </table>
 
