@@ -124,7 +124,7 @@ And that, good friend, is it. Worst process for a human, ever.
 [1]: http://code.google.com/p/tesseract-ocr/
 [2]: http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3
 [3]: http://en.wikipedia.org/wiki/Blackletter
-[4]: #create-training-docs
+[4]: #create-training-documents
 [5]: #train-tesseract
 [6]: http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#Box_File_Editors
 [7]: http://code.google.com/p/moshpytt/
