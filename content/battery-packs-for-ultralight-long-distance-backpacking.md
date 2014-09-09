@@ -1,4 +1,5 @@
-Title: Best Energy Pack for Ultra-light, long-distance Backpacking
+Title: Best Energy Pack for Ultra-light, Long-Distance Backpacking
+Subtitle: Spoiler: It's the Just Mobile Gum++
 Date: 2013-07-19T14:13:25
 Tags: shopping, new zealand, batteries, backpacking
 Category: Backpacking
