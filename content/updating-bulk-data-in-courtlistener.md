@@ -3,7 +3,7 @@ Subtitle: Bulk Data Can Be Hard
 Summary: There's a beautiful and growing trend towards bulk data, but in this post I discuss the challenges we have at CourtListener and some solutions we've developed. 
 Date: 2014-09-28
 Tags: bulk data, CourtListener
-Categories: Tech
+Category: Tech
 
 [TOC]
 

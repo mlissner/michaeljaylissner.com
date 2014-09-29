@@ -4,7 +4,7 @@ Summary: You'd think that creating podcasts would be fairly easy, but surprising
 Date: 2014-09-15
 Status: Draft
 Tags: podcast, CourtListener, django
-Categories: Tech
+Category: Tech
 
 [TOC]
 

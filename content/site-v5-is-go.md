@@ -2,7 +2,7 @@ Title: New Version of the Site is Now Live
 Subtitle: Better, Faster, Stronger
 Date: 2014-08-27
 Tags: meta, blog, me
-Categories: Tech
+Category: Tech
 
 [TOC]
 
