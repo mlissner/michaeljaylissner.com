@@ -91,6 +91,7 @@
 <li><a href="#the-past-and-present">The Past and Present</a></li>
 <li><a href="#the-new-system">The New System</a></li>
 <li><a href="#jeez-thats-great-whyd-you-wait-so-long">Jeez, That’s Great, Why’d You Wait So Long?</a></li>
+<li><a href="#wrapping-up">Wrapping Up</a></li>
 </ul>
 </div>
         </nav>
@@ -113,7 +114,7 @@
 <p>And it gets even better. On top of this, we were able to resolve <a href="https://github.com/freelawproject/courtlistener/issues/285">a long-standing feature request</a> for complete bulk data files by jurisdiction. We were able to make the schema of the bulk files match that of <a href="https://www.courtlistener.com/api/rest-info/">our <span class="caps">REST</span> <span class="caps">API</span></a>. We were able to make the bulk file a tar of smaller <span class="caps">JSON</span> files, so no more issues unzipping massive files or having 32 bit systems crash. <a href="https://www.youtube.com/watch?v=8vZx7yF_a7M">We settled all the family business</a>.</p>
 <p>Oh, and one more thing: When this goes live, we’ll have bulk files and an <span class="caps">API</span> for oral arguments as well — Another CourtListener first. </p>
 <h2 id="jeez-thats-great-whyd-you-wait-so-long">Jeez, That’s Great, Why’d You Wait So Long?</h2>
-<p>This is a fair question. If it was possible to gain so much so quickly, why didn’t we do it sooner? Well, there are a number of reasons but at the core, like so many things, it’s because nothing is actually that easy. </p>
+<p>This is a fair question. If it was possible to gain so much so quickly, why didn’t we do it sooner? Well, there are a number of reasons, but at the core, like so many things, it’s because nothing is actually that easy. </p>
 <p>Before we could make these improvements, we needed to: </p>
 <ul>
 <li>Make sure the impact on our users <a href="http://lists.freelawproject.org/pipermail/dev/2014-August/000069.html">wouldn’t be an issue</a></li>
@@ -123,7 +124,8 @@
 <li><a href="https://github.com/freelawproject/courtlistener/commit/52e8eff985fdf75612837cef4d9ef55ad60f29ad#diff-6">Rewrite the documentation</a></li>
 </ul>
 <p>And pretty much everything else you can imagine. So, I suppose the answer is: We waited so long because it was hard. </p>
-<p>But being hard is one thing. Another thing is that although a number of organizations have used our bulk data, never has any contributed either energy or resources to fixing the bugs that they reported. Despite the benefits these organizations got from the bulk files, none chose to support the ecosystem from which they benefited. You can imagine how this isn’t particularly motivational for us, but we’re hopeful that with the new and improved system, those using our data will appreciate our efforts and consider <a href="https://www.courtlistener.com/donate/">supporting us</a> down the road.  </p>
+<p>But being hard is one thing. Another thing is that although a number of organizations have used our bulk data, never has any contributed either energy or resources to fixing the bugs that they reported. Despite the benefits these organizations got from the bulk files, none chose to support the ecosystem from which they benefited. You can imagine how this isn’t particularly motivational for us, but we’re hopeful that with the new and improved system, those using our data will appreciate the quality of the bulk data and consider <a href="https://www.courtlistener.com/donate/">supporting us</a> down the road.  </p>
+<h2 id="wrapping-up">Wrapping Up</h2>
 <p>So, without sucking on too many sour grapes, that’s the story behind the upgrades we’re making to the bulk files at CourtListener. At first blush it may seem like a fairly straightforward feature to get in place (and remember, in <em>many</em> cases bulk data is stupid-easy to do), but we thought it would be interesting to share our experiences so others might compare notes. If you’re a consumer of CourtListener bulk data, we’ll be taking the wraps off of these new features soon, so make sure to watch the <a href="http://freelawproject.org">Free Law Project blog</a>. If you’re a developer that’s interested in this kind of thing, we’re eager to hear your feedback and any thoughts you might have. </p>
 <div class="footnote">
 <hr/>
@@ -144,7 +146,7 @@
 <p><a class="footnote-backref" href="#fnref:file-count" rev="footnote" title="Jump back to footnote 4 in the text">↩</a></p>
 </li>
 <li id="fn:dev-aside">
-<p>A fun digression for the developers. As you might expect, aside from compressing bulk files, the bottleneck of generating 350+ bulk files at once is pulling items from the database and converting them to <span class="caps">JSON</span>. We tried a few solutions to this problem, but the best we came up with takes advantage of the fact that every item in the database belongs in exactly two bulk files: The all.tar.gz file and the {jurisdiction}.tar.gz file. One way to put the item into both places would be to generate the all.tar.gz file and then generate each of the 350 smaller files. </p>
+<p>Commence a fun digression for the developers. As you might expect, aside from compressing bulk files, the bottleneck of generating 350+ bulk files at once is pulling items from the database and converting them to <span class="caps">JSON</span>. We tried a few solutions to this problem, but the best we came up with takes advantage of the fact that every item in the database belongs in exactly two bulk files: The all.tar.gz file and the {jurisdiction}.tar.gz file. One way to put the item into both places would be to generate the all.tar.gz file and then generate each of the 350 smaller files. </p>
 <p>That would iterate every item in the database twice, but while making the jurisdiction files you’d have to do a lot of database filtering…something that it’s generally good to avoid. Our solution to this problem is to create a dictionary of open file handles and then to iterate the entire database once. For each item in the database, add it to both the all.tar.gz file and add it to the {jurisdiction}.tar.gz file. Once complete, close all the file handles. For example:</p>
 <div class="highlight"><pre><span class="c"># Get all the courts</span>
 <span class="n">courts</span> <span class="o">=</span> <span class="n">Court</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
