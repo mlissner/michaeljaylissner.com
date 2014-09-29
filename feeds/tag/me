@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/me" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2014-08-27T00:00:00-07:00</updated><entry><title>New Version of the Site is Now Live</title><link href="http://michaeljaylissner.com/posts/2014/08/27/site-v5-is-go/" rel="alternate"></link><updated>2014-08-27T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-08-27:posts/2014/08/27/site-v5-is-go/</id><summary type="html">
+&lt;p&gt;I have big news today for the small world of people who read my blog regularly:
+A new version of the site is now live and the old version shall die a quick death. &lt;/p&gt;
+&lt;p&gt;Version 4 was pretty nice though, while it lasted:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Site v4" src="http://michaeljaylissner.com/images/oldsite/v4.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Other old versions of the site &lt;a href="http://michaeljaylissner.com/about"&gt;still available&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id="the-improvements"&gt;The improvements&lt;/h2&gt;
+&lt;p&gt;This new version comes with some big improvements that I’m quite 
+pleased with:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If you find typos in a blog post, you can edit them on Github and I can 
+   easily integrate your changes. Check out the link on the right to 
+   edit the typos in this very page. (I’ve left a few conspicuous ones as a 
+   treasure hunt for the reader!)&lt;/li&gt;
+&lt;li&gt;The site is now &lt;em&gt;much&lt;/em&gt; faster and can handle immense traffic without a 
+   hitch, thanks to being hosted by &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt;. The previous version would
+   have occasional hiccups during times of high traffic – something that’s 
+   really quite untenable.&lt;/li&gt;
+&lt;li&gt;Comments are now moved to &lt;a href="https://disqus.com"&gt;Disqus&lt;/a&gt;, though unfortunately old comments have
+   not made the jump to the new version of the blog. Comments are collapsed by 
+   default so the scrollbar actually represents the length of a 
+   highly-commented post.&lt;/li&gt;
+&lt;li&gt;The site now looks bad-ass. Regardless of whether you’re on a phone, tablet
+   computer, or what-have-you, it’s going to look good.&lt;/li&gt;
+&lt;li&gt;All content has been categorized as well as tagged, as you can see in the 
+   sidebar. There are Atom feeds for each.&lt;/li&gt;
+&lt;li&gt;The homepage has a new design that focuses on my projects and bio, and then 
+   has recent posts below that.&lt;/li&gt;
+&lt;li&gt;Long articles like this one get an automatic table of contents on the left.&lt;/li&gt;
+&lt;li&gt;The site is now optimized for speed dial in Opera and to be made into apps
+   on mobile phones and tablets. For example, if you’re reading this on 
+   Android Chrome, you can simply click “Add to homescreen” in the &lt;code&gt;⋮&lt;/code&gt;
+   thing and you’ll be all set.&lt;/li&gt;
+&lt;li&gt;Security is now invincible: No more webserver to update, no more database, 
+   no more outdated Drupal. It’s basically impossible to hack the new site. 
+   I’ve also added my &lt;a href="http://michaeljaylissner.com/archive/mike.gpg"&gt;&lt;span class="caps"&gt;PGP&lt;/span&gt; key&lt;/a&gt; to the &lt;a href="http://michaeljaylissner.com/contact"&gt;contact page&lt;/a&gt;, for those interested. &lt;/li&gt;
+&lt;li&gt;The entire site is now static and doesn’t require that I pay for or maintain
+   a server or database. Bonus!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So those are the high-level changes you can see as of now. If you’re interested
+in the technical nitty-gritty, read on.&lt;/p&gt;
+&lt;h2 id="the-tech"&gt;The Tech&lt;/h2&gt;
+&lt;p&gt;The original motivation to rebuild the site came when the old version kept 
+overwhelming the server that was running it and requiring that I step in to 
+make it work again. And if that weren’t annoying enough, I have been paying
+for that server for the past several years, which just seems a bit silly for
+a simple blog like this one. &lt;/p&gt;
+&lt;p&gt;The solution? A so-called &lt;a href="http://staticsitegenerators.net/"&gt;Static Site Generator&lt;/a&gt; or &lt;span class="caps"&gt;SSG&lt;/span&gt;. With one of these,
+the paradigm for your site totally changes. Instead of having a dynamic site
+that loads every time somebody visits the page or makes a comment, you 
+generate the &lt;em&gt;entire&lt;/em&gt; website on your laptop (this takes about 30 seconds), 
+creating static &lt;span class="caps"&gt;HTML&lt;/span&gt;, and then push that to some cloud provider of choice (in 
+my case, I use Github pages for this because it’s free and easy).&lt;/p&gt;
+&lt;p&gt;There are about 300 SSGs right now and the one I eventually landed on was 
+&lt;a href="https://github.com/getpelican/pelican/"&gt;Pelican&lt;/a&gt; due to it being written in a language I knew (Python), and due to
+it having lots of good themes and plugins. I briefly tried to make a switch to
+&lt;a href="http://hugo.spf13.com/"&gt;Hugo&lt;/a&gt; instead because it’s written in Go and is much faster at generating 
+content, but the documentation for Hugo isn’t very good yet, and &lt;a href="https://github.com/spf13/hugo/issues/96"&gt;it
+doesn’t support basic pagination&lt;/a&gt;, which is something of a showstopper. &lt;/p&gt;
+&lt;h3 id="switching-to-a-ssg-from-drupal"&gt;Switching to a &lt;span class="caps"&gt;SSG&lt;/span&gt; from Drupal&lt;/h3&gt;
+&lt;p&gt;Switching from Drupal was pretty awful and took a &lt;em&gt;lot&lt;/em&gt; of effort — 
+&lt;em&gt;days&lt;/em&gt; of it! The goal was to get all of my posts exported from Drupal, 
+convert them all to markdown, and to get them all live on Github pages. Let’s 
+go through this process together. &lt;/p&gt;
+&lt;h3 id="exporting-from-drupal"&gt;Exporting from Drupal&lt;/h3&gt;
+&lt;p&gt;This step of the puzzle was, shall we say, a pain. Nobody has yet made a 
+Drupal to Pelican converter, so I had to do it myself. &lt;a href="http://michaeljaylissner.com/scripts/drupal_to_hugo.py"&gt;The script&lt;/a&gt; that I 
+wrote dug directly into Drupal’s database, pulled out the contents
+and converted them to a format that Hugo could understand. At the time I 
+thought Hugo would be the &lt;span class="caps"&gt;SSG&lt;/span&gt; for me, but later I switched to Pelican, and had
+to write &lt;a href="http://michaeljaylissner.com/scripts/convert_from_hugo_to_pelican.py"&gt;another script&lt;/a&gt; to make the conversion from Hugo to Pelican.&lt;/p&gt;
+&lt;h3 id="problems-with-drupal"&gt;Problems with Drupal&lt;/h3&gt;
+&lt;p&gt;This was a good start, but Drupal has a few funny conventions. One is that it
+allows files to be “attached” to blog posts. Most blogs don’t do this (Pelican
+and Hugo included), so I had to go through all of the items that I attached to 
+Drupal posts and convert them to inline links instead. This took a while.&lt;/p&gt;
+&lt;p&gt;Another problem I ran into is that the posts themselves were written directly 
+in &lt;span class="caps"&gt;HTML&lt;/span&gt;, which makes them kind of awful, and not very portable between blog
+engines. Content for Hugo or Pelican should be written in Markdown, so I began
+making this conversion to the &lt;a href="/archives.html"&gt;200+ posts&lt;/a&gt; on the site. In general, the process
+for this was to find a post and begin cleaning it up. If I encountered 
+something that a computer could reliably fix across all the posts (for example,
+&lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt; can be converted to &lt;code&gt;*&lt;/code&gt; and &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt; to &lt;code&gt;**&lt;/code&gt;), I wrote a little script 
+to do so. In the end, this took a lot of time, but I now have a collection of
+a few hundred nicely-formed markdown files that power the blog.&lt;/p&gt;
+&lt;h3 id="moving-to-github-pages"&gt;Moving to Github Pages&lt;/h3&gt;
+&lt;p&gt;With all of the content converted properly, the remaining step was to get the
+project live on Github. I found this process confusing, but the process is 
+basically this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;You need to take the output file from Pelican and put it into a Git 
+branch called &lt;code&gt;gh-pages&lt;/code&gt;. To do this with Pelican is remarkably easy, as there is
+a simple command you can run: &lt;code&gt;make github&lt;/code&gt;. Run that, and you’ll be all set,
+with the content pushed and everything.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You need &lt;a href="https://github.com/mlissner/michaeljaylissner.com/blob/gh-pages/CNAME"&gt;a file named &lt;span class="caps"&gt;CNAME&lt;/span&gt;&lt;/a&gt; that simply contains the domain of your 
+website. This is easy in theory — it’s just a plaintext file — but in 
+practice it is difficult because you need the file to be created by the 
+&lt;code&gt;make github&lt;/code&gt; command mentioned above. To do that add the &lt;span class="caps"&gt;CNAME&lt;/span&gt; file to a
+directory at &lt;code&gt;content/extra/CNAME&lt;/code&gt; and then add the following to your pelican
+configuration file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;EXTRA_PATH_METADATA&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;'extra/CNAME'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;'path'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;'CNAME'&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'extra/CNAME'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Do that, and the file will get copied over whenever you run &lt;code&gt;make github&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you’ve done this correctly, you’ll see evidence of such in the 
+repository’s settings page on Github, where it will tell you the domain
+in the &lt;span class="caps"&gt;CNAME&lt;/span&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You need to configure your &lt;span class="caps"&gt;DNS&lt;/span&gt; provider to point your domain to Github.
+This varies by provider, but I can tell you that your final version should
+look something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;↪&lt;/span&gt; &lt;span class="n"&gt;dig&lt;/span&gt; &lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;michaeljaylissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nostats&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nocomments&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nocmd&lt;/span&gt;
+
+&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;DiG&lt;/span&gt; &lt;span class="mf"&gt;9.9.5&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Ubuntu&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;michaeljaylissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nostats&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nocomments&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nocmd&lt;/span&gt;
+&lt;span class="p"&gt;;;&lt;/span&gt; &lt;span class="n"&gt;global&lt;/span&gt; &lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;
+&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;michaeljaylissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;A&lt;/span&gt;
+&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;michaeljaylissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="mi"&gt;3600&lt;/span&gt; &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;CNAME&lt;/span&gt;   &lt;span class="n"&gt;mlissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;mlissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="mi"&gt;3600&lt;/span&gt;    &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;CNAME&lt;/span&gt;   &lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;  &lt;span class="mi"&gt;2&lt;/span&gt;   &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;A&lt;/span&gt;   &lt;span class="mf"&gt;199.27.79.133&lt;/span&gt;
+&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;     &lt;span class="mi"&gt;66087&lt;/span&gt;   &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;NS&lt;/span&gt;  &lt;span class="n"&gt;ns4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;p04&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dynect&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;     &lt;span class="mi"&gt;66087&lt;/span&gt;   &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;NS&lt;/span&gt;  &lt;span class="n"&gt;ns3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;p04&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dynect&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;     &lt;span class="mi"&gt;66087&lt;/span&gt;   &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;NS&lt;/span&gt;  &lt;span class="n"&gt;ns2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;p04&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dynect&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;     &lt;span class="mi"&gt;66087&lt;/span&gt;   &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;NS&lt;/span&gt;  &lt;span class="n"&gt;ns1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;p04&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dynect&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="final-words"&gt;Final Words&lt;/h2&gt;
+&lt;p&gt;This is been a much larger undertaking than I expected, with tons of corner
+cases that I wanted to fix before releasing a new version of the site. In the 
+end though, this has been a good investment that I can expect to keep the site
+going for the next five to ten years.&lt;/p&gt;
+&lt;p&gt;I hope you enjoy the new look and new features.&lt;/p&gt;</summary><category term="meta"></category><category term="blog"></category><category term="me"></category></entry><entry><title>2013 Donations</title><link href="http://michaeljaylissner.com/posts/2013/01/04/2013-donations/" rel="alternate"></link><updated>2013-01-04T18:12:03-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2013-01-04:posts/2013/01/04/2013-donations/</id><summary type="html">&lt;p&gt;Long-time friends will probably realize that with the coming of the new year comes a revisit to my annual&amp;nbsp;donations. &lt;/p&gt;
+&lt;p&gt;This year&amp;#8217;s donations are larger than any previous year, but largely fall along similar trends as in the past. The larger donations this year (about $1,000-worth) go towards non-profit organizations. The choices this year were hard. After consulting with a few friends, I decided to donate to two new categories: Environmental and&amp;nbsp;Anti-Gun.&lt;/p&gt;
+&lt;p&gt;Finding a good environmental organization to give your money is &lt;span class="caps"&gt;HARD&lt;/span&gt;. After a few hours of research, I had looked at many organizations that were doing good work. But a lot of those organizations were still trying to prove the point that climate change is an issue, or were focused on small-scale issues. These are both noble goals, but I think what we need now are big solutions on an international level. I&amp;#8217;m no expert in this topic, by far, but I&amp;#8217;m fairly convinced that individual decision making isn&amp;#8217;t going to solve the problem fast enough. It&amp;#8217;s great if we all learn to recycle and to consider environmental impact in our daily lives. That, I don&amp;#8217;t disagree with. But I don&amp;#8217;t think it&amp;#8217;s enough. I think we need to start forcing governments and organizations to be cleaner. I&amp;#8217;m convinced that so long as the economic incentives are in place that have led to the current behaviors, the market will follow those incentives. I&amp;#8217;m hopeful that my donation to the Center for Climate and Energy Solutions will help bring changes to these&amp;nbsp;incentives.&lt;/p&gt;
+&lt;p&gt;Finding an anti-gun organization is easier, especially given the current state of affairs after Sandyhook Elementary School. While I&amp;#8217;m not so sure that anti-gun legislation is going to solve any truly big problems, I hope that donating my money here will help strike while the iron is hot. I simply can&amp;#8217;t believe that the 2nd Amendment pro-gun lobby is as successful as it is, and I am hopeful that we&amp;#8217;ll be able to change the dialog around guns over the next few years. Gun ownership is trending down in the U.S., and I hope that we can accellerate that trend, bringing a cease to the needless gun deaths violence we currently live&amp;nbsp;with.&lt;/p&gt;
+&lt;p&gt;The other big donations in this year&amp;#8217;s list go mostly towards organizations that I&amp;#8217;ve donated to in the past. Fair Vote and Rootstrikers are organizations that work to fix the current political system. Most Americans (about 70%, I believe) agree that the current Federal legislation system is corrupt, and these organizations are working to fix that. I&amp;#8217;m pessimistic that until these organizations find success, we won&amp;#8217;t be able to deal with the small or large issues facing the country, so these organizations continue to get the plurality of my donation ($400 between them). I think the ridiculous fiscal cliff &amp;#8220;negotiations&amp;#8221; are testament to how bad things have gotten. Our political system is&amp;nbsp;paralyzed.&lt;/p&gt;
+&lt;p&gt;Other organizations that did well this year include a handful of open-source foundations that I rely on, but which otherwise give away their work for free. My livelihood and these very donations rely on these bits of infrastructure we take for granted, so I figure I should give them some money to keep &amp;#8216;em&amp;nbsp;going. &lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s the nitty gritty breakdown of my donations this year (as well as last):
+&lt;iframe width='689' height='500' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0Agzoqmo9VXMvdGYzWWVWbDVRSndvLVhKQjd2aW1iV1E&amp;single=true&amp;gid=0&amp;output=html&amp;widget=true'&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;As always, I welcome input on these decisions, and suggestions for the years ahead. Those that made suggestions for this year, I truly appreciate your&amp;nbsp;help.&lt;/p&gt;</summary><category term="voting reform"></category><category term="technology"></category><category term="me"></category><category term="donations"></category><category term="charity"></category><category term="campaign finance"></category><category term="alma mater"></category></entry><entry><title>Year in Review: Travel Edition</title><link href="http://michaeljaylissner.com/posts/2012/12/31/year-in-review-2012-travel-edition-goddamn-too-much-traveling/" rel="alternate"></link><updated>2012-12-31T22:42:05-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-12-31:posts/2012/12/31/year-in-review-2012-travel-edition-goddamn-too-much-traveling/</id><summary type="html">&lt;p&gt;I did a lot of traveling this year; more than anybody should ever really do. Since I&amp;#8217;m already forgetting all the places I went to, I figured I&amp;#8217;d write it all&amp;nbsp;down. &lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s the&amp;nbsp;tally:&lt;/p&gt;
+&lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;Trip&lt;/td&gt;&lt;th&gt;Flights&lt;/td&gt;&lt;th&gt;Distance (miles)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;London, Germany, Turkey&lt;/td&gt;&lt;td&gt;9&lt;/td&gt;&lt;td&gt;15500&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Germany for work&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;11362&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Montreal Bike Trip and Visit to Montreal&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;5221&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;L.A., San Diego, Colorado backpacking&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;2586&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Olympic Peninsula Backpacking&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;1356&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Paris, Brussels&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;11092&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Law via the Internet Conference at Ithaca&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;5454&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;&lt;strong&gt;&lt;span class="caps"&gt;TOTAL&lt;/span&gt;&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;26&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;52571&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;I&amp;#8217;m pretty sure some things are left out from the beginning of the year, and I&amp;#8217;m still trying to figure out how I ended up doing so much goddamn traveling. For comparison&amp;#8217;s sake, I must note that the Earth is 24,901 around its belly, and this is a total of more than twice&amp;nbsp;that. &lt;/p&gt;
+&lt;p&gt;Next year will be another banner year, as I already have seven weddings on the books. I don&amp;#8217;t think there will be so many trips to Europe though. That&amp;#8217;ll make the biggest&amp;nbsp;difference. &lt;/p&gt;
+&lt;p&gt;I just hope I have enough suits. It&amp;#8217;s gonna be&amp;nbsp;crazy.&lt;/p&gt;</summary><category term="travel"></category><category term="me"></category></entry><entry><title>My Presentation Proposal for LVI 2012</title><link href="http://michaeljaylissner.com/posts/2012/03/15/my-presentation-proposal-for-lvi-2012/" rel="alternate"></link><updated>2012-03-15T20:09:29-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-03-15:posts/2012/03/15/my-presentation-proposal-for-lvi-2012/</id><summary type="html">&lt;p&gt;The &lt;a href="http://blog.law.cornell.edu/lvi2012/"&gt;Law Via the Internet&lt;/a&gt; conference is  celebrating its 20th anniversary
+at Cornell University on October 7-9th. I will be attending, 
+and with any luck, I&amp;#8217;ll be presenting on the topic proposed&amp;nbsp;below.&lt;/p&gt;
+&lt;h3 id="wrangling-court-data-on-a-national-level"&gt;Wrangling Court Data on a National&amp;nbsp;Level&lt;/h3&gt;
+&lt;p&gt;Access to case law has recently become easier than ever: By simply visiting 
+a court&amp;#8217;s website it is now possible to find and read thousands of cases 
+withou  ever leaving your home. At the same time, there are nearly a hundred
+ court websites, many of these websites suffer from poor funding or 
+ prioritization, and gaining a higher-level view of the law can be 
+ challenging. &amp;#8220;&lt;a href="https://github.com/freelawproject/juriscraper/"&gt;Juriscraper&lt;/a&gt;&amp;#8221; is a new project designed to ease these 
+ problems for all those that wish to collect these court opinions daily. The
+  project is under active development, and we are looking for others to get&amp;nbsp;involved.&lt;/p&gt;
+&lt;p&gt;Juriscraper is a liberally-licensed open source library that can be picked 
+up and used by any organization to scrape the case data from court websites.
+ In addition to a simply scraping the websites and extracting metadata from 
+ them, Juriscraper has a number of other design&amp;nbsp;goals:   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Extensibility to support video, oral argument audio, and other media&amp;nbsp;types&lt;/li&gt;
+&lt;li&gt;Support for all metadata provided by court&amp;nbsp;websites&lt;/li&gt;
+&lt;li&gt;Extensibility to support varied geographies and&amp;nbsp;jurisdictions&lt;/li&gt;
+&lt;li&gt;Generalized object-oriented architecture with little or no code&amp;nbsp;repetition&lt;/li&gt;
+&lt;li&gt;Standardized coding techniques using the latest libraries and standards (Python, xpath, lxml, requests,&amp;nbsp;chardet)&lt;/li&gt;
+&lt;li&gt;Simple installation, configuration, and &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Friendly and transparent to court&amp;nbsp;websites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As well as a number of&amp;nbsp;features:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Harmonizatio  of metadata (&lt;span class="caps"&gt;US&lt;/span&gt;, &lt;span class="caps"&gt;USA&lt;/span&gt;, United States of America, 
+ etc ? United States; et al, et. al., etc. get eliminated; vs., v, 
+ vs ? v.; all dates are Python objects;&amp;nbsp;etc.)&lt;/li&gt;
+&lt;li&gt;Smart title-casing of case names (several courts provide case names in 
+ uppercase&amp;nbsp;only)&lt;/li&gt;
+&lt;li&gt;Sanity checking and sorting of metadata values returned by court&amp;nbsp;websites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once implemented, Juriscraper is part of a two-part system. The second part 
+is the caller, which uses the &lt;span class="caps"&gt;API&lt;/span&gt;, and which itself solves some interesting&amp;nbsp;questions:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How are duplicates detected and&amp;nbsp;avoided? &lt;/li&gt;
+&lt;li&gt;How can the impact on court websites be&amp;nbsp;minimized?&lt;/li&gt;
+&lt;li&gt;How can mime type detection be completed successfully so that textual contents can be&amp;nbsp;extracted?&lt;/li&gt;
+&lt;li&gt;What should we do if it is an image-based &lt;span class="caps"&gt;PDF&lt;/span&gt;?&lt;ul&gt;
+&lt;li&gt;How should &lt;span class="caps"&gt;HTML&lt;/span&gt; be&amp;nbsp;tidied?&lt;/li&gt;
+&lt;li&gt;How often should we check a court website for new&amp;nbsp;content?  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;What should we do in case of&amp;nbsp;failure?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Juriscraper is currently deployed by CourtListener.com to scrape all of the 
+Federal Appeals courts, and we are slowly adding additional state courts 
+over the coming&amp;nbsp;weeks. &lt;/p&gt;
+&lt;p&gt;We have been scraping these sites in various ways for several years, 
+and Juriscraper is the culmination of what we&amp;#8217;ve learned. We hope that by 
+presenting our work at &lt;span class="caps"&gt;LVI&lt;/span&gt; 2012, we will be able to share what we have 
+learned and gain additional collaborators in our&amp;nbsp;work.&lt;/p&gt;</summary><category term="proposal"></category><category term="presentations"></category><category term="me"></category><category term="lvi2012"></category><category term="juriscraper"></category><category term="CourtListener"></category></entry><entry><title>Tripling Down</title><link href="http://michaeljaylissner.com/posts/2011/10/27/tripling-down/" rel="alternate"></link><updated>2011-10-27T21:09:36-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2011-10-27:posts/2011/10/27/tripling-down/</id><summary type="html">&lt;p&gt;I&amp;#8217;m tripling down on my donations &lt;a href="/blog/2011-donations"&gt;that I placed&lt;/a&gt; at the beginning of the year. Feels&amp;nbsp;right.&lt;/p&gt;</summary><category term="donations"></category><category term="me"></category></entry><entry><title>Lecturing at UC Berkeley</title><link href="http://michaeljaylissner.com/posts/2010/07/30/lecturing-at-uc-berkeley/" rel="alternate"></link><updated>2010-07-30T13:10:56-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-07-30:posts/2010/07/30/lecturing-at-uc-berkeley/</id><summary type="html">&lt;p&gt;This summer I&amp;#8217;ve been busy with a number of things. One of them has been 
+teaching &lt;a href="http://courses.ischool.berkeley.edu/i153-waim/su10/"&gt;Web Architecture and Information Management&lt;/a&gt; at &lt;span class="caps"&gt;UC&lt;/span&gt; Berkeley 
+with two other guys from the School of Information. It&amp;#8217;s been a &lt;span class="caps"&gt;TON&lt;/span&gt; of work
+ for not a whole lot of pay, but it&amp;#8217;s been really&amp;nbsp;interesting.&lt;/p&gt;
+&lt;p&gt;Since the three of us split up the work, I only have to do about four 
+lectures, but the class is two and a half hours long three times a week, 
+which is a lot of talking time. I imagine it&amp;#8217;s not easy for the students to
+ be in the class that frequently&amp;nbsp;either.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m giving lectures on the following&amp;nbsp;topics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class="caps"&gt;HTML&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Search&lt;/li&gt;
+&lt;li&gt;Browsers&lt;/li&gt;
+&lt;li&gt;Privacy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you&amp;#8217;re interested, I&amp;#8217;ve posted my slides for these in the &lt;a href="http://michaeljaylissner.com/projects-and-papers"&gt;projects and 
+papers&lt;/a&gt; section of the site. It&amp;#8217;s definitely true that the best way to 
+learn it to&amp;nbsp;teach.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve also been learning a little about how to get the class to participate 
+and be involved, but that&amp;#8217;s probably the most challenging part. A lot of 
+the students know a lot about the material, and are pretty bored, 
+while others are seeing everything for the first time. It makes it pretty 
+tricky, but it&amp;#8217;s working out as the class gets to know each other. We 
+started doing student presentations this week, and that has helped 
+everybody get a little more skin in the&amp;nbsp;game.&lt;/p&gt;</summary><category term="Web Architecture"></category><category term="teaching"></category><category term="summer"></category><category term="Cal"></category><category term="me"></category></entry><entry><title>With Howard Zinn’s Death, We All Suffer a Little</title><link href="http://michaeljaylissner.com/posts/2010/01/27/with-howard-zinns-death-we-all-suffer-a-little/" rel="alternate"></link><updated>2010-01-27T20:11:37-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-01-27:posts/2010/01/27/with-howard-zinns-death-we-all-suffer-a-little/</id><summary type="html">&lt;p&gt;Howard Zinn was one of the greats. He may not have freed the slaves or 
+created the nation, but it is safe to say that his every action and his 
+every belief furthered the dream and the ideals of the American state. After
+ eight years of Bush policies dragging down the nation, 
+ and a year of Obama sounding increasing like an echo of Bush, 
+ it is truly tragic that we are losing this&amp;nbsp;thinker. &lt;/p&gt;
+&lt;p&gt;I &lt;a href="http://michaeljaylissner.com/posts/2008/01/19/howard-zinn-the-use-and-abuse-of-history/"&gt;posted&lt;/a&gt; this quote from Zinn&amp;#8217;s &lt;em&gt;Passionate Declarations&lt;/em&gt; 
+some time ago, but now more than ever it seems&amp;nbsp;relevant:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What sorts of values and ideals are encouraged in the young people of the
+ coming generation by the enormous emphasis on the Founding Fathers and the 
+ presidents? It seems to me that the result is the creation of dependency on
+  powerful political figures to solve our&amp;nbsp;problems.&lt;/p&gt;
+&lt;p&gt;&amp;#8230;&lt;/p&gt;
+&lt;p&gt;Consider how much attention is given in historical writing to military 
+affairs&amp;ndash;to wars and battles&amp;ndash;and how many of our heroes are military 
+heroes. And consider also how little attention is given to antiwar movements and to those who struggled against the idiocy of&amp;nbsp;war.&lt;/p&gt;
+&lt;p&gt;&amp;#8230;&lt;/p&gt;
+&lt;p&gt;As a result of omitting, or downplaying, the importance of social movements
+ of the people in our history&amp;#8230;a fundamental principle of democracy is 
+ undermined: the principle that it is the citizenry, 
+ rather than the government, that is the ultimate source of power and the 
+ locomotive that pulls the train of government in the direction of equality 
+ and justice. Such histories create a passive and subordinate&amp;nbsp;citizenry.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you haven&amp;#8217;t read &lt;em&gt;&lt;a href="http://www.amazon.com/exec/obidos/ASIN/0060557672/simiansbooksonli"&gt;Passionate Declarations&lt;/a&gt;&lt;/em&gt;, you&amp;nbsp;should.&lt;/p&gt;</summary><category term="zinn"></category><category term="RIP"></category><category term="politics"></category><category term="me"></category></entry><entry><title>Cheap Metal Bike Stand</title><link href="http://michaeljaylissner.com/posts/2009/12/29/cheap-metal-bike-stand/" rel="alternate"></link><updated>2009-12-29T12:05:12-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-29:posts/2009/12/29/cheap-metal-bike-stand/</id><summary type="html">&lt;p&gt;It&amp;#8217;s my winter break right now, so I&amp;#8217;m taking advantage of it by doing some 
+of the things that have been on my list for far too long. One of those 
+things was to build a repair stand for the work I do on the bikes in my life. 
+For about $50, you can build this stand, which works remarkably&amp;nbsp;well. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/bike-stand/000-DSC02109.JPG" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/bike-stand/000-DSC02106.JPG" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/bike-stand/001-DSC02110.JPG" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/bike-stand/002-DSC02111.JPG" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/bike-stand/003-DSC02112.JPG" /&gt;&lt;/p&gt;
+&lt;p&gt;Essentially, what you need to make this beauty is five pipes, 
+a 90 degree elbow, a 45 degree elbow, and a welder. Since I don&amp;#8217;t weld, 
+I went to &lt;a href="http://www.yelp.com/biz/rons-berkeley-muffler-service-oakland"&gt;a local muffler shop&lt;/a&gt; and they were happy to do it (for 
+free!) The one big lesson I&amp;#8217;ll share is that you can&amp;#8217;t (and shouldn&amp;#8217;t) make
+this from galvanized metal, since welding that &lt;a href="http://en.wikipedia.org/wiki/Metal_fume_fever"&gt;is dangerous&lt;/a&gt;. The 
+stuff you want is called &amp;#8220;black&amp;nbsp;pipe.&amp;#8221;&lt;/p&gt;</summary><category term="metallurgy"></category><category term="craft"></category><category term="biking"></category><category term="bike repair"></category><category term="me"></category></entry><entry><title>The Latest Books and Classes</title><link href="http://michaeljaylissner.com/posts/2009/02/01/the-latest-books-and-classes/" rel="alternate"></link><updated>2009-02-01T14:45:21-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-02-01:posts/2009/02/01/the-latest-books-and-classes/</id><summary type="html">&lt;p&gt;Well, another semester has begun at the School of Information, and so I figured I&amp;#8217;d share my latest classes and&amp;nbsp;books.&lt;/p&gt;
+&lt;p&gt;As of now, I&amp;#8217;ve boiled my classes down to the&amp;nbsp;following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mixing and Remixing&amp;nbsp;Information&lt;/li&gt;
+&lt;li&gt;Interface&amp;nbsp;Aesthetics&lt;/li&gt;
+&lt;li&gt;Social and Organizational Issues of&amp;nbsp;Information&lt;/li&gt;
+&lt;li&gt;Strategic Computing and Communications&amp;nbsp;Technology&lt;/li&gt;
+&lt;li&gt;Information Law and&amp;nbsp;Policy&lt;/li&gt;
+&lt;li&gt;Cyberlaw&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And somehow, I only had to buy three books and four readers this semester, for a total of $315. Somehow, this is more than last semester when I had five books and four readers. Oh well. The books from this semester&amp;nbsp;are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Information Rules: A Strategic Guide to the Network&amp;nbsp;Economy&lt;/li&gt;
+&lt;li&gt;Software and Internet&amp;nbsp;Law&lt;/li&gt;
+&lt;li&gt;Pro Web 2.0&amp;nbsp;Mashups&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So far, classes are going well, but at least one of them will need to get cut. It&amp;#8217;s going to be hard to decide, but luckily I don&amp;#8217;t have to for another few&amp;nbsp;months.&lt;/p&gt;</summary><category term="me"></category><category term="ischool"></category><category term="books"></category></entry><entry><title>Meyer Lissner Was Famous</title><link href="http://michaeljaylissner.com/posts/2008/12/31/meyer-lissner-was-famous-go-figure/" rel="alternate"></link><updated>2008-12-31T13:50:36-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-12-31:posts/2008/12/31/meyer-lissner-was-famous-go-figure/</id><summary type="html">&lt;p&gt;There has been some talk in my family over the years about my great 
+grandfather, Meyer Lissner. Over the holidays, I scanned some old photos, 
+and discovered that he was quite the famous fellow. Below is a &lt;a href="http://en.wikipedia.org/wiki/Liberty_ships"&gt;liberty 
+ship&lt;/a&gt; that was named after him in&amp;nbsp;1943.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Liberty ship named Meyer Lissner" src="http://michaeljaylissner.com/images/liberty-ship.jpg" /&gt; &lt;/p&gt;
+&lt;p&gt;I also learned that my grandfather donated a &lt;strong&gt;&lt;span class="caps"&gt;LOT&lt;/span&gt;&lt;/strong&gt; of his 
+papers to the Stanford Library as the &lt;a href="http://content.cdlib.org/view?docId=tf858006bb&amp;amp;chunk.id=did-1.8.1&amp;amp;brand=oac"&gt;Meyer Lissner Papers&lt;/a&gt;. I haven&amp;#8217;t 
+read up much on him yet, but he seems pretty influential to California 
+history as part of a reform&amp;nbsp;movement. &lt;/p&gt;
+&lt;p&gt;Interesting stuff. I&amp;#8217;m going to have to do some researching on this fellow 
+one of these&amp;nbsp;days.&lt;/p&gt;</summary><category term="me"></category><category term="history"></category><category term="Meyer Lissner"></category><category term="California"></category></entry><entry><title>Quick Update on my Prostate</title><link href="http://michaeljaylissner.com/posts/2008/09/17/quick-update-on-my-prostate/" rel="alternate"></link><updated>2008-09-17T15:24:10-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-17:posts/2008/09/17/quick-update-on-my-prostate/</id><summary type="html">&lt;p&gt;Well, there is an interesting development in the theft of my credit card 
+number. Today I received supplements in the mail for my prostate. Supplements 
+that were bought with my credit card. For those wondering, no, I do not need 
+this medicine. No, I did not order this&amp;nbsp;medicine. &lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m intrigued and a bit amused that this is what my identity thief decided to 
+do with my money, but I&amp;#8217;m going to have to decline their offer of prostate 
+supplements. This purchase raises so many questions, I don&amp;#8217;t know exactly 
+where to&amp;nbsp;begin.&lt;/p&gt;</summary><category term="me"></category><category term="identity"></category><category term="security"></category></entry><entry><title>Ch-ch-ch-ch-Changes</title><link href="http://michaeljaylissner.com/posts/2008/08/25/ch-ch-ch-ch-changes/" rel="alternate"></link><updated>2008-08-25T21:02:04-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-08-25:posts/2008/08/25/ch-ch-ch-ch-changes/</id><summary type="html">&lt;p&gt;Well, we got back from Peru on Sunday (pictures forthcoming), and today was my 
+last day at work with the &lt;a href="http://ehsd.org/comm000.html"&gt;Community 
+Services Bureau&lt;/a&gt; of Contra Costa&amp;nbsp;County. &lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve never worked somewhere for so long - all in all,  it was about three 
+years, during which time I progressed from Temp Clerk to Intermediate Clerk 
+to Assistant Manager. You do gotta love working in&amp;nbsp;government.&lt;/p&gt;
+&lt;p&gt;In a way, I&amp;#8217;ve been planning on quitting since about December of 2006, when I 
+first applied to go back to school. Now that it&amp;#8217;s a year and a half later, 
+I&amp;#8217;m surprised I&amp;#8217;m not more excited or elated about this change. It&amp;#8217;s possible 
+it hasn&amp;#8217;t sunk in yet because I have been on vacation for the past two weeks 
+(and am used to not going to work), but ultimately, I feel pretty normal, 
+which is&amp;nbsp;odd.&lt;/p&gt;
+&lt;p&gt;Tomorrow is the first day of school at the &lt;a href="http://ischool.berkeley.edu"&gt;Berkeley 
+School of Information&lt;/a&gt;. I&amp;#8217;ve got my classes all set up, and I&amp;#8217;m shocked at 
+exactly how awesome the classes&amp;nbsp;are. &lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s the official list as of&amp;nbsp;now:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Information Organization and&amp;nbsp;Retrieval&lt;/li&gt;
+&lt;li&gt;Distributing Computing Applications and&amp;nbsp;Infrastructure&lt;/li&gt;
+&lt;li&gt;Politics of&amp;nbsp;Piracy&lt;/li&gt;
+&lt;li&gt;Climate Change Impacts and&amp;nbsp;Adaptation&lt;/li&gt;
+&lt;li&gt;Computer Mediated&amp;nbsp;Communication&lt;/li&gt;
+&lt;li&gt;Photovoltaic Materials: Modern&amp;nbsp;Technologies&lt;/li&gt;
+&lt;li&gt;Metrics of&amp;nbsp;Sustainability&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A lot of classes, eh? It&amp;#8217;s 20 units as of now, so I am definitely going to drop a number of them. It&amp;#8217;s going to be hard to decide which to drop though. It&amp;#8217;s a three-way split between classes offered through Haas school of business, the Energy and Resources Group and the iSchool. I guess we&amp;#8217;ll see which float to the&amp;nbsp;top. &lt;/p&gt;</summary><category term="me"></category><category term="ischool"></category></entry><entry><title>Update from Peru</title><link href="http://michaeljaylissner.com/posts/2008/08/13/update-from-peru/" rel="alternate"></link><updated>2008-08-13T20:14:53-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-08-13:posts/2008/08/13/update-from-peru/</id><summary type="html">&lt;p&gt;My girlfriend and I have been travelling around Peru for the past week or so. 
+It has been nothing short of&amp;nbsp;awesome.&lt;/p&gt;
+&lt;p&gt;Our first stop was in Lima for one night, after which point, we left to go to 
+the Amazon Basin, specifically Puerto Maldonado. In Puerto Maldonado, we were 
+picked up by our guide, and quickly ushered down the Tambopata river. From our 
+jungle lodge, we had a number of rather excellent excursions. We went to a 
+bird clay lick, where we saw a fair amount of birds, including red maccaws. We 
+went to a jungle farm, and learned about their practices, and ate a bunch of 
+fruit (some normal, some strange). We climbed a tower into the jungle canopy 
+and did some bird watching from there, and we spent a night camping in the 
+jungle. On that last excursion, we saw the most poisonous spider in Peru (I 
+think), and saw some other spiders that I have to admit were damned frightening. 
+So far, no malaria, or other jungle diseases to speak&amp;nbsp;of.&lt;/p&gt;
+&lt;p&gt;At the moment we are in Cusco, which is effectively the tourist capital of Peru. 
+Today we saw the Sacred Valley, and tomorrow we head out on a four-day hike 
+along the Inca trail, culminating at Machu&amp;nbsp;Piccu. &lt;/p&gt;
+&lt;p&gt;From here, we head to Arequipa, and from there, to Lima and then&amp;nbsp;home.&lt;/p&gt;</summary><category term="me"></category><category term="Peru"></category></entry><entry><title>My Linux Story</title><link href="http://michaeljaylissner.com/posts/2008/07/17/my-linux-story/" rel="alternate"></link><updated>2008-07-17T20:03:38-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-07-17:posts/2008/07/17/my-linux-story/</id><summary type="html">&lt;p&gt;I thought I would post a quick entry today about how I came to be a Linux user and enthusiast. I guess it&amp;#8217;s a combination of a couple&amp;nbsp;things.&lt;/p&gt;
+&lt;p&gt;Historically, what happened was that I was using &lt;span class="caps"&gt;XP&lt;/span&gt; and looking at thumbnails of some pictures in their file navigator. I was looking at about 300 pictures, and I didn&amp;#8217;t want to open them all up individually (this was before useful apps like Picasa came around). I just wanted to look at the thumbnails. Except those were too small, so I wanted to make them bigger. I spent about two hours searching online to try to figure out how to make such an adjustment. Eventually, I discovered a Windows &amp;#8220;Powertool&amp;#8221; that you could install. It seemed like overkill, but it did the job. What bugged me though about it was that obviously it didn&amp;#8217;t require a Powertool to adjust image size. It just required a tweak of some bit of code somewhere in the system. That was my tipping point. I decided I couldn&amp;#8217;t take the viruses, the expense and the closed product anymore, and promptly decided it was time for a new &lt;span class="caps"&gt;OS&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;So that&amp;#8217;s what brought me to Linux. What kept me here is the openness and the philosophy. Sure, at times it&amp;#8217;s a bit trickier to get certain things done, but I love the philosophy that if I want a change, I can either make it myself if I am a programmer, or I can file a feature request with the developers. Somebody will read that request, and maybe it will get integrated, if it&amp;#8217;s a good enough&amp;nbsp;idea.&lt;/p&gt;
+&lt;p&gt;I also love the fact that I can download, install and run an excellent email server, and a top-notch web server. For free. Also, no viruses. Ever. Nor any anti-virus software to pay for. And did I mention the whole thing is&amp;nbsp;free? &lt;/p&gt;
+&lt;p&gt;As for the day to day stuff, I really don&amp;#8217;t notice much difference. At work, I use &lt;span class="caps"&gt;XP&lt;/span&gt;, which involves using Firefox, Word, Excel and Outlook (the latter three of which my work paid good money for). At home it&amp;#8217;s Firefox, Open Office and Evolution, all of which are very similar to the Microsoft package, only with better compatibility with other&amp;nbsp;programs.&lt;/p&gt;
+&lt;p&gt;The other thing I really like about my Linux system is the ability to set things up like in the previous tutorial. I did an Internet search for &amp;#8220;Linux wake on &lt;span class="caps"&gt;USB&lt;/span&gt;&amp;#8221;, and knew exactly how to adjust the system in a matter of moments. That kind of customization is a power you just don&amp;#8217;t have in&amp;nbsp;Windows.&lt;/p&gt;</summary><category term="Linux"></category><category term="me"></category></entry><entry><title>My Eyeballs</title><link href="http://michaeljaylissner.com/posts/2008/06/25/my-eyeballs/" rel="alternate"></link><updated>2008-06-25T21:27:17-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-06-25:posts/2008/06/25/my-eyeballs/</id><summary type="html">&lt;p&gt;&lt;img alt="My eye" src="http://michaeljaylissner.com/images/eyeball.jpeg" /&gt;&lt;/p&gt;
+&lt;p&gt;Got my eyeballs checked at the Berkeley Optometric Group on Friday. They 
+dilated my eyes and took this picture. It was awesome. Now we know that my 
+eyes are in good shape.&amp;nbsp;Good.&lt;/p&gt;
+&lt;p&gt;That&amp;#8217;s a picture of my&amp;nbsp;eye.&lt;/p&gt;</summary><category term="me"></category></entry><entry><title>The Vision</title><link href="http://michaeljaylissner.com/posts/2008/04/15/the-vision/" rel="alternate"></link><updated>2008-04-15T22:33:39-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-15:posts/2008/04/15/the-vision/</id><summary type="html">&lt;p&gt;If you have been reading this blog for any length of time, you are probably aware that I am a huge environmentalist. You may not clearly understand just how huge an environmentalist I am though. Lately, I have been doing some thinking about my long-term goals, and some of them are coming into some&amp;nbsp;clarity:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I want to build a house and live in&amp;nbsp;it.&lt;/li&gt;
+&lt;li&gt;I want my house to be made while maintaining a neutral carbon impact. If I 
+use trees to build my house, I want those materials to be renewed before my&amp;nbsp;death.&lt;/li&gt;
+&lt;li&gt;I want to stop using petroleum and coal altogether. No cars. No 
+petroleum fed food. Only clean energy. Offsets for all things outside the realm of the&amp;nbsp;above.&lt;/li&gt;
+&lt;li&gt;I want to achieve the above&amp;nbsp;comfortably.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In a blog, these goals seem a little silly, but I have been thinking about variations of these for many years, and they are indeed quite serious, real&amp;nbsp;goals. &lt;/p&gt;
+&lt;p&gt;That said, putting them out there in public makes me look and feel like an extremist, like a crazy person outside of what is considered the norm - outside even of the margins. I think I can do it though, and I think I need to get to work soon if I am going to feel like my life has been a&amp;nbsp;success.&lt;/p&gt;
+&lt;p&gt;The first thing I need is money. More of it. Lots more of&amp;nbsp;it.&lt;/p&gt;</summary><category term="me"></category><category term="environment"></category></entry><entry><title>The Mission: Results</title><link href="http://michaeljaylissner.com/posts/2008/04/15/the-mission-results/" rel="alternate"></link><updated>2008-04-15T22:17:28-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-15:posts/2008/04/15/the-mission-results/</id><summary type="html">&lt;p&gt;Well, it&amp;#8217;s been a month, and the results are in. For the past month, I&amp;#8217;ve been &lt;a href="/blog/the-mission"&gt;trying to realize some pretty ambitious goals,&lt;/a&gt; and let me tell you, it has not been&amp;nbsp;easy.&lt;/p&gt;
+&lt;p&gt;The first, and perhaps most important goal was to &amp;#8220;avoid single-passenger car usage at all costs.&amp;#8221; For the most part, this goal has been a success. To achieve this goal, I have had to change my behavior and paradigms pretty radically. For my daily commute, I changed from a 25 minute car ride to a 45 minute bike and train ride. For groceries, I had to carry a massive backpack full of food, and for everything else, I have been riding my bike all around town. The one time I failed at this goal was when my car broke (somebody else was driving it), and it had to get to a mechanic. For that, I apologize, but what can you&amp;nbsp;do?&lt;/p&gt;
+&lt;p&gt;The second goal was to jump a rope 500 times daily. I have failed at this goal for a couple of reasons. The first is travel. I did a fair amount of travel during the past month, and it&amp;#8217;s a tiring thing to do. I don&amp;#8217;t like jumping rope after traveling. That&amp;#8217;s a fact. The second reason is that I was doing &lt;em&gt;a lot&lt;/em&gt; of other exercise during the past month. I biked about 120 miles during my commute, I played soccer and basketball, and I hiked about 30 miles. Am I really supposed to jump rope after all&amp;nbsp;that? &lt;/p&gt;
+&lt;p&gt;The next goal was flossing. I flossed pretty much every day during the period, but I did forget to bring it during one of the vacations mentioned above, so I didn&amp;#8217;t floss during those nights. I was lucky enough to have a dentist (dis)appointment during the month, wherein I learned that I have three fresh, new cavities in my mouth, so that helped to make the flossing goal a success (sort&amp;nbsp;of).&lt;/p&gt;
+&lt;p&gt;No hydrogenated oil. This was a pretty easy one all in all. I failed once, when in a meeting it just was kind of unavoidable because of social circumstances. I made up for it though by persuading a friend not to eat hydrogenated oil at a later date, so my karma is good there. This stuff is all over the place in food. It&amp;#8217;s pretty surprising where it turns up when you start looking for&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;For the reading a half hour goal, it was a piece of cake since I was riding public transportation anyway. I did neglect it on the weekends, but I think the balance came out &lt;span class="caps"&gt;OK&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;That was a lot of detail, I know. More than you probably wanted, but I wanted to get it on paper (so to speak). The real outcomes of this are not those of the 30 days, but rather the outcomes of long-term change in my habits. I can say that this was a rather challenging process, and I didn&amp;#8217;t really enjoy it the entire time. It made me a lot more tired each day, and the commuting made me have to get up earlier, so that was tough. Figuring out how to do things by bike has a learning curve as well, which was also stressful at&amp;nbsp;times.&lt;/p&gt;
+&lt;p&gt;When it is all said and done though, I can say that this has been a positive experience. I am planning on continuing most of the goals (floss, oil, car and reading), but I think the jump rope can leave my life at this&amp;nbsp;point. &lt;/p&gt;
+&lt;p&gt;There are two answers to the question of whether the mission was a success. I did not achieve any of the goals without some kind of qualifier, so in that regard, no the mission has failed. However, on the other hand, it has created lasting change in me, so in that regard, the mission is a great&amp;nbsp;success.&lt;/p&gt;</summary><category term="me"></category></entry><entry><title>Something New…and Some Updates</title><link href="http://michaeljaylissner.com/posts/2008/04/01/something-new-and-some-updates/" rel="alternate"></link><updated>2008-04-01T22:45:48-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-04-01:posts/2008/04/01/something-new-and-some-updates/</id><summary type="html">&lt;p&gt;I&amp;#8217;m starting something new. I can&amp;#8217;t tell you what it is yet, but I&amp;#8217;m very excited about it. It has nothing to do with anything you might be thinking that it is. Unless you already know what it is. Confused? Don&amp;#8217;t be. You&amp;#8217;ll find out what it is soon enough. For those of you that are wondering, no, this has nothing to do with my &amp;#8220;Secret Skill&amp;#8221; that I picked up while in&amp;nbsp;Spain.&lt;/p&gt;
+&lt;p&gt;In other news, it&amp;#8217;s official - I&amp;#8217;m going to Peru in August before starting at Cal. I had no idea Peru was so awesome. It&amp;#8217;s like a giant exaggerated California, except with jungle. They have massive &lt;a href="http://en.wikipedia.org/wiki/Huacachina"&gt;sand dunes&lt;/a&gt;, the &lt;a href="http://en.wikipedia.org/wiki/Nevado_Huascaran"&gt;4th highest mountain in the Americas&lt;/a&gt;, the headlands for the Amazon River, &lt;a href="http://en.wikipedia.org/wiki/Colca_Canyon"&gt;giant canyons&lt;/a&gt; that make the grand canyon seem quaint, and so much adventure, I have no idea how to handle it. Also, did I mention &lt;a href="http://en.wikipedia.org/wiki/Machu_Picchu"&gt;Machu Picchu&lt;/a&gt;? &lt;a href="http://en.wikipedia.org/wiki/Lake_Titicaca"&gt;Lake Titicaca&lt;/a&gt;?&lt;/p&gt;
+&lt;p&gt;More details to come on this&amp;nbsp;craziness.&lt;/p&gt;</summary><category term="me"></category><category term="travel"></category></entry><entry><title>A Decision Has Been Made</title><link href="http://michaeljaylissner.com/posts/2008/03/15/a-decision-has-been-made/" rel="alternate"></link><updated>2008-03-15T00:47:52-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-03-15:posts/2008/03/15/a-decision-has-been-made/</id><summary type="html">&lt;p&gt;Well, it wasn&amp;#8217;t easy to figure this one out, but I have officially chosen to 
+go to &lt;span class="caps"&gt;UC&lt;/span&gt; Berkeley. The reasons were many, but what it boiled down to in the 
+end were four&amp;nbsp;things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Price&lt;/li&gt;
+&lt;li&gt;Curriculum&lt;/li&gt;
+&lt;li&gt;Location&lt;/li&gt;
+&lt;li&gt;Reputation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These are usually summarized by the acronym &lt;span class="caps"&gt;PCLR&lt;/span&gt; (pronounced&amp;nbsp;&amp;#8220;Pickler&amp;#8221;). &lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m excited about having chosen Cal, though it was a very challenging 
+decision. Obviously, my happiness for the next two years was at stake, but 
+beyond that, it seems like my entire future was on the table. Check back with 
+me in four years, we&amp;#8217;ll see how I&amp;#8217;m&amp;nbsp;doing&amp;#8230;&lt;/p&gt;</summary><category term="me"></category><category term="Cal"></category></entry><entry><title>The Mission</title><link href="http://michaeljaylissner.com/posts/2008/03/15/the-mission/" rel="alternate"></link><updated>2008-03-15T00:41:57-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-03-15:posts/2008/03/15/the-mission/</id><summary type="html">&lt;p&gt;Here&amp;#8217;s the mission folks. For the next month, I will do the following every&amp;nbsp;day:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I will jump a rope on average 500&amp;nbsp;times.&lt;/li&gt;
+&lt;li&gt;I will eat no hydrogenated&amp;nbsp;oil&lt;/li&gt;
+&lt;li&gt;I will floss every&amp;nbsp;day&lt;/li&gt;
+&lt;li&gt;I will avoid single-passenger car usage at all&amp;nbsp;costs&lt;/li&gt;
+&lt;li&gt;I will read a book for at least one half&amp;nbsp;hour&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I started this on Monday, and so far so good. It&amp;#8217;s a lot for one day - especially the car and the jumprope&amp;nbsp;thing.&lt;/p&gt;
+&lt;p&gt;Will report back (hopefully) in one&amp;nbsp;month.&lt;/p&gt;</summary><category term="me"></category><category term="health"></category></entry><entry><title>My Child Is NOT Catholic</title><link href="http://michaeljaylissner.com/posts/2008/03/09/my-child-is-not-catholic-dawkins-insists/" rel="alternate"></link><updated>2008-03-09T10:34:27-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-03-09:posts/2008/03/09/my-child-is-not-catholic-dawkins-insists/</id><summary type="html">&lt;p&gt;&lt;img alt="Dawkins" src="http://michaeljaylissner.com/images/dawkins.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;I had the pleasure of going to see &lt;a href="http://en.wikipedia.org/wiki/Richard_Dawkins"&gt;Richard Dawkins&lt;/a&gt; last night at Cal. 
+Although our fourth-row seating probably influenced my judgement, 
+I must say he is a truly excellent&amp;nbsp;speaker. &lt;/p&gt;
+&lt;p&gt;I finished his book, &lt;a href="http://en.wikipedia.org/wiki/The_God_Delusion"&gt;&lt;em&gt;The God Delusion&lt;/em&gt;&lt;/a&gt; several months ago, 
+and I had to agree with a friend who said he was a bit &amp;#8220;heavy-handed&amp;#8221; in 
+the book. So when I went to see him in person, I expected much the same. I 
+expected him to push me, to drive his point, to be a little bit too 
+aggressive in his delivery. To the contrary though, he is a subtle, 
+interesting, humble, and actually quite a funny&amp;nbsp;speaker. &lt;/p&gt;
+&lt;p&gt;In his speech, he engaged in &amp;#8220;consciousness raising&amp;#8221;, 
+which he believes worked for feminism, and which he believes will work for 
+religion. His example was that as a result of feminist consciousness 
+raising, if I say: &amp;#8220;All men are created equal&amp;#8221;, you might think: &amp;#8220;Right, 
+but what about the women?&amp;#8221; He wants to apply this tool to religion, 
+so if I say: &amp;#8220;A Catholic child&amp;#8221;, you think: &amp;#8220;Children aren&amp;#8217;t Catholics - 
+They&amp;#8217;re too young to know where they stand on such&amp;nbsp;issues.&amp;#8221; &lt;/p&gt;
+&lt;p&gt;He believes (and I must agree) that religion in the world has brought much 
+violence and destruction, and that the whole thing could be cut off at the 
+stem if we all realized that our children do not share our religion. I&amp;#8217;m 
+simplifying and combining several of his points, but that was really the 
+thrust of his speech. If I am a catholic, that does not make my child a 
+catholic; I a Muslim, does not make my child a Muslim.&amp;nbsp;Etc.&lt;/p&gt;
+&lt;p&gt;To drive his point home, Dawkins showed a picture that he said he found on 
+the Christmas cover of the &lt;span class="caps"&gt;UK&lt;/span&gt;&amp;#8217;s &lt;a href="http://www.telegraph.co.uk/"&gt;Telegraph Newspaper&lt;/a&gt;. In the picture, 
+were three children sitting side by side in costume for some Christmas event
+(I think they were the three wise men or some such). The idea behind the 
+picture was to depict religious harmony. To quote his&amp;nbsp;book:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;At Christmas-time one year my daily newspaper, the Independent, 
+was looking for a seasonal image and found a heart-warmingly ecumenical one
+at a school nativity play. The Three Wise Men were played by, 
+as the caption glowingly said, Shadbreet (a Sikh), 
+Musharraf (a Muslim) and Adele (a Christian), all aged four. Charming? 
+Heart-warming? No, it is not, it is neither; it is grotesque. [&amp;#8230;] Imagine 
+an identical photograph, with the caption changed as follows: &amp;#8220;Shadbreet (a 
+Keynesian), Musharaff (a Monetarist) and Adele (a Marxist), 
+all aged four.&amp;#8221; Wouldn&amp;#8217;t this be a candidate for irate letters of protest? 
+It certainly should&amp;nbsp;be.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I can&amp;#8217;t say that I&amp;#8217;m one to really get &amp;#8220;irate&amp;#8221; about such things, 
+but he really does have a point. The number of people that grow up to be the
+same religion as their parents is astounding. How can it be that the 
+religion of all peoples&amp;#8217; parents around the world just happens to be the 
+right one for their children? It defies&amp;nbsp;logic.&lt;/p&gt;
+&lt;p&gt;So Dawkins believes that if we raise consciousness in a similar way to 
+feminism, and find a way to allow children to be nontheists until they are 
+old enough to make such decisions on their own, we might just be able to 
+beat thi  religion thing. We might be able to curb religious violence by 
+allowing children to make their own&amp;nbsp;choices. &lt;/p&gt;
+&lt;p&gt;It could work, and I for one am officially convinced that I will not let 
+people speak of religious&amp;nbsp;children. &lt;/p&gt;</summary><category term="me"></category><category term="atheism"></category><category term="Cal"></category></entry><entry><title>New Website - CharityHikers.org</title><link href="http://michaeljaylissner.com/posts/2008/03/05/new-website-charityhikersorg/" rel="alternate"></link><updated>2008-03-05T22:54:53-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-03-05:posts/2008/03/05/new-website-charityhikersorg/</id><summary type="html">&lt;p&gt;Just a quick post today to announce that I have finally figured out how to run a drupal multisite installation, and I have finally converted my old website, &lt;a href="http://www.charityhikers.org"&gt;CharityHikers.org&lt;/a&gt; over to Drupal. Making charityhikers.org a dynamically driven site has been one of my goals since about 2004, so completing this task is giving me an excellent dose of&amp;nbsp;satisfaction. &lt;/p&gt;
+&lt;p&gt;The site began as a place where I could put up information about my hike for &lt;span class="caps"&gt;AIDS&lt;/span&gt; research, but I have developed it into something that other people can use to fundraise for their own causes. With this step, I think it is finally getting pretty close to a useful tool, but I still have a couple of things I&amp;#8217;d like to accomplish with the&amp;nbsp;site.&lt;/p&gt;
+&lt;p&gt;The biggest goal I have for it is to allow hikers to sign up, and then update their profile with their charity and personal information, and to have that dynamically generate the menus, pages, etc. that are needed for the site so that their new information is automatically integrated. At present, pages have to be manually created through the &lt;span class="caps"&gt;CMS&lt;/span&gt; system, which is a bit of work, but it&amp;#8217;s not too bad all in&amp;nbsp;all.&lt;/p&gt;
+&lt;p&gt;The second goal I have is to allow picture uploading for hikers. It doesn&amp;#8217;t take a whole lot of storage space to do this, and it seems like a good service to provide. My current plan is to use gallery2 to accomplish this feat, but I&amp;#8217;m having some serious issues with the database right&amp;nbsp;now.&lt;/p&gt;
+&lt;p&gt;Anyway, goals and road maps aside, I&amp;#8217;m really quite happy with this change. My real goal is for this site to really start bringing in donations. So far it&amp;#8217;s brought in a little over $10K, but in the scheme of things that&amp;#8217;s really not a whole lot of&amp;nbsp;money&amp;#8230;&lt;/p&gt;</summary><category term="hiking"></category><category term="me"></category><category term="drupal"></category><category term="charityhikers"></category></entry><entry><title>Treasures of Old Websites Part II</title><link href="http://michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites-part-ii/" rel="alternate"></link><updated>2008-02-26T19:07:14-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-26:posts/2008/02/26/treasures-of-old-websites-part-ii/</id><summary type="html">&lt;p&gt;I also found the attached news articles I had posted on my website. Pretty 
+funny/embarrassing&amp;nbsp;stuff.&lt;/p&gt;
+&lt;h3 id="enclosures"&gt;Enclosures:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://michaeljaylissner.com/pdfs/pct-news-articles/claremont-courier.pdf"&gt;Claremont Courier: Pitzer Graduate Ventures 2,650 Miles on&amp;nbsp;Foot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://michaeljaylissner.com/pdfs/pct-news-articles/inland-valley-bulletin.pdf"&gt;Oaklnd Tribune: Hike to Cure &lt;span class="caps"&gt;AIDS&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://michaeljaylissner.com/pdfs/pct-news-articles/oakland-tribune.pdf"&gt;Inland Valley Daily Bulletin: Pitzer Grad to Attempt Mexico-to-Canada&amp;nbsp;Hike&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://michaeljaylissner.com/pdfs/pct-news-articles/pitzer-college-press-release.pdf"&gt;Pitzer College Press&amp;nbsp;Release&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="pct"></category><category term="hiking"></category><category term="me"></category></entry><entry><title>Treasures of Old Websites</title><link href="http://michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites/" rel="alternate"></link><updated>2008-02-26T18:58:04-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-26:posts/2008/02/26/treasures-of-old-websites/</id><summary type="html">
+&lt;h2 id="background"&gt;Background&lt;/h2&gt;
+&lt;p&gt;I’ve been working the past couple of days on getting my other site, 
+charityhikers.org moved over to my home server and recreated on Drupal. It’s 
+turning out to be a huge pain in the neck. The main problem is that there seem 
+to be too many viable ways to accomplish what I want, and no consensus as to 
+what the best one is. The result of this is that there are a number of 
+half-hearted attempts at explaining how to have multiple sites running off of 
+one Drupal installation, but none of them are really that detailed, or really 
+apply all that well…it’s frustrating.&lt;/p&gt;
+&lt;p&gt;However! In doing this, I discovered a treasure I thought I had lost. I 
+discovered my old &lt;span class="caps"&gt;PCT&lt;/span&gt; journal entries, which I have posted below, by date. 
+It’s a bit long, so I won’t be offended if nobody reads them, but it’s 
+interesting to see what I was thinking before the big trip back in ‘05. 
+Unfortunately, I don’t have any of the actual posts from the trail, so it’s a 
+bit of a cliff hanger. Alas.&lt;/p&gt;
+&lt;h2 id="madman-planning"&gt;Madman Planning&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;21 March 2005&lt;/strong&gt;&lt;br/&gt;
+Well, it seems the journaling function of my site is finally up and running.
+It has been a long road to get here today, and I am glad we are finally 
+nearing the end of it.&lt;/p&gt;
+&lt;p&gt;I can not say I have really kept a journal very much in the past, so this is a 
+bit of a foreign medium to me. I write lots of personal emails though, so 
+perhaps I will just pretend I am writing one of my confidants, and see how 
+that goes for a while. Nah. Too easy.&lt;/p&gt;
+&lt;p&gt;So, planning for the trip comes along nicely these days. At this point, I am 
+pretty much ready to go with the following enormous gaping holes in my preparations:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I have not finalized my resupply bounce box, or the destinations it will be 
+going to.&lt;/li&gt;
+&lt;li&gt;My first aid training from October is growing more and more useless by the 
+day. I need to restudy it before the trip, but it is just so boring.&lt;/li&gt;
+&lt;li&gt;I need to move out.&lt;/li&gt;
+&lt;li&gt;Some sewing remains to be done.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I guess this means the planning is coming along nicely. Whatever the case, I 
+will be ready when the time comes. I know what gear to take, and I have my 
+many permits all taped to my wall.&lt;/p&gt;
+&lt;p&gt;Last weekend I took some time to actually study my first aid stuff. I 
+discovered that I had indeed forgotten the many nuances of it as I had 
+imagined I would. I did think of a brilliant way to remember it all though: I 
+finally made my own &lt;a href="http://michaeljaylissner.com/archive/SOAPA_Note.xls"&gt;&lt;span class="caps"&gt;SOAP&lt;/span&gt; note&lt;/a&gt;. These are the things you use when an 
+accident occurs to make sure you take all the right vital signs and ask all the 
+right questions. By making my own, I essentially wrote myself a guide to first aid.&lt;/p&gt;
+&lt;p&gt;Jeesh this is a boring entry. I kind of just wanted to write it so that 
+something would be here, and so people had something to read. I will write 
+another one in a week or so.&lt;/p&gt;
+&lt;h2 id="backpacking-journaling-etc"&gt;Backpacking, Journaling, Etc&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;25 March 2005&lt;/strong&gt;&lt;br/&gt;
+Well, I think I said in the last journal entry that the journal site was done. 
+That was a lie. It needs more work, and seems to be an interminable source of 
+work. That having been said, I am fairly certain it is about done now. I have 
+been working with a volunteer from Craig’s List on getting everything to work 
+the way I want it to, and the result has been pretty sweet thus far. Last 
+night I stayed up rather late and got it to its present condition. A number of 
+changes have been made to it, but nothing that will wow non-coders, so I am 
+going to spare you all any more talk about this subject.&lt;/p&gt;
+&lt;p&gt;A more interesting subject to talk about is the fact that I am going 
+backpacking this weekend. It will probably be the last trip before the big one,
+so it is a bit stressful. I am trying out a couple of new things, namely some 
+padding that I put into the straps of the M5 so it would hold more weight, some 
+new shoes that I pro-dealed from Vasque, and I think that is about it. I might 
+see if I can stand using Ken (my quilt). It is getting warmer out.&lt;/p&gt;
+&lt;p&gt;The one thing that I haven not been able to decide is where the hell I want to 
+go. I do not want to go to Big Sur because it is infested with Poison Oak and 
+ticks, the trails are unreliable, and there is not that much ground to cover. 
+So, that having been said, where should I go? Certainly not Point Reyes. Jesus 
+that place is busy on a normal weekend, this is Easter weekend. I guess I 
+could go to a more southern area in Los Padres forest and successfully dodge 
+the snow down there. It is a long drive though. Much longer than I would like.&lt;/p&gt;
+&lt;p&gt;Anyway, as the last hike before the trip, it is bound to be humbling. I think 
+I can get at least 50 miles in this weekend, so that will be good experience 
+as well.&lt;/p&gt;
+&lt;h2 id="skyline-to-sea-trip-report-raccoons-rains-and-rushing-waters"&gt;Skyline to Sea Trip Report » Raccoons, Rains, and Rushing Waters&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;28 March 2005&lt;/strong&gt;&lt;br/&gt;
+Well, I am back from the trip, and it was quite awesome. Certainly something 
+to write home about anyway.&lt;/p&gt;
+&lt;p&gt;I started off the trip on Saturday, whereupon I learned that there was no 
+legal parking at the trail head. Pretty damned annoying really. I get out of 
+bed early to rush myself to the trailhead, where I learn that there is no 
+parking. There is not even a ranger station, but there is a payphone to make 
+up for the lack of cell phone coverage. So, I called the station, and made 
+reservations for the campsites. Do you take credit cards? Naturally, they do 
+not, and naturally the nearest &lt;span class="caps"&gt;ATM&lt;/span&gt; is about half an hour away. So, here I am, 
+I have my reservations, but no way to pay for them, and I am at the trailhead, 
+with nowhere to park within about ten miles. I spend about half an hour looking 
+for parking, eventually finding a place I can pull off the road that does not 
+have any &lt;em&gt;blatant&lt;/em&gt; signs saying I can’t park there. I park. I hit the trail, 
+and for the first 2/3rds of Saturday, I followed the road, crossing it every 
+few miles. It was noisy, and lame, but eventually it kind of veered away from 
+the road and became much more beautiful. By the time I finished my first 16 
+miles, and made camp, I was in the heart of the Big Basin Natural Park, a 
+beautiful place indeed.&lt;/p&gt;
+&lt;p&gt;Upon waking up the next day, I headed west yet again, towards the sea. Beauty 
+was everywhere, but it was the best when I saw the beginnings of Barney Falls, 
+which are by far the most beautiful waterfalls I have ever seen outside of 
+Yosemite. Imagine if you will, hiking along through trees that have been around 
+since the Byzantine Empire (probably), on this verdant and moist trail. It is 
+gorgeous. Then, all of a sudden, you see a waterfall that is about 50 feet 
+high, and rather wide in the middle of it all — Gorgeous.&lt;/p&gt;
+&lt;p&gt;So, anyway, I eventually, made it to the sea, and turned around to head 31 
+miles back to camp, and eventually my car. Along that direction, I saw a lot 
+of the people that I had passed going the other way, and they were rather 
+curious to see me coming at them a second time, but that is another story. The 
+real story is that Rain was predicted. I made camp at Sunset Camp in what 
+looked like a good spot if it should start raining. Well, it did start 
+raining, and eventually that spot became flooded. I spent about an hour 
+digging in the mud, making dikes and dams around my tarp, but in the end it 
+proved to be a futile effort. I probably dumped out my 1L pot about 50 times 
+before I gave up. It was a sad day, but luckily, moving my tarp was not such a 
+big deal, so I did.&lt;/p&gt;
+&lt;p&gt;Night fell.&lt;/p&gt;
+&lt;p&gt;With night came animals (the bastards). I was sleeping under my tarp in one 
+hell of a rain storm. Thus I could hear just about nothing. I woke up to see 
+what looked like something white moving away from my tent. It was a full moon, 
+but the clouds made it pitch dark out. I grabbed for my flashlight, and 
+discovered that it was missing. Shit. I grabbed for my pack, where I had a 
+backup light, and discovered &lt;span class="caps"&gt;IT&lt;/span&gt; was missing. &lt;span class="caps"&gt;SHIT&lt;/span&gt;. &lt;span class="caps"&gt;SHIT&lt;/span&gt;. &lt;span class="caps"&gt;SHIT&lt;/span&gt;. Bobcats have 
+stolen my pack right from next to me under my tarp. I now have no light, and 
+it is too dark to walk anywhere. Ok. I need to get a light from the people in 
+the neighboring camp. They are asleep. I will have to wake them. Done. Ok. I 
+have a light. It went on like that for about half an hour, eventually resulting 
+in my discovery of everything that was once mine with the exception of my food 
+bag, the food that was in it, and one of my (expensive titanium) stakes that 
+had gone missing during the tent move. I tied my pack to my tarp with the 
+theory being that if bobcats were going to steal my pack, they would have to 
+wake me up to do it. They did come back to steal my &lt;span class="caps"&gt;EMPTY&lt;/span&gt; pack, but it is not 
+like it woke me, and they were unable to get it untied. Oh, and they were 
+apparently raccoons, not bobcats. So, in conclusion, I lost all of my food for 
+the final day, and my pack got some tears in it. Not cool at all. So, I hiked 
+out to the nearest road, informed the ranger, and hitch-hiked back to my car. 
+All in all, about fifty miles covered, one storm bested, and a mafia of 
+racoons fed.&lt;/p&gt;
+&lt;h2 id="training-preparations-and-having-both-arms-pulled-in-opposite-directions"&gt;Training, Preparations and Having Both Arms Pulled In Opposite Directions&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;4 April 2005&lt;/strong&gt;&lt;br/&gt;
+So, the final weeks are upon us. There’s no denying that now. How am I coping 
+is probably the best question to ask at this point. The answer is that I’m 
+losing a fair amount of sleep because I keep waking up with revelations pretty 
+much every night, but other than that, I’m doing ok. Plus, I’m unemployed, so 
+it doesn’t particularly matter that I don’t get the best sleep during the night 
+because I can always just sleep more during the day.&lt;/p&gt;
+&lt;p&gt;These revelations though, they’ve got to stop. Pretty much every night I 
+either dream &lt;span class="caps"&gt;PCT&lt;/span&gt;, or wake up around four in the morning with the revelation 
+that, “Put shampoo in your bounce box,” or, “you’ll want a 
+phone card.” Really, I wish my brain would just take a chill pill. Last 
+night was especially bad, which pretty much explains why I’m complaining 
+about it so much. I’m pretty sure that was due to the fact that I made 
+(and ate) about a dozen cookies the day before though.&lt;/p&gt;
+&lt;p&gt;The weekend was good as far as training went. I did some sewing on Captain 
+Tent for Mr. Boothe, and I made myself a right hand rain mitt out of Epic 
+material. Now I just need to make mike some mitts, and myself a left hand 
+mitt, and my sewing will be done.&lt;/p&gt;
+&lt;p&gt;So far today I have been pulled in so many different directions is kind of 
+strange. I dealt with my phone line; returned messages; got paid for my final 
+weeks of work (though I still need to go to the bank); programmed my &lt;span class="caps"&gt;GPS&lt;/span&gt; a bit, 
+and dealt with some &lt;span class="caps"&gt;AIDS&lt;/span&gt; fundraising stuff. So many different things, so 
+little time. I have to get back to work, but before I do, a report on the 
+training that I did, and the fact that I have blisters.&lt;/p&gt;
+&lt;p&gt;Over the weekend, I did some training by hiking about ten miles out to 
+Barney Falls again, and climbing bleachers at Cal. Both were tiring, but today 
+I must train more. The hike was really strange because Rachael and I were 
+accompanied by a photographer from the Oakland Tribune. Keep your eyes peeled 
+for the article on April 18th.&lt;/p&gt;
+&lt;h2 id="revisiting-the-worst-day-of-all-time"&gt;Revisiting the Worst Day of All Time.&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;11 April 2005&lt;/strong&gt;&lt;br/&gt;
+Approximately one year ago today, I received in the mail a form from the &lt;span class="caps"&gt;DMV&lt;/span&gt; 
+that told me that me registration on my Mustang was overdue, and that in 
+addition to the regular fee, I was being charged a late fee. At the time, it 
+was frustrating because I had never been asked for the original fee, and at 
+the time I was rather strapped for money. I eventually went down to the &lt;span class="caps"&gt;DMV&lt;/span&gt;, 
+where, after waiting in line for some time, I learned that I had forgot my 
+wallet. You can imagine how terrible this was on a hot day in &lt;span class="caps"&gt;LA&lt;/span&gt; traffic.&lt;/p&gt;
+&lt;p&gt;I drove home to get it, and calmed down a bit about how frustrating it was 
+that the one time in a very long time that I forgot my wallet, this was the 
+effect. I got back in my hot car, and drove back to the &lt;span class="caps"&gt;DMV&lt;/span&gt; (about a half 
+hour drive, with no traffic). In addition to having traffic, I actually had to 
+wait for a funeral procession to go by. It took a long time, and I had no A/C. 
+In the end, I got the late fee waived, got new stickers for my car, and got on 
+with life, considering it the worst day of all time, which it was at the time. 
+I realize that it doesn’t sound so bad, but there were more details I’ve 
+left out for all of our sake.&lt;/p&gt;
+&lt;p&gt;Today is threatening to be about as bad as that day. For the past month, I 
+have been harassing my dad (also my employer) about getting me my tax forms. 
+Finally, on Saturday, he got them to me. This left me with about five days to 
+get them done - not much time, if any at all really. So today, being the 
+earliest time that I could get them in, I called H&amp;amp;R Block to see what 
+they could do for me. After telling them some information, I came to learn 
+that it looked like I owed about, oh $2,500 by the man’s estimate. About half 
+of what I have saved for the trip. This is not good news, so I decide I should 
+call my dad to give him a piece of my mind, and ask how the hell this happened. 
+He, being the savvy business owner that he is, asks me a number of 
+questions, and informs me that I need to get an extension so that his &lt;span class="caps"&gt;CPA&lt;/span&gt; can 
+deal with it when I drive down to San Diego for the Kick Off. Just what I need 
+right now. So, here’s the uncertainty with that: I don’t know who’s going to 
+pay that money, or how much it is going to come out to. Probably somewhere 
+around $1,500 is my guess. More than I would like to part with, especially to 
+the war machine. I mean, what would Emerson say?&lt;/p&gt;
+&lt;p&gt;So that was pretty bad, but I filed the extension over the phone, agreed to 
+pay a 1% late fee, and got on with life. The next project was to call the &lt;span class="caps"&gt;DMV&lt;/span&gt; 
+about the notice I got last week informing me that, yet again, I had become 
+“delinquent” in my “renewal.” Sigh. here’s the bad news, the car that I 
+failed to renew? I gave it to my dad to sell. He sold it to one of his 
+employees in Mexico. I don’t know who, but it’s down there, being the good 
+Mustang it always was. So. I call the &lt;span class="caps"&gt;DMV&lt;/span&gt; to ask them what to do about the fee 
+I owe on the car I don’t have. The third time I call the number, I don’t get 
+the busy signal, and I actually get through to a phone maze of some sort. 
+After dialing about ten numbers, I get put on hold for a second. Then, I get 
+thrown back into the phone maze, because all operators were busy. So, I go 
+through it again, and get put into the queue. This happens three times. 
+Eventually, I get through to what sounded like a Vietnamese woman that was 
+fresh to America. She barely spoke English, and was quite angry for some 
+reason. Why? I don’t know. Anyway, I asked her what to do. She says, file the 
+Release of Liability Form, &lt;span class="caps"&gt;REG138&lt;/span&gt;. Ok, I say. She notes that it will ask who I 
+sold the car to. Hell. I don’t know who it’s sold to. My dad sold it in Mexico 
+to one of his workers. He probably doesn’t even know my dad anymore. I tell 
+her this, and the jist of what she says is, well, you can’t release liability 
+without that information. I reiterate that I don’t have it, and she tries to 
+hang up on me. I plead, “please, please don’t hang up on me.” Miraculously, 
+she does not. I ask again, what can I do if I don’t know their name? She has 
+no answers, and barely speaks English, so I ask for a supervisor. No luck. She 
+says, I should call the “Registration Control Unit in Sacramento,” and gives 
+me a number, 916.767.8035. Happy, I call the number. She was toying with me. 
+The number has this message, “At the tone, the time will be 2:22 &lt;span class="caps"&gt;PM&lt;/span&gt; Pacific 
+time. Beep.” She literally gave me the number to the universal time place. I 
+am still in shock about that.&lt;/p&gt;
+&lt;p&gt;So here’s the summary. I owe a couple of grand in taxes. I have a car that 
+is mine, but is owned by somebody else. I can either pay $100 for it every 
+year, or somehow try to find another answer. It’s &lt;span class="caps"&gt;3PM&lt;/span&gt;. Today has been terrible, 
+but at least I didn’t get stuck behind a funeral procession. Perhaps I hate the 
+&lt;span class="caps"&gt;DMV&lt;/span&gt;. How can it be so bad without people being up in arms? I don’t understand. 
+We live in the modern age.&lt;/p&gt;
+&lt;h2 id="better-today-thanks-for-asking"&gt;Better Today, Thanks for Asking&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;13 April 2005&lt;/strong&gt;
+Well, it seems that all is well in the world of &lt;span class="caps"&gt;PCT&lt;/span&gt; planning. For some reason, 
+I can’t quite figure out what it is that I should be doing to get ready. 
+It’s possible that I’m entirely ready at this point. I have a few things that 
+I want to shop for, but the pile of gear that is going with me down to San 
+Diego is ready. I can’t really pack for the trip yet because I don’t want to 
+compress my sleeping bag, but all else is ready.&lt;/p&gt;
+&lt;p&gt;My roommate Rachael has told me that I should jot down some of my biggest 
+worries for my ever vigilant public. Probably my biggest worries at this point 
+are water worries - that one, I won’t get through the desert without some 
+serious dehydration, and that two, I won’t get through the Sierra Snow like I 
+need to. I have done some thinking about the southern California water 
+situation, and I think the thing to do about it is carry a ton of water, keep 
+your eye on the next water stop, and hope for the best. I figure if I carry 
+six liters, I should have more than enough. Usually that’s cutting it close, 
+but I hear that every creek, crik and rivelet is pumping with water this year.&lt;/p&gt;
+&lt;p&gt;As to what I am going to do about the snow in the sierras, and, more 
+importantly, the San Gabriels, I think the plan is to hit it like a ton of 
+bricks. It’s not the most brilliant plan, but I think it &lt;em&gt;might&lt;/em&gt; just work. I 
+think my age might factor into this foolhardy plan. Anyway, we’re going to hit 
+it, and perhaps we’ll break fresh trail. Should be interesting anyway.&lt;/p&gt;
+&lt;p&gt;One other concern that I am harboring at this point is Ken. Ken is my homemade 
+sleeping quilt. I’ve had him for about eight or nine months now, but 
+I’ve been too afraid to really get out with him much. I have been sleeping 
+under him for a good few days now, and I think I can get used to him. If not, 
+I’ll have a Feathered Friends Hummingbird waiting for me at my mom’s house in 
+San Diego, so worst case scenario, I’ll just have her mail me that.&lt;/p&gt;
+&lt;p&gt;So, all in all, I think I’m in the calm before the storm. It’s possible 
+of course that the storm will never hit, but I’m pretty sure it will. Take 
+the following information, and tell me if it adds up nicely: On Friday, I have 
+a going away party in Berkeley. On Saturday, I have one in &lt;span class="caps"&gt;LA&lt;/span&gt;. On Sunday, I 
+have one in San Diego. On Monday, I have a date with my dad’s &lt;span class="caps"&gt;CPA&lt;/span&gt; to do my 
+taxes. Hmmm…&lt;/p&gt;
+&lt;h2 id="finishing-touches"&gt;Finishing Touches&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;19 April 2005&lt;/strong&gt;&lt;br/&gt;
+Well, things are winding down, and it looks like I am about ready to go now. 
+The bounce box is packed; I have resupply packages set up for Warner Springs, 
+Idyllwild, Wrightwood, Kennedy Meadows, and Ashland; I’ve been on tour for the 
+past few days, and have said goodbye to just about everybody I know; and I’ve 
+done, filed and paid my taxes (grand total with deductions: ~$500).&lt;/p&gt;
+&lt;p&gt;Even though it seems like everything is a go, I feel somewhat strange. In a few 
+days, I’m going to begin walking. After walking for a few days, I’m 
+going to continue walking. Then, after a few weeks of walking, yes, I am going 
+to walk some more. Eventually, after five months of it, I will stop walking, 
+if and only if I have made it to Canada. Sounds simple, but I get bored easily.
+I’ve never done anything quite like this before, so I can only guess how my 
+mind and body will react. I’m pretty confident about how my body will react 
+(aside from my ankles and hips), but I know my mind is going to go insane at 
+least temporarily. I was trying to explain to a friend last night about how 
+it will happen when my brain tries to make me quit. I think that at first my 
+brain will tell me that I’m bored. Then it will tell me to quit, that there’s 
+no point in going on if I’m not having fun. Eventually, I will tell it to go 
+away and mind its own business, but it’s harassed me incessantly in the 
+past, and it will continue harassing me on and on even after I’ve asked it to 
+leave me alone. The trick is going to be telling it to go away, and 
+remembering all the reasons that I am on the trail - the beauty, the 
+challenge, the isolation.&lt;/p&gt;
+&lt;p&gt;I guess I have cold feet a little bit right now, but I’m quite excited. I 
+know it will be the trip that defines the next chapters in my life, and I know 
+that I will leave the trip a changed person.&lt;/p&gt;
+&lt;p&gt;The next post will be from the trail.&lt;/p&gt;</summary><category term="pct"></category><category term="hiking"></category><category term="me"></category></entry><entry><title>Went Solo Backpacking this Weekend</title><link href="http://michaeljaylissner.com/posts/2008/02/24/went-solo-backpacking-this-weekend/" rel="alternate"></link><updated>2008-02-24T22:07:32-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-24:posts/2008/02/24/went-solo-backpacking-this-weekend/</id><summary type="html">&lt;p&gt;I went solo backpacking this weekend for the first time in a &lt;span class="caps"&gt;LONG&lt;/span&gt; time. I think the last time I really did a trip like this one was actually before I did the &lt;a href="http://www.pcta.org"&gt;&lt;span class="caps"&gt;PCT&lt;/span&gt;&lt;/a&gt;, which was back in&amp;nbsp;&amp;#8216;04. &lt;/p&gt;
+&lt;p&gt;I went out to Point Reyes National Park, leaving Friday after work, and returning Sunday. On Friday, I camped at the ranger station, and on Saturday, I set out on an ambitious trek covering 25 miles that day, and 5 the next. I had packed extremely lightly with no water filtration, no stove, pot, spoon. Really, the only things in my pack were food, clothes, a tarp and stakes, some knick knacks and a water&amp;nbsp;bladder. &lt;/p&gt;
+&lt;p&gt;With the light load, things were going well on Saturday morning, but then, a little after lunch, it started to rain. Then pour. Then the winds came on. All in all, as it should turn out, this was &lt;a href="http://www.sfgate.com/cgi-bin/article.cgi?f=/n/a/2008/02/22/state/n105157S77.DTL&amp;hw=rain&amp;sn=024&amp;sc=254"&gt;one hell of a storm&lt;/a&gt;. I set up my day so that I do a loop starting on the east heading south, and then I would hook west and head north along the coast. This meant that once the storm hit, I would be heading north on an incredibly exposed trail for about 15&amp;nbsp;miles. &lt;/p&gt;
+&lt;p&gt;Let me tell you folks, it was an adventure. I was so exposed that I felt like I could not stop to eat, drink or anything, so I just kept hiking for the entire distance, until I reached camp, after a long, long day. At one point, in one of the windier areas, I was running downhill, the wind coming on so hard that I began to be detached from the earth. It was actually lifting me off the ground&amp;#8230;not a lot, just a little, but enough to be a&amp;nbsp;worry. &lt;/p&gt;
+&lt;p&gt;Anyway, despite the adventure, the trip was good. It gave me some time to reflect on all the changes coming on in my life, and to get out and feel&amp;nbsp;alive. &lt;/p&gt;
+&lt;p&gt;Did I find the answer to my question of Cal vs. &lt;span class="caps"&gt;UW&lt;/span&gt;? No&amp;#8230;not in nature I&amp;nbsp;didn&amp;#8217;t.&lt;/p&gt;</summary><category term="hiking"></category><category term="me"></category></entry><entry><title>It’s Official. I’m Going to Grad School.</title><link href="http://michaeljaylissner.com/posts/2008/02/21/i-am-going-to-grad-school/" rel="alternate"></link><updated>2008-02-21T22:37:02-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-02-21:posts/2008/02/21/i-am-going-to-grad-school/</id><summary type="html">&lt;p&gt;I hadn&amp;#8217;t mentioned this previously here on the blog, but for the past several months, I&amp;#8217;ve been working my butt off putting together two grad school applications for Masters of Information Management (&lt;span class="caps"&gt;MIMS&lt;/span&gt;). The two applications were for &lt;a href="http://ischool.berkeley.edu"&gt;&lt;span class="caps"&gt;UC&lt;/span&gt; Berkeley School of Information&lt;/a&gt; and &lt;a href="http://www.ischool.washington.edu"&gt;University of Washington Information School&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;I am elated to announce that yesterday I heard from &lt;span class="caps"&gt;UW&lt;/span&gt;, and today I heard from Cal. They have both officially offered me entrance into the Fall 2008 class.&amp;nbsp;Amazing. &lt;/p&gt;
+&lt;p&gt;I applied to the program at Cal last year and was denied, so I didn&amp;#8217;t really expect them to let me in this year, but things are looking up. Now I just have to decide which one to go&amp;nbsp;to.&lt;/p&gt;
+&lt;p&gt;On the one hand, &lt;span class="caps"&gt;UW&lt;/span&gt; is a bigger program with seemingly more resources, but Cal is a smaller, leaner, and more personalized. I think it looks like I need to plan a visit to &lt;span class="caps"&gt;UW&lt;/span&gt; for an on-campus&amp;nbsp;day.&lt;/p&gt;
+&lt;p&gt;Anybody have any ideas on which to go&amp;nbsp;to? &lt;/p&gt;</summary><category term="infotech"></category><category term="me"></category></entry><entry><title>Pitzer College Murals</title><link href="http://michaeljaylissner.com/posts/2007/12/10/pitzer-college-murals/" rel="alternate"></link><updated>2007-12-10T13:58:25-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-12-10:posts/2007/12/10/pitzer-college-murals/</id><summary type="html">&lt;p&gt;I have finally been reconnected with my long-lost artwork. I painted this 
+while I was in college, and summarily lost the picture of it somebody had 
+given me. It&amp;#8217;s a rip off from &lt;a href="http://www.youtube.com/watch?v=vSb-nV8l2QY"&gt;a hilarious short&lt;/a&gt; by Don&amp;nbsp;Hertzfeldt.  &lt;/p&gt;
+&lt;p&gt;I have missed this picture for so&amp;nbsp;long.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Banana" src="http://michaeljaylissner.com/images/I am a banana.jpeg" /&gt;&lt;/p&gt;
+&lt;p&gt;The rest of the murals at Pitzer, including a bronze sculpture by Peter 
+Harper can be &lt;a href="http://ccdl.libraries.claremont.edu/cdm4/results.php?CISOOP1=exact&amp;amp;CISOFIELD1=CISOSEARCHALL&amp;amp;CISOROOT=/map&amp;amp;CISOBOX1=Pitzer+College.+Office+of+Public+Relations&amp;amp;CISOSTART=1,1"&gt;found here&lt;/a&gt;.&lt;/p&gt;</summary><category term="me"></category><category term="art"></category></entry><entry><title>Old Versions of Site are Up</title><link href="http://michaeljaylissner.com/posts/2007/10/11/old-site-is-up-sort-of/" rel="alternate"></link><updated>2007-10-11T19:04:42-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-10-11:posts/2007/10/11/old-site-is-up-sort-of/</id><summary type="html">&lt;p&gt;I was working on getting the &lt;a href="http://michaeljaylissner.com/archive/oldsite/index.htm"&gt;old versions&lt;/a&gt; of the site up and going 
+for history&amp;#8217;s sake, and I have more or less accomplished the task, 
+though I learned a very important lesson in the&amp;nbsp;process.&lt;/p&gt;
+&lt;p&gt;For one, I learned that if you want to host additional custom directories 
+on your drupal site, it&amp;#8217;s a piece of cake: Just make the directories in 
+your drupal directory, and you&amp;#8217;re done. For example, my drupal directory is
+at &lt;code&gt;/usr/share/drupal-5.1&lt;/code&gt;, so to host a page at michaeljaylissner.com/oldsite, 
+I just made a directory at &lt;code&gt;/usr/share/drupal-5.1/oldsite&lt;/code&gt;, put stuff in it, 
+and was&amp;nbsp;done.&lt;/p&gt;
+&lt;p&gt;The more important lesson was that when hand-coding &lt;span class="caps"&gt;HTML&lt;/span&gt;, as I did in the 
+previous version of the site, relative links such as &lt;code&gt;/assets/picture1.jpg&lt;/code&gt; 
+are &lt;strong&gt;&lt;span class="caps"&gt;NOT&lt;/span&gt;&lt;/strong&gt; the same as relative links such as assets/picture1.jpg. Both work, 
+but only one is actually relative to the current page (the latter one). The 
+former one may as well have been written 
+&lt;code&gt;michaeljaylissner.com/assets/picture1.jpg&lt;/code&gt;, because that&amp;#8217;s what that first 
+slash means.&amp;nbsp;Duh.&lt;/p&gt;
+&lt;p&gt;Somehow, I never ran into this problem before now. Anyway, 
+if you take the time to check out the old site (which I don&amp;#8217;t really 
+recommend), you&amp;#8217;ll find many broken links. This is why. The other project I 
+have been working on is getting all of my pictures from the old site set up
+on this site in a place where registered users can find them. This is a 
+work in progress, but if you&amp;#8217;re a registered user, you might be interested
+to see them, if you haven&amp;#8217;t&amp;nbsp;already. &lt;/p&gt;</summary><category term="blog"></category><category term="me"></category></entry><entry><title>My Destiny To Have A Beard</title><link href="http://michaeljaylissner.com/posts/2007/10/03/destiny-to-have-a-beard/" rel="alternate"></link><updated>2007-10-03T23:17:34-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-10-03:posts/2007/10/03/destiny-to-have-a-beard/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve been doing some thinking, and I think that my destiny* wants me to have
+a beard. Let&amp;#8217;s take a quick walk through my past, shall&amp;nbsp;we?&lt;/p&gt;
+&lt;p&gt;First, I was into woodworking. I described it as, &amp;#8220;My first great 
+passion.&amp;#8221; Observe this picture. It&amp;#8217;s the first hit on google images for
+the word&amp;nbsp;&amp;#8220;woodworker&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/bearded-destiny/wood.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Next, after sort of putting woodworking aside for a while, 
+I got really into hiking; thru hiking to be precise. This picture is the 
+third or fourth hit for &amp;#8220;thru hiker&amp;#8221; on google images, 
+but I hasten to add that it is the first hit that contains a picture of a&amp;nbsp;person.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/bearded-destiny/thru.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Finally, as you may have noticed, I&amp;#8217;m pretty into Linux these days. It&amp;#8217;s 
+could be a phase as well (we&amp;#8217;ll see), but observe this image, 
+also pulled from google images. Admittedly it&amp;#8217;s not hit number one, 
+but I don&amp;#8217;t count pictures of college kids or penguins out of&amp;nbsp;principle. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/bearded-destiny/linux.png" /&gt;&lt;/p&gt;
+&lt;p&gt;So. It seems I should have a beard. There is a problem with this plan 
+though, and to illustrate that problem, I have this picture of me, 
+when I tried it for myself.&amp;nbsp;Damn.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/bearded-destiny/me.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;What will come after Linux? Will it be Lumberjack or hippie&amp;#8230;time will&amp;nbsp;tell. &lt;/p&gt;
+&lt;p&gt;*Destiny is a load of bunk and we all know it deep&amp;nbsp;down!&lt;/p&gt;</summary><category term="pct"></category><category term="me"></category></entry><entry><title>A Modest Miracle</title><link href="http://michaeljaylissner.com/posts/2007/09/24/a-modest-miracle/" rel="alternate"></link><updated>2007-09-24T20:20:32-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-09-24:posts/2007/09/24/a-modest-miracle/</id><summary type="html">&lt;p&gt;I got an urge today to take some garlic and to take some rosemary, and to seep 
+them in oil for a few days to make some bread dip. I had a strange quantity of
+virgin oil and fresh peeled garlic on hand, but I lacked the rosemary, so I 
+grabbed a friend and went walking in the neighborhood, looking for a garden to&amp;nbsp;rob. &lt;/p&gt;
+&lt;p&gt;We walked for a few blocks in the dark with a flashlight looking for rosemary, 
+but we weren&amp;#8217;t finding any. We found some mint and some tomatoes in a garden 
+near our house, but no rosemary. Then a nice lady walked by with something in 
+her hand that looked like a plant. I said, &amp;#8220;Hey, do you know any houses around 
+here that might have rosemary?&amp;#8221; She said, &amp;#8220;&amp;#191;necisita rosemary?&amp;#8221; and held 
+up the sprig she had in her hand. We chatted a bit, and she gave me a sprig off 
+the plant she was bringing&amp;nbsp;home. &lt;/p&gt;
+&lt;p&gt;Now, I&amp;#8217;m not a religious man, and in fact I don&amp;#8217;t believe in anything that 
+can&amp;#8217;t be seen (ghosts, goblins, Zeus, god, angels, et al included). Sometimes 
+I can see why others believe though. I mean, what are the&amp;nbsp;odds? &lt;/p&gt;
+&lt;p&gt;Upon arriving home, a roommate described it as, &amp;#8220;A modest miracle.&amp;#8221;&amp;nbsp;Indeed.&lt;/p&gt;</summary><category term="me"></category><category term="cooking"></category><category term="religion"></category></entry><entry><title>This is it. Drupal systems are go.</title><link href="http://michaeljaylissner.com/posts/2007/09/12/drupal-is-go/" rel="alternate"></link><updated>2007-09-12T21:46:59-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-09-12:posts/2007/09/12/drupal-is-go/</id><summary type="html">&lt;p&gt;Well, I can&amp;#8217;t say I have had a serious blog before, so with this very sentence, I am forging new ground for myself, and through the strange magic of the Internet, for everybody else in the world (except China, who I will now block from this blog by writing the following word:&amp;nbsp;&amp;#8220;democracy&amp;#8221;).&lt;/p&gt;
+&lt;p&gt;There&amp;#8217;s a pressure here of course not to have any typos and to make this post significant and poignant, but if I know me - and I think I do - I shouldn&amp;#8217;t set high bars like that for myself. I should just enjoy the medium, allow mistakes early and often, and proceed with the reason I am here to write today, which, according to the title of this post is to discuss the software of this very&amp;nbsp;blog.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s an interesting thing setting up a blog in your house. For some reason, it&amp;#8217;s really bloody complicated. First, you&amp;#8217;ve got to learn how your house is networked, then how the Internet is networked. Once you think you&amp;#8217;ve got that figured out, you have to get a faster Internet connection (cable as opposed to &lt;span class="caps"&gt;DSL&lt;/span&gt;), and if you are feeling spry, perhaps a static &lt;span class="caps"&gt;IP&lt;/span&gt;. I&amp;#8217;m not feeling spry, and so, dyndns.com is my&amp;nbsp;friend. &lt;/p&gt;
+&lt;p&gt;The next step once the networking is figured out is to figure out the software and hardware sides of things. This is not an easy task either. In the end, I have set up two computers to run this here blog. One to run Drupal, Apache, etc., and the other to do the mail serving. For the &lt;span class="caps"&gt;CMS&lt;/span&gt;, I have chosen Drupal because it seems to be all the rage, and because it has a stupid song that got caught in my head for far too long (see youtube for details). Drupal is of course running on &lt;span class="caps"&gt;GNU&lt;/span&gt;+Linux, Apache, &lt;span class="caps"&gt;PHP&lt;/span&gt;, and MySQL. As for the mail server, it would be running Zimbra, but at the moment it is crashed. I can&amp;#8217;t make it stop overheating, and it&amp;#8217;s rather&amp;nbsp;annoying. &lt;/p&gt;
+&lt;p&gt;Anyway, once that&amp;#8217;s up and going, everything should be a go, and I will be a proud Internet host. Only one question truly remains: Is my &lt;span class="caps"&gt;IP&lt;/span&gt; on an anti-spam blacklist? We shall soon find&amp;nbsp;out. &lt;/p&gt;</summary><category term="blog"></category><category term="me"></category><category term="drupal"></category></entry></feed>

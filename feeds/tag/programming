@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/programming" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2011-03-13T23:13:34-07:00</updated><entry><title>Project Idea: “Programming library for curse words”</title><link href="http://michaeljaylissner.com/posts/2011/03/13/project-idea-curse-word-library/" rel="alternate"></link><updated>2011-03-13T23:13:34-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2011-03-13:posts/2011/03/13/project-idea-curse-word-library/</id><summary type="html">&lt;p&gt;When programming, there are occasionally times when you need to detect or block curse words. At CourtListener, for example, we make URLs with &lt;span class="caps"&gt;ID&lt;/span&gt; numbers in them that are formed by converting an &lt;span class="caps"&gt;ID&lt;/span&gt; number to letters (so a &amp;rarr; 1, b &amp;rarr; 2, 27 &amp;rarr; A, etc). Higher numbers create longer strings of letters, so over time, this creates curse words in the &lt;span class="caps"&gt;URL&lt;/span&gt;. Currently, the site is only has a few four letter strings, but I will rue the day when any of the &lt;a href="https://secure.wikimedia.org/wikipedia/en/wiki/Seven_dirty_words"&gt;seven dirty words&lt;/a&gt; is being shown to users on my&amp;nbsp;site.&lt;/p&gt;
+&lt;p&gt;There are many lists of curse words on the web, but none that is maintained or curated. Having that alone would be a useful project. What would make it better would be libraries in popular programming languages that efficiently told you if a string contained a curse&amp;nbsp;word. &lt;/p&gt;
+&lt;p&gt;The next feature would be to add additional languages, and then to add words like pen1s, which aren&amp;#8217;t normally curse words, but are certainly words you&amp;#8217;d want to&amp;nbsp;eliminate.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;d be a pretty simple project, so I may just go for&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;Only question is, what do I name&amp;nbsp;it?&lt;/p&gt;</summary><category term="Project idea"></category><category term="programming"></category><category term="cursing"></category></entry><entry><title>Swimlane Diagram Generator Written in XSLT</title><link href="http://michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/" rel="alternate"></link><updated>2010-09-06T23:26:18-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-09-06:posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/</id><summary type="html">&lt;p&gt;For the past couple years, I&amp;#8217;ve been wanting to make a swimlane diagram 
+showing all of my roommates and which room they lived in. I considered 
+drawing it out by hand with a charting program, but the idea of updating it
+whenever somebody moved in or out seemed daunting, and I decided that the 
+best thing would be to make a program that could generate a chart from &lt;span class="caps"&gt;XML&lt;/span&gt;. 
+My new job at &lt;a href="http://recommind.com"&gt;Recommind&lt;/a&gt; requires that
+I learn and use &lt;span class="caps"&gt;XSLT&lt;/span&gt;, so I took the opportunity to write an &lt;span class="caps"&gt;XSLT&lt;/span&gt; script 
+that converts the &lt;span class="caps"&gt;XML&lt;/span&gt; data to &lt;span class="caps"&gt;HTML&lt;/span&gt;, Javascript and &lt;span class="caps"&gt;SVG&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;The final product looks something like this (anonymized with Presidential 
+info for good&amp;nbsp;measure):&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://michaeljaylissner.com/archive/swimlanes/dummy.html"&gt;&lt;img alt="Diagram" src="http://michaeljaylissner.com/images/swimlane-screenshot.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(click through for complete&amp;nbsp;demo)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For the technically inclined: The program is an &lt;span class="caps"&gt;XSLT&lt;/span&gt; script, 
+which converts the &lt;span class="caps"&gt;XML&lt;/span&gt; into &lt;span class="caps"&gt;HTML&lt;/span&gt; and Javascript. The Javascript is then 
+interpreted by the &lt;a href="http://raphaeljs.com/"&gt;Raphael library&lt;/a&gt;, 
+which finally generates the &lt;span class="caps"&gt;SVG&lt;/span&gt; you see. It&amp;#8217;s overly complex, 
+but it was a fun mis-mash of technologies to play with and the point was 
+learning new things as much as&amp;nbsp;anything.&lt;/p&gt;
+&lt;p&gt;The transformation should work to make all kinds of swimlane diagrams, 
+so if you&amp;#8217;re interested in the code, let me&amp;nbsp;know.&lt;/p&gt;</summary><category term="XSLT"></category><category term="Raphael"></category><category term="programming"></category><category term="Javascript"></category><category term="Fairview"></category></entry><entry><title>A Python Function to Verify Twitter Credentials</title><link href="http://michaeljaylissner.com/posts/2009/04/03/a-python-function-to-verify-twitter-credentials/" rel="alternate"></link><updated>2009-04-03T19:09:25-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-04-03:posts/2009/04/03/a-python-function-to-verify-twitter-credentials/</id><summary type="html">&lt;p&gt;Thought I&amp;#8217;d post this for the future generations, since I had a hard time 
+finding a template anywhere on the web when I needed one. It&amp;#8217;s nothing 
+revolutionary, but a useful snippet nonetheless. This is for one of my 
+projects this&amp;nbsp;semester.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pycurl&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;verifyTwitterCredentials&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pycurl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Curl&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setopt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;URL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://twitter.com/account/verify_credentials.xml&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;setopt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;USERPWD&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;:&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;  &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;twitterfeed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;perform&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="n"&gt;status&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getinfo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HTTP_CODE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;status&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;200&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;verified&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;verified&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+
+    &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;verified&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category><category term="programming"></category><category term="Twitter"></category><category term="pycurl"></category></entry><entry><title>Working with matplotlib and pycairo</title><link href="http://michaeljaylissner.com/posts/2009/01/19/working-with-matplotlib-and-pycairo/" rel="alternate"></link><updated>2009-01-19T16:25:32-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-01-19:posts/2009/01/19/working-with-matplotlib-and-pycairo/</id><summary type="html">&lt;p&gt;I spent a good part of my winter break working on learning &lt;a href="http://python.org"&gt;Python&lt;/a&gt; and 
+using it for projects. One project was the &lt;a href="http://michaeljaylissner.com/posts/2008/12/21/yelp-scraper/"&gt;Yelp scraper&lt;/a&gt; that I posted 
+about previously, and another was a report for my old&amp;nbsp;work. &lt;/p&gt;
+&lt;p&gt;The report is a statistical analysis of the development of about 2,000 children 
+aged three and four. For those interested, I&amp;#8217;ll try to post it here once 
+the final version is ready to go. In the past when making the report, 
+I had been frustrated because there was no easy way to script the creation 
+of the 30 or so charts that need to be made. Excel had been our data 
+analysis tool, and as such, we were stuck with either using &lt;span class="caps"&gt;VBA&lt;/span&gt; to create 
+charts, or to do it by hand. Since nobody knew &lt;span class="caps"&gt;VBA&lt;/span&gt;, we always just buckled 
+down and did the work by&amp;nbsp;hand.&lt;/p&gt;
+&lt;p&gt;This time around, I discovered the &lt;a href="http://matplotlib.sourceforge.net/"&gt;&lt;code&gt;matplotlib&lt;/code&gt; Python library&lt;/a&gt;, 
+and used that to create the charts. It was an pretty rough experience all 
+in all. While simple graphs can be created in about five lines of code, 
+creating complicated ones took a good amount of work. For example, 
+to change the tick markers on a graph requires that you create tick 
+objects, and then manipulate them each individually in a for loop. Granted,
+I couldn&amp;#8217;t customize them at all in Excel, but figuring out that kind of 
+change was a pain&amp;nbsp;indeed. &lt;/p&gt;
+&lt;p&gt;The report itself required about 1,000 lines of code, 
+and each chart required about 100-200 lines. For custom charts, 
+I didn&amp;#8217;t find the library that useful, however towards the end of the 
+report there are 30 charts, all of which are identical, 
+except for the data. For these charts, I was able to make a for loop that 
+created them all in about 20 minutes, whereas previously these took me a 
+few hours to make by&amp;nbsp;hand. &lt;/p&gt;
+&lt;p&gt;Another library I spent some time learning was &lt;a href="http://www.cairographics.org/pycairo/"&gt;&lt;code&gt;pycairo&lt;/code&gt;&lt;/a&gt;, 
+which allows pixel by pixel editing of pictures. I had planned to use it to
+do any editing to the charts that I was unable to accomplish with the 
+&lt;code&gt;matplotlib&lt;/code&gt; library, but in the end, it was unnecessary. I have another 
+project coming up though that will use the &lt;code&gt;pycairo&lt;/code&gt; library, 
+so look for that&amp;nbsp;soon.&lt;/p&gt;</summary><category term="Python"></category><category term="programming"></category><category term="matplotlib"></category><category term="pycairo"></category><category term="project"></category></entry><entry><title>Yelp Scraper to Get Business Info in a Geographic Area</title><link href="http://michaeljaylissner.com/posts/2008/12/21/yelp-scraper/" rel="alternate"></link><updated>2008-12-21T16:41:13-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-12-21:posts/2008/12/21/yelp-scraper/</id><summary type="html">&lt;p&gt;I spent the past couple days on one of my first Python projects - using the &lt;a href="http://www.yelp.com/developers"&gt;Yelp &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt; to compile a list of restaurants in a defined geographic&amp;nbsp;area.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s been a good project. Because of some limitations of the &lt;span class="caps"&gt;API&lt;/span&gt;, I had to do some interesting tricks to make it work. One problem with the &lt;span class="caps"&gt;API&lt;/span&gt; is that it only allows 20 hits per query, so if you want to do a big query, you have to divide it up into tiny queries that have fewer than 20 hits&amp;nbsp;each. &lt;/p&gt;
+&lt;p&gt;To accomplish that, if a query gets 20 hits within those two points, it will divide the longer dimension of the rectangle created by the points in half, and perform a query on each of those two new rectangles. For each of those, if there are 20 hits, it will again divide it in two and perform two new queries, and so forth until less than 20 hits are found for the rectangle. Once less than 20 hits are found, the data is entered into a database. Once all the points have been added to the database, a comma separated file is created, and the program&amp;nbsp;ends. &lt;/p&gt;
+&lt;p&gt;It was pretty incredible switching to Python for this project from my usual Java, and also using an official &lt;span class="caps"&gt;API&lt;/span&gt; for the first time. This project ended up being about 200 lines (half of which are comments). I can&amp;#8217;t imagine how long it would be with Java, since I used some rather powerful Python modules to accomplish this (namely, csv, urllib &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt;&amp;nbsp;json).&lt;/p&gt;
+&lt;p&gt;If anybody is interested in seeing/using the code, let me know. It should be useful if you need a list of restaurants or other businesses in a certain area. Worthy causes only&amp;nbsp;please!&lt;/p&gt;</summary><category term="Python"></category><category term="yelp"></category><category term="programming"></category><category term="scrape"></category></entry><entry><title>PCT Data Project - DONE</title><link href="http://michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/" rel="alternate"></link><updated>2007-12-12T21:29:57-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-12-12:posts/2007/12/12/pct-temperature-project-done/</id><summary type="html">&lt;p&gt;I&amp;#8217;m happy to announce that the &lt;span class="caps"&gt;PCT&lt;/span&gt; data project is&amp;nbsp;complete! &lt;/p&gt;
+&lt;p&gt;Over the past several weeks/months, I have been slaving away over my 
+computer writing this program. When used, it will generate a dynamic 
+graphing area that will load up temperature data for one to six &lt;span class="caps"&gt;PCT&lt;/span&gt;&amp;nbsp;hikers. &lt;/p&gt;
+&lt;p&gt;All those that are interested in the most complicated programming 
+assignment I have ever worked on &lt;a href="http://michaeljaylissner.com/pct-temperatures"&gt;are welcome to check it out&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I am officially a free man once again! Thanks to all who made this possible
+with their encouragement and&amp;nbsp;patience! &lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry><entry><title>The Great Temperature Data Project</title><link href="http://michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/" rel="alternate"></link><updated>2007-11-01T20:40:55-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-11-01:posts/2007/11/01/great-temperature-data-project/</id><summary type="html">&lt;p&gt;Back in &amp;#8216;05 when I hiked from Mexico to Canada on the Pacific Crest Trail, I 
+carried a little device called an &lt;a href="http://www.iButton.com"&gt;iButton&lt;/a&gt;. 
+This little device contains essentially three things: a clock, a bit of memory 
+and a thermometer. It&amp;#8217;s waterproof, accurate to 0.1 degree Celsius, and is about 
+the size of five dimes stacked one upon another. There are a bunch of silly 
+things you can do with these, but what I chose to do with mine was to have it 
+record the temperature every hour on the hour for the entire time I was hiking, 
+with the idea being to get some good data about the temperature out there on 
+the &lt;span class="caps"&gt;PCT&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;All in all, you can figure that the temperature was recorded 24 times a day 
+for about 150 days, for an astounding 3600 data points, and about 150 
+oscillations from the daytime high to the nighttime low. I&amp;#8217;ve spent some time 
+working with the data, and it&amp;#8217;s pretty much impossible to make much use of&amp;#8230;.unless 
+you write a program to interpret it. You can 
+&lt;a href="http://charityhikers.org/pct/temps.htm"&gt;see it for 
+yourself&lt;/a&gt; if you&amp;#8217;re&amp;nbsp;interested.&lt;/p&gt;
+&lt;p&gt;Well, as fate should have it, I am currently enrolled in a Java programming 
+class, and I have the option of doing a final project of my own choosing. 
+Having not put this data to good use has been a burden on my soul for a 
+couple of years now, and I&amp;#8217;ve decided to make my final project an applet that 
+will allow a user to plot this data on a graph for any date range and any time 
+range that they choose (e.g. 5pm to 10pm for September 20th to&amp;nbsp;23rd).  &lt;/p&gt;
+&lt;p&gt;Once this is done, I will attempt to post it here, but here&amp;#8217;s the question to 
+you dear reader, do you have any suggestions as to features that you would be 
+interested in seeing in an applet of this sort?&amp;nbsp;Thoughts?&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m quite excited about getting this info out there.&amp;nbsp;Finally.&lt;/p&gt;</summary><category term="pct"></category><category term="java"></category><category term="programming"></category><category term="project"></category></entry></feed>

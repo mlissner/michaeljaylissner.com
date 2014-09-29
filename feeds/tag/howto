@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/howto" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2013-04-19T10:18:05-07:00</updated><entry><title>How to help end Boy Scouts of America’s ban on gays</title><link href="http://michaeljaylissner.com/posts/2013/04/19/help-end-the-bsa-ban-on-gays/" rel="alternate"></link><updated>2013-04-19T10:18:05-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2013-04-19:posts/2013/04/19/help-end-the-bsa-ban-on-gays/</id><summary type="html">&lt;p&gt;On May 3rd, the Boy Scouts are considering lifting their ban on gays, and are putting a vote to the local and national councils. This means that it&amp;#8217;s easy to influence the vote by calling in and expressing your opinion. It&amp;#8217;s simple to do so, and more voices could change the direction of the Boy Scouts of America, allowing all boys to be included and&amp;nbsp;accepted. &lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s what to&amp;nbsp;do:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://www.scouting.org/LocalCouncilLocator.aspx"&gt;Find your local&amp;nbsp;council&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Give them a call or send them an email telling them your&amp;nbsp;opinion.&lt;/li&gt;
+&lt;li&gt;Contact the national council via email: &lt;a href="mailto:feedback@scouting.org"&gt;feedback@scouting.org&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Most important is to contact your local council. We need their phones to be ringing off the hook with people expressing their opinions. It truly takes no more than two minutes. Here&amp;#8217;s the San Diego council: (619) 298-6121, and the East Bay council: (925)&amp;nbsp;674-6100.&lt;/p&gt;
+&lt;p&gt;If you prefer a form letter, you can &lt;a href="https://secure3.convio.net/hrc/site/Advocacy?cmd=display&amp;amp;page=UserAction&amp;amp;id=1623&amp;amp;autologin=true&amp;amp;utm_term=link2&amp;amp;JServSessionIdr004=on4q7x9ly4.app304a"&gt;just do this one through the Human Rights Campaign&lt;/a&gt; (34,000 people already&amp;nbsp;have).&lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s a simple transcript for you to&amp;nbsp;follow:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I&amp;#8217;m [calling/wrriting] to express my desire that the Boy Scouts immediately lift their ban on gays. This ban is discriminatory, outdated and pointless. Scouting teaches many great lessons to thousands of adolescents across the &lt;span class="caps"&gt;U.S.&lt;/span&gt; One lesson that Scouting should not teach is that homosexuality is somehow wrong or means for&amp;nbsp;discrimination. &lt;/p&gt;
+&lt;p&gt;On May 3rd, I hope that you will help the &lt;span class="caps"&gt;BSA&lt;/span&gt; finally makes the right decision so it can continue to lead boys into being mature and accepting&amp;nbsp;men.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Send this to the email above, and call your local council. This could make a&amp;nbsp;difference.&lt;/p&gt;</summary><category term="howto"></category><category term="homosexuality"></category><category term="boy scouts"></category></entry><entry><title>Adding New Fonts to Tesseract 3 OCR Engine</title><link href="http://michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/" rel="alternate"></link><updated>2012-02-11T10:53:30-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-02-11:posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/</id><summary type="html">
+&lt;h2 id="status"&gt;Status&lt;/h2&gt;
+&lt;p&gt;I’m attempting to keep this up to date as Tesseract changes. If you have 
+questions or corrections, please send them directly using the &lt;a href="http://michaeljaylissner.com/contact"&gt;contact 
+page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I’ve turned off commenting on this article because it was just a 
+bunch of people asking for help and never getting any. If you need help 
+with these instructions, go to Stack Overflow and ask there.&lt;/p&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://code.google.com/p/tesseract-ocr/"&gt;Tesseract&lt;/a&gt; is a great and powerful &lt;span class="caps"&gt;OCR&lt;/span&gt; engine, but their &lt;a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3"&gt;instructions 
+for adding a new font&lt;/a&gt; are incredibly long and complicated. At 
+CourtListener we have to handle several unusual &lt;a href="http://en.wikipedia.org/wiki/Blackletter"&gt;blackletter fonts&lt;/a&gt;, 
+so we had to go through this process a few times. Below I’ve explained the 
+process so others may more easily add fonts to their system.&lt;/p&gt;
+&lt;p&gt;The process has a few major steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#create-training-documents"&gt;Create training documents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#train-tesseract"&gt;Teach Tesseract about the documents&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="create-training-documents"&gt;Create training documents&lt;/h2&gt;
+&lt;p&gt;To create training documents, open up &lt;span class="caps"&gt;MS&lt;/span&gt; Word or LibreOffice, paste in the contents of the attached file named ‘standard-training-text.txt’. This file contains the training text that is used by Tesseract for the included fonts.&lt;/p&gt;
+&lt;p&gt;Set your line spacing to at least 1.5, and space out the letters by about 1pt. using character spacing. I’ve attached a sample doc too, if that helps. Set the text to the font you want to use, and save it as font-name.doc.&lt;/p&gt;
+&lt;p&gt;Save the document as a &lt;span class="caps"&gt;PDF&lt;/span&gt; (call it [lang].font-name.exp0.pdf, with lang being an &lt;a href="http://www.sil.org/iso639-3/iso-639-3_Name_Index_20120203.tab"&gt;&lt;span class="caps"&gt;ISO&lt;/span&gt;-639 three letter abbreviation&lt;/a&gt; for your language), and then use the following command to convert it to a 300dpi tiff (requires imagemagick):&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;convert -density 300 -depth 4 lang.font-name.exp0.pdf lang.font-name.exp0.tif&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You’ll now have a good training image called lang.font-name.exp0.tif. If you’re adding multiple fonts, or bold, italic or underline, repeat this process multiple times, creating one doc → pdf →  tiff per font variation.&lt;/p&gt;
+&lt;h2 id="train-tesseract"&gt;Train Tesseract&lt;/h2&gt;
+&lt;p&gt;The next step is to run tesseract over the image(s) we just created, and to see how well it can do with the new font. After it’s taken its best shot, we then give it corrections. It’ll provide us with a box file, which is just a file containing x,y coordinates of each letter it found along with what letter it thinks it is. So let’s see what it can do:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;tesseract&lt;/span&gt; &lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exp0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tiff&lt;/span&gt; &lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exp0&lt;/span&gt; &lt;span class="n"&gt;batch&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nochop&lt;/span&gt; &lt;span class="n"&gt;makebox&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You’ll now have a file called font-name.exp0.box, and you’ll need to open it in a box-file editor. There are a bunch of these &lt;a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#Box_File_Editors"&gt;on the Tesseract wiki&lt;/a&gt;. The one that works for me (on Ubuntu) is &lt;a href="http://code.google.com/p/moshpytt/"&gt;moshpytt&lt;/a&gt;, though it doesn’t support multi-page tiffs. If you need to use a multi-page tiff, see &lt;a href="http://code.google.com/p/moshpytt/issues/detail?id=2"&gt;the issue on the topic&lt;/a&gt; for tips. Once you’ve opened it, go through &lt;strong&gt;every&lt;/strong&gt; letter, and make sure it was detected correctly. If a letter was skipped, add it as a row to the box file. Similarly, if two letters were detected as one, break them up into two lines.&lt;/p&gt;
+&lt;p&gt;When that’s done, you feed the box file back into tesseract:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;tesseract&lt;/span&gt; &lt;span class="n"&gt;eng&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exp0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;tif&lt;/span&gt; &lt;span class="n"&gt;eng&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;font&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;box&lt;/span&gt; &lt;span class="n"&gt;nobatch&lt;/span&gt; &lt;span class="n"&gt;box&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;train&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stderr&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next, you need to detect the Character set used in all your box files:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;unicharset_extractor&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;box&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When that’s complete, you need to create a &lt;code&gt;font_properties&lt;/code&gt; file. It should list every font you’re training, one per line, and identify whether it has the following characteristics: &amp;lt;fontname&amp;gt; &amp;lt;italic&amp;gt; &amp;lt;bold&amp;gt; &amp;lt;fixed&amp;gt; &amp;lt;serif&amp;gt; &amp;lt;fraktur&amp;gt;&lt;/p&gt;
+&lt;p&gt;So, for example, if you use the standard training data, you might end up with a file like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;eng.arial.box 0 0 0 0 0
+eng.arialbd.box 0 1 0 0 0
+eng.arialbi.box 1 1 0 0 0
+eng.ariali.box 1 0 0 0 0
+eng.b018012l.box 0 0 0 1 0
+eng.b018015l.box 0 1 0 1 0
+eng.b018032l.box 1 0 0 1 0
+eng.b018035l.box 1 1 0 1 0
+eng.c059013l.box 0 0 0 1 0
+eng.c059016l.box 0 1 0 1 0
+eng.c059033l.box 1 0 0 1 0
+eng.c059036l.box 1 1 0 1 0
+eng.cour.box 0 0 1 1 0
+eng.courbd.box 0 1 1 1 0
+eng.courbi.box 1 1 1 1 0
+eng.couri.box 1 0 1 1 0
+eng.georgia.box 0 0 0 1 0
+eng.georgiab.box 0 1 0 1 0
+eng.georgiai.box 1 0 0 1 0
+eng.georgiaz.box 1 1 0 1 0
+eng.lincoln.box 0 0 0 0 1
+eng.old-english.box 0 0 0 0 1
+eng.times.box 0 0 0 1 0
+eng.timesbd.box 0 1 0 1 0
+eng.timesbi.box 1 1 0 1 0
+eng.timesi.box 1 0 0 1 0
+eng.trebuc.box 0 0 0 1 0
+eng.trebucbd.box 0 1 0 1 0
+eng.trebucbi.box 1 1 0 1 0
+eng.trebucit.box 1 0 0 1 0
+eng.verdana.box 0 0 0 0 0
+eng.verdanab.box 0 1 0 0 0
+eng.verdanai.box 1 0 0 0 0
+eng.verdanaz.box 1 1 0 0 0
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note that this is the standard font_properties file that should be supplied with Tesseract and I’ve added the two bold rows for the blackletter fonts I’m training. You can also see which fonts are included out of the box.&lt;/p&gt;
+&lt;p&gt;We’re getting near the end. Next, create the clustering data:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mftraining -F font_properties -U unicharset -O lang.unicharset *.tr 
+cntraining *.tr
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you want, you can &lt;a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#Dictionary_Data_(Optional)"&gt;create a wordlist&lt;/a&gt; or a &lt;a href="http://code.google.com/p/tesseract-ocr/wiki/TrainingTesseract3#The_last_file_(unicharambigs)"&gt;unicharambigs file&lt;/a&gt;. If you don’t plan on doing that, the last step is to combine the various files we’ve created. &lt;/p&gt;
+&lt;p&gt;To do that, rename each of the language files (normproto, Microfeat, inttemp, pffmtable) to have your lang prefix, and run (mind the dot at the end):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;combine_tessdata&lt;/span&gt; &lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will create all the data files you need, and you just need to move them to the correct place on your &lt;span class="caps"&gt;OS&lt;/span&gt;. On Ubuntu, I was able to move them to;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;mv&lt;/span&gt; &lt;span class="n"&gt;eng&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;traineddata&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;share&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tessdata&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And that, good friend, is it. Worst process for a human, ever.&lt;/p&gt;
+&lt;h2 id="enclosures"&gt;Enclosures&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://michaeljaylissner.com/archive/ocr/standard-training-text.txt"&gt;Training data file&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://michaeljaylissner.com/archive/ocr/old-english.doc"&gt;Old English example file&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="tesseract"></category><category term="ocr"></category><category term="howto"></category><category term="font"></category></entry><entry><title>Installing Tracker from Source</title><link href="http://michaeljaylissner.com/posts/2009/02/23/installing-tracker-from-source/" rel="alternate"></link><updated>2009-02-23T00:13:40-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-02-23:posts/2009/02/23/installing-tracker-from-source/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve been working over the past several weeks on getting Tracker to work better on my system. There are a couple reasons that I&amp;#8217;m doing this. The first is that by default on Ubuntu, Tracker doesn&amp;#8217;t support a number of meta formats (such as the tags in JPEGs, &lt;span class="caps"&gt;ID3&lt;/span&gt; info in MP3s, and the like). The second was that the &lt;span class="caps"&gt;RDF&lt;/span&gt; parsing code in the default Ubuntu version is a bit buggy, and the new version is better. It&amp;#8217;s been a bit of a pain figuring out the install process, so I figured I&amp;#8217;d post here so others might have an easier&amp;nbsp;time.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="http://projects.gnome.org/tracker/start.html"&gt;online instructions&lt;/a&gt; say to simply download the code, and to install it. No big deal, right? Well&amp;#8230;in reality, it&amp;#8217;s a bit harder than that. The process I went through was to download the source from &lt;a href="http://projects.gnome.org/tracker/download.html"&gt;here&lt;/a&gt; per the instructions, unpack the source files, and to run the configure&amp;nbsp;command. &lt;/p&gt;
+&lt;p&gt;After the configure command is run each time, it will give you a summary of which components will be installed, and which will not. If you have all the dependencies necessary, and include a couple of arguments to the configure command, everything will get installed. If not, certain pieces will be&amp;nbsp;missing. &lt;/p&gt;
+&lt;p&gt;The list of dependencies is a bit long, so before you run ./configure, you might as well install them. To do so,&amp;nbsp;run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo aptitude install libgmime-2.0-2a libgmime-2.0-2-dev dbus-glib-1-dev libdbus-glib-1-dev libhal-dev libhal-storage-dev sqlite3-dev libsqlite3-dev libexif-dev libdeskbar-tracker libgsf-1-dev libjpeg62-dev libtiff4-dev libxine-dev libpoppler-dev libgstreamer0.10-dev libpoppler-glib-dev libtotem-plparser-dev libunac1-dev libexempi-dev libraptor1-dev libtracker-gtk-dev libgnome-desktop-dev libgnome-desktop-dev libnotify-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Once those are installed,&amp;nbsp;run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;./configure --enable-deskbar-applet --enable-tracker-applet --prefix&lt;span class="o"&gt;=&lt;/span&gt;/usr --sysconfdir&lt;span class="o"&gt;=&lt;/span&gt;/etc
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After this, it should say that pretty much everything will be installed. If so, you can proceed to the commands below, and once those are complete, the latest version should be installed with full&amp;nbsp;functionality.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;make
+sudo make install
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If after running your configure script (&lt;code&gt;./configure&lt;/code&gt;) it doesn&amp;#8217;t 
+indicate that everything will be installed, put in a comment below, and we&amp;#8217;ll 
+see what we can&amp;nbsp;do.&lt;/p&gt;</summary><category term="Tracker"></category><category term="install"></category><category term="howto"></category><category term="desktop search"></category></entry></feed>

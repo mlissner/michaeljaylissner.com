@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/google" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2013-02-02T14:27:15-08:00</updated><entry><title>Enabling Two-Factor Authentication</title><link href="http://michaeljaylissner.com/posts/2013/02/02/enabling-two-factor-authentication/" rel="alternate"></link><updated>2013-02-02T14:27:15-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2013-02-02:posts/2013/02/02/enabling-two-factor-authentication/</id><summary type="html">&lt;p&gt;This post is as much Public Service Announcement as anything else. I didn&amp;#8217;t realize that two-factor authentication had finally taken off. It&amp;#8217;s practically vital for your email account (you&amp;#8217;re asking for trouble without it), but in the past year or so, a bunch of other services have begun offering&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;Today I went on a little security binge, and found that I could turn on two-factor authentication&amp;nbsp;at:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google/Gmail&lt;/li&gt;
+&lt;li&gt;Yahoo&lt;/li&gt;
+&lt;li&gt;Dropbox&lt;/li&gt;
+&lt;li&gt;Charles Schwab (they send you a fob for&amp;nbsp;free)&lt;/li&gt;
+&lt;li&gt;Facebook&lt;/li&gt;
+&lt;li&gt;Paypal&lt;/li&gt;
+&lt;li&gt;Amazon Web&amp;nbsp;Services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One note about Charles Schwab is that getting their fob is great, but it&amp;#8217;s hardly all you should do to secure your account. You should also set up what they call a &amp;#8220;verbal password&amp;#8221; that you have to provide whenever you call in. Without it, it&amp;#8217;s pretty easy to get into an account via their surprisingly weak phone&amp;nbsp;security.&lt;/p&gt;
+&lt;p&gt;Anyway, this is a pretty good list so far. The companies are using a handful of different techniques for doing this, but they all seem pretty solid in the end. Google&amp;#8217;s, naturally, seems to be one of the most robust, but I&amp;#8217;m impressed there&amp;#8217;s so much&amp;nbsp;offered.&lt;/p&gt;
+&lt;p&gt;Go set these&amp;nbsp;up! &lt;/p&gt;</summary><category term="google"></category><category term="yahoo"></category><category term="dropbox"></category><category term="two-factor authentication"></category><category term="charles schwab"></category><category term="facebook"></category><category term="paypal"></category><category term="amazon"></category></entry><entry><title>Testing Deletion Speed of Online Photo Sites</title><link href="http://michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" rel="alternate"></link><updated>2009-11-14T16:28:44-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-14:posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/</id><summary type="html">
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2014-08-22&lt;/strong&gt;: While updating this blog to a new platform, 
+I wound down these tests and put notes about each service’s final result. 
+After nearly five years, some of these sites still haven’t taken down the image.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2010-03-08&lt;/strong&gt;: Added an image at drop.io&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2010-01-28&lt;/strong&gt;: Added an image at Orkut.com&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2010-01-28&lt;/strong&gt;: At &lt;a href="http://www.ftc.gov/bcp/workshops/privacyroundtables/index.shtml"&gt;the &lt;span class="caps"&gt;FTC&lt;/span&gt; privacy round table&lt;/a&gt; today, 
+Facebook’s director of public policy, Tim Sparapani, claimed that information 
+deleted from Facebook cannot be retrieved even by Facebook staff, 
+because it is almost instantly deleted. I informed him this was not true in
+the case of pictures, and he said he would look into it. Will update this 
+post when/if I hear more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="background-and-threat-model"&gt;Background and Threat Model&lt;/h2&gt;
+&lt;p&gt;Imagine an embarrassing photo of you is placed online by one of your 
+friends. You ask them to take it down, and they do. Now, 
+imagine that your enemy had gotten a link to that photo, 
+and had posted it to their blog. You’d hope that your friend taking the 
+photo down would in fact delete the photo, but I’m sorry to say that isn’t 
+always the case.&lt;/p&gt;
+&lt;p&gt;Inspired by &lt;a href="http://arstechnica.com/web/news/2009/07/are-those-photos-really-deleted-from-facebook-think-twice.ars"&gt;Jacqui Cheng’s article&lt;/a&gt;, I decided to test some of the 
+more popular online services for photo hosting to see what happens when you
+press the delete button on a photo from their site. On &lt;strong&gt;November 
+14&lt;sup&gt;th&lt;/sup&gt;, 2009&lt;/strong&gt;, I uploaded and then deleted the following image of
+a black box with white text to Facebook, Flickr, Picasa, MySpace, Photobucket, 
+Shutterfly, Twitpic and WalMart. A few months later, 
+I also added drop.io and Orkut: &lt;/p&gt;
+&lt;p&gt;&lt;img alt="I will attempt to delete this photo" src="http://michaeljaylissner.com/images/photo-deletion-tests/PostedAndDeleted.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;When you look below, if you can see the black box for a site, 
+that means that it was not truly deleted and is still live. You can verify 
+this by clicking on the image. This is checked each time this page is 
+loaded, so the information is constantly verified. If the image has been 
+deleted, you will see the date that it was deleted.&lt;/p&gt;
+&lt;p&gt;There are a number of reasons why photo services might be lazy about 
+properly removing images from their site, but until they have proper 
+deletion mechanisms, we should all think twice about what we upload.&lt;/p&gt;
+&lt;p&gt;If there’s a service that is not shown here that you’d like to see, 
+please &lt;a href="http://michaeljaylissner.com/contact"&gt;let me know&lt;/a&gt;. And now, without further ado, 
+I present, the ongoing results of the test:&lt;/p&gt;
+&lt;h2 id="facebook"&gt;Facebook&lt;/h2&gt;
+&lt;p&gt;Facebook properly deleted the photo from their server as of May 27, 2010.&lt;/p&gt;
+&lt;h2 id="flickr"&gt;Flickr&lt;/h2&gt;
+&lt;p&gt;Flickr began showing the following message approximately an hour after the 
+image was deleted.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Flickr Response" src="http://michaeljaylissner.com/images/photo-deletion-tests/flickr-response.jpg"/&gt;&lt;/p&gt;
+&lt;h2 id="picasa"&gt;Picasa&lt;/h2&gt;
+&lt;p&gt;Picasa properly deleted the photo from their server as of at least November
+15, 2009.&lt;/p&gt;
+&lt;h2 id="myspace"&gt;MySpace&lt;/h2&gt;
+&lt;p&gt;At an unknown time, MySpace began showing this photo instead:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="MySpace Response" src="http://michaeljaylissner.com/images/photo-deletion-tests/myspace.png"/&gt;&lt;/p&gt;
+&lt;h2 id="photobucket"&gt;Photobucket&lt;/h2&gt;
+&lt;p&gt;Photobucket properly deleted the photo from their server as of at least 
+November 14, 2009.&lt;/p&gt;
+&lt;h2 id="shutterfly"&gt;Shutterfly&lt;/h2&gt;
+&lt;p&gt;As of 2014-08-22, Shutterfly still shows &lt;a href="http://im1.shutterfly.com/media/47b9cf35b3127ccef8c9be9d18a800000040O00ActW7Ro4cuWQPbz4W/cC/f%3D0/ps%3D50/r%3D0/rx%3D720/ry%3D480/"&gt;the original image on their 
+server&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="twitpic"&gt;Twitpic&lt;/h2&gt;
+&lt;p&gt;Twitpic properly deleted the photo from their server as of at least 
+November 14, 2009.&lt;/p&gt;
+&lt;h2 id="walmart"&gt;Walmart&lt;/h2&gt;
+&lt;p&gt;As of 2014-08-22, Walmart still shows &lt;a href="http://images.photos1.walmart.com/232323232%7Ffp432%3B4%3Enu%3D3%3A%3A2%3E%3A8%3A%3E238%3EWSNRCG%3D326634885%3B329nu0mrj"&gt;the original image on their 
+server&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="google-orkut-added-2010-01-28"&gt;Google Orkut (added 2010-01-28)&lt;/h2&gt;
+&lt;p&gt;Despite being &lt;a href="http://thenextweb.com/google/2014/06/30/google-shutting-orkut-social-network-september-30/"&gt;nearly shut down completely&lt;/a&gt;, as of 2014-08-22, 
+Orkut still shows &lt;a href="http://images.orkut.com/orkut/photos/NwAAAA40TqrVmtf2vIA1oouDdb9vUTcjWDAQqVo_mBa45mvjdqMPiHhSaHxekFNT596b5sVYh593XRK-5Nquk0_WOQMAm1T1UJmPN1ZDUab24PgUE8b4ZMm09Mjj.jpg"&gt;the original image on their server&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="dropio-added-08-march-2010"&gt;Drop.io (added 08 March 2010)&lt;/h2&gt;
+&lt;p&gt;Drop.io properly deleted the photo from their server as of 8 March 2010, 
+the day it was added.&lt;/p&gt;</summary><category term="Walmart"></category><category term="Twitpic"></category><category term="Shutterfly"></category><category term="service"></category><category term="right to delete"></category><category term="privacy"></category><category term="Picassa"></category><category term="Photobucket"></category><category term="photo"></category><category term="Orkut"></category><category term="MySpace"></category><category term="google"></category><category term="Flickr"></category><category term="facebook"></category><category term="delete"></category></entry><entry><title>Log Your Friend Out of Gmail</title><link href="http://michaeljaylissner.com/posts/2008/07/04/log-your-friend-out-of-gmail/" rel="alternate"></link><updated>2008-07-04T12:16:16-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-07-04:posts/2008/07/04/log-your-friend-out-of-gmail/</id><summary type="html">&lt;p&gt;I keep having this problem where I want to use somebody&amp;#8217;s computer to check my gmail, but I know that if I go to mail.google.com, I will see their email. I was thinking about this last night, and I came up with two solutions. The first was to bookmark the gmail logout link into their browser or maybe del.icio.us so that I could visit it without having to go to their gmail, and the second solution was to post that link&amp;nbsp;here. &lt;/p&gt;
+&lt;p&gt;So, if you know that you want to log out your friend from gmail without seeing their inbox, all you have to do is &lt;a href="https://mail.google.com/mail/?logout&amp;hl=en-GB"&gt;click here&lt;/a&gt;. &lt;/p&gt;</summary><category term="google"></category><category term="infotech"></category></entry><entry><title>Marvelous RSS, Marvelous Google</title><link href="http://michaeljaylissner.com/posts/2008/01/27/marvelous-rss-marvelous-google/" rel="alternate"></link><updated>2008-01-27T15:36:34-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-01-27:posts/2008/01/27/marvelous-rss-marvelous-google/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve been working on the site a fair amount lately, and have added a couple of 
+new features. The first one is a set of those ubiquitous bookmarking buttons 
+for Technorati, del.icio.us, etc. that you should be seeing if you are reading 
+this online. I&amp;#8217;ve been trying to optimize this blog for a bit, and I figured 
+I probably need these sooner or&amp;nbsp;later.&lt;/p&gt;
+&lt;p&gt;The other thing I added today is the &amp;#8220;Subscribe&amp;#8221; block, which for the moment 
+is listed on the left under the recent music. I did a little playing around in 
+the heart of Drupal, and modified this block so that it has text links for 
+&lt;span class="caps"&gt;RSS&lt;/span&gt; and for an email service I just discovered from&amp;nbsp;Google.&lt;/p&gt;</summary><category term="google"></category><category term="blog"></category><category term="drupal"></category><category term="rss"></category></entry><entry><title>Search Concept</title><link href="http://michaeljaylissner.com/posts/2008/01/15/seach-concept/" rel="alternate"></link><updated>2008-01-15T18:00:04-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-01-15:posts/2008/01/15/seach-concept/</id><summary type="html">&lt;p&gt;There&amp;#8217;s this ongoing problem I&amp;#8217;ve been having in that search engines do not have the ability to search the insides of password protected sites. It&amp;#8217;s a little frustrating from time to time because so many sites have gads of information that search engines just can&amp;#8217;t get to, which means that you have to rely on the site&amp;#8217;s search engine, which invariably does not work very&amp;nbsp;well. &lt;/p&gt;
+&lt;p&gt;So, here&amp;#8217;s the concept. The search engine creates an opt-in program wherein websites (like banks for example) can give the engine a generic login and password, and then the search engine can get in, crawl the site, make an index, and then get out. Later, when you search for content, you can search for that information, if you desire, but to see it, you&amp;#8217;ll need to log&amp;nbsp;in.&lt;/p&gt;
+&lt;p&gt;Similarly, if you are a person who uses the secure site, you can give the search engine the ability to log in as you, and then crawl the site for your information. Thus, if you gave the search engine the login to your bank, you could later search for all your transactions at Cha Cha&amp;#8217;s restaurant&amp;#8230;.or whatever. Actually, this might be a privacy concern&amp;#8230;but it&amp;#8217;s a&amp;nbsp;thought.&lt;/p&gt;</summary><category term="google"></category><category term="infotech"></category><category term="concept"></category></entry><entry><title>The Prettiest Ratio and Google</title><link href="http://michaeljaylissner.com/posts/2007/11/30/the-prettiest-ratio-and-google/" rel="alternate"></link><updated>2007-11-30T16:43:36-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-11-30:posts/2007/11/30/the-prettiest-ratio-and-google/</id><summary type="html">&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/ParthenonGoldenRatio.png" /&gt;&lt;/p&gt;
+&lt;p&gt;In case you haven&amp;#8217;t heard about this before, the &lt;a href="http://en.wikipedia.org/wiki/Golden_ratio#Relationship_to_Fibonacci_sequence"&gt;Golden Ratio&lt;/a&gt; is the 
+concept of how to define the most aesthetically pleasing ratio between two 
+lengths, and can be found pretty much everywhere dating back all the way to
+the Egyptian Pyramids of Giza. Examples abound in the world around us. 
+Books, tables, laptops, screen sizes. Essentially anything that looks like
+a well-proportioned rectangle probably fits pretty closely into the 
+Golden&amp;nbsp;Ratio.&lt;/p&gt;
+&lt;p&gt;You can kind of see what I mean by looking at the picture of the Parthenon 
+at right that I found on Wikipedia. The idea is this: The length of the 
+smaller of two distances should be related in the same way to the longer of
+two distances as the longer of two distances is related to the sum of the 
+shorter plus the longer&amp;nbsp;distance.&lt;/p&gt;
+&lt;p&gt;If that&amp;#8217;s too confusing, perhaps this will&amp;nbsp;help:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/Golden Ratio Formula.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Still confused? How about this: The Golden Ratio is&amp;nbsp;1.61803399.&lt;/p&gt;
+&lt;p&gt;I went online a few days ago to figure out how to dimension an applet that 
+I was making, and discovered yet another cool Google tool. Googling for 
+&amp;#8220;400 * golden ratio&amp;#8221; yields the search result of 647. Very&amp;nbsp;cool.&lt;/p&gt;</summary><category term="google"></category></entry></feed>

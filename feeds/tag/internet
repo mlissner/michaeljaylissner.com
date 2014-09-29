@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/internet" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-01-05T15:41:47-08:00</updated><entry><title>Research Idea – The Age of the Internet</title><link href="http://michaeljaylissner.com/posts/2009/01/05/research-idea-age-of-the-internet/" rel="alternate"></link><updated>2009-01-05T15:41:47-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-01-05:posts/2009/01/05/research-idea-age-of-the-internet/</id><summary type="html">&lt;p&gt;I blogged &lt;a href="http://michaeljaylissner.com/posts/2007/12/28/firefox-last-modified-tip/"&gt;a while back&lt;/a&gt; about a Firefox command that would tell you 
+the last modified date of the page you were looking at, 
+and it got me thinking&amp;#8230;.what is the age of the Internet on the&amp;nbsp;whole?&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve been thinking about it a bit, and it seems like knowing this kind of 
+information could prove pretty useful for certain circles. If there was a 
+way to summarize the last modified date of every page on the Internet, 
+we could pretty easily figure out how useful the information&amp;nbsp;is. &lt;/p&gt;
+&lt;p&gt;Firefox&amp;nbsp;add-on? &lt;/p&gt;</summary><category term="Internet"></category><category term="Project idea"></category></entry><entry><title>We Knew It Existed - The Official Definition of The Internet</title><link href="http://michaeljaylissner.com/posts/2008/12/07/we-knew-it-existed-the-official-definition-of-the-internet/" rel="alternate"></link><updated>2008-12-07T23:43:25-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-12-07:posts/2008/12/07/we-knew-it-existed-the-official-definition-of-the-internet/</id><summary type="html">&lt;p&gt;On October 24, 1995, the Federal Networking Council met and decided that the 
+&amp;#8220;Internet&amp;#8221; refers to the global information system&amp;nbsp;that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;is logically linked together by a globally unique address space based on 
+the Internet Protocol (&lt;span class="caps"&gt;IP&lt;/span&gt;) or its subsequent&amp;nbsp;extensions/follow-ons;&lt;/li&gt;
+&lt;li&gt;is able to support communications using the Transmission Control 
+Protocol/Internet Protocol (&lt;span class="caps"&gt;TCP&lt;/span&gt;/&lt;span class="caps"&gt;IP&lt;/span&gt;) suite or its subsequent 
+extensions/follow-ons, and/or other &lt;span class="caps"&gt;IP&lt;/span&gt;-compatible protocols;&amp;nbsp;and&lt;/li&gt;
+&lt;li&gt;provides, uses or makes accessible, either publicly or privately, high level 
+services layered on the communications and related infrastructure described&amp;nbsp;herein.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Oh. Thanks for&amp;nbsp;that.&lt;/p&gt;</summary><category term="pedantic"></category><category term="Internet"></category></entry></feed>

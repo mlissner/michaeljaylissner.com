@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/security" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-12-15T17:41:27-08:00</updated><entry><title>Script to Rid Thyself of Autocomplete = Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-12-15T17:41:27-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-15:posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;I took some time today and wrote up &lt;a href="http://michaeljaylissner.com/archive/autocomplete-killer.sh"&gt;a script&lt;/a&gt; that can be run to 
+eliminate 
+&lt;code&gt;autocomplete=off&lt;/code&gt; in Firefox. It basically does the same thing as is 
+described &lt;a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"&gt;here&lt;/a&gt;, but it automates&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;The script can be run with one of five&amp;nbsp;arguments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can choose to use find (&lt;code&gt;--find&lt;/code&gt;) or locate (&lt;code&gt;--locate&lt;/code&gt;) to find the 
+ files that need to be changed on your&amp;nbsp;system;&lt;/li&gt;
+&lt;li&gt;You can dictate the location of the file if you want to modify a 
+ specific one or know exactly where it&amp;#8217;s located (&lt;code&gt;--dictate&lt;/code&gt;);&lt;/li&gt;
+&lt;li&gt;You can choose to use the Ubuntu default location (&lt;code&gt;--default&lt;/code&gt;);&amp;nbsp;or&lt;/li&gt;
+&lt;li&gt;You can print the help information (&lt;code&gt;--help&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once the program is run, it will make a back up, and modify it the original
+ versions of the file. Once that&amp;#8217;s complete, all you have to do is restart&amp;nbsp;Firefox.&lt;/p&gt;
+&lt;p&gt;It has been pointed out to me by some security folks that removing a
+utocomplete&amp;#8217;s functionality from the browser might not be the best thing, 
+since it will allow you to save your passwords in the browser. There&amp;#8217;s some
+ truth to that: Anything that&amp;#8217;s on your computer can be hacked. So, 
+ if you&amp;#8217;re going to use this script, use it&amp;nbsp;wisely.&lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s the code. I&amp;#8217;ve attached it to this message as well. Any bugs or 
+comments are greatly&amp;nbsp;appreciated.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="c"&gt;# a simple script to destroy autocomplete in linux installations.&lt;/span&gt;
+
+
+&lt;span class="c"&gt;##############&lt;/span&gt;
+&lt;span class="c"&gt;# We begin with our functions, it&amp;#39;s not efficient, but it works&lt;/span&gt;
+&lt;span class="c"&gt;##############&lt;/span&gt;
+
+&lt;span class="c"&gt;# a function to print the help message.&lt;/span&gt;
+&lt;span class="k"&gt;function &lt;/span&gt;printHelp &lt;span class="o"&gt;{&lt;/span&gt;
+cat &lt;span class="s"&gt;&amp;lt;&amp;lt;EOF&lt;/span&gt;
+&lt;span class="s"&gt;NAME&lt;/span&gt;
+&lt;span class="s"&gt;    autocompleteDestroyer.sh&lt;/span&gt;
+
+&lt;span class="s"&gt;SYNOPSIS&lt;/span&gt;
+&lt;span class="s"&gt;    autocompleteDestroyer.sh [ --find | --default | --help | --locate | --dictate ]&lt;/span&gt;
+
+&lt;span class="s"&gt;OPTIONS&lt;/span&gt;
+&lt;span class="s"&gt;    This program will find the nsLoginManager.js file on your computer, and will fix it so that autocomplete is disabled in your installation of Firefox. Since this program will be altering your installation of Firefox, it will require your root password.&lt;/span&gt;
+
+&lt;span class="s"&gt;    --help     Print this help file&lt;/span&gt;
+
+&lt;span class="s"&gt;    --default  Attempt to use the default location of the files (/usr/lib/xulrunner*/components/nsLoginManager.js)&lt;/span&gt;
+
+&lt;span class="s"&gt;    --locate   Use the locate database, if installed, to find the files. This will only find the files that were added before the last time the locate database was updated (which is typically once a day). It is faster than the --find option, but might not find all versions.&lt;/span&gt;
+
+&lt;span class="s"&gt;    --find     Use the find command to locate the nsLoginManager.js files. This will search in /usr/lib by default. Edit the script if you would like to change this. This is the slowest, but most thorough option.&lt;/span&gt;
+
+&lt;span class="s"&gt;    --dictate  Allows input of a known location.&lt;/span&gt;
+
+&lt;span class="s"&gt;EXIT STATUS&lt;/span&gt;
+&lt;span class="s"&gt;    autocompleteDestroyer.sh exists with a status of 0 if it encounters no problems. An exit status of 1 means incorrect usage. An exit status of 2 indicates it was unable to find your files. An exit status of 3 indicates the user terminated the program. An exit status of 4 means it encountered problems editing your file.&lt;/span&gt;
+
+&lt;span class="s"&gt;BUGS&lt;/span&gt;
+&lt;span class="s"&gt;    If any bugs are encountered, please see http://michaeljaylissner.com/contact/&lt;/span&gt;
+
+&lt;span class="s"&gt;AUTHOR AND COPYRIGHT&lt;/span&gt;
+&lt;span class="s"&gt;    This script was authored by Michael Lissner and is released under GNU GPLv3.&lt;/span&gt;
+
+&lt;span class="s"&gt;EOF&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="c"&gt;# takes an argument, and creates an array containing the files to be modified.&lt;/span&gt;
+&lt;span class="k"&gt;function &lt;/span&gt;identifyEvilFiles &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;find&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;        &lt;/span&gt;&lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;find /usr/lib -name nsLoginManager.js 2&amp;gt; /dev/null&lt;span class="k"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; ! &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# Test if files has been set.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: No files found. Try loosening the find parameter in the script, per the help file.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;    elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;default&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# We assume the default location of nsLoginManager.js&lt;/span&gt;
+        &lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;ls /usr/lib/xulrunner*/components/nsLoginManager.js 2&amp;gt; /dev/null&lt;span class="k"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; ! &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# We didn&amp;#39;t have any hits. Exit.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: We didn&amp;#39;t find anything at the default locations. Perhaps try the --locate or --find arguments.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;    elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;locate&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# We run the locate command, see if we have any hits.&lt;/span&gt;
+        &lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;locate -b &lt;span class="s1"&gt;&amp;#39;\nsLoginManager.js&amp;#39;&lt;/span&gt; 2&amp;gt; /dev/null&lt;span class="k"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; ! &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# No hits. Exit.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: We didn&amp;#39;t find anything using the locate command. Perhaps try the --find argument.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;    elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dictate&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# &amp;quot;Why don&amp;#39;t you just tell me what movie you&amp;#39;d like to see?&amp;quot; --Kramer.&lt;/span&gt;
+        &lt;span class="nb"&gt;read&lt;/span&gt; -p &lt;span class="s2"&gt;&amp;quot;Where is the file nsLoginManager.js located on your machine: &amp;quot;&lt;/span&gt; files
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# Good. The file exists. We press on.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Thank you. That file exists, and we will modify it.&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;            &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocomplete.sh: That file doesn&amp;#39;t seem to exist. Please try again.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;     fi&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+
+
+&lt;span class="k"&gt;function &lt;/span&gt;modifyFiles &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt;  &lt;span class="s2"&gt;&amp;quot;The following files will be modified: &lt;/span&gt;
+&lt;span class="s2"&gt;$files &amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;echo &lt;/span&gt;
+&lt;span class="nb"&gt;    read&lt;/span&gt; -p &lt;span class="s2"&gt;&amp;quot;Shall we proceed (y/n): &amp;quot;&lt;/span&gt; proceed
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$proceed&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;y&amp;quot;&lt;/span&gt; -o &lt;span class="nv"&gt;$proceed&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Y&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# Here we go!&lt;/span&gt;
+        &lt;span class="k"&gt;while &lt;/span&gt;&lt;span class="nb"&gt;read&lt;/span&gt; -r line
+        &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="k"&gt;            &lt;/span&gt;&lt;span class="nb"&gt;echo &lt;/span&gt;Now processing &lt;span class="nv"&gt;$line&lt;/span&gt;
+            &lt;span class="c"&gt;#find the function in the file, label it with FILLERWORD, then replace the first line, and delete the rest. A messy approach, but functional&lt;/span&gt;
+            sed -i.bak &lt;span class="s1"&gt;&amp;#39;/[[:space:]]*_isAutocompleteDisabled[[:space:]]*:[[:space:]]*function.*{[[:space:]]*$/,/^[[:space:]]*},[[:space:]]*$/s/^/FILLERWORD/&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+            sed -r -i &lt;span class="s1"&gt;&amp;#39;s/FILLERWORD.*_isAutocomplete.*/    _isAutocompleteDisabled :  function (element) { return false; },/&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+            sed -i &lt;span class="s1"&gt;&amp;#39;/FILLERWORD/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+
+            &lt;span class="c"&gt;# test if it worked&lt;/span&gt;
+            grep -i -q &lt;span class="s1"&gt;&amp;#39;isautocompletedisabled.*return false&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$?&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; 0 &lt;span class="o"&gt;]&lt;/span&gt;
+            &lt;span class="k"&gt;then&lt;/span&gt;
+                &lt;span class="c"&gt;# something failed...probably. Tell the user&lt;/span&gt;
+                &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Unable to successfully edit the file. Exiting&amp;quot;&lt;/span&gt;
+                &lt;span class="nb"&gt;exit &lt;/span&gt;4
+            &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;        done&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$files&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;All the files have been processed properly. Please restart Firefox, and thanks for using this script.&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;exit &lt;/span&gt;0
+    &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="c"&gt;# It appears they&amp;#39;d like to abort. Let&amp;#39;s exit.&lt;/span&gt;
+        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;OK. You know what to do if you change your mind.&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;exit &lt;/span&gt;3
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+
+&lt;span class="c"&gt;#initiation sequence&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$# &lt;/span&gt;-eq 0 -o &lt;span class="nv"&gt;$# &lt;/span&gt;-gt 1 &lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;then&lt;/span&gt; 
+    &lt;span class="c"&gt;# We need to give them help using the program. &lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh:  Invalid number of arguments.&amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Usage: autocompleteDestroyer.sh [ --help | --default | --locate | --find | --dictate ] &amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;exit &lt;/span&gt;1
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="nv"&gt;$EUID&lt;/span&gt; -ne 0 &lt;span class="o"&gt;]]&lt;/span&gt;; 
+&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autoCompleteDestroyer.sh: This script must be run as root&amp;quot;&lt;/span&gt; 1&amp;gt;&amp;amp;2
+    &lt;span class="nb"&gt;exit &lt;/span&gt;1
+&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;    case&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; in
+        --help&lt;span class="o"&gt;)&lt;/span&gt; printHelp;;
+        --find&lt;span class="o"&gt;)&lt;/span&gt; identifyEvilFiles find; modifyFiles;;
+        --default&lt;span class="o"&gt;)&lt;/span&gt; identifyEvilFiles default; modifyFiles;;
+        --locate&lt;span class="o"&gt;)&lt;/span&gt; identifyEvilFiles locate; modifyFiles;;
+        --dictate&lt;span class="o"&gt;)&lt;/span&gt;identifyEvilFiles dictate; modifyFiles;;
+        *&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: Invalid argument. Try the --help argument.&amp;quot;&lt;/span&gt;
+           &lt;span class="nb"&gt;exit &lt;/span&gt;1;
+    &lt;span class="k"&gt;esac&lt;/span&gt;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="security"></category><category term="Linux"></category><category term="firefox"></category><category term="bash"></category><category term="autocomplete"></category></entry><entry><title>More Security Papers: Breaking ReCAPTCHA and Proactive Methods for Secure Design</title><link href="http://michaeljaylissner.com/posts/2009/12/12/more-security-papers-breaking-recaptcha-and-proactive-methods-for-secure-design/" rel="alternate"></link><updated>2009-12-12T12:07:58-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-12:posts/2009/12/12/more-security-papers-breaking-recaptcha-and-proactive-methods-for-secure-design/</id><summary type="html">&lt;p&gt;Two more security papers&amp;nbsp;today. &lt;/p&gt;
+&lt;p&gt;In the first, &lt;a href="http://michaeljaylissner.com/pdfs/breaking-recaptcha.pdf"&gt;&lt;strong&gt;Breaking ReCAPTCHA&lt;/strong&gt;&lt;/a&gt; I discuss a few methods that 
+ReCAPTCHAs can be hacked, and talk a bit about the ways that they were 
+attacked by the Anonymous hacker group. I should mention at the outset that
+none of the approaches here are particularly useful though, 
+and that ultimately, the hacker group beat ReCAPTCHA by simply out 
+numbering&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://michaeljaylissner.com/pdfs/proactive-security.pdf"&gt;The &lt;em&gt;second paper&lt;/em&gt;&lt;/a&gt; is a brief discussion of some approaches an 
+organization might take when beginning a project in which security is a 
+high concern. Essentially, it takes a chronological approach, 
+from the start to the end of the&amp;nbsp;project. &lt;/p&gt;
+&lt;p&gt;Enjoy.&lt;/p&gt;</summary><category term="security"></category><category term="captcha"></category><category term="ReCAPTCHA"></category><category term="Design"></category></entry><entry><title>Analyzing Facebook’s Security Mechanisms</title><link href="http://michaeljaylissner.com/posts/2009/11/15/analyzing-facebooks-security-mechanisms/" rel="alternate"></link><updated>2009-11-15T17:43:55-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-15:posts/2009/11/15/analyzing-facebooks-security-mechanisms/</id><summary type="html">&lt;p&gt;For my &lt;a href="http://is219.blogspot.com/"&gt;Privacy, 
+Security and Cryptography&lt;/a&gt; class, we studied a set of 13 principles for 
+secure&amp;nbsp;systems:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Security is&amp;nbsp;Economics&lt;/li&gt;
+&lt;li&gt;Least&amp;nbsp;Privilege&lt;/li&gt;
+&lt;li&gt;Use Fail-Safe&amp;nbsp;Defaults&lt;/li&gt;
+&lt;li&gt;Separation of&amp;nbsp;Responsibility&lt;/li&gt;
+&lt;li&gt;Defense in&amp;nbsp;Depth&lt;/li&gt;
+&lt;li&gt;Psychological&amp;nbsp;Acceptability&lt;/li&gt;
+&lt;li&gt;Usability&lt;/li&gt;
+&lt;li&gt;Ensure Complete&amp;nbsp;Mediation&lt;/li&gt;
+&lt;li&gt;Least Common&amp;nbsp;Mechanism&lt;/li&gt;
+&lt;li&gt;Detect if You Cannot&amp;nbsp;Prevent&lt;/li&gt;
+&lt;li&gt;Orthogonal&amp;nbsp;Security&lt;/li&gt;
+&lt;li&gt;Don&amp;#8217;t Rely on Security Through&amp;nbsp;Obscurity&lt;/li&gt;
+&lt;li&gt;Design Security in, From the&amp;nbsp;Start&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For our midterm, we were asked to analyze how Facebook exemplifies or does not 
+follow these principles. It was an interesting assignment, which finally 
+forced me to think more thoroughly about Facebook&amp;#8217;s security policies, and I&amp;#8217;m
+happy to &lt;a href="http://michaeljaylissner.com/pdfs/facebook-security.pdf"&gt;attach my findings&lt;/a&gt;&amp;nbsp;here. &lt;/p&gt;
+&lt;p&gt;For some people these may be rather run of the mill notes. For others, you may 
+be surprised at poor security of the world&amp;#8217;s biggest photo and social 
+networking&amp;nbsp;site.&lt;/p&gt;
+&lt;p&gt;Enjoy.&lt;/p&gt;</summary><category term="security"></category><category term="facebook"></category><category term="paper"></category><category term="privacy"></category></entry><entry><title>Google Resonds to the Twitter Attack</title><link href="http://michaeljaylissner.com/posts/2009/10/02/google-responds-to-the-twitter-attack/" rel="alternate"></link><updated>2009-10-02T20:37:12-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-02:posts/2009/10/02/google-responds-to-the-twitter-attack/</id><summary type="html">&lt;p&gt;A few months ago, Twitter was hacked by means of a &lt;a href="http://www.techcrunch.com/2009/07/19/the-anatomy-of-the-twitter-attack/"&gt;clever, 
+yet somewhat obvious approach&lt;/a&gt;. Today, I saw the following alert on my Gmail
+account, ensuring that this security vulnerability is fixed. I&amp;#8217;m often 
+impressed by Gmail, but this is great to&amp;nbsp;see:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hey, this is important: If you ever lose access to your account, 
+you can send password reset info to [myemailaddress@michaeljaylissner.com]. 
+This address is correct | Update this&amp;nbsp;address&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What happened in the case of Twitter was that a hacker did the&amp;nbsp;following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Figured out the Gmail address of a Twitter&amp;nbsp;employee&lt;/li&gt;
+&lt;li&gt;Went to &lt;a href="https://www.google.com/accounts/ForgotPasswd?service=mail&amp;amp;fpOnly=1"&gt;Gmail&amp;#8217;s password reminder&lt;/a&gt;, and requested a&amp;nbsp;reminder&lt;/li&gt;
+&lt;li&gt;This informed the hacker that an email reminder was sent to a specific 
+ Hotmail&amp;nbsp;address&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;That Hotmail address had been automatically closed due to&amp;nbsp;disuse&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;The hacker set up that email account, since it was now&amp;nbsp;available&lt;/li&gt;
+&lt;li&gt;The hacker then requested another password reminder, which summarily sent an 
+ email to his new Hotmail&amp;nbsp;account&lt;/li&gt;
+&lt;li&gt;This gave the hacker complete access to the Twitter employee&amp;#8217;s gmail 
+ account (and thus a lot of other&amp;nbsp;stuff)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The new alert that Gmail is now popping up should serve the function of 
+updating this, and, if done correctly, should fix this problem permanently.
+Well done&amp;nbsp;Gmail.&lt;/p&gt;</summary><category term="security"></category><category term="Twitter"></category><category term="gmail"></category><category term="secret questions"></category><category term="passwords"></category></entry><entry><title>Economics of Securing Government Information Systems: A Case Study</title><link href="http://michaeljaylissner.com/posts/2009/09/12/economics-of-securing-government-information-systems/" rel="alternate"></link><updated>2009-09-12T13:48:45-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-09-12:posts/2009/09/12/economics-of-securing-government-information-systems/</id><summary type="html">&lt;p&gt;Prior to becoming a student at the &lt;a href="http://ischool.berkeley.edu"&gt;School of Information&lt;/a&gt;, I worked doing systems support for a government database that held hundreds of thousands of records, consisting of social security numbers, addresses, names, DOBs, etc. My job was to help users with any kinds of bugs they found in the system, and to work with the vendor to report and resolve those bugs. Over the years at this job, I spent a good amount of time doing security testing of the system. I found a number of vulnerabilities which I reported to the vendor, and which were quickly fixed. One of them however had been plaguing me from the time I found it, around 2007, until now. This post is the tale of that vulnerability, which I&amp;#8217;m proud to say was fixed earlier this&amp;nbsp;week.&lt;/p&gt;
+&lt;p&gt;The problem that I discovered is a simple one, and is one that is &lt;a href="http://www.hotmail.com" rel="nofollow"&gt;widespread&lt;/a&gt; &lt;a href="http://www.gmx.com/" rel="nofollow"&gt;on&lt;/a&gt; &lt;a href="http://webmail.juno.com" rel="nofollow"&gt;the&lt;/a&gt; &lt;a href="http://registration.excite.com" rel="nofollow"&gt;web&lt;/a&gt;. Simply put, the web-based system did not use encryption on the log on page, resulting in user names and passwords being sent over the Internet in plain text rather than&amp;nbsp;ciphertext. &lt;/p&gt;
+&lt;p&gt;Now, without going into too much detail, this is not necessarily the end of the world. When you use the Internet, the information that transfers between you and websites is split up into packets, and these packets are sent down whatever wire appears to have the least load and the greatest speed. As a result, there is no guarantee all of your information will ever be sent through the same computer, and it&amp;#8217;s challenging for a hacker to place a computer between you and the website you&amp;#8217;re&amp;nbsp;using.&lt;/p&gt;
+&lt;p&gt;Unfortunately though, there are some bottlenecks, and sometimes &amp;mdash; not always &amp;mdash; all of your information &lt;em&gt;will&lt;/em&gt; pass through the same point between you and the server. Bottlenecks can occur in a number of places, such&amp;nbsp;as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;The web host&amp;#8217;s computers and wires&lt;/strong&gt; &amp;mdash; Unless a custom &lt;a href="http://en.wikipedia.org/wiki/Name_server"&gt;&lt;span class="caps"&gt;DNS&lt;/span&gt; server&lt;/a&gt; is being used, all the information going to or from the server has to go through some host&amp;#8217;s computer system. If they are logging the information, and if the login information is sent in plaintext, they will immediately have&amp;nbsp;it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The fastest route&lt;/strong&gt; &amp;mdash; Somewhere between you and the server, there may be one route that is fastest. It&amp;#8217;s possible that some computer in the middle will in fact be relaying all of the information to and from you and the server. They will, in effect, have all of the needed information to steal your login&amp;nbsp;credentials.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Your network&lt;/strong&gt; &amp;mdash; If you&amp;#8217;re on a home or corporate network, more than likely, there is one or more bottlenecks between you and the Internet. This is a point where your information could be&amp;nbsp;gathered.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The network provider&amp;#8217;s computers&lt;/strong&gt; &amp;mdash; Finally, your information will be passing through the hands of the network providers, so they have a wide scope of opportunities to inspect and analyze your&amp;nbsp;information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thus, you might say that it&amp;#8217;s &lt;span class="caps"&gt;OK&lt;/span&gt; to have an unencrypted login page, if you don&amp;#8217;t mind having vulnerabilities at both endpoints and all along the middle of the&amp;nbsp;connection.&lt;/p&gt;
+&lt;p&gt;But I digress and should proceed with the tale. Around 2007, I found this vulnerability and used &lt;a href="http://www.wireshark.org/"&gt;Wireshark&lt;/a&gt; to demonstrate it to my managers and to the vendor. At that time, it seemed like it would be quickly fixed, and that we could go on with our&amp;nbsp;lives.&lt;/p&gt;
+&lt;p&gt;Then some time passed, and nothing happened. I reminded a few people, but still nothing. The problem persisted, and I handed off my job to somebody else so that I could go back to school. But even once I was back in school, occasionally something would remind me of the problem, and I&amp;#8217;d check to see if it was fixed. But it wasn&amp;#8217;t. So I reminded my old co-workers that they had a problem (which wasn&amp;#8217;t my favorite thing to do), and I assumed it would be taken care of. Except it &lt;em&gt;still&lt;/em&gt;&amp;nbsp;wasn&amp;#8217;t.&lt;/p&gt;
+&lt;p&gt;At this point, I had to decide how much of a moral duty I had to get this fixed, since I was unaffiliated with the organization for about a year by that time. Proceeding to bring up this issue meant that I would probably annoy a number of people, and that I would likely damage relationships I had spent years building, but to not bring it up meant that thousands of people&amp;#8217;s records would continue to be&amp;nbsp;insecure.&lt;/p&gt;
+&lt;p&gt;With this balance in mind, I decided to contact the vendor about it some more, and to continue contacting him every so often until it was fixed. Ultimately, after an additional three or four months and about five long phone calls it&amp;#8217;s finally&amp;nbsp;fixed. &lt;/p&gt;
+&lt;p&gt;The questions now are, what took so damned long, and what can be done to avoid this in the future? Well, a number of things factored&amp;nbsp;in:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Staff transitions&lt;/strong&gt; &amp;mdash; Part-way through this time, I left my job and transitioned to school. While I did mention this problem to my replacement, I also mentioned about 500 other things. Sadly, this one may not have caught his attention, or I did not emphasize it&amp;nbsp;enough.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lack of security personnel&lt;/strong&gt; &amp;mdash; Nowhere in either organizations was there a person that was designated to discover and push security&amp;nbsp;problems.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vagueness of the problem&lt;/strong&gt; &amp;mdash; I was able to demonstrate the problem to my superiors and to the vendor, and to explain how it could be a problem, but it wasn&amp;#8217;t a smoking gun. There had been no security failure, nor was there any obvious thing that an average user could&amp;nbsp;exploit.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Competing projects&lt;/strong&gt; &amp;mdash; At the time I discovered the problem, there were many other competing projects that were on the table. To push them aside to fix a vague and unexploited problem did not seem like a good use of&amp;nbsp;resources.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Relationship maintenance and imbalances&lt;/strong&gt; &amp;mdash; In 2007, when I reported this, I was not a part of the senior management, and did not have a strong relationship with the vendor. Conversely, my bosses &lt;em&gt;did&lt;/em&gt; have a relationship with the vendor, but they might not have wanted to jeopardize it by pressuring the vendor to fix a security&amp;nbsp;problem.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vague economic incentives&lt;/strong&gt; &amp;mdash; With this 
+vulnerability, it was unclear if anybody would ever know if a hacker had 
+been logging into the system and collecting information. If one had, 
+it&amp;#8217;s vague where the burden of the problem would fall. It&amp;#8217;s not certain 
+whether it would fall on my organization or the vendor. And anyway, 
+because &lt;a href="http://www.hhs.gov/ocr/privacy/"&gt;&lt;span class="caps"&gt;HIPAA&lt;/span&gt;&lt;/a&gt;
+is so massive, and because there are many other laws that come into play 
+(such as the &lt;a href="http://www.dmv.ca.gov/pubs/vctop/appndxa/civil/civ1798_82.htm" 
+target="_blank"&gt;data breach laws of &lt;span class="caps"&gt;CA&lt;/span&gt;&lt;/a&gt;), it&amp;#8217;s unclear what exactly they
+  would have to to as a&amp;nbsp;result.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Some things did not factor in that one might expect to be&amp;nbsp;relevant:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Everybody wanted to fix it. Nobody thought it shouldn&amp;#8217;t be fixed or that it shouldn&amp;#8217;t be&amp;nbsp;prioritized.&lt;/li&gt;
+&lt;li&gt;Nobody dropped the ball and didn&amp;#8217;t get it&amp;nbsp;done.&lt;/li&gt;
+&lt;li&gt;There were no structural impediments to getting it reported to the proper&amp;nbsp;people.&lt;/li&gt;
+&lt;li&gt;It wasn&amp;#8217;t a complicated or difficult thing to&amp;nbsp;fix.&lt;/li&gt;
+&lt;li&gt;It wasn&amp;#8217;t a trivial problem, nor one that was difficult to&amp;nbsp;exploit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In sum therefore, it appears that it was economic, social and personnel challenges that caused this to take so long to be fixed. So what can we do to fix these types of problems? A number of things come to&amp;nbsp;mind:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Full-time security personnel&lt;/strong&gt; &amp;mdash; The most important thing for one of the organizations to do is to hire somebody to complete regular security audits. This person needs to be hired full time so that they understand the complexity of the problems, and so they can be there to push the solutions forward until things are&amp;nbsp;fixed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Clarity of economic burden&lt;/strong&gt; &amp;mdash; With so much information being stored in the system, it should be made explicit to both parties what the plan is in case of a data loss, and where the burden lies in that&amp;nbsp;event.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shared bug reporting&lt;/strong&gt; &amp;mdash; Currently, there are about fifteen organizations that use this vendor for their information management, however there is no shared system of bug tracking or reporting. As a result, when security problems are found, organizations have no organized way to share information with each other.  Because each organization has a relationship to maintain with the vendor, none of them want to make the product look bad or vulnerable. This isolates the information, reducing the pressure on the vendor to fix such&amp;nbsp;problems.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prioritization of security fixes&lt;/strong&gt; &amp;mdash; Finally, it&amp;#8217;s vital that such problems be prioritized so that they do not fall by the wayside, and so that they can all be fixed before they are&amp;nbsp;exploited.&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="security"></category><category term="https"></category><category term="economics"></category></entry><entry><title>Making Prey of Computer Thieves</title><link href="http://michaeljaylissner.com/posts/2009/07/25/making-prey-of-computer-thieves/" rel="alternate"></link><updated>2009-07-25T22:39:35-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-07-25:posts/2009/07/25/making-prey-of-computer-thieves/</id><summary type="html">&lt;p&gt;Laptops get stolen. It sucks, but we know it happens from time to time. 
+Recently, I&amp;#8217;ve been checking out programs that can help to catch the 
+thieves (and dabbling in writing my&amp;nbsp;own).&lt;/p&gt;
+&lt;p&gt;One program that I found, called &lt;a href="http://preyproject.com"&gt;Prey&lt;/a&gt;, helps to do just this. Once 
+installed, every few minutes it will check a website to see if a page 
+exists. If that page exists, it will collect a bunch of information about 
+the computer, and send that (using &lt;span class="caps"&gt;SMTP&lt;/span&gt; of your choice) to an email address
+ of your&amp;nbsp;choice.&lt;/p&gt;
+&lt;p&gt;So, for example, if I set up a web page at http://michaeljaylissner
+.com/laptop-stolen, in a few minutes, Prey will see that page, 
+and will collect the following&amp;nbsp;information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;span class="caps"&gt;IP&lt;/span&gt; address where my computer is connected (this is almost as good as 
+ the thief&amp;#8217;s physical&amp;nbsp;address)&lt;/li&gt;
+&lt;li&gt;The name of the wireless network my computer is connected to, and a list of 
+ the others in the&amp;nbsp;area&lt;/li&gt;
+&lt;li&gt;The &lt;span class="caps"&gt;MAC&lt;/span&gt; address of the wireless router my computer is connected&amp;nbsp;to&lt;/li&gt;
+&lt;li&gt;How long my computer has been on&amp;nbsp;(uptime)&lt;/li&gt;
+&lt;li&gt;Any files that have been modified in the last X&amp;nbsp;minutes&lt;/li&gt;
+&lt;li&gt;Any programs that are currently&amp;nbsp;running&lt;/li&gt;
+&lt;li&gt;Any open connections to websites or online&amp;nbsp;services&lt;/li&gt;
+&lt;li&gt;A picture of the thief, if you have a webcam&amp;nbsp;enabled&lt;/li&gt;
+&lt;li&gt;And best of all, a screenshot at the time of the&amp;nbsp;report&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once I get the email with all this information, it&amp;#8217;s just a matter of taking 
+it to the police, and convincing them to take action on&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;Of course, all of this could be useless if the thief decides to immediately
+wipe the data on the computer, but it&amp;#8217;s a good safeguard that can weed out 
+the dumb thieves at&amp;nbsp;least.&lt;/p&gt;</summary><category term="security"></category><category term="prey"></category></entry><entry><title>A Real Problem You Should Fix. Now.</title><link href="http://michaeljaylissner.com/posts/2009/04/12/a-real-problem-you-should-fix-now/" rel="alternate"></link><updated>2009-04-12T14:36:49-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-04-12:posts/2009/04/12/a-real-problem-you-should-fix-now/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve mentioned secret questions on my site before, but I never quite realized how much of a problem they are until today, when I discovered &lt;a href="http://uspublicrecords.com"&gt;uspublicrecords.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s a simple site. You put in a name, and if it has that person in its database, it gives you their age, middle name, and family members. So far, I haven&amp;#8217;t found any names it &lt;em&gt;doesn&amp;#8217;t&lt;/em&gt;&amp;nbsp;have.&lt;/p&gt;
+&lt;p&gt;Using this information, I went and checked a friend&amp;#8217;s gmail secret question, which was, &amp;#8220;What is your father&amp;#8217;s middle name?&amp;#8221; I just happened to have that information from uspublicrecords.com, so I put it in, and changed their email&amp;nbsp;password.* &lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s pretty creepy how easy this is, and fixing this problem could take days as you check all your secret questions one by one. This might make a good mashup: a system for checking all your secret&amp;nbsp;questions.&lt;/p&gt;
+&lt;p&gt;Anyway, now might be a good time to go change your secret questions, cause if it has anything to do with middle names, that site will hand them right&amp;nbsp;out.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;With their &lt;span class="caps"&gt;OK&lt;/span&gt;, of&amp;nbsp;course.&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="security"></category><category term="problems"></category><category term="mashup idea"></category></entry><entry><title>The Argument for Encryption, and Why Vista Is Irresponsible</title><link href="http://michaeljaylissner.com/posts/2008/09/26/the-argument-for-encryption-and-why-vista-is-irresponsible/" rel="alternate"></link><updated>2008-09-26T20:34:31-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-26:posts/2008/09/26/the-argument-for-encryption-and-why-vista-is-irresponsible/</id><summary type="html">&lt;p&gt;We all agree that security is necessary for our data, but we all fall down when it comes to implementation. An example that I keep returning to is the need for encryption. I posted a few days ago about how Yahoo! doesn&amp;#8217;t encrypt their email, allowing a sophisticated hacker to intercept any message to or from your&amp;nbsp;account. &lt;/p&gt;
+&lt;p&gt;Today, I encountered my password in plain text in a configuration file that is easily accessible to anybody that gains physical access to my computer. The guilty program is the Pidgin &lt;span class="caps"&gt;IM&lt;/span&gt; client (&lt;a href="http://developer.pidgin.im/ticket/5872"&gt;bug filed here&lt;/a&gt;), which stores login and password information in an &lt;span class="caps"&gt;XML&lt;/span&gt; file in your home directory. I&amp;#8217;ve seen files of this sort a number of times, and for some reason programmers keep using this&amp;nbsp;technique.&lt;/p&gt;
+&lt;p&gt;Most people believe that if they have confidential information in their computers, and if they use a password on their computer, they&amp;#8217;ll be &lt;span class="caps"&gt;OK&lt;/span&gt;. Nobody will be able to get past the password. While that isn&amp;#8217;t entirely true (most passwords are easily broken), the thing to remember is that once a hard drive is removed from a computer, any of the data on it can be accessed &amp;#8212; without the password. So, so long as programmers keep using this technique, sensitive data will still be out&amp;nbsp;there.&lt;/p&gt;
+&lt;p&gt;The easiest solution to this problem is to encrypt your entire hard disk at all times. That way, even if your hard disk is removed from your computer, all the data is jumbled anyway. Ubuntu released this feature back in April, and Microsoft released this feature with the release of Vista. Unfortunately though, to receive encryption on your Vista installation, you have to buy Vista Ultimate, which costs $120 more than the Home version (&lt;a href="http://www.microsoft.com/windows/windows-vista/compare-editions/default.aspx"&gt;at a cool $320!&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;As we trust more and more data on our computers, is this irresponsible product engineering? Absolutely. It costs Microsoft no more money to put encryption on all versions. Unfortunately though, they make more money by charging for&amp;nbsp;it. &lt;/p&gt;</summary><category term="microsoft"></category><category term="security"></category><category term="vista"></category><category term="pidgin"></category></entry><entry><title>On Airport Security and Knives</title><link href="http://michaeljaylissner.com/posts/2008/09/22/on-airport-security-and-knives/" rel="alternate"></link><updated>2008-09-22T16:39:48-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-22:posts/2008/09/22/on-airport-security-and-knives/</id><summary type="html">&lt;p&gt;&lt;img alt="No Alt" src="http://michaeljaylissner.com/images/opinel_splits.jpeg" /&gt; &lt;/p&gt;
+&lt;p&gt;I had the occasion to go through airport security over the weekend, 
+and I realized an interesting thing. If you want to get through security 
+with a large knife, all you have to do is try to slip one through in your 
+bag a few times over the course of a few days or&amp;nbsp;weeks. &lt;/p&gt;
+&lt;p&gt;Each time you fail, you act like an idiot (&amp;#8220;oops!&amp;#8221;), 
+and give them the knife, proceeding without it to your airplane. Eventually,
+the guy watching the x-ray screen will miss the knife, you will proceed, 
+and you will finally be able to cut your airplane&amp;nbsp;steak.&lt;/p&gt;
+&lt;p&gt;I learned this lesson by accident when I nearly missed my plane. I had 
+planned on checking my small bag with the knife in it, 
+but when I arrived at the airport late (my fault), I could either miss my 
+plane, or try to sneak the knife&amp;nbsp;through.&lt;/p&gt;
+&lt;p&gt;Since I didn&amp;#8217;t want to miss my flight, I tried and succeeded to get the 
+pictured knife through. Pretty amazing that a three inch blade can pass 
+right by,&amp;nbsp;eh?&lt;/p&gt;
+&lt;p&gt;I wonder if terrorists are&amp;nbsp;patient&amp;#8230;&lt;/p&gt;</summary><category term="politics"></category><category term="security"></category><category term="knife"></category></entry><entry><title>Quick Update on my Prostate</title><link href="http://michaeljaylissner.com/posts/2008/09/17/quick-update-on-my-prostate/" rel="alternate"></link><updated>2008-09-17T15:24:10-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-17:posts/2008/09/17/quick-update-on-my-prostate/</id><summary type="html">&lt;p&gt;Well, there is an interesting development in the theft of my credit card 
+number. Today I received supplements in the mail for my prostate. Supplements 
+that were bought with my credit card. For those wondering, no, I do not need 
+this medicine. No, I did not order this&amp;nbsp;medicine. &lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m intrigued and a bit amused that this is what my identity thief decided to 
+do with my money, but I&amp;#8217;m going to have to decline their offer of prostate 
+supplements. This purchase raises so many questions, I don&amp;#8217;t know exactly 
+where to&amp;nbsp;begin.&lt;/p&gt;</summary><category term="me"></category><category term="identity"></category><category term="security"></category></entry><entry><title>There’s a Lesson About Yahoo! Security I Learned from Palin Today</title><link href="http://michaeljaylissner.com/posts/2008/09/17/there-is-a-lesson-about-yahoo-security-i-learned-from-palin-today/" rel="alternate"></link><updated>2008-09-17T15:08:09-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-17:posts/2008/09/17/there-is-a-lesson-about-yahoo-security-i-learned-from-palin-today/</id><summary type="html">&lt;p&gt;The lesson is this: Yahoo! doesn&amp;#8217;t use encryption on their webmail. I&amp;#8217;ll 
+repeat that: &lt;span class="caps"&gt;YAHOO&lt;/span&gt;! &lt;span class="caps"&gt;DOESN&lt;/span&gt;&amp;#8217;T &lt;span class="caps"&gt;USE&lt;/span&gt; &lt;span class="caps"&gt;ENCRYPTION&lt;/span&gt; &lt;span class="caps"&gt;ON&lt;/span&gt; &lt;span class="caps"&gt;THEIR&lt;/span&gt; &lt;span class="caps"&gt;WEBMAIL&lt;/span&gt;! &lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m nothing short of shocked. I could have sworn that Yahoo! was a $26B 
+company. Surely, &lt;span class="caps"&gt;SURELY&lt;/span&gt; they, of all people would see the importance and 
+value of secure email, right?&amp;nbsp;Nope. &lt;/p&gt;
+&lt;p&gt;They&amp;#8217;ve been offering free email since at least April of 1996 when they had 
+their &lt;span class="caps"&gt;IPO&lt;/span&gt;. Somehow in the last 12 years they never secured the damned thing?&amp;nbsp;What?&lt;/p&gt;
+&lt;p&gt;Note below the conspicuous use of http rather than&amp;nbsp;https:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No Alt" src="http://michaeljaylissner.com/images/yahooSecuritySucks.png" /&gt;&lt;/p&gt;</summary><category term="palin"></category><category term="security"></category><category term="yahoo"></category></entry><entry><title>I Am Me, Dammit!</title><link href="http://michaeljaylissner.com/posts/2008/09/15/i-am-me-dammit/" rel="alternate"></link><updated>2008-09-15T15:00:30-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-09-15:posts/2008/09/15/i-am-me-dammit/</id><summary type="html">&lt;p&gt;Well, it happened. The bastards stole my identity. They somehow got my credit 
+card number, address, phone number, etc, took them, and put them to use. Grand 
+total losses: $309. Not too bad,&amp;nbsp;considering.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve called my credit card company, and they promise to reimburse me for my 
+losses. This is when I thank the federal government for making them do this. 
+Thank you&amp;nbsp;feds!&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m thinking about how this happened, and I have a theory. I am about 95% sure 
+this happened as a result of shopping for car parts online. One of the 
+retailers I went to (lost to me now) decided to share my contact information 
+with a number of &amp;#8220;partners&amp;#8221; so that a part I was looking for could be found 
+more easily. I ended up getting the part, but I think they might have shared 
+more info than they should have.&amp;nbsp;Arg. &lt;/p&gt;
+&lt;p&gt;After all of the services that credit cards have tried to sell me over the 
+years to protect me from this kind of thing, I&amp;#8217;m happy to say that I&amp;#8217;m fine 
+without them. It&amp;#8217;s really not the end of the world&amp;#8230;it&amp;#8217;s annoying though,&amp;nbsp;yes.&lt;/p&gt;</summary><category term="rant"></category><category term="theft"></category><category term="bastard"></category><category term="identity"></category><category term="security"></category></entry><entry><title>LoJack for Linux Part II</title><link href="http://michaeljaylissner.com/posts/2007/09/25/lojack-on-linux-part-ii/" rel="alternate"></link><updated>2007-09-25T22:42:45-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-09-25:posts/2007/09/25/lojack-on-linux-part-ii/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;EDIT&lt;/span&gt;: See update in the&amp;nbsp;comments&lt;/p&gt;
+&lt;p&gt;I did some &lt;a href="http://www.arsgeek.com/?p=1612"&gt;research&lt;/a&gt; after that last post, and I learned that the trick to this is to get a free account from dyndns.com, and then use the ddclient in daemon mode. That combination will allow you to track the &lt;span class="caps"&gt;IP&lt;/span&gt; of your computer no matter where it is, no script&amp;nbsp;involved. &lt;/p&gt;
+&lt;p&gt;The other piece of this puzzle is somewhat more puzzling: How to access the computer after it is stolen. Ideally, this would happen via ssh, but in practice ssh almost always talks over port 22, and routers pretty much always block all ports. The only solution to this problem I can think of is to hack the thief&amp;#8217;s router once you know its &lt;span class="caps"&gt;IP&lt;/span&gt; address, but that&amp;#8217;s hardly a solution&amp;nbsp;really.&lt;/p&gt;
+&lt;p&gt;The other caveat to consider is that if you need a password to log in, the ddclient won&amp;#8217;t get started in the first place because the thief won&amp;#8217;t be able to log in. So, what&amp;#8217;s the better solution: A password login, or&amp;nbsp;ddclient? &lt;/p&gt;
+&lt;p&gt;Hmmm&amp;#8230;.any solutions to the ssh problem are more than&amp;nbsp;welcome.&lt;/p&gt;</summary><category term="Linux"></category><category term="security"></category><category term="lojack"></category></entry></feed>

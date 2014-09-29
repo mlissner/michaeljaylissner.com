@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/bash" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-12-15T17:41:27-08:00</updated><entry><title>Script to Rid Thyself of Autocomplete = Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-12-15T17:41:27-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-15:posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;I took some time today and wrote up &lt;a href="http://michaeljaylissner.com/archive/autocomplete-killer.sh"&gt;a script&lt;/a&gt; that can be run to 
+eliminate 
+&lt;code&gt;autocomplete=off&lt;/code&gt; in Firefox. It basically does the same thing as is 
+described &lt;a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"&gt;here&lt;/a&gt;, but it automates&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;The script can be run with one of five&amp;nbsp;arguments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can choose to use find (&lt;code&gt;--find&lt;/code&gt;) or locate (&lt;code&gt;--locate&lt;/code&gt;) to find the 
+ files that need to be changed on your&amp;nbsp;system;&lt;/li&gt;
+&lt;li&gt;You can dictate the location of the file if you want to modify a 
+ specific one or know exactly where it&amp;#8217;s located (&lt;code&gt;--dictate&lt;/code&gt;);&lt;/li&gt;
+&lt;li&gt;You can choose to use the Ubuntu default location (&lt;code&gt;--default&lt;/code&gt;);&amp;nbsp;or&lt;/li&gt;
+&lt;li&gt;You can print the help information (&lt;code&gt;--help&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once the program is run, it will make a back up, and modify it the original
+ versions of the file. Once that&amp;#8217;s complete, all you have to do is restart&amp;nbsp;Firefox.&lt;/p&gt;
+&lt;p&gt;It has been pointed out to me by some security folks that removing a
+utocomplete&amp;#8217;s functionality from the browser might not be the best thing, 
+since it will allow you to save your passwords in the browser. There&amp;#8217;s some
+ truth to that: Anything that&amp;#8217;s on your computer can be hacked. So, 
+ if you&amp;#8217;re going to use this script, use it&amp;nbsp;wisely.&lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s the code. I&amp;#8217;ve attached it to this message as well. Any bugs or 
+comments are greatly&amp;nbsp;appreciated.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="c"&gt;# a simple script to destroy autocomplete in linux installations.&lt;/span&gt;
+
+
+&lt;span class="c"&gt;##############&lt;/span&gt;
+&lt;span class="c"&gt;# We begin with our functions, it&amp;#39;s not efficient, but it works&lt;/span&gt;
+&lt;span class="c"&gt;##############&lt;/span&gt;
+
+&lt;span class="c"&gt;# a function to print the help message.&lt;/span&gt;
+&lt;span class="k"&gt;function &lt;/span&gt;printHelp &lt;span class="o"&gt;{&lt;/span&gt;
+cat &lt;span class="s"&gt;&amp;lt;&amp;lt;EOF&lt;/span&gt;
+&lt;span class="s"&gt;NAME&lt;/span&gt;
+&lt;span class="s"&gt;    autocompleteDestroyer.sh&lt;/span&gt;
+
+&lt;span class="s"&gt;SYNOPSIS&lt;/span&gt;
+&lt;span class="s"&gt;    autocompleteDestroyer.sh [ --find | --default | --help | --locate | --dictate ]&lt;/span&gt;
+
+&lt;span class="s"&gt;OPTIONS&lt;/span&gt;
+&lt;span class="s"&gt;    This program will find the nsLoginManager.js file on your computer, and will fix it so that autocomplete is disabled in your installation of Firefox. Since this program will be altering your installation of Firefox, it will require your root password.&lt;/span&gt;
+
+&lt;span class="s"&gt;    --help     Print this help file&lt;/span&gt;
+
+&lt;span class="s"&gt;    --default  Attempt to use the default location of the files (/usr/lib/xulrunner*/components/nsLoginManager.js)&lt;/span&gt;
+
+&lt;span class="s"&gt;    --locate   Use the locate database, if installed, to find the files. This will only find the files that were added before the last time the locate database was updated (which is typically once a day). It is faster than the --find option, but might not find all versions.&lt;/span&gt;
+
+&lt;span class="s"&gt;    --find     Use the find command to locate the nsLoginManager.js files. This will search in /usr/lib by default. Edit the script if you would like to change this. This is the slowest, but most thorough option.&lt;/span&gt;
+
+&lt;span class="s"&gt;    --dictate  Allows input of a known location.&lt;/span&gt;
+
+&lt;span class="s"&gt;EXIT STATUS&lt;/span&gt;
+&lt;span class="s"&gt;    autocompleteDestroyer.sh exists with a status of 0 if it encounters no problems. An exit status of 1 means incorrect usage. An exit status of 2 indicates it was unable to find your files. An exit status of 3 indicates the user terminated the program. An exit status of 4 means it encountered problems editing your file.&lt;/span&gt;
+
+&lt;span class="s"&gt;BUGS&lt;/span&gt;
+&lt;span class="s"&gt;    If any bugs are encountered, please see http://michaeljaylissner.com/contact/&lt;/span&gt;
+
+&lt;span class="s"&gt;AUTHOR AND COPYRIGHT&lt;/span&gt;
+&lt;span class="s"&gt;    This script was authored by Michael Lissner and is released under GNU GPLv3.&lt;/span&gt;
+
+&lt;span class="s"&gt;EOF&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="c"&gt;# takes an argument, and creates an array containing the files to be modified.&lt;/span&gt;
+&lt;span class="k"&gt;function &lt;/span&gt;identifyEvilFiles &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;find&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;        &lt;/span&gt;&lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;find /usr/lib -name nsLoginManager.js 2&amp;gt; /dev/null&lt;span class="k"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; ! &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# Test if files has been set.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: No files found. Try loosening the find parameter in the script, per the help file.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;    elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;default&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# We assume the default location of nsLoginManager.js&lt;/span&gt;
+        &lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;ls /usr/lib/xulrunner*/components/nsLoginManager.js 2&amp;gt; /dev/null&lt;span class="k"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; ! &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# We didn&amp;#39;t have any hits. Exit.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: We didn&amp;#39;t find anything at the default locations. Perhaps try the --locate or --find arguments.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;    elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;locate&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# We run the locate command, see if we have any hits.&lt;/span&gt;
+        &lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;locate -b &lt;span class="s1"&gt;&amp;#39;\nsLoginManager.js&amp;#39;&lt;/span&gt; 2&amp;gt; /dev/null&lt;span class="k"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; ! &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# No hits. Exit.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: We didn&amp;#39;t find anything using the locate command. Perhaps try the --find argument.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;    elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dictate&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# &amp;quot;Why don&amp;#39;t you just tell me what movie you&amp;#39;d like to see?&amp;quot; --Kramer.&lt;/span&gt;
+        &lt;span class="nb"&gt;read&lt;/span&gt; -p &lt;span class="s2"&gt;&amp;quot;Where is the file nsLoginManager.js located on your machine: &amp;quot;&lt;/span&gt; files
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# Good. The file exists. We press on.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Thank you. That file exists, and we will modify it.&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;            &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocomplete.sh: That file doesn&amp;#39;t seem to exist. Please try again.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;     fi&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+
+
+&lt;span class="k"&gt;function &lt;/span&gt;modifyFiles &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt;  &lt;span class="s2"&gt;&amp;quot;The following files will be modified: &lt;/span&gt;
+&lt;span class="s2"&gt;$files &amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;echo &lt;/span&gt;
+&lt;span class="nb"&gt;    read&lt;/span&gt; -p &lt;span class="s2"&gt;&amp;quot;Shall we proceed (y/n): &amp;quot;&lt;/span&gt; proceed
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$proceed&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;y&amp;quot;&lt;/span&gt; -o &lt;span class="nv"&gt;$proceed&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Y&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# Here we go!&lt;/span&gt;
+        &lt;span class="k"&gt;while &lt;/span&gt;&lt;span class="nb"&gt;read&lt;/span&gt; -r line
+        &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="k"&gt;            &lt;/span&gt;&lt;span class="nb"&gt;echo &lt;/span&gt;Now processing &lt;span class="nv"&gt;$line&lt;/span&gt;
+            &lt;span class="c"&gt;#find the function in the file, label it with FILLERWORD, then replace the first line, and delete the rest. A messy approach, but functional&lt;/span&gt;
+            sed -i.bak &lt;span class="s1"&gt;&amp;#39;/[[:space:]]*_isAutocompleteDisabled[[:space:]]*:[[:space:]]*function.*{[[:space:]]*$/,/^[[:space:]]*},[[:space:]]*$/s/^/FILLERWORD/&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+            sed -r -i &lt;span class="s1"&gt;&amp;#39;s/FILLERWORD.*_isAutocomplete.*/    _isAutocompleteDisabled :  function (element) { return false; },/&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+            sed -i &lt;span class="s1"&gt;&amp;#39;/FILLERWORD/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+
+            &lt;span class="c"&gt;# test if it worked&lt;/span&gt;
+            grep -i -q &lt;span class="s1"&gt;&amp;#39;isautocompletedisabled.*return false&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$?&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; 0 &lt;span class="o"&gt;]&lt;/span&gt;
+            &lt;span class="k"&gt;then&lt;/span&gt;
+                &lt;span class="c"&gt;# something failed...probably. Tell the user&lt;/span&gt;
+                &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Unable to successfully edit the file. Exiting&amp;quot;&lt;/span&gt;
+                &lt;span class="nb"&gt;exit &lt;/span&gt;4
+            &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;        done&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$files&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;All the files have been processed properly. Please restart Firefox, and thanks for using this script.&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;exit &lt;/span&gt;0
+    &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="c"&gt;# It appears they&amp;#39;d like to abort. Let&amp;#39;s exit.&lt;/span&gt;
+        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;OK. You know what to do if you change your mind.&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;exit &lt;/span&gt;3
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+
+&lt;span class="c"&gt;#initiation sequence&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$# &lt;/span&gt;-eq 0 -o &lt;span class="nv"&gt;$# &lt;/span&gt;-gt 1 &lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;then&lt;/span&gt; 
+    &lt;span class="c"&gt;# We need to give them help using the program. &lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh:  Invalid number of arguments.&amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Usage: autocompleteDestroyer.sh [ --help | --default | --locate | --find | --dictate ] &amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;exit &lt;/span&gt;1
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="nv"&gt;$EUID&lt;/span&gt; -ne 0 &lt;span class="o"&gt;]]&lt;/span&gt;; 
+&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autoCompleteDestroyer.sh: This script must be run as root&amp;quot;&lt;/span&gt; 1&amp;gt;&amp;amp;2
+    &lt;span class="nb"&gt;exit &lt;/span&gt;1
+&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;    case&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; in
+        --help&lt;span class="o"&gt;)&lt;/span&gt; printHelp;;
+        --find&lt;span class="o"&gt;)&lt;/span&gt; identifyEvilFiles find; modifyFiles;;
+        --default&lt;span class="o"&gt;)&lt;/span&gt; identifyEvilFiles default; modifyFiles;;
+        --locate&lt;span class="o"&gt;)&lt;/span&gt; identifyEvilFiles locate; modifyFiles;;
+        --dictate&lt;span class="o"&gt;)&lt;/span&gt;identifyEvilFiles dictate; modifyFiles;;
+        *&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: Invalid argument. Try the --help argument.&amp;quot;&lt;/span&gt;
+           &lt;span class="nb"&gt;exit &lt;/span&gt;1;
+    &lt;span class="k"&gt;esac&lt;/span&gt;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="security"></category><category term="Linux"></category><category term="firefox"></category><category term="bash"></category><category term="autocomplete"></category></entry><entry><title>Script to Clean Up F-Spot Database</title><link href="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/" rel="alternate"></link><updated>2009-10-14T00:30:12-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-14:posts/2009/10/14/script-to-cleanup-fspot-database/</id><summary type="html">&lt;p&gt;One of the more popular photo management applications for Linux is f-spot, 
+but unfortunately it has a rather glaring bug. It uses a sqlite3 database 
+internally to track which pictures you&amp;#8217;ve imported into it, 
+what tags they have, etc. However, if you delete, move or rename any of the
+files that f-spot is tracking, the next time you browse to that photo within f-spot, it will crash the program. It&amp;#8217;s annoying, and there&amp;#8217;s no particularly easy way to deal with it&amp;#8230;until&amp;nbsp;now.&lt;/p&gt;
+&lt;p&gt;The script below simply iterates through all of the photos 
+that are in f-spot&amp;#8217;s database, and checks to see if those photos exist on 
+your hard drive. If you run it in demo-mode, it will show you which files 
+look problematic, and if you run it in normal mode, 
+it will delete those database entries so that your database is cleaned up 
+(but not before backing up your database, just in&amp;nbsp;case).&lt;/p&gt;
+&lt;p&gt;In my very limited testing, it works very well, any additional feedback or 
+bug reporting is more than&amp;nbsp;welcome. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class="c"&gt;# A script to find missing files in the f-spot database, and then delete them.&lt;/span&gt;
+&lt;span class="c"&gt;# At present these files crash f-spot. It&amp;#39;s frustrating as all hell.&lt;/span&gt;
+
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Welcome to the f-spot database cleaner. All the usual disclaimers apply, as you might imagine.&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;What would you like to do: &amp;quot;&lt;/span&gt; 
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;  1) Run in demo-mode &amp;quot;&lt;/span&gt; 
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;  2) Clean up your f-spot database&amp;quot;&lt;/span&gt; 
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;  3) Quit&amp;quot;&lt;/span&gt; 
+&lt;span class="nb"&gt;read&lt;/span&gt; -p &lt;span class="s2"&gt;&amp;quot;Your choice: &amp;quot;&lt;/span&gt; choice
+
+&lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nv"&gt;$choice&lt;/span&gt; in 
+    1&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;demomode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;;;
+    2&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;demomode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;false&amp;quot;&lt;/span&gt;;;
+    3&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nb"&gt;exit &lt;/span&gt;0;;
+&lt;span class="k"&gt;esac&lt;/span&gt;
+
+&lt;span class="c"&gt;# With that beginning stuff out of the way, let us do some functions&lt;/span&gt;
+&lt;span class="c"&gt;# First, a function to gather the database contents and to print out the ones that are orphans&lt;/span&gt;
+
+&lt;span class="k"&gt;function &lt;/span&gt;findAndFixOrphans &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="c"&gt;# find our db, and set a var. Checking for XDG path first, since it&amp;#39;s the more recent location of the db&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f &lt;span class="nv"&gt;$XDG_CONFIG_DIR&lt;/span&gt;/f-spot/photos.db &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c"&gt;#checks if the $XDG_CONFIG_DIR variable is in use&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;        &lt;/span&gt;&lt;span class="nv"&gt;DBPATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$XDG_CONFIG_DIR&lt;/span&gt;/f-spot/photos.db
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f &lt;span class="nv"&gt;$HOME&lt;/span&gt;/.config/f-spot/photos.db &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c"&gt;#uses the default $XDG location, if that&amp;#39;s being used.&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;        &lt;/span&gt;&lt;span class="nv"&gt;DBPATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$HOME&lt;/span&gt;/.config/f-spot/photos.db
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f &lt;span class="nv"&gt;$HOME&lt;/span&gt;/.gnome2/f-spot/photos.db &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c"&gt;#uses the old location of the DB, if the former aren&amp;#39;t in use.&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;        &lt;/span&gt;&lt;span class="nv"&gt;DBPATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$HOME&lt;/span&gt;/.gnome2/f-spot/photos.db
+    &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;        &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Error: Could not find database. Damn.&amp;quot;&lt;/span&gt; 
+        &lt;span class="nb"&gt;exit &lt;/span&gt;1
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+
+    &lt;span class="c"&gt;# Select the filenames, and put them in a variable.&lt;/span&gt;
+    &lt;span class="nv"&gt;filenames&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;sqlite3 &lt;span class="nv"&gt;$DBPATH&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;SELECT URI FROM PHOTOS&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+    &lt;span class="nv"&gt;filenames_versions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;sqlite3 &lt;span class="nv"&gt;$DBPATH&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;SELECT URI FROM PHOTO_VERSIONS&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+    &lt;span class="c"&gt;# Chomp off the first instance of file://, and replace the rest with newlines.&lt;/span&gt;
+    &lt;span class="nv"&gt;filenames&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$filenames&lt;/span&gt; | sed &lt;span class="s1"&gt;&amp;#39;s/file:\/\///&amp;#39;&lt;/span&gt; | sed &lt;span class="s1"&gt;&amp;#39;s/file:\/\//\n/g&amp;#39;&lt;/span&gt;  &lt;span class="k"&gt;)&lt;/span&gt;
+    &lt;span class="nv"&gt;filenames_versions&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$filenames_versions&lt;/span&gt; | sed &lt;span class="s1"&gt;&amp;#39;s/file:\/\///&amp;#39;&lt;/span&gt; | sed &lt;span class="s1"&gt;&amp;#39;s/file:\/\//\n/g&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$demomode&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then            &lt;/span&gt;
+&lt;span class="k"&gt;        while &lt;/span&gt;&lt;span class="nb"&gt;read&lt;/span&gt; -r line
+        &lt;span class="k"&gt;do&lt;/span&gt;
+            &lt;span class="c"&gt;# Decode the filename&lt;/span&gt;
+            &lt;span class="nv"&gt;decodedLine&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; -e &lt;span class="s2"&gt;&amp;quot;${line//\%/\\x}&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; ! -f  &lt;span class="s2"&gt;&amp;quot;$decodedLine&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; 
+            &lt;span class="k"&gt;then&lt;/span&gt;
+                &lt;span class="c"&gt;# If the file doesn&amp;#39;t exist, we output the filename, if in demomode, or we fix it if we are not in demomode.&lt;/span&gt;
+                &lt;span class="nb"&gt;echo&lt;/span&gt;  &lt;span class="s2"&gt;&amp;quot;Errant record found in the photos table: $decodedLine&amp;quot;&lt;/span&gt;
+            &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;        done&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$filenames&amp;quot;&lt;/span&gt;
+
+        &lt;span class="c"&gt;# We do the same for the photo_versions table&lt;/span&gt;
+        &lt;span class="k"&gt;while &lt;/span&gt;&lt;span class="nb"&gt;read&lt;/span&gt; -r line
+        &lt;span class="k"&gt;do&lt;/span&gt;
+            &lt;span class="c"&gt;# Decode filename&lt;/span&gt;
+            &lt;span class="nv"&gt;decodedLine&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; -e &lt;span class="s2"&gt;&amp;quot;${line//\%/\\x}&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; ! -f &lt;span class="s2"&gt;&amp;quot;$decodedLine&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+            &lt;span class="k"&gt;then&lt;/span&gt;
+                &lt;span class="c"&gt;# If the file doesn&amp;#39;t exist, we output the filename&lt;/span&gt;
+                &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Errant record found in the photo_versions table: $decodedLine&amp;quot;&lt;/span&gt;
+            &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;        done&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$filenames_versions&amp;quot;&lt;/span&gt;
+
+    &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="c"&gt;# We backup the database, and make the correction&lt;/span&gt;
+        cp &lt;span class="nv"&gt;$DBPATH&lt;/span&gt; &lt;span class="nv"&gt;$DBPATH&lt;/span&gt;.&lt;span class="sb"&gt;`&lt;/span&gt;date -I&lt;span class="sb"&gt;`&lt;/span&gt;.bak
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$?&lt;/span&gt; -eq 0 &lt;span class="o"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;#The backup worked, tell the user.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Your database has been backed up to $DBPATH.`date -I`.bak&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;            &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Error backing up your database.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;3
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+
+        &lt;span class="c"&gt;# First we do the photos table&lt;/span&gt;
+        &lt;span class="k"&gt;while &lt;/span&gt;&lt;span class="nb"&gt;read&lt;/span&gt; -r line
+        &lt;span class="k"&gt;do&lt;/span&gt;
+            &lt;span class="c"&gt;# Decode the filename&lt;/span&gt;
+            &lt;span class="nv"&gt;decodedLine&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; -e &lt;span class="s2"&gt;&amp;quot;${line//\%/\\x}&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; ! -f &lt;span class="s2"&gt;&amp;quot;$decodedLine&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+            &lt;span class="k"&gt;then&lt;/span&gt;
+                &lt;span class="c"&gt;# Do some sql here.&lt;/span&gt;
+                &lt;span class="nv"&gt;foo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;file://${line}&amp;quot;&lt;/span&gt;
+                &lt;span class="nb"&gt;echo&lt;/span&gt; -n &lt;span class="s2"&gt;&amp;quot;Deleting URI $line from the database table photos...&amp;quot;&lt;/span&gt;
+                sqlite3 &lt;span class="nv"&gt;$DBPATH&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;DELETE FROM PHOTOS WHERE uri = &amp;#39;$foo&amp;#39;&amp;quot;&lt;/span&gt;
+                &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;done.&amp;quot;&lt;/span&gt;
+            &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;        done&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$filenames&amp;quot;&lt;/span&gt;
+
+        &lt;span class="c"&gt;# Then we do the photo_versions table&lt;/span&gt;
+        &lt;span class="k"&gt;while &lt;/span&gt;&lt;span class="nb"&gt;read&lt;/span&gt; -r line
+        &lt;span class="k"&gt;do&lt;/span&gt;
+            &lt;span class="c"&gt;# Decode the filename&lt;/span&gt;
+            &lt;span class="nv"&gt;decodedLine&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; -e &lt;span class="s2"&gt;&amp;quot;${line//\%/\\x}&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; ! -f &lt;span class="s2"&gt;&amp;quot;$decodedLine&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+            &lt;span class="k"&gt;then&lt;/span&gt;
+                &lt;span class="c"&gt;#Do some sql stuff&lt;/span&gt;
+                &lt;span class="nv"&gt;foo&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;file://${line}&amp;quot;&lt;/span&gt;
+                &lt;span class="nb"&gt;echo&lt;/span&gt; -n &lt;span class="s2"&gt;&amp;quot;Deleting URI $line from the database table photo_versions...&amp;quot;&lt;/span&gt;
+                sqlite3 &lt;span class="nv"&gt;$DBPATH&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;DELETE FROM PHOTO_VERSIONS WHERE uri = &amp;#39;$foo&amp;#39;&amp;quot;&lt;/span&gt;
+                &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;done.&amp;quot;&lt;/span&gt;
+            &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;        done&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$filenames_versions&amp;quot;&lt;/span&gt;
+
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$demomode&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Great. Proceeding in demomode.&amp;quot;&lt;/span&gt;
+
+    findAndFixOrphans
+
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Demomode successfully finished. Exiting.&amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;exit &lt;/span&gt;0;
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$demomode&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;false&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Great. Cleaning up your database.&amp;quot;&lt;/span&gt;
+
+    findAndFixOrphans
+
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Database cleaned successfully.&amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;exit &lt;/span&gt;0;
+&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Something strange happened. See the script for details. Exiting.&amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;exit &lt;/span&gt;2;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="sqlite3"></category><category term="f-spot"></category><category term="database"></category><category term="bash"></category></entry><entry><title>A Script to Kill Evolution</title><link href="http://michaeljaylissner.com/posts/2008/10/13/a-script-to-kill-evolution/" rel="alternate"></link><updated>2008-10-13T17:36:05-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-10-13:posts/2008/10/13/a-script-to-kill-evolution/</id><summary type="html">&lt;p&gt;I use Evolution as my mail reader, and I like it. It has a lot of good features including a calendar, address book, memos and mail, as well as a number of others. One problem though is that it gets caught up when processing mail, and sometimes just won&amp;#8217;t come&amp;nbsp;back.&lt;/p&gt;
+&lt;p&gt;The other problem is that it has several helper apps that are behind the scenes making things work properly, so if you try to just kill the application itself, those will still be running and your problem may not be&amp;nbsp;solved.&lt;/p&gt;
+&lt;p&gt;My solution was to write a short script to kill all of Evolution and its helper apps. Hope this helps somebody else&amp;nbsp;someday:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;::: bash
+% more bin/evokill 
+&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
+
+ps aux | grep evolution
+&lt;span class="nb"&gt;kill&lt;/span&gt; &lt;span class="sb"&gt;`&lt;/span&gt;ps aux | grep evolution | awk -F&lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This script just looks for any application that has the word evolution in its name, and then sends it the kill signal. Not too sophisticated, but it gets the job done. You could easily substitute the word evolution for something else as&amp;nbsp;well.&lt;/p&gt;</summary><category term="evolution"></category><category term="bash"></category></entry></feed>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/firefox" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2011-02-20T00:27:20-08:00</updated><entry><title>Firefox images and icons</title><link href="http://michaeljaylissner.com/posts/2011/02/20/firefox-images-and-icons/" rel="alternate"></link><updated>2011-02-20T00:27:20-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2011-02-20:posts/2011/02/20/firefox-images-and-icons/</id><summary type="html">&lt;p&gt;A few weeks ago, I was in need of a free star icon, and for the life of me,
+ I couldn&amp;#8217;t find one that was quite right. I scoured over the Internet, 
+ all the while noticing the perfect little star in my&amp;nbsp;browser.&lt;/p&gt;
+&lt;p&gt;A couple of times, I Googled for Firefox icons, but I couldn&amp;#8217;t find them 
+posted anywhere. Finally, I realized that if I just downloaded the source, 
+I could easily find the icons, zip them up neatly, and post them for all to&amp;nbsp;share.&lt;/p&gt;
+&lt;p&gt;So that&amp;#8217;s what I&amp;#8217;ve done here. Behold the Firefox icons. These are 
+organized more usefully in the actual Firefox source, 
+but if you don&amp;#8217;t mind a little icon browsing, the attached zip should have 
+all the icons you see in your&amp;nbsp;browser.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://michaeljaylissner.com/archive/firefox-images.zip"&gt;&lt;strong&gt;Enjoy.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;PS&lt;/span&gt; - these are licensed under the following licenses: &lt;span class="caps"&gt;MPL&lt;/span&gt; 1.1/&lt;span class="caps"&gt;GPL&lt;/span&gt; 2.0/&lt;span class="caps"&gt;LGPL&lt;/span&gt; 
+2.1, and are copyright&amp;nbsp;Mozilla.&lt;/p&gt;</summary><category term="firefox"></category><category term="images"></category><category term="icons"></category><category term="zip"></category><category term="download"></category></entry><entry><title>Script to Rid Thyself of Autocomplete = Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-12-15T17:41:27-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-12-15:posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;I took some time today and wrote up &lt;a href="http://michaeljaylissner.com/archive/autocomplete-killer.sh"&gt;a script&lt;/a&gt; that can be run to 
+eliminate 
+&lt;code&gt;autocomplete=off&lt;/code&gt; in Firefox. It basically does the same thing as is 
+described &lt;a href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/"&gt;here&lt;/a&gt;, but it automates&amp;nbsp;it. &lt;/p&gt;
+&lt;p&gt;The script can be run with one of five&amp;nbsp;arguments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can choose to use find (&lt;code&gt;--find&lt;/code&gt;) or locate (&lt;code&gt;--locate&lt;/code&gt;) to find the 
+ files that need to be changed on your&amp;nbsp;system;&lt;/li&gt;
+&lt;li&gt;You can dictate the location of the file if you want to modify a 
+ specific one or know exactly where it&amp;#8217;s located (&lt;code&gt;--dictate&lt;/code&gt;);&lt;/li&gt;
+&lt;li&gt;You can choose to use the Ubuntu default location (&lt;code&gt;--default&lt;/code&gt;);&amp;nbsp;or&lt;/li&gt;
+&lt;li&gt;You can print the help information (&lt;code&gt;--help&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once the program is run, it will make a back up, and modify it the original
+ versions of the file. Once that&amp;#8217;s complete, all you have to do is restart&amp;nbsp;Firefox.&lt;/p&gt;
+&lt;p&gt;It has been pointed out to me by some security folks that removing a
+utocomplete&amp;#8217;s functionality from the browser might not be the best thing, 
+since it will allow you to save your passwords in the browser. There&amp;#8217;s some
+ truth to that: Anything that&amp;#8217;s on your computer can be hacked. So, 
+ if you&amp;#8217;re going to use this script, use it&amp;nbsp;wisely.&lt;/p&gt;
+&lt;p&gt;Here&amp;#8217;s the code. I&amp;#8217;ve attached it to this message as well. Any bugs or 
+comments are greatly&amp;nbsp;appreciated.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="c"&gt;# a simple script to destroy autocomplete in linux installations.&lt;/span&gt;
+
+
+&lt;span class="c"&gt;##############&lt;/span&gt;
+&lt;span class="c"&gt;# We begin with our functions, it&amp;#39;s not efficient, but it works&lt;/span&gt;
+&lt;span class="c"&gt;##############&lt;/span&gt;
+
+&lt;span class="c"&gt;# a function to print the help message.&lt;/span&gt;
+&lt;span class="k"&gt;function &lt;/span&gt;printHelp &lt;span class="o"&gt;{&lt;/span&gt;
+cat &lt;span class="s"&gt;&amp;lt;&amp;lt;EOF&lt;/span&gt;
+&lt;span class="s"&gt;NAME&lt;/span&gt;
+&lt;span class="s"&gt;    autocompleteDestroyer.sh&lt;/span&gt;
+
+&lt;span class="s"&gt;SYNOPSIS&lt;/span&gt;
+&lt;span class="s"&gt;    autocompleteDestroyer.sh [ --find | --default | --help | --locate | --dictate ]&lt;/span&gt;
+
+&lt;span class="s"&gt;OPTIONS&lt;/span&gt;
+&lt;span class="s"&gt;    This program will find the nsLoginManager.js file on your computer, and will fix it so that autocomplete is disabled in your installation of Firefox. Since this program will be altering your installation of Firefox, it will require your root password.&lt;/span&gt;
+
+&lt;span class="s"&gt;    --help     Print this help file&lt;/span&gt;
+
+&lt;span class="s"&gt;    --default  Attempt to use the default location of the files (/usr/lib/xulrunner*/components/nsLoginManager.js)&lt;/span&gt;
+
+&lt;span class="s"&gt;    --locate   Use the locate database, if installed, to find the files. This will only find the files that were added before the last time the locate database was updated (which is typically once a day). It is faster than the --find option, but might not find all versions.&lt;/span&gt;
+
+&lt;span class="s"&gt;    --find     Use the find command to locate the nsLoginManager.js files. This will search in /usr/lib by default. Edit the script if you would like to change this. This is the slowest, but most thorough option.&lt;/span&gt;
+
+&lt;span class="s"&gt;    --dictate  Allows input of a known location.&lt;/span&gt;
+
+&lt;span class="s"&gt;EXIT STATUS&lt;/span&gt;
+&lt;span class="s"&gt;    autocompleteDestroyer.sh exists with a status of 0 if it encounters no problems. An exit status of 1 means incorrect usage. An exit status of 2 indicates it was unable to find your files. An exit status of 3 indicates the user terminated the program. An exit status of 4 means it encountered problems editing your file.&lt;/span&gt;
+
+&lt;span class="s"&gt;BUGS&lt;/span&gt;
+&lt;span class="s"&gt;    If any bugs are encountered, please see http://michaeljaylissner.com/contact/&lt;/span&gt;
+
+&lt;span class="s"&gt;AUTHOR AND COPYRIGHT&lt;/span&gt;
+&lt;span class="s"&gt;    This script was authored by Michael Lissner and is released under GNU GPLv3.&lt;/span&gt;
+
+&lt;span class="s"&gt;EOF&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="c"&gt;# takes an argument, and creates an array containing the files to be modified.&lt;/span&gt;
+&lt;span class="k"&gt;function &lt;/span&gt;identifyEvilFiles &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;find&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;        &lt;/span&gt;&lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;find /usr/lib -name nsLoginManager.js 2&amp;gt; /dev/null&lt;span class="k"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; ! &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# Test if files has been set.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: No files found. Try loosening the find parameter in the script, per the help file.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;    elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;default&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# We assume the default location of nsLoginManager.js&lt;/span&gt;
+        &lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;ls /usr/lib/xulrunner*/components/nsLoginManager.js 2&amp;gt; /dev/null&lt;span class="k"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; ! &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# We didn&amp;#39;t have any hits. Exit.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: We didn&amp;#39;t find anything at the default locations. Perhaps try the --locate or --find arguments.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;    elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;locate&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# We run the locate command, see if we have any hits.&lt;/span&gt;
+        &lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;locate -b &lt;span class="s1"&gt;&amp;#39;\nsLoginManager.js&amp;#39;&lt;/span&gt; 2&amp;gt; /dev/null&lt;span class="k"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; ! &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# No hits. Exit.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: We didn&amp;#39;t find anything using the locate command. Perhaps try the --find argument.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;    elif&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;dictate&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# &amp;quot;Why don&amp;#39;t you just tell me what movie you&amp;#39;d like to see?&amp;quot; --Kramer.&lt;/span&gt;
+        &lt;span class="nb"&gt;read&lt;/span&gt; -p &lt;span class="s2"&gt;&amp;quot;Where is the file nsLoginManager.js located on your machine: &amp;quot;&lt;/span&gt; files
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f &lt;span class="nv"&gt;$files&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="c"&gt;# Good. The file exists. We press on.&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Thank you. That file exists, and we will modify it.&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;            &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocomplete.sh: That file doesn&amp;#39;t seem to exist. Please try again.&amp;quot;&lt;/span&gt;
+            &lt;span class="nb"&gt;exit &lt;/span&gt;2
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;     fi&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+
+
+&lt;span class="k"&gt;function &lt;/span&gt;modifyFiles &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt;  &lt;span class="s2"&gt;&amp;quot;The following files will be modified: &lt;/span&gt;
+&lt;span class="s2"&gt;$files &amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;echo &lt;/span&gt;
+&lt;span class="nb"&gt;    read&lt;/span&gt; -p &lt;span class="s2"&gt;&amp;quot;Shall we proceed (y/n): &amp;quot;&lt;/span&gt; proceed
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$proceed&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;y&amp;quot;&lt;/span&gt; -o &lt;span class="nv"&gt;$proceed&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Y&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# Here we go!&lt;/span&gt;
+        &lt;span class="k"&gt;while &lt;/span&gt;&lt;span class="nb"&gt;read&lt;/span&gt; -r line
+        &lt;span class="k"&gt;do&lt;/span&gt;
+&lt;span class="k"&gt;            &lt;/span&gt;&lt;span class="nb"&gt;echo &lt;/span&gt;Now processing &lt;span class="nv"&gt;$line&lt;/span&gt;
+            &lt;span class="c"&gt;#find the function in the file, label it with FILLERWORD, then replace the first line, and delete the rest. A messy approach, but functional&lt;/span&gt;
+            sed -i.bak &lt;span class="s1"&gt;&amp;#39;/[[:space:]]*_isAutocompleteDisabled[[:space:]]*:[[:space:]]*function.*{[[:space:]]*$/,/^[[:space:]]*},[[:space:]]*$/s/^/FILLERWORD/&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+            sed -r -i &lt;span class="s1"&gt;&amp;#39;s/FILLERWORD.*_isAutocomplete.*/    _isAutocompleteDisabled :  function (element) { return false; },/&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+            sed -i &lt;span class="s1"&gt;&amp;#39;/FILLERWORD/d&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+
+            &lt;span class="c"&gt;# test if it worked&lt;/span&gt;
+            grep -i -q &lt;span class="s1"&gt;&amp;#39;isautocompletedisabled.*return false&amp;#39;&lt;/span&gt; &lt;span class="nv"&gt;$line&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$?&lt;/span&gt; !&lt;span class="o"&gt;=&lt;/span&gt; 0 &lt;span class="o"&gt;]&lt;/span&gt;
+            &lt;span class="k"&gt;then&lt;/span&gt;
+                &lt;span class="c"&gt;# something failed...probably. Tell the user&lt;/span&gt;
+                &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Unable to successfully edit the file. Exiting&amp;quot;&lt;/span&gt;
+                &lt;span class="nb"&gt;exit &lt;/span&gt;4
+            &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="k"&gt;        done&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;$files&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;All the files have been processed properly. Please restart Firefox, and thanks for using this script.&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;exit &lt;/span&gt;0
+    &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="c"&gt;# It appears they&amp;#39;d like to abort. Let&amp;#39;s exit.&lt;/span&gt;
+        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;OK. You know what to do if you change your mind.&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;exit &lt;/span&gt;3
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+
+&lt;span class="c"&gt;#initiation sequence&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$# &lt;/span&gt;-eq 0 -o &lt;span class="nv"&gt;$# &lt;/span&gt;-gt 1 &lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;then&lt;/span&gt; 
+    &lt;span class="c"&gt;# We need to give them help using the program. &lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh:  Invalid number of arguments.&amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Usage: autocompleteDestroyer.sh [ --help | --default | --locate | --find | --dictate ] &amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;exit &lt;/span&gt;1
+&lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="nv"&gt;$EUID&lt;/span&gt; -ne 0 &lt;span class="o"&gt;]]&lt;/span&gt;; 
+&lt;span class="k"&gt;then&lt;/span&gt;
+&lt;span class="k"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autoCompleteDestroyer.sh: This script must be run as root&amp;quot;&lt;/span&gt; 1&amp;gt;&amp;amp;2
+    &lt;span class="nb"&gt;exit &lt;/span&gt;1
+&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="k"&gt;    case&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; in
+        --help&lt;span class="o"&gt;)&lt;/span&gt; printHelp;;
+        --find&lt;span class="o"&gt;)&lt;/span&gt; identifyEvilFiles find; modifyFiles;;
+        --default&lt;span class="o"&gt;)&lt;/span&gt; identifyEvilFiles default; modifyFiles;;
+        --locate&lt;span class="o"&gt;)&lt;/span&gt; identifyEvilFiles locate; modifyFiles;;
+        --dictate&lt;span class="o"&gt;)&lt;/span&gt;identifyEvilFiles dictate; modifyFiles;;
+        *&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;autocompleteDestroyer.sh: Invalid argument. Try the --help argument.&amp;quot;&lt;/span&gt;
+           &lt;span class="nb"&gt;exit &lt;/span&gt;1;
+    &lt;span class="k"&gt;esac&lt;/span&gt;
+&lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="security"></category><category term="Linux"></category><category term="firefox"></category><category term="bash"></category><category term="autocomplete"></category></entry><entry><title>Rid Thyself of Autocomplete=Off in Firefox</title><link href="http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/" rel="alternate"></link><updated>2009-10-28T09:39:19-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-28:posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/</id><summary type="html">&lt;p&gt;&lt;strong&gt;Update, 12-15-09:&lt;/strong&gt; See &lt;a href="http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/"&gt;this script&lt;/a&gt; for an automated way to apply 
+this&amp;nbsp;change.&lt;/p&gt;
+&lt;p&gt;If you&amp;#8217;re at all like me, you use a password manager to keep track of all 
+your passwords, and it works great. Most of the time. Except sometimes, 
+it doesn&amp;#8217;t work, and you&amp;#8217;re confused why. Well, more often than not, 
+it&amp;#8217;s because your password manager has been blocked by the web page you&amp;#8217;re&amp;nbsp;viewing.&lt;/p&gt;
+&lt;p&gt;If you look closely at the code of the page, somewhere in it, 
+you&amp;#8217;ll probably find something that looks like&amp;nbsp;this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;button&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt;  &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;login&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;login&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;autocomplete=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;off&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;That autocomplete parameter that you see at the end there? Yeah, 
+that&amp;#8217;s the one that&amp;#8217;s blocking your password manager. So we must block it, 
+so it doesn&amp;#8217;t block&amp;nbsp;us.&lt;/p&gt;
+&lt;p&gt;There&amp;#8217;s a couple approaches to this, but probably the best is to disable 
+Firefox&amp;#8217;s ability to interpret autocomplete. The way to do this on Linux is
+to browse&amp;nbsp;to:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;xulrunner&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;1.9.1.5&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;components&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nsLoginManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And in Windows, I believe it&amp;#8217;s&amp;nbsp;at:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;C:&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Program&lt;/span&gt; &lt;span class="n"&gt;Files&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Mozilla&lt;/span&gt; &lt;span class="n"&gt;Firefox&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;nsLoginManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Once you&amp;#8217;ve found that file, open it in an editor, and find the section 
+that has &lt;code&gt;isAutoCompleteDisabled&lt;/code&gt;, and make it look like this (so it will 
+always return &lt;span class="caps"&gt;FALSE&lt;/span&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt; * _isAutoCompleteDisabled&lt;/span&gt;
+&lt;span class="cm"&gt; *&lt;/span&gt;
+&lt;span class="cm"&gt; * Returns true if the page requests autocomplete be disabled for the&lt;/span&gt;
+&lt;span class="cm"&gt; * specified form input.&lt;/span&gt;
+&lt;span class="cm"&gt; */&lt;/span&gt;
+ &lt;span class="nx"&gt;_isAutocompleteDisabled&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;element&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+ &lt;span class="c1"&gt;//        if (element &amp;amp;&amp;amp; element.hasAttribute(&amp;quot;autocomplete&amp;quot;) &amp;amp;&amp;amp;&lt;/span&gt;
+ &lt;span class="c1"&gt;//            element.getAttribute(&amp;quot;autocomplete&amp;quot;).toLowerCase() == &amp;quot;off&amp;quot;)&lt;/span&gt;
+ &lt;span class="c1"&gt;//            return true;&lt;/span&gt;
+
+ &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+ &lt;span class="p"&gt;},&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Once that&amp;#8217;s done, save the file, restart Firefox and you&amp;#8217;re all&amp;nbsp;set.&lt;/p&gt;</summary><category term="firefox"></category><category term="frustration"></category><category term="autocomplete"></category></entry><entry><title>Firefox Extension Fixes</title><link href="http://michaeljaylissner.com/posts/2009/09/09/firefox-extension-fixes/" rel="alternate"></link><updated>2009-09-09T13:15:46-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-09-09:posts/2009/09/09/firefox-extension-fixes/</id><summary type="html">&lt;p&gt;Just a quick post today. For some time I&amp;#8217;ve been using the Firefox &lt;a 
+href="https://addons.mozilla.org/en-US/firefox/addon/8636"&gt;Long &lt;span class="caps"&gt;URL&lt;/span&gt; Mobile 
+Expander&lt;/a&gt;. It&amp;#8217;s a great add-on that expands the URLs from about &lt;a 
+href="http://longurl.org/services"&gt;two hundred &lt;span class="caps"&gt;URL&lt;/span&gt; shortening services&lt;/a&gt; 
+such as tinyurl.com and bit.ly. One problem it has though is that when you 
+open certain files locally on your computer, it throws an&amp;nbsp;error:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;current_domain&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This is a pretty annoying error, and some kind person tracked it down and 
+posted the fix in the comments. They did not, however, 
+post an updated version of the add-on. So, attached to this message is the fixed&amp;nbsp;version.&lt;/p&gt;
+&lt;p&gt;A second extension that I&amp;#8217;ve been using for a long time is the &lt;a 
+href="https://addons.mozilla.org/en-US/firefox/addon/3818" 
+target="_blank"&gt;Resizeable Textarea&lt;/a&gt; add-on. It allows you to drag the edge of text areas and form fields so that you can make them as big (or small) as you like. Unfortunately, the author hasn&amp;#8217;t updated the add-on since 2006, so it doesn&amp;#8217;t work on recent versions of Firefox. This is easy to fix, so I updated this one as well, and attached it to this&amp;nbsp;post. &lt;/p&gt;
+&lt;p&gt;Enjoy.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class="caps"&gt;EDIT&lt;/span&gt;:&lt;/strong&gt; Per the creator&amp;#8217;s comments below, you can find an updated and 
+fixed version of the Long &lt;span class="caps"&gt;URL&lt;/span&gt; Expander in experimental status here: &lt;a 
+href="https://addons.mozilla.org/en-US/firefox/addons/versions/8636#version-2"&gt;https://addons.mozilla.org/en-&lt;span class="caps"&gt;US&lt;/span&gt;/firefox/addons/versions/8636#version-2&lt;/a&gt;.
+&lt;strong&gt;&lt;span class="caps"&gt;EDIT&lt;/span&gt; 2:&lt;/strong&gt; Turns out that the fixed version of Resizeable Textarea on the 
+mozilla site doesn&amp;#8217;t actually work. Here&amp;#8217;s &lt;a href="http://michaeljaylissner.com/archive/resizeable_textarea-0.1d-fx.xpi"&gt;a fixed version&lt;/a&gt;.&lt;/p&gt;</summary><category term="firefox"></category><category term="add-on"></category><category term="longurl"></category></entry><entry><title>Firefox Modifications for Maximal Screen Real Estate and Usability</title><link href="http://michaeljaylissner.com/posts/2009/08/12/firefox-modifications-for-real-estate-and-usability/" rel="alternate"></link><updated>2009-08-12T11:34:22-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-08-12:posts/2009/08/12/firefox-modifications-for-real-estate-and-usability/</id><summary type="html">&lt;p&gt;I&amp;#8217;ve been playing around lately with concepts to make Firefox more useful on
+my laptop, and I&amp;#8217;ve come up with a few solutions I thought I would share. 
+The idea here is to take the best concepts from Chrome and Safari, 
+and apply them to Firefox. These changes will maximize your use of screen 
+real estate, and will make Firefox a little easier to use at the same&amp;nbsp;time.&lt;/p&gt;
+&lt;p&gt;Once these are set up, Firefox will look like&amp;nbsp;this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/Firefox Screenshot.png" /&gt;&lt;/p&gt;
+&lt;p&gt;These changes do the&amp;nbsp;following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduce the status bar to 1px at the bottom of the&amp;nbsp;screen&lt;/li&gt;
+&lt;li&gt;Reduce the menu bar to a small icon to the right of the &lt;span class="caps"&gt;URL&lt;/span&gt; bar (like&amp;nbsp;Chrome)&lt;/li&gt;
+&lt;li&gt;Move the tabs to the top of the browser (like&amp;nbsp;Chrome)&lt;/li&gt;
+&lt;li&gt;Highlights the domain part of each &lt;span class="caps"&gt;URL&lt;/span&gt; (like&amp;nbsp;Chrome)&lt;/li&gt;
+&lt;li&gt;Make links appear in the &lt;span class="caps"&gt;URL&lt;/span&gt; bar when you hover over them (since the 
+ status bar is&amp;nbsp;eliminated)&lt;/li&gt;
+&lt;li&gt;Show a progress bar in the &lt;span class="caps"&gt;URL&lt;/span&gt; bar rather than in the status bar (like&amp;nbsp;Safari)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The changes that are needed to enable all this are a bit complicated, 
+but not too&amp;nbsp;bad:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Eliminating the status bar at the bottom of the screen creates about 35 
+pixels of vertical space that is otherwise not used for very much. By 
+making it only one pixel, hovering over the bottom of your browser window 
+will pop it up, in case you need it. To do this, 
+you need the &lt;a href="https://addons.mozilla.org/firefox/addon/2108"&gt;Stylish extension&lt;/a&gt;, and &lt;a href="http://userstyles.org/styles/3600"&gt;this Stylish script&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Reducing the menu bar to only a small icon achieves the same goal of 
+creating screen space. To do so, I recommend the &lt;a href="https://addons.mozilla.org/en-US/firefox/addon/4550"&gt;Compact Menu&lt;/a&gt; 
+extension. A word of warning though: this one takes some configuration 
+after installation. (The Tiny Menu extension will also work, 
+but you can&amp;#8217;t move the icon to the right-hand side, 
+which makes the back button much more difficult to&amp;nbsp;use.)&lt;/li&gt;
+&lt;li&gt;After some consideration, I decided to move my tabs above the &lt;span class="caps"&gt;URL&lt;/span&gt; bar 
+because the &lt;span class="caps"&gt;URL&lt;/span&gt; bar and the associated buttons really do apply to whatever
+page is being displayed. Which is to say that the &lt;span class="caps"&gt;URL&lt;/span&gt; is part of the tab,
+and should be displayed under it - not vice versa. To make this change 
+is pretty easy - simply install the Stylish script &lt;a href="http://userstyles.org/styles/10986"&gt;found here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Highlighting the domain in the &lt;span class="caps"&gt;URL&lt;/span&gt; bar, and graying out the rest is a 
+simple and useful trick that helps to avoid scam sites that might be 
+trying to impersonate a valid web site. To make this change, 
+simply install the &lt;a href="https://addons.mozilla.org/en-US/firefox/addon/4014"&gt;Locationbar&lt;sup&gt;2&lt;/sup&gt; extension&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Since we eliminated the status bar, one thing we&amp;#8217;ll need back is the 
+ability to see where a link takes us before we click on it. By making it 
+appear in the &lt;span class="caps"&gt;URL&lt;/span&gt; bar rather than the status bar, our eyes only need to 
+look in one place, and the result of clicking on a link is shown to us 
+before we click on it. To make this change, there is a setting in the 
+&lt;a href="http://mozilla.zeniko.ch/fission.html"&gt;Fission extension&lt;/a&gt;, which is also used to display progress in the &lt;span class="caps"&gt;URL&lt;/span&gt;&amp;nbsp;bar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You might note at this point that in the screenshot above that I&amp;#8217;ve also 
+eliminated the search box from the navigation toolbar, 
+thus allowing more space for the &lt;span class="caps"&gt;URL&lt;/span&gt; bar. To replace the search box&amp;#8217;s 
+functionality, I recommend the &lt;a href="http://cybernetnews.com/cybersearch/"&gt;Cybersearch extension&lt;/a&gt;, which uses keywords 
+in the &lt;span class="caps"&gt;URL&lt;/span&gt; bar to complete searches. For example, if I type &amp;#8220;wiki windows,&amp;#8221; 
+it gives me the top ten wikipedia pages for the term&amp;nbsp;windows:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/Firefox Cybersearch Example.png" /&gt;&lt;/p&gt;
+&lt;p&gt;This also works for Google and Amazon, and just about any other site you 
+can think&amp;nbsp;of.&lt;/p&gt;
+&lt;p&gt;Once all of this is completed, you should have created about 70 vertical 
+pixels of new space in your browser, maintained all the previous 
+functionality, and improved the usability of a couple of&amp;nbsp;tasks.&lt;/p&gt;</summary><category term="firefox"></category><category term="extensions"></category><category term="usability"></category><category term="stylish"></category></entry><entry><title>Cool Research Tip - Bookmark to Date Websites</title><link href="http://michaeljaylissner.com/posts/2007/12/28/firefox-last-modified-tip/" rel="alternate"></link><updated>2007-12-28T13:02:08-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2007-12-28:posts/2007/12/28/firefox-last-modified-tip/</id><summary type="html">&lt;p&gt;I spend a lot of time researching things on the Internet, and I&amp;#8217;ve noticed a problem with regards to the answers I find. Frequently, after researching something for a while, I discover what appears to be the answer I am looking for, but people are notoriously bad when it comes to dating the things they&amp;nbsp;write.&lt;/p&gt;
+&lt;p&gt;Yesterday, while scanning the news, I discovered &lt;a href="http://www.cnet.com/workers-edge/8301-13880_1-9835822-68.html?tag=head"&gt;this article&lt;/a&gt;, which explains that in Firefox if you type &amp;#8220;&lt;strong&gt;javascript:alert(document.lastModified)&lt;/strong&gt;&amp;#8221; into the address bar, it will show a pop-up indicating when the page was - you guessed it - last&amp;nbsp;modified.&lt;/p&gt;
+&lt;p&gt;This is a &lt;span class="caps"&gt;VERY&lt;/span&gt; handy tip, and I realized that if you hit Ctrl+B in Firefox, and then right-click in the sidebar &amp;gt; Create new bookmark, you can even save it as a bookmark, so that if you ever want to know when a page was modified, it&amp;#8217;s a piece of cake to find out. The one shortcoming of this is that it won&amp;#8217;t work on dynamically generated pages, such as this&amp;nbsp;one.&lt;/p&gt;</summary><category term="research"></category><category term="firefox"></category></entry></feed>

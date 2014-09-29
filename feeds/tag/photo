@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/photo" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-11-14T16:28:44-08:00</updated><entry><title>Testing Deletion Speed of Online Photo Sites</title><link href="http://michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/" rel="alternate"></link><updated>2009-11-14T16:28:44-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-11-14:posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/</id><summary type="html">
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2014-08-22&lt;/strong&gt;: While updating this blog to a new platform, 
+I wound down these tests and put notes about each service’s final result. 
+After nearly five years, some of these sites still haven’t taken down the image.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2010-03-08&lt;/strong&gt;: Added an image at drop.io&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2010-01-28&lt;/strong&gt;: Added an image at Orkut.com&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2010-01-28&lt;/strong&gt;: At &lt;a href="http://www.ftc.gov/bcp/workshops/privacyroundtables/index.shtml"&gt;the &lt;span class="caps"&gt;FTC&lt;/span&gt; privacy round table&lt;/a&gt; today, 
+Facebook’s director of public policy, Tim Sparapani, claimed that information 
+deleted from Facebook cannot be retrieved even by Facebook staff, 
+because it is almost instantly deleted. I informed him this was not true in
+the case of pictures, and he said he would look into it. Will update this 
+post when/if I hear more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="background-and-threat-model"&gt;Background and Threat Model&lt;/h2&gt;
+&lt;p&gt;Imagine an embarrassing photo of you is placed online by one of your 
+friends. You ask them to take it down, and they do. Now, 
+imagine that your enemy had gotten a link to that photo, 
+and had posted it to their blog. You’d hope that your friend taking the 
+photo down would in fact delete the photo, but I’m sorry to say that isn’t 
+always the case.&lt;/p&gt;
+&lt;p&gt;Inspired by &lt;a href="http://arstechnica.com/web/news/2009/07/are-those-photos-really-deleted-from-facebook-think-twice.ars"&gt;Jacqui Cheng’s article&lt;/a&gt;, I decided to test some of the 
+more popular online services for photo hosting to see what happens when you
+press the delete button on a photo from their site. On &lt;strong&gt;November 
+14&lt;sup&gt;th&lt;/sup&gt;, 2009&lt;/strong&gt;, I uploaded and then deleted the following image of
+a black box with white text to Facebook, Flickr, Picasa, MySpace, Photobucket, 
+Shutterfly, Twitpic and WalMart. A few months later, 
+I also added drop.io and Orkut: &lt;/p&gt;
+&lt;p&gt;&lt;img alt="I will attempt to delete this photo" src="http://michaeljaylissner.com/images/photo-deletion-tests/PostedAndDeleted.jpg"/&gt;&lt;/p&gt;
+&lt;p&gt;When you look below, if you can see the black box for a site, 
+that means that it was not truly deleted and is still live. You can verify 
+this by clicking on the image. This is checked each time this page is 
+loaded, so the information is constantly verified. If the image has been 
+deleted, you will see the date that it was deleted.&lt;/p&gt;
+&lt;p&gt;There are a number of reasons why photo services might be lazy about 
+properly removing images from their site, but until they have proper 
+deletion mechanisms, we should all think twice about what we upload.&lt;/p&gt;
+&lt;p&gt;If there’s a service that is not shown here that you’d like to see, 
+please &lt;a href="http://michaeljaylissner.com/contact"&gt;let me know&lt;/a&gt;. And now, without further ado, 
+I present, the ongoing results of the test:&lt;/p&gt;
+&lt;h2 id="facebook"&gt;Facebook&lt;/h2&gt;
+&lt;p&gt;Facebook properly deleted the photo from their server as of May 27, 2010.&lt;/p&gt;
+&lt;h2 id="flickr"&gt;Flickr&lt;/h2&gt;
+&lt;p&gt;Flickr began showing the following message approximately an hour after the 
+image was deleted.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Flickr Response" src="http://michaeljaylissner.com/images/photo-deletion-tests/flickr-response.jpg"/&gt;&lt;/p&gt;
+&lt;h2 id="picasa"&gt;Picasa&lt;/h2&gt;
+&lt;p&gt;Picasa properly deleted the photo from their server as of at least November
+15, 2009.&lt;/p&gt;
+&lt;h2 id="myspace"&gt;MySpace&lt;/h2&gt;
+&lt;p&gt;At an unknown time, MySpace began showing this photo instead:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="MySpace Response" src="http://michaeljaylissner.com/images/photo-deletion-tests/myspace.png"/&gt;&lt;/p&gt;
+&lt;h2 id="photobucket"&gt;Photobucket&lt;/h2&gt;
+&lt;p&gt;Photobucket properly deleted the photo from their server as of at least 
+November 14, 2009.&lt;/p&gt;
+&lt;h2 id="shutterfly"&gt;Shutterfly&lt;/h2&gt;
+&lt;p&gt;As of 2014-08-22, Shutterfly still shows &lt;a href="http://im1.shutterfly.com/media/47b9cf35b3127ccef8c9be9d18a800000040O00ActW7Ro4cuWQPbz4W/cC/f%3D0/ps%3D50/r%3D0/rx%3D720/ry%3D480/"&gt;the original image on their 
+server&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="twitpic"&gt;Twitpic&lt;/h2&gt;
+&lt;p&gt;Twitpic properly deleted the photo from their server as of at least 
+November 14, 2009.&lt;/p&gt;
+&lt;h2 id="walmart"&gt;Walmart&lt;/h2&gt;
+&lt;p&gt;As of 2014-08-22, Walmart still shows &lt;a href="http://images.photos1.walmart.com/232323232%7Ffp432%3B4%3Enu%3D3%3A%3A2%3E%3A8%3A%3E238%3EWSNRCG%3D326634885%3B329nu0mrj"&gt;the original image on their 
+server&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="google-orkut-added-2010-01-28"&gt;Google Orkut (added 2010-01-28)&lt;/h2&gt;
+&lt;p&gt;Despite being &lt;a href="http://thenextweb.com/google/2014/06/30/google-shutting-orkut-social-network-september-30/"&gt;nearly shut down completely&lt;/a&gt;, as of 2014-08-22, 
+Orkut still shows &lt;a href="http://images.orkut.com/orkut/photos/NwAAAA40TqrVmtf2vIA1oouDdb9vUTcjWDAQqVo_mBa45mvjdqMPiHhSaHxekFNT596b5sVYh593XRK-5Nquk0_WOQMAm1T1UJmPN1ZDUab24PgUE8b4ZMm09Mjj.jpg"&gt;the original image on their server&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="dropio-added-08-march-2010"&gt;Drop.io (added 08 March 2010)&lt;/h2&gt;
+&lt;p&gt;Drop.io properly deleted the photo from their server as of 8 March 2010, 
+the day it was added.&lt;/p&gt;</summary><category term="Walmart"></category><category term="Twitpic"></category><category term="Shutterfly"></category><category term="service"></category><category term="right to delete"></category><category term="privacy"></category><category term="Picassa"></category><category term="Photobucket"></category><category term="photo"></category><category term="Orkut"></category><category term="MySpace"></category><category term="google"></category><category term="Flickr"></category><category term="facebook"></category><category term="delete"></category></entry></feed>
