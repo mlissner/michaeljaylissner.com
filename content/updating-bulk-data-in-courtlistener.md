@@ -70,8 +70,8 @@ So, without sucking on too many sour grapes, that's the story behind the upgrade
 [docs]: https://github.com/freelawproject/courtlistener/commit/52e8eff985fdf75612837cef4d9ef55ad60f29ad#diff-6
 [define-literal]: http://theweek.com/article/index/241002/how-the-wrong-definition-of-literally-snuck-into-the-dictionary
 [donate]: https://www.courtlistener.com/donate/
+[^privacy]: For example, a few days ago some folks got access to NYC taxi information in bulk. In theory it was anonymized using MD5 hashing, but because there were a limited number of inputs into the hashing algorithm, all it took to de-anonymize the data was to compute every possible hash ("[computing the 22M hashes took less than 2 minutes][taxis]") and then work backwards from there to the original IDs. While one researcher did that, another one began finding celebrities in taxis and figuring out where they went. Privacy is hard.
 [^sympathy]: I confess I'm not *that* sympathetic...
-[^privacy]: For example, a few days ago some folks got access to NYC taxi information in bulk. In theory it was anonymized using MD5 hashing, but because there were a limited number of inputs into the hashing algorithm, all it took to de-anonymize the data was to compute every possible hash ("[computing the 22M hashes took less than 2 minutes][taxis]") and then work backwards from there to the original IDs. While one researcher did that, another one began finding celebrities in taxis and figuring out where they went. Privacy is hard. 
 [^stats]: To be exact: 48271 requests, as gathered by our stats module.
 [^file-count]: 
     So far, 17866 files were created this way that haven't been invalidated, as counted by: 
