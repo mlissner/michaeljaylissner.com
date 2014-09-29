@@ -10,7 +10,7 @@ The other problem is that it has several helper apps that are behind the scenes 
 
 My solution was to write a short script to kill all of Evolution and its helper apps. Hope this helps somebody else someday:
 
-    ::: bash
+    :::bash
     % more bin/evokill 
     #!/bin/bash
     

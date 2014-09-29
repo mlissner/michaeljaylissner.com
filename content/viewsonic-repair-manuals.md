@@ -1,6 +1,6 @@
 Title: Viewsonic Drivers, Repair and Service Manuals
 Date: 2011-02-20T00:33:40
-Tags: viewsonic, manuals, data dump
+Tags: viewsonic, manuals, bulk data
 
 
 Don't ask me how I came upon these, but please enjoy your hacking and repairs.

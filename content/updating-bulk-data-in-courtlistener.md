@@ -2,7 +2,7 @@ Title: Updating Bulk Data in CourtListener
 Subtitle: Bulk Data Can Be Hard
 Summary: There's a beautiful and growing trend towards bulk data, but in this post I discuss the challenges we have at CourtListener and some solutions we've developed. 
 Date: 2014-09-28
-Tags: bulk data, courtlistener.com
+Tags: bulk data, CourtListener
 Categories: Tech
 
 [TOC]

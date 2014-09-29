@@ -19,13 +19,13 @@ extremely fast and allows it to be run using extremely little hardware. Even
 the search engine is pre-computed and rendered client-side. 
 
 For about five years prior to this, this site ran on a VPS provided by 
-[slicehost.com][1]. Ultimately, this became a headache whenever the site got a 
-surge in traffic, as that would cause Slicehost would shut me down. On top 
-of that, Slicehost cost money each month that a static site doesn't. During 
+[Rackspace (née slicehost.com)][1]. Ultimately, this became a headache whenever the site got a 
+surge in traffic, as that would cause Rackspace to shut me down. On top 
+of that, Rackspace cost money each month that a static site doesn't. During 
 this time, the site ran on the venerable [Drupal CMS][2] with an [Ubuntu][3] 
 LAMP stack backing that up. 
 
-Prior to running it on Slicehost, I ran the site for about two years out of my
+Prior to running it on Rackspace, I ran the site for about two years out of my
 attic.
 
 You're looking at the fifth version of this site. 
@@ -95,7 +95,7 @@ please don't hesitate to <a href="contact">contact me directly</a>.
 
 ## Questions, Thoughts, Comments
 
-If you have any thoughts about the site, these policies, or for that matter, anything else, please feel free to <a href="contact">contact me</a>.
+If you have any thoughts about the site, these policies, or for that matter, anything else, please feel free to [contact me][contact].
 
 [1]: http://slicehost.com
 [2]: http://drupal.org
@@ -105,3 +105,4 @@ If you have any thoughts about the site, these policies, or for that matter, any
 [6]: {filename}/archive/oldsite/index.htm 
 [7]: {filename}/archive/oldsite/archive/assets/homepage.gif
 [8]: {filename}/archive/oldsite/archive/default.htm
+[contact]: {filename}/pages/contact.md
