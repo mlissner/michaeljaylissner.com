@@ -324,8 +324,7 @@ bug reporting is more than&amp;nbsp;welcome. &lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;</summary><category term="sqlite3"></category><category term="f-spot"></category><category term="database"></category><category term="bash"></category></entry><entry><title>A Script to Kill Evolution</title><link href="http://michaeljaylissner.com/posts/2008/10/13/a-script-to-kill-evolution/" rel="alternate"></link><updated>2008-10-13T17:36:05-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2008-10-13:posts/2008/10/13/a-script-to-kill-evolution/</id><summary type="html">&lt;p&gt;I use Evolution as my mail reader, and I like it. It has a lot of good features including a calendar, address book, memos and mail, as well as a number of others. One problem though is that it gets caught up when processing mail, and sometimes just won&amp;#8217;t come&amp;nbsp;back.&lt;/p&gt;
 &lt;p&gt;The other problem is that it has several helper apps that are behind the scenes making things work properly, so if you try to just kill the application itself, those will still be running and your problem may not be&amp;nbsp;solved.&lt;/p&gt;
 &lt;p&gt;My solution was to write a short script to kill all of Evolution and its helper apps. Hope this helps somebody else&amp;nbsp;someday:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;::: bash
-% more bin/evokill 
+&lt;div class="highlight"&gt;&lt;pre&gt;% more bin/evokill 
 &lt;span class="c"&gt;#!/bin/bash&lt;/span&gt;
 
 ps aux | grep evolution

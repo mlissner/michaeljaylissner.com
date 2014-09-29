@@ -89,8 +89,7 @@
             <p>I use Evolution as my mail reader, and I like it. It has a lot of good features including a calendar, address book, memos and mail, as well as a number of others. One problem though is that it gets caught up when processing mail, and sometimes just won&#8217;t come&nbsp;back.</p>
 <p>The other problem is that it has several helper apps that are behind the scenes making things work properly, so if you try to just kill the application itself, those will still be running and your problem may not be&nbsp;solved.</p>
 <p>My solution was to write a short script to kill all of Evolution and its helper apps. Hope this helps somebody else&nbsp;someday:</p>
-<div class="highlight"><pre>::: bash
-% more bin/evokill 
+<div class="highlight"><pre>% more bin/evokill 
 <span class="c">#!/bin/bash</span>
 
 ps aux | grep evolution
