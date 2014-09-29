@@ -70,7 +70,8 @@ MD_EXTENSIONS = ([
     'codehilite(css_class=highlight)',
     'extra',
     'headerid',
-    'toc'
+    'toc',
+    'footnotes',
 ])
 
 #MAILCHIMP
