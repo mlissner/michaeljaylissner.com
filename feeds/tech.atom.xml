@@ -1,5 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tech.atom.xml" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2014-06-18T00:00:00-07:00</updated><entry><title>Reworking the CourtListener Datamodel</title><link href="http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/" rel="alternate"></link><updated>2014-06-18T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-06-18:posts/2014/06/18/reworking-the-courtlistener-datamodel/</id><summary type="html">&lt;p&gt;Brian and I have  been hard at work the past week figuring out how to make 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tech.atom.xml" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2014-09-28T00:00:00-07:00</updated><entry><title>Updating Bulk Data in CourtListener</title><link href="http://michaeljaylissner.com/posts/2014/09/28/updating-bulk-data-in-courtlistener/" rel="alternate"></link><updated>2014-09-28T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-09-28:posts/2014/09/28/updating-bulk-data-in-courtlistener/</id><summary type="html">
+&lt;p&gt;There’s an increasing demand for bulk data from government systems, and while this will generate big wins for transparency, accountability, and innovation (at the occasional cost of privacy&lt;sup id="fnref:privacy"&gt;&lt;a class="footnote-ref" href="#fn:privacy" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;), it’s important to consider a handful of technical difficulties that &lt;em&gt;can&lt;/em&gt; come along with creating and providing such data. Do &lt;em&gt;not&lt;/em&gt; misread this post as me saying, “bulk data is hard, don’t bother doing it.” Rather, like most of my posts, read this as an in-the-trenches account of issues we’ve encountered and solutions we’ve developed at CourtListener. &lt;/p&gt;
+&lt;h2 id="the-past-and-present"&gt;The Past and Present&lt;/h2&gt;
+&lt;p&gt;For the past several years we’ve had &lt;a href="https://www.courtlistener.com/api/bulk-info/"&gt;bulk data at CourtListener&lt;/a&gt;, but to be frank, it’s been pretty terrible in a lot of ways. Probably the biggest issue with it was that we created it as a single massive &lt;span class="caps"&gt;XML&lt;/span&gt; file (~&lt;span class="caps"&gt;13GB&lt;/span&gt;, compressed!). That made a lot of sense for our backend processing, but people consuming the bulk data complained that it crashed 32 bit systems&lt;sup id="fnref:sympathy"&gt;&lt;a class="footnote-ref" href="#fn:sympathy" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;, consumed memory endlessly, decompressing it wasn’t possible on Windows&lt;sup id="fnref:sympathy"&gt;&lt;a class="footnote-ref" href="#fn:sympathy" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;, etc. &lt;/p&gt;
+&lt;p&gt;On top of these issues for people consuming our bulk data, and even though we set it up to be efficient for our servers, we did a stupid thing when we set it up and made it so our users could generate bulk files whenever they wanted for any day, month, year or jurisdiction. And create bulk files they did. Indeed in the year since we started keeping tabs on this, people made nearly fifty thousand requests for time-based bulk data&lt;sup id="fnref:stats"&gt;&lt;a class="footnote-ref" href="#fn:stats" rel="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt;. &lt;/p&gt;
+&lt;p&gt;On the backend, the way this worked was that the first time somebody wanted a bulk file, they requested it, we generated it, and then we served it. The second time somebody requested that same file, we just served the one we generated  before, creating a disk-based cache of sorts. This actually worked pretty well but it let people start long-running processes on our server that could degrade the performance of the front end. It wasn’t great, but it was a simple way to serve time- and jurisdiction-based files.&lt;sup id="fnref:file-count"&gt;&lt;a class="footnote-ref" href="#fn:file-count" rel="footnote"&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;/p&gt;
+&lt;p&gt;As any seasoned developer knows, the next problem with such a system would be cache invalidation. How would we know that a cached bulk file had bad data and how would we delete it if necessary? Turns out this wasn’t so hard, but every time we changed (or deleted) an item in our database we had code that went out to the cache on disk and deleted any bulk files that might contain stale data. Our data doesn’t change often, so for the most part this worked, but it’s the kind of spaghetti code you want to avoid. Touching disk whenever an item is updated? Not so good.  &lt;/p&gt;
+&lt;p&gt;And there were bugs. &lt;a href="https://github.com/freelawproject/courtlistener/issues/278"&gt;Weird ones&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Yeah, the old system kind of sucked. The last few days I’ve been busy re-working our bulk data system to make it more reliable, easier to use and just overall, better.&lt;/p&gt;
+&lt;h2 id="the-new-system"&gt;The New System&lt;/h2&gt;
+&lt;p&gt;Let’s get the bad news taken care of off the bat: The new system no longer allows date-based bulk files. Since these could cause performance issues on the front end, and since &lt;a href="http://lists.freelawproject.org/pipermail/dev/2014-August/000069.html"&gt;nobody opposed the change&lt;/a&gt;, we’ve done away with this feature. It had a good life, may it &lt;span class="caps"&gt;RIP&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The good news is that by getting rid of the date-based bulk files, we’ve been able to eliminate a metric &lt;em&gt;ton&lt;/em&gt; of complexity, &lt;a href="http://theweek.com/article/index/241002/how-the-wrong-definition-of-literally-snuck-into-the-dictionary"&gt;literally&lt;/a&gt;! No longer do we need the disk-cache. No longer do we need to parse URLs and generate bulk data on the fly. No longer is the code a mess of decision trees based on cache state and user requests. Ah, it feels so free at last! &lt;/p&gt;
+&lt;p&gt;And it gets even better. On top of this, we were able to resolve &lt;a href="https://github.com/freelawproject/courtlistener/issues/285"&gt;a long-standing feature request&lt;/a&gt; for complete bulk data files by jurisdiction. We were able to make the schema of the bulk files match that of &lt;a href="https://www.courtlistener.com/api/rest-info/"&gt;our &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;. We were able to make the bulk file a tar of smaller &lt;span class="caps"&gt;JSON&lt;/span&gt; files, so no more issues unzipping massive files or having 32 bit systems crash. &lt;a href="https://www.youtube.com/watch?v=8vZx7yF_a7M"&gt;We settled all the family business&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Oh, and one more thing: When this goes live, we’ll have bulk files and an &lt;span class="caps"&gt;API&lt;/span&gt; for oral arguments as well — Another CourtListener first. &lt;/p&gt;
+&lt;h2 id="jeez-thats-great-whyd-you-wait-so-long"&gt;Jeez, That’s Great, Why’d You Wait So Long?&lt;/h2&gt;
+&lt;p&gt;This is a fair question. If it was possible to gain so much so quickly, why didn’t we do it sooner? Well, there are a number of reasons, but at the core, like so many things, it’s because nothing is actually that easy. &lt;/p&gt;
+&lt;p&gt;Before we could make these improvements, we needed to: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure the impact on our users &lt;a href="http://lists.freelawproject.org/pipermail/dev/2014-August/000069.html"&gt;wouldn’t be an issue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Test the performance of generating more than 350 bulk files at the end of each month&lt;sup id="fnref:dev-aside"&gt;&lt;a class="footnote-ref" href="#fn:dev-aside" rel="footnote"&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;Have &lt;a href="https://www.courtlistener.com/api/rest-info/"&gt;our &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt; in place so we could use it to generate the bulk files&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href="https://github.com/freelawproject/courtlistener/commit/a0e4326d98e9f501ec3e69955d6b5650471686e8#diff-30d04f22c69dda9704be56ec95d9d2c1R68"&gt;performance profiling&lt;/a&gt; to identify &lt;a href="https://github.com/freelawproject/courtlistener/commit/a0e4326d98e9f501ec3e69955d6b5650471686e8#diff-6f850cf75fe2e1d17284e0b701b26b06L47"&gt;hot spots&lt;/a&gt; in the new bulk data &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/freelawproject/courtlistener/commit/52e8eff985fdf75612837cef4d9ef55ad60f29ad#diff-6"&gt;Rewrite the documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And pretty much everything else you can imagine. So, I suppose the answer is: We waited so long because it was hard. &lt;/p&gt;
+&lt;p&gt;But being hard is one thing. Another thing is that although a number of organizations have used our bulk data, never has any contributed either energy or resources to fixing the bugs that they reported. Despite the benefits these organizations got from the bulk files, none chose to support the ecosystem from which they benefited. You can imagine how this isn’t particularly motivational for us, but we’re hopeful that with the new and improved system, those using our data will appreciate the quality of the bulk data and consider &lt;a href="https://www.courtlistener.com/donate/"&gt;supporting us&lt;/a&gt; down the road.  &lt;/p&gt;
+&lt;h2 id="wrapping-up"&gt;Wrapping Up&lt;/h2&gt;
+&lt;p&gt;So, without sucking on too many sour grapes, that’s the story behind the upgrades we’re making to the bulk files at CourtListener. At first blush it may seem like a fairly straightforward feature to get in place (and remember, in &lt;em&gt;many&lt;/em&gt; cases bulk data is stupid-easy to do), but we thought it would be interesting to share our experiences so others might compare notes. If you’re a consumer of CourtListener bulk data, we’ll be taking the wraps off of these new features soon, so make sure to watch the &lt;a href="http://freelawproject.org"&gt;Free Law Project blog&lt;/a&gt;. If you’re a developer that’s interested in this kind of thing, we’re eager to hear your feedback and any thoughts you might have. &lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:privacy"&gt;
+&lt;p&gt;For example, a few days ago some folks got access to &lt;span class="caps"&gt;NYC&lt;/span&gt; taxi information in bulk. In theory it was anonymized using &lt;span class="caps"&gt;MD5&lt;/span&gt; hashing, but because there were a limited number of inputs into the hashing algorithm, all it took to de-anonymize the data was to compute every possible hash (“&lt;a href="https://medium.com/@vijayp/of-taxis-and-rainbows-f6bc289679a1"&gt;computing the 22M hashes took less than 2 minutes&lt;/a&gt;“) and then work backwards from there to the original IDs. While one researcher did that, another one began finding images of celebrities in taxis and figuring out where they went. Privacy is hard. &lt;a class="footnote-backref" href="#fnref:privacy" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:sympathy"&gt;
+&lt;p&gt;I confess I’m not &lt;em&gt;that&lt;/em&gt; sympathetic… &lt;a class="footnote-backref" href="#fnref:sympathy" rev="footnote" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:stats"&gt;
+&lt;p&gt;To be exact: 48271 requests, as gathered by our stats module. &lt;a class="footnote-backref" href="#fnref:stats" rev="footnote" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:file-count"&gt;
+&lt;p&gt;So far, 17866 files were created this way that haven’t been invalidated, as counted by: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;maxdepth&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;printf&lt;/span&gt; &lt;span class="s"&gt;"%s:&lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt; &lt;span class="s"&gt;"$dir"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="s"&gt;"$dir"&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a class="footnote-backref" href="#fnref:file-count" rev="footnote" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:dev-aside"&gt;
+&lt;p&gt;Commence a fun digression for the developers. As you might expect, aside from compressing bulk files, the bottleneck of generating 350+ bulk files at once is pulling items from the database and converting them to &lt;span class="caps"&gt;JSON&lt;/span&gt;. We tried a few solutions to this problem, but the best we came up with takes advantage of the fact that every item in the database belongs in exactly two bulk files: The all.tar.gz file and the {jurisdiction}.tar.gz file. One way to put the item into both places would be to generate the all.tar.gz file and then generate each of the 350 smaller files. &lt;/p&gt;
+&lt;p&gt;That would iterate every item in the database twice, but while making the jurisdiction files you’d have to do a lot of database filtering…something that it’s generally good to avoid. Our solution to this problem is to create a dictionary of open file handles and then to iterate the entire database once. For each item in the database, add it to both the all.tar.gz file and add it to the {jurisdiction}.tar.gz file. Once complete, close all the file handles. For example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Get all the courts&lt;/span&gt;
+&lt;span class="n"&gt;courts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Court&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c"&gt;# Create a dictionary with one key per jurisdiction&lt;/span&gt;
+&lt;span class="n"&gt;tar_files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;court&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;courts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;tar_files&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;court&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pk&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tarfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="s"&gt;'/tmp/bulk/opinions/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;.tar.gz'&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;court&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pk&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="n"&gt;mode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'w:gz'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="n"&gt;compresslevel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# Then iterate over everything, adding it to the correct key&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;item_list&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c"&gt;# Add the json str to the two tarballs&lt;/span&gt;
+    &lt;span class="n"&gt;tarinfo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tarfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TarInfo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;.json"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;tar_files&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;docket&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;court_id&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addfile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;tarinfo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;StringIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;StringIO&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;json_str&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;tar_files&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'all'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addfile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;tarinfo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;StringIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;StringIO&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;json_str&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In a sense the first part creates a variable for every jurisdiction on the fly and the second part uses that variable as a dumping point for each item as it iterates over them. &lt;/p&gt;
+&lt;p&gt;A fine hack. &lt;a class="footnote-backref" href="#fnref:dev-aside" rev="footnote" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</summary><category term="bulk data"></category><category term="CourtListener"></category></entry><entry><title>New Version of the Site is Now Live</title><link href="http://michaeljaylissner.com/posts/2014/08/27/site-v5-is-go/" rel="alternate"></link><updated>2014-08-27T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-08-27:posts/2014/08/27/site-v5-is-go/</id><summary type="html">
+&lt;p&gt;I have big news today for the small world of people who read my blog regularly:
+A new version of the site is now live and the old version shall die a quick death. &lt;/p&gt;
+&lt;p&gt;Version 4 was pretty nice though, while it lasted:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Site v4" src="http://michaeljaylissner.com/images/oldsite/v4.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Other old versions of the site &lt;a href="http://michaeljaylissner.com/about"&gt;still available&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id="the-improvements"&gt;The improvements&lt;/h2&gt;
+&lt;p&gt;This new version comes with some big improvements that I’m quite 
+pleased with:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If you find typos in a blog post, you can edit them on Github and I can 
+   easily integrate your changes. Check out the link on the right to 
+   edit the typos in this very page. (I’ve left a few conspicuous ones as a 
+   treasure hunt for the reader!)&lt;/li&gt;
+&lt;li&gt;The site is now &lt;em&gt;much&lt;/em&gt; faster and can handle immense traffic without a 
+   hitch, thanks to being hosted by &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt;. The previous version would
+   have occasional hiccups during times of high traffic – something that’s 
+   really quite untenable.&lt;/li&gt;
+&lt;li&gt;Comments are now moved to &lt;a href="https://disqus.com"&gt;Disqus&lt;/a&gt;, though unfortunately old comments have
+   not made the jump to the new version of the blog. Comments are collapsed by 
+   default so the scrollbar actually represents the length of a 
+   highly-commented post.&lt;/li&gt;
+&lt;li&gt;The site now looks bad-ass. Regardless of whether you’re on a phone, tablet
+   computer, or what-have-you, it’s going to look good.&lt;/li&gt;
+&lt;li&gt;All content has been categorized as well as tagged, as you can see in the 
+   sidebar. There are Atom feeds for each.&lt;/li&gt;
+&lt;li&gt;The homepage has a new design that focuses on my projects and bio, and then 
+   has recent posts below that.&lt;/li&gt;
+&lt;li&gt;Long articles like this one get an automatic table of contents on the left.&lt;/li&gt;
+&lt;li&gt;The site is now optimized for speed dial in Opera and to be made into apps
+   on mobile phones and tablets. For example, if you’re reading this on 
+   Android Chrome, you can simply click “Add to homescreen” in the &lt;code&gt;⋮&lt;/code&gt;
+   thing and you’ll be all set.&lt;/li&gt;
+&lt;li&gt;Security is now invincible: No more webserver to update, no more database, 
+   no more outdated Drupal. It’s basically impossible to hack the new site. 
+   I’ve also added my &lt;a href="http://michaeljaylissner.com/archive/mike.gpg"&gt;&lt;span class="caps"&gt;PGP&lt;/span&gt; key&lt;/a&gt; to the &lt;a href="http://michaeljaylissner.com/contact"&gt;contact page&lt;/a&gt;, for those interested. &lt;/li&gt;
+&lt;li&gt;The entire site is now static and doesn’t require that I pay for or maintain
+   a server or database. Bonus!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So those are the high-level changes you can see as of now. If you’re interested
+in the technical nitty-gritty, read on.&lt;/p&gt;
+&lt;h2 id="the-tech"&gt;The Tech&lt;/h2&gt;
+&lt;p&gt;The original motivation to rebuild the site came when the old version kept 
+overwhelming the server that was running it and requiring that I step in to 
+make it work again. And if that weren’t annoying enough, I have been paying
+for that server for the past several years, which just seems a bit silly for
+a simple blog like this one. &lt;/p&gt;
+&lt;p&gt;The solution? A so-called &lt;a href="http://staticsitegenerators.net/"&gt;Static Site Generator&lt;/a&gt; or &lt;span class="caps"&gt;SSG&lt;/span&gt;. With one of these,
+the paradigm for your site totally changes. Instead of having a dynamic site
+that loads every time somebody visits the page or makes a comment, you 
+generate the &lt;em&gt;entire&lt;/em&gt; website on your laptop (this takes about 30 seconds), 
+creating static &lt;span class="caps"&gt;HTML&lt;/span&gt;, and then push that to some cloud provider of choice (in 
+my case, I use Github pages for this because it’s free and easy).&lt;/p&gt;
+&lt;p&gt;There are about 300 SSGs right now and the one I eventually landed on was 
+&lt;a href="https://github.com/getpelican/pelican/"&gt;Pelican&lt;/a&gt; due to it being written in a language I knew (Python), and due to
+it having lots of good themes and plugins. I briefly tried to make a switch to
+&lt;a href="http://hugo.spf13.com/"&gt;Hugo&lt;/a&gt; instead because it’s written in Go and is much faster at generating 
+content, but the documentation for Hugo isn’t very good yet, and &lt;a href="https://github.com/spf13/hugo/issues/96"&gt;it
+doesn’t support basic pagination&lt;/a&gt;, which is something of a showstopper. &lt;/p&gt;
+&lt;h3 id="switching-to-a-ssg-from-drupal"&gt;Switching to a &lt;span class="caps"&gt;SSG&lt;/span&gt; from Drupal&lt;/h3&gt;
+&lt;p&gt;Switching from Drupal was pretty awful and took a &lt;em&gt;lot&lt;/em&gt; of effort — 
+&lt;em&gt;days&lt;/em&gt; of it! The goal was to get all of my posts exported from Drupal, 
+convert them all to markdown, and to get them all live on Github pages. Let’s 
+go through this process together. &lt;/p&gt;
+&lt;h3 id="exporting-from-drupal"&gt;Exporting from Drupal&lt;/h3&gt;
+&lt;p&gt;This step of the puzzle was, shall we say, a pain. Nobody has yet made a 
+Drupal to Pelican converter, so I had to do it myself. &lt;a href="http://michaeljaylissner.com/scripts/drupal_to_hugo.py"&gt;The script&lt;/a&gt; that I 
+wrote dug directly into Drupal’s database, pulled out the contents
+and converted them to a format that Hugo could understand. At the time I 
+thought Hugo would be the &lt;span class="caps"&gt;SSG&lt;/span&gt; for me, but later I switched to Pelican, and had
+to write &lt;a href="http://michaeljaylissner.com/scripts/convert_from_hugo_to_pelican.py"&gt;another script&lt;/a&gt; to make the conversion from Hugo to Pelican.&lt;/p&gt;
+&lt;h3 id="problems-with-drupal"&gt;Problems with Drupal&lt;/h3&gt;
+&lt;p&gt;This was a good start, but Drupal has a few funny conventions. One is that it
+allows files to be “attached” to blog posts. Most blogs don’t do this (Pelican
+and Hugo included), so I had to go through all of the items that I attached to 
+Drupal posts and convert them to inline links instead. This took a while.&lt;/p&gt;
+&lt;p&gt;Another problem I ran into is that the posts themselves were written directly 
+in &lt;span class="caps"&gt;HTML&lt;/span&gt;, which makes them kind of awful, and not very portable between blog
+engines. Content for Hugo or Pelican should be written in Markdown, so I began
+making this conversion to the &lt;a href="/archives.html"&gt;200+ posts&lt;/a&gt; on the site. In general, the process
+for this was to find a post and begin cleaning it up. If I encountered 
+something that a computer could reliably fix across all the posts (for example,
+&lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt; can be converted to &lt;code&gt;*&lt;/code&gt; and &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt; to &lt;code&gt;**&lt;/code&gt;), I wrote a little script 
+to do so. In the end, this took a lot of time, but I now have a collection of
+a few hundred nicely-formed markdown files that power the blog.&lt;/p&gt;
+&lt;h3 id="moving-to-github-pages"&gt;Moving to Github Pages&lt;/h3&gt;
+&lt;p&gt;With all of the content converted properly, the remaining step was to get the
+project live on Github. I found this process confusing, but the process is 
+basically this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;You need to take the output file from Pelican and put it into a Git 
+branch called &lt;code&gt;gh-pages&lt;/code&gt;. To do this with Pelican is remarkably easy, as there is
+a simple command you can run: &lt;code&gt;make github&lt;/code&gt;. Run that, and you’ll be all set,
+with the content pushed and everything.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You need &lt;a href="https://github.com/mlissner/michaeljaylissner.com/blob/gh-pages/CNAME"&gt;a file named &lt;span class="caps"&gt;CNAME&lt;/span&gt;&lt;/a&gt; that simply contains the domain of your 
+website. This is easy in theory — it’s just a plaintext file — but in 
+practice it is difficult because you need the file to be created by the 
+&lt;code&gt;make github&lt;/code&gt; command mentioned above. To do that add the &lt;span class="caps"&gt;CNAME&lt;/span&gt; file to a
+directory at &lt;code&gt;content/extra/CNAME&lt;/code&gt; and then add the following to your pelican
+configuration file:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;EXTRA_PATH_METADATA&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;'extra/CNAME'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;'path'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;'CNAME'&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'extra/CNAME'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Do that, and the file will get copied over whenever you run &lt;code&gt;make github&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you’ve done this correctly, you’ll see evidence of such in the 
+repository’s settings page on Github, where it will tell you the domain
+in the &lt;span class="caps"&gt;CNAME&lt;/span&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You need to configure your &lt;span class="caps"&gt;DNS&lt;/span&gt; provider to point your domain to Github.
+This varies by provider, but I can tell you that your final version should
+look something like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;↪&lt;/span&gt; &lt;span class="n"&gt;dig&lt;/span&gt; &lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;michaeljaylissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nostats&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nocomments&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nocmd&lt;/span&gt;
+
+&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;DiG&lt;/span&gt; &lt;span class="mf"&gt;9.9.5&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Ubuntu&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;michaeljaylissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nostats&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nocomments&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;nocmd&lt;/span&gt;
+&lt;span class="p"&gt;;;&lt;/span&gt; &lt;span class="n"&gt;global&lt;/span&gt; &lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;
+&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;michaeljaylissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;A&lt;/span&gt;
+&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;michaeljaylissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="mi"&gt;3600&lt;/span&gt; &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;CNAME&lt;/span&gt;   &lt;span class="n"&gt;mlissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;mlissner&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="mi"&gt;3600&lt;/span&gt;    &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;CNAME&lt;/span&gt;   &lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;  &lt;span class="mi"&gt;2&lt;/span&gt;   &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;A&lt;/span&gt;   &lt;span class="mf"&gt;199.27.79.133&lt;/span&gt;
+&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;     &lt;span class="mi"&gt;66087&lt;/span&gt;   &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;NS&lt;/span&gt;  &lt;span class="n"&gt;ns4&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;p04&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dynect&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;     &lt;span class="mi"&gt;66087&lt;/span&gt;   &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;NS&lt;/span&gt;  &lt;span class="n"&gt;ns3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;p04&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dynect&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;     &lt;span class="mi"&gt;66087&lt;/span&gt;   &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;NS&lt;/span&gt;  &lt;span class="n"&gt;ns2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;p04&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dynect&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;span class="n"&gt;fastly&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;     &lt;span class="mi"&gt;66087&lt;/span&gt;   &lt;span class="n"&gt;IN&lt;/span&gt;  &lt;span class="n"&gt;NS&lt;/span&gt;  &lt;span class="n"&gt;ns1&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;p04&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dynect&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;net&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="final-words"&gt;Final Words&lt;/h2&gt;
+&lt;p&gt;This is been a much larger undertaking than I expected, with tons of corner
+cases that I wanted to fix before releasing a new version of the site. In the 
+end though, this has been a good investment that I can expect to keep the site
+going for the next five to ten years.&lt;/p&gt;
+&lt;p&gt;I hope you enjoy the new look and new features.&lt;/p&gt;</summary><category term="meta"></category><category term="blog"></category><category term="me"></category></entry><entry><title>Reworking the CourtListener Datamodel</title><link href="http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/" rel="alternate"></link><updated>2014-06-18T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-06-18:posts/2014/06/18/reworking-the-courtlistener-datamodel/</id><summary type="html">&lt;p&gt;Brian and I have  been hard at work the past week figuring out how to make 
 &lt;a href="https://www.courtlistener.com/"&gt;CourtListener&lt;/a&gt; able to understand more that one document type. Our goal
  right now is to make it possible to&amp;nbsp;add:&lt;/p&gt;
 &lt;ul&gt;
