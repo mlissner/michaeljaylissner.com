@@ -1,5 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael Jay Lissner</title><link>http://michaeljaylissner.com/</link><description></description><atom:link href="http://michaeljaylissner.com/feeds/mike-lissner.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 27 Aug 2014 00:00:00 -0700</lastBuildDate><item><title>New Version of the Site is Now Live</title><link>http://michaeljaylissner.com/posts/2014/08/27/site-v5-is-go/</link><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael Jay Lissner</title><link>http://michaeljaylissner.com/</link><description></description><atom:link href="http://michaeljaylissner.com/feeds/mike-lissner.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 28 Sep 2014 00:00:00 -0700</lastBuildDate><item><title>Updating Bulk Data in CourtListener</title><link>http://michaeljaylissner.com/posts/2014/09/28/updating-bulk-data-in-courtlistener/</link><description>
+&lt;p&gt;There’s an increasing demand for bulk data from government systems, and while this will generate big wins for transparency, accountability, and innovation (at the occasional cost of privacy&lt;sup id="fnref:privacy"&gt;&lt;a class="footnote-ref" href="#fn:privacy" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;), it’s important to consider a handful of technical difficulties that &lt;em&gt;can&lt;/em&gt; come along with creating and providing such data. Do &lt;em&gt;not&lt;/em&gt; misread this post as me saying, “bulk data is hard, don’t bother doing it.” Rather, like most of my posts, read this as an in-the-trenches account of issues we’ve encountered and solutions we’ve developed at CourtListener. &lt;/p&gt;
+&lt;h2 id="the-past-and-present"&gt;The Past and Present&lt;/h2&gt;
+&lt;p&gt;For the past several years we’ve had &lt;a href="https://www.courtlistener.com/api/bulk-info/"&gt;bulk data at CourtListener&lt;/a&gt;, but to be frank, it’s been pretty terrible in a lot of ways. Probably the biggest issue with it was that we created it as a single massive &lt;span class="caps"&gt;XML&lt;/span&gt; file (~&lt;span class="caps"&gt;13GB&lt;/span&gt;, compressed!). That made a lot of sense for our backend processing, but people consuming the bulk data complained that it crashed 32 bit systems&lt;sup id="fnref:sympathy"&gt;&lt;a class="footnote-ref" href="#fn:sympathy" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;, consumed memory endlessly, decompressing it wasn’t possible on Windows&lt;sup id="fnref:sympathy"&gt;&lt;a class="footnote-ref" href="#fn:sympathy" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;, etc. &lt;/p&gt;
+&lt;p&gt;On top of these issues for people consuming our bulk data, and even though we set it up to be efficient for our servers, we did a stupid thing when we set it up and made it so our users could generate bulk files whenever they wanted for any day, month, year or jurisdiction. And create bulk files they did. Indeed in the year since we started keeping tabs on this, people made nearly fifty thousand requests for time-based bulk data&lt;sup id="fnref:stats"&gt;&lt;a class="footnote-ref" href="#fn:stats" rel="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt;. &lt;/p&gt;
+&lt;p&gt;On the backend, the way this worked was that the first time somebody wanted a bulk file, they requested it, we generated it, and then we served it. The second time somebody requested that same file, we just served the one we generated  before, creating a disk-based cache of sorts. This actually worked pretty well but it let people start long-running processes on our server that could degrade the performance of the front end. It wasn’t great, but it was a simple way to serve time- and jurisdiction-based files.&lt;sup id="fnref:file-count"&gt;&lt;a class="footnote-ref" href="#fn:file-count" rel="footnote"&gt;4&lt;/a&gt;&lt;/sup&gt; &lt;/p&gt;
+&lt;p&gt;As any seasoned developer knows, the next problem with such a system would be cache invalidation. How would we know that a cached bulk file had bad data and how would we delete it if necessary? Turns out this wasn’t so hard, but every time we changed (or deleted) an item in our database we had code that went out to the cache on disk and deleted any bulk files that might have changed data. Our data doesn’t change often, so for the most part this worked, but it’s the kind of spaghetti code you want to avoid. Touching disk whenever an item is updated? Not so good.  &lt;/p&gt;
+&lt;p&gt;And there were bugs. &lt;a href="https://github.com/freelawproject/courtlistener/issues/278"&gt;Weird ones&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Yeah, the old system kind of sucked. The last few days I’ve been busy re-working our bulk data system to make it more reliable, easier to use and just overall, better.&lt;/p&gt;
+&lt;h2 id="the-new-system-coming-soon"&gt;The New System (Coming Soon)&lt;/h2&gt;
+&lt;p&gt;Let’s get the bad news taken care of off the bat: The new system no longer allows date-based bulk files. Since these could cause performance issues on the front end, and since &lt;a href="http://lists.freelawproject.org/pipermail/dev/2014-August/000069.html"&gt;nobody opposed the change&lt;/a&gt;, we’ve done away with this feature. It had a good life, may it &lt;span class="caps"&gt;RIP&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;The good news is that by getting rid of the date-based bulk files, we’ve been able to eliminate a metric &lt;em&gt;ton&lt;/em&gt; of complexity, &lt;a href="http://theweek.com/article/index/241002/how-the-wrong-definition-of-literally-snuck-into-the-dictionary"&gt;literally&lt;/a&gt;! No longer do we need the disk-cache. No longer do we need to parse URLs and generate bulk data on the fly. No longer is the code a mess of decision trees based on cache state and user requests. Ah, it feels so free at last! &lt;/p&gt;
+&lt;p&gt;And it gets even better. On top of this, we were able to resolve &lt;a href="https://github.com/freelawproject/courtlistener/issues/285"&gt;a long-standing feature request&lt;/a&gt; for complete bulk data files by jurisdiction. We were able to make the schema of the bulk files match that of &lt;a href="https://www.courtlistener.com/api/rest-info/"&gt;our &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt;. We were able to make the bulk file a tar of smaller &lt;span class="caps"&gt;JSON&lt;/span&gt; files, so no more issues unzipping massive files or having 32 bit systems crash. &lt;a href="https://www.youtube.com/watch?v=8vZx7yF_a7M"&gt;We settled all the family business&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Oh, and one more thing: When this goes live, we’ll have bulk files and an &lt;span class="caps"&gt;API&lt;/span&gt; for oral arguments as well — Another CourtListener first. &lt;/p&gt;
+&lt;h2 id="jeez-thats-great-whyd-you-wait-so-long"&gt;Jeez, That’s Great, Why’d You Wait So Long?&lt;/h2&gt;
+&lt;p&gt;This is a fair question. If it was possible to gain so much so quickly, why didn’t we do it sooner? Well, there are a number of reasons but at the core, like so many things, it’s because nothing is actually that easy. &lt;/p&gt;
+&lt;p&gt;Before we could make these improvements, we needed to: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure the impact on our users &lt;a href="http://lists.freelawproject.org/pipermail/dev/2014-August/000069.html"&gt;wouldn’t be an issue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Test the performance of generating more than 350 bulk files at the end of each month&lt;sup id="fnref:dev-aside"&gt;&lt;a class="footnote-ref" href="#fn:dev-aside" rel="footnote"&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;Have &lt;a href="https://www.courtlistener.com/api/rest-info/"&gt;our &lt;span class="caps"&gt;REST&lt;/span&gt; &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/a&gt; in place so we could use it to generate the bulk files&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href="https://github.com/freelawproject/courtlistener/commit/a0e4326d98e9f501ec3e69955d6b5650471686e8#diff-30d04f22c69dda9704be56ec95d9d2c1R68"&gt;performance profiling&lt;/a&gt; to identify &lt;a href="https://github.com/freelawproject/courtlistener/commit/a0e4326d98e9f501ec3e69955d6b5650471686e8#diff-6f850cf75fe2e1d17284e0b701b26b06L47"&gt;hot spots&lt;/a&gt; in the new bulk data &lt;span class="caps"&gt;API&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/freelawproject/courtlistener/commit/52e8eff985fdf75612837cef4d9ef55ad60f29ad#diff-6"&gt;Rewrite the documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And pretty much everything else you can imagine. So, I suppose the answer is: We waited so long because it was hard. &lt;/p&gt;
+&lt;p&gt;But being hard is one thing. Another thing is that although a number of organizations have used our bulk data, never has any contributed either energy or resources to fixing the bugs that they reported. Despite the benefits these organizations got from the bulk files, none chose to support the ecosystem from which they benefited. You can imagine how this isn’t particularly motivational for us, but we’re hopeful that with the new and improved system, those using our data will appreciate our efforts and consider &lt;a href="https://www.courtlistener.com/donate/"&gt;supporting us&lt;/a&gt; down the road.  &lt;/p&gt;
+&lt;p&gt;So, without sucking on too many sour grapes, that’s the story behind the upgrades we’re making to the bulk files at CourtListener. At first blush it may seem like a fairly straightforward feature to get in place (and remember, in &lt;em&gt;many&lt;/em&gt; cases bulk data is stupid-easy to do), but we thought it would be interesting to share our experiences so others might compare notes. If you’re a consumer of CourtListener bulk data, we’ll be taking the wraps off of these new features soon, so make sure to watch the &lt;a href="http://freelawproject.org"&gt;Free Law Project blog&lt;/a&gt;. If you’re a developer that’s interested in this kind of thing, we’re eager to hear your feedback and any thoughts you might have. &lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:sympathy"&gt;
+&lt;p&gt;I confess I’m not &lt;em&gt;that&lt;/em&gt; sympathetic… &lt;a class="footnote-backref" href="#fnref:sympathy" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:privacy"&gt;
+&lt;p&gt;For example, a few days ago some folks got access to &lt;span class="caps"&gt;NYC&lt;/span&gt; taxi information in bulk. In theory it was anonymized using &lt;span class="caps"&gt;MD5&lt;/span&gt; hashing, but because there were a limited number of inputs into the hashing algorithm, all it took to de-anonymize the data was to compute every possible hash (“&lt;a href="https://medium.com/@vijayp/of-taxis-and-rainbows-f6bc289679a1"&gt;computing the 22M hashes took less than 2 minutes&lt;/a&gt;“) and then work backwards from there to the original IDs. While one researcher did that, another one began finding celebrities in taxis and figuring out where they went. Privacy is hard.  &lt;a class="footnote-backref" href="#fnref:privacy" rev="footnote" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:stats"&gt;
+&lt;p&gt;To be exact: 48271 requests, as gathered by our stats module. &lt;a class="footnote-backref" href="#fnref:stats" rev="footnote" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:file-count"&gt;
+&lt;p&gt;So far, 17866 files were created this way that haven’t been invalidated, as counted by: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;maxdepth&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="n"&gt;printf&lt;/span&gt; &lt;span class="s"&gt;"%s:&lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt; &lt;span class="s"&gt;"$dir"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="s"&gt;"$dir"&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;wc&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a class="footnote-backref" href="#fnref:file-count" rev="footnote" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:dev-aside"&gt;
+&lt;p&gt;A fun digression for the developers. As you might expect, aside from compressing bulk files, the bottleneck of generating 350+ bulk files at once is pulling items from the database and converting them to &lt;span class="caps"&gt;JSON&lt;/span&gt;. We tried a few solutions to this problem, but the best we came up with takes advantage of the fact that every item in the database belongs in exactly two bulk files: The all.tar.gz file and the {jurisdiction}.tar.gz file. One way to put the item into both places would be to generate the all.tar.gz file and then generate each of the 350 smaller files. &lt;/p&gt;
+&lt;p&gt;That would iterate every item in the database twice, but while making the jurisdiction files you’d have to do a lot of database filtering…something that it’s generally good to avoid. Our solution to this problem is to create a dictionary of open file handles and then to iterate the entire database once. For each item in the database, add it to both the all.tar.gz file and add it to the {jurisdiction}.tar.gz file. Once complete, close all the file handles. For example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# Get all the courts&lt;/span&gt;
+&lt;span class="n"&gt;courts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Court&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;all&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c"&gt;# Create a dictionary with one key per jurisdiction&lt;/span&gt;
+&lt;span class="n"&gt;tar_files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;court&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;courts&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;tar_files&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;court&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pk&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tarfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="s"&gt;'/tmp/bulk/opinions/&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;.tar.gz'&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;court&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pk&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="n"&gt;mode&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;'w:gz'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="n"&gt;compresslevel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# Then iterate over everything, adding it to the correct key&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;item_list&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c"&gt;# Add the json str to the two tarballs&lt;/span&gt;
+    &lt;span class="n"&gt;tarinfo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tarfile&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TarInfo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;.json"&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pk&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;tar_files&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;docket&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;court_id&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addfile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;tarinfo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;StringIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;StringIO&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;json_str&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;tar_files&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'all'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;addfile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+        &lt;span class="n"&gt;tarinfo&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;StringIO&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;StringIO&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;json_str&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In a sense the first part creates a variable for every jurisdiction on the fly and the second part uses that variable as a dumping point for each item as it iterates over them. &lt;/p&gt;
+&lt;p&gt;A fine hack. &lt;a class="footnote-backref" href="#fnref:dev-aside" rev="footnote" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Lissner</dc:creator><pubDate>Sun, 28 Sep 2014 00:00:00 -0700</pubDate><guid>tag:michaeljaylissner.com,2014-09-28:posts/2014/09/28/updating-bulk-data-in-courtlistener/</guid><category>bulk data</category><category>courtlistener.com</category></item><item><title>New Version of the Site is Now Live</title><link>http://michaeljaylissner.com/posts/2014/08/27/site-v5-is-go/</link><description>
 &lt;p&gt;I have big news today for the small world of people who read my blog regularly:
 A new version of the site is now live and the old version shall die a quick death. &lt;/p&gt;
 &lt;p&gt;Version 4 was pretty nice though, while it lasted:&lt;/p&gt;
@@ -212,7 +286,7 @@ on it, so these are based on talking with the ranger in the park. He seemed
 knowledgeable, so these numbers are probably the best we&amp;#8217;ll get for a&amp;nbsp;while. &lt;/p&gt;
 &lt;p&gt;If somebody discovers that the rangers in Snow Mountain finally have firm 
 distances, let me know what they are, and I&amp;#8217;ll happily update this map. 
-Until then, attached is the map as both an &lt;span class="caps"&gt;SVG&lt;/span&gt; and a png.&amp;nbsp;Enjoy.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Lissner</dc:creator><pubDate>Tue, 27 Aug 2013 10:48:25 -0700</pubDate><guid>tag:michaeljaylissner.com,2013-08-27:posts/2013/08/27/snow-mountain-distance-map/</guid><category>backpacking</category><category>snow mountain</category><category>maps</category><category>cartography</category></item><item><title>Best Energy Pack for Ultra-light, long-distance Backpacking</title><link>http://michaeljaylissner.com/posts/2013/07/19/battery-packs-for-ultralight-long-distance-backpacking/</link><description>&lt;p&gt;Obviously, the best ultalight battery pack is &lt;strong&gt;no&lt;/strong&gt; battery pack, 
+Until then, attached is the map as both an &lt;span class="caps"&gt;SVG&lt;/span&gt; and a png.&amp;nbsp;Enjoy.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Lissner</dc:creator><pubDate>Tue, 27 Aug 2013 10:48:25 -0700</pubDate><guid>tag:michaeljaylissner.com,2013-08-27:posts/2013/08/27/snow-mountain-distance-map/</guid><category>backpacking</category><category>snow mountain</category><category>maps</category><category>cartography</category></item><item><title>Best Energy Pack for Ultra-light, Long-Distance Backpacking</title><link>http://michaeljaylissner.com/posts/2013/07/19/battery-packs-for-ultralight-long-distance-backpacking/</link><description>&lt;p&gt;Obviously, the best ultalight battery pack is &lt;strong&gt;no&lt;/strong&gt; battery pack, 
 but on our trip we&amp;#8217;re going to be bringing a phone, a camera, 
 an &lt;span class="caps"&gt;MP3&lt;/span&gt; player and two headlamps. The phone doubles as our &lt;span class="caps"&gt;GPS&lt;/span&gt; and the 
 headlamps might be &lt;span class="caps"&gt;USB&lt;/span&gt; rechargeable. Having spare energy to get us through 
@@ -466,9 +540,15 @@ the &lt;span class="caps"&gt;LVI&lt;/span&gt; site&lt;/a&gt;.&lt;/p&gt;</descrip
 &lt;p&gt;Takes about five minutes. For &lt;a href="http://ridewithgps.com/routes/1701701"&gt;my trip&lt;/a&gt; the number came out to be 10,753&amp;nbsp;feet!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Lissner</dc:creator><pubDate>Sun, 16 Sep 2012 10:33:31 -0700</pubDate><guid>tag:michaeljaylissner.com,2012-09-16:posts/2012/09/16/calculate-the-average-elevation-for-a-trip-using-a-tcx-file/</guid><category>ridewithgps</category><category>hiking</category><category>hacking</category><category>GPS</category><category>elevation</category><category>biking</category></item><item><title>URL Hacking at REI.com</title><link>http://michaeljaylissner.com/posts/2012/07/31/url-hacking-at-rei-dot-com/</link><description>&lt;p&gt;I&amp;#8217;m about two hours away from heading on vacation to Montreal, but I wanted to post a quick update about a vulnerability I found on &lt;span class="caps"&gt;REI&lt;/span&gt;.com last&amp;nbsp;night.&lt;/p&gt;
 &lt;p&gt;The vulnerability was a simple one. A few days ago, to get a 15% off coupon, I signed up for their Gear Mail newsletter. It eventually came, and at the bottom it had a link to unsubscribe, which I clicked (I was only after the 15% sign-up&amp;nbsp;coupon). &lt;/p&gt;
 &lt;p&gt;The link led&amp;nbsp;to:&lt;/p&gt;
-&lt;p&gt;http://email.rei.com/cgi-bin12/&lt;span class="caps"&gt;DM&lt;/span&gt;/t/nCT4n0N3xbv0ESo05DPf0Et&amp;amp;EmailAddr=mlissner@michaeljaylissner.com&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;http:&lt;/span&gt;&lt;span class="c1"&gt;//email.rei.com/cgi-bin12/DM/t/nCT4n0N3xbv0ESo05DPf0Et&amp;amp;EmailAddr=mlissner@michaeljaylissner.com&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Which redirects&amp;nbsp;to:&lt;/p&gt;
-&lt;p&gt;https://preferences.rei.com/rei/rei_PrefCtr.asp?EmailAddr=mlissner@michaeljaylissner.com&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;https:&lt;/span&gt;&lt;span class="c1"&gt;//preferences.rei.com/rei/rei_PrefCtr.asp?EmailAddr=mlissner@michaeljaylissner.com&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;I immediately noticed the badness in these URLs, and at a whim, I tried modifying the &lt;span class="caps"&gt;URL&lt;/span&gt; to use a friend&amp;#8217;s email address. Sure enough it worked, and I could look up the full name and zip code of anybody who had an email address that was in &lt;span class="caps"&gt;REI&lt;/span&gt;&amp;#8217;s&amp;nbsp;system.&lt;/p&gt;
 &lt;p&gt;Around midnight last night, I sent &lt;span class="caps"&gt;REI&lt;/span&gt; an email informing them of the problem, giving them a month to fix it, and I posted on Twitter that I had found a vulnerability on &lt;span class="caps"&gt;REI&lt;/span&gt;.com. Naively, I thought that if I didn&amp;#8217;t post the link on Twitter, nobody would be able to figure it out, but of course, by morning a friend of mine (a security/privacy researcher, sigh) had found the link and posted it. Not only that, but for fun, he had tried his address book against the link, and turned up 30 of his friend&amp;#8217;s names and zip codes out of a sample of about&amp;nbsp;200.&lt;/p&gt;
 &lt;p&gt;I sent another note to &lt;span class="caps"&gt;REI&lt;/span&gt; to make sure that they knew about the link now being in the open, and that the month I promised them had been curtailed by my own&amp;nbsp;mistake. &lt;/p&gt;
@@ -561,7 +641,7 @@ so we had to go through this process a few times. Below I’ve explained the
 process so others may more easily add fonts to their system.&lt;/p&gt;
 &lt;p&gt;The process has a few major steps:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="#create-training-docs"&gt;Create training documents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#create-training-documents"&gt;Create training documents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#train-tesseract"&gt;Teach Tesseract about the documents&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="create-training-documents"&gt;Create training documents&lt;/h2&gt;
@@ -659,7 +739,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;953
         &lt;td&gt;867
         &lt;td&gt;47
-        &lt;td&gt;**3321**
+        &lt;td&gt;&lt;strong&gt;3321&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Courier
@@ -667,7 +747,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;333
         &lt;td&gt;209
         &lt;td&gt;131
-        &lt;td&gt;**1042**
+        &lt;td&gt;&lt;strong&gt;1042&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Arial
@@ -675,7 +755,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;39
         &lt;td&gt;11
         &lt;td&gt;41
-        &lt;td&gt;**455**
+        &lt;td&gt;&lt;strong&gt;455&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Symbol
@@ -683,7 +763,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;**212**
+        &lt;td&gt;&lt;strong&gt;212&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Helvetica
@@ -691,7 +771,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;161
         &lt;td&gt;2
         &lt;td&gt;2
-        &lt;td&gt;**189**
+        &lt;td&gt;&lt;strong&gt;189&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Century Schoolbook
@@ -699,7 +779,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;54
         &lt;td&gt;52
         &lt;td&gt;9
-        &lt;td&gt;**173**
+        &lt;td&gt;&lt;strong&gt;173&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Garamond
@@ -707,7 +787,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;42
         &lt;td&gt;41
         &lt;td&gt;0
-        &lt;td&gt;**127**
+        &lt;td&gt;&lt;strong&gt;127&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Palatino Linotype
@@ -715,7 +795,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;24
         &lt;td&gt;24
         &lt;td&gt;1
-        &lt;td&gt;**85**
+        &lt;td&gt;&lt;strong&gt;85&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Old English
@@ -723,7 +803,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;**42**
+        &lt;td&gt;&lt;strong&gt;42&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Lincoln
@@ -731,7 +811,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;**27**
+        &lt;td&gt;&lt;strong&gt;27&lt;/strong&gt;
     &lt;/tr&gt;
 &lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Lissner</dc:creator><pubDate>Fri, 27 Jan 2012 22:15:58 -0800</pubDate><guid>tag:michaeljaylissner.com,2012-01-27:posts/2012/01/27/and-the-winning-font-in-court-documents-is/</guid><category>typography</category><category>tesseract</category><category>Python</category><category>ocr</category><category>font</category><category>CourtListener</category></item><item><title>Support for x-robots-tag and robots HTML meta tag</title><link>http://michaeljaylissner.com/posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/</link><description>
 &lt;p&gt;As part of our research for &lt;a href="/blog/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents"&gt;our post&lt;/a&gt; on how we block search engines, we 
@@ -4692,25 +4772,11 @@ I can see why others believe though. I mean, what are the&amp;nbsp;odds? &lt;/p&
 &lt;p&gt;I got to thinking about this, and from what I can tell, there isn&amp;#8217;t anything here that a Linux laptop can&amp;#8217;t easily accomplish. The only tricky part I can think of is the back door thing, because I imagine most routers block incoming traffic on pretty much every port except 80, so ssh&amp;#8217;ing into the computer might be tricky even once you know the correct &lt;span class="caps"&gt;IP&lt;/span&gt; to&amp;nbsp;use.&lt;/p&gt;
 &lt;p&gt;As for determining the external &lt;span class="caps"&gt;IP&lt;/span&gt;, I found &lt;a href="http://linux.byexamples.com/archives/307/what-is-my-public-ip-address/"&gt;this site&lt;/a&gt;, which pretty much fits the bill. The basic idea is to go to one of the million whatsmyip.com-type websites via command line, and grep the &lt;span class="caps"&gt;IP&lt;/span&gt; out of the code. One hilarious thing I found on there was &lt;a href="http://www.moanmyip.com"&gt;moanmyip.com&lt;/a&gt;. I highly recommend a visit if you&amp;#8217;re &amp;#8220;visually&amp;nbsp;impaired&amp;#8221;.&lt;/p&gt;
 &lt;p&gt;Anyway, now that the men in the room are good and turned on, the script pretty much needs three more things: 1. A centralized server to collect the IPs, 2. That ssh back door to mess with the thief, and 3. The script&amp;nbsp;itself!&lt;/p&gt;
-&lt;p&gt;Updates to&amp;nbsp;come.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Lissner</dc:creator><pubDate>Sun, 23 Sep 2007 14:56:19 -0700</pubDate><guid>tag:michaeljaylissner.com,2007-09-23:posts/2007/09/23/lojack-for-linux/</guid><category>Linux</category></item><item><title>I want ogg on my iPod</title><link>http://michaeljaylissner.com/posts/2007/09/16/ogg-on-ipod/</link><description>&lt;p&gt;
-I know this post is going to alienate just about everybody that would ever consider reading my blog, but here&amp;#8217;s the deal: I want all iPods to support the ogg file&amp;nbsp;format. 
-&lt;/p&gt;
-
-&lt;p&gt;
-For the uninitiated, the ogg format is like the &lt;span class="caps"&gt;MP3&lt;/span&gt; or the &lt;span class="caps"&gt;AAC&lt;/span&gt; format, except for a couple of very important differences. One, it&amp;#8217;s free, which is to say that it doesn&amp;#8217;t belong to some company, and every time I use it I&amp;#8217;m not supposed to be giving them a nickel or something. (The &lt;span class="caps"&gt;MP3&lt;/span&gt; format technically is licensed to the company that created it, so theoretically, every time you buy a computer, &lt;span class="caps"&gt;MP3&lt;/span&gt; player, etc., you&amp;#8217;re supposed to give them some quantity of&amp;nbsp;money.)
-&lt;/p&gt;
-
-&lt;p&gt;
-The other reason that I am hereby requesting ogg on my iPod  is because it&amp;#8217;s better. It sounds better. It compresses better. Are there other metrics that we should be using? None that I know of. I want ogg. Steve Jobs, do you hear me&amp;nbsp;now?! 
-&lt;/p&gt;
-
-&lt;p&gt;
-Now, the theoretical argument above holds water, but I have personal reasons for this desire: I have 357 ogg files that I can&amp;#8217;t listen to on my iPod! This pretty much gives me three choices: One, install &lt;a href="http://www.rockbox.org/" title="Rockbox.org"&gt;Rockbox&lt;/a&gt; on my iPod (I have, it didn&amp;#8217;t work reliably). Two, convert the ogg files to MP3s (this solution would create inferior-quality songs). Or, three, only listen to those songs on my computer (also a lame&amp;nbsp;solution). 
-&lt;/p&gt;
-
-&lt;p&gt;
-I should also mention while I am on this rant that I have flac files as well. Why doesn&amp;#8217;t the iPod support those! iPods are great, but these are serious&amp;nbsp;shortcomings.
-&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Lissner</dc:creator><pubDate>Sun, 16 Sep 2007 19:59:23 -0700</pubDate><guid>tag:michaeljaylissner.com,2007-09-16:posts/2007/09/16/ogg-on-ipod/</guid><category>music</category><category>copyright</category><category>ipod</category></item><item><title>Chronicals of installing Zimbra, OR If it looks awesome, it’s probably a pain to install.</title><link>http://michaeljaylissner.com/posts/2007/09/14/zimbra-chronicals/</link><description>&lt;p&gt;First of all, &lt;a href="http://www.redhatxchange.com/Zimbra.html"&gt;check this out&lt;/a&gt;. Use the username &amp;#8216;admin&amp;#8217; and the 
+&lt;p&gt;Updates to&amp;nbsp;come.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Lissner</dc:creator><pubDate>Sun, 23 Sep 2007 14:56:19 -0700</pubDate><guid>tag:michaeljaylissner.com,2007-09-23:posts/2007/09/23/lojack-for-linux/</guid><category>Linux</category></item><item><title>I want ogg on my iPod</title><link>http://michaeljaylissner.com/posts/2007/09/16/ogg-on-ipod/</link><description>&lt;p&gt;I know this post is going to alienate just about everybody that would ever consider reading my blog, but here&amp;#8217;s the deal: I want all iPods to support the ogg file&amp;nbsp;format. &lt;/p&gt;
+&lt;p&gt;For the uninitiated, the ogg format is like the &lt;span class="caps"&gt;MP3&lt;/span&gt; or the &lt;span class="caps"&gt;AAC&lt;/span&gt; format, except for a couple of very important differences. One, it&amp;#8217;s free, which is to say that it doesn&amp;#8217;t belong to some company, and every time I use it I&amp;#8217;m not supposed to be giving them a nickel or something. (The &lt;span class="caps"&gt;MP3&lt;/span&gt; format technically is licensed to the company that created it, so theoretically, every time you buy a computer, &lt;span class="caps"&gt;MP3&lt;/span&gt; player, etc., you&amp;#8217;re supposed to give them some quantity of&amp;nbsp;money.)&lt;/p&gt;
+&lt;p&gt;The other reason that I am hereby requesting ogg on my iPod  is because it&amp;#8217;s better. It sounds better. It compresses better. Are there other metrics that we should be using? None that I know of. I want ogg. Steve Jobs, do you hear me&amp;nbsp;now?! &lt;/p&gt;
+&lt;p&gt;Now, the theoretical argument above holds water, but I have personal reasons for this desire: I have 357 ogg files that I can&amp;#8217;t listen to on my iPod! This pretty much gives me three choices: One, install &lt;a href="http://www.rockbox.org/"&gt;Rockbox&lt;/a&gt; on my iPod (I have, it didn&amp;#8217;t work reliably). Two, convert the ogg files to MP3s (this solution would create inferior-quality songs). Or, three, only listen to those songs on my computer (also a lame solution). 
+I should also mention while I am on this rant that I have flac files as well. Why doesn&amp;#8217;t the iPod support those! iPods are great, but these are serious&amp;nbsp;shortcomings.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Lissner</dc:creator><pubDate>Sun, 16 Sep 2007 19:59:23 -0700</pubDate><guid>tag:michaeljaylissner.com,2007-09-16:posts/2007/09/16/ogg-on-ipod/</guid><category>music</category><category>copyright</category><category>ipod</category></item><item><title>Chronicals of installing Zimbra, OR If it looks awesome, it’s probably a pain to install.</title><link>http://michaeljaylissner.com/posts/2007/09/14/zimbra-chronicals/</link><description>&lt;p&gt;First of all, &lt;a href="http://www.redhatxchange.com/Zimbra.html"&gt;check this out&lt;/a&gt;. Use the username &amp;#8216;admin&amp;#8217; and the 
 password &amp;#8216;zcsadmin&amp;#8217;. When you&amp;#8217;re done there, come back here, 
 and pick up where you left&amp;nbsp;off. &lt;/p&gt;
 &lt;p&gt;It&amp;#8217;s pretty sweet right? Calendar functions, ajaxy goodness, tagging, 

@@ -31,7 +31,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;953
         &lt;td&gt;867
         &lt;td&gt;47
-        &lt;td&gt;**3321**
+        &lt;td&gt;&lt;strong&gt;3321&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Courier
@@ -39,7 +39,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;333
         &lt;td&gt;209
         &lt;td&gt;131
-        &lt;td&gt;**1042**
+        &lt;td&gt;&lt;strong&gt;1042&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Arial
@@ -47,7 +47,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;39
         &lt;td&gt;11
         &lt;td&gt;41
-        &lt;td&gt;**455**
+        &lt;td&gt;&lt;strong&gt;455&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Symbol
@@ -55,7 +55,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;**212**
+        &lt;td&gt;&lt;strong&gt;212&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Helvetica
@@ -63,7 +63,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;161
         &lt;td&gt;2
         &lt;td&gt;2
-        &lt;td&gt;**189**
+        &lt;td&gt;&lt;strong&gt;189&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Century Schoolbook
@@ -71,7 +71,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;54
         &lt;td&gt;52
         &lt;td&gt;9
-        &lt;td&gt;**173**
+        &lt;td&gt;&lt;strong&gt;173&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Garamond
@@ -79,7 +79,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;42
         &lt;td&gt;41
         &lt;td&gt;0
-        &lt;td&gt;**127**
+        &lt;td&gt;&lt;strong&gt;127&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Palatino Linotype
@@ -87,7 +87,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;24
         &lt;td&gt;24
         &lt;td&gt;1
-        &lt;td&gt;**85**
+        &lt;td&gt;&lt;strong&gt;85&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Old English
@@ -95,7 +95,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;**42**
+        &lt;td&gt;&lt;strong&gt;42&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Lincoln
@@ -103,7 +103,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;**27**
+        &lt;td&gt;&lt;strong&gt;27&lt;/strong&gt;
     &lt;/tr&gt;
 &lt;/table&gt;</summary><category term="typography"></category><category term="tesseract"></category><category term="Python"></category><category term="ocr"></category><category term="font"></category><category term="CourtListener"></category></entry><entry><title>Using Pylint in Geany</title><link href="http://michaeljaylissner.com/posts/2010/08/11/using-pylint-in-geany/" rel="alternate"></link><updated>2010-08-11T12:07:23-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-08-11:posts/2010/08/11/using-pylint-in-geany/</id><summary type="html">&lt;p&gt;&lt;a href="http://www.logilab.org/857"&gt;Pylint&lt;/a&gt; is a tool that tells you 
 when your Python code is broken or when it has coding problems. As a newish 

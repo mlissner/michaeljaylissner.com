@@ -199,7 +199,7 @@ so we had to go through this process a few times. Below I’ve explained the
 process so others may more easily add fonts to their system.&lt;/p&gt;
 &lt;p&gt;The process has a few major steps:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="#create-training-docs"&gt;Create training documents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#create-training-documents"&gt;Create training documents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#train-tesseract"&gt;Teach Tesseract about the documents&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="create-training-documents"&gt;Create training documents&lt;/h2&gt;
@@ -297,7 +297,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;953
         &lt;td&gt;867
         &lt;td&gt;47
-        &lt;td&gt;**3321**
+        &lt;td&gt;&lt;strong&gt;3321&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Courier
@@ -305,7 +305,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;333
         &lt;td&gt;209
         &lt;td&gt;131
-        &lt;td&gt;**1042**
+        &lt;td&gt;&lt;strong&gt;1042&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Arial
@@ -313,7 +313,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;39
         &lt;td&gt;11
         &lt;td&gt;41
-        &lt;td&gt;**455**
+        &lt;td&gt;&lt;strong&gt;455&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Symbol
@@ -321,7 +321,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;**212**
+        &lt;td&gt;&lt;strong&gt;212&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Helvetica
@@ -329,7 +329,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;161
         &lt;td&gt;2
         &lt;td&gt;2
-        &lt;td&gt;**189**
+        &lt;td&gt;&lt;strong&gt;189&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Century Schoolbook
@@ -337,7 +337,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;54
         &lt;td&gt;52
         &lt;td&gt;9
-        &lt;td&gt;**173**
+        &lt;td&gt;&lt;strong&gt;173&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Garamond
@@ -345,7 +345,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;42
         &lt;td&gt;41
         &lt;td&gt;0
-        &lt;td&gt;**127**
+        &lt;td&gt;&lt;strong&gt;127&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Palatino Linotype
@@ -353,7 +353,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;24
         &lt;td&gt;24
         &lt;td&gt;1
-        &lt;td&gt;**85**
+        &lt;td&gt;&lt;strong&gt;85&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Old English
@@ -361,7 +361,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;**42**
+        &lt;td&gt;&lt;strong&gt;42&lt;/strong&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
         &lt;td&gt;Lincoln
@@ -369,7 +369,7 @@ from&amp;nbsp;PDFs.&lt;/p&gt;
         &lt;td&gt;0
         &lt;td&gt;0
         &lt;td&gt;0
-        &lt;td&gt;**27**
+        &lt;td&gt;&lt;strong&gt;27&lt;/strong&gt;
     &lt;/tr&gt;
 &lt;/table&gt;</summary><category term="typography"></category><category term="tesseract"></category><category term="Python"></category><category term="ocr"></category><category term="font"></category><category term="CourtListener"></category></entry><entry><title>Support for x-robots-tag and robots HTML meta tag</title><link href="http://michaeljaylissner.com/posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/" rel="alternate"></link><updated>2012-01-24T23:20:20-08:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2012-01-24:posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/</id><summary type="html">
 &lt;p&gt;As part of our research for &lt;a href="/blog/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents"&gt;our post&lt;/a&gt; on how we block search engines, we 

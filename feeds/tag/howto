@@ -29,7 +29,7 @@ so we had to go through this process a few times. Below I’ve explained the
 process so others may more easily add fonts to their system.&lt;/p&gt;
 &lt;p&gt;The process has a few major steps:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="#create-training-docs"&gt;Create training documents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#create-training-documents"&gt;Create training documents&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#train-tesseract"&gt;Teach Tesseract about the documents&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="create-training-documents"&gt;Create training documents&lt;/h2&gt;

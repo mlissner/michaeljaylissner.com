@@ -12,20 +12,20 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="typography, tesseract, Python, ocr, font, CourtListener, Tech, " />
+<meta name="keywords" content="podcast, CourtListener, django, misc, " />
 
-<meta property="og:title" content="The Winning Font in Court Opinions "/>
-<meta property="og:url" content="http://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/" />
-<meta property="og:description" content="At CourtListener, we’re developing a new system to convert scanned court documents to text. As part of our development we’ve analyzed more than 1,000 court opinions to determine what fonts courts are using. Now that we have this information, our next step is to create training data ..." />
+<meta property="og:title" content="Creating Podcasts in Django  - It&#39;s more work than you&#39;d think "/>
+<meta property="og:url" content="http://michaeljaylissner.com/drafts/creating-podcasts-in-django.html" />
+<meta property="og:description" content="You’d think that creating podcasts would be fairly easy, but surprisingly the documentation is overly long and the tools are overly complex. Herein, I discuss solutions to these issues and a generalized approach to making and hosting a podcast in your Django app." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
 <meta property="og:article:author" content="Mike Lissner" />
-<meta property="og:article:published_time" content="2012-01-27T22:15:58" />
-<meta name="twitter:title" content="The Winning Font in Court Opinions ">
-<meta name="twitter:description" content="At CourtListener, we’re developing a new system to convert scanned court documents to text. As part of our development we’ve analyzed more than 1,000 court opinions to determine what fonts courts are using. Now that we have this information, our next step is to create training data ...">
+<meta property="og:article:published_time" content="2014-09-15T00:00:00" />
+<meta name="twitter:title" content="Creating Podcasts in Django  - It&#39;s more work than you&#39;d think ">
+<meta name="twitter:description" content="You’d think that creating podcasts would be fairly easy, but surprisingly the documentation is overly long and the tools are overly complex. Herein, I discuss solutions to these issues and a generalized approach to making and hosting a podcast in your Django app.">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>The Winning Font in Court Opinions  · Michael Jay Lissner
+        <title>Creating Podcasts in Django  - It&#39;s more work than you&#39;d think  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -78,113 +78,56 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/"> The Winning Font in Court&nbsp;Opinions  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/drafts/creating-podcasts-in-django.html"> Creating Podcasts in&nbsp;Django  <small> It's more work than you'd think </small>  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
-        <div class="span8 offset2 article-content">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#making-a-podcast-with-django">Making a Podcast with Django</a><ul>
+<li><a href="#making-xml-files">Making <span class="caps">XML</span> Files</a></li>
+</ul>
+</li>
+<li><a href="#testing-your-podcast-locally-and-with-a-validator">Testing your podcast locally and with a validator</a></li>
+<li><a href="#including-your-podcast-in-the-itunes-library">Including your podcast in the iTunes library</a></li>
+<li><a href="#validating-that-everything-works">Validating that everything works</a></li>
+<li><a href="#tools-and-references">Tools and References</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
 
             
-            <p>At CourtListener, we&#8217;re developing a new system to convert scanned court 
-documents to text. As part of our development we&#8217;ve analyzed more than 1,000 
-court opinions to determine what fonts courts are&nbsp;using. </p>
-<p>Now that we have this information, our next step is to create training data 
-for <a href="http://code.google.com/p/tesseract-ocr/">our <span class="caps">OCR</span> system</a> so that it specializes in these fonts, 
-but for now we&#8217;ve attached <a href="http://michaeljaylissner.com/archive/court-font-analysis/font-analysis.ods">a spreadsheet</a> with our findings, 
-and <a href="http://michaeljaylissner.com/archive/court-font-analysis/extract_font_metadata_from_files.py">a script that can be used by others</a> to extract font metadata 
-from&nbsp;PDFs.</p>
-<p>Unsurprisingly, the top font &mdash; drumroll please &mdash; is Times New&nbsp;Roman. </p>
-<table>
-    <tr>
-        <th>Font</td>
-        <th>Regular</td>
-        <th>Bold
-        <th>Italic
-        <th>Bold Italic
-        <th>Total
-    </tr>
-    <tr>
-        <td>Times
-        <td>1454
-        <td>953
-        <td>867
-        <td>47
-        <td><strong>3321</strong>
-    </tr>
-    <tr>
-        <td>Courier
-        <td>369
-        <td>333
-        <td>209
-        <td>131
-        <td><strong>1042</strong>
-    </tr>
-    <tr>
-        <td>Arial
-        <td>364
-        <td>39
-        <td>11
-        <td>41
-        <td><strong>455</strong>
-    </tr>
-    <tr>
-        <td>Symbol
-        <td>212
-        <td>0
-        <td>0
-        <td>0
-        <td><strong>212</strong>
-    </tr>
-    <tr>
-        <td>Helvetica
-        <td>24
-        <td>161
-        <td>2
-        <td>2
-        <td><strong>189</strong>
-    </tr>
-    <tr>
-        <td>Century Schoolbook
-        <td>58
-        <td>54
-        <td>52
-        <td>9
-        <td><strong>173</strong>
-    </tr>
-    <tr>
-        <td>Garamond
-        <td>44
-        <td>42
-        <td>41
-        <td>0
-        <td><strong>127</strong>
-    </tr>
-    <tr>
-        <td>Palatino Linotype
-        <td>36
-        <td>24
-        <td>24
-        <td>1
-        <td><strong>85</strong>
-    </tr>
-    <tr>
-        <td>Old English
-        <td>42
-        <td>0
-        <td>0
-        <td>0
-        <td><strong>42</strong>
-    </tr>
-    <tr>
-        <td>Lincoln
-        <td>27
-        <td>0
-        <td>0
-        <td>0
-        <td><strong>27</strong>
-    </tr>
-</table>
+            
+<p>Podcasts were <a href="https://en.wikipedia.org/wiki/Podcast">created about a decade ago</a> as a way for creators of audio and video content to share their work freely in a way that fans of a show could easily use to get updates whenever a new episode was created. Over the past decade, thousands of podcasts have been created (the current estimate is <a href="http://themyndset.com/2012/01/how-many-podcasts-are-there-whats-the-future-of-the-podcast/">115,000 English podcasts</a>), but oddly, the tooling for podcast hosts such as myself remains fairly poor. After trawling the Internet and building podcast support into <a href="https://www.courtlistener.com">CourtListener</a>, I’ve come up with <a href="#tools-and-references">a few tools</a>, and I’ve written up some notes for an easy way to create podcasts in Django. </p>
+<h2 id="making-a-podcast-with-django">Making a Podcast with Django</h2>
+<p>There are currently two apps designed to make podcasting in Django easy, <a href="https://github.com/jefftriplett/django-podcast">django-podcast</a> and its successor of sorts, <a href="https://github.com/rizumu/django-podcasting">Django Podcasting</a>. I dug into the code of both of these, but from my perspective, they both offer too much and this is a case where less is more. How hard, I ask you, is it to create an <span class="caps">XML</span> file linking to some <span class="caps">MP3</span> files? Not that hard.</p>
+<h3 id="making-xml-files">Making <span class="caps">XML</span> Files</h3>
+<p>The process here is to dig into the </p>
+<h2 id="testing-your-podcast-locally-and-with-a-validator">Testing your podcast locally and with a validator</h2>
+<h2 id="including-your-podcast-in-the-itunes-library">Including your podcast in the iTunes library</h2>
+<h2 id="validating-that-everything-works">Validating that everything works</h2>
+<ol>
+<li>Check validator <span class="caps">XXX</span></li>
+<li>Check iTunes/Rhythmbox </li>
+</ol>
+<h2 id="tools-and-references">Tools and References</h2>
+<ol>
+<li>Somewhat surprisingly, <a href="https://www.apple.com/itunes/podcasts/specs.html">the most definitive documentation for podcasts</a> comes from Apple rather than a standards body. This document is the best description of the requirements for Podcasts that I have found.</li>
+<li>The best podcast validator I have found is <a href="XXXXX">this one</a>.</li>
+<li>[Django’s syndication framework][syndication]</li>
+</ol>
+<p>An image:</p>
+<p><img alt="Alt Text" src="{filename}/images/han.jpg"/></p>
+<p>Some links:
+<a href="{filename}/article1.md">a link relative to content root</a>
+<a href="{filename}../article1.md">a link relative to current file</a></p>
+<p>[syndication: https://docs.djangoproject.com/en/dev/ref/contrib/syndication/</p>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -192,7 +135,7 @@ from&nbsp;PDFs.</p>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/#disqus_thread">
+                href="http://michaeljaylissner.com/drafts/creating-podcasts-in-django.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -202,8 +145,8 @@ from&nbsp;PDFs.</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'michaeljaylissner';
-        var disqus_identifier = 'http://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/';
-    var disqus_url = 'http://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/';
+        var disqus_identifier = 'http://michaeljaylissner.com/drafts/creating-podcasts-in-django.html';
+    var disqus_url = 'http://michaeljaylissner.com/drafts/creating-podcasts-in-django.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -222,40 +165,22 @@ from&nbsp;PDFs.</p>
 </section>
 
             <hr/>
-            <aside>
-            <nav>
-            <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/" title="Previous: Support for x-robots-tag and robots HTML meta tag">Support for x-robots-tag and robots HTML meta tag</a></li>
-                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/" title="Next: Adding New Fonts to Tesseract 3 OCR Engine">Adding New Fonts to Tesseract 3 OCR Engine</a> »</li>
-            </ul>
-            </nav>
-            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2012-01-27T22:15:58">Jan 27, 2012</time>
+            <time pubdate="pubdate" datetime="2014-09-15T00:00:00">Sep 15, 2014</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://michaeljaylissner.com/categories.html#tech-ref">Tech</a>
+            <a class="category-link" href="http://michaeljaylissner.com/categories.html#misc-ref">misc</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://michaeljaylissner.com/tags.html#courtlistener-ref">CourtListener
                     <span>13</span>
 </a></li>
-                <li><a href="http://michaeljaylissner.com/tags.html#font-ref">font
+                <li><a href="http://michaeljaylissner.com/tags.html#django-ref">django
                     <span>2</span>
 </a></li>
-                <li><a href="http://michaeljaylissner.com/tags.html#ocr-ref">ocr
-                    <span>2</span>
-</a></li>
-                <li><a href="http://michaeljaylissner.com/tags.html#python-ref">Python
-                    <span>8</span>
-</a></li>
-                <li><a href="http://michaeljaylissner.com/tags.html#tesseract-ref">tesseract
-                    <span>2</span>
-</a></li>
-                <li><a href="http://michaeljaylissner.com/tags.html#typography-ref">typography
-                    <span>1</span>
+                <li><a href="http://michaeljaylissner.com/tags.html#podcast-ref">podcast
 </a></li>
             </ul>
 <h4>Contact</h4>
@@ -266,7 +191,7 @@ from&nbsp;PDFs.</p>
     <a href="mailto:mlissner+blog@michaeljaylissner.com" title="My Email Address" class="sidebar-social-links" target="_blank">
     <i class="fa fa-envelope sidebar-social-links"></i></a>
 <h4>This is Reader-Editable</h4>
-<a href="https://github.com/mlissner/michaeljaylissner.com/edit/master/content/and-the-winning-font-in-court-documents-is.md">
+<a href="https://github.com/mlissner/michaeljaylissner.com/edit/master/content/creating-podcasts-in-django.md">
     <i class="fa fa-github"></i>
     Edit this post on Github
 </a><!-- Begin MailChimp Signup Form -->
