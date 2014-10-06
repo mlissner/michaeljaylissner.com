@@ -1,5 +1,6 @@
 Title: Adding New Fonts to Tesseract 3 OCR Engine
 Date: 2012-02-11T10:53:30
+Modified: 2014-10-06
 Tags: tesseract, ocr, howto, font
 Category: Tech
 
@@ -8,12 +9,13 @@ Category: Tech
 ## Status
 
 I'm attempting to keep this up to date as Tesseract changes. If you have 
-questions or corrections, please send them directly using the [contact 
-page][contact].
+corrections, please send them directly using the [contact page][contact].
 
 I've turned off commenting on this article because it was just a 
 bunch of people asking for help and never getting any. If you need help 
-with these instructions, go to Stack Overflow and ask there.
+with these instructions, go to [Stack Overflow][so] and ask there. If you send
+me a link to a question on such a site, I'm much more likely to respond 
+positively.
 
 ## Introduction
 
@@ -135,3 +137,4 @@ And that, good friend, is it. Worst process for a human, ever.
 [contact]: {filename}/pages/contact.md
 [td]: {filename}/archive/ocr/standard-training-text.txt
 [oldenglish]: {filename}/archive/ocr/old-english.doc
+[so]: https://stackoverflow.com/questions/tagged/tesseract
