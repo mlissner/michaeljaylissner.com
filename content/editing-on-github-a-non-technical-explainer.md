@@ -7,7 +7,7 @@ Category: Tech
 
 [TOC]
 
-When writing programs, developers have a choice of whether they want their work to be public or private. Programs that are made public are called "open source" and ones that are not are called "closed source". In both cases the developer can share a program with the world as a website or iPhone app, or whatever, but in the case where the code is shared publicly it's *also* possible for anybody anywhere in the world to change the program code to make the program it better. 
+When writing programs, developers have a choice of whether they want their work to be public or private. Programs that are made public are called "open source" and ones that are not are called "closed source". In both cases the developer can share a program with the world as a website or iPhone app, or whatever, but in the case where the code is shared publicly it's *also* possible for anybody anywhere in the world to change the program code to make the program it better. (For more detail on this and other jargon, see the [definitions at the end][def])
 
 This is very cool! 
 
@@ -119,11 +119,15 @@ As you might expect, there are tons of resources about this on the Web. Some rea
 
 ## Some Definitions
 
-1. Open Source: A way of creating a program where a developer shares all of their code so anybody can see it. 
-1. Closed Source: A way of creating a program where a developer does *not* share any of their code, keeps it secret, and only releases their final product. 
-1. Repository: A collection of files, images, and other stuff that are kept together for a common purpose. Generally it's a bunch of files that create a website or program, but some people use repositories for all kinds of things, like dealing with [identity theft][id] (shameless plug), [holding the contents of this very webpage][edit] (shameless plug), or even [writing online books teaching lawyers to code][c4l] (*not* a shameless plug!).
-1. Pull request: A polite way to say, "This code is ready to get included in the main repository. Please pull it in."
-1. Merging: The process of taking a branch or fork and merging the changes in it into another branch or fork. This combines two people's work into a single place. 
+1. **Open vs Closed Source**: This is a topic entire theses and books have been written about, but in general open source is way of creating a program where a developer shares all of their code so anybody can see it. In general when a program is open source, people are welcome to edit the code, help file and fix bugs, etc. On the other hand, closed source development is a way of creating a program so that only the developers can see the code, and the public at large is generally not welcome to contribute, except to sometimes email the developer with comments. 
+
+    In a way, the product of open source development is a combination of the code itself plus the program it creates, while in closed source projects the product is the program alone. There are thousands of examples of each of these ways of developing software. For example, [Android][droid] and the [Linux Kernel][linux] are open source, while Microsoft Word and iPhones are not. (See how I couldn't link to the latter two?)
+    
+1. **Repository**: A collection of files, images, and other stuff that are kept together for a common purpose. Generally it's a bunch of files that create a website or program, but some people use repositories for all kinds of things, like dealing with [identity theft][id] (shameless plug), [holding the contents of this very webpage][edit] (shameless plug), or even [writing online books teaching lawyers to code][c4l] (*not* a shameless plug!).
+
+1. **Pull request**: A polite way to say, "This code is ready to get included in the main repository. Please pull it in."
+
+1. **Merging**: The process of taking a branch or fork and merging the changes in it into another branch or fork. This combines two people's work into a single place. 
 
 
 [Git]: http://git-scm.com/
@@ -135,3 +139,6 @@ As you might expect, there are tons of resources about this on the Web. Some rea
 [tut]: https://guides.github.com/introduction/flow/
 [book]: http://git-scm.com/book
 [edit]: https://github.com/mlissner/michaeljaylissner.com/edit/master/content/editing-on-github-a-non-technical-explainer.md
+[droid]: https://source.android.com/
+[linux]: https://github.com/torvalds/linux/
+[def]: #some-definitions
