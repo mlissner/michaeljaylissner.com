@@ -7,7 +7,7 @@ Category: Tech
 
 [TOC]
 
-When writing programs, developers have a choice of whether they want their work to be public or private. Programs that are made public are called "open source" and ones that are not are called "closed source". In both cases the developer can share a program with the world as a website or iPhone app, or whatever, but in the case where the code is shared publicly it's *also* possible for anybody anywhere in the world to change the program code to make the program it better. (For more detail on this and other jargon, see the [definitions at the end][def])
+When writing programs, developers have a choice of whether they want their work to be public or private. Programs that are made public are called "open source" and ones that are not are called "closed source". In both cases the developer can share a program with the world as a website or iPhone app, or whatever, but in the case where the code is shared publicly it's *also* possible for anybody anywhere in the world to change the program to make the program it better. (For more detail on this and other jargon, see the [definitions at the end][def])
 
 This is very cool! 
 
@@ -16,7 +16,7 @@ But I hear you asking, "How do I, a non-developer, make use of this system to ma
 
 ## And then there was Git
 
-[Git] is an extremely popular system that developers use to keep track of the code they write. The main thing it does is make it so that two developers can work on the same file, track their individual changes and then combine their work, as you might do in Microsoft Word. Since all programs are just collections of lots of files called that are together known as a "repository", this lets a number of developers work together without tramping on each others changes.
+[Git] is an extremely popular system that developers use to keep track of the code they write. The main thing it does is make it so that two developers can work on the same file, track their individual changes and then combine their work, as you might do in Microsoft Word. Since all programs are just collections of lots of files that are together known as a "repository", this lets a number of developers work together without tramping on each others changes.
 
 There are a million ways to use Git but lately a lot of people use Git through a website called [Github][gh]. Github makes it super-easy to use Git, but you still need to understand a few steps that are necessary to make changes. The basic steps we'll take are:
 
