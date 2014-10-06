@@ -2,7 +2,7 @@ Title: Editing a File on Github
 Subtitle: A Non-Technical Explainer
 Summary: There are a lot of conventions at play in the Github ecosystem, so getting up to speed can take a moment. This article explains the basics so it makes more sense to lay people.
 Date: 2014-10-06
-Tags: github.com, howto, courtlistener.com
+Tags: GitHub, howto, CourtListener
 Category: Tech
 
 [TOC]
