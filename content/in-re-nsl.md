@@ -9,12 +9,12 @@ Category: Policy, Law & Politics
 
 *Kurt Opsahl for EFF*
 
-I spent the morning today in court watching [Kurt Opsahl][kurt] from the [Electronic Frontier Foundation][eff] deliver oral arguments in *In Re National Security Letters*, AKA *Under Seal v. Eric Holder*. I had originally planned on attending this as a lay person holding a smart phone camera and taking pictures, but soon after I filed [an application to take photos][app], I became *the* media "pool", meaning I was the one guy responsible for taking photos and distributing to the press after the fact. 
+I spent the morning today in court watching [Kurt Opsahl][kurt] from the [Electronic Frontier Foundation][eff] deliver oral arguments for *In Re National Security Letters*, AKA *Under Seal v. Eric Holder*. I had originally planned on attending this as a lay person holding a smart phone camera and taking pictures, but soon after I filed [an application to take photos][app], I became *the* media "pool", meaning I was the one guy responsible for taking photos and distributing to the press after the fact. 
 
 Well, I'm no photographer, but since nobody else applied to take photos, here are the photos that I took:
 
 <form method="get" target="_blank" action="https://drive.google.com/file/d/0Bwzoqmo9VXMvU0JfWldsU1Q1TUE/view?usp=sharing">
-    <input class="button" type="submit" name="download" value="Download as Zip"></input>
+    <input class="button lead" type="submit" name="download" value="Download as Zip"></input>
 </form>
 
 I hereby release these as public domain photos. If you want to give me attribution, great. If not, no worries. 
