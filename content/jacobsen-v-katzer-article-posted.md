@@ -1,7 +1,7 @@
 Title: Jacobsen v. Katzer Article Posted
 Date: 2009-10-03T21:52:21
 Tags: patent, paper, open source, Jacobsen v. Katzer, FOIA, DMCA, copyright
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 Today I finally finished an article I have been writing for Wikipedia, as part of my <a href="http://people.ischool.berkeley.edu/~bcarver/mediawiki/index.php/INFO_237_Fall_2009_Syllabus">IP Law class</a>. The professor for this class is the same as the one that taught the Cyberlaw class I took in the Spring, and once again, he has asked us to work on Wikipedia as part of our classwork.
 

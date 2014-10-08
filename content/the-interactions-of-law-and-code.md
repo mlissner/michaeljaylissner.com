@@ -1,7 +1,7 @@
 Title: The Interactions of Law and Code
 Date: 2009-01-22T10:35:59
 Tags: infotech, cyberlaw, Lessig
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 For my new Cyberlaw course, we were assigned a reading by Lawrence Lessig 
 called <a href="www.lessig.org/content/articles/works/finalhls.pdf">*The 

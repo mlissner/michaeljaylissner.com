@@ -1,7 +1,7 @@
 Title: Cheney is so shady, it pisses me off.
 Date: 2008-12-19T21:35:28
 Tags: rant, archive, cheney, government
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 Cheney is [at work][1] to keep his records from becoming public as part of 
 the National Archives when he goes out of office. 

@@ -1,7 +1,7 @@
 Title: Technology Revolution and the Fourth Amendment
 Date: 2009-12-08T12:29:15
 Tags: Technology Revolution, Fourth Amendment, Constitution
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 I realized today that for some reason I never posted [this paper][1] back in May
 when I wrote it. This paper is a brief analysis of the ways that our 

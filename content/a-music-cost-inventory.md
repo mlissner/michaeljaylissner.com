@@ -1,7 +1,7 @@
 Title: A Music Cost Inventory
 Date: 2008-11-22T17:21:02
 Tags: music, copyright, IP, policy, law
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 According to <a href="http://www.copyright.gov/title17/92chap5.html">Title 17, Chapter 5, section 504c2 of the US copyright law</a>, if you get caught with music that you have downloaded illegally from the Internet, you can get charged up to $150,000 per infringement. I thought I would do a little experiment to see how much I would be in for if my entire collection were to be found to be illegal. 
 

@@ -1,7 +1,7 @@
 Title: Project Idea: "Bug Trackers for Cities."
 Date: 2010-06-22T16:59:02
 Tags: urban development, policy, bugs, Project idea
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 Well, today's project idea was to post about the use of bug trackers for the management of city problems, but as it should turn out, I'm behind the curve on this one, so I'll just explain the concept, and post some links to people that have live implementations or have already blogged about this. When I first researched this idea about six months ago, I didn't find anything, but it seems that steam is building behind this idea.
 

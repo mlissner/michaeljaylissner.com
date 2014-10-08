@@ -1,7 +1,7 @@
 Title: Excess Elections Spending
 Date: 2008-10-29T14:16:35
 Tags: elections, spam
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 We're just about to the line here with the election, and I, for one, am really looking forward to a phone that stops ringing, to my mail carrier's back feeling better, and to my inbox devoid of political emails. 
 

@@ -1,7 +1,7 @@
 Title: Final Paper on Online Memorialization by Default
 Date: 2009-05-13T11:25:10
 Tags: paper, thanatosensitivity, memorialization
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 
 Yesterday I had an epic writing session, and finished [my final paper][1] for

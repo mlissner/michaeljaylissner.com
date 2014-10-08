@@ -1,7 +1,7 @@
 Title: The abolishment of the Emergency Court of Appeals (April 18, 1962)
 Date: 2011-08-10T20:50:54
 Tags: loc, law, history, CourtListener, api
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 One of the coming features at <a href="http://courtlistener.com">CourtListener</a> is an API for the law. Part of that feature is going to be some basic information about the courts themselves, so I spent some time over the weekend researching courts that served a special purpose but were since abolished.
 

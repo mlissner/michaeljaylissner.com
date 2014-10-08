@@ -1,7 +1,7 @@
 Title: The Singularity Is Near
 Date: 2007-10-12T22:53:24
 Tags: singularity, book, infotech
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 I know what you're thinking: "The Singularity - What is Mike talking about? This must be stupid." I'm here to say that it might be stupid, but bear with me because I can't decide if it is, and I need to know the public consensus. 
 

@@ -1,7 +1,7 @@
 Title: Project Idea: "Community-Curated Data Repository"
 Date: 2010-08-02T13:02:42
 Tags: recovery, Project idea, debian, data, curation
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 There's an interesting problem that I've run into a number of times that goes 
 like this: You want to start a new project studying **X** dump of 

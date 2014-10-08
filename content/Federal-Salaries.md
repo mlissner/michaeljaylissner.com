@@ -1,7 +1,7 @@
 Title: Federal Salaries
 Date: 2008-02-10T12:02:17
 Tags: taxes, political
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 
 Just some food for thought from <a href="http://thebudgetgraph.com">thebudgetgraph.com</a>:

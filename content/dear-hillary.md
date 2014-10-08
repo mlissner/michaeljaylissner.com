@@ -1,7 +1,7 @@
 Title: Dear Hillary
 Date: 2008-05-20T21:06:22
 Tags: politics, elections
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 
 Dear Hillary, 

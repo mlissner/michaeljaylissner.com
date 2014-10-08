@@ -1,7 +1,7 @@
 Title: The Argument for Encryption, and Why Vista Is Irresponsible
 Date: 2008-09-26T20:34:31
 Tags: microsoft, security, vista, pidgin
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 We all agree that security is necessary for our data, but we all fall down when it comes to implementation. An example that I keep returning to is the need for encryption. I posted a few days ago about how Yahoo! doesn't encrypt their email, allowing a sophisticated hacker to intercept any message to or from your account. 
 

@@ -1,7 +1,7 @@
 Title: Sarah Palin - Worst candidate of all time? 
 Date: 2008-09-05T08:51:04
 Tags: politics, palin
-Category: Policy & Politics
+Category: Policy, Law & Politics
 
 I have been getting a lot of email lately from various organizations telling me about Sarah Palin. They've started to pile up in my inbox, so I decided that I better learn a little about the woman. Here's what I learned so far:
 
