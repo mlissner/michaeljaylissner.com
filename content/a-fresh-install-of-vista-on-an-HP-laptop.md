@@ -1,6 +1,6 @@
 Title: A Fresh Install of Vista on an HP Laptop
 Date: 2009-07-23T21:59:02
-Tags: windows, vista, junkware, HP
+Tags: Windows, Vista, Junkware, HP
 Category: Tech
 
 

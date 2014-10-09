@@ -1,6 +1,6 @@
 Title: Japan Pictures Posted, and a Sampling
 Date: 2009-06-28T13:14:27
-Tags: pictures, japan, N
+Tags: Pictures, Japan
 Category: Pictures
 
 N and I got back from Japan a few weeks ago, and we've finally gotten the 

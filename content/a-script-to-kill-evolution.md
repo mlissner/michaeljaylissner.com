@@ -1,6 +1,6 @@
 Title: A Script to Kill Evolution
 Date: 2008-10-13T17:36:05
-Tags: evolution, bash
+Tags: Evolution, Bash, Script
 Category: Tech
 
 

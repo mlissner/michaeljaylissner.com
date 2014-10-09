@@ -1,6 +1,6 @@
 Title: An Important Distinction
 Date: 2007-11-26T17:02:25
-Tags: pedantry, rant
+Tags: Pedantry, Rant
 Category: Rant
 
 

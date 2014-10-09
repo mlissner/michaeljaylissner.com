@@ -1,7 +1,7 @@
 Title: A Decision Has Been Made
 Subtitle: This guy is going to Cal!
 Date: 2008-03-15T00:47:52
-Tags: me, Cal
+Tags: Me, Cal
 Category: Personal
 
 Well, it wasn't easy to figure this one out, but I have officially chosen to 

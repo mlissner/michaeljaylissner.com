@@ -1,6 +1,6 @@
 Title: Amazon Has mp3's! I Wish I Could Download Them...
 Date: 2008-01-22T19:04:40
-Tags: music, copyright, amazon, rant
+Tags: Music, Copyright, Amazon, Rant
 Category: Rant
 
 

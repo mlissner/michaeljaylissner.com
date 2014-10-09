@@ -1,6 +1,6 @@
 Title: A Modest Miracle
 Date: 2007-09-24T20:20:32
-Tags: me, cooking, religion
+Tags: Me, Cooking, Religion
 Category: Personal
 
 

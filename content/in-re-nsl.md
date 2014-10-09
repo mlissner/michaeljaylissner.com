@@ -1,7 +1,7 @@
 Title: In Re NSL
 Subtitle: Under Seal v. Holder
 Date: 10/8/14
-Tags: court, NSL, EFF, photography
+Tags: Court, NSL, EFF, Pictures
 Category: Policy, Law & Politics
 
 

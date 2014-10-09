@@ -9,7 +9,7 @@ e d i a, only without the spaces and with a .com at the end. It exemplifies
 so much in the world that is wrong. For example, here's the picture on the 
 page entitled "Liberal":
 
-![No Alt]({filename}/images/Liberal_Brain_0.jpg)
+![Liberal Brain]({filename}/images/Liberal_Brain_0.jpg)
 
 Correct me if I'm wrong, but this is a just a bit annoying. 
 

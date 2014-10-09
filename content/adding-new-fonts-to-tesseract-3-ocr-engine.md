@@ -1,8 +1,9 @@
 Title: Adding New Fonts to Tesseract 3 OCR Engine
 Date: 2012-02-11T10:53:30
 Modified: 2014-10-06
-Tags: tesseract, ocr, howto, font
+Tags: Tesseract, OCR, HowTo, Font
 Category: Tech
+Comments: False
 
 [TOC]
 

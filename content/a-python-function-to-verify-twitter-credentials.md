@@ -1,6 +1,6 @@
 Title: A Python Function to Verify Twitter Credentials
 Date: 2009-04-03T19:09:25
-Tags: Python, programming, Twitter, pycurl
+Tags: Python, Programming, Twitter, PyCurl
 Category: Tech
 
 
