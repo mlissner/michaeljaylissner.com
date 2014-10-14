@@ -1,15 +1,14 @@
 Title: Becoming a Non-Profit
-Subtitle: How to make the IRS embrace you in their loving arms 
+Subtitle: An incantation to make the IRS embrace you in their loving arms 
 Summary: Becoming a state and federal non-profit is a real challenge. You've got options how to do it, but this is our story of how we did it.
 Date: 10/14/14
-Status: Draft
 Tags: IRS, IRS-1023, Non-Profit, CourtListner, Free Law Project, Forms
 Category: Policy, Law & Politics
 
 [TOC]
 
 XXX What other references to include that we used?  
-XXX Are any steps missing from the process?
+XXX Are any steps missing from the process?  
 
 ## The Goal
 
@@ -18,9 +17,9 @@ This post is an attempt to document the things that we've done at [Free Law Proj
 <blockquote class="twitter-tweet" lang="en"><p>This isn&#39;t tax advice, but we&#39;re happy to announce the IRS approved our 501(c)(3) app, so donations are deductible! <a href="https://t.co/UjaBgSJorr">https://t.co/UjaBgSJorr</a></p>&mdash; Free Law Project (@FreeLawProject) <a href="https://twitter.com/FreeLawProject/status/520620527963369472">October 10, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Check out [this beauty][status-letter]!
+Check out [this beauty][status-letter]! We're finally the real deal.
 
-All through the process, I wished there was something that had all the documentation of the process, so this is my attempt at such a post. I'm writing this after the fact, so I expect that I'll munge a few details. If you catch me at it, you can either [edit this page][gh] yourself using [my handy guide][guide], or you can [send me a note][contact] and I'll update it. 
+All through the process, I wished there was something that had all the documentation of the process, so this is my attempt at such a post. I'm writing this after the fact, so I expect that I'll munge a few details. If you catch me making a mistake, you can either [edit this page][gh] yourself using [my handy guide][guide], or you can [send me a note][contact] and I'll update it. 
 
 
 ## The Overall Process
@@ -35,7 +34,7 @@ Here are the major steps for California and Federal recognition:
     1. Write Articles of Incorporation
     1. Write Conflict of Interest and Ethics Policy
     1. Hold a meeting creating directors (and having them resign as incorporators, if necessary)
-    1. Hold a meeting to ratify and adopt everything above.
+    1. Hold a meeting to ratify and adopt everything above
 1. File Statement of Information with Secretary of State (90 days since creation of your EIN)
 1. Register with the California Attorney General's registry of charitable trusts
 1. Get Federal recognition (501(c)(3))
@@ -43,6 +42,7 @@ Here are the major steps for California and Federal recognition:
     1. Your organization's press coverage
     1. Your homepage
     1. Articles of Incorporation stamped by the State Secretary
+    1. Phone a friend
 1. Get Municipal recognition
 
 
@@ -54,7 +54,7 @@ More information about this can be [found on the Secretary of State's website][s
   
 ## Check for Trademarks
 
-If you think the name of your organization might be a trademark, you should check [the USPTO's trademark database][tmdb] to see if it is. If so, it's probably wise to re-think the name of your organization. Naming your organization the Nike Corp. probably won't work out.  
+If you think the name of your organization might be a trademark, you should check [the USPTO's trademark database][tmdb] to see if it is. If so, it's probably wise to re-think the name of your organization. Naming your organization the Nike Charitable Trust. probably won't work out.
 
 ## Get an EIN
 
@@ -71,36 +71,68 @@ At this point, you've moved past the easy stuff. It's time for the weird and dif
 
 ### Write Bylaws, Articles of Incorporation and Conflict of Interest and Ethics Policy
 
-Writing these three items is a very persnickety part of the process. Each item *must* include certain phrases and failure to include those phrases will lambaste any attempt to 501(c)(3) status down the road. The template we used for each of these was created by XXX and can be downloaded from [their website][template-source]. 
+Writing these three items is a very persnickety part of the process. Each item *must* include certain phrases and failure to include those phrases will lambaste any attempt to get 501(c)(3) status down the road. The template we used for each of these was created by XXX and can be downloaded from [their website][template-source]. 
  
 The best process we discovered for this was to very carefully work our way through each template and to update any section that needed it. The [result][bylaws-and-aoi] clocks in at 25 pages for the Bylaws and Articles of Incorporation and ten pages for the  Conflict of Interest and Ethics Policy.
 
 ## Hold Some Meetings 
 
-OK, you've got your name, EIN, Bylaws, Articles of Incorporation and  Conflict of Interest and Ethics Policy all ready. Now what? Well, now we enter the portion of the process that involves magic and wizardry. What we do now is we hold two meetings. You're free to chant during these meetings.
+OK, you've got your name, EIN, Bylaws, Articles of Incorporation and  Conflict of Interest and Ethics Policy all ready. Now what? Well, now we enter the portion of the process that involves magic and wizardry. What we do now is we hold two meetings. Feel free to chant during these meetings if that helps them make sense.
 
-The first meeting serves the purpose of creating directors and having them resign as incorporators, if necessary. To have this meeting, get all of your incorporators and board members together and decide to make it so. Have your secretary keep minutes from the meeting. You'll need them for the 501(c)(3). [Here are ours][minutes-incorporators]. You can see how this might feel a bit like voodoo magic if your board of directors is the same group of people as your incorporators (as in our case). 
+The first meeting serves the purpose of creating directors and having them resign as incorporators, if necessary. To have this meeting, get all of your incorporators and directors together and decide to make it so. Have your secretary keep minutes from the meeting. You'll need them for the 501(c)(3). [Here are ours][minutes-incorporators]. You can see how this might feel a bit like voodoo magic if your board of directors is the same group of people as your incorporators (as in our case). 
    
 The second meeting is where the real business goes down. Here you adopt all of the paperwork you created above, establish bank accounts, etc. Again, we used the templates from XXX to keep minutes for this meeting. [Check out our minutes for details][minutes-first-meeting]. You'll also see in our minutes a waiver of notice that waives the director's normal requirement to tell people about the meeting in advance.
 
-Note that these two meetings can take place back to back, but that they need to have *separate* minutes and need to be *separate* meetings. This is because until the board is adopted in the first meeting, they can't very well do the things in the second meeting. Voodoo? Perhaps. 
+These two meetings can (and probably will) take place back to back, but they need to have *separate* minutes and need to be *separate* meetings. This is because until the board is adopted in the first meeting, they can't very well do the things in the second meeting. Voodoo? Perhaps. 
 
 
-## Register with the AG for Your State
+## File Statement of Information with Secretary of State
 
-Assuming that you've successfully reserved a name for your organization you can proceed to the 
- - Within 30 days of having any assets.
+Within 90 days of when you created your EIN, you need to take all of the above and send it into the secretary of state along with the XXX form. If you do all of this well and properly, you'll soon be a California Non-Profit.
 
-
-## Get an EIN
-
-This is a remarkably 
+XXX: Brian: I completely forget what the process was here...do you recall? 
 
 
-## Get State Recognition
+## Register with the California Attorney General
+
+Another thing you've got to do, once you've got state recognition is to register with the California Attorney General. You have 30 days to do this from the moment when you first had assets as an organization. Be swift.
+ 
+To do this, XXX
 
 
 ## Get Federal Recognition
+
+If you've come this far, you're actually doing pretty well, but it's time to find a good fortifying drink, because it's about to get worse. Much worse. Our operating theory is that the IRS makes this hard because they simply don't like giving tax exemptions -- it's antithetical to their whole raison d'être. But be that as it may, we must persevere if we're going to make our organization a 501(c)(3). 
+
+So, what's this process look like? 
+ 
+Well, there are really only two forms that you need to worry about. The first is the [IRS-1023][irs-1023] and the second is the [checklist for the IRS-1023][irs-checklist]. That should tell you something about the process you're about to engage in: There's a form for the form. Oh, and that's not all, there's a [web form][irs-get-forms-form] for the form for the form. Also, the IRS-1023 is an *interactive* PDF with parts that appear and disappear as you complete it. Also it crashes sometimes, can only be opened in Adobe Reader and there are three versions of the form and two different revisions. Dizzy yet?
+
+Let's see if I can simplify this at all:
+
+1. The IRS-1023 from December 2013 is currently the main form you want  -- it's long and has a lot of questions. It is available in three forms: Interactive (recommended), Regular (no interactive stuff), and Accessible (even less interactive stuff?). You only seem to be able to get this form if you answer [a bunch of questions aimed at prepping you for the process][irs-1023]. Even then it gives you a zip containing the form, sigh. 
+1. The 1023 checklist *must* be included in your submission as a table of contents of sorts. The [newest one I've found][irs-checklist] is from June 2006.
+1. There are copious resources online to help you complete these forms. The ones we used were [form1023.org][f1023-org], the [IRS's own documentation][irs-instructs], and the IRS's [FAQ for the form][irs-faq].
+
+OK, you've got your forms, let's talk a bit about the packet you're going to send to the IRS. The best place to begin understanding the packet is by looking at the checklist we just downloaded. In addition to the items mentioned above, it also requests a number of new items we haven't seen before. Most of these won't be necessary for most non-profits, but one is new and worth mentioning: the Expedite Request.
+
+As we understand it, there are basically three queues your paperwork can fall into at the IRS:
+
+1. The urgent queue (30 days?)
+1. The normal queue (90 days?) and 
+1. The troublemaker queue (> 90 days / Never)
+
+Your goal is to fall into one of the first two queues. If you fall into the third, it's possible you'll never come out the other side. [Seriously][yorba]. If you want to fall into the first queue, you need to complete an Expedite Request. These are actually pretty straightforward, but you need to qualify. You can see an example of our Expediate Request in our [1023 submission][flp-1023], but basically, you need to state specific harm that will occur if your organization doesn't get swift 501(c)(3) processing. There are [guides about this on the IRS website][irs-ex-proc] that we used (successfully, we believe). 
+
+Getting faster processing is great, but it's not always possible. Failing that, the thing to do is make sure that you don't fall into the third queue. I think the important parts of this are:
+
+1. Carefully follow [the instructions provided by the IRS for the 1023][irs-instructs]
+1. Make sure that your articles of incorporation contain the proper purpose and dissolution clauses (they will if you use the template).
+1. 
+
+
+
+
 
 
 ## Get Municipal Recognition
@@ -116,10 +148,19 @@ This is a remarkably
 [contact]: {filename}/pages/contact.md
 [guide]: {filename}/editing-on-github-a-non-technical-explainer.md
 [sos-name]: http://www.sos.ca.gov/business/be/name-availability.htm
-[tbdb]: http://tess2.uspto.gov/bin/gate.exe?f=tess&state=4802:wiyhnl.1.1
+[tmdb]: http://tess2.uspto.gov/bin/gate.exe?f=tess&state=4802:wiyhnl.1.1
 [sos-reserve]: http://www.sos.ca.gov/business/corp/pdf/naavreservform.pdf
 [EIN-form]: http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Apply-for-an-Employer-Identification-Number-%28EIN%29-Online
 [bylaws-and-aoi]: http://freelawproject.org/wp-content/uploads/2013/08/Articles_of_Incorporation_and_Bylaws.pdf
 [template-source]: XXX?
 [minutes-incorporators]: http://freelawproject.org/wp-content/uploads/2013/08/003-minutes_incorporators.pdf
 [minutes-first-meeting]: http://freelawproject.org/wp-content/uploads/2013/08/004-mins_1st_bd_mtg-signed.pdf
+[irs-get-forms-form]: http://www.stayexempt.irs.gov/StartingOut/InteractiveForm1023Application.aspx
+[irs-checklist]: http://www.stayexempt.irs.gov/checklist.pdf
+[irs-1023]: http://www.stayexempt.irs.gov/StartingOut/InteractiveForm1023Application.aspx
+[f1023-org]: http://form1023.org/
+[irs-instructs]: http://www.irs.gov/instructions/i1023/index.html
+[irs-faq]: http://www.irs.gov/Charities-&-Non-Profits/Frequently-Asked-Questions-about-Form-1023
+[yorba]: http://blogs.gnome.org/jnelson/2014/06/30/the-new-501c3-and-the-future-of-free-software-in-the-united-states/
+[flp-1023: XXX
+[irs-ex-proc]: http://www.irs.gov/Charities-&-Non-Profits/Applying-for-Exemption:-Expediting-Application-Processing
