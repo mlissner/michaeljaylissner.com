@@ -4,10 +4,12 @@ Tags: backpacking, snow mountain, maps, cartography
 Category: Backpacking
 
 I put on my cartographer's hat today and made a distance map 
-([png][1]/[svg][2]) for Snow 
-Mountain. The regular map for this area doesn't have any distance markers 
+([png][1]/[svg][2]) for Snow Mountain. The regular map for this area doesn't 
+have any distance markers 
 on it, so these are based on talking with the ranger in the park. He seemed
-knowledgeable, so these numbers are probably the best we'll get for a while. 
+knowledgeable, so these numbers are probably the best we'll get for a while.
+ 
+![map][1]
 
 If somebody discovers that the rangers in Snow Mountain finally have firm 
 distances, let me know what they are, and I'll happily update this map. 
