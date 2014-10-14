@@ -21,6 +21,14 @@ Check out [this beauty][status-letter]! We're finally the real deal.
 
 All through the process, I wished there was something that had all the documentation of the process, so this is my attempt at such a post. I'm writing this after the fact, so I expect that I'll munge a few details. If you catch me making a mistake, you can either [edit this page][gh] yourself using [my handy guide][guide], or you can [send me a note][contact] and I'll update it. 
 
+## Before We Begin
+
+Two notes before we begin:
+
+1. Our complete IRS packet is available. Please feel free to take a look.
+
+1. Nothing here, there, or anywhere is tax advice or legal advice or advice in any way, period. This is an overview of the process as we understand it. It might work for you, it might not. We're not tax or IRS experts. Hell, I'm not even a lawyer.
+
 
 ## The Overall Process
 
@@ -116,19 +124,57 @@ Let's see if I can simplify this at all:
 
 OK, you've got your forms, let's talk a bit about the packet you're going to send to the IRS. The best place to begin understanding the packet is by looking at the checklist we just downloaded. In addition to the items mentioned above, it also requests a number of new items we haven't seen before. Most of these won't be necessary for most non-profits, but one is new and worth mentioning: the Expedite Request.
 
-As we understand it, there are basically three queues your paperwork can fall into at the IRS:
+As we've come to understand it, there are basically three queues your paperwork can fall into at the IRS:
 
 1. The urgent queue (30 days?)
 1. The normal queue (90 days?) and 
 1. The troublemaker queue (> 90 days / Never)
 
-Your goal is to fall into one of the first two queues. If you fall into the third, it's possible you'll never come out the other side. [Seriously][yorba]. If you want to fall into the first queue, you need to complete an Expedite Request. These are actually pretty straightforward, but you need to qualify. You can see an example of our Expediate Request in our [1023 submission][flp-1023], but basically, you need to state specific harm that will occur if your organization doesn't get swift 501(c)(3) processing. There are [guides about this on the IRS website][irs-ex-proc] that we used (successfully, we believe). 
+Your goal is to fall into one of the first two queues. If you fall into the third, it's possible you'll never come out the other side. [Seriously][yorba]. 
 
-Getting faster processing is great, but it's not always possible. Failing that, the thing to do is make sure that you don't fall into the third queue. I think the important parts of this are:
+If you want to fall into the first queue, you need to complete an Expedite Request. These are actually pretty straightforward, but you need to qualify. You can see an example of our Expedite Request in our [1023 submission][flp-1023], but basically, you need to state specific harm that will occur if your organization doesn't get swift 501(c)(3) processing. There are [guides about this on the IRS website][irs-ex-proc] that we used (successfully, we believe). 
 
-1. Carefully follow [the instructions provided by the IRS for the 1023][irs-instructs]
+Getting faster processing is great but it's not always possible. Failing that, the thing to do is make sure that you don't fall into the third queue. I think the important parts of this are:
+
+1. Carefully follow [the instructions provided by the IRS for the 1023][irs-instructs].
 1. Make sure that your articles of incorporation contain the proper purpose and dissolution clauses (they will if you use the template).
-1. 
+1. Do *not* mention any of [cursed words][bolo] on the IRS's list to "Be On the Look Out" for (So-called BOLO words).
+
+The list is apparently no longer in use due to the scandal it caused, but it's still instructive to know what was on it. For example, in our case "Open Source" was on the list, so despite working in the open (something we believe contributes to our Educational purpose), we had to be very careful never to mention that in our mission or anywhere else.
+
+Once you've got your Expedite Request completed, it's time to work on the 1023 itself. This is a long and arduous process that is too detailed to get into. Be careful, be thorough, follow the guides, and get help from a friend or lawyer. We found it to be incredibly useful to get somebody with experience to carefully look at your paperwork (thanks Carl!).
+
+
+### Other Things We Sent the IRS
+
+In addition to the items mentioned above, we also included printed copies of a partnership agreement we have with Princeton for the hosting of RECAP, a printed selection of press, and printed copies of our homepages (RECAP, CourtListner, Free Law Project).
+ 
+The goal of these enclosures was mostly to keep the IRS reviewer from touching their computer. Like any application, you want to control the information that is provided to the reviewer. Just like you wouldn't want your next boss seeing your Facebook profile, you don't want the IRS reviewer looking up your organization's website. Maybe if you provide your homepage for them they won't bother.   
+
+
+### Remarks on Formatting, Etc.
+
+Sadly, like [filing with the Supreme Court][scotus], completing your 1023 involves a few formatting and clerical details that we must attend to. First you must be sure to put your name and EIN on the top of every page. This is suprisingly difficult since many of the pages are PDFs you don't control, but you can pull it off if you try by feeding your printed documents through the printer twice. The first time, you print the regular stuff, the second time you print a blank page over and over that contains your EIN and organization name in the header. Fun.
+
+The second thing to attend to is the ordering of the documents themselves. This is the order of our 1023, and from what we can tell, you really shouldn't do anything much different:
+ 
+1. 1023 Checklist
+1. Request for Expedited Processing
+1. List of Enclosures
+1. The 1023 itself
+1. Articles of Incorporation
+1. Bylaws
+1. Supplemental answers to 1023 questions
+1. Conflict of Interest and Ethics Policy
+1. Minutes adopting Conflict of Interest and Ethics Policy (remember when we made these?)
+1. A partnership agreement we have with Princeton
+1. Our selection of press coverage
+1. Printed copies of our homepages
+1. IRS Form SS-4 indicating our EIN
+
+In total: 83 pages of delightful paperwork. 
+
+
 
 
 
@@ -164,3 +210,5 @@ Getting faster processing is great, but it's not always possible. Failing that, 
 [yorba]: http://blogs.gnome.org/jnelson/2014/06/30/the-new-501c3-and-the-future-of-free-software-in-the-united-states/
 [flp-1023: XXX
 [irs-ex-proc]: http://www.irs.gov/Charities-&-Non-Profits/Applying-for-Exemption:-Expediting-Application-Processing
+[bolo]: https://en.wikipedia.org/wiki/IRS_targeting_controversy
+[scotus]: http://www.aarongreenspan.com/writing/20130217/petitioning-rube-goldbergs-supreme-court/
