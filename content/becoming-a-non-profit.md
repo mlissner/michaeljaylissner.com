@@ -188,7 +188,7 @@ All in all, that's the basic process of creating a non-profit. We were able to g
  
 In the end I liken the process to an incantation of a magic spell: Done correctly, you wind up with a massive pile of paperwork that magically looks like a bad-ass application for tax-exempt status that washes over the reviewer, convincing him or her that your organization is charitable and deserves to become a 501(c)(3) in a forthright manner. 
   
-Done incorrectly and you may enter a hole of despair, despondency and, um, taxation.
+Done incorrectly, you enter a hole of despair, despondency and, worse, taxation.
   
 
 [^1]: Yes, PDFs are [generally compressed internally][pdf-compress].
@@ -214,7 +214,7 @@ Done incorrectly and you may enter a hole of despair, despondency and, um, taxat
 [irs-instructs]: http://www.irs.gov/instructions/i1023/index.html
 [irs-faq]: http://www.irs.gov/Charities-&-Non-Profits/Frequently-Asked-Questions-about-Form-1023
 [yorba]: http://blogs.gnome.org/jnelson/2014/06/30/the-new-501c3-and-the-future-of-free-software-in-the-united-states/
-[flp-1023: XXX
+[flp-1023]: XXX
 [irs-ex-proc]: http://www.irs.gov/Charities-&-Non-Profits/Applying-for-Exemption:-Expediting-Application-Processing
 [bolo]: https://en.wikipedia.org/wiki/IRS_targeting_controversy
 [scotus]: http://www.aarongreenspan.com/writing/20130217/petitioning-rube-goldbergs-supreme-court/
