@@ -2,7 +2,7 @@ Title: Creating a Non-Profit
 Subtitle: An incantation to make California and the IRS grant your organization tax exempt status 
 Summary: Creating a state and federal non-profit is a real challenge. You've got options how to do it, but this is our story of how we did it.
 Date: 10/14/14
-Tags: IRS, IRS-1023, Non-Profit, CourtListner, Free Law Project, Forms
+Tags: IRS, IRS-1023, Non-Profit, CourtListener, Free Law Project, Forms
 Category: Policy, Law & Politics
 
 [TOC]
@@ -17,6 +17,7 @@ This post is an attempt to document the things that we've done at [Free Law Proj
 Check out [this beauty][status-letter]! We're finally the real deal.
 
 All through the process, I wished there was something that had all the documentation of the process, so this is my attempt at such a post. I'm writing this after the fact, so I expect that I'll munge a few details. If you catch me making a mistake, you can either [edit this page][gh] yourself using [my handy guide][guide], or you can [send me a note][contact] and I'll update it. 
+
 
 ## Before We Begin
 
@@ -36,13 +37,13 @@ Here are the major steps for California and Federal recognition:
 1. Reserve the name of your organization with the Secretary of State
 1. Check for trademarks on your organization name
 1. Get an EIN from the IRS
-1. Get Official with the Secretary of State of California
+1. Get official with the Secretary of State of California
     1. Write Bylaws
     1. Write Articles of Incorporation
     1. Write Conflict of Interest and Ethics Policy
     1. Hold a meeting creating directors (and having them resign as incorporators, if necessary)
     1. Hold a meeting to ratify and adopt everything above
-1. File Statement of Information with Secretary of State (90 days since creation of your EIN)
+1. File Statement of Information with Secretary of State
 1. Register with the California Attorney General's registry of charitable trusts
 1. Get Federal recognition as a 501(c)(3)
     1. IRS-1023
@@ -50,7 +51,7 @@ Here are the major steps for California and Federal recognition:
     1. Your homepage
     1. Articles of Incorporation stamped by the State Secretary
     1. Phone a friend
-1. File California tax exemption forms
+1. File for California tax exemption
 1. Get Municipal recognition
 
 
@@ -70,7 +71,7 @@ If you think the name of your organization might be a trademark, you should chec
 
 This is the official step that's required to incorporate your organization and it's a fairly easy one. Once this is done you'll have an Employer Identification Number (EIN) from the IRS. 
 
-To do this, there is [a multi-step form on the IRS website][EIN-form]. Work your way through it, and if you come out the other side, you'll quickly be the owner of a freshly minted EIN. 
+To do this, there is [a multi-step form on the IRS website][EIN-form]. Work your way through it, and if you come out the other side, you'll quickly be the owner of a freshly minted EIN. [Keep it private, as you would an SSN][ein-privacy].
 
 
 ## Get Official with California
@@ -118,7 +119,7 @@ So, what's this process look like?
  
 Well, there are really only two forms that you need to worry about. The first is the [IRS-1023][irs-1023] and the second is the [checklist for the IRS-1023][irs-checklist]. That should tell you something about the process you're about to engage in: There's a form for the form. Oh, and that's not all: there's a [web form][irs-get-forms-form] for the form for the form. Also, the IRS-1023 is an *interactive* PDF with parts that appear and disappear as you complete it. Also it crashes sometimes (save often!), can only be opened in Adobe Reader and there are three versions of the form and two different revisions. Dizzy yet?
 
-Let's see if I can simplify this at all:
+Let's see if I can simplify this:
 
 1. The IRS-1023 from December 2013 is currently the main form you want  -- it's long and has a lot of questions. It is available in three forms: Interactive (recommended), Regular (no interactive stuff), and Accessible (even less interactive stuff?). You only seem to be able to get this form if you answer [a bunch of questions aimed at prepping you for the process][irs-1023]. Even then it gives you a zip containing the form, sigh.[^1] 
 1. The 1023 checklist *must* be included in your submission as a table of contents of sorts. The [newest one I've found][irs-checklist] is from June 2006.
@@ -186,7 +187,7 @@ In total: 83 pages of delightful paperwork and one check for $850.
 
 If all goes well, you'll soon hear back from the IRS and be granted your Federal recognition as a 501(c)(3). Congratulations on a hard-won victory. 
 
-Now that that's in place, it's time to switch back to California and wrap things up with them. To do this you need to complete form 3500A ([information][the-3500A] / [download][the-3500A-dl]). 
+Now that that's in place, it's time to switch back to California and wrap things up with them. To do this you need to complete form 3500A ([information][the-3500] / [download][the-3500A-dl]). 
 
 Don't try to save this form. You can't:
  
@@ -250,3 +251,4 @@ Done incorrectly, you enter a hole of despair, despondency and, worse, taxation.
 [the-3500]: https://www.ftb.ca.gov/businesses/Exempt_organizations/Applying_for_tax-exemption.shtml
 [the-3500A-dl]: https://www.ftb.ca.gov/forms/misc/3500a.pdf
 [cannot-save]: {filename}/images/cannot-save-pdf.png
+[ein-privacy]: http://www.taxanalysts.com/www/features.nsf/Articles/E76DFBC8665E47B185257B1D006B1656?OpenDocument
