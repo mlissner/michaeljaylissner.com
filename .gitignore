@@ -1,5 +1,6 @@
 .idea
 *.iml
+*.pid
 
 cache
 original_content_from_drupal.csv

@@ -7,9 +7,6 @@ Category: Policy, Law & Politics
 
 [TOC]
 
-XXX What other references to include that we used?  
-XXX Are any steps missing from the process?  
-
 ## The Goal
 
 This post is an attempt to document the things that we've done at [Free Law Project][flp] to get our official Federal and State non-profit status. This has been a grueling process for Brian and me but as we announced on Twitter, we now have it officially in hand, and likely in record time:
@@ -86,6 +83,7 @@ At this point, you've moved past the easy stuff. It's time for the weird and dif
 Writing these three items is a very persnickety part of the process. Each item *must* include certain phrases and failure to include those phrases will sink any attempt to get 501(c)(3) status down the road. The template we used for each of these was created by [Public Counsel][pc] and can be downloaded from their website ([Bylaws][bylaws-template], [Articles of Incorporation][ai-template], [Ethics Policy][coi-template]). 
  
 The best process we discovered for this was to very carefully work our way through each template and to update any section that needed it. The [result][bylaws-and-aoi] clocks in at 25 pages for the Bylaws and Articles of Incorporation and ten pages for the  Conflict of Interest and Ethics Policy.
+
 
 ### Hold Some Meetings 
 
@@ -190,18 +188,23 @@ If all goes well, you'll soon hear back from the IRS and be granted your Federal
 
 Now that that's in place, it's time to switch back to California and wrap things up with them. To do this you need to complete form 3500A ([information][the-3500A] / [download][the-3500A-dl]). 
 
-## Get Municipal Recognition
-
-XXX Brian: is this optional?
+Don't try to save this form. You can't:
  
-The final step of this process, once you've heard back from the IRS and gotten approved (YAY!) is to get in touch with the city where you are incorporated and tell them that you're officially a non-profit according to the IRS and that you exist in their city. Easy-peasy compared to what we've been through.
+![Go F*** Yourself -- You cannot save this file.][cannot-save]
+
+Instead, fill it out, print it, and mail it in along with a copy of your Federal Recognition. If you can print to PDF, that *might* save your work.
+
+
+## Get Municipal Recognition
+ 
+The final step of this process, is to get in touch with the city where you are incorporated and tell them that you're officially a non-profit according to the IRS and that you exist in their city. Easy-peasy compared to what we've been through.
  
  
 ## Wrapping Up
 
-All in all, that's the basic process of creating a non-profit. We were able to get our results back in about 30 days, which feels like something of a miracle, but it took us nearly a year to get all the paperwork completed and submitted. 
+All in all, that's the basic process of creating a non-profit and getting tax exemption from the feds, the state and your city. Most of this went pretty smoothly, but the most difficult part was by far the IRS-1023, and even that we were able to get our results back in about 30 days. This  feels like something of a miracle, but it took us over a year to get all the paperwork completed and submitted. 
  
-In the end I liken the process to an incantation of a magic spell: Done correctly, you wind up with a massive pile of paperwork that magically looks like a bad-ass application for tax-exempt status that washes over the reviewer, convincing him or her that your organization is charitable and deserves to become a 501(c)(3) in a forthright manner. 
+In the end I liken the process to an incantation of a magic spell: Done correctly, you wind up with a massive pile of paperwork that magically looks like a bad-ass application for tax-exempt status that washes over anybody that looks at it, convincing him or her that your organization is charitable and deserves tax exemption in a forthright manner. 
   
 Done incorrectly, you enter a hole of despair, despondency and, worse, taxation.
   
@@ -246,3 +249,4 @@ Done incorrectly, you enter a hole of despair, despondency and, worse, taxation.
 [oag-form]: http://oag.ca.gov/sites/all/files/agweb/pdfs/charities/charitable/ct1-form.pdf
 [the-3500]: https://www.ftb.ca.gov/businesses/Exempt_organizations/Applying_for_tax-exemption.shtml
 [the-3500A-dl]: https://www.ftb.ca.gov/forms/misc/3500a.pdf
+[cannot-save]: {filename}/images/cannot-save-pdf.png
