@@ -197,10 +197,18 @@ Instead, fill it out, print it, and mail it in along with a copy of your Federal
 
 
 ## Get Municipal Recognition
+
+The final step of this process for us, though it might come much earlier
+for you, was to get in touch with the city where we incorporated and to
+tell them that we exist. We tried to do this early on and had the city
+staff member in charge of business licenses tell us to come back once we
+had 501(c)(3) recognition. In the city we selected non-profits are
+exempt from city business license fees, so that may be why they were so
+lax about the timing of this paperwork. You may find in your city that
+they want you to have a business license and pay related fees while
+you're waiting on 501(c)(3) status (and sometimes even after).
  
-The final step of this process, is to get in touch with the city where you are incorporated and tell them that you're officially a non-profit according to the IRS and that you exist in their city. Easy-peasy compared to what we've been through.
- 
- 
+
 ## Wrapping Up
 
 All in all, that's the basic process of creating a non-profit and getting tax exemption from the feds, the state and your city. Most of this went pretty smoothly, but the most difficult part was by far the IRS-1023, and even that we were able to get our results back in about 30 days. This  feels like something of a miracle, but it took us over a year to get all the paperwork completed and submitted. 
