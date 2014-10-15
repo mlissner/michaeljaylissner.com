@@ -1,5 +1,5 @@
 Title: Creating a Non-Profit
-Subtitle: An incantation to make the IRS embrace you in their loving arms 
+Subtitle: An incantation to make California and the IRS grant your organization tax exempt status 
 Summary: Creating a state and federal non-profit is a real challenge. You've got options how to do it, but this is our story of how we did it.
 Date: 10/14/14
 Tags: IRS, IRS-1023, Non-Profit, CourtListner, Free Law Project, Forms
