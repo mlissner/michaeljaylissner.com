@@ -88,10 +88,13 @@ STATIC_PATHS = [
     'archive',
     'pdfs',
     'extra/CNAME',
+    'blog',
     'scripts',
 ]
-ARTICLE_EXCLUDES = ['archive', 'pdfs', 'scripts']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
+ARTICLE_EXCLUDES = ['archive', 'pdfs', 'scripts', 'blog']
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+}
 USE_SHORTCUT_ICONS = True
 TAG_SAVE_AS = ''
 CATEGORY_SAVE_AS = ''
