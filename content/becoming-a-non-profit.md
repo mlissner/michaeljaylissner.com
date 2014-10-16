@@ -182,6 +182,8 @@ The second thing to attend to is the ordering of the documents themselves. This 
 
 In total: 83 pages of delightful paperwork and one check for $850.
 
+![Total weight: 3/4 lbs.][beefy]
+
 
 ## File California Tax Exemption Forms
 
@@ -258,5 +260,6 @@ Done incorrectly, you enter a hole of despair, despondency and, worse, taxation.
 [oag-form]: http://oag.ca.gov/sites/all/files/agweb/pdfs/charities/charitable/ct1-form.pdf
 [the-3500]: https://www.ftb.ca.gov/businesses/Exempt_organizations/Applying_for_tax-exemption.shtml
 [the-3500A-dl]: https://www.ftb.ca.gov/forms/misc/3500a.pdf
-[cannot-save]: {filename}/images/cannot-save-pdf.png
+[cannot-save]: {filename}/images/forming-a-non-profit/cannot-save-pdf.png
+[beefy]: {filename}/images/forming-a-non-profit/three-quarter-pounder.jpeg
 [ein-privacy]: http://www.taxanalysts.com/www/features.nsf/Articles/E76DFBC8665E47B185257B1D006B1656?OpenDocument
