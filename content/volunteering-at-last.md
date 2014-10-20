@@ -1,7 +1,7 @@
 Title: Volunteering At Last!
 Subtitle: Linux for the masses?
 Date: 2008-01-13T21:17:09
-Tags: Linux, computer, nonprofit, recycling
+Tags: Linux, Computer, Non-Profit, Recycling
 Category: Personal
 
 For the last couple of years I've kinda, sorta been hunting on and off for 
