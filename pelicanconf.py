@@ -167,3 +167,5 @@ PROJECTS = [
                        'temperature recordings along the PCT.'
     },
 ]
+
+GOOGLE_ANALYTICS = 'UA-55828430-1'
