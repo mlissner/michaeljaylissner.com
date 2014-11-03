@@ -15,7 +15,7 @@
 <meta name="keywords" content="Celery, Python, Rant, Tech, " />
 
 <meta property="og:title" content="Some Thoughts on Celery  - A love-hate relationship "/>
-<meta property="og:url" content="http://michaeljaylissner.com/drafts/some-thoughts-on-celery.html" />
+<meta property="og:url" content="http://michaeljaylissner.com/posts/2014/11/01/some-thoughts-on-celery/" />
 <meta property="og:description" content="Celery drives me nuts. Celery allows background tasks. I hate Celery. I love Celery." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
 <meta property="og:article:author" content="Mike Lissner" />
@@ -86,93 +86,117 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/drafts/some-thoughts-on-celery.html"> Some Thoughts on&nbsp;Celery  <small> A love-hate relationship </small>  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/posts/2014/11/01/some-thoughts-on-celery/"> Some Thoughts on&nbsp;Celery  <small> A love-hate relationship </small>  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
-        <div class="span8 offset2 article-content">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#why">Why?</a></li>
+<li><a href="#what-the-hell">What the Hell?</a></li>
+<li><a href="#seeking-sanity">Seeking Sanity</a></li>
+<li><a href="#moving-forward">Moving Forward</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
 
             
-            <p>We finally upgraded <a href="https://www.courtlistener.com">CourtListener</a> last week and things went pretty well with the exception of two issues. First, we had some extended downtime as we waited for the database migration to complete. In retrospect, I should have realized that updating every item one row at a time would take a while. My&nbsp;bad. </p>
-<p>Second, <a href="http://www.celeryproject.org/">Celery</a> broke again and that took me the better part of a day to detect and fix. As a central part of our infrastructure, this is really, <em>truly</em> frustrating. The remainder of this post goes into what happened, why it happened and how I finally managed to fix&nbsp;it. </p>
+            
+<p>We finally upgraded <a href="https://www.courtlistener.com">CourtListener</a> last week and things went pretty well with the exception of two issues. First, we had some extended downtime as we waited for the database migration to complete. In retrospect, I should have realized that updating every item one row at a time would take a while. My bad. </p>
+<p>Second, <a href="http://www.celeryproject.org/">Celery</a> broke again and that took me the better part of a day to detect and fix. As a central part of our infrastructure, this is really, <em>truly</em> frustrating. The remainder of this post goes into what happened, why it happened and how I finally managed to fix it. </p>
 <h2 id="why">Why?</h2>
-<p>First, why did this happen? Well&#8230;because I decided to log something. I created a task that processes <a href="http://freelawproject.org/2014/10/31/announcing-oral-arguments-on-courtlistener-2/">our new audio files</a> and I thought, &#8220;Hey, these should really log to the Juriscraper log rather than the usual celery log.&#8221; So, I added two lines to the file: One importing the log file and the second writing a log message. <em>This</em> is the little change that brought Celery to a grinding&nbsp;halt. </p>
-<h2 id="what-the-hell">What the&nbsp;Hell?</h2>
-<p>If you&#8217;re wondering why logging would break an entire system, well, the answer is because Celery runs as a different user than everything else. In our case, as the <code>celery</code> user &#8212; a user that didn&#8217;t have permission to the log file I requested.&nbsp;Ugh. </p>
-<p>Fine, that&#8217;s not so bad, but there were a number of other frustrating things that made this much&nbsp;worse:</p>
+<p>First, why did this happen? Well…because I decided to log something. I created a task that processes <a href="http://freelawproject.org/2014/10/31/announcing-oral-arguments-on-courtlistener-2/">our new audio files</a> and I thought, “Hey, these should really log to the Juriscraper log rather than the usual celery log.” So, I added two lines to the file: One importing the log file and the second writing a log message. <em>This</em> is the little change that brought Celery to a grinding halt. </p>
+<h2 id="what-the-hell">What the Hell?</h2>
+<p>If you’re wondering why logging would break an entire system, well, the answer is because Celery runs as a different user than everything else. In our case, as the <code>celery</code> user — a user that didn’t have permission to the log file I requested. Ugh. </p>
+<p>Fine, that’s not so bad, but there were a number of other frustrating things that made this much worse:</p>
 <ol>
 <li>
-<p>The Celery init script that we use was reporting the&nbsp;following:</p>
+<p>The Celery init script that we use was reporting the following:</p>
 <div class="highlight"><pre><span class="err">↪</span> <span class="n">sudo</span> <span class="n">service</span> <span class="n">celeryd</span> <span class="n">start</span>
 <span class="n">celeryd</span><span class="o">-</span><span class="n">multi</span> <span class="n">v3</span><span class="mf">.0.13</span> <span class="p">(</span><span class="n">Chiastic</span> <span class="n">Slide</span><span class="p">)</span>
 <span class="o">&gt;</span> <span class="n">Starting</span> <span class="n">nodes</span><span class="p">...</span>
     <span class="o">&gt;</span> <span class="n">w1</span><span class="p">.</span><span class="n">courtlistener</span><span class="p">.</span><span class="n">com</span><span class="o">:</span> <span class="n">OK</span>
 </pre></div>
-
-
-<p>But no, it was not starting &#8220;<span class="caps">OK</span>&#8221;. It was immediately&nbsp;crashing.</p>
+<p>But no, it was not starting “<span class="caps">OK</span>”. It was immediately crashing.</p>
 </li>
 <li>
-<p>No log messages&#8230;<em>anywhere</em>. this must have something to do with daemonizing things, but no matter what I did I couldn&#8217;t find any log messages&nbsp;anywhere.</p>
+<p>No log messages…<em>anywhere</em>. This appears to be because you have to detach <code>stdin</code> and <code>stdout</code> before daemonizing and according to asksol on <span class="caps">IRC</span>, this has been fixed in recent versions of Celery so even daemonizing errors can go to the Celery logs. Progress!</p>
 </li>
 <li>
-<p>The collection of things that happens when <code>celery</code> starts is&nbsp;complicated:</p>
+<p>The collection of things that happens when <code>celery</code> starts is complicated:</p>
 <ol>
-<li>I call <code>sudo service celeryd start</code></li>
-<li><code>service</code> calls <code>/etc/init.d/celeryd</code></li>
-<li><code>celeryd</code> does some stuff and calls <code>celery.sh</code> (another file altogether), where my settings&nbsp;are.</li>
-<li>Control is returned to <code>celery</code>, which starts celery itself with a command generated from <code>celery.sh</code>.</li>
+<li>
+<p>I call <code>sudo service celeryd start</code></p>
+</li>
+<li>
+<p><code>service</code> calls <code>/etc/init.d/celeryd</code></p>
+</li>
+<li>
+<p><code>celeryd</code> does some stuff and calls <code>celery.sh</code> (another file altogether), where our settings are.</p>
+<p><strong>Update</strong>: Apparently this is a CourtListener-specific customization, so this step probably won’t apply to you, but I have no idea where this wacky set up came from (it’s been in place for years).</p>
+</li>
+<li>
+<p>Control is returned to <code>celery</code>, which starts celery itself with a command generated from <code>celery.sh</code>.</p>
+</li>
 </ol>
-<p>On top of this, there&#8217;s a <code>celery</code> binary and a celery <a href="https://docs.djangoproject.com/en/dev/howto/custom-management-commands/">management command</a> for Django. <code>celery --help</code> prints out 68 lines of documentation. Not too bad, but many of those lines refer you to other areas of the documentation. For example, <code>celery worker --help</code> prints another 100 lines of help text. <em>Jesus</em> this thing is&nbsp;complicated. </p>
+<p>On top of this, there’s a <code>celery</code> binary and there’s a celery <a href="https://docs.djangoproject.com/en/dev/howto/custom-management-commands/">management command</a> for Django. (<strong>Update</strong> the Django commands were removed in Celery 3.1. More progress!) <code>celery --help</code> prints out 68 lines of documentation. Not too bad, but many of those lines refer you to other areas of the documentation. For example, <code>celery worker --help</code> prints another 100 lines of help text. <em>Jesus</em> this thing is complicated. </p>
 <p>Did I mention it has <a href="http://seeknuance.com/2012/07/30/celery-api-changes-drive-me-nuts/">changing APIs</a>?</p>
 </li>
 </ol>
-<p>I digress a bit, but the point here is that it fails silently, there are no log messages when it fails, and there&#8217;s no way to know which part of a complicated infrastructure is the problem. End rant.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></p>
-<h2 id="seeking-sanity">Seeking&nbsp;Sanity</h2>
-<p>It took me a long time to figure out what was going wrong, but I did eventually figure it out. The process, in case you run into something similar, is to modify <code>celeryd</code> so it prints out the command that it eventually runs. At that point you&#8217;ll have the correct command. With that, you can run it as the <code>celery</code> user and with some luck you&#8217;ll see what the problem is. There&#8217;s <a href="http://stackoverflow.com/a/21883578/64911">a modified init script for this purpose, if you like</a>.</p>
-<p>Other&nbsp;tips:</p>
+<p>I digress a bit, but the point here is that it fails silently, there are no log messages when it fails, and there’s no way to know which part of a complicated infrastructure is the problem. End rant.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></p>
+<h2 id="seeking-sanity">Seeking Sanity</h2>
+<p>It took me a long time to figure out what was going wrong, but I did eventually figure it out. The process, in case you run into something similar, is to modify <code>celeryd</code> so it prints out the command that it eventually runs. At that point you’ll have the correct command. With that, you can run it as the <code>celery</code> user and with some luck you’ll see what the problem is. There’s <a href="http://stackoverflow.com/a/21883578/64911">a modified init script for this purpose, if you like</a>.</p>
+<p>Other tips:</p>
 <ol>
 <li>
-<p>If you have a new enough version of Celery, there are <a href="http://celery.readthedocs.org/en/latest/tutorials/daemonizing.html#troubleshooting">some troubleshooting tips</a> that should help. They did nothing for me, because I haven&#8217;t upgraded yet for fear of the changing&nbsp;APIs.</p>
+<p>If you have a new enough version of Celery, there are <a href="http://celery.readthedocs.org/en/latest/tutorials/daemonizing.html#troubleshooting">some troubleshooting tips</a> that should help. They did nothing for me, because I haven’t upgraded yet for fear of the changing APIs.</p>
 </li>
 <li>
-<p>There seem to be a handful of different command line flags that Celery can use to be sent to the background. You&#8217;ll need to disable these when you&#8217;re testing or else you won&#8217;t see error messages or anything&nbsp;(apparently?).</p>
+<p>There seem to be a handful of different command line flags that Celery can use to be sent to the background. You’ll need to disable these when you’re testing or else you won’t see error messages or anything (apparently?).</p>
 </li>
 </ol>
-<h2 id="moving-forward">Moving&nbsp;Forward</h2>
-<p>So, I feel bad: I&#8217;ve ranted a good deal about Celery, but I haven&#8217;t proposed any solutions. This isn&#8217;t the first time I&#8217;ve spent a long time trying to make Celery work, so what would it take to make Celery a less complicated, more reliable&nbsp;tool? </p>
-<p>The ideas I&#8217;ve come up with so far&nbsp;are: </p>
+<h2 id="moving-forward">Moving Forward</h2>
+<p>So, I feel bad: I’ve ranted a good deal about Celery, but I haven’t proposed any solutions. It looks like a lot of things have been improved in recent versions of Celery, so part of the solution is likely for us to upgrade. </p>
+<p>But this isn’t the first time I’ve spent a long time trying to make Celery work, so what other ideas it take to make Celery a less complicated, more reliable tool? </p>
+<p>The ideas I’ve come up with so far are: </p>
 <ul>
 <li>More documentation for installation and set up troubleshooting with the possibility of a wiki.<ul>
-<li>But already I rant about how much documentation it&nbsp;has.</li>
+<li>But already I rant about how much documentation it has.</li>
 </ul>
 </li>
 <li>A simpler interface that eliminates a number of edge uses.<ul>
-<li>But I have no idea what, if anything, can be&nbsp;eliminated. </li>
+<li>But I have no idea what, if anything, can be eliminated. </li>
 </ul>
 </li>
 <li>Support for fewer task brokers.<ul>
-<li>But I use RabbitMQ and am considering switching to&nbsp;Redis.</li>
+<li>But I use RabbitMQ and am considering switching to Redis.</li>
 </ul>
 </li>
 <li>A more verbose, more thorough debug mode.<ul>
-<li>But apparently this is already in place in the latest&nbsp;versions?</li>
+<li>But apparently this is already in place in the latest versions?</li>
 </ul>
 </li>
-<li>Let Celery run as the <code>www-data</code> user?<ul>
-<li>But apparently that&#8217;s a bad&nbsp;idea.</li>
+<li>Let Celery run as the <code>www-data</code> user as a general practice?<ul>
+<li>
+<p>But apparently that’s a bad idea. </p>
+<p><strong>Update</strong> this is a bad idea in general, but it’s not <em>particularly</em> bad if you don’t expose Celery on the network. If you’re only running it locally, you can probablly get by with Celery as a <code>www-data</code> user or similar. </p>
+</li>
 </ul>
 </li>
 </ul>
-<p>As you can tell, I don&#8217;t feel strongly that any of these are the right solution. I am convinced though that Celery has a bad smell and that it&#8217;s ripe for a leaner solution to fill some of its simpler use cases. I&#8217;m currently considering switching to a simpler task queue, but I don&#8217;t know that I&#8217;ll do it since Celery is the de-facto one for Django&nbsp;projects.</p>
-<p>We deserve a good, simple, reliable task queue though, and I wonder if there are good ideas for what could be changed in Celery to make that&nbsp;possible. </p>
-<p>I, for one, would love to never spend another minute trying to make RabbitMQ and Celery play nicely&nbsp;together. </p>
+<p>As you can tell, I don’t feel strongly that any of these are the right solution. I am convinced though that Celery has a bad smell and that it’s ripe for a leaner solution to fill some of its simpler use cases. I’m currently considering switching to a simpler task queue, but I don’t know that I’ll do it since Celery is the de-facto one for Django projects.</p>
+<p>We deserve a good, simple, reliable task queue though, and I wonder if there are good ideas for what could be changed in Celery to make that possible. I, for one, would love to never spend another minute trying to make RabbitMQ, Celery and my code play nicely together. </p>
 <div class="footnote">
-<hr />
+<hr/>
 <ol>
 <li id="fn:1">
-<p>In truth Celery is a classic love/hate relationship. On the one hand, it evokes posts like this one, but on the other, it allows me to send tasks to a background queue and distribute loads among many servers. Hell, it&#8217;s good enough for Instagram. On the other hand, god damn it, when it fails I go nuts.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>In truth Celery is a classic love/hate relationship. On the one hand, it evokes posts like this one, but on the other, it allows me to send tasks to a background queue and distribute loads among many servers. Hell, it’s good enough for Instagram. On the other hand, god damn it, when it fails I go nuts. <a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 </ol>
 </div>
@@ -183,7 +207,7 @@
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://michaeljaylissner.com/drafts/some-thoughts-on-celery.html#disqus_thread">
+                href="http://michaeljaylissner.com/posts/2014/11/01/some-thoughts-on-celery/#disqus_thread">
                 Comments
             </a>
         </div>
@@ -193,8 +217,8 @@
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'michaeljaylissner';
-        var disqus_identifier = 'http://michaeljaylissner.com/drafts/some-thoughts-on-celery.html';
-    var disqus_url = 'http://michaeljaylissner.com/drafts/some-thoughts-on-celery.html';
+        var disqus_identifier = 'http://michaeljaylissner.com/posts/2014/11/01/some-thoughts-on-celery/';
+    var disqus_url = 'http://michaeljaylissner.com/posts/2014/11/01/some-thoughts-on-celery/';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -213,6 +237,13 @@
 </section>
 
             <hr/>
+            <aside>
+            <nav>
+            <ul class="articles-timeline">
+                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2014/10/14/becoming-a-non-profit/" title="Previous: Creating a Non-Profit - An incantation to make California and the IRS grant your organization tax exempt status">Creating a Non-Profit <small>An incantation to make California and the IRS grant your organization tax exempt status</small></a></li>
+            </ul>
+            </nav>
+            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
@@ -223,12 +254,13 @@
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://michaeljaylissner.com/tags.html#celery-ref">Celery
+                    <span>1</span>
 </a></li>
                 <li><a href="http://michaeljaylissner.com/tags.html#python-ref">Python
-                    <span>8</span>
+                    <span>9</span>
 </a></li>
                 <li><a href="http://michaeljaylissner.com/tags.html#rant-ref">Rant
-                    <span>5</span>
+                    <span>6</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
