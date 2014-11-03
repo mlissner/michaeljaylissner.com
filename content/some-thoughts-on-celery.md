@@ -61,13 +61,13 @@ Other tips:
 
 ## Moving Forward
 
-So, I feel bad: I've ranted a good deal about Celery, but I haven't proposed any solutions. What would it take to make Celery a less complicated, more reliable tool? 
+So, I feel bad: I've ranted a good deal about Celery, but I haven't proposed any solutions. This isn't the first time I've spent a long time trying to make Celery work, so what would it take to make Celery a less complicated, more reliable tool? 
 
 The ideas I've come up with so far are: 
 
  - More documentation for installation and set up troubleshooting with the possibility of a wiki.
     - But already I rant about how much documentation it has.
- - A simpler interface that eliminates a number of edge usages.
+ - A simpler interface that eliminates a number of edge uses.
     - But I have no idea what, if anything, can be eliminated. 
  - Support for fewer task brokers.
     - But I use RabbitMQ and am considering switching to Redis.
@@ -76,9 +76,11 @@ The ideas I've come up with so far are:
  - Let Celery run as the `www-data` user?
     - But apparently that's a bad idea.
    
-As you can tell, I don't feel strongly that any of these are the right solution. I am convinced though that Celery has a bad smell and that it's ripe for a leaner solution to fill some of its use cases. I'm currently considering switching to a simpler task queue, but I don't know that I'll do it since Celery is the de-facto one for Django projects.
+As you can tell, I don't feel strongly that any of these are the right solution. I am convinced though that Celery has a bad smell and that it's ripe for a leaner solution to fill some of its simpler use cases. I'm currently considering switching to a simpler task queue, but I don't know that I'll do it since Celery is the de-facto one for Django projects.
 
-We deserve a good, simple, reliable task queue though, and I wonder if there are good ideas for what could be changed in Celery to make that possible.  
+We deserve a good, simple, reliable task queue though, and I wonder if there are good ideas for what could be changed in Celery to make that possible. 
+
+I, for one, would love to never spend another minute trying to make RabbitMQ and Celery play nicely together. 
 
 
 [^1]: In truth Celery is a classic love/hate relationship. On the one hand, it evokes posts like this one, but on the other, it allows me to send tasks to a background queue and distribute loads among many servers. Hell, it's good enough for Instagram. On the other hand, god damn it, when it fails I go nuts.
