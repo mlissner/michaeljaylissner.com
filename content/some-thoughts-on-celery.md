@@ -4,8 +4,8 @@ Summary: Celery drives me nuts. Celery allows background tasks. I hate Celery. I
 Date: 11/1/2014
 Tags: Celery, Python, Rant 
 Category: Tech
-Status: Draft
 
+[TOC]
 
 We finally upgraded [CourtListener][cl] last week and things went pretty well with the exception of two issues. First, we had some extended downtime as we waited for the database migration to complete. In retrospect, I should have realized that updating every item one row at a time would take a while. My bad. 
 
