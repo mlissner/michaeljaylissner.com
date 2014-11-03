@@ -12,20 +12,20 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="Linux, Computer, Non-Profit, Recycling, Personal, " />
+<meta name="keywords" content="Celery, Python, Rant, Tech, " />
 
-<meta property="og:title" content="Volunteering At Last!  - Linux for the masses? "/>
-<meta property="og:url" content="http://michaeljaylissner.com/posts/2008/01/13/volunteering-at-last/" />
-<meta property="og:description" content="For the last couple of years I’ve kinda, sorta been hunting on and off for a place where I could volunteer some of my free time. I started at the nearby university, thinking that I might be able to convince some kind professor to teach me some things. When ..." />
+<meta property="og:title" content="Some Thoughts on Celery  - A love-hate relationship "/>
+<meta property="og:url" content="http://michaeljaylissner.com/drafts/some-thoughts-on-celery.html" />
+<meta property="og:description" content="Celery drives me nuts. Celery allows background tasks. I hate Celery. I love Celery." />
 <meta property="og:site_name" content="Michael Jay Lissner" />
 <meta property="og:article:author" content="Mike Lissner" />
-<meta property="og:article:published_time" content="2008-01-13T21:17:09" />
-<meta name="twitter:title" content="Volunteering At Last!  - Linux for the masses? ">
-<meta name="twitter:description" content="For the last couple of years I’ve kinda, sorta been hunting on and off for a place where I could volunteer some of my free time. I started at the nearby university, thinking that I might be able to convince some kind professor to teach me some things. When ...">
+<meta property="og:article:published_time" content="2014-11-01T00:00:00" />
+<meta name="twitter:title" content="Some Thoughts on Celery  - A love-hate relationship ">
+<meta name="twitter:description" content="Celery drives me nuts. Celery allows background tasks. I hate Celery. I love Celery.">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
 <meta name="twitter:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" >
 
-        <title>Volunteering At Last!  - Linux for the masses?  · Michael Jay Lissner
+        <title>Some Thoughts on Celery  - A love-hate relationship  · Michael Jay Lissner
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -86,7 +86,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://michaeljaylissner.com/posts/2008/01/13/volunteering-at-last/"> Volunteering At&nbsp;Last!  <small> Linux for the masses? </small>  </a></h1>
+    <h1><a href="http://michaeljaylissner.com/drafts/some-thoughts-on-celery.html"> Some Thoughts on&nbsp;Celery  <small> A love-hate relationship </small>  </a></h1>
     </header>
 </div>
 
@@ -94,21 +94,87 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>For the last couple of years I&#8217;ve kinda, sorta been hunting on and off for 
-a place where I could volunteer some of my free time. I started at the 
-nearby university, thinking that I might be able to convince some kind 
-professor to teach me some things. When that failed, 
-I tried searching google for nonprofits that looked interesting. Failing 
-that, I went on a limb, and asked a professor of mine if he had any ideas 
-(he did, but they fell&nbsp;through). </p>
-<p>Finally, after all this time, one fell in my lap.  Last week, 
-I was looking for a place where I could donate my <a href="http://michaeljaylissner.com/posts/2007/10/23/new-computer-and-give-away-pile/">old computer 
-hardware</a>, and I discovered the <a href="http://www.accrc.org/">Alameda County Computer Recycling 
-Center</a>. It looks pretty darned cool. I will spend my time putting 
-together old computers into useful devices, and then installing Ubuntu or 
-Suse. In exchange, they will give computers (for free) to needy&nbsp;parties. </p>
-<p>It&#8217;s not helping the homeless, but it should be educational for me and, 
-ultimately for them. Plus, it will help to keep e-waste out of&nbsp;landfills.</p>
+            <p>We finally upgraded <a href="https://www.courtlistener.com">CourtListener</a> last week and things went pretty well with the exception of two issues. First, we had some extended downtime as we waited for the database migration to complete. In retrospect, I should have realized that updating every item one row at a time would take a while. My&nbsp;bad. </p>
+<p>Second, <a href="http://www.celeryproject.org/">Celery</a> broke again and that took me the better part of a day to detect and fix. As a central part of our infrastructure, this is really, <em>truly</em> frustrating. The remainder of this post goes into what happened, why it happened and how I finally managed to fix&nbsp;it. </p>
+<h2 id="why">Why?</h2>
+<p>First, why did this happen? Well&#8230;because I decided to log something. I created a task that processes <a href="http://freelawproject.org/2014/10/31/announcing-oral-arguments-on-courtlistener-2/">our new audio files</a> and I thought, &#8220;Hey, these should really log to the Juriscraper log rather than the usual celery log.&#8221; So, I added two lines to the file: One importing the log file and the second writing a log message. <em>This</em> is the little change that brought Celery to a grinding&nbsp;halt. </p>
+<h2 id="what-the-hell">What the&nbsp;Hell?</h2>
+<p>If you&#8217;re wondering why logging would break an entire system, well, the answer is because Celery runs as a different user than everything else. In our case, as the <code>celery</code> user &#8212; a user that didn&#8217;t have permission to the log file I requested.&nbsp;Ugh. </p>
+<p>Fine, that&#8217;s not so bad, but there were a number of other frustrating things that made this much&nbsp;worse:</p>
+<ol>
+<li>
+<p>The Celery init script that we use was reporting the&nbsp;following:</p>
+<div class="highlight"><pre><span class="err">↪</span> <span class="n">sudo</span> <span class="n">service</span> <span class="n">celeryd</span> <span class="n">start</span>
+<span class="n">celeryd</span><span class="o">-</span><span class="n">multi</span> <span class="n">v3</span><span class="mf">.0.13</span> <span class="p">(</span><span class="n">Chiastic</span> <span class="n">Slide</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">Starting</span> <span class="n">nodes</span><span class="p">...</span>
+    <span class="o">&gt;</span> <span class="n">w1</span><span class="p">.</span><span class="n">courtlistener</span><span class="p">.</span><span class="n">com</span><span class="o">:</span> <span class="n">OK</span>
+</pre></div>
+
+
+<p>But no, it was not starting &#8220;<span class="caps">OK</span>&#8221;. It was immediately&nbsp;crashing.</p>
+</li>
+<li>
+<p>No log messages&#8230;<em>anywhere</em>. this must have something to do with daemonizing things, but no matter what I did I couldn&#8217;t find any log messages&nbsp;anywhere.</p>
+</li>
+<li>
+<p>The collection of things that happens when <code>celery</code> starts is&nbsp;complicated:</p>
+<ol>
+<li>I call <code>sudo service celeryd start</code></li>
+<li><code>service</code> calls <code>/etc/init.d/celeryd</code></li>
+<li><code>celeryd</code> does some stuff and calls <code>celery.sh</code> (another file altogether), where my settings&nbsp;are.</li>
+<li>Control is returned to <code>celery</code>, which starts celery itself with a command generated from <code>celery.sh</code>.</li>
+</ol>
+<p>On top of this, there&#8217;s a <code>celery</code> binary and a celery <a href="https://docs.djangoproject.com/en/dev/howto/custom-management-commands/">management command</a> for Django. <code>celery --help</code> prints out 68 lines of documentation. Not too bad, but many of those lines refer you to other areas of the documentation. For example, <code>celery worker --help</code> prints another 100 lines of help text. <em>Jesus</em> this thing is&nbsp;complicated. </p>
+<p>Did I mention it has <a href="http://seeknuance.com/2012/07/30/celery-api-changes-drive-me-nuts/">changing APIs</a>?</p>
+</li>
+</ol>
+<p>I digress a bit, but the point here is that it fails silently, there are no log messages when it fails, and there&#8217;s no way to know which part of a complicated infrastructure is the problem. End rant.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup></p>
+<h2 id="seeking-sanity">Seeking&nbsp;Sanity</h2>
+<p>It took me a long time to figure out what was going wrong, but I did eventually figure it out. The process, in case you run into something similar, is to modify <code>celeryd</code> so it prints out the command that it eventually runs. At that point you&#8217;ll have the correct command. With that, you can run it as the <code>celery</code> user and with some luck you&#8217;ll see what the problem is. There&#8217;s <a href="http://stackoverflow.com/a/21883578/64911">a modified init script for this purpose, if you like</a>.</p>
+<p>Other&nbsp;tips:</p>
+<ol>
+<li>
+<p>If you have a new enough version of Celery, there are <a href="http://celery.readthedocs.org/en/latest/tutorials/daemonizing.html#troubleshooting">some troubleshooting tips</a> that should help. They did nothing for me, because I haven&#8217;t upgraded yet for fear of the changing&nbsp;APIs.</p>
+</li>
+<li>
+<p>There seem to be a handful of different command line flags that Celery can use to be sent to the background. You&#8217;ll need to disable these when you&#8217;re testing or else you won&#8217;t see error messages or anything&nbsp;(apparently?).</p>
+</li>
+</ol>
+<h2 id="moving-forward">Moving&nbsp;Forward</h2>
+<p>So, I feel bad: I&#8217;ve ranted a good deal about Celery, but I haven&#8217;t proposed any solutions. What would it take to make Celery a less complicated, more reliable&nbsp;tool? </p>
+<p>The ideas I&#8217;ve come up with so far&nbsp;are: </p>
+<ul>
+<li>More documentation for installation and set up troubleshooting with the possibility of a wiki.<ul>
+<li>But already I rant about how much documentation it&nbsp;has.</li>
+</ul>
+</li>
+<li>A simpler interface that eliminates a number of edge usages.<ul>
+<li>But I have no idea what, if anything, can be&nbsp;eliminated. </li>
+</ul>
+</li>
+<li>Support for fewer task brokers.<ul>
+<li>But I use RabbitMQ and am considering switching to&nbsp;Redis.</li>
+</ul>
+</li>
+<li>A more verbose, more thorough debug mode.<ul>
+<li>But apparently this is already in place in the latest&nbsp;versions?</li>
+</ul>
+</li>
+<li>Let Celery run as the <code>www-data</code> user?<ul>
+<li>But apparently that&#8217;s a bad&nbsp;idea.</li>
+</ul>
+</li>
+</ul>
+<p>As you can tell, I don&#8217;t feel strongly that any of these are the right solution. I am convinced though that Celery has a bad smell and that it&#8217;s ripe for a leaner solution to fill some of its use cases. I&#8217;m currently considering switching to a simpler task queue, but I don&#8217;t know that I&#8217;ll do it since Celery is the de-facto one for Django&nbsp;projects.</p>
+<p>We deserve a good, simple, reliable task queue though, and I wonder if there are good ideas for what could be changed in Celery to make that&nbsp;possible.  </p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>In truth Celery is a classic love/hate relationship. On the one hand, it evokes posts like this one, but on the other, it allows me to send tasks to a background queue and distribute loads among many servers. Hell, it&#8217;s good enough for Instagram. On the other hand, god damn it, when it fails I go nuts.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
             
             <section>
 <p id="comment-message">I love getting feedback and comments. Make my day by making a comment. </p>
@@ -116,7 +182,7 @@ ultimately for them. Plus, it will help to keep e-waste out of&nbsp;landfills.</
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://michaeljaylissner.com/posts/2008/01/13/volunteering-at-last/#disqus_thread">
+                href="http://michaeljaylissner.com/drafts/some-thoughts-on-celery.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -126,8 +192,8 @@ ultimately for them. Plus, it will help to keep e-waste out of&nbsp;landfills.</
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'michaeljaylissner';
-        var disqus_identifier = 'http://michaeljaylissner.com/posts/2008/01/13/volunteering-at-last/';
-    var disqus_url = 'http://michaeljaylissner.com/posts/2008/01/13/volunteering-at-last/';
+        var disqus_identifier = 'http://michaeljaylissner.com/drafts/some-thoughts-on-celery.html';
+    var disqus_url = 'http://michaeljaylissner.com/drafts/some-thoughts-on-celery.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -146,34 +212,22 @@ ultimately for them. Plus, it will help to keep e-waste out of&nbsp;landfills.</
 </section>
 
             <hr/>
-            <aside>
-            <nav>
-            <ul class="articles-timeline">
-                <li class="previous-article">« <a href="http://michaeljaylissner.com/posts/2008/01/13/taxonomy-features-are-go/" title="Previous: Taxonomy Features Are Go">Taxonomy Features Are Go</a></li>
-                <li class="next-article"><a href="http://michaeljaylissner.com/posts/2008/01/15/seach-concept/" title="Next: Search Concept">Search Concept</a> »</li>
-            </ul>
-            </nav>
-            </aside>
         </div>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2008-01-13T21:17:09">Jan 13, 2008</time>
+            <time pubdate="pubdate" datetime="2014-11-01T00:00:00">Nov 1, 2014</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://michaeljaylissner.com/categories.html#personal-ref">Personal</a>
+            <a class="category-link" href="http://michaeljaylissner.com/categories.html#tech-ref">Tech</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://michaeljaylissner.com/tags.html#computer-ref">Computer
-                    <span>4</span>
+                <li><a href="http://michaeljaylissner.com/tags.html#celery-ref">Celery
 </a></li>
-                <li><a href="http://michaeljaylissner.com/tags.html#linux-ref">Linux
-                    <span>14</span>
+                <li><a href="http://michaeljaylissner.com/tags.html#python-ref">Python
+                    <span>8</span>
 </a></li>
-                <li><a href="http://michaeljaylissner.com/tags.html#non-profit-ref">Non-Profit
-                    <span>2</span>
-</a></li>
-                <li><a href="http://michaeljaylissner.com/tags.html#recycling-ref">Recycling
-                    <span>1</span>
+                <li><a href="http://michaeljaylissner.com/tags.html#rant-ref">Rant
+                    <span>5</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
@@ -184,7 +238,7 @@ ultimately for them. Plus, it will help to keep e-waste out of&nbsp;landfills.</
     <a href="mailto:mlissner+blog@michaeljaylissner.com" title="My Email Address" class="sidebar-social-links" target="_blank">
     <i class="fa fa-envelope sidebar-social-links"></i></a>
 <h4>This is Reader-Editable</h4>
-<a href="https://github.com/mlissner/michaeljaylissner.com/edit/master/content/volunteering-at-last.md">
+<a href="https://github.com/mlissner/michaeljaylissner.com/edit/master/content/some-thoughts-on-celery.md">
     <i class="fa fa-github"></i>
     Edit this post on Github
 </a><!-- Begin MailChimp Signup Form -->
