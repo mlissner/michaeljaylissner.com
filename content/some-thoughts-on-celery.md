@@ -32,16 +32,21 @@ Fine, that's not so bad, but there were a number of other frustrating things tha
 
     But no, it was not starting "OK". It was immediately crashing.
     
-2. No log messages...*anywhere*. this must have something to do with daemonizing things, but no matter what I did I couldn't find any log messages anywhere.
+2. No log messages...*anywhere*. This appears to be because you have to detach `stdin` and `stdout` before daemonizing and according to asksol on IRC, this has been fixed in recent versions of Celery so even daemonizing errors can go to the Celery logs. Progress!
  
 3. The collection of things that happens when `celery` starts is complicated:
 
     1. I call `sudo service celeryd start`
+    
     1. `service` calls `/etc/init.d/celeryd`
-    1. `celeryd` does some stuff and calls `celery.sh` (another file altogether), where my settings are.
+    
+    1. `celeryd` does some stuff and calls `celery.sh` (another file altogether), where our settings are.
+    
+        **Update**: Apparently this is a CourtListener-specific customization, so this step probably won't apply to you, but I have no idea where this wacky set up came from (it's been in place for years).
+    
     1. Control is returned to `celery`, which starts celery itself with a command generated from `celery.sh`.
     
-    On top of this, there's a `celery` binary and a celery [management command][dj-man] for Django. `celery --help` prints out 68 lines of documentation. Not too bad, but many of those lines refer you to other areas of the documentation. For example, `celery worker --help` prints another 100 lines of help text. *Jesus* this thing is complicated. 
+    On top of this, there's a `celery` binary and there's a celery [management command][dj-man] for Django. (**Update** the Django commands were removed in Celery 3.1. More progress!) `celery --help` prints out 68 lines of documentation. Not too bad, but many of those lines refer you to other areas of the documentation. For example, `celery worker --help` prints another 100 lines of help text. *Jesus* this thing is complicated. 
     
     Did I mention it has [changing APIs][apis]?
     
@@ -61,7 +66,9 @@ Other tips:
 
 ## Moving Forward
 
-So, I feel bad: I've ranted a good deal about Celery, but I haven't proposed any solutions. This isn't the first time I've spent a long time trying to make Celery work, so what would it take to make Celery a less complicated, more reliable tool? 
+So, I feel bad: I've ranted a good deal about Celery, but I haven't proposed any solutions. It looks like a lot of things have been improved in recent versions of Celery, so part of the solution is likely for us to upgrade. 
+
+But this isn't the first time I've spent a long time trying to make Celery work, so what other ideas it take to make Celery a less complicated, more reliable tool? 
 
 The ideas I've come up with so far are: 
 
@@ -73,14 +80,14 @@ The ideas I've come up with so far are:
     - But I use RabbitMQ and am considering switching to Redis.
  - A more verbose, more thorough debug mode.
     - But apparently this is already in place in the latest versions?
- - Let Celery run as the `www-data` user?
-    - But apparently that's a bad idea.
+ - Let Celery run as the `www-data` user as a general practice?
+    - But apparently that's a bad idea. 
+    
+        **Update** this is a bad idea in general, but it's not *particularly* bad if you don't expose Celery on the network. If you're only running it locally, you can probablly get by with Celery as a `www-data` user or similar. 
    
 As you can tell, I don't feel strongly that any of these are the right solution. I am convinced though that Celery has a bad smell and that it's ripe for a leaner solution to fill some of its simpler use cases. I'm currently considering switching to a simpler task queue, but I don't know that I'll do it since Celery is the de-facto one for Django projects.
 
-We deserve a good, simple, reliable task queue though, and I wonder if there are good ideas for what could be changed in Celery to make that possible. 
-
-I, for one, would love to never spend another minute trying to make RabbitMQ and Celery play nicely together. 
+We deserve a good, simple, reliable task queue though, and I wonder if there are good ideas for what could be changed in Celery to make that possible. I, for one, would love to never spend another minute trying to make RabbitMQ, Celery and my code play nicely together. 
 
 
 [^1]: In truth Celery is a classic love/hate relationship. On the one hand, it evokes posts like this one, but on the other, it allows me to send tasks to a background queue and distribute loads among many servers. Hell, it's good enough for Instagram. On the other hand, god damn it, when it fails I go nuts.
