@@ -12,7 +12,7 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="bulk data, CourtListener, Tech, " />
+<meta name="keywords" content="Bulk Data, CourtListener, Tech, " />
 
 <meta property="og:title" content="Updating Bulk Data in CourtListener  - Bulk Data Can Be Hard "/>
 <meta property="og:url" content="http://michaeljaylissner.com/posts/2014/09/28/updating-bulk-data-in-courtlistener/" />
@@ -20,6 +20,7 @@
 <meta property="og:site_name" content="Michael Jay Lissner" />
 <meta property="og:article:author" content="Mike Lissner" />
 <meta property="og:article:published_time" content="2014-09-28T00:00:00" />
+<meta property="" content="2014-11-06T00:00:00" />
 <meta name="twitter:title" content="Updating Bulk Data in CourtListener  - Bulk Data Can Be Hard ">
 <meta name="twitter:description" content="There’s a beautiful and growing trend towards bulk data, but in this post I discuss the challenges we have at CourtListener and some solutions we’ve developed.">
 <meta property="og:image" content="//localhost:8000/theme/images/apple-touch-icon-152x152.png" />
@@ -108,6 +109,7 @@
 
             
             
+<p><strong>Update</strong>: I’ve written <a href="http://michaeljaylissner.com/posts/2014/11/06/updating-bulk-data-in-courtlistener-more/">another post</a> about how the solution presented here wasn’t fast enough and didn’t work out. You may want to read it as well.</p>
 <p>There’s an increasing demand for bulk data from government systems, and while this will generate big wins for transparency, accountability, and innovation (at the occasional cost of privacy<sup id="fnref:privacy"><a class="footnote-ref" href="#fn:privacy" rel="footnote">1</a></sup>), it’s important to consider a handful of technical difficulties that <em>can</em> come along with creating and providing such data. Do <em>not</em> misread this post as me saying, “bulk data is hard, don’t bother doing it.” Rather, like most of my posts, read this as an in-the-trenches account of issues we’ve encountered and solutions we’ve developed at CourtListener. </p>
 <h2 id="the-past-and-present">The Past and Present</h2>
 <p>For the past several years we’ve had <a href="https://www.courtlistener.com/api/bulk-info/">bulk data at CourtListener</a>, but to be frank, it’s been pretty terrible in a lot of ways. Probably the biggest issue with it was that we created it as a single massive <span class="caps">XML</span> file (~<span class="caps">13GB</span>, compressed!). That made a lot of sense for our backend processing, but people consuming the bulk data complained that it crashed 32 bit systems<sup id="fnref:sympathy"><a class="footnote-ref" href="#fn:sympathy" rel="footnote">2</a></sup>, consumed memory endlessly, decompressing it wasn’t possible on Windows<sup id="fnref:sympathy"><a class="footnote-ref" href="#fn:sympathy" rel="footnote">2</a></sup>, etc. </p>
@@ -233,15 +235,19 @@
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2014-09-28T00:00:00">Sep 28, 2014</time>
+
+<h4>Last Updated</h4>
+<time datetime="2014-11-06T00:00:00">Nov 6, 2014</time>
+
             <h4>Category</h4>
             <a class="category-link" href="http://michaeljaylissner.com/categories.html#tech-ref">Tech</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://michaeljaylissner.com/tags.html#bulk-data-ref">bulk data
-                    <span>2</span>
+                <li><a href="http://michaeljaylissner.com/tags.html#bulk-data-ref">Bulk Data
+                    <span>3</span>
 </a></li>
                 <li><a href="http://michaeljaylissner.com/tags.html#courtlistener-ref">CourtListener
-                    <span>16</span>
+                    <span>17</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
