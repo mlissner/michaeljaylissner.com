@@ -2,10 +2,13 @@ Title: Updating Bulk Data in CourtListener
 Subtitle: Bulk Data Can Be Hard
 Summary: There's a beautiful and growing trend towards bulk data, but in this post I discuss the challenges we have at CourtListener and some solutions we've developed. 
 Date: 2014-09-28
-Tags: bulk data, CourtListener
+Modified: 11/6/2014 
+Tags: Bulk Data, CourtListener
 Category: Tech
 
 [TOC]
+
+**Update**: I've written [another post][more] about how the solution presented here wasn't fast enough and didn't work out. You may want to read it as well.
 
 There's an increasing demand for bulk data from government systems, and while this will generate big wins for transparency, accountability, and innovation (at the occasional cost of privacy[^privacy]), it's important to consider a handful of technical difficulties that *can* come along with creating and providing such data. Do *not* misread this post as me saying, "bulk data is hard, don't bother doing it." Rather, like most of my posts, read this as an in-the-trenches account of issues we've encountered and solutions we've developed at CourtListener. 
 
@@ -110,3 +113,4 @@ So, without sucking on too many sour grapes, that's the story behind the upgrade
     A fine hack.
 
 [flp]: http://freelawproject.org
+[more]: {filename}/updating-bulk-data-in-courtlistener-more.md
