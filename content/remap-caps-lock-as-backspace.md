@@ -26,9 +26,16 @@ and you're set. If things get wacky, delete the key and try again.
 
 ![No alt]({filename}/images/Windows%20Registry%20Remap%20Screenshot.jpg)
 
-## In Linux
+## In Ubuntu
 
-I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
+### For versions newer than 14.10
+
+This can easily be done using the Ubuntu Tweak tool. Simply open it up, go to the section on `Typing`, and then reconfigure the CapsLock key.
+
+
+### For versions prior to Ubuntu 14.10
+
+I have tested the following in all versions between Ubuntu 7.04 and 14.04. Start 
 by opening a terminal, and running the xev program. Once that is running, 
 press the caps lock key, and it will tell you the numerical value of that key. 
 For example, my output from that command looks like this:
@@ -44,7 +51,7 @@ For example, my output from that command looks like this:
     XFilterEvent returns: False
 
 In there, you will see the keycode for the capslock key, in my case, number 
-66. Using that, create a file in your home directory called .Xmodmap, and put 
+`66`. Using that, create a file in your home directory called .Xmodmap, and put 
 the following in it:
     
     :::txt
