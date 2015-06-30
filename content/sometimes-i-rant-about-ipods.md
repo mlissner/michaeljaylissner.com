@@ -1,4 +1,4 @@
-Title: Every Now and Again, I Rant About Ipods
+Title: Every Now and Again, I Rant About iPods
 Subtitle: This is One of Those Times&hellip;
 Date: 2009-05-24T23:34:44
 Tags: ipod, rant, DRM
