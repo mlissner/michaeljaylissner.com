@@ -7,7 +7,7 @@ Category: Tech
 
 [TOC]
 
-When writing programs, developers have a choice of whether they want their work to be public or private. Programs that are made public are called "open source" and ones that are not are called "closed source". In both cases the developer can share a program with the world as a website or iPhone app, or whatever, but in the case where the code is shared publicly it's *also* possible for anybody anywhere in the world to change the program to make it better. (For more detail on this and other jargon, see the [definitions at the end][def])
+When writing programs, developers have a choice of whether they want their work to be public or private. Programs that are made public are called "open source" and ones that are not are called "closed source". In both cases the developer can share a program with the world as a website or iPhone app, or whatever, but in the case where the code is shared publicly it's *also* possible for anybody anywhere in the world to change the program to make it better. (For more detail on this and other jargon, see the [definitions at the end][def].)
 
 This is very cool! 
 
