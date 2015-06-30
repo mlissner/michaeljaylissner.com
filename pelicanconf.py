@@ -114,20 +114,19 @@ FEATURED_IMAGE = SITEURL + '/theme/images/apple-touch-icon-152x152.png'
 
 LANDING_PAGE_ABOUT = {
     #'title': 'I make things from atoms and bits',
-    'details': """<p>My name is Mike Lissner. I am the founder and lead developer of
-    <a href="http://freelawproject.com">Free Law Project</a> where I spend most
-    of my time making <a href="https://www.courtlistener.com">CourtListener</a>,
+    'details': """<p>My name is Mike Lissner. I am the Executive Director and
+    CTO of <a href="http://freelawproject.com">Free Law Project</a> where I
+    spend most of my time making <a href="https://www.courtlistener.com">CourtListener</a>,
     <a href="https://www.recapthelaw.org">RECAP</a>, and
     <a href="https://github.com/freelawproject/juriscraper/">Juriscraper</a>.</p>
 
-    <p>I'm a big believer in technology's ability to make us happier, but like
-    anybody who has been around a while, I know that nothing is ever as simple
-    as it seems.</p>
+    <p>I'm a big believer in technology's ability to make us happier, and
+    believe that the legal system is an area that's ripe for innovation.</p>
 
     <p>I'm a grad from <a href="http://ischool.berkeley.edu">UC Berkeley's
     School of Information</a> and <a href="http://pitzer.edu">Pitzer
     College</a>. Between the two, I'm something of a liberal-minded techno-person
-    with a dash of old school hippy.</p>
+    with a dash of old-school hippy.</p>
     """
 }
 PROJECTS = [
@@ -144,13 +143,19 @@ PROJECTS = [
                        'websites.'
     },
     {
+        'name': 'Judge Pics',
+        'url': 'https://github.com/freelawproject/judge-pics',
+        'description': 'A collection of judicial pictures and portraits.'
+    },
+    {
         'name': 'Trim My Feeds',
         'url': 'https://bitbucket.org/mlissner/trim-my-feeds/overview',
-        'description': 'A simple tool to strip dead RSS feeds from whatever reader you use.'
+        'description': 'A simple tool to strip dead RSS feeds from whatever '
+                       'reader you use.'
     },
     {
         'name': 'XPath Tester',
-        'url': 'http://xpath.courtlistener.com',
+        'url': 'https://github.com/mlissner/lxml-xpath-tester/',
         'description': 'Test XPath queries against text using <code>lxml</code>'
     },
     {
@@ -169,3 +174,6 @@ PROJECTS = [
 ]
 
 GOOGLE_ANALYTICS = 'UA-55828430-1'
+
+CACHE_CONTENT = True
+LOAD_CONTENT_CACHE = True

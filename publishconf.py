@@ -22,4 +22,5 @@ DELETE_OUTPUT_DIRECTORY = True
 # Following items are often useful when publishing
 
 DISQUS_SITENAME = "michaeljaylissner"
-#GOOGLE_ANALYTICS = ""
+CACHE_CONTENT = True
+LOAD_CONTENT_CACHE = True
