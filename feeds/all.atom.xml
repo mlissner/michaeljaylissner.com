@@ -119,6 +119,10 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</summary><category term="Celery"></category><category term="Python"></category><category term="Rant"></category></entry><entry><title>Creating a Non-Profit</title><link href="http://michaeljaylissner.com/posts/2014/10/14/becoming-a-non-profit/" rel="alternate"></link><updated>2014-10-14T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-10-14:posts/2014/10/14/becoming-a-non-profit/</id><summary type="html">
+&lt;h2 id="updates"&gt;Updates&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://codefordc.org/blog/2016/11/17/start-nonprofit.html"&gt;Code for &lt;span class="caps"&gt;DC&lt;/span&gt; has written a similar post&lt;/a&gt; for creating a non-profit in &lt;span class="caps"&gt;D.C.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="the-goal"&gt;The Goal&lt;/h2&gt;
 &lt;p&gt;This post is an attempt to document the things that we’ve done at &lt;a href="http://www.freelawproject.org"&gt;Free Law Project&lt;/a&gt; to get our official Federal and State non-profit status. This has been a grueling process for Brian and me but as we announced on Twitter, we now have it officially in hand, and likely in record time:&lt;/p&gt;
 &lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;This isn't tax advice, but we're happy to announce the &lt;span class="caps"&gt;IRS&lt;/span&gt; approved our 501(c)(3) app, so donations are deductible! &lt;a href="https://t.co/UjaBgSJorr"&gt;https://t.co/UjaBgSJorr&lt;/a&gt;&lt;/p&gt;— Free Law Project (@FreeLawProject) &lt;a href="https://twitter.com/FreeLawProject/status/520620527963369472"&gt;October 10, 2014&lt;/a&gt;&lt;/blockquote&gt;
@@ -288,7 +292,7 @@ you’re waiting on 501(c)(3) status (and sometimes even after).&lt;/p&gt;
 &lt;p&gt;The interesting thing here is that it&amp;#8217;s probably true. If the gag orders were removed, the thousands of National Security Letters that the government issues each year would need more review, making it so that the &lt;span class="caps"&gt;FBI&lt;/span&gt; no longer had an extra-judicial backdoor into investigations. The &lt;span class="caps"&gt;FBI&lt;/span&gt; wouldn&amp;#8217;t want&amp;nbsp;that.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Judge" src="http://michaeljaylissner.com/images/in-re-nsl/judge.jpeg" /&gt;&lt;/p&gt;
 &lt;p&gt;There were a million other arguments made that I&amp;#8217;ll leave to the lawyers to discuss, but all in all it looked pretty good for &lt;span class="caps"&gt;EFF&lt;/span&gt; and I think folks are feeling confident. From here, it&amp;#8217;s now up to the panel of judges to issue their decision. My bet is that regardless of what the decision says, this one will be appealed to the Supreme Court. Perhaps they&amp;#8217;ll need a photographer&amp;nbsp;too.&lt;/p&gt;</summary><category term="Court"></category><category term="NSL"></category><category term="EFF"></category><category term="Pictures"></category></entry><entry><title>Editing a File on Github</title><link href="http://michaeljaylissner.com/posts/2014/10/06/editing-on-github-a-non-technical-explainer/" rel="alternate"></link><updated>2014-10-06T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-10-06:posts/2014/10/06/editing-on-github-a-non-technical-explainer/</id><summary type="html">
-&lt;p&gt;When writing programs, developers have a choice of whether they want their work to be public or private. Programs that are made public are called “open source” and ones that are not are called “closed source”. In both cases the developer can share a program with the world as a website or iPhone app, or whatever, but in the case where the code is shared publicly it’s &lt;em&gt;also&lt;/em&gt; possible for anybody anywhere in the world to change the program to make it better. (For more detail on this and other jargon, see the &lt;a href="#some-definitions"&gt;definitions at the end&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;When writing programs, developers have a choice of whether they want their work to be public or private. Programs that are made public are called “open source” and ones that are not are called “closed source”. In both cases the developer can share a program with the world as a website or iPhone app, or whatever, but in the case where the code is shared publicly it’s &lt;em&gt;also&lt;/em&gt; possible for anybody anywhere in the world to change the program to make it better. (For more detail on this and other jargon, see the &lt;a href="#some-definitions"&gt;definitions at the end&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;This is very cool! &lt;/p&gt;
 &lt;p&gt;But I hear you asking, “How do I, a non-developer, make use of this system to make the world a better place?” I’m glad you asked — this article is for you.&lt;/p&gt;
 &lt;h2 id="and-then-there-was-git"&gt;And then there was Git&lt;/h2&gt;
@@ -4244,8 +4248,11 @@ in the picture below, and create a new key named Scancode Map of the type
 &lt;code&gt;REG_BINARY&lt;/code&gt;. Give it the value shown in the picture, restart, 
 and you’re set. If things get wacky, delete the key and try again.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/Windows Registry Remap Screenshot.jpg"/&gt;&lt;/p&gt;
-&lt;h2 id="in-linux"&gt;In Linux&lt;/h2&gt;
-&lt;p&gt;I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
+&lt;h2 id="in-ubuntu"&gt;In Ubuntu&lt;/h2&gt;
+&lt;h3 id="for-versions-newer-than-1410"&gt;For versions newer than 14.10&lt;/h3&gt;
+&lt;p&gt;This can easily be done using the Ubuntu Tweak tool. Simply open it up, go to the section on &lt;code&gt;Typing&lt;/code&gt;, and then reconfigure the CapsLock key.&lt;/p&gt;
+&lt;h3 id="for-versions-prior-to-ubuntu-1410"&gt;For versions prior to Ubuntu 14.10&lt;/h3&gt;
+&lt;p&gt;I have tested the following in all versions between Ubuntu 7.04 and 14.04. Start 
 by opening a terminal, and running the xev program. Once that is running, 
 press the caps lock key, and it will tell you the numerical value of that key. 
 For example, my output from that command looks like this:&lt;/p&gt;
@@ -4259,7 +4266,7 @@ For example, my output from that command looks like this:&lt;/p&gt;
 &lt;span class="n"&gt;XFilterEvent&lt;/span&gt; &lt;span class="n"&gt;returns&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;False&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In there, you will see the keycode for the capslock key, in my case, number 
-66. Using that, create a file in your home directory called .Xmodmap, and put 
+&lt;code&gt;66&lt;/code&gt;. Using that, create a file in your home directory called .Xmodmap, and put 
 the following in it:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;!&lt;/span&gt;
 &lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="n"&gt;Make&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;caps&lt;/span&gt; &lt;span class="n"&gt;lock&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;backspace&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt;

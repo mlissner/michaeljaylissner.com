@@ -58,8 +58,11 @@ in the picture below, and create a new key named Scancode Map of the type
 &lt;code&gt;REG_BINARY&lt;/code&gt;. Give it the value shown in the picture, restart, 
 and you’re set. If things get wacky, delete the key and try again.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="No alt" src="http://michaeljaylissner.com/images/Windows Registry Remap Screenshot.jpg"/&gt;&lt;/p&gt;
-&lt;h2 id="in-linux"&gt;In Linux&lt;/h2&gt;
-&lt;p&gt;I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
+&lt;h2 id="in-ubuntu"&gt;In Ubuntu&lt;/h2&gt;
+&lt;h3 id="for-versions-newer-than-1410"&gt;For versions newer than 14.10&lt;/h3&gt;
+&lt;p&gt;This can easily be done using the Ubuntu Tweak tool. Simply open it up, go to the section on &lt;code&gt;Typing&lt;/code&gt;, and then reconfigure the CapsLock key.&lt;/p&gt;
+&lt;h3 id="for-versions-prior-to-ubuntu-1410"&gt;For versions prior to Ubuntu 14.10&lt;/h3&gt;
+&lt;p&gt;I have tested the following in all versions between Ubuntu 7.04 and 14.04. Start 
 by opening a terminal, and running the xev program. Once that is running, 
 press the caps lock key, and it will tell you the numerical value of that key. 
 For example, my output from that command looks like this:&lt;/p&gt;
@@ -73,7 +76,7 @@ For example, my output from that command looks like this:&lt;/p&gt;
 &lt;span class="n"&gt;XFilterEvent&lt;/span&gt; &lt;span class="n"&gt;returns&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;False&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;In there, you will see the keycode for the capslock key, in my case, number 
-66. Using that, create a file in your home directory called .Xmodmap, and put 
+&lt;code&gt;66&lt;/code&gt;. Using that, create a file in your home directory called .Xmodmap, and put 
 the following in it:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;!&lt;/span&gt;
 &lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="n"&gt;Make&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;caps&lt;/span&gt; &lt;span class="n"&gt;lock&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;backspace&lt;/span&gt; &lt;span class="n"&gt;button&lt;/span&gt;

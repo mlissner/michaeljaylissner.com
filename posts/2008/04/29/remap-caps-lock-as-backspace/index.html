@@ -97,7 +97,11 @@
         <div class="toc">
 <ul>
 <li><a href="#in-windows">In Windows</a></li>
-<li><a href="#in-linux">In Linux</a></li>
+<li><a href="#in-ubuntu">In Ubuntu</a><ul>
+<li><a href="#for-versions-newer-than-1410">For versions newer than 14.10</a></li>
+<li><a href="#for-versions-prior-to-ubuntu-1410">For versions prior to Ubuntu 14.10</a></li>
+</ul>
+</li>
 </ul>
 </div>
         </nav>
@@ -122,8 +126,11 @@ in the picture below, and create a new key named Scancode Map of the type
 <code>REG_BINARY</code>. Give it the value shown in the picture, restart, 
 and you’re set. If things get wacky, delete the key and try again.</p>
 <p><img alt="No alt" src="http://michaeljaylissner.com/images/Windows Registry Remap Screenshot.jpg"/></p>
-<h2 id="in-linux">In Linux</h2>
-<p>I have tested the following in Ubuntu 7.04, 7.10, 8.04, 8.10, and 9.04. Start 
+<h2 id="in-ubuntu">In Ubuntu</h2>
+<h3 id="for-versions-newer-than-1410">For versions newer than 14.10</h3>
+<p>This can easily be done using the Ubuntu Tweak tool. Simply open it up, go to the section on <code>Typing</code>, and then reconfigure the CapsLock key.</p>
+<h3 id="for-versions-prior-to-ubuntu-1410">For versions prior to Ubuntu 14.10</h3>
+<p>I have tested the following in all versions between Ubuntu 7.04 and 14.04. Start 
 by opening a terminal, and running the xev program. Once that is running, 
 press the caps lock key, and it will tell you the numerical value of that key. 
 For example, my output from that command looks like this:</p>
@@ -137,7 +144,7 @@ For example, my output from that command looks like this:</p>
 <span class="n">XFilterEvent</span> <span class="n">returns</span><span class="o">:</span> <span class="n">False</span>
 </pre></div>
 <p>In there, you will see the keycode for the capslock key, in my case, number 
-66. Using that, create a file in your home directory called .Xmodmap, and put 
+<code>66</code>. Using that, create a file in your home directory called .Xmodmap, and put 
 the following in it:</p>
 <div class="highlight"><pre><span class="o">!</span>
 <span class="o">!</span> <span class="n">Make</span> <span class="n">the</span> <span class="n">caps</span> <span class="n">lock</span> <span class="n">button</span> <span class="n">a</span> <span class="n">backspace</span> <span class="n">button</span>
