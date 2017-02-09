@@ -7,6 +7,12 @@ Category: Policy, Law & Politics
 
 [TOC]
 
+## Updates
+
+ - [Code for DC has written a similar post][dc] for creating a non-profit in D.C.
+ 
+[dc]: http://codefordc.org/blog/2016/11/17/start-nonprofit.html
+
 ## The Goal
 
 This post is an attempt to document the things that we've done at [Free Law Project][flp] to get our official Federal and State non-profit status. This has been a grueling process for Brian and me but as we announced on Twitter, we now have it officially in hand, and likely in record time:
