@@ -5,7 +5,7 @@
 &lt;ul&gt;
 &lt;li&gt;oral arguments and other audio&amp;nbsp;content,&lt;/li&gt;
 &lt;li&gt;video content if it&amp;#8217;s&amp;nbsp;available,&lt;/li&gt;
-&lt;li&gt;content from &lt;a href="https://www.recapthelaw.org"&gt;&lt;span class="caps"&gt;RECAP&lt;/span&gt;&lt;/a&gt;,&amp;nbsp;and&lt;/li&gt;
+&lt;li&gt;content from &lt;a href="https://free.law/recap/"&gt;&lt;span class="caps"&gt;RECAP&lt;/span&gt;&lt;/a&gt;,&amp;nbsp;and&lt;/li&gt;
 &lt;li&gt;thousands of ninth circuit briefs that Resource.org &lt;a href="https://law.resource.org/pub/us/case/ca9/"&gt;has recently&amp;nbsp;scanned&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The problem with our current database is that it&amp;#8217;s not organized in a way 
@@ -62,11 +62,11 @@ about to look at. Don&amp;#8217;t worry, the old URLs will keep working just&amp
 
 &lt;h3 id="api"&gt;&lt;span class="caps"&gt;API&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;We expect these changes to come with changes to the &lt;span class="caps"&gt;API&lt;/span&gt;, 
-so we&amp;#8217;ll likely be releasing &lt;span class="caps"&gt;API&lt;/span&gt; version 1.1 that will add suport for 
+so we&amp;#8217;ll likely be releasing &lt;span class="caps"&gt;API&lt;/span&gt; version 1.1 that will add support for 
 dockets and oral&amp;nbsp;arguments. &lt;/p&gt;
 &lt;p&gt;The current version 1.0 should keep working just fine, 
 since we&amp;#8217;re not changing any of the underlying data, 
 but I expect that it will have some changes to the URLs and things like 
-that. I&amp;#8217;ll be posting more about this in &lt;a href="http://lists.freelawproject.org/cgi-bin/mailman/listinfo/dev"&gt;the CourtListener dev list&lt;/a&gt;. 
+that. I&amp;#8217;ll be posting more about this in the CourtListener dev list. 
 as the changes become more clear and as we sort out what a fair policy is 
 for the deprecation of old&amp;nbsp;APIs. &lt;/p&gt;</summary><category term="CourtListener"></category><category term="data modeling"></category><category term="database"></category></entry></feed>

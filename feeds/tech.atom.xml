@@ -30,7 +30,7 @@
 &lt;p&gt;We finally upgraded &lt;a href="https://www.courtlistener.com"&gt;CourtListener&lt;/a&gt; last week and things went pretty well with the exception of two issues. First, we had some extended downtime as we waited for the database migration to complete. In retrospect, I should have realized that updating every item one row at a time would take a while. My bad. &lt;/p&gt;
 &lt;p&gt;Second, &lt;a href="http://www.celeryproject.org/"&gt;Celery&lt;/a&gt; broke again and that took me the better part of a day to detect and fix. As a central part of our infrastructure, this is really, &lt;em&gt;truly&lt;/em&gt; frustrating. The remainder of this post goes into what happened, why it happened and how I finally managed to fix it. &lt;/p&gt;
 &lt;h2 id="why"&gt;Why?&lt;/h2&gt;
-&lt;p&gt;First, why did this happen? Well…because I decided to log something. I created a task that processes &lt;a href="http://freelawproject.org/2014/10/31/announcing-oral-arguments-on-courtlistener-2/"&gt;our new audio files&lt;/a&gt; and I thought, “Hey, these should really log to the Juriscraper log rather than the usual celery log.” So, I added two lines to the file: One importing the log file and the second writing a log message. &lt;em&gt;This&lt;/em&gt; is the little change that brought Celery to a grinding halt. &lt;/p&gt;
+&lt;p&gt;First, why did this happen? Well…because I decided to log something. I created a task that processes &lt;a href="https://free.law/2014/10/31/announcing-oral-arguments-on-courtlistener/"&gt;our new audio files&lt;/a&gt; and I thought, “Hey, these should really log to the Juriscraper log rather than the usual celery log.” So, I added two lines to the file: One importing the log file and the second writing a log message. &lt;em&gt;This&lt;/em&gt; is the little change that brought Celery to a grinding halt. &lt;/p&gt;
 &lt;h2 id="what-the-hell"&gt;What the Hell?&lt;/h2&gt;
 &lt;p&gt;If you’re wondering why logging would break an entire system, well, the answer is because Celery runs as a different user than everything else. In our case, as the &lt;code&gt;celery&lt;/code&gt; user — a user that didn’t have permission to the log file I requested. Ugh. &lt;/p&gt;
 &lt;p&gt;Fine, that’s not so bad, but there were a number of other frustrating things that made this much worse:&lt;/p&gt;
@@ -222,7 +222,7 @@
 &lt;p&gt;And pretty much everything else you can imagine. So, I suppose the answer is: We waited so long because it was hard. &lt;/p&gt;
 &lt;p&gt;But being hard is one thing. Another thing is that although a number of organizations have used our bulk data, never has any contributed either energy or resources to fixing the bugs that they reported. Despite the benefits these organizations got from the bulk files, none chose to support the ecosystem from which they benefited. You can imagine how this isn’t particularly motivational for us, but we’re hopeful that with the new and improved system, those using our data will appreciate the quality of the bulk data and consider &lt;a href="https://www.courtlistener.com/donate/"&gt;supporting us&lt;/a&gt; down the road.  &lt;/p&gt;
 &lt;h2 id="wrapping-up"&gt;Wrapping Up&lt;/h2&gt;
-&lt;p&gt;So, without sucking on too many sour grapes, that’s the story behind the upgrades we’re making to the bulk files at CourtListener. At first blush it may seem like a fairly straightforward feature to get in place (and remember, in &lt;em&gt;many&lt;/em&gt; cases bulk data is stupid-easy to do), but we thought it would be interesting to share our experiences so others might compare notes. If you’re a consumer of CourtListener bulk data, we’ll be taking the wraps off of these new features soon, so make sure to watch the &lt;a href="http://freelawproject.org"&gt;Free Law Project blog&lt;/a&gt;. If you’re a developer that’s interested in this kind of thing, we’re eager to hear your feedback and any thoughts you might have. &lt;/p&gt;
+&lt;p&gt;So, without sucking on too many sour grapes, that’s the story behind the upgrades we’re making to the bulk files at CourtListener. At first blush it may seem like a fairly straightforward feature to get in place (and remember, in &lt;em&gt;many&lt;/em&gt; cases bulk data is stupid-easy to do), but we thought it would be interesting to share our experiences so others might compare notes. If you’re a consumer of CourtListener bulk data, we’ll be taking the wraps off of these new features soon, so make sure to watch the &lt;a href="https://free.law"&gt;Free Law Project blog&lt;/a&gt;. If you’re a developer that’s interested in this kind of thing, we’re eager to hear your feedback and any thoughts you might have. &lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr/&gt;
 &lt;ol&gt;
@@ -411,7 +411,7 @@ going for the next five to ten years.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;oral arguments and other audio&amp;nbsp;content,&lt;/li&gt;
 &lt;li&gt;video content if it&amp;#8217;s&amp;nbsp;available,&lt;/li&gt;
-&lt;li&gt;content from &lt;a href="https://www.recapthelaw.org"&gt;&lt;span class="caps"&gt;RECAP&lt;/span&gt;&lt;/a&gt;,&amp;nbsp;and&lt;/li&gt;
+&lt;li&gt;content from &lt;a href="https://free.law/recap/"&gt;&lt;span class="caps"&gt;RECAP&lt;/span&gt;&lt;/a&gt;,&amp;nbsp;and&lt;/li&gt;
 &lt;li&gt;thousands of ninth circuit briefs that Resource.org &lt;a href="https://law.resource.org/pub/us/case/ca9/"&gt;has recently&amp;nbsp;scanned&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The problem with our current database is that it&amp;#8217;s not organized in a way 
@@ -468,12 +468,12 @@ about to look at. Don&amp;#8217;t worry, the old URLs will keep working just&amp
 
 &lt;h3 id="api"&gt;&lt;span class="caps"&gt;API&lt;/span&gt;&lt;/h3&gt;
 &lt;p&gt;We expect these changes to come with changes to the &lt;span class="caps"&gt;API&lt;/span&gt;, 
-so we&amp;#8217;ll likely be releasing &lt;span class="caps"&gt;API&lt;/span&gt; version 1.1 that will add suport for 
+so we&amp;#8217;ll likely be releasing &lt;span class="caps"&gt;API&lt;/span&gt; version 1.1 that will add support for 
 dockets and oral&amp;nbsp;arguments. &lt;/p&gt;
 &lt;p&gt;The current version 1.0 should keep working just fine, 
 since we&amp;#8217;re not changing any of the underlying data, 
 but I expect that it will have some changes to the URLs and things like 
-that. I&amp;#8217;ll be posting more about this in &lt;a href="http://lists.freelawproject.org/cgi-bin/mailman/listinfo/dev"&gt;the CourtListener dev list&lt;/a&gt;. 
+that. I&amp;#8217;ll be posting more about this in the CourtListener dev list. 
 as the changes become more clear and as we sort out what a fair policy is 
 for the deprecation of old&amp;nbsp;APIs. &lt;/p&gt;</summary><category term="CourtListener"></category><category term="data modeling"></category><category term="database"></category></entry><entry><title>New Tool to Remove Dead Feeds from OPML Files</title><link href="http://michaeljaylissner.com/posts/2013/06/28/trim-your-dead-feeds/" rel="alternate"></link><updated>2013-06-28T22:56:37-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2013-06-28:posts/2013/06/28/trim-your-dead-feeds/</id><summary type="html">&lt;p&gt;Since Google Reader&amp;#8217;s closure is immenent, a lot of folks are looking for 
 solutions. One problem I&amp;#8217;ve run into many times throughout the years is that
