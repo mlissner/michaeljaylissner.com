@@ -112,5 +112,5 @@ So, without sucking on too many sour grapes, that's the story behind the upgrade
     
     A fine hack.
 
-[flp]: http://freelawproject.org
+[flp]: https://free.law
 [more]: {filename}/updating-bulk-data-in-courtlistener-more.md

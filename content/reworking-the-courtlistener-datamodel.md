@@ -71,19 +71,18 @@ and eventually:
 ### API
 
 We expect these changes to come with changes to the API, 
-so we'll likely be releasing API version 1.1 that will add suport for 
+so we'll likely be releasing API version 1.1 that will add support for 
 dockets and oral arguments. 
 
 The current version 1.0 should keep working just fine, 
 since we're not changing any of the underlying data, 
 but I expect that it will have some changes to the URLs and things like 
-that. I'll be posting more about this in [the CourtListener dev list][2]. 
+that. I'll be posting more about this in the CourtListener dev list. 
 as the changes become more clear and as we sort out what a fair policy is 
 for the deprecation of old APIs. 
 
 [0]: https://www.courtlistener.com/
 [1]: https://law.resource.org/pub/us/case/ca9/
-[2]: http://lists.freelawproject.org/cgi-bin/mailman/listinfo/dev
 [3]: http://owncloud.freelawproject.org/public.php?service=files&t=76ef76ec69488fb72b4d96dba4809339
 [4]: http://owncloud.freelawproject.org/public.php?service=files&t=62510f0282b06948e8c3d3b1e4946ec0
-[5]: https://www.recapthelaw.org
+[5]: https://free.law/recap/

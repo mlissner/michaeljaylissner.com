@@ -45,6 +45,7 @@ Easy, peasy, use the --verbose and --debug flags:
 
 To do this, go into the home directory for the blog and run:
 
+    workon mjl.com
     make github
 
 This will generate a release, put it in the `gh-pages` branch, and then push it

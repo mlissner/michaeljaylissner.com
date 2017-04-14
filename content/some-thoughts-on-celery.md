@@ -93,7 +93,7 @@ We deserve a good, simple, reliable task queue though, and I wonder if there are
 [^1]: In truth Celery is a classic love/hate relationship. On the one hand, it evokes posts like this one, but on the other, it allows me to send tasks to a background queue and distribute loads among many servers. Hell, it's good enough for Instagram. On the other hand, god damn it, when it fails I go nuts.
 
 [1]: http://www.celeryproject.org/
-[flp-oa]: http://freelawproject.org/2014/10/31/announcing-oral-arguments-on-courtlistener-2/
+[flp-oa]: https://free.law/2014/10/31/announcing-oral-arguments-on-courtlistener/
 [dj-man]: https://docs.djangoproject.com/en/dev/howto/custom-management-commands/
 [apis]: http://seeknuance.com/2012/07/30/celery-api-changes-drive-me-nuts/
 [dry]: http://stackoverflow.com/a/21883578/64911

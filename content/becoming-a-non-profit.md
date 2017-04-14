@@ -229,8 +229,8 @@ Done incorrectly, you enter a hole of despair, despondency and, worse, taxation.
 [^1]: Yes, PDFs are [generally compressed internally][pdf-compress].
 
 
-[flp]: http://www.freelawproject.org
-[status-letter]: http://freelawproject.org/wp-content/uploads/2014/10/006-non-profit-status-letter-redacted.pdf
+[flp]: https://free.law
+[status-letter]: https://free.law/pdf/006-non-profit-status-letter-redacted.pdf
 [gh]: https://github.com/mlissner/michaeljaylissner.com/edit/master/content/on-memory.md
 [contact]: {filename}/pages/contact.md
 [guide]: {filename}/editing-on-github-a-non-technical-explainer.md
@@ -238,9 +238,9 @@ Done incorrectly, you enter a hole of despair, despondency and, worse, taxation.
 [tmdb]: http://tess2.uspto.gov/bin/gate.exe?f=tess&state=4802:wiyhnl.1.1
 [sos-reserve]: http://www.sos.ca.gov/business/corp/pdf/naavreservform.pdf
 [EIN-form]: http://www.irs.gov/Businesses/Small-Businesses-&-Self-Employed/Apply-for-an-Employer-Identification-Number-%28EIN%29-Online
-[bylaws-and-aoi]: http://freelawproject.org/wp-content/uploads/2013/08/Articles_of_Incorporation_and_Bylaws.pdf
-[minutes-incorporators]: http://freelawproject.org/wp-content/uploads/2013/08/003-minutes_incorporators.pdf
-[minutes-first-meeting]: http://freelawproject.org/wp-content/uploads/2013/08/004-mins_1st_bd_mtg-signed.pdf
+[bylaws-and-aoi]: https://free.law/pdf/Articles_of_Incorporation_and_Bylaws.pdf
+[minutes-incorporators]: https://free.law/pdf/003-minutes_incorporators.pdf
+[minutes-first-meeting]: https://free.law/pdf/004-mins_1st_bd_mtg-signed.pdf
 [irs-get-forms-form]: http://www.stayexempt.irs.gov/StartingOut/InteractiveForm1023Application.aspx
 [irs-checklist]: http://www.stayexempt.irs.gov/checklist.pdf
 [irs-1023]: http://www.stayexempt.irs.gov/StartingOut/InteractiveForm1023Application.aspx
@@ -248,7 +248,7 @@ Done incorrectly, you enter a hole of despair, despondency and, worse, taxation.
 [irs-instructs]: http://www.irs.gov/instructions/i1023/index.html
 [irs-faq]: http://www.irs.gov/Charities-&-Non-Profits/Frequently-Asked-Questions-about-Form-1023
 [yorba]: http://blogs.gnome.org/jnelson/2014/06/30/the-new-501c3-and-the-future-of-free-software-in-the-united-states/
-[flp-1023]: http://owncloud.freelawproject.org/public.php?service=files&t=679d702c8596346f261db57e18405afd&download
+[flp-1023]: https://free.law/pdf/irs-1023-free-law-project.pdf
 [irs-ex-proc]: http://www.irs.gov/Charities-&-Non-Profits/Applying-for-Exemption:-Expediting-Application-Processing
 [bolo]: https://en.wikipedia.org/wiki/IRS_targeting_controversy
 [scotus]: http://www.aarongreenspan.com/writing/20130217/petitioning-rube-goldbergs-supreme-court/

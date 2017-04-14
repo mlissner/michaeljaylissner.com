@@ -115,9 +115,9 @@ FEATURED_IMAGE = SITEURL + '/theme/images/apple-touch-icon-152x152.png'
 LANDING_PAGE_ABOUT = {
     #'title': 'I make things from atoms and bits',
     'details': """<p>My name is Mike Lissner. I am the Executive Director and
-    CTO of <a href="http://freelawproject.com">Free Law Project</a> where I
+    CTO of <a href="https://free.law">Free Law Project</a> where I
     spend most of my time making <a href="https://www.courtlistener.com">CourtListener</a>,
-    <a href="https://www.recapthelaw.org">RECAP</a>, and
+    <a href="https://free.law/recap/">RECAP</a>, and
     <a href="https://github.com/freelawproject/juriscraper/">Juriscraper</a>.</p>
 
     <p>I'm a big believer in technology's ability to make us happier, and
