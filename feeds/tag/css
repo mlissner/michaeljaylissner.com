@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/css" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2009-04-26T11:31:19-07:00</updated><entry><title>Papa’s Got a Brand New Look</title><link href="http://michaeljaylissner.com/posts/2009/04/26/papas-got-a-brand-new-look/" rel="alternate"></link><updated>2009-04-26T11:31:19-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-04-26:posts/2009/04/26/papas-got-a-brand-new-look/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;OK&lt;/span&gt;, here&amp;#8217;s the scoop. I&amp;#8217;ve given the site a major revamp and a new&amp;nbsp;look. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="https://michaeljaylissner.com/" rel="alternate"></link><link href="https://michaeljaylissner.com/feeds/tag/css" rel="self"></link><id>https://michaeljaylissner.com/</id><updated>2009-04-26T11:31:19-07:00</updated><entry><title>Papa’s Got a Brand New Look</title><link href="https://michaeljaylissner.com/posts/2009/04/26/papas-got-a-brand-new-look/" rel="alternate"></link><updated>2009-04-26T11:31:19-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-04-26:posts/2009/04/26/papas-got-a-brand-new-look/</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;OK&lt;/span&gt;, here&amp;#8217;s the scoop. I&amp;#8217;ve given the site a major revamp and a new&amp;nbsp;look. &lt;/p&gt;
 &lt;p&gt;Here&amp;#8217;s the old&amp;nbsp;one:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Old site" src="http://michaeljaylissner.com/images/oldsite/v3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Old site" src="https://michaeljaylissner.com/images/oldsite/v3.png" /&gt;&lt;/p&gt;
 &lt;p&gt;And the&amp;nbsp;new:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Old site" src="http://michaeljaylissner.com/images/oldsite/v4.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Old site" src="https://michaeljaylissner.com/images/oldsite/v4.png" /&gt;&lt;/p&gt;
 &lt;p&gt;There were a number of reasons I wanted to make a change, 
 and I think the new design accomplishes most of them. First, 
 I wanted to change to a static width layout. It was a long time coming, 

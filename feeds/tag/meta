@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/meta" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2014-08-27T00:00:00-07:00</updated><entry><title>New Version of the Site is Now Live</title><link href="http://michaeljaylissner.com/posts/2014/08/27/site-v5-is-go/" rel="alternate"></link><updated>2014-08-27T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-08-27:posts/2014/08/27/site-v5-is-go/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="https://michaeljaylissner.com/" rel="alternate"></link><link href="https://michaeljaylissner.com/feeds/tag/meta" rel="self"></link><id>https://michaeljaylissner.com/</id><updated>2014-08-27T00:00:00-07:00</updated><entry><title>New Version of the Site is Now Live</title><link href="https://michaeljaylissner.com/posts/2014/08/27/site-v5-is-go/" rel="alternate"></link><updated>2014-08-27T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-08-27:posts/2014/08/27/site-v5-is-go/</id><summary type="html">
 &lt;p&gt;I have big news today for the small world of people who read my blog regularly:
 A new version of the site is now live and the old version shall die a quick death. &lt;/p&gt;
 &lt;p&gt;Version 4 was pretty nice though, while it lasted:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Site v4" src="http://michaeljaylissner.com/images/oldsite/v4.png"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Other old versions of the site &lt;a href="http://michaeljaylissner.com/about"&gt;still available&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Site v4" src="https://michaeljaylissner.com/images/oldsite/v4.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Other old versions of the site &lt;a href="https://michaeljaylissner.com/about"&gt;still available&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id="the-improvements"&gt;The improvements&lt;/h2&gt;
 &lt;p&gt;This new version comes with some big improvements that I’m quite 
 pleased with:&lt;/p&gt;
@@ -34,7 +34,7 @@ pleased with:&lt;/p&gt;
    thing and you’ll be all set.&lt;/li&gt;
 &lt;li&gt;Security is now invincible: No more webserver to update, no more database, 
    no more outdated Drupal. It’s basically impossible to hack the new site. 
-   I’ve also added my &lt;a href="http://michaeljaylissner.com/archive/mike.gpg"&gt;&lt;span class="caps"&gt;PGP&lt;/span&gt; key&lt;/a&gt; to the &lt;a href="http://michaeljaylissner.com/contact"&gt;contact page&lt;/a&gt;, for those interested. &lt;/li&gt;
+   I’ve also added my &lt;a href="https://michaeljaylissner.com/archive/mike.gpg"&gt;&lt;span class="caps"&gt;PGP&lt;/span&gt; key&lt;/a&gt; to the &lt;a href="https://michaeljaylissner.com/contact"&gt;contact page&lt;/a&gt;, for those interested. &lt;/li&gt;
 &lt;li&gt;The entire site is now static and doesn’t require that I pay for or maintain
    a server or database. Bonus!&lt;/li&gt;
 &lt;/ol&gt;
@@ -65,11 +65,11 @@ convert them all to markdown, and to get them all live on Github pages. Let’s
 go through this process together. &lt;/p&gt;
 &lt;h3 id="exporting-from-drupal"&gt;Exporting from Drupal&lt;/h3&gt;
 &lt;p&gt;This step of the puzzle was, shall we say, a pain. Nobody has yet made a 
-Drupal to Pelican converter, so I had to do it myself. &lt;a href="http://michaeljaylissner.com/scripts/drupal_to_hugo.py"&gt;The script&lt;/a&gt; that I 
+Drupal to Pelican converter, so I had to do it myself. &lt;a href="https://michaeljaylissner.com/scripts/drupal_to_hugo.py"&gt;The script&lt;/a&gt; that I 
 wrote dug directly into Drupal’s database, pulled out the contents
 and converted them to a format that Hugo could understand. At the time I 
 thought Hugo would be the &lt;span class="caps"&gt;SSG&lt;/span&gt; for me, but later I switched to Pelican, and had
-to write &lt;a href="http://michaeljaylissner.com/scripts/convert_from_hugo_to_pelican.py"&gt;another script&lt;/a&gt; to make the conversion from Hugo to Pelican.&lt;/p&gt;
+to write &lt;a href="https://michaeljaylissner.com/scripts/convert_from_hugo_to_pelican.py"&gt;another script&lt;/a&gt; to make the conversion from Hugo to Pelican.&lt;/p&gt;
 &lt;h3 id="problems-with-drupal"&gt;Problems with Drupal&lt;/h3&gt;
 &lt;p&gt;This was a good start, but Drupal has a few funny conventions. One is that it
 allows files to be “attached” to blog posts. Most blogs don’t do this (Pelican

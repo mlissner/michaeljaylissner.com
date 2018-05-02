@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/raphael" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2010-09-06T23:26:18-07:00</updated><entry><title>Swimlane Diagram Generator Written in XSLT</title><link href="http://michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/" rel="alternate"></link><updated>2010-09-06T23:26:18-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-09-06:posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/</id><summary type="html">&lt;p&gt;For the past couple years, I&amp;#8217;ve been wanting to make a swimlane diagram 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="https://michaeljaylissner.com/" rel="alternate"></link><link href="https://michaeljaylissner.com/feeds/tag/raphael" rel="self"></link><id>https://michaeljaylissner.com/</id><updated>2010-09-06T23:26:18-07:00</updated><entry><title>Swimlane Diagram Generator Written in XSLT</title><link href="https://michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/" rel="alternate"></link><updated>2010-09-06T23:26:18-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-09-06:posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/</id><summary type="html">&lt;p&gt;For the past couple years, I&amp;#8217;ve been wanting to make a swimlane diagram 
 showing all of my roommates and which room they lived in. I considered 
 drawing it out by hand with a charting program, but the idea of updating it
 whenever somebody moved in or out seemed daunting, and I decided that the 
@@ -9,7 +9,7 @@ I learn and use &lt;span class="caps"&gt;XSLT&lt;/span&gt;, so I took the opport
 that converts the &lt;span class="caps"&gt;XML&lt;/span&gt; data to &lt;span class="caps"&gt;HTML&lt;/span&gt;, Javascript and &lt;span class="caps"&gt;SVG&lt;/span&gt;. &lt;/p&gt;
 &lt;p&gt;The final product looks something like this (anonymized with Presidential 
 info for good&amp;nbsp;measure):&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://michaeljaylissner.com/archive/swimlanes/dummy.html"&gt;&lt;img alt="Diagram" src="http://michaeljaylissner.com/images/swimlane-screenshot.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://michaeljaylissner.com/archive/swimlanes/dummy.html"&gt;&lt;img alt="Diagram" src="https://michaeljaylissner.com/images/swimlane-screenshot.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;(click through for complete&amp;nbsp;demo)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For the technically inclined: The program is an &lt;span class="caps"&gt;XSLT&lt;/span&gt; script, 
 which converts the &lt;span class="caps"&gt;XML&lt;/span&gt; into &lt;span class="caps"&gt;HTML&lt;/span&gt; and Javascript. The Javascript is then 

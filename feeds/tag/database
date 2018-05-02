@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/database" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2014-06-18T00:00:00-07:00</updated><entry><title>Reworking the CourtListener Datamodel</title><link href="http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/" rel="alternate"></link><updated>2014-06-18T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-06-18:posts/2014/06/18/reworking-the-courtlistener-datamodel/</id><summary type="html">&lt;p&gt;Brian and I have  been hard at work the past week figuring out how to make 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="https://michaeljaylissner.com/" rel="alternate"></link><link href="https://michaeljaylissner.com/feeds/tag/database" rel="self"></link><id>https://michaeljaylissner.com/</id><updated>2014-06-18T00:00:00-07:00</updated><entry><title>Reworking the CourtListener Datamodel</title><link href="https://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/" rel="alternate"></link><updated>2014-06-18T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-06-18:posts/2014/06/18/reworking-the-courtlistener-datamodel/</id><summary type="html">&lt;p&gt;Brian and I have  been hard at work the past week figuring out how to make 
 &lt;a href="https://www.courtlistener.com/"&gt;CourtListener&lt;/a&gt; able to understand more that one document type. Our goal
  right now is to make it possible to&amp;nbsp;add:&lt;/p&gt;
 &lt;ul&gt;
@@ -13,7 +13,7 @@ that supports linkages between content. So, if we have the oral argument
 and the opinion from a single case, we have no way of pointing them at each
 other. Turns out this is a sticky&amp;nbsp;problem. &lt;/p&gt;
 &lt;p&gt;The solution we&amp;#8217;ve come up with is an architecture like the&amp;nbsp;following:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="New Schema" src="http://michaeljaylissner.com/images/new-schema-design-compact_0.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="New Schema" src="https://michaeljaylissner.com/images/new-schema-design-compact_0.png" /&gt;&lt;/p&gt;
 &lt;p&gt;(we also have &lt;a href="http://owncloud.freelawproject.org/public.php?service=files&amp;amp;t=76ef76ec69488fb72b4d96dba4809339"&gt;a more detailed version&lt;/a&gt; and &lt;a href="http://owncloud.freelawproject.org/public.php?service=files&amp;amp;t=62510f0282b06948e8c3d3b1e4946ec0"&gt;an editable version&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;And eventually, this will also have a Case table above the docket that 
 allows multiple dockets to be associated with a single case. For now though,
@@ -69,7 +69,7 @@ since we&amp;#8217;re not changing any of the underlying data,
 but I expect that it will have some changes to the URLs and things like 
 that. I&amp;#8217;ll be posting more about this in the CourtListener dev list. 
 as the changes become more clear and as we sort out what a fair policy is 
-for the deprecation of old&amp;nbsp;APIs. &lt;/p&gt;</summary><category term="CourtListener"></category><category term="data modeling"></category><category term="database"></category></entry><entry><title>Changes and Plans at CourtListener.com</title><link href="http://michaeljaylissner.com/posts/2010/11/04/changes-and-plans-at-courtlistener/" rel="alternate"></link><updated>2010-11-04T23:30:21-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-11-04:posts/2010/11/04/changes-and-plans-at-courtlistener/</id><summary type="html">&lt;p&gt;A few weeks ago, we made a fairly major change at CourtListener.com to include 
+for the deprecation of old&amp;nbsp;APIs. &lt;/p&gt;</summary><category term="CourtListener"></category><category term="data modeling"></category><category term="database"></category></entry><entry><title>Changes and Plans at CourtListener.com</title><link href="https://michaeljaylissner.com/posts/2010/11/04/changes-and-plans-at-courtlistener/" rel="alternate"></link><updated>2010-11-04T23:30:21-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2010-11-04:posts/2010/11/04/changes-and-plans-at-courtlistener/</id><summary type="html">&lt;p&gt;A few weeks ago, we made a fairly major change at CourtListener.com to include 
 &lt;span class="caps"&gt;ID&lt;/span&gt; numbers in all of our case URLs. This change meant that links that were 
 previously like&amp;nbsp;this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;http:&lt;/span&gt;&lt;span class="c1"&gt;//courtlistener.com/scotus/Wong-v.-Smith/&lt;/span&gt;
@@ -99,7 +99,7 @@ the case&amp;nbsp;pages. &lt;/p&gt;
 &lt;p&gt;We also have plans to revisit our search interface in order to add date 
 filtering and query building so look for that&amp;nbsp;soon.&lt;/p&gt;
 &lt;p&gt;As always, we welcome your feedback and support, so don&amp;#8217;t hesitate to get in 
-touch with us if you have any questions or&amp;nbsp;suggestions.&lt;/p&gt;</summary><category term="CourtListener"></category><category term="Web Architecture"></category><category term="database"></category></entry><entry><title>Script to Clean Up F-Spot Database</title><link href="http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/" rel="alternate"></link><updated>2009-10-14T00:30:12-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-14:posts/2009/10/14/script-to-cleanup-fspot-database/</id><summary type="html">&lt;p&gt;One of the more popular photo management applications for Linux is f-spot, 
+touch with us if you have any questions or&amp;nbsp;suggestions.&lt;/p&gt;</summary><category term="CourtListener"></category><category term="Web Architecture"></category><category term="database"></category></entry><entry><title>Script to Clean Up F-Spot Database</title><link href="https://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/" rel="alternate"></link><updated>2009-10-14T00:30:12-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2009-10-14:posts/2009/10/14/script-to-cleanup-fspot-database/</id><summary type="html">&lt;p&gt;One of the more popular photo management applications for Linux is f-spot, 
 but unfortunately it has a rather glaring bug. It uses a sqlite3 database 
 internally to track which pictures you&amp;#8217;ve imported into it, 
 what tags they have, etc. However, if you delete, move or rename any of the

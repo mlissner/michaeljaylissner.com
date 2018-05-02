@@ -4,1680 +4,1680 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://michaeljaylissner.com/</loc>
-<lastmod>2017-04-14T13:33:49-00:00</lastmod>
+<loc>https://michaeljaylissner.com/</loc>
+<lastmod>2018-05-02T08:59:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.4</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/archives.html</loc>
-<lastmod>2017-04-14T13:33:49-00:00</lastmod>
+<loc>https://michaeljaylissner.com/archives.html</loc>
+<lastmod>2018-05-02T08:59:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.4</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/tags.html</loc>
-<lastmod>2017-04-14T13:33:49-00:00</lastmod>
+<loc>https://michaeljaylissner.com/tags.html</loc>
+<lastmod>2018-05-02T08:59:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.4</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/categories.html</loc>
-<lastmod>2017-04-14T13:33:49-00:00</lastmod>
+<loc>https://michaeljaylissner.com/categories.html</loc>
+<lastmod>2018-05-02T08:59:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.4</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/about</loc>
+<loc>https://michaeljaylissner.com/about</loc>
 <lastmod>2014-08-17T00:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/contact</loc>
-<lastmod>2017-04-14T13:33:49-00:00</lastmod>
+<loc>https://michaeljaylissner.com/contact</loc>
+<lastmod>2018-05-02T08:59:05-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/crazed-deer</loc>
+<loc>https://michaeljaylissner.com/crazed-deer</loc>
 <lastmod>2009-06-29T00:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/pct-temperatures</loc>
+<loc>https://michaeljaylissner.com/pct-temperatures</loc>
 <lastmod>2007-11-21T00:00:00-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/projects-and-papers</loc>
-<lastmod>2017-04-14T13:33:49-00:00</lastmod>
+<loc>https://michaeljaylissner.com/projects-and-papers</loc>
+<lastmod>2018-05-02T08:59:05-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2014/11/06/updating-bulk-data-in-courtlistener-more/</loc>
+<loc>https://michaeljaylissner.com/posts/2014/11/06/updating-bulk-data-in-courtlistener-more/</loc>
 <lastmod>2014-11-06T00:00:00-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2014/11/01/some-thoughts-on-celery/</loc>
+<loc>https://michaeljaylissner.com/posts/2014/11/01/some-thoughts-on-celery/</loc>
 <lastmod>2014-11-01T00:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2014/10/14/becoming-a-non-profit/</loc>
+<loc>https://michaeljaylissner.com/posts/2014/10/14/becoming-a-non-profit/</loc>
 <lastmod>2014-10-14T00:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2014/10/08/in-re-nsl/</loc>
+<loc>https://michaeljaylissner.com/posts/2014/10/08/in-re-nsl/</loc>
 <lastmod>2014-10-08T00:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2014/10/06/editing-on-github-a-non-technical-explainer/</loc>
+<loc>https://michaeljaylissner.com/posts/2014/10/06/editing-on-github-a-non-technical-explainer/</loc>
 <lastmod>2014-10-06T00:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2014/09/28/updating-bulk-data-in-courtlistener/</loc>
+<loc>https://michaeljaylissner.com/posts/2014/09/28/updating-bulk-data-in-courtlistener/</loc>
 <lastmod>2014-11-06T00:00:00-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2014/08/27/site-v5-is-go/</loc>
+<loc>https://michaeljaylissner.com/posts/2014/08/27/site-v5-is-go/</loc>
 <lastmod>2014-08-27T00:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/</loc>
+<loc>https://michaeljaylissner.com/posts/2014/06/18/reworking-the-courtlistener-datamodel/</loc>
 <lastmod>2014-06-18T00:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2013/11/27/our-new-zealand-blog/</loc>
+<loc>https://michaeljaylissner.com/posts/2013/11/27/our-new-zealand-blog/</loc>
 <lastmod>2013-11-27T10:19:46-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2013/08/27/snow-mountain-distance-map/</loc>
+<loc>https://michaeljaylissner.com/posts/2013/08/27/snow-mountain-distance-map/</loc>
 <lastmod>2013-08-27T10:48:25-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2013/07/19/battery-packs-for-ultralight-long-distance-backpacking/</loc>
+<loc>https://michaeljaylissner.com/posts/2013/07/19/battery-packs-for-ultralight-long-distance-backpacking/</loc>
 <lastmod>2013-07-19T14:13:25-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2013/06/28/trim-your-dead-feeds/</loc>
+<loc>https://michaeljaylissner.com/posts/2013/06/28/trim-your-dead-feeds/</loc>
 <lastmod>2013-06-28T22:56:37-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2013/06/17/desolation-wilderness/</loc>
+<loc>https://michaeljaylissner.com/posts/2013/06/17/desolation-wilderness/</loc>
 <lastmod>2013-06-17T11:41:40-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2013/04/19/help-end-the-bsa-ban-on-gays/</loc>
+<loc>https://michaeljaylissner.com/posts/2013/04/19/help-end-the-bsa-ban-on-gays/</loc>
 <lastmod>2013-04-19T10:18:05-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2013/02/05/so-you-wanna-buy-a-bike/</loc>
+<loc>https://michaeljaylissner.com/posts/2013/02/05/so-you-wanna-buy-a-bike/</loc>
 <lastmod>2013-02-05T20:19:16-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2013/02/02/enabling-two-factor-authentication/</loc>
+<loc>https://michaeljaylissner.com/posts/2013/02/02/enabling-two-factor-authentication/</loc>
 <lastmod>2013-02-02T14:27:15-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2013/01/04/2013-donations/</loc>
+<loc>https://michaeljaylissner.com/posts/2013/01/04/2013-donations/</loc>
 <lastmod>2013-01-04T18:12:03-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/12/31/year-in-review-2012-travel-edition-goddamn-too-much-traveling/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/12/31/year-in-review-2012-travel-edition-goddamn-too-much-traveling/</loc>
 <lastmod>2012-12-31T22:42:05-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/12/27/install-etherpad-lite-with-postgres-on-windows/</loc>
 <lastmod>2012-12-27T11:20:36-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/10/09/presentation-on-juriscraper-and-courtlistener-for-lvi2012/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/10/09/presentation-on-juriscraper-and-courtlistener-for-lvi2012/</loc>
 <lastmod>2012-10-09T19:42:47-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/09/16/calculate-the-average-elevation-for-a-trip-using-a-tcx-file/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/09/16/calculate-the-average-elevation-for-a-trip-using-a-tcx-file/</loc>
 <lastmod>2012-09-16T10:33:31-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/07/31/url-hacking-at-rei-dot-com/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/07/31/url-hacking-at-rei-dot-com/</loc>
 <lastmod>2012-07-31T19:19:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/05/20/new-tool-for-testing-lxml-xpath-queries/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/05/20/new-tool-for-testing-lxml-xpath-queries/</loc>
 <lastmod>2012-05-20T15:48:06-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/04/27/further-privacy-protections-at-courtlistener/</loc>
 <lastmod>2012-04-27T17:05:21-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/03/15/my-presentation-proposal-for-lvi-2012/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/03/15/my-presentation-proposal-for-lvi-2012/</loc>
 <lastmod>2012-03-15T20:09:29-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/02/11/adding-new-fonts-to-tesseract-3-ocr-engine/</loc>
 <lastmod>2014-10-06T00:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/01/27/and-the-winning-font-in-court-documents-is/</loc>
 <lastmod>2012-01-27T22:15:58-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/01/24/support-for-x-robots-tag-http-header-and-robots-html-meta-tag/</loc>
 <lastmod>2012-01-24T23:20:20-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/01/16/respecting-privacy-while-providing-hundreds-of-thousands-of-public-documents/</loc>
 <lastmod>2012-01-16T22:13:22-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2012/01/12/android-icons-from-ice-cream-sandwich/</loc>
+<loc>https://michaeljaylissner.com/posts/2012/01/12/android-icons-from-ice-cream-sandwich/</loc>
 <lastmod>2012-01-12T18:38:34-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2011/12/02/integrating-solr-search-with-django-at-courtlistener/</loc>
+<loc>https://michaeljaylissner.com/posts/2011/12/02/integrating-solr-search-with-django-at-courtlistener/</loc>
 <lastmod>2011-12-02T09:37:39-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2011/10/27/tripling-down/</loc>
+<loc>https://michaeljaylissner.com/posts/2011/10/27/tripling-down/</loc>
 <lastmod>2011-10-27T21:09:36-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2011/08/10/the-abolishment-of-the-emergency-court-of-appeals-1962/</loc>
+<loc>https://michaeljaylissner.com/posts/2011/08/10/the-abolishment-of-the-emergency-court-of-appeals-1962/</loc>
 <lastmod>2011-08-10T20:50:54-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2011/03/13/project-idea-curse-word-library/</loc>
+<loc>https://michaeljaylissner.com/posts/2011/03/13/project-idea-curse-word-library/</loc>
 <lastmod>2011-03-13T23:13:34-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2011/02/20/viewsonic-repair-manuals/</loc>
+<loc>https://michaeljaylissner.com/posts/2011/02/20/viewsonic-repair-manuals/</loc>
 <lastmod>2011-02-20T00:33:40-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2011/02/20/firefox-images-and-icons/</loc>
+<loc>https://michaeljaylissner.com/posts/2011/02/20/firefox-images-and-icons/</loc>
 <lastmod>2011-02-20T00:27:20-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2011/01/22/2011-donations/</loc>
+<loc>https://michaeljaylissner.com/posts/2011/01/22/2011-donations/</loc>
 <lastmod>2011-01-22T16:07:21-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/11/04/changes-and-plans-at-courtlistener/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/11/04/changes-and-plans-at-courtlistener/</loc>
 <lastmod>2010-11-04T23:30:21-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/09/06/swimlane-diagram-generator-written-in-xslt/</loc>
 <lastmod>2010-09-06T23:26:18-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/08/11/using-pylint-in-geany/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/08/11/using-pylint-in-geany/</loc>
 <lastmod>2010-08-11T12:07:23-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/08/02/project-idea-community-curated-data-repository/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/08/02/project-idea-community-curated-data-repository/</loc>
 <lastmod>2010-08-02T13:02:42-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/08/02/haiku-nectarine/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/08/02/haiku-nectarine/</loc>
 <lastmod>2010-08-02T13:02:17-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/07/30/lecturing-at-uc-berkeley/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/07/30/lecturing-at-uc-berkeley/</loc>
 <lastmod>2010-07-30T13:10:56-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/07/24/the-ebook-wars-continue-but-the-gravy-train-has-not-arrived/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/07/24/the-ebook-wars-continue-but-the-gravy-train-has-not-arrived/</loc>
 <lastmod>2010-07-24T17:15:23-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/06/28/project-idea-user-contribution-aggregator/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/06/28/project-idea-user-contribution-aggregator/</loc>
 <lastmod>2010-06-28T14:20:41-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/06/22/project-idea-bug-tracker-for-cities/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/06/22/project-idea-bug-tracker-for-cities/</loc>
 <lastmod>2010-06-22T16:59:02-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/06/15/project-idea-breaking-the-cycle-isolating-easy-solutions-to-the-bike-theft-problem/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/06/15/project-idea-breaking-the-cycle-isolating-easy-solutions-to-the-bike-theft-problem/</loc>
 <lastmod>2010-06-15T11:44:13-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/05/01/announcing-courtlistener/</loc>
 <lastmod>2010-05-01T20:08:16-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/05/01/in-consideration-of-apple/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/05/01/in-consideration-of-apple/</loc>
 <lastmod>2010-05-01T17:56:08-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/04/26/recover-a-broken-drupal-install-from-full-hd/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/04/26/recover-a-broken-drupal-install-from-full-hd/</loc>
 <lastmod>2010-04-26T11:26:38-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/03/15/berkman-broadband-study/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/03/15/berkman-broadband-study/</loc>
 <lastmod>2010-03-15T22:18:06-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/03/13/designing-the-final-project/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/03/13/designing-the-final-project/</loc>
 <lastmod>2010-03-13T18:28:28-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/02/26/exploratory-analysis-of-service-recipients-of-community-services-bureau/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/02/26/exploratory-analysis-of-service-recipients-of-community-services-bureau/</loc>
 <lastmod>2010-02-26T17:45:19-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/02/24/using-revision-control-on-a-django-project-without-revealing-your-passwords/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/02/24/using-revision-control-on-a-django-project-without-revealing-your-passwords/</loc>
 <lastmod>2010-02-24T17:15:54-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/02/06/converting-pdf-files-to-html/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/02/06/converting-pdf-files-to-html/</loc>
 <lastmod>2010-02-06T15:03:18-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/01/27/with-howard-zinns-death-we-all-suffer-a-little/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/01/27/with-howard-zinns-death-we-all-suffer-a-little/</loc>
 <lastmod>2010-01-27T20:11:37-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/01/26/new-server/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/01/26/new-server/</loc>
 <lastmod>2010-01-26T20:22:42-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/01/15/how-to-protect-your-open-source-code-from-theft-and-a-mercurial-hook-to-help/</loc>
 <lastmod>2010-01-15T10:27:18-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2010/01/12/2010-donations/</loc>
+<loc>https://michaeljaylissner.com/posts/2010/01/12/2010-donations/</loc>
 <lastmod>2010-01-12T16:28:02-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/12/29/cheap-metal-bike-stand/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/12/29/cheap-metal-bike-stand/</loc>
 <lastmod>2009-12-29T12:05:12-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/12/15/script-to-rid-thyself-of-autocomplete-in-firefox/</loc>
 <lastmod>2009-12-15T17:41:27-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/12/12/some-legal-gems/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/12/12/some-legal-gems/</loc>
 <lastmod>2009-12-12T23:11:37-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/12/12/more-security-papers-breaking-recaptcha-and-proactive-methods-for-secure-design/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/12/12/more-security-papers-breaking-recaptcha-and-proactive-methods-for-secure-design/</loc>
 <lastmod>2009-12-12T12:07:58-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/12/08/technology-revolution-and-the-fourth-amendment/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/12/08/technology-revolution-and-the-fourth-amendment/</loc>
 <lastmod>2009-12-08T12:29:15-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/11/15/analyzing-facebooks-security-mechanisms/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/11/15/analyzing-facebooks-security-mechanisms/</loc>
 <lastmod>2009-11-15T17:43:55-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/11/14/testing-deletion-speed-of-online-photo-sites/</loc>
 <lastmod>2009-11-14T16:28:44-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/10/28/rid-thyself-of-autocomplete-in-firefox/</loc>
 <lastmod>2009-10-28T09:39:19-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/10/14/script-to-cleanup-fspot-database/</loc>
 <lastmod>2009-10-14T00:30:12-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/10/09/de-dup-thunderbird-address-book-contacts/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/10/09/de-dup-thunderbird-address-book-contacts/</loc>
 <lastmod>2009-10-09T17:14:40-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/10/03/jacobsen-v-katzer-article-posted/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/10/03/jacobsen-v-katzer-article-posted/</loc>
 <lastmod>2009-10-03T21:52:21-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/10/02/google-responds-to-the-twitter-attack/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/10/02/google-responds-to-the-twitter-attack/</loc>
 <lastmod>2009-10-02T20:37:12-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/09/12/economics-of-securing-government-information-systems/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/09/12/economics-of-securing-government-information-systems/</loc>
 <lastmod>2009-09-12T13:48:45-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/09/09/firefox-extension-fixes/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/09/09/firefox-extension-fixes/</loc>
 <lastmod>2009-09-09T13:15:46-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/08/17/rethinking-facebook-privacy-settings/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/08/17/rethinking-facebook-privacy-settings/</loc>
 <lastmod>2009-08-17T12:09:06-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/08/12/firefox-modifications-for-real-estate-and-usability/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/08/12/firefox-modifications-for-real-estate-and-usability/</loc>
 <lastmod>2009-08-12T11:34:22-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/07/25/making-prey-of-computer-thieves/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/07/25/making-prey-of-computer-thieves/</loc>
 <lastmod>2009-07-25T22:39:35-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/07/23/a-fresh-install-of-vista-on-an-hp-laptop/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/07/23/a-fresh-install-of-vista-on-an-hp-laptop/</loc>
 <lastmod>2009-07-23T21:59:02-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/07/22/gnome-do-is-pretty-damned-impressive/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/07/22/gnome-do-is-pretty-damned-impressive/</loc>
 <lastmod>2009-07-22T14:42:37-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/07/17/the-contents-of-my-first-aid-kit/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/07/17/the-contents-of-my-first-aid-kit/</loc>
 <lastmod>2009-07-17T21:15:02-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/07/14/impossibility-of-complete-privacy/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/07/14/impossibility-of-complete-privacy/</loc>
 <lastmod>2009-07-14T10:56:35-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/06/28/japan-pictures-posted-and-a-sampling/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/06/28/japan-pictures-posted-and-a-sampling/</loc>
 <lastmod>2009-06-28T13:14:27-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/05/24/sometimes-i-rant-about-ipods/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/05/24/sometimes-i-rant-about-ipods/</loc>
 <lastmod>2009-05-24T23:34:44-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/05/15/one-more-project-posted-the-difficulties-of-managing-online-estates/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/05/15/one-more-project-posted-the-difficulties-of-managing-online-estates/</loc>
 <lastmod>2009-05-15T12:22:02-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/05/13/final-paper-on-online-memorialization-by-default/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/05/13/final-paper-on-online-memorialization-by-default/</loc>
 <lastmod>2009-05-13T11:25:10-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/05/13/this-was-supposed-to-be-my-patent/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/05/13/this-was-supposed-to-be-my-patent/</loc>
 <lastmod>2009-05-13T11:12:12-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/05/07/final-project-from-interface-aesthetics/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/05/07/final-project-from-interface-aesthetics/</loc>
 <lastmod>2009-05-07T20:42:13-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/04/26/papas-got-a-brand-new-look/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/04/26/papas-got-a-brand-new-look/</loc>
 <lastmod>2009-04-26T11:31:19-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/04/17/quiet-friday-afternoon-news-about-cia-interrogation-techniques/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/04/17/quiet-friday-afternoon-news-about-cia-interrogation-techniques/</loc>
 <lastmod>2009-04-17T18:36:34-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/04/13/who-is-entitled-to-grieve-and-why/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/04/13/who-is-entitled-to-grieve-and-why/</loc>
 <lastmod>2009-04-13T19:39:27-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/04/12/a-real-problem-you-should-fix-now/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/04/12/a-real-problem-you-should-fix-now/</loc>
 <lastmod>2009-04-12T14:36:49-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/04/03/a-python-function-to-verify-twitter-credentials/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/04/03/a-python-function-to-verify-twitter-credentials/</loc>
 <lastmod>2009-04-03T19:09:25-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/04/02/analysis-of-ftc-behavioral-advertising/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/04/02/analysis-of-ftc-behavioral-advertising/</loc>
 <lastmod>2009-04-02T14:44:40-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/03/20/privitizing-twitter-api-feed/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/03/20/privitizing-twitter-api-feed/</loc>
 <lastmod>2009-03-20T12:34:31-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/03/18/zeran-v-aol-paper-posted/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/03/18/zeran-v-aol-paper-posted/</loc>
 <lastmod>2009-03-18T12:47:06-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/02/23/installing-tracker-from-source/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/02/23/installing-tracker-from-source/</loc>
 <lastmod>2009-02-23T00:13:40-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/02/20/snow-camping-in-sequoia/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/02/20/snow-camping-in-sequoia/</loc>
 <lastmod>2009-02-20T19:25:01-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/02/19/location-based-dns-switching-for-intranet-vs-internet/</loc>
 <lastmod>2009-02-19T20:45:10-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/02/13/thoreau-would-have-found-this-amusing-or-not/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/02/13/thoreau-would-have-found-this-amusing-or-not/</loc>
 <lastmod>2009-02-13T17:06:29-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/02/01/the-latest-books-and-classes/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/02/01/the-latest-books-and-classes/</loc>
 <lastmod>2009-02-01T14:45:21-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/01/25/twitter-and-facebook-integrated/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/01/25/twitter-and-facebook-integrated/</loc>
 <lastmod>2009-01-25T13:03:03-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/01/23/confused-about-obama/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/01/23/confused-about-obama/</loc>
 <lastmod>2009-01-23T13:35:55-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/01/22/the-interactions-of-law-and-code/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/01/22/the-interactions-of-law-and-code/</loc>
 <lastmod>2009-01-22T10:35:59-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/01/19/working-with-matplotlib-and-pycairo/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/01/19/working-with-matplotlib-and-pycairo/</loc>
 <lastmod>2009-01-19T16:25:32-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/01/13/final-paper-on-metrics-of-sustainability-class/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/01/13/final-paper-on-metrics-of-sustainability-class/</loc>
 <lastmod>2009-01-13T11:35:43-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/01/12/guantanamo-to-close-but-they-are-just-moving-the-prisoners/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/01/12/guantanamo-to-close-but-they-are-just-moving-the-prisoners/</loc>
 <lastmod>2009-01-12T23:17:53-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/01/07/jukebox-papers/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/01/07/jukebox-papers/</loc>
 <lastmod>2009-01-07T00:00:00-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2009/01/05/research-idea-age-of-the-internet/</loc>
+<loc>https://michaeljaylissner.com/posts/2009/01/05/research-idea-age-of-the-internet/</loc>
 <lastmod>2009-01-05T15:41:47-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/12/31/meyer-lissner-was-famous-go-figure/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/12/31/meyer-lissner-was-famous-go-figure/</loc>
 <lastmod>2008-12-31T13:50:36-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/12/29/dear-mr-gore/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/12/29/dear-mr-gore/</loc>
 <lastmod>2008-12-29T22:55:21-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/12/29/food/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/12/29/food/</loc>
 <lastmod>2008-12-29T00:00:00-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/12/21/yelp-scraper/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/12/21/yelp-scraper/</loc>
 <lastmod>2008-12-21T16:41:13-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/12/19/cheney-is-so-fing-shady-it-pisses-me-off/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/12/19/cheney-is-so-fing-shady-it-pisses-me-off/</loc>
 <lastmod>2008-12-19T21:35:28-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/12/13/this-is-a-terrible-interface/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/12/13/this-is-a-terrible-interface/</loc>
 <lastmod>2008-12-13T19:17:04-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/12/09/rsnapshot-backup-solution-or-why-backing-up-is-hard-to-do/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/12/09/rsnapshot-backup-solution-or-why-backing-up-is-hard-to-do/</loc>
 <lastmod>2008-12-09T22:06:48-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/12/07/we-knew-it-existed-the-official-definition-of-the-internet/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/12/07/we-knew-it-existed-the-official-definition-of-the-internet/</loc>
 <lastmod>2008-12-07T23:43:25-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/12/05/to-be-silent-is-to-lie/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/12/05/to-be-silent-is-to-lie/</loc>
 <lastmod>2008-12-05T17:01:32-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/12/02/its-ok-to-advertise-the-holidays-now/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/12/02/its-ok-to-advertise-the-holidays-now/</loc>
 <lastmod>2008-12-02T08:53:23-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/11/30/rebuilding-the-9th-ward-in-new-orleans/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/11/30/rebuilding-the-9th-ward-in-new-orleans/</loc>
 <lastmod>2008-11-30T20:11:06-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/11/23/civic-frustration/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/11/23/civic-frustration/</loc>
 <lastmod>2008-11-23T17:10:59-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/11/22/a-music-cost-inventory/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/11/22/a-music-cost-inventory/</loc>
 <lastmod>2008-11-22T17:21:02-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/11/22/mr-rogers-on-the-usage-of-vcrs/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/11/22/mr-rogers-on-the-usage-of-vcrs/</loc>
 <lastmod>2008-11-22T17:13:23-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/11/14/more-details-on-the-fire-last-night/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/11/14/more-details-on-the-fire-last-night/</loc>
 <lastmod>2008-11-14T13:29:56-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/11/14/car-arson-across-the-street-from-my-house/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/11/14/car-arson-across-the-street-from-my-house/</loc>
 <lastmod>2008-11-14T01:59:11-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/11/11/our-poor-great-grandparents/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/11/11/our-poor-great-grandparents/</loc>
 <lastmod>2008-11-11T00:50:41-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/10/31/misguided-energies/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/10/31/misguided-energies/</loc>
 <lastmod>2008-10-31T00:07:18-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/10/29/excess-elections-spending/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/10/29/excess-elections-spending/</loc>
 <lastmod>2008-10-29T14:16:35-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/10/21/maps-we-really-need-to-use-more/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/10/21/maps-we-really-need-to-use-more/</loc>
 <lastmod>2008-10-21T11:21:27-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/10/21/yahoo-drives-me-nuts/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/10/21/yahoo-drives-me-nuts/</loc>
 <lastmod>2008-10-21T10:26:17-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/10/19/change-the-default-print-to-file-to-pdf-in-ubuntu-hardy/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/10/19/change-the-default-print-to-file-to-pdf-in-ubuntu-hardy/</loc>
 <lastmod>2008-10-19T23:13:25-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/10/13/a-script-to-kill-evolution/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/10/13/a-script-to-kill-evolution/</loc>
 <lastmod>2008-10-13T17:36:05-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/10/08/cluster-analysis-charts-fun-trendy-bad/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/10/08/cluster-analysis-charts-fun-trendy-bad/</loc>
 <lastmod>2008-10-08T16:08:09-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/10/08/music-stats/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/10/08/music-stats/</loc>
 <lastmod>2008-10-08T14:35:46-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/10/08/piracy-costs/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/10/08/piracy-costs/</loc>
 <lastmod>2008-10-08T14:12:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/09/26/the-argument-for-encryption-and-why-vista-is-irresponsible/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/09/26/the-argument-for-encryption-and-why-vista-is-irresponsible/</loc>
 <lastmod>2008-09-26T20:34:31-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/09/22/on-airport-security-and-knives/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/09/22/on-airport-security-and-knives/</loc>
 <lastmod>2008-09-22T16:39:48-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/09/17/quick-update-on-my-prostate/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/09/17/quick-update-on-my-prostate/</loc>
 <lastmod>2008-09-17T15:24:10-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/09/17/there-is-a-lesson-about-yahoo-security-i-learned-from-palin-today/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/09/17/there-is-a-lesson-about-yahoo-security-i-learned-from-palin-today/</loc>
 <lastmod>2008-09-17T15:08:09-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/09/15/delete-original-images-from-f-spot-and-rotate-using-exif-information/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/09/15/delete-original-images-from-f-spot-and-rotate-using-exif-information/</loc>
 <lastmod>2008-09-15T23:33:48-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/09/15/on-drm-and-the-darknet/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/09/15/on-drm-and-the-darknet/</loc>
 <lastmod>2008-09-15T21:09:43-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/09/15/i-am-me-dammit/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/09/15/i-am-me-dammit/</loc>
 <lastmod>2008-09-15T15:00:30-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/09/13/why-online-book-stores-do-so-damned-well/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/09/13/why-online-book-stores-do-so-damned-well/</loc>
 <lastmod>2008-09-13T09:31:19-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/09/07/peru-pictures-posted-finally/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/09/07/peru-pictures-posted-finally/</loc>
 <lastmod>2008-09-07T14:56:39-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/09/05/crime-in-my-hood-in-the-last-90-days/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/09/05/crime-in-my-hood-in-the-last-90-days/</loc>
 <lastmod>2008-09-05T10:34:17-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/09/05/sarah-palin-worst-candidate-of-all-time/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/09/05/sarah-palin-worst-candidate-of-all-time/</loc>
 <lastmod>2008-09-05T08:51:04-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/08/28/linux-tip-route-standard-output-into-the-clipboard/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/08/28/linux-tip-route-standard-output-into-the-clipboard/</loc>
 <lastmod>2008-08-28T20:47:05-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/08/25/ch-ch-ch-ch-changes/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/08/25/ch-ch-ch-ch-changes/</loc>
 <lastmod>2008-08-25T21:02:04-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/08/13/update-from-peru/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/08/13/update-from-peru/</loc>
 <lastmod>2008-08-13T20:14:53-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/08/03/sewing-and-peru/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/08/03/sewing-and-peru/</loc>
 <lastmod>2008-08-03T22:57:43-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/07/28/stop-getting-catalogs/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/07/28/stop-getting-catalogs/</loc>
 <lastmod>2008-07-28T21:38:57-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/07/27/ubuntu-disk-usage-analyzer/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/07/27/ubuntu-disk-usage-analyzer/</loc>
 <lastmod>2008-07-27T18:00:00-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/07/24/moving-and-updating-drupal/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/07/24/moving-and-updating-drupal/</loc>
 <lastmod>2008-07-24T22:45:32-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/07/19/i-just-heard-about-this/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/07/19/i-just-heard-about-this/</loc>
 <lastmod>2008-07-19T20:22:52-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/07/19/while-cleaning-the-block/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/07/19/while-cleaning-the-block/</loc>
 <lastmod>2008-07-19T15:27:04-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/07/17/my-linux-story/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/07/17/my-linux-story/</loc>
 <lastmod>2008-07-17T20:03:38-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/07/14/wake-your-computer-by-usb/</loc>
 <lastmod>2008-07-14T20:27:57-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/07/13/the-facts-are-in-ars-technica-rocks/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/07/13/the-facts-are-in-ars-technica-rocks/</loc>
 <lastmod>2008-07-13T21:47:54-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/07/04/log-your-friend-out-of-gmail/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/07/04/log-your-friend-out-of-gmail/</loc>
 <lastmod>2008-07-04T12:16:16-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/07/02/no-wonder-i-am-losing-money-right-now/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/07/02/no-wonder-i-am-losing-money-right-now/</loc>
 <lastmod>2008-07-02T22:21:42-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/06/25/my-eyeballs/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/06/25/my-eyeballs/</loc>
 <lastmod>2008-06-25T21:27:17-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/06/23/lessons-from-the-street/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/06/23/lessons-from-the-street/</loc>
 <lastmod>2008-06-23T19:29:42-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/06/12/on-memory/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/06/12/on-memory/</loc>
 <lastmod>2008-06-12T18:56:49-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/06/03/fiji-tries-fails-to-be-smart/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/06/03/fiji-tries-fails-to-be-smart/</loc>
 <lastmod>2008-06-03T18:54:03-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/06/02/install-citrix-in-ubuntu-hardy-heron/</loc>
 <lastmod>2008-06-02T09:44:53-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/05/22/create-a-list-of-formulas-from-excel-files/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/05/22/create-a-list-of-formulas-from-excel-files/</loc>
 <lastmod>2008-05-22T12:16:59-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/05/20/dear-hillary/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/05/20/dear-hillary/</loc>
 <lastmod>2008-05-20T21:06:22-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/05/17/drag-a-screenshot-using-imagemagick/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/05/17/drag-a-screenshot-using-imagemagick/</loc>
 <lastmod>2008-05-17T17:48:40-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/05/15/meet-my-enemy/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/05/15/meet-my-enemy/</loc>
 <lastmod>2008-05-15T22:26:41-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/05/11/happy-mothers-day/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/05/11/happy-mothers-day/</loc>
 <lastmod>2008-05-11T11:56:38-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/05/04/stop-junk-mail/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/05/04/stop-junk-mail/</loc>
 <lastmod>2008-05-04T20:41:05-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/04/29/remap-caps-lock-as-backspace/</loc>
 <lastmod>2008-04-29T21:33:41-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/04/18/bypass-form-protections-in-microsoft-word/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/04/18/bypass-form-protections-in-microsoft-word/</loc>
 <lastmod>2008-04-18T10:13:22-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/04/15/the-vision/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/04/15/the-vision/</loc>
 <lastmod>2008-04-15T22:33:39-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/04/15/the-mission-results/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/04/15/the-mission-results/</loc>
 <lastmod>2008-04-15T22:17:28-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/04/01/something-new-and-some-updates/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/04/01/something-new-and-some-updates/</loc>
 <lastmod>2008-04-01T22:45:48-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/03/15/a-decision-has-been-made/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/03/15/a-decision-has-been-made/</loc>
 <lastmod>2008-03-15T00:47:52-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/03/15/the-mission/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/03/15/the-mission/</loc>
 <lastmod>2008-03-15T00:41:57-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/03/09/my-child-is-not-catholic-dawkins-insists/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/03/09/my-child-is-not-catholic-dawkins-insists/</loc>
 <lastmod>2008-03-09T10:34:27-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/03/05/notes-on-drupal-multisite/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/03/05/notes-on-drupal-multisite/</loc>
 <lastmod>2008-03-05T23:23:24-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/03/05/new-website-charityhikersorg/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/03/05/new-website-charityhikersorg/</loc>
 <lastmod>2008-03-05T22:54:53-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites-part-ii/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites-part-ii/</loc>
 <lastmod>2008-02-26T19:07:14-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/02/26/treasures-of-old-websites/</loc>
 <lastmod>2008-02-26T18:58:04-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/02/24/went-solo-backpacking-this-weekend/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/02/24/went-solo-backpacking-this-weekend/</loc>
 <lastmod>2008-02-24T22:07:32-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/02/21/i-am-going-to-grad-school/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/02/21/i-am-going-to-grad-school/</loc>
 <lastmod>2008-02-21T22:37:02-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/02/19/yosemite-pictures-posted/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/02/19/yosemite-pictures-posted/</loc>
 <lastmod>2008-02-19T23:07:59-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/02/11/install-garmin-topo-in-linux/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/02/11/install-garmin-topo-in-linux/</loc>
 <lastmod>2008-02-11T22:08:23-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/02/10/federal-salaries/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/02/10/federal-salaries/</loc>
 <lastmod>2008-02-10T12:02:17-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/02/10/tune-your-monitor-youll-like-it/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/02/10/tune-your-monitor-youll-like-it/</loc>
 <lastmod>2008-02-10T10:45:55-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/02/02/personal-music-collections/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/02/02/personal-music-collections/</loc>
 <lastmod>2008-02-02T20:02:59-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/02/01/bots-be-damned/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/02/01/bots-be-damned/</loc>
 <lastmod>2008-02-01T18:18:42-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/02/01/gis-training/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/02/01/gis-training/</loc>
 <lastmod>2008-02-01T18:02:58-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/01/27/marvelous-rss-marvelous-google/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/01/27/marvelous-rss-marvelous-google/</loc>
 <lastmod>2008-01-27T15:36:34-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/01/22/amazon-has-mp3s/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/01/22/amazon-has-mp3s/</loc>
 <lastmod>2008-01-22T19:04:40-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/01/21/new-theme/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/01/21/new-theme/</loc>
 <lastmod>2008-01-21T15:09:25-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/01/20/top-five-problems-with-elections/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/01/20/top-five-problems-with-elections/</loc>
 <lastmod>2008-01-20T13:04:07-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/01/19/howard-zinn-the-use-and-abuse-of-history/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/01/19/howard-zinn-the-use-and-abuse-of-history/</loc>
 <lastmod>2008-01-19T00:29:03-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/01/15/seach-concept/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/01/15/seach-concept/</loc>
 <lastmod>2008-01-15T18:00:04-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/01/13/volunteering-at-last/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/01/13/volunteering-at-last/</loc>
 <lastmod>2008-01-13T21:17:09-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/01/13/taxonomy-features-are-go/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/01/13/taxonomy-features-are-go/</loc>
 <lastmod>2008-01-13T16:56:44-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/01/03/the-incredible-size-of-xp/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/01/03/the-incredible-size-of-xp/</loc>
 <lastmod>2008-01-03T23:39:33-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2008/01/02/public-jukebox-for-internet-cafes/</loc>
+<loc>https://michaeljaylissner.com/posts/2008/01/02/public-jukebox-for-internet-cafes/</loc>
 <lastmod>2008-01-02T21:32:08-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/12/30/black-sabbath-children-of-the-grave/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/12/30/black-sabbath-children-of-the-grave/</loc>
 <lastmod>2007-12-30T12:28:27-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/12/28/firefox-last-modified-tip/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/12/28/firefox-last-modified-tip/</loc>
 <lastmod>2007-12-28T13:02:08-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/12/12/pct-temperature-project-done/</loc>
 <lastmod>2007-12-12T21:29:57-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/12/10/pitzer-college-murals/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/12/10/pitzer-college-murals/</loc>
 <lastmod>2007-12-10T13:58:25-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/12/07/eco-tip-4-hibernate-vs-suspend/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/12/07/eco-tip-4-hibernate-vs-suspend/</loc>
 <lastmod>2007-12-07T18:22:49-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/11/30/the-prettiest-ratio-and-google/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/11/30/the-prettiest-ratio-and-google/</loc>
 <lastmod>2007-11-30T16:43:36-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/11/29/thanksgiving-photos-posted/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/11/29/thanksgiving-photos-posted/</loc>
 <lastmod>2007-11-29T23:45:18-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/11/26/an-important-distinction/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/11/26/an-important-distinction/</loc>
 <lastmod>2007-11-26T17:02:25-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/11/19/a-website-that-irks-my-soul-and-the-internets-inability-to-kill-it/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/11/19/a-website-that-irks-my-soul-and-the-internets-inability-to-kill-it/</loc>
 <lastmod>2007-11-19T21:15:49-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/11/19/eco-tip-3-buy-locally-buy-seasonally/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/11/19/eco-tip-3-buy-locally-buy-seasonally/</loc>
 <lastmod>2007-11-19T20:42:03-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/11/16/by-decree-of-this-blog/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/11/16/by-decree-of-this-blog/</loc>
 <lastmod>2007-11-16T17:20:50-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/11/12/the-pleasure-of-making-goats-faint/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/11/12/the-pleasure-of-making-goats-faint/</loc>
 <lastmod>2007-11-12T11:17:13-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/11/06/eco-tip-2-think-long-term-really-long-term/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/11/06/eco-tip-2-think-long-term-really-long-term/</loc>
 <lastmod>2007-11-06T20:21:34-08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/11/01/great-temperature-data-project/</loc>
 <lastmod>2007-11-01T20:40:55-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/10/28/mashups/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/10/28/mashups/</loc>
 <lastmod>2007-10-28T13:10:16-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/10/24/eco-tip-1-the-plan-one-environmental-tip-every-other-week/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/10/24/eco-tip-1-the-plan-one-environmental-tip-every-other-week/</loc>
 <lastmod>2007-10-24T22:30:12-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/10/23/never-seen-a-fire-this-bad/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/10/23/never-seen-a-fire-this-bad/</loc>
 <lastmod>2007-10-23T18:40:38-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/10/23/new-computer-and-give-away-pile/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/10/23/new-computer-and-give-away-pile/</loc>
 <lastmod>2007-10-23T00:13:23-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/10/16/the-10000-dollar-scam/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/10/16/the-10000-dollar-scam/</loc>
 <lastmod>2007-10-16T23:53:44-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/10/12/the-singularity-is-near/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/10/12/the-singularity-is-near/</loc>
 <lastmod>2007-10-12T22:53:24-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/10/11/old-site-is-up-sort-of/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/10/11/old-site-is-up-sort-of/</loc>
 <lastmod>2007-10-11T19:04:42-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/10/03/destiny-to-have-a-beard/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/10/03/destiny-to-have-a-beard/</loc>
 <lastmod>2007-10-03T23:17:34-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/09/29/boring-confession/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/09/29/boring-confession/</loc>
 <lastmod>2007-09-29T16:34:53-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/09/29/zimbra-done/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/09/29/zimbra-done/</loc>
 <lastmod>2007-09-29T16:20:59-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/09/25/lojack-on-linux-part-ii/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/09/25/lojack-on-linux-part-ii/</loc>
 <lastmod>2007-09-25T22:42:45-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/09/24/a-modest-miracle/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/09/24/a-modest-miracle/</loc>
 <lastmod>2007-09-24T20:20:32-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/09/23/lojack-for-linux/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/09/23/lojack-for-linux/</loc>
 <lastmod>2007-09-23T14:56:19-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/09/16/ogg-on-ipod/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/09/16/ogg-on-ipod/</loc>
 <lastmod>2007-09-16T19:59:23-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/09/14/zimbra-chronicals/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/09/14/zimbra-chronicals/</loc>
 <lastmod>2007-09-14T00:24:56-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/09/12/richard-stallman-founder-of-gnu/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/09/12/richard-stallman-founder-of-gnu/</loc>
 <lastmod>2007-09-12T21:48:22-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://michaeljaylissner.com/posts/2007/09/12/drupal-is-go/</loc>
+<loc>https://michaeljaylissner.com/posts/2007/09/12/drupal-is-go/</loc>
 <lastmod>2007-09-12T21:46:59-07:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>

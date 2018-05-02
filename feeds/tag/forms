@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/forms" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2014-10-14T00:00:00-07:00</updated><entry><title>Creating a Non-Profit</title><link href="http://michaeljaylissner.com/posts/2014/10/14/becoming-a-non-profit/" rel="alternate"></link><updated>2014-10-14T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-10-14:posts/2014/10/14/becoming-a-non-profit/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="https://michaeljaylissner.com/" rel="alternate"></link><link href="https://michaeljaylissner.com/feeds/tag/forms" rel="self"></link><id>https://michaeljaylissner.com/</id><updated>2014-10-14T00:00:00-07:00</updated><entry><title>Creating a Non-Profit</title><link href="https://michaeljaylissner.com/posts/2014/10/14/becoming-a-non-profit/" rel="alternate"></link><updated>2014-10-14T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-10-14:posts/2014/10/14/becoming-a-non-profit/</id><summary type="html">
 &lt;h2 id="updates"&gt;Updates&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://codefordc.org/blog/2016/11/17/start-nonprofit.html"&gt;Code for &lt;span class="caps"&gt;DC&lt;/span&gt; has written a similar post&lt;/a&gt; for creating a non-profit in &lt;span class="caps"&gt;D.C.&lt;/span&gt;&lt;/li&gt;
@@ -9,7 +9,7 @@
 &lt;blockquote class="twitter-tweet" lang="en"&gt;&lt;p&gt;This isn't tax advice, but we're happy to announce the &lt;span class="caps"&gt;IRS&lt;/span&gt; approved our 501(c)(3) app, so donations are deductible! &lt;a href="https://t.co/UjaBgSJorr"&gt;https://t.co/UjaBgSJorr&lt;/a&gt;&lt;/p&gt;— Free Law Project (@FreeLawProject) &lt;a href="https://twitter.com/FreeLawProject/status/520620527963369472"&gt;October 10, 2014&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"&gt;&lt;/script&gt;
 &lt;p&gt;Check out &lt;a href="https://free.law/pdf/006-non-profit-status-letter-redacted.pdf"&gt;this beauty&lt;/a&gt;! We’re finally the real deal.&lt;/p&gt;
-&lt;p&gt;All through the process, I wished there was something that had all the documentation of the process, so this is my attempt at such a post. I’m writing this after the fact, so I expect that I’ll munge a few details. If you catch me making a mistake, you can either &lt;a href="https://github.com/mlissner/michaeljaylissner.com/edit/master/content/on-memory.md"&gt;edit this page&lt;/a&gt; yourself using &lt;a href="http://michaeljaylissner.com/posts/2014/10/06/editing-on-github-a-non-technical-explainer/"&gt;my handy guide&lt;/a&gt;, or you can &lt;a href="http://michaeljaylissner.com/contact"&gt;send me a note&lt;/a&gt; and I’ll update it. &lt;/p&gt;
+&lt;p&gt;All through the process, I wished there was something that had all the documentation of the process, so this is my attempt at such a post. I’m writing this after the fact, so I expect that I’ll munge a few details. If you catch me making a mistake, you can either &lt;a href="https://github.com/mlissner/michaeljaylissner.com/edit/master/content/on-memory.md"&gt;edit this page&lt;/a&gt; yourself using &lt;a href="https://michaeljaylissner.com/posts/2014/10/06/editing-on-github-a-non-technical-explainer/"&gt;my handy guide&lt;/a&gt;, or you can &lt;a href="https://michaeljaylissner.com/contact"&gt;send me a note&lt;/a&gt; and I’ll update it. &lt;/p&gt;
 &lt;h2 id="before-we-begin"&gt;Before We Begin&lt;/h2&gt;
 &lt;p&gt;Three notes before we begin:&lt;/p&gt;
 &lt;ol&gt;
@@ -126,12 +126,12 @@
 &lt;li&gt;&lt;span class="caps"&gt;IRS&lt;/span&gt; Form &lt;span class="caps"&gt;SS&lt;/span&gt;-4 indicating our &lt;span class="caps"&gt;EIN&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;In total: 83 pages of delightful paperwork and one check for $850.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Total weight: 3/4 lbs." src="http://michaeljaylissner.com/images/forming-a-non-profit/three-quarter-pounder.jpeg"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Total weight: 3/4 lbs." src="https://michaeljaylissner.com/images/forming-a-non-profit/three-quarter-pounder.jpeg"/&gt;&lt;/p&gt;
 &lt;h2 id="file-california-tax-exemption-forms"&gt;File California Tax Exemption Forms&lt;/h2&gt;
 &lt;p&gt;If all goes well, you’ll soon hear back from the &lt;span class="caps"&gt;IRS&lt;/span&gt; and be granted your Federal recognition as a 501(c)(3). Congratulations on a hard-won victory. &lt;/p&gt;
 &lt;p&gt;Now that that’s in place, it’s time to switch back to California and wrap things up with them. To do this you need to complete form 3500A (&lt;a href="https://www.ftb.ca.gov/businesses/Exempt_organizations/Applying_for_tax-exemption.shtml"&gt;information&lt;/a&gt; / &lt;a href="https://www.ftb.ca.gov/forms/misc/3500a.pdf"&gt;download&lt;/a&gt;). &lt;/p&gt;
 &lt;p&gt;Don’t try to save this form. You can’t:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Go F*** Yourself -- You cannot save this file." src="http://michaeljaylissner.com/images/forming-a-non-profit/cannot-save-pdf.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Go F*** Yourself -- You cannot save this file." src="https://michaeljaylissner.com/images/forming-a-non-profit/cannot-save-pdf.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Instead, fill it out, print it, and mail it in along with a copy of your Federal Recognition. If you can print to &lt;span class="caps"&gt;PDF&lt;/span&gt;, that &lt;em&gt;might&lt;/em&gt; save your work.&lt;/p&gt;
 &lt;h2 id="get-municipal-recognition"&gt;Get Municipal Recognition&lt;/h2&gt;
 &lt;p&gt;The final step of this process for us, though it might come much earlier

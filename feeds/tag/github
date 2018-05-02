@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="http://michaeljaylissner.com/" rel="alternate"></link><link href="http://michaeljaylissner.com/feeds/tag/github" rel="self"></link><id>http://michaeljaylissner.com/</id><updated>2014-10-06T00:00:00-07:00</updated><entry><title>Editing a File on Github</title><link href="http://michaeljaylissner.com/posts/2014/10/06/editing-on-github-a-non-technical-explainer/" rel="alternate"></link><updated>2014-10-06T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-10-06:posts/2014/10/06/editing-on-github-a-non-technical-explainer/</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Michael Jay Lissner</title><link href="https://michaeljaylissner.com/" rel="alternate"></link><link href="https://michaeljaylissner.com/feeds/tag/github" rel="self"></link><id>https://michaeljaylissner.com/</id><updated>2014-10-06T00:00:00-07:00</updated><entry><title>Editing a File on Github</title><link href="https://michaeljaylissner.com/posts/2014/10/06/editing-on-github-a-non-technical-explainer/" rel="alternate"></link><updated>2014-10-06T00:00:00-07:00</updated><author><name>Mike Lissner</name></author><id>tag:michaeljaylissner.com,2014-10-06:posts/2014/10/06/editing-on-github-a-non-technical-explainer/</id><summary type="html">
 &lt;p&gt;When writing programs, developers have a choice of whether they want their work to be public or private. Programs that are made public are called “open source” and ones that are not are called “closed source”. In both cases the developer can share a program with the world as a website or iPhone app, or whatever, but in the case where the code is shared publicly it’s &lt;em&gt;also&lt;/em&gt; possible for anybody anywhere in the world to change the program to make it better. (For more detail on this and other jargon, see the &lt;a href="#some-definitions"&gt;definitions at the end&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;This is very cool! &lt;/p&gt;
 &lt;p&gt;But I hear you asking, “How do I, a non-developer, make use of this system to make the world a better place?” I’m glad you asked — this article is for you.&lt;/p&gt;
@@ -19,7 +19,7 @@
 &lt;p&gt;Like the rest of this, the process of making a change is actually pretty easy. All you have to do is find the file, make your change, and then save it. So:&lt;/p&gt;
 &lt;h3 id="find-the-file"&gt;Find the file&lt;/h3&gt;
 &lt;p&gt;When you look at &lt;a href="https://github.com/mlissner/git-tutorial/tree/master"&gt;the playground&lt;/a&gt;, you’ll see a bunch of files like this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="File List" src="http://michaeljaylissner.com/images/github/file-list.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="File List" src="https://michaeljaylissner.com/images/github/file-list.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Click the file you want to edit. In this case, it’s we’ll actually be changing file called “your-name.txt”. Click it.&lt;/p&gt;
 &lt;p&gt;Once you do that, you’ll see the contents of the file — a list of names, mine at the top — and you’ll see a pencil that lets you edit the file. &lt;/p&gt;
 &lt;p&gt;Click the pencil! &lt;/p&gt;
@@ -29,7 +29,7 @@
 &lt;p&gt;You are editing a file in a project you do not have write access to. We are forking this project for you (if one does not yet exist) to write your proposed changes to. Submitting a change to this file will write it to a new branch in your fork so you can send a pull request. &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Groovy. If you ignore both the jargon and the bad grammar, you can go ahead and add your name to the bottom of the file, and then you’ll see two fields at the bottom that you can use to explain your change:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Explain Thyself" src="http://michaeljaylissner.com/images/github/explain-thyself.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Explain Thyself" src="https://michaeljaylissner.com/images/github/explain-thyself.png"/&gt;&lt;/p&gt;
 &lt;p&gt;This is like an email. The first field is the subject of your change, something brief and to the point. The second field lets you flesh out in more detail what you did, why it’s useful, etc. In many cases — like simply adding your name to this file — your changes are obvious and you can just hit the big green “Propose file change” button.&lt;/p&gt;
 &lt;p&gt;Let’s press the big green button, shall we? &lt;/p&gt;
 &lt;h3 id="send-a-pull-request"&gt;Send a “pull request”&lt;/h3&gt;
@@ -53,7 +53,7 @@
 &lt;p&gt;It’s a brilliant system. &lt;/p&gt;
 &lt;h3 id="my-turn-merging-the-pull-request"&gt;My turn: Merging the pull request&lt;/h3&gt;
 &lt;p&gt;When you created that pull request a moment ago, you actually sent me an email and now you have to wait for me to do something. Eventually, I’ll get your email, and when I do I’ll go to Github and see a screen like this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="PR Screen" src="http://michaeljaylissner.com/images/github/pr-screen.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="PR Screen" src="https://michaeljaylissner.com/images/github/pr-screen.png"/&gt;&lt;/p&gt;
 &lt;p&gt;I’ll probably make a comment saying thank you, and then &lt;em&gt;I’ll&lt;/em&gt; press the Big Green Button that says, “Merge pull request”.&lt;/p&gt;
 &lt;p&gt;This will merge your changes into mine and we’ll both go about our merry way. Mission accomplished! &lt;/p&gt;
 &lt;h2 id="why-this-works-so-well"&gt;Why this works so well&lt;/h2&gt;
