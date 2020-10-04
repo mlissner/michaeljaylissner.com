@@ -6,10 +6,11 @@ Category: Tech
 
 For the longest time, I've been annoyed with Thunderbird because it doesn't catch duplicate contacts as you enter them into your address book. This seems like a standard thing to check for, but even in the <a href="http://www.mozillamessaging.com/en-US/thunderbird/3.0b4/">latest release</a>, this still hasn't <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=129393">been</a> <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=45946">fixed</a>.
 
-This was really starting to get out of control for me, so I did some thinking today about how to fix it, and finally came up with an answer. There is <a href="https://addons.mozilla.org/en-US/thunderbird/addon/2505">an add-on</a> that's supposed to do this, but it hasn't been updated in years, and doesn't work on the latest version. 
+You have two options:
 
-So here's the process that worked for me:
+1. There is an <a href="https://addons.thunderbird.net/en-us/thunderbird/addon/duplicate-contacts-manager/">addon</a> that can easily do this for you! Install the addon, then from your address book, choose Tools > Find and manage duplicates...
 
+2. If you want to do this the old-fasioned way:
  - Open your address book, and select the address book that you wish to de-duplicate
  - Go to Tools > Export, and export the address book as a CSV file.
  - Open that file in OpenOffice Spreadsheet, and sort it by the column called "Display Name"
@@ -21,4 +22,4 @@ So here's the process that worked for me:
  - To get them back into Thunderbird, go to Tools > Import, and import the file. This will create a new address book by the name of the file.
  - From there, simply delete your old address book, and rename the new one to something useful.
 
-All done!
+Either way works great!
